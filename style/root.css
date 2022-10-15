@@ -136,7 +136,7 @@
     --b3-font-color8: var(--SCC-Cyan-186);
     --b3-font-color9: var(--SCC-Cyan-186-lighter);
     --b3-font-color10: var(--SCC-Green-186);
-    --b3-font-color11: var(--SCC-Green-186-lighter);
+    --b3-font-color11: var(--SCC-Gray-186);
     --b3-font-color12: #f5822e;
     --b3-font-color13: var(--b3-theme-background);
     --b3-font-background1: var(--SCC-Yellow-HellisePotter);
@@ -149,13 +149,13 @@
     --b3-font-background8: var(--SCC-Pink-Firole-light);
     --b3-font-background9: var(--SCC-Purple-186-light);
     --b3-font-background10: var(--SCC-Gray-186);
-    --b3-font-background11: var(--SCC-Green-186);
+    --b3-font-background11: var(--SCC-Green-186-lighter);
     --b3-font-background12: var(--SCC-Blue-Windom_2);
     --b3-font-background13: var(--b3-theme-on-background);
 
     /* 动画效果 */
-    --b3-transition: all .15s cubic-bezier(0, 0, .2, 1) 0ms;
-    --b3-width-transition: width .15s cubic-bezier(0, 0, .2, 1) 0ms;
+    --b3-transition: all .31s cubic-bezier(0, 0, .2, 1) 0ms;
+    --b3-width-transition: width .31s cubic-bezier(0, 0, .2, 1) 0ms;
 
     /* 阴影 */
     --b3-point-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
@@ -185,8 +185,8 @@
     --b3-graph-hl-line: #4285f4;
 
     /* 编辑器搜索颜色 */
-    --b3-protyle-search-background: #ffe955;
-    --b3-protyle-search-border-color: #f2e680;
+    --b3-protyle-search-background: var(--SCC-Yellow-HellisePotter);
+    --b3-protyle-search-border-color: var(--SCC-Yellow-HellisePotter-light);
     --b3-protyle-search-current-background: #a5d3fe;
 
     /* 代码片段背景 */
