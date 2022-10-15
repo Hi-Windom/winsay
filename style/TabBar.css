@@ -1,0 +1,141 @@
+/* --------------------------------------------------标签页 Tab--------------------------------------------- */
+/* 标签页底部背景颜色,标签页数量较少时可以看到，颜色和标签页颜色保持一致 */
+.layout-tab-bar.fn__flex,
+ul.fn__flex.layout-tab-bar {
+    background-color: var(--SCC-Gray-HellisePotter);
+}
+
+
+/* 标签页鼠标悬浮时背景颜色 */
+.layout-tab-bar .item:not(.item--readonly):hover {
+    background-color: var(--SCC-Blue-Windom_2-lighter);
+    padding-top: 4px;
+}
+
+.layout-tab-bar .item:not(.item--readonly) {
+    position: relative;
+    background-color: var(--SCC-Gray-HellisePotter);
+    flex: none;
+    min-width: 12em;
+    border-radius: 0px !important;
+    box-shadow: none;
+    padding-top: 4px;
+    border-bottom: 3px solid transparent;
+}
+
+.layout-tab-bar li.item.item--readonly {
+    padding-top: 4px;
+    border-bottom: 3px solid transparent;
+}
+
+.item--readonly {
+    background-color: var(--SCC-Gray-HellisePotter);
+}
+
+.item--readonly:hover {
+    background-color: var(--SCC-Blue-Windom_2-lighter);
+}
+
+
+/* 标签页中文字的相关设置 */
+.layout-tab-bar .item .item__text {
+    width: 6em;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    display: inline;
+    color: var(--SCC-Blue-Windom_2-light);
+}
+
+/* 设置标签页中关闭按钮的颜色 */
+.layout-tab-bar .item:not(.item--focus) .item__close svg {
+    color: #55555a4d;
+}
+
+
+/* 设置当前标签页样式 */
+.layout-tab-bar .item--focus {
+    box-shadow: none !important;
+    min-width: 12em;
+    z-index: 1;
+    border-bottom: 3px solid var(--b3-theme-primary) !important;
+
+}
+
+/* 设置当前标签页文字样式 */
+.layout-tab-bar .item--focus .item__text {
+    color: var(--SCC-Red-Firole) !important;
+}
+
+/* .layout-tab-bar .item:first-child {
+    margin-left: 4px;
+}
+
+.layout-tab-bar .item:last-child {
+    margin-right: 4px;
+} */
+
+.layout-tab-bar .item:not(:last-child) {
+    box-shadow: none;
+}
+
+.layout__wnd--active .layout-tab-bar .item--focus {
+    box-shadow: inset 0 2px 0 0 transparent !important;
+}
+
+/* v2.1.14引入 */
+.layout-tab-bar .item:not(:last-child), .layout-tab-bar .item:last-child:not(.item--focus):not(.item--readonly) {
+    box-shadow: none;
+}
+
+
+/* 减小标签页上的emoji大小 */
+.layout-tab-bar .item__icon>img, .layout-tab-bar .item__icon>svg {
+    height: 16px;
+    width: 16px;
+}
+
+/* 为钉住的标签页右上角增加大头钉图标 */
+li.item.item--pin:not(.item--focus):after {
+    content: "";
+    content: url("../src/pin.svg");
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    width: 12px;
+    height: 12px;
+    opacity: 0.3;
+    filter: grayscale(100%);
+}
+
+li.item.item--pin.item--focus:after {
+    content: "";
+    content: url("../src/pin.svg") !important;
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    width: 12px;
+    height: 12px;
+}
+
+
+.layout-tab-bar .item--pin .item__text {
+    display: block !important;
+}
+
+/* 去掉标签页上面的emoji */
+.layout-tab-bar .item__icon {
+    display: none;
+}
+
+/* --------------------------------------------------标签页 END--------------------------------------------- */
+
+/* 设置新建标签页位置跟随最后一个标签页，v2.1.14 代码来自于九炎，问题来自于赐我一胖 */
+ul.fn__flex.layout-tab-bar.fn__flex-1 {
+    flex: none;
+    max-width: calc(100% - 64px);
+}
+
+ul.layout-tab-bar {
+    flex: 1;
+}

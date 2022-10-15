@@ -1,0 +1,80 @@
+/* -------------------------------------------------代码块样式--------------------------------------------------- */
+
+
+/* 代码块上方部分设置 */
+.protyle-wysiwyg .code-block,
+.b3-typography .code-block {
+    position: relative;
+    display: block;
+    border-radius: 1px;
+    padding-top: 32px !important;
+    /* box-shadow: var(--b3-code-block-shadow); */
+}
+
+
+
+
+
+.protyle-linenumber__rows span::before {
+    color: rgba(128, 128, 128, 0.5);
+}
+
+/* ————————————————————————————————————代码块行数和代码之间的竖线——————————————————————— */
+/* .protyle-linenumber__rows::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: calc(100% - 8px);
+    background-color: var(--b3-border-color1);
+    opacity: 0.2;
+    left: 51px !important;
+} */
+
+/* ——————————————————————————————————一直显示代码块右上角的代码语言和复制按钮—————————————————————————————— */
+/* .code-block .protyle-icons {
+    opacity: 1;
+} */
+
+/* 代码块的语言代码 */
+.b3-typography .code-block .protyle-action .protyle-action__language,
+.protyle-wysiwyg .code-block .protyle-action .protyle-action__language {
+    margin-top: 0px;
+    position: absolute;
+    right: 4em;
+    border-radius: 1px;
+    opacity: 1 !important;
+    font-family: var(--b3-font-family-code);
+}
+
+.b3-typography .code-block .protyle-action .protyle-action__language::after,
+.protyle-wysiwyg .code-block .protyle-action .protyle-action__language::after {
+    content: "›";
+    font-family: var(--b3-font-family-code);
+    color: #80808080;
+    opacity: 1;
+}
+
+/* ————————————————————————————————集市里边代码块的主题—————————————————————————————— */
+code.hljs {
+    border: 1px solid var(--b3-border-color1);
+}
+
+
+/* 复制和设置按钮样式 */
+.b3-typography .code-block .protyle-action .protyle-icon,
+.b3-typography .code-block .protyle-action .protyle-action__language,
+.protyle-wysiwyg .code-block .protyle-action .protyle-icon,
+.protyle-wysiwyg .code-block .protyle-action .protyle-action__language {
+    opacity: 1 !important;
+    background-color: transparent !important;
+}
+
+.b3-typography .code-block .protyle-action .protyle-icon svg,
+.b3-typography .code-block .protyle-action .protyle-action__language svg,
+.protyle-wysiwyg .code-block .protyle-action .protyle-icon svg,
+.protyle-wysiwyg .code-block .protyle-action .protyle-action__language svg {
+    color: gray;
+}
+
+/* -------------------------------------------------代码块样式 END--------------------------------------------------- */

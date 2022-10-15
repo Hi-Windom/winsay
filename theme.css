@@ -1,0 +1,85 @@
+@import url("style/root.css");
+@import url("style/begin-setting.css");
+@import url("style/TextColorMenu.css");
+@import url("style/CodeBlock.css");
+@import url("style/Keyboard.css");
+@import url("style/TabBar.css");
+@import url("style/Printer.css");
+
+/* 引用计数 */
+.counter {
+    color: var(--SCC-Yellow-HellisePotter-light);
+    background-color: var(--SCC-Purple-186-lighter);
+}
+/* 设置面板关闭按钮 */
+.fn__a {
+    color: var(--SCC-Cyan-186-light);
+}
+.fn__a:hover {
+    color: var(--SCC-Cyan-186);
+}
+/* -------------------------------------------------代码块样式--------------------------------------------------- */
+.code-block {
+    border-radius: 7px !important;
+    background-color: transparent !important;
+    border: 0.1em solid var(--b3-border-color) !important;
+    margin-left: 4px !important;
+}
+/* 代码块主体部分设置 */
+.protyle-reset .hljs,
+.protyle-wysiwyg .hljs, .b3-typography .hljs {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    padding-left: 16px;
+    font-family: var(--b3-font-family-code);
+    background-size: 20px 20px;
+    background-image: none !important;
+    background: transparent !important;
+    border-top-right-radius: 4px;
+    /* background-color: var(--b3-theme-background2); */
+    /* z-index: -1; */
+}
+/*  代码块行数 */
+.protyle-linenumber__rows {
+    margin-top: 32px !important;
+    padding: 4px;
+    background-color: transparent !important;
+    margin-bottom: 0px;
+    font-family: var(--b3-font-family-code);
+    border-top-left-radius: 4px;
+}
+/* 设置顶部三个mac按钮样式 */
+.code-block::after {
+    content: ' ';
+    position: absolute;
+    background: #ff0000;
+    box-shadow: 58px 0 #0070c0, 116px 0 #ff3399, 174px 0 #912997;
+    border-radius: var(--b3-border-radius-round);
+    top: 10px;
+    left: 38px;
+    height: 3px;
+    width: 58px;
+    z-index: 1;
+}
+
+/* 搜索界面标签页中文字居中 */
+.b3-dialog--open .b3-dialog__container span.item__text {
+    padding: 4px !important;
+}
+
+/* 给设置界面选择的地方加上边框 */
+.b3-dialog--open .b3-dialog__container .b3-select {
+    border: 1px solid var(--b3-border-color1);
+}
+
+
+/* PDF */
+.textLayer,
+.pdf__resize {
+    /* dark 蓝色、紫色背景显示不清楚，文档位于 https://github.com/siyuan-note/siyuan/issues/5351 */
+    mix-blend-mode: multiply;
+}
+
+.b3-typography div.hljs, .protyle-wysiwyg div.hljs {
+    background-color: #f8f9fa;
+}

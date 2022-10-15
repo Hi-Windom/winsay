@@ -1,0 +1,102 @@
+/* ————————————————————所有边距初始化———————————————————— */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* 隐藏思源笔记右侧进度滚动条，鼠标悬浮时显示 */
+.protyle-scroll .b3-slider {
+    opacity: 0;
+}
+
+.protyle-scroll .b3-slider:hover {
+    opacity: 1;
+}
+
+
+/* 设置段落两端对齐 */
+.protyle-content .p:not(.list .p) {
+    text-align: justify;
+}
+
+/* ----------------------------------------------------块添加圆角------------------------------------------- */
+.protyle-wysiwyg [data-node-id] {
+    border-radius: 1px;
+}
+
+
+
+
+/* 块标提示不被窗口线遮挡 */
+.protyle-gutters {
+    z-index: 3;
+}
+
+/* ————————————————————设置滚动条样式——————————————————__ */
+::-webkit-scrollbar-thumb {
+    background-color: var(--b3-scroll-color);
+    border-radius: 1px;
+}
+
+
+/* 文档树滚动条，鼠标悬浮时才显示 */
+.fn__flex-1::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    transition: background-color 1s ease;
+}
+
+.fn__flex-1:hover::-webkit-scrollbar-thumb {
+    background-color: var(--b3-scroll-color);
+}
+
+/* ————————————————————修改滚动条宽度———————————————————— */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* ————————————————————去掉软件的边框线———————————————————— */
+body.body--win32 {
+    border: none !important;
+}
+
+/* ————————————————————表单设置不能拖拽缩放———————————————————— */
+textarea.b3-text-field.fn__flex-1 {
+    border: 1px solid transparent;
+    resize: none;
+}
+
+/* 块标切换动画，来自于Notion主题 */
+.protyle-gutters {
+    transition: all 200ms ease-out;
+}
+
+
+/* 设置iframe挂件的宽度 */
+.b3-typography iframe,
+.protyle-wysiwyg iframe {
+    width: 80vw !important;
+}
+
+/* 设置编辑器内容鼠标上下滚动时顺滑效果，类似于Edge浏览器的效果 */
+/* 在长文档时，会产生鼠标滚动方向和页面方向相反的bug */
+/* .protyle-content {
+    scroll-behavior: smooth;
+} */
+
+
+/* 修改弹窗的高度 */
+.block__popover {
+    min-height: 60vh;
+    box-shadow:
+        0px 11px 15px -7px rgba(0, 0, 0, 0.2),
+        0px 24px 38px 3px rgba(0, 0, 0, 0.14),
+        0px 9px 46px 8px rgba(0, 0, 0, 0.12) !important;
+}
+
+
+/* 取消开启自适应宽度前后的动画 */
+/* .protyle-wysiwyg,
+.protyle-background__iconw,
+.protyle-title {
+    transition: none;
+} */
