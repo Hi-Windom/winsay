@@ -72,6 +72,12 @@
     border: 1px solid var(--b3-border-color1);
 }
 
+/* 集市主题详情页 */
+.config-bazaar__readme {
+    background-color: var(--b3-theme-background);
+    z-index: 99;
+}
+
 
 /* PDF */
 .textLayer,
