@@ -39,7 +39,8 @@ ul.fn__flex.layout-tab-bar {
 
 /* 标签页中文字的相关设置 */
 .layout-tab-bar .item .item__text {
-    width: 6em;
+    width: auto;
+    min-width: 5.8em;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
     white-space: nowrap !important;
@@ -87,46 +88,35 @@ ul.layout-tab-bar li [title="新建文档"] svg:hover, ul.layout-tab-bar li [tit
     box-shadow: rgb(85, 91, 255) 0px 0px 0px 1px, rgb(31, 193, 27) 0px 0px 0px 2px, rgb(255, 217, 19) 0px 0px 0px 3px, rgb(255, 156, 85) 0px 0px 0px 4px, rgb(255, 85, 85) 0px 0px 0px 5px;
 }
 
+
+
+/* 非当前页签样式*/
+.layout-tab-bar .item:not(:last-child).item:not(.item--focus), .layout-tab-bar .item:last-child:not(.item--focus):not(.item--readonly) {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset !important;
+    border-bottom: 3px hidden transparent !important;
+    max-width: 186px !important;
+    transition-duration: 0;
+}
 /* 设置当前标签页样式 */
 .layout-tab-bar .item--focus {
-    box-shadow: none !important;
-    min-width: 1em;
-    z-index: 1;
-    border-bottom: 3px solid var(--b3-theme-primary) !important;
-
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset !important;
+    border-bottom: 3px ridge var(--b3-theme-primary) !important;
+    max-width: 333px !important;
+    transition-duration: 0;
 }
 
 /* 设置当前标签页文字样式 */
 .layout-tab-bar .item--focus .item__text {
     color: var(--SCC-Red-Firole) !important;
-}
-
-/* .layout-tab-bar .item:first-child {
-    margin-left: 4px;
-}
-
-.layout-tab-bar .item:last-child {
-    margin-right: 4px;
-} */
-
-.layout-tab-bar .item:not(:last-child) {
-    box-shadow: none;
-}
-
-.layout__wnd--active .layout-tab-bar .item--focus {
-    box-shadow: inset 0 2px 0 0 transparent !important;
-}
-
-/* v2.1.14引入 */
-.layout-tab-bar .item:not(:last-child), .layout-tab-bar .item:last-child:not(.item--focus):not(.item--readonly) {
-    box-shadow: none;
+    text-shadow:-1px 1px 13px var(--SCC-Orange-Windom);
+    font-weight: bold !important;
 }
 
 
 /* 减小标签页上的emoji大小 */
 .layout-tab-bar .item__icon>img, .layout-tab-bar .item__icon>svg {
-    height: 16px;
-    width: 16px;
+    height: 13px;
+    width: 13px;
 }
 
 /* 为钉住的标签页右上角增加大头钉图标 */
@@ -157,9 +147,12 @@ li.item.item--pin.item--focus:after {
     display: block !important;
 }
 
-/* 去掉标签页上面的emoji */
+/* 标签页上面的emoji */
 .layout-tab-bar .item__icon {
-    display: none;
+    opacity: .58;
+}
+.layout-tab-bar .item__icon:hover {
+    opacity: 1;
 }
 
 /* --------------------------------------------------标签页 END--------------------------------------------- */
