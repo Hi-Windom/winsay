@@ -56,16 +56,18 @@ ul.fn__flex.layout-tab-bar {
 }
 /* 样式优化 */
 .layout-tab-bar.fn__flex, ul.fn__flex.layout-tab-bar li {
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px; /* 影响【设置】-【集市】标签页 */
 }
 ul.layout-tab-bar {
     flex: 1;
-    margin-left: 1em;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    min-width: calc(100% - 80px) !important;
+    width: calc(100% - 80px);
+    width:auto;
+    /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
 }
 ul.layout-tab-bar li:hover {
     background-color: var(--b3-theme-background);
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
 }
 ul.layout-tab-bar li [title="新建文档"], ul.layout-tab-bar li [title="更多"]  {
     background-color: var(--b3-theme-background);
