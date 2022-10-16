@@ -4,6 +4,11 @@
     --SCC-primary-light: rgba(72,69,80,0.58);
     --SCC-primary-lighter: rgba(72,69,80,0.31);
     --SCC-primary-lightest: rgba(72,69,80,0.13);
+    /* 绛亽白 */
+    --SCC-White: #feefea;
+    --SCC-White-light: rgba(254,239,234,0.58);
+    --SCC-White-lighter: rgba(254,239,234,0.31);
+    --SCC-White-lightest: rgba(254,239,234,0.13);
     /* 海文东蓝 */
     --SCC-Blue-Windom: #000655;
     --SCC-Blue-Windom-light: rgba(0,6,85,0.58);
@@ -61,21 +66,30 @@
     --SCC-Black-186-lightest: rgba(13,13,13,0.13);
     /* 一八六战略灰 */
     --SCC-Gray-186: #bfa7b1;
+    --SCC-Gray-186-light: rgba(191,167,177,0.58);
     /* 一八六战略蓝 */
     --SCC-Blue-186: #494bc3;
+    --SCC-Blue-186-light: rgba(73,75,195,0.58);
     /* 绛亽束彖园络管理系统内部代号：[ Hellise Potter ]（赫礼斯叵特） */
     --SCC-Yellow-HellisePotter: #f4f400;
     --SCC-Yellow-HellisePotter-light: rgba(244,244,0, .8);
     --SCC-Gray-HellisePotter: #dee3f4;
     --SCC-Gray-HellisePotter-light: rgba(222,227,244, .8);
+    /* 云上高组 */
+    --SCC-Red-WPS: #990033;
+    --SCC-Red-WPS-light: rgba(153,0,51,0.58);
+    --SCC-Red-WPS-lighter: rgba(153,0,51,0.31);
+    --SCC-Red-WPS-lightest: rgba(153,0,51,0.13);
     /* -- */
+    /* 块引用波浪线动画图标 | The icon of wavy line animation */
+    --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/icon/wavy-line.svg);
     /* --- */
     /* 主色 */
     --b3-theme-primary: var(--SCC-Pink-Firole);
     --b3-theme-primary-light: var(--SCC-Pink-Firole-light);
     --b3-theme-primary-lighter: var(--SCC-Pink-Firole-lighter);
     --b3-theme-primary-lightest: var(--SCC-Pink-Firole-lightest);
-    --b3-theme-secondary: var(--SCC-Orange-Windom);
+    --b3-theme-secondary: var(--SCC-Brown-186-light);
     --b3-theme-background: var(--SCC-Gray-HellisePotter);
     --b3-theme-background-light: var(--SCC-Gray-HellisePotter-light);
     --b3-theme-surface: var(--SCC-Gray-HellisePotter);
@@ -97,11 +111,17 @@
     --b3-font-family-emoji: "Segoe UI Emoji", "Segoe UI Symbol", "Segoe UI", "Apple Color Emoji", "Twemoji Mozilla", "Noto Color Emoji", "Android Emoji";
     --b3-font-family-math: KaTeX_Math;
 
+    /* 顶部工具栏 */
+    --b3-toolbar-background: var(--SCC-primary-lightest);
+    --b3-toolbar-blur-background: var(--SCC-Gray-HellisePotter-light);
+    --b3-toolbar-color: var(--SCC-Blue-Windom-light);
+
+
     /* 线条 */
-    --b3-border-color: var(--SCC-Purple-186-lightest);
+    --b3-border-color: var(--SCC-Gray-HellisePotter-light);
 
     /* 滚动条 */
-    --b3-scroll-color: var(--SCC-Purple-Soledar-lightest);
+    --b3-scroll-color: var(--SCC-White-light);
 
     /* 列表 */
     --b3-list-hover: var(--SCC-Purple-186-lightest);
@@ -129,28 +149,28 @@
     --b3-font-color1: var(--SCC-Red-Firole);
     --b3-font-color2: var(--SCC-Pink-Firole);
     --b3-font-color3: var(--SCC-Purple-186);
-    --b3-font-color4: var(--SCC-Black-186);
-    --b3-font-color5: var(--b3-theme-on-surface);
-    --b3-font-color6: var(--SCC-Orange-Windom);
-    --b3-font-color7: var(--SCC-Blue-186);
+    --b3-font-color4: var(--SCC-Blue-186);
+    --b3-font-color5: var(--SCC-Black-186);
+    --b3-font-color6: var(--SCColor);
+    --b3-font-color7: var(--SCC-Gray-186);
     --b3-font-color8: var(--SCC-Cyan-186);
     --b3-font-color9: var(--SCC-Cyan-186-lighter);
     --b3-font-color10: var(--SCC-Green-186);
-    --b3-font-color11: var(--SCC-Gray-186);
-    --b3-font-color12: #f5822e;
+    --b3-font-color11: var(--SCC-Yellow-HellisePotter);
+    --b3-font-color12: var(--SCC-Orange-Windom);
     --b3-font-color13: var(--b3-theme-background);
-    --b3-font-background1: var(--SCC-Yellow-HellisePotter);
-    --b3-font-background2: var(--b3-card-warning-background);
-    --b3-font-background3: var(--SCC-Cyan-186);
-    --b3-font-background4: var(--SCC-Blue-186);
-    --b3-font-background5: var(--SCC-Brown-186);
+    --b3-font-background1: var(--SCC-Red-Firole-light);
+    --b3-font-background2: var(--SCC-Pink-Firole-light);
+    --b3-font-background3: var(--SCC-Purple-186-light);
+    --b3-font-background4: var(--SCC-Blue-186-light);
+    --b3-font-background5: var(--SCC-Brown-186-light);
     --b3-font-background6: var(--SCC-Black-186-lighter);
-    --b3-font-background7: var(--SCC-Red-Firole-light);
-    --b3-font-background8: var(--SCC-Pink-Firole-light);
-    --b3-font-background9: var(--SCC-Purple-186-light);
-    --b3-font-background10: var(--SCC-Gray-186);
-    --b3-font-background11: var(--SCC-Green-186-lighter);
-    --b3-font-background12: var(--SCC-Blue-Windom_2);
+    --b3-font-background7: var(--SCC-Gray-186-light);
+    --b3-font-background8: var(--SCC-Cyan-186-light);
+    --b3-font-background9: var(--SCC-Blue-Windom_2-light);
+    --b3-font-background10: var(--SCC-Green-186-lighter);
+    --b3-font-background11: var(--SCC-Yellow-HellisePotter-light);
+    --b3-font-background12: var(--SCC-Orange-Windom-light);
     --b3-font-background13: var(--b3-theme-on-background);
 
     /* 动画效果 */

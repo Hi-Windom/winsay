@@ -44,7 +44,10 @@ ul.fn__flex.layout-tab-bar {
     text-overflow: ellipsis !important;
     white-space: nowrap !important;
     display: inline;
-    color: var(--SCC-Blue-Windom_2-light);
+    color: var(--SCC-Brown-186-lighter);
+}
+.layout-tab-bar .item:hover .item__text {
+    color: var(--SCC-Brown-186);
 }
 
 /* 设置标签页中关闭按钮的颜色 */

@@ -2,13 +2,199 @@
 @import url("style/begin-setting.css");
 @import url("style/TextColorMenu.css");
 @import url("style/CodeBlock.css");
-@import url("style/Keyboard.css");
 @import url("style/TabBar.css");
 @import url("style/Printer.css");
+@import url("style/NodeHeading-biaoti.css");
 
-/* 引用计数 */
+/* 解决特定缩放下出现意外滚动条 */
+.fn__flex-column {
+    overflow: hidden;
+}
+
+/* kbd 按键/按钮的样式 */
+.b3-typography kbd, .b3-typography span[data-type~=kbd], .protyle-wysiwyg kbd, .protyle-wysiwyg span[data-type~=kbd]{
+    border-radius: 6px;
+    color: var(--SCC-Black-186);
+    background-color: var(--SCC-White-light);
+    vertical-align: 2px;
+    /* box-shadow: var(--SCC-White) 0px 1px 2px -3px, var(--SCC-primary-light) 0px -1px 0px 1px inset; */
+    box-shadow: rgba(254,239,234, 0.4) 0px 3px, rgba(0,6,85, 0.3) 0px 5px, rgba(72,69,80, 0.1) 0px 8px;
+    border: 0px solid;
+    margin-right: 2px;
+    font-family: var(--b3-font-family);
+}
+
+
+.protyle-wysiwyg [data-node-id] span[data-type~=block-ref]::before {
+    /*前半部分的符号*/
+    content: "⁅⁅";
+    color: var(--SCC-Red-WPS);
+    font-weight: bold;
+    display: inline-block;
+    width: 1.31em;
+    text-align: center;
+  }
+  .protyle-wysiwyg [data-node-id] span[data-type~=block-ref]::after {
+    /*后半部分的符号*/
+    content: "⁆⁆";
+    color: var(--SCC-Red-WPS);
+    /* font-size: 1em; */
+    /* margin-right: 0.5em; */
+    font-weight: bold;
+    display: inline-block;
+    width: 1.31em;
+    /* text-align: left; */
+    text-align: center;
+  }
+  .protyle-wysiwyg [data-node-id] span[data-type~=block-ref]:hover {
+    padding-bottom: 3px;
+    animation: waveMove 1s infinite linear;
+    background: var(--custom-span-ref-animation-icon) repeat-x 0 100%;
+    background-size: 16px auto;
+  }
+  
+
+/* ——————————————————————————H1-H6 标题样式—————————————————————————— */
+/* 给标题设置统一的颜色 */
+
+.protyle-wysiwyg [data-node-id].h1,
+.b3-typography h1 {
+    text-align: left;
+    font-size: 1.6em !important;
+    font-weight: 600;
+    position: relative;
+    z-index: 0;
+    vertical-align: middle;
+    margin-top: 36px;
+    color: var(--b3-font-color1);
+}
+
+.protyle-wysiwyg [data-node-id].h2,
+.b3-typography h2 {
+    font-size: 1.5em !important;
+    font-weight: 600;
+    position: relative;
+    z-index: 0;
+    margin-top: 30px;
+    color: var(--b3-font-color2);
+}
+
+.protyle-wysiwyg [data-node-id].h3,
+.b3-typography h3 {
+    font-size: 1.4em !important;
+    font-weight: 600;
+    position: relative;
+    z-index: 0;
+    margin-top: 24px;
+    color: var(--b3-font-color3);
+}
+
+.protyle-wysiwyg [data-node-id].h4,
+.b3-typography h4 {
+    font-size: 1.3em !important;
+    font-weight: 600;
+    position: relative;
+    z-index: 0;
+    margin-top: 18px;
+    color: var(--b3-font-color4);
+}
+
+.protyle-wysiwyg [data-node-id].h5,
+.b3-typography h5 {
+    font-size: 1.2em !important;
+    font-weight: 600;
+    position: relative;
+    z-index: 0;
+    margin-top: 12px;
+    color: var(--b3-font-color5);
+}
+
+.protyle-wysiwyg [data-node-id].h6,
+.b3-typography h6 {
+    font-size: 1.1em !important;
+    font-weight: 600;
+    position: relative;
+    z-index: 0;
+    margin-top: 6px;
+    color: var(--b3-font-color6);
+}
+
+
+@media screen and (min-width: 960px) {
+
+    /* 隐藏左上角设置按钮，鼠标悬浮时显示 */
+    #toolbar .toolbar__item svg {
+        opacity: 0.58;
+    }
+
+    #toolbar:hover svg {
+        opacity: 0.31;
+    }
+    #toolbar .toolbar__item:hover svg {
+        opacity: 1;
+    }
+
+}
+.b3-typography, .protyle-wysiwyg {
+    overflow: hidden;
+}
+
+/* 表格100%宽度 */
+.protyle-wysiwyg table,
+.b3-typography table {
+    display: table;
+    width: 100%;
+    font-size: 90%;
+}
+
+.b3-typography table tr,
+.protyle-wysiwyg table tr {
+    background-color: transparent;
+}
+
+/*设置表格表头样式*/
+table th {
+    font-weight: bold;
+    text-align: center;
+    background-color: var(--SCC-Red-WPS-lighter) !important;
+}
+
+/* 设置表格内部边框 */
+th, td {
+    border: 0.25pt solid var(--SCC-Red-WPS) !important;
+    border-collapse: collapse;
+}
+
+/* 表格奇偶行不同颜色 */
+tbody tr:nth-child(2n) {
+    background-color: var(--SCC-White-light) !important;
+}
+
+tbody tr:nth-child(2n + 1) {
+    background-color: var(--SCC-White) !important;
+}
+
+/* 侧边栏引用计数 */
 .counter {
     color: var(--SCC-Yellow-HellisePotter-light);
+    background-color: var(--SCC-Purple-186-lighter);
+    border-radius: 13px;
+}
+/* 文档内引用计数 */
+.protyle-attr--refcount {
+    right: 0px;
+    top: 0px;
+    position: absolute;
+    line-height: 16px;
+    padding: 0 4px;
+    margin-top: 0px;
+    margin-right: 0px;
+    color: var(--SCC-Yellow-HellisePotter-light);
+    border-radius: 13px;
+    font-size: 12px;
+    user-select: none;
+    cursor: pointer;
+    height: 16px;
     background-color: var(--SCC-Purple-186-lighter);
 }
 /* 设置面板关闭按钮 */
@@ -48,7 +234,7 @@
     font-family: var(--b3-font-family-code);
     border-top-left-radius: 4px;
 }
-/* 设置顶部三个mac按钮样式 */
+/* 代码块顶部添加风格元素 */
 .code-block::after {
     content: ' ';
     position: absolute;
@@ -69,7 +255,11 @@
 
 /* 给设置界面选择的地方加上边框 */
 .b3-dialog--open .b3-dialog__container .b3-select {
-    border: 1px solid var(--b3-border-color1);
+    border: 1px solid var(--SCC-Purple-186-lighter);
+}
+/* 设置左侧选中样式 */
+li.b3-list-item--focus.b3-list-item.b3-list-item--big, li.b3-list-item--focus.b3-list-item.b3-list-item--big svg.b3-list-item__graphic {
+    color: var(--SCC-Blue-186);
 }
 
 /* 集市主题详情页 */
@@ -89,3 +279,4 @@
 .b3-typography div.hljs, .protyle-wysiwyg div.hljs {
     background-color: #f8f9fa;
 }
+
