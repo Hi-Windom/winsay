@@ -6,12 +6,47 @@
 @import url("style/Printer.css");
 @import url("style/NodeHeading-biaoti.css");
 
+/* 按钮的样式 */
+.b3-button--outline {
+    color: var(--SCC-White);
+    background-color: var(--SCColor);
+    box-shadow: rgba(254,239,234,0.13) 0px 2px 1px, rgba(254,239,234,0.13) 0px 4px 2px, rgba(254,239,234,0.13) 0px 8px 4px, rgba(254,239,234,0.13) 0px 16px 8px;
+}
+.b3-button--outline:focus, .b3-button--outline:hover {
+    color: var(--SCC-Purple-Soledar);
+    background-color: var(--b3-theme-primary-lightest);
+    box-shadow: rgba(254,239,234, 0.4) 0px 3px, rgba(0,6,85, 0.3) 0px 5px, rgba(72,69,80, 0.1) 0px 8px;
+}
+/* 输入框样式 */
+.b3-text-field, .pcr-app .pcr-interaction .pcr-result {
+    border: 1px;
+    border-radius: 4px;
+    box-shadow: rgba(128,81,231,0.31) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    padding: 4px 8px;
+    line-height: 20px;
+    box-sizing: border-box;
+    color: var(--b3-theme-on-background);
+    transition: box-shadow 120ms 0ms cubic-bezier(0, 0, 0.2, 1);
+    background-color: var(--b3-theme-background);
+}
+.b3-text-field:hover {
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.b3-text-field:focus {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+/* 选择框样式 */
+.b3-dialog--open .b3-dialog__container .b3-select {
+    border: 1px solid var(--SCC-Purple-186-light);
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
 /* 解决特定缩放下出现意外滚动条 */
 .fn__flex-column {
     overflow: hidden;
 }
 
-/* kbd 按键/按钮的样式 */
+/* kbd 按键的样式 */
 .b3-typography kbd, .b3-typography span[data-type~=kbd], .protyle-wysiwyg kbd, .protyle-wysiwyg span[data-type~=kbd]{
     border-radius: 6px;
     color: var(--SCC-Black-186);
