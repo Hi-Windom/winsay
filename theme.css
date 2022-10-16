@@ -40,6 +40,14 @@
     border: 1px solid var(--SCC-Purple-186-light);
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
+/* 检查框样式 */
+.b3-switch:checked {
+    background-color: var(--SCC-Purple-186-light);
+}
+.b3-switch:checked:after {
+    background-color: var(--SCC-Purple-186);
+    border-color: var(--SCC-Purple-186);
+}
 
 /* 解决特定缩放下出现意外滚动条 */
 .fn__flex-column {
