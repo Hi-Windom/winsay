@@ -48,6 +48,11 @@
 .block__popover--open:hover *{
     background-color: var(--SCC-White) !important;
 }
+/* 当前打开文档右上角【更多】按钮位置和大小微调 */
+.protyle-breadcrumb > button svg {
+    scale: 1.31 !important;
+    margin-right: 7px;
+}
 
 /* 避免搜索框阴影样式被遮挡 */
 .search__header {
