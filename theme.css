@@ -162,7 +162,6 @@
     color: var(--b3-font-color6);
 }
 
-
 @media screen and (min-width: 960px) {
 
     /* 隐藏左上角设置按钮，鼠标悬浮时显示 */
@@ -177,6 +176,43 @@
         opacity: 1;
     }
 
+    /* 代码块顶部添加风格元素 */
+    .code-block::after {
+        content: ' ';
+        position: absolute;
+        background: #ff0000;
+        box-shadow: 58px 0 #0070c0, 116px 0 #ff3399, 174px 0 #912997;
+        border-radius: var(--b3-border-radius-round);
+        top: 10px;
+        left: 38px;
+        height: 3px;
+        width: 58px;
+       z-index: 1;
+    }
+
+}
+@media screen and (max-width: 960px) {
+    /* 代码块顶部添加风格元素 */
+    .code-block::after {
+        content: ' ';
+        position: absolute;
+        background: #ff0000;
+        box-shadow: 13px 0 #0070c0, 26px 0 #ff3399, 39px 0 #912997;
+        border-radius: var(--b3-border-radius-round);
+        top: 10px;
+        left: 13px;
+        height: 3px;
+        width: 13px;
+       z-index: 1;
+    }
+    /* 代码块行号 */
+    .protyle-linenumber__rows {
+        padding: 22px 4px;
+        width: 1.3em;
+    }
+    .protyle-linenumber {
+        margin-left: 1.3em;
+    }
 }
 .b3-typography, .protyle-wysiwyg {
     overflow: hidden;
@@ -277,19 +313,8 @@ tbody tr:nth-child(2n + 1) {
     font-family: var(--b3-font-family-code);
     border-top-left-radius: 4px;
 }
-/* 代码块顶部添加风格元素 */
-.code-block::after {
-    content: ' ';
-    position: absolute;
-    background: #ff0000;
-    box-shadow: 58px 0 #0070c0, 116px 0 #ff3399, 174px 0 #912997;
-    border-radius: var(--b3-border-radius-round);
-    top: 10px;
-    left: 38px;
-    height: 3px;
-    width: 58px;
-    z-index: 1;
-}
+
+
 
 /* 搜索界面标签页中文字居中 */
 .b3-dialog--open .b3-dialog__container span.item__text {
