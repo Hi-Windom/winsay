@@ -182,10 +182,11 @@
     color: var(--text-focus);
     border-radius: 5px;
     position: relative;
-    padding: .1rem 0.3rem .1rem .1rem;
+    padding: .1rem .2rem .1rem .1rem;
     font-size: 85%;
     box-shadow: var(--SCColor) 3.6em 0px 0px -2.2em inset,0px 0px 0px 1px inset;
     border: none;
+    margin: .2rem;
 }
 /* 标签tag样式 */
 .protyle-wysiwyg [data-node-id] span[data-type~=tag]::before {
@@ -193,7 +194,7 @@
     color: var(--SCC-White);
     display: inline-block;
     margin-right: .2rem;
-    padding: 0rem .4rem 0rem 0.3rem;
+    padding: .2rem;
 }
 
 /* 解决特定缩放下出现意外滚动条 */
@@ -207,22 +208,37 @@
     color: var(--SCC-Black-186);
     background-color: var(--SCC-White-light);
     vertical-align: 2px;
-    /* box-shadow: var(--SCC-White) 0px 1px 2px -3px, var(--SCC-primary-light) 0px -1px 0px 1px inset; */
-    box-shadow: rgba(254,239,234, 0.4) 0px 3px, rgba(0,6,85, 0.3) 0px 5px, rgba(72,69,80, 0.1) 0px 8px;
+    /* box-shadow: rgba(191,250,226, 0.4) 0px 2px, rgba(72,69,80,0.3) 0px 4px; // Sofill+ 备选方案 */
+    box-shadow: rgba(254,239,234, 0.4) 0px 3px, rgba(0,6,85, 0.3) 0px 5px;
     border: 0px solid;
     margin-right: 2px;
     font-family: var(--b3-font-family);
 }
 
+/* 行内代码样式 */
 span[data-type=code] {
     border-radius: 6px;
     color: var(--SCC-White);
     background-color: var(--SCC-primary-light) !important;
     vertical-align: 2px;
-    box-shadow: rgba(191,250,226, 0.4) 0px 2px, rgba(72,69,80,0.3) 0px 4px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 3px 2px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     border: 0px solid;
     margin-right: 2px;
     font-family: var(--b3-font-family-code);
+}
+span[data-type=code]::before {
+    content: "<";
+    color: var(--SCC-White-lighter);
+    display: inline-block;
+    margin-right: .1rem;
+    padding: 0;
+}
+span[data-type=code]::after {
+    content: ">";
+    color: var(--SCC-White-lighter);
+    display: inline-block;
+    margin-left: .1rem;
+    padding: 0;
 }
 
 /* 双链样式 */
