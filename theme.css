@@ -60,6 +60,20 @@
     margin-right: 7px;
 }
 
+/* 【设置】-【账户】界面美化 */
+.config-account__name a {
+    color: var(--SCC-Orange-Windom);
+    text-shadow: 2px 2px 2px #737373;
+}
+.ft__center > a > span > big {
+    color: var(--SCC-Orange-Windom);
+    text-shadow: 1px 1px 1px #320b11;
+}
+.ft__center > a:hover > span > big {
+    color: var(--SCC-Blue-186);
+    text-shadow: none;
+}
+
 /* 默认颜色加粗样式应当保留原颜色 */
 .b3-typography span[data-type=strong],
 .protyle-wysiwyg span[data-type=strong]
