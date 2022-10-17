@@ -60,6 +60,15 @@
     margin-right: 7px;
 }
 
+/* 默认颜色加粗样式应当保留原颜色 */
+.b3-typography span[data-type=strong],
+.protyle-wysiwyg span[data-type=strong]
+{
+    color: inherit !important;
+    font-weight: bold;
+}
+
+
 /* 减少右下角元素对视线的抢夺 */
 #barFeedback, #barLock, #barDebug, #barHelp {
     opacity: .13;
