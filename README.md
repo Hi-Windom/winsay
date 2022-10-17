@@ -1,12 +1,24 @@
 # Sofill-主题：内部代号 [ winsay ]（风颂）轻量化简洁风绛亽特色思源笔记主题
 
+打包体积限定：小于3M
 
-打包体积限定：小于10M
+外观部分重写部分样式，依据绛亽有关标准和约定俗成。原则上不添加额外功能，功能强大的 Sofill= 主题 Coming Soon
 
 
-外观：
+# 集市更新说明
 
-重写部分样式，依据绛亽有关标准和约定俗成
+## 0.8 Release for 2210累计更新
+
+1. 更加美观的标签页
+2. 适配思源v2.4.1正式版（之前版本未做适配）
+3. 更新思源v2.4.1后，部分主题可能存在文档在特定缩放下右侧意外出现额外的滚动条，Sofill- 主题通过定义样式  .fn__flex-column { overflow: hidden; } 解决
+
+
+关于主题更新的详细信息可访问 [Tags · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/tags)
+
+
+
+# 主题特色介绍
 
 
 <pre><code class="language-css">    /* 绛亽色 */
@@ -91,3 +103,19 @@
     --SCC-Red-WPS-lighter: rgba(153,0,51,0.31);
     --SCC-Red-WPS-lightest: rgba(153,0,51,0.13);
 </code></pre>
+
+
+# 鸣谢
+
+Sofill主题家族的诞生与成长离不开下列开源项目。
+
+
+参考主题：（排名不分先后）
+
+* [OneNote](https://github.com/UserZYF/OneNote)
+* [Dark+](https://github.com/Zuoqiu-Yingyi/siyuan-theme-dark-plus)
+* [Zhang-Light](https://github.com/UserZYF/zhang-light)
+* [Chrome-A4](https://github.com/UserZYF/Chrome-A4)
+* [pink-room](https://github.com/StarDustSheep/pink-room)
+* [HBuilderX-light](https://github.com/UFDXD/HBuilderX-Light)
+* [notion-theme](https://github.com/royc01/notion-theme)

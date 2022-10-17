@@ -233,14 +233,15 @@
 
     /* 隐藏左上角设置按钮，鼠标悬浮时显示 */
     #toolbar .toolbar__item svg {
-        opacity: 0.58;
+        opacity: 0.13;
     }
 
     #toolbar:hover svg {
-        opacity: 0.31;
+        opacity: 0.58;
     }
     #toolbar .toolbar__item:hover svg {
         opacity: 1;
+        color: var(--SCC-Red-Firole);
     }
 
     /* 代码块顶部添加风格元素 */
