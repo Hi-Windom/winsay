@@ -60,6 +60,17 @@
     margin-right: 7px;
 }
 
+/* 减少右下角元素对视线的抢夺 */
+#barFeedback, #barLock, #barDebug, #barHelp {
+    opacity: .13;
+}
+#barFeedback:hover, #barLock:hover, #barDebug:hover, #barHelp:hover {
+    opacity: 1;
+}
+.status__counter{
+    opacity: .58;
+}
+
 /* 避免搜索框阴影样式被遮挡 */
 .search__header {
     z-index: 99;

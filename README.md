@@ -2,16 +2,21 @@
 
 打包体积限定：小于3M
 
-外观部分重写部分样式，依据绛亽有关标准和约定俗成。原则上不添加额外功能，功能强大的 Sofill= 主题 Coming Soon
+外观部分重写部分样式，依据绛亽有关标准和约定俗成。原则上不添加额外功能，功能强大的 Sofill= 和 Sofill+ 主题 Coming Soon
 
 
 # 集市更新说明
 
-适配说明：
+版本说明：
 
 1. 本主题最低适配思源v2.4.1
 2. 集市推送的更新版本中如果提及“适配思源vX.X.X”，建议更新思源后再更新主题，否则可能存在适配问题
-3. 本主题在Android端体验良好，同样最低适配v2.4.1
+3. 本主题有专门适配Android端，用户体验良好
+4. Sofill 主题家族三款主题 Sofill-（内部代号winsay）、Sofill=（内部代号lili）、Sofill+（内部代号lnco）计划携手并进 v1.0，在此之前本主题将保持 v0.X 的形式迭代
+5. 关于主题更新的更多信息可访问 [Releases · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/releases)
+
+## 0.10 Release for 2210累计更新
+
 
 ## 0.8 Release for 2210累计更新
 
@@ -20,11 +25,9 @@
 3. 更新思源v2.4.1后，部分主题可能存在文档在特定缩放下右侧意外出现额外的滚动条，Sofill- 主题通过定义样式  .fn__flex-column { overflow: hidden; } 解决
 
 
-关于主题更新的详细信息可访问 [Tags · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/tags)
-
-
-
 # 主题特色介绍
+
+ Sofill- 或许呈现起来有点“马卡龙”风格，不过 Sofill- 的定位一直是“轻量化简洁风绛亽特色”，并不承诺贴合“马卡龙”风格进行设计开发。
 
 
 <pre><code class="language-css">    /* 绛亽色 */
