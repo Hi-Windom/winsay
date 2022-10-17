@@ -7,7 +7,7 @@ if (!originPixelRatio) {
         localStorage.devicePixelRatio = originPixelRatio;
     }
 }
-
+// 来源：https://www.zhangxinxu.com/wordpress/2021/02/js-if-page-zoom/
 let lastPixelRatio = originPixelRatio;
 window.addEventListener('resize', function () {
     let currentPixelRatio = window.devicePixelRatio;
