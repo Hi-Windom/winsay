@@ -133,6 +133,27 @@
     border-color: var(--SCC-Purple-186);
 }
 
+/* 标签tag样式 */
+.protyle-wysiwyg [data-node-id] span[data-type~=tag] {
+    background-color: var(--SCC-White-light);
+    transition: all .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    color: var(--text-focus);
+    border-radius: 5px;
+    position: relative;
+    padding: .1rem 0.3rem .1rem .1rem;
+    font-size: 85%;
+    box-shadow: var(--SCColor) 3.6em 0px 0px -2.2em inset,0px 0px 0px 1px inset;
+    border: none;
+}
+/* 标签tag样式 */
+.protyle-wysiwyg [data-node-id] span[data-type~=tag]::before {
+    content: "#";
+    color: var(--SCC-White);
+    display: inline-block;
+    margin-right: .2rem;
+    padding: 0rem .4rem 0rem 0.3rem;
+}
+
 /* 解决特定缩放下出现意外滚动条 */
 .fn__flex-column {
     overflow: hidden;
@@ -261,7 +282,7 @@
         color: var(--SCC-Red-Firole);
     }
     /* windowControls 视觉效果优化 */
-    #windowControls svg{
+    #windowControls svg {
         opacity: 1 !important;
     }
 
@@ -348,8 +369,8 @@ tbody tr:nth-child(2n + 1) {
 
 /* 侧边栏引用计数 */
 .counter {
-    color: var(--SCC-Yellow-HellisePotter-light);
-    background-color: var(--SCC-Purple-186-lighter);
+    color: var(--SCC-Red-WPS);
+    background-color: var(--SCC-Purple-186-lightest);
     border-radius: 13px;
 }
 /* 文档内引用计数 */
@@ -361,13 +382,13 @@ tbody tr:nth-child(2n + 1) {
     padding: 0 4px;
     margin-top: 0px;
     margin-right: 0px;
-    color: var(--SCC-Yellow-HellisePotter-light);
+    color: var(--SCC-Red-WPS);
     border-radius: 13px;
     font-size: 12px;
     user-select: none;
     cursor: pointer;
     height: 16px;
-    background-color: var(--SCC-Purple-186-lighter);
+    background-color: var(--SCC-Purple-186-lightest);
 }
 /* -------------------------------------------------代码块样式--------------------------------------------------- */
 .code-block {
