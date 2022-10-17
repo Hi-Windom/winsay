@@ -38,6 +38,10 @@
 }
 
 /*引用块弹出框*/
+.block__popover {
+    min-height: 13vh;
+    max-height: 58vh;
+}
 .block__popover--open{
 	animation: menu 0.13s ease-in-out;
     opacity: .96;
