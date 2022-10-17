@@ -80,7 +80,8 @@ function getDocumentTime(tilteElement) {
   var hour = tS.substring(8, 10);
   var minute = tS.substring(10, 12);
   var second = tS.substring(12, 14);
-  return year + "-" + moon + "-" + day + "  " + hour + ":" + minute + ":" + second;
+  console.log(year, moon, day, hour, minute, second);
+  return "since " + year + "-" + moon + "-" + day;
 }
 /**------------------为打开文档的标题下显示文档创建日期-----------------结束 */
 
