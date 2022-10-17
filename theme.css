@@ -250,7 +250,7 @@
 
     /* 隐藏左上角设置按钮，鼠标悬浮时显示 */
     #toolbar .toolbar__item svg {
-        opacity: 0.13;
+        opacity: 0;
     }
 
     #toolbar:hover svg {
@@ -259,6 +259,10 @@
     #toolbar .toolbar__item:hover svg {
         opacity: 1;
         color: var(--SCC-Red-Firole);
+    }
+    /* windowControls 视觉效果优化 */
+    #windowControls svg{
+        opacity: 1 !important;
     }
 
     /* 代码块顶部添加风格元素 */

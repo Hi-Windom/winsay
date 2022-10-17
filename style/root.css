@@ -133,7 +133,7 @@
     --b3-tooltips-color: rgba(0, 0, 0, 0.54);
 
     /* 遮罩 */
-    --b3-mask-background: rgba(0, 0, 0, 0.78);
+    --b3-mask-background: var(--SCC-primary-light);
 
     /* 卡片背景 */
     --b3-card-error-color: rgb(97, 26, 21);
