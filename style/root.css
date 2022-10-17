@@ -158,8 +158,7 @@
     --b3-font-color10: var(--SCC-Green-186);
     --b3-font-color11: var(--SCC-Yellow-HellisePotter);
     --b3-font-color12: var(--SCC-Orange-Windom);
-    --b3-font-color13: var(--b3-theme-background);
-    --b3-font-color14: var(--b3-theme-background);
+    --b3-font-color13: var(--b3-theme-on-background);
     --b3-font-background1: var(--SCC-Red-Firole-light);
     --b3-font-background2: var(--SCC-Pink-Firole-light);
     --b3-font-background3: var(--SCC-Purple-186-light);
