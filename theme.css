@@ -68,7 +68,23 @@
     font-weight: bold;
 }
 
-
+/* 减少左下角元素对视线的抢夺 */
+#barDock svg {
+    opacity: .58;
+    scale: 1.13 !important;
+    margin-left: 5px;
+    margin-right: 22px;
+    margin-bottom: 5px;
+}
+#barDock:hover svg {
+    opacity: 1;
+}
+.status__msg {
+    opacity: .3;
+}
+.status__msg:hover {
+    opacity: .9;
+}
 /* 减少右下角元素对视线的抢夺 */
 #barFeedback, #barLock, #barDebug, #barHelp {
     opacity: .13;
@@ -78,6 +94,9 @@
 }
 .status__counter{
     opacity: .58;
+}
+.status__counter:hover{
+    opacity: 1;
 }
 
 /* 避免搜索框阴影样式被遮挡 */
