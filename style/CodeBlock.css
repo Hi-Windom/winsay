@@ -46,16 +46,28 @@
     opacity: 1 !important;
     font-family: var(--b3-font-family-code);
 }
+.b3-typography .code-block .protyle-action .protyle-action__language::before,
+.protyle-wysiwyg .code-block .protyle-action .protyle-action__language::before {
+    content: "lang::";
+    font-family: var(--b3-font-family-code);
+    color: var(--SCC-primary-lighter);
+}
 
 .b3-typography .code-block .protyle-action .protyle-action__language::after,
 .protyle-wysiwyg .code-block .protyle-action .protyle-action__language::after {
     content: "›";
     font-family: var(--b3-font-family-code);
-    color: #80808080;
+    color: var(--SCColor);
+    opacity: 0;
+}
+.b3-typography .code-block:hover .protyle-action .protyle-action__language::after,
+.protyle-wysiwyg .code-block:hover .protyle-action .protyle-action__language::after {
+    content: "›";
+    font-family: var(--b3-font-family-code);
+    color: var(--SCColor);
     opacity: 1;
 }
 
-/* ————————————————————————————————集市里边代码块的主题—————————————————————————————— */
 code.hljs {
     border: 1px solid var(--b3-border-color1);
 }
@@ -74,7 +86,15 @@ code.hljs {
 .b3-typography .code-block .protyle-action .protyle-action__language svg,
 .protyle-wysiwyg .code-block .protyle-action .protyle-icon svg,
 .protyle-wysiwyg .code-block .protyle-action .protyle-action__language svg {
-    color: gray;
+    color: var(--SCColor);
+    opacity: 0;
+}
+.b3-typography .code-block:hover .protyle-action .protyle-icon svg,
+.b3-typography .code-block:hover .protyle-action .protyle-action__language svg,
+.protyle-wysiwyg .code-block:hover .protyle-action .protyle-icon svg,
+.protyle-wysiwyg .code-block:hover .protyle-action .protyle-action__language svg {
+    color: var(--SCColor);
+    opacity: 1;
 }
 
 /* -------------------------------------------------代码块样式 END--------------------------------------------------- */
