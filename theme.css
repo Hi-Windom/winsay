@@ -43,7 +43,7 @@
 }
 .block__popover--open:hover {
     opacity: 1;
-    box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 58px 12px, rgb(255, 85, 85) 0px 0px 0px 15px !important;
+    box-shadow: rgba(85, 91, 255,0.31) 0px 0px 0px 3px, rgba(31, 193, 27,0.38) 0px 0px 0px 6px, rgba(255, 217, 19,0.58) 0px 0px 0px 9px, rgba(255, 156, 85,0.96) 0px 0px 58px 12px, rgba(255, 85, 85,0.88) 0px 0px 0px 15px !important;
 }
 .block__popover--open:hover *{
     background-color: var(--SCC-White) !important;
