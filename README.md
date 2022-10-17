@@ -6,7 +6,6 @@
 
 外观部分重写部分样式，依据绛亽有关标准和约定俗成。原则上不添加额外功能，功能强大的 Sofill= 和 Sofill+ 主题 Coming Soon
 
-
 # 集市最近三次更新版本日志
 
 版本说明：
@@ -17,8 +16,23 @@
 4. Sofill 主题家族三款主题 Sofill-（内部代号winsay）、Sofill=（内部代号lili）、Sofill+（内部代号lnco）计划携手并进 v1.0，在此之前本主题将保持 v0.X 的形式迭代
 5. 关于主题更新的更多信息可访问 [Releases · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/releases)
 
-## 0.10 Release for 2210累计更新
+## 0.12 Release for 2210累计更新
 
+引入特性：
+
+1. 在文档名的下方显示文档创建时间 · Issue #9 · Hi-Windom/winsay (github.com)
+
+改进优化：
+
+1. 减少左下角元素对视线的抢夺 · Issue #7 · Hi-Windom/winsay (github.com)
+2. 字体面板提供默认字体颜色 · Issue #8 · Hi-Windom/winsay (github.com)
+3. 【设置】-【账户】界面美化 · Issue #6 · Hi-Windom/winsay (github.com)
+
+缺陷修复：
+
+1. 默认颜色加粗样式应当保留原颜色 · Issue #4 · Hi-Windom/winsay (github.com)
+
+## 0.10 Release for 2210累计更新
 
 引入特性：
 
@@ -35,18 +49,15 @@
 1. 【设置】-【集市】标签页样式污染 · Issue #2 · Hi-Windom/winsay (github.com)
 2. 反链面板计数显示不清晰 · Issue #5 · Hi-Windom/winsay (github.com)
 
-
 ## 0.8 Release for 2210累计更新
 
 1. 更加美观的标签页
 2. 适配思源v2.4.1正式版（之前版本未做适配）
 3. 更新思源v2.4.1后，部分主题可能存在文档在特定缩放下右侧意外出现额外的滚动条，Sofill- 主题通过定义样式  .fn__flex-column { overflow: hidden; } 解决
 
-
 # 主题特色介绍
 
  Sofill- 或许呈现起来有点“马卡龙”风格，不过 Sofill- 的定位一直是“轻量化简洁风绛亽特色”，并不承诺贴合“马卡龙”风格进行设计开发。
-
 
 <pre><code class="language-css">    /* 绛亽色 */
     --SCColor: #484550;
@@ -84,7 +95,6 @@
     /* 云上高组 */
     --SCC-Red-WPS: #990033;
 </code></pre>
-
 
 # 鸣谢
 
