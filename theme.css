@@ -5,6 +5,7 @@
 @import url("style/TabBar.css");
 @import url("style/Printer.css");
 @import url("style/NodeHeading-biaoti.css");
+@import url("style/Task.css");
 
 @keyframes menu {
     0% {opacity: 0.13;}
@@ -255,6 +256,16 @@
 /* 解决特定缩放下出现意外滚动条 */
 .fn__flex-column {
     overflow: hidden;
+}
+
+/* 删除线 */
+.b3-typography s,
+.b3-typography span[data-type=s],
+.protyle-wysiwyg s,
+.protyle-wysiwyg span[data-type=s] {
+    text-decoration: line-through;
+    text-decoration-color: var(--b3-protyle-inline-s-color);
+    color: var(--b3-protyle-inline-s-color);
 }
 
 /* kbd 按键的样式 */
