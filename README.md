@@ -103,6 +103,8 @@
 
 Sofill 系列家族的诞生与成长离不开下列开源项目的贡献，以及热心网友的反馈和建议。
 
+如果需要提 issue 请前往原 repo [Issues · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues)
+
 ## 思源社区
 
 [思源笔记](https://github.com/siyuan-note/siyuan)

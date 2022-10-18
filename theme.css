@@ -383,6 +383,10 @@ span[data-type=code]::after {
     #windowControls svg {
         opacity: 1 !important;
     }
+    /* 优化右上角窗口关闭按钮焦点样式 */
+    #closeWindow:hover svg {
+        color: var(--SCC-Gray-HellisePotter) !important;
+    }
 
     /* 代码块顶部添加风格元素 */
     .code-block::after {
