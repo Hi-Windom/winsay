@@ -32,8 +32,17 @@
 | 隐藏标记文本                      |                      |                                                    | √                                      |
 | 更换背景图片                      |                      |                                                    | √                                      |
 | 意码助手                          |                      |                                                    | √                                      |
+| Android 端适配                   | √                   |                                                    |                                         |
 
 注意：以上所列功能仅供参考，以具体实现为准。
+
+## 主题特色介绍
+
+ Sofill- 或许呈现起来有点“马卡龙”风格，不过 Sofill- 的定位一直是“轻量化简洁风绛亽特色”，并不承诺贴合“马卡龙”风格进行设计开发。
+
+ Sofill- 主题根据 [绛亽标准色](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E4%B8%BB%E9%A2%98%E9%80%9A%E7%94%A8%E6%A0%87%E5%87%86%E8%89%B2) 设计
+
+## Sofill- 适合哪些人使用
 
 # 集市最近三次更新版本日志
 
@@ -89,47 +98,6 @@
 
 1. 【设置】-【集市】标签页样式污染 · Issue #2 · Hi-Windom/winsay (github.com)
 2. 反链面板计数显示不清晰 · Issue #5 · Hi-Windom/winsay (github.com)
-
-# 主题特色介绍
-
- Sofill- 或许呈现起来有点“马卡龙”风格，不过 Sofill- 的定位一直是“轻量化简洁风绛亽特色”，并不承诺贴合“马卡龙”风格进行设计开发。
-
-<pre><code class="language-css">    /* 绛亽色 */
-    --SCColor: #484550;
-    /* 绛亽白 */
-    --SCC-White: #feefea;
-    /* 海文东蓝 */
-    --SCC-Blue-Windom: #000655;
-    /* 海文东黄 */
-    --SCC-Orange-Windom: #ffbb00;
-    /* 海文东2号蓝 */
-    --SCC-Blue-Windom_2: #3a83ba;
-    /* 巴枀紫 */
-    --SCC-Purple-Soledar: #912997;
-    /* 火萝粉 */
-    --SCC-Pink-Firole: #ff3399;
-    /*  火萝红 */
-    --SCC-Red-Firole: #ff0066;
-    /* 一八六战略紫 */
-    --SCC-Purple-186: #8051e7;
-    /* 一八六战略青 */
-    --SCC-Cyan-186: #bffae2;
-    /* 一八六战略绿 */
-    --SCC-Green-186: #80fb0a;
-    /* 一八六战略棕 */
-    --SCC-Brown-186: #320b11;
-    /* 一八六战略黑 */
-    --SCC-Black-186: #0d0d0d;
-    /* 一八六战略灰 */
-    --SCC-Gray-186: #bfa7b1;
-    /* 一八六战略蓝 */
-    --SCC-Blue-186: #494bc3;
-    /* 绛亽束彖园络管理系统内部代号：[ Hellise Potter ]（赫礼斯叵特） */
-    --SCC-Yellow-HellisePotter: #f4f400;
-    --SCC-Gray-HellisePotter: #dee3f4;
-    /* 云上高组 */
-    --SCC-Red-WPS: #990033;
-</code></pre>
 
 # 鸣谢
 

@@ -74,6 +74,35 @@
     text-shadow: none;
 }
 
+/* 优化块级清除样式按钮显示效果 */
+.b3-menu__label > div[aria-label="清除样式"] span {
+    color:var(--b3-theme-background);
+}
+.b3-menu__submenu--row button:nth-last-child(2) {
+    background-color:var(--b3-theme-surface-lighter) !important;
+    margin-top: 8px!important;
+    margin-bottom: 8px!important;
+}
+[aria-label="清除样式"]:after{
+	content:"Clear Block Style";
+	color:var(--SCC-Gray-Soledar);
+    opacity: .58;
+	position:absolute;
+	left:30px;
+    font-size: .77rem;
+	bottom:-3px;
+}
+[aria-label="清除样式"]:hover:after{
+	content:"Clear Block Style";
+	color: var(--b3-theme-on-background);
+    opacity: 1;
+	position:absolute;
+	left:30px;
+    font-size: .77rem;
+	bottom:-3px;
+}
+
+
 /* 默认颜色加粗样式应当保留原颜色 */
 .b3-typography span[data-type=strong],
 .protyle-wysiwyg span[data-type=strong]
