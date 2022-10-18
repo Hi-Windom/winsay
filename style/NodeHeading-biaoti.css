@@ -48,7 +48,7 @@
     z-index: 0;
     vertical-align: middle;
     margin-top: 36px;
-    color: var(--b3-font-color1);
+    color: var(--b3-font-color1) !important;
 }
 .protyle-wysiwyg [data-node-id].h1 span[data-type~=tag] {
     border-radius: .33rem;
@@ -218,11 +218,13 @@ div[style*="background-color"] div[data-type="NodeHeading"]::before {
 /* ————————————————————给折叠标题增加背景样式———————————————————— */
 .protyle-wysiwyg div[fold="1"][data-type="NodeHeading"] {
     background-color: var(--b3-theme-background2) !important;
-    color: var(--b3-font-color-gray-tm) !important;
-    border: var(--b3-border-normal);
-    border-radius: 1px;
+    box-shadow: rgb(38, 57, 77) 0px 31px 31px -31px !important;
+    border: 5px inset var(--SCC-Gray-Soledar-light) !important;
+    border-radius: 8px;
 }
-
-/* .protyle-wysiwyg div[fold="1"][data-type="NodeHeading"]::after {
-    content: "...";
-} */
+.protyle-wysiwyg div[fold="1"][data-type="NodeHeading"]:hover {
+    background-color: var(--b3-theme-background2) !important;
+    box-shadow: rgb(38, 57, 77) 0px 13px 13px -13px !important;
+    border: 5px outset var(--SCC-Gray-Soledar-light) !important;
+    border-radius: 8px;
+}
