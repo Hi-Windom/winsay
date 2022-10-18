@@ -102,6 +102,11 @@
 	bottom:-3px;
 }
 
+/* 搜索击中高亮应显著区分于文本背景色 */
+.b3-list mark, .protyle-wysiwyg [data-node-id] span[data-type=search-mark] {
+    background-color: var(--SCC-Green-186-light);
+    color: var(--b3-theme-on-background);
+}
 
 /* 默认颜色加粗样式应当保留原颜色 */
 .b3-typography span[data-type=strong],
@@ -163,7 +168,7 @@
 .b3-button--outline {
     color: var(--SCC-White);
     background-color: var(--SCColor);
-    box-shadow: rgba(254,239,234,0.13) 0px 2px 1px, rgba(254,239,234,0.13) 0px 4px 2px, rgba(254,239,234,0.13) 0px 8px 4px, rgba(254,239,234,0.13) 0px 16px 8px;
+    box-shadow: rgba(254,239,234,0.13) 0px 2px 1px, rgba(254,239,234,0.13) 0px 4px 4px, rgba(254,239,234,0.13) 0px 8px 4px, rgba(254,239,234,0.13) 0px 6px 8px;
 }
 .b3-button--outline:focus, .b3-button--outline:hover {
     color: var(--SCC-Purple-Soledar);
