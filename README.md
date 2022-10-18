@@ -8,33 +8,7 @@
 
 ## Sofill 系列主题如何选择
 
-。
-
-| 对比项                            | Sofill-              | Sofill=                                            | Sofill+                                 |
-| --------------------------------- | -------------------- | -------------------------------------------------- | --------------------------------------- |
-| Release 包限重                   | 3M                   | 40M                                                | 70M                                     |
-| 内部代号                          | winsay               | lili                                               | lnco                                    |
-| 内部代号（译）                    | 风颂                 | 丽丽                                               | 兰可                                    |
-| 样式依赖关系                      | 定义标准 light 样式 | 继承标准 light 样式，<br />在此基础上重写部分样式  | 定义标准 dark 样式                     |
-| 功能依赖关系                      | 轻量化               | 适配绛亽标准律的一款<br />彖乄标准套件思源笔记主题 | Sofill=配套暗黑探索版<br />思源笔记主题 |
-| 导出pdf深度优化                   |                      | √                                                 | √                                      |
-| 内置字体                          | 少                   | 多                                                 | 很多                                    |
-| 查看 Markdown 源代码              |                      | √                                                 | √                                      |
-| 查看 Kramdown 源代码              |                      | √                                                 | √                                      |
-| 切换标题样式                      |                      | √                                                 | √                                      |
-| 列表视图的转换功能                |                      | √                                                 | √                                      |
-| 记录/清除浏览位置                 |                      | √                                                 | √                                      |
-| 鼠标滚轮调节字体大小              |                      | √                                                 | √                                      |
-| 一键删除 Untitled 文件            |                      |                                                    | √                                      |
-| 纵向排列选项卡                    |                      |                                                    | √                                      |
-| 展开/折叠当前文档<br />所有子标题 |                      |                                                    | √                                      |
-| 滚屏显示                          |                      |                                                    | √                                      |
-| 隐藏标记文本                      |                      |                                                    | √                                      |
-| 更换背景图片                      |                      |                                                    | √                                      |
-| 意码助手                          |                      |                                                    | √                                      |
-| Android 端适配                   | √                   |                                                    |                                         |
-
-注意：以上所列功能仅供参考，以具体实现为准。
+参考 [Sofill 系列主题如何选择 · Hi-Windom/Sofill Wiki (github.com)](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E4%B8%BB%E9%A2%98%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9)
 
 ## 主题特色介绍
 
@@ -43,6 +17,8 @@
  Sofill- 主题根据 [绛亽标准色](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E4%B8%BB%E9%A2%98%E9%80%9A%E7%94%A8%E6%A0%87%E5%87%86%E8%89%B2) 设计
 
 ## Sofill- 适合哪些人使用
+
+待定
 
 # 集市最近三次更新版本日志
 
@@ -54,6 +30,28 @@
 4. Sofill 系列主题三款主题计划携手并进 v1.0，在此之前本主题将保持 v0.X 的形式迭代
 5. 关于主题更新的更多信息可访问 [Releases · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/releases)
 6. 关注后续版本动态可访问 [Milestones - Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/milestones)
+
+## 0.16 Release for 2210累计更新
+
+引入特性：
+
+1. [嵌入内容块样式优化-添加阴影效果 · Issue #19 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/19)
+2. [超级块添加聚焦样式 · Issue #21 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/21)
+3. [添加标题折叠样式 · Issue #26 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/26)
+4. [任务列表样式美化 · Issue #18 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/18)
+
+改进优化：
+
+1. [只显示文档创建日期 · Issue #17 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/17)
+2. [修改标签页字重 · Issue #25 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/25)
+3. [优化块级清除样式按钮显示效果 · Issue #31 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/31)
+4. [优化右上角窗口关闭按钮焦点样式 · Issue #14 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/14)
+5. [搜索击中高亮颜色应显著区分于文档标记文本颜色 · Issue #28 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/28)
+6. [全屏模式下【更多】按钮调整 · Issue #32 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/32) （注意：这个不属于主题问题，思源官方后续版本解决这个问题后 Sofill- 主题可能出现适配问题）
+
+缺陷修复：
+
+1. [标签样式在标题中显示异常 · Issue #22 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/22)
 
 ## 0.14 Release for 2210累计更新
 
@@ -83,23 +81,6 @@
 
 1. 默认颜色加粗样式应当保留原颜色 · Issue #4 · Hi-Windom/winsay (github.com)
 
-## 0.10 Release for 2210累计更新
-
-引入特性：
-
-1. 添加标签样式
-
-改进优化：
-
-1. 部分元素细节与动画效果优化
-2. 优化弹窗高度 ~ 双链弹窗最小高度过大 · Issue #1 · Hi-Windom/winsay (github.com)
-3. 右上角三个重要按钮应始终显示 · Issue #3 · Hi-Windom/winsay (github.com)
-
-缺陷修复：
-
-1. 【设置】-【集市】标签页样式污染 · Issue #2 · Hi-Windom/winsay (github.com)
-2. 反链面板计数显示不清晰 · Issue #5 · Hi-Windom/winsay (github.com)
-
 # 鸣谢
 
 Sofill 系列家族的诞生与成长离不开下列开源项目的贡献，以及热心网友的反馈和建议。
@@ -119,7 +100,7 @@ Sofill 系列家族的诞生与成长离不开下列开源项目的贡献，以�
 * [pink-room](https://github.com/StarDustSheep/pink-room)
 * [HBuilderX-light](https://github.com/UFDXD/HBuilderX-Light)
 * [notion-theme](https://github.com/royc01/notion-theme)
-
+* [blue-dog](https://github.com/UserZYF/blue-dog)
 
 # Sofill 系列家族时间线
 
