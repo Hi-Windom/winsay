@@ -2,8 +2,6 @@
 
 ## 轻量化简洁风绛亽特色思源笔记主题
 
-打包体积限定：小于3M
-
 外观部分重写部分样式，依据绛亽有关标准和约定俗成。原则上不添加额外功能，功能强大的 Sofill= 和 Sofill+ 主题 Coming Soon
 
 ## Sofill 系列主题如何选择
@@ -20,7 +18,7 @@
 
 待定
 
-# 集市最近三次更新版本日志
+# 集市更新版本日志
 
 版本说明：
 
@@ -33,12 +31,15 @@
 
 ## 0.16 Release for 2210累计更新
 
+> 2022年10月18日推送
+
 引入特性：
 
 1. [嵌入内容块样式优化-添加阴影效果 · Issue #19 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/19)
 2. [超级块添加聚焦样式 · Issue #21 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/21)
 3. [添加标题折叠样式 · Issue #26 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/26)
 4. [任务列表样式美化 · Issue #18 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/18)
+5. [删除线样式优化 · Issue #20 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/20)
 
 改进优化：
 
@@ -52,34 +53,6 @@
 缺陷修复：
 
 1. [标签样式在标题中显示异常 · Issue #22 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/22)
-
-## 0.14 Release for 2210累计更新
-
-改进优化：
-
-1. 行内代码显示效果优化 · Issue #10 · Hi-Windom/winsay (github.com)
-2. 标签样式前后添加适量间距 · Issue #12 · Hi-Windom/winsay (github.com)
-3. 代码块输出pdf效果优化 · Issue #13 · Hi-Windom/winsay (github.com)
-
-缺陷修复：
-
-1. 标签页有emoji的文档关闭按钮显示不全 · Issue #11 · Hi-Windom/winsay (github.com)
-
-## 0.12 Release for 2210累计更新
-
-引入特性：
-
-1. 在文档名的下方显示文档创建时间 · Issue #9 · Hi-Windom/winsay (github.com)
-
-改进优化：
-
-1. 减少左下角元素对视线的抢夺 · Issue #7 · Hi-Windom/winsay (github.com)
-2. 字体面板提供默认字体颜色 · Issue #8 · Hi-Windom/winsay (github.com)
-3. 【设置】-【账户】界面美化 · Issue #6 · Hi-Windom/winsay (github.com)
-
-缺陷修复：
-
-1. 默认颜色加粗样式应当保留原颜色 · Issue #4 · Hi-Windom/winsay (github.com)
 
 # 鸣谢
 
@@ -102,15 +75,6 @@ Sofill 系列家族的诞生与成长离不开下列开源项目的贡献，以�
 * [notion-theme](https://github.com/royc01/notion-theme)
 * [blue-dog](https://github.com/UserZYF/blue-dog)
 
-# Sofill 系列家族时间线
+# Sofill 系列主题时间线
 
-## 目标设定
-
-* Sofill- 下载量达到 200 后计划上架 Sofill=
-* Sofill= 和 Sofill- 合计下载量达到 500 后计划上架 Sofill+
-
-## 发展历程
-
-* 2022年9月17日项目立项
-* 2022年10月14日开始开发 Sofill-
-* 2022年10月16日上架 Sofill-
+[Sofill 系列家族时间线 · Hi-Windom/Sofill Wiki (github.com)](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E5%AE%B6%E6%97%8F%E6%97%B6%E9%97%B4%E7%BA%BF)
