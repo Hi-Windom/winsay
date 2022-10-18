@@ -20,11 +20,25 @@
 
 
 /* ——————————————————————————H1-H6 标题样式—————————————————————————— */
-/* 给标题设置统一的颜色 */
-.protyle-wysiwyg [data-node-id][data-type="NodeHeading"] {
-    color: #4e4e4e;
+/* 给标题设置统一的颜色，单独调整各级标题中的标签样式 */
+
+/* 各级标题内标签样式共用的不变的属性 */
+.protyle-wysiwyg [data-node-id][data-type="NodeHeading"] span[data-type~=tag] {
+    background-color: var(--SCC-White-light);
+    color: var(--text-focus);
+    padding: .1rem .3rem .1rem .13rem;
+    font-size: 80%;
+    box-shadow: var(--SCColor) 3.6em 0px 0px -2.2em inset,0px 0px 0px 1px inset;
+    border: none;
+    margin: .2rem;
+}
+.protyle-wysiwyg [data-node-id][data-type="NodeHeading"] span[data-type~=tag]::before {
+    content: "#";
+    color: var(--SCC-White);
+    display: inline-block;
 }
 
+/* 一级标题 */
 .protyle-wysiwyg [data-node-id].h1,
 .b3-typography h1 {
     text-align: left;
@@ -34,8 +48,18 @@
     z-index: 0;
     vertical-align: middle;
     margin-top: 36px;
+    color: var(--b3-font-color1);
+}
+.protyle-wysiwyg [data-node-id].h1 span[data-type~=tag] {
+    border-radius: .33rem;
+}
+.protyle-wysiwyg [data-node-id].h1 span[data-type~=tag]::before {
+    margin-right: .33rem;
+    padding-left: .31rem;
+    padding-right: .33rem;
 }
 
+/* 二级标题 */
 .protyle-wysiwyg [data-node-id].h2,
 .b3-typography h2 {
     font-size: 1.5em !important;
@@ -43,8 +67,18 @@
     position: relative;
     z-index: 0;
     margin-top: 30px;
+    color: var(--b3-font-color2);
+}
+.protyle-wysiwyg [data-node-id].h2 span[data-type~=tag] {
+    border-radius: .31rem;
+}
+.protyle-wysiwyg [data-node-id].h2 span[data-type~=tag]::before {
+    margin-right: .22rem;
+    padding-left: .31rem;
+    padding-right: .38rem;
 }
 
+/* 三级标题 */
 .protyle-wysiwyg [data-node-id].h3,
 .b3-typography h3 {
     font-size: 1.4em !important;
@@ -52,8 +86,18 @@
     position: relative;
     z-index: 0;
     margin-top: 24px;
+    color: var(--b3-font-color3);
+}
+.protyle-wysiwyg [data-node-id].h3 span[data-type~=tag] {
+    border-radius: .31rem;
+}
+.protyle-wysiwyg [data-node-id].h3 span[data-type~=tag]::before {
+    margin-right: .13rem;
+    padding-left: .31rem;
+    padding-right: .38rem;
 }
 
+/* 四级标题 */
 .protyle-wysiwyg [data-node-id].h4,
 .b3-typography h4 {
     font-size: 1.3em !important;
@@ -61,8 +105,18 @@
     position: relative;
     z-index: 0;
     margin-top: 18px;
+    color: var(--b3-font-color4);
+}
+.protyle-wysiwyg [data-node-id].h4 span[data-type~=tag] {
+    border-radius: .31rem;
+}
+.protyle-wysiwyg [data-node-id].h4 span[data-type~=tag]::before {
+    margin-right: .05rem;
+    padding-left: .31rem;
+    padding-right: .38rem;
 }
 
+/* 五级标题 */
 .protyle-wysiwyg [data-node-id].h5,
 .b3-typography h5 {
     font-size: 1.2em !important;
@@ -70,8 +124,18 @@
     position: relative;
     z-index: 0;
     margin-top: 12px;
+    color: var(--b3-font-color5);
+}
+.protyle-wysiwyg [data-node-id].h5 span[data-type~=tag] {
+    border-radius: .31rem;
+}
+.protyle-wysiwyg [data-node-id].h5 span[data-type~=tag]::before {
+    margin-right: .05rem;
+    padding-left: .31rem;
+    padding-right: .38rem;
 }
 
+/* 六级标题 */
 .protyle-wysiwyg [data-node-id].h6,
 .b3-typography h6 {
     font-size: 1.1em !important;
@@ -79,7 +143,17 @@
     position: relative;
     z-index: 0;
     margin-top: 6px;
+    color: var(--b3-font-color6);
 }
+.protyle-wysiwyg [data-node-id].h6 span[data-type~=tag] {
+    border-radius: .31rem;
+}
+.protyle-wysiwyg [data-node-id].h6 span[data-type~=tag]::before {
+    margin-right: .05rem;
+    padding-left: .31rem;
+    padding-right: .38rem;
+}
+
 
 /* 设置6级标题高度 */
 .protyle-wysiwyg [data-node-id].h5 {

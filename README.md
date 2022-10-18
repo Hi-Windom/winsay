@@ -53,6 +53,7 @@
 3. 本主题有专门适配Android端，用户体验良好
 4. Sofill 系列主题三款主题计划携手并进 v1.0，在此之前本主题将保持 v0.X 的形式迭代
 5. 关于主题更新的更多信息可访问 [Releases · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/releases)
+6. 关注后续版本动态可访问 [Milestones - Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/milestones)
 
 ## 0.14 Release for 2210累计更新
 
@@ -119,10 +120,6 @@ Sofill 系列家族的诞生与成长离不开下列开源项目的贡献，以�
 * [HBuilderX-light](https://github.com/UFDXD/HBuilderX-Light)
 * [notion-theme](https://github.com/royc01/notion-theme)
 
-## QQ用户
-
-* 1162246253 @思源爱好者折腾群（1017854502）
-* 154402097 @思源爱好者折腾群（1017854502）
 
 # Sofill 系列家族时间线
 

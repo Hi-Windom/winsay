@@ -222,27 +222,29 @@
     border-left: 1px dashed transparent !important;
 }
 
-/* 标签tag样式 */
-.protyle-wysiwyg [data-node-id] span[data-type~=tag] {
+/* 普通标签tag样式 */
+.protyle-wysiwyg [data-node-id]:not([data-type="NodeHeading"]) span[data-type~=tag] {
     background-color: var(--SCC-White-light);
     transition: all .2s cubic-bezier(0.645, 0.045, 0.355, 1);
     color: var(--text-focus);
     border-radius: 5px;
     position: relative;
-    padding: .1rem .2rem .1rem .1rem;
+    padding: .1rem .3rem .1rem .1rem;
     font-size: 85%;
     box-shadow: var(--SCColor) 3.6em 0px 0px -2.2em inset,0px 0px 0px 1px inset;
     border: none;
     margin: .2rem;
 }
-/* 标签tag样式 */
-.protyle-wysiwyg [data-node-id] span[data-type~=tag]::before {
+/* 普通标签tag样式的前缀部分 */
+.protyle-wysiwyg [data-node-id]:not([data-type="NodeHeading"]) span[data-type~=tag]::before {
     content: "#";
     color: var(--SCC-White);
     display: inline-block;
     margin-right: .2rem;
     padding: .2rem;
 }
+/* 标题中标签tag样式在 NodeHeading-biaoti.css 中定义 */
+
 
 /* 解决特定缩放下出现意外滚动条 */
 .fn__flex-column {
@@ -316,72 +318,7 @@ span[data-type=code]::after {
     background: var(--custom-span-ref-animation-icon) repeat-x 0 100%;
     background-size: 16px auto;
   }
-  
 
-/* ——————————————————————————H1-H6 标题样式—————————————————————————— */
-/* 给标题设置统一的颜色 */
-
-.protyle-wysiwyg [data-node-id].h1,
-.b3-typography h1 {
-    text-align: left;
-    font-size: 1.6em !important;
-    font-weight: 600;
-    position: relative;
-    z-index: 0;
-    vertical-align: middle;
-    margin-top: 36px;
-    color: var(--b3-font-color1);
-}
-
-.protyle-wysiwyg [data-node-id].h2,
-.b3-typography h2 {
-    font-size: 1.5em !important;
-    font-weight: 600;
-    position: relative;
-    z-index: 0;
-    margin-top: 30px;
-    color: var(--b3-font-color2);
-}
-
-.protyle-wysiwyg [data-node-id].h3,
-.b3-typography h3 {
-    font-size: 1.4em !important;
-    font-weight: 600;
-    position: relative;
-    z-index: 0;
-    margin-top: 24px;
-    color: var(--b3-font-color3);
-}
-
-.protyle-wysiwyg [data-node-id].h4,
-.b3-typography h4 {
-    font-size: 1.3em !important;
-    font-weight: 600;
-    position: relative;
-    z-index: 0;
-    margin-top: 18px;
-    color: var(--b3-font-color4);
-}
-
-.protyle-wysiwyg [data-node-id].h5,
-.b3-typography h5 {
-    font-size: 1.2em !important;
-    font-weight: 600;
-    position: relative;
-    z-index: 0;
-    margin-top: 12px;
-    color: var(--b3-font-color5);
-}
-
-.protyle-wysiwyg [data-node-id].h6,
-.b3-typography h6 {
-    font-size: 1.1em !important;
-    font-weight: 600;
-    position: relative;
-    z-index: 0;
-    margin-top: 6px;
-    color: var(--b3-font-color6);
-}
 
 @media screen and (min-width: 960px) {
 
