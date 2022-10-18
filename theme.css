@@ -57,7 +57,8 @@
 /* 当前打开文档右上角【更多】按钮位置和大小微调 */
 .protyle-breadcrumb > button svg {
     scale: 1.31 !important;
-    margin-right: 7px;
+    margin-right: 20px;
+    margin-top: 10px;
 }
 
 /* 【设置】-【账户】界面美化 */

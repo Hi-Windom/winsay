@@ -69,10 +69,16 @@ ul.layout-tab-bar li:hover {
     background-color: var(--b3-theme-background);
     /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
 }
-ul.layout-tab-bar li [title="新建文档"], ul.layout-tab-bar li [title="更多"]  {
+ul.layout-tab-bar li [title="新建文档"]  {
     background-color: var(--b3-theme-background);
-    margin-left: 0.58em;
-    margin-right: 0.31em;
+    margin-left: 0.31em;
+    margin-right: 0;
+    width: 26px;
+}
+ul.layout-tab-bar li [title="更多"]  {
+    background-color: var(--b3-theme-background);
+    margin-left: 0.13em;
+    margin-right: 0.13em;
     width: 26px;
 }
 ul.layout-tab-bar li [title="新建文档"] svg, ul.layout-tab-bar li [title="更多"] svg {
