@@ -13,6 +13,7 @@
 @import url("style/Block.css");
 @import url("style/Block-Inline.css");
 @import url("style/Block-NodeHeading.css");
+@import url("style/Block-Table.css");
 @import url("style/Block-CodeBlock.css");
 @import url("style/Block-Embed.css");
 @import url("style/Block-Task.css");
