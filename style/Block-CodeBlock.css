@@ -31,8 +31,7 @@
 }
 
 /* 代码块上方部分设置 */
-.protyle-wysiwyg .code-block,
-.b3-typography .code-block {
+.code-block {
     position: relative;
     display: block;
     border-radius: 1px;
@@ -47,31 +46,27 @@
 
 
 /* 代码块的语言代码 */
-.b3-typography .code-block .protyle-action .protyle-action__language,
-.protyle-wysiwyg .code-block .protyle-action .protyle-action__language {
+.code-block .protyle-action .protyle-action__language {
     margin-top: 0px;
     position: absolute;
-    right: 4em;
+    right: 6em;
     border-radius: 1px;
-    opacity: 1 !important;
     font-family: var(--b3-font-family-code);
 }
-.b3-typography .code-block .protyle-action .protyle-action__language::before,
-.protyle-wysiwyg .code-block .protyle-action .protyle-action__language::before {
+
+.code-block .protyle-action .protyle-action__language::before {
     content: "lang::";
     font-family: var(--b3-font-family-code);
     color: var(--SCC-primary-lighter);
 }
 
-.b3-typography .code-block .protyle-action .protyle-action__language::after,
-.protyle-wysiwyg .code-block .protyle-action .protyle-action__language::after {
+.code-block .protyle-action .protyle-action__language::after {
     content: "›";
     font-family: var(--b3-font-family-code);
     color: var(--SCColor);
     opacity: 0;
 }
-.b3-typography .code-block:hover .protyle-action .protyle-action__language::after,
-.protyle-wysiwyg .code-block:hover .protyle-action .protyle-action__language::after {
+.code-block:hover .protyle-action .protyle-action__language::after {
     content: "›";
     font-family: var(--b3-font-family-code);
     color: var(--SCColor);
@@ -84,25 +79,65 @@ code.hljs {
 
 
 /* 复制和设置按钮样式 */
-.b3-typography .code-block .protyle-action .protyle-icon,
-.b3-typography .code-block .protyle-action .protyle-action__language,
-.protyle-wysiwyg .code-block .protyle-action .protyle-icon,
-.protyle-wysiwyg .code-block .protyle-action .protyle-action__language {
+.code-block .protyle-action .protyle-icon,
+.code-block .protyle-action .protyle-action__language,
+.code-block .protyle-action .protyle-icon,
+.code-block .protyle-action .protyle-action__language {
     opacity: 1 !important;
     background-color: transparent !important;
 }
 
-.b3-typography .code-block .protyle-action .protyle-icon svg,
-.b3-typography .code-block .protyle-action .protyle-action__language svg,
-.protyle-wysiwyg .code-block .protyle-action .protyle-icon svg,
-.protyle-wysiwyg .code-block .protyle-action .protyle-action__language svg {
+.code-block .protyle-action .protyle-icon svg,
+.code-block .protyle-action .protyle-action__language svg,
+.code-block .protyle-action .protyle-icon svg,
+.code-block .protyle-action .protyle-action__language svg {
     color: var(--SCColor);
     opacity: 0;
 }
-.b3-typography .code-block:hover .protyle-action .protyle-icon svg,
-.b3-typography .code-block:hover .protyle-action .protyle-action__language svg,
-.protyle-wysiwyg .code-block:hover .protyle-action .protyle-icon svg,
-.protyle-wysiwyg .code-block:hover .protyle-action .protyle-action__language svg {
+.code-block:hover .protyle-action .protyle-icon svg,
+.code-block:hover .protyle-action .protyle-action__language svg,
+.code-block:hover .protyle-action .protyle-icon svg,
+.code-block:hover .protyle-action .protyle-action__language svg {
     color: var(--SCColor);
     opacity: 1;
+}
+
+@media screen and (min-width: 960px) {
+    /* 代码块顶部添加风格元素 */
+    .code-block::after {
+        content: ' ';
+        position: absolute;
+        background: #ff0000;
+        box-shadow: 57px 0 #0070c0, 113px 0 #ff3399, 170px 0 #912997;
+        border-radius: var(--b3-border-radius-round);
+        top: 10px;
+        left: 38px;
+        height: 3px;
+        width: 58px;
+        z-index: 1;
+    }
+
+}
+@media screen and (max-width: 960px) {
+    /* 代码块顶部添加风格元素 ，适配手机端*/
+    .code-block::after {
+        content: ' ';
+        position: absolute;
+        background: #ff0000;
+        box-shadow: 13px 0 #0070c0, 26px 0 #ff3399, 39px 0 #912997;
+        border-radius: var(--b3-border-radius-round);
+        top: 10px;
+        left: 13px;
+        height: 3px;
+        width: 13px;
+        z-index: 1;
+    }
+    /* 代码块行号，适配手机端 */
+    .protyle-linenumber__rows {
+        padding: 22px 4px;
+        width: 1.3em;
+    }
+    .protyle-linenumber {
+        margin-left: 1.3em;
+    }
 }
