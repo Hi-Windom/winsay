@@ -28,8 +28,8 @@
 .status__msg:hover {
     opacity: .9;
 }
-/* 减少右下角元素对视线的抢夺 */
-#barFeedback, #barLock, #barDebug, #barHelp {
+/* 减少右下角元素对视线的抢夺，不再适用于思源2.4.2+版本 */
+/* #barFeedback, #barLock, #barDebug, #barHelp {
     opacity: .13;
 }
 #barFeedback:hover, #barLock:hover, #barDebug:hover, #barHelp:hover {
@@ -40,7 +40,7 @@
 }
 .status__counter:hover{
     opacity: 1;
-}
+} */
 
 /* 侧边栏引用计数 */
 .counter {
