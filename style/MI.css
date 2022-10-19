@@ -14,8 +14,8 @@
 /* 减少左下角元素对视线的抢夺 */
 #barDock svg {
     opacity: .58;
-    scale: 1.13 !important;
-    margin-left: 5px;
+    scale: 1.31 !important;
+    margin-left: 2px;
     margin-right: 22px;
     margin-bottom: 5px;
 }
@@ -27,6 +27,9 @@
 }
 .status__msg:hover {
     opacity: .9;
+}
+#barDock {
+    padding: 7px !important;
 }
 /* 减少右下角元素对视线的抢夺，不再适用于思源2.4.2+版本 */
 /* #barFeedback, #barLock, #barDebug, #barHelp {
