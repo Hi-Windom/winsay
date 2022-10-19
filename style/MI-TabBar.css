@@ -68,7 +68,12 @@ ul.layout-tab-bar li [title="新建文档"] svg:hover, ul.layout-tab-bar li [tit
     color: var(--SCC-Red-Firole);
     box-shadow: rgba(85, 91, 255, 0.06) 0px 0px 0px 1px, rgba(31, 193, 27,0.01) 0px 0px 0px 2px, rgba(255, 217, 19,0.2) 0px 0px 0px 3px, rgba(255, 156, 85,0.3) 0px 0px 0px 4px, rgba(255, 85, 85,0.1) 0px 0px 0px 5px;
 }
-
+#layouts > div.fn__flex.fn__flex-1 > div.layout__center.fn__flex.fn__flex-1 > div > div > div.layout-tab-container.fn__flex-1 > div.fn__flex-1.protyle > div.protyle-breadcrumb > button{
+    background-color: transparent !important;
+}
+li.item.item--readonly .item__close[title="新建文档"] + span.fn__flex-1{
+    display: none;
+}
 
 /* 使用 li.item 而不是 .item ，避免修改影响【设置】-【集市】的标签页 */
 /* 非当前页签样式 */

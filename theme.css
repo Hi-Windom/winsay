@@ -40,10 +40,10 @@
     #windowControls svg {
         opacity: 1 !important;
     }
-    /* 优化右上角窗口关闭按钮焦点样式 */
-    #closeWindow:hover svg {
+    /* 优化右上角窗口关闭按钮焦点样式，仅适用于思源2.4.1 */
+    /* #closeWindow:hover svg {
         color: var(--SCC-Gray-HellisePotter) !important;
-    }
+    } */
 
 }
 @media screen and (max-width: 960px) {
