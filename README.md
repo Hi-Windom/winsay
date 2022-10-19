@@ -22,12 +22,12 @@ Sofill- 适合哪些人使用：待定
 
 版本说明：
 
-1. 本主题最低适配思源v2.4.1
-2. 集市推送的更新版本中如果提及适配思源某版本，建议更新思源后再更新主题，否则可能存在适配问题
-3. 本主题有专门适配Android端，用户体验良好；暂无 Mac 端可供适配
-4. 关于主题更新的更多信息可访问 [Releases · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/releases)
-5. 关注后续版本动态可访问 [Milestones - Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/milestones)
-6. 声明为【重大更新】的推送，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
+* 本主题最低适配思源v2.4.1
+* 集市推送的更新版本中如果提及适配思源某版本，建议更新思源后再更新主题，否则可能存在适配问题
+* 本主题有专门适配Android端，用户体验良好；暂无 Mac 端可供适配
+* 关于主题更新的更多信息可访问 [Releases · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/releases)
+* 关注后续版本动态可访问 [Milestones - Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/milestones)
+* 声明为【重大更新】的推送，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 
 ### 0.16 Release for 2210累计更新
 

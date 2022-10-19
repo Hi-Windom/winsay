@@ -1,0 +1,26 @@
+/* 补丁形式注入,随版本更新随时可能更改 */
+
+@media screen and (min-width: 960px) {
+    /* 部分颜色显示效果优化 */
+    [style="color: var(--b3-font-color8);"], [style="color: var(--b3-font-color9);"] {
+        text-shadow: 1px 0.5px 1px #40051D31 !important;
+    }
+    [style="color: var(--b3-font-color10);"] {
+        text-shadow: 1px 0.5px 1px #7F04F558 !important;
+    }
+    [style="color: var(--b3-font-color11);"] {
+        text-shadow: 1px 0.5px 1px #0B0BFF31 !important;
+    }
+}
+@media screen and (max-width: 960px) {
+    /* 部分颜色显示效果优化 */
+    [style="color: var(--b3-font-color8);"], [style="color: var(--b3-font-color9);"] {
+        text-shadow:-0.5px 0.5px 0.5px #40051D58 !important;
+    }
+    [style="color: var(--b3-font-color10);"] {
+        text-shadow: -0.5px 0.5px 1px #7F04F531 !important;
+    }
+    [style="color: var(--b3-font-color11);"] {
+        text-shadow: -0.5px 0.5px 1px #0B0BFF31 !important;
+    }
+}
