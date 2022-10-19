@@ -93,10 +93,10 @@ li.item.item--readonly .item__close[title="新建文档"] + span.fn__flex-1{
 .layout-tab-bar .item--focus:after {
     height: 0 !important;
 }
-.layout-tab-bar .item--focus {
+#layouts .layout-tab-bar .item--focus {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 3px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset !important;
     border-radius: 6px !important;
-    border-bottom: 0px ridge var(--b3-theme-primary-light) !important;
+    border-bottom: 2px ridge var(--b3-theme-primary-light) !important;
     margin-bottom: 3px !important;
     max-width: 666px !important;
     min-width: 58px !important;
