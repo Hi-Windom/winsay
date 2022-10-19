@@ -35,7 +35,7 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 
 > 2022-10-19 released
 
-<p><img src="https://img.shields.io/badge/%E9%80%82%E9%85%8D-2.4.2-green"/>
+<p><img src="https://img.shields.io/badge/%E9%80%82%E9%85%8D-2.4.1-green"/>
 <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow"/></p>
 
 #### 建议手动删除旧版本后再下载喔
