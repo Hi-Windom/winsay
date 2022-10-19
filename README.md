@@ -7,6 +7,14 @@
 
 ## 主题特色介绍
 
+Windows 端效果
+
+<p><img src="https://user-images.githubusercontent.com/83791825/196647225-68255f96-f1d0-466e-aa88-c1a5ea3d885e.png"/></p>
+
+Android 端效果展示
+
+<p><img src="https://user-images.githubusercontent.com/83791825/196648028-95580051-0f5a-493d-88c8-7ff3a200ce2a.jpg"/></p>
+
 ### 轻量化简洁风绛亽特色思源笔记主题
 
 外观部分重写部分样式，依据绛亽有关标准和约定俗成。原则上不添加额外功能，功能强大的 Sofill= 和 Sofill+ 主题 Coming Soon
