@@ -1,5 +1,10 @@
 # Sofill-主题：内部代号 [ winsay ]（风颂）
 
+<p align="center">
+    <img src="https://img.shields.io/pypi/l/color-theme-analyse.svg" alt="License">
+    <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=694357845&website=www.oicqzone.com"><img src="https://img.shields.io/badge/QQ-694357845-orange"></a>
+</p>
+
 ## 主题特色介绍
 
 ### 轻量化简洁风绛亽特色思源笔记主题
@@ -10,24 +15,27 @@
 
 [Sofill 系列主题时间线 · Hi-Windom/Sofill Wiki (github.com)](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E5%AE%B6%E6%97%8F%E6%97%B6%E9%97%B4%E7%BA%BF)
 
-Sofill- 或许呈现起来有点“马卡龙”风格，不过 Sofill- 的定位一直是“轻量化简洁风绛亽特色”，并不承诺贴合“马卡龙”风格进行设计开发。
-
 Sofill- 主题根据 [绛亽标准色](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E4%B8%BB%E9%A2%98%E9%80%9A%E7%94%A8%E6%A0%87%E5%87%86%E8%89%B2) 设计
 
-Sofill- 适合哪些人使用：待定
+Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导下观看，切勿沉迷
 
 ## 集市更新版本日志
 
-> v0.14 ▶ v0.18  @【**重大更新**】推送
+> v0.14 ▶ v0.18 2022-10-19推送
 
 版本说明：
 
-* 本主题最低适配思源v2.4.1
-* 集市推送的更新版本中如果提及适配思源某版本，建议更新思源后再更新主题，否则可能存在适配问题
-* 本主题有专门适配Android端，用户体验良好；暂无 Mac 端可供适配
+* 包含【适配】标签的版本，建议更新思源后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
+* 集市更新版本推送前会专门适配 Android 端，暂无 Mac 端可供适配
 * 关于主题更新的更多信息可访问 [Releases · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/releases)
 * 关注后续版本动态可访问 [Milestones - Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/milestones)
-* 声明为【重大更新】的推送，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
+
+### 0.18 Release for 2210累计更新
+
+> 2022-10-19 released
+
+<p><img src="https://img.shields.io/badge/%E9%80%82%E9%85%8D-2.4.2-green"/>
+<img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow"/></p>
 
 ### 0.16 Release for 2210累计更新
 
