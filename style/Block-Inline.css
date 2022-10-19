@@ -39,13 +39,9 @@
 
 
 /* 删除线 */
-.b3-typography s,
-.b3-typography span[data-type=s],
-.protyle-wysiwyg s,
-.protyle-wysiwyg span[data-type=s] {
-    text-decoration: line-through;
-    text-decoration-color: var(--b3-protyle-inline-s-color);
-    color: var(--b3-protyle-inline-s-color);
+.b3-typography s, .b3-typography span[data-type=s],
+.protyle-wysiwyg s, .protyle-wysiwyg span[data-type=s] {
+    text-decoration-color: var(--SCC-Red-WPS-lighter);
 }
 
 
