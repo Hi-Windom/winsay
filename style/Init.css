@@ -4,15 +4,28 @@
     padding: 0px;
 }
 
-/* 隐藏思源笔记右侧进度滚动条，鼠标悬浮时显示 */
+/* 思源笔记右侧进度滚动条 */
 .protyle-scroll .b3-slider {
-    opacity: 0.31;
+    opacity: 0;
 }
 
 .protyle-scroll .b3-slider:hover {
     opacity: 1;
 }
 
+/* 文档树滚动条 */
+.fn__flex-1::-webkit-scrollbar-thumb {
+    transition: background-color 1s ease !important;
+}
+
+.fn__flex-1:hover::-webkit-scrollbar-thumb {
+    background-color: var(--b3-scroll-color);
+}
+
+/* 修改滚动条宽度 */
+::-webkit-scrollbar {
+    width: 8px;
+}
 
 /* 设置段落两端对齐 */
 .protyle-content .p:not(.list .p) {
@@ -39,20 +52,6 @@
 }
 
 
-/* 文档树滚动条，鼠标悬浮时才显示 */
-.fn__flex-1::-webkit-scrollbar-thumb {
-    background-color: transparent;
-    transition: background-color 1s ease;
-}
-
-.fn__flex-1:hover::-webkit-scrollbar-thumb {
-    background-color: var(--b3-scroll-color);
-}
-
-/* 修改滚动条宽度 */
-::-webkit-scrollbar {
-    width: 8px;
-}
 
 /* 去掉软件的边框线 */
 body.body--win32 {
@@ -65,14 +64,3 @@ textarea.b3-text-field.fn__flex-1 {
     resize: none;
 }
 
-/* 块标切换动画，来自于Notion主题 */
-.protyle-gutters {
-    transition: all 200ms ease-out;
-}
-
-
-/* 设置iframe挂件的宽度 */
-.b3-typography iframe,
-.protyle-wysiwyg iframe {
-    width: 80vw !important;
-}

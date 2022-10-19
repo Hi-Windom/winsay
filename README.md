@@ -28,8 +28,9 @@
 4. Sofill 系列主题三款主题计划携手并进 v1.0，在此之前本主题将保持 v0.X 的形式迭代
 5. 关于主题更新的更多信息可访问 [Releases · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/releases)
 6. 关注后续版本动态可访问 [Milestones - Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/milestones)
+7. 声明为【重大更新】的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 
-## 0.16 Release for 2210累计更新
+## 0.16 Release for 2210累计更新【重大更新】
 
 > 2022年10月18日推送
 

@@ -1,0 +1,14 @@
+
+/* iframe 右下角拖拽调整 */
+.iframe-content .protyle-action__drag {
+    border: 2px outset var(--SCC-Purple-Soledar-light) !important;
+    background-color: var(--SCC-Purple-186) !important;
+    border-radius: 4px !important;
+    right: -1px !important;
+}
+.iframe-content .protyle-action__drag::after {
+    border: 2px outset var(--SCC-Purple-Soledar-light) !important;
+    background-color: var(--SCC-Purple-186) !important;
+    border-radius: 4px !important;
+    bottom: -3px !important;
+}
