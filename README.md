@@ -15,7 +15,9 @@ Windows 端效果
 
 ### 轻量化简洁风绛亽特色思源笔记主题
 
-外观部分重写部分样式，依据绛亽有关标准和约定俗成。原则上不添加额外功能，功能强大的 Sofill= 和 Sofill+ 主题 Coming Soon ...  [Sofill 系列主题对比](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E4%B8%BB%E9%A2%98%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9)  |  [Sofill 系列主题时间线 ](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E5%AE%B6%E6%97%8F%E6%97%B6%E9%97%B4%E7%BA%BF)
+外观部分重写部分样式，依据绛亽有关标准和约定俗成。原则上不添加额外功能，功能强大的 Sofill= 和 Sofill+ 主题 Coming Soon ... 
+
+[Sofill 系列主题对比](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E4%B8%BB%E9%A2%98%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9)  |  [Sofill 系列主题时间线 ](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E5%AE%B6%E6%97%8F%E6%97%B6%E9%97%B4%E7%BA%BF)
 
 Sofill- 主题根据 [绛亽标准色](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E4%B8%BB%E9%A2%98%E9%80%9A%E7%94%A8%E6%A0%87%E5%87%86%E8%89%B2) 设计
 
