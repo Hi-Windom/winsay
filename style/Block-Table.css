@@ -1,0 +1,35 @@
+
+/* 表格100%宽度 */
+.protyle-wysiwyg table,
+.b3-typography table {
+    display: table;
+    width: 100%;
+    font-size: 90%;
+}
+
+.b3-typography table tr,
+.protyle-wysiwyg table tr {
+    background-color: transparent;
+}
+
+/*设置表格表头样式*/
+table th {
+    font-weight: bold;
+    text-align: center;
+    background-color: var(--SCC-Red-WPS-lighter) !important;
+}
+
+/* 设置表格内部边框 */
+th, td {
+    border: 0.25pt solid var(--SCC-Red-WPS) !important;
+    border-collapse: collapse;
+}
+
+/* 表格奇偶行不同颜色 */
+tbody tr:nth-child(2n) {
+    background-color: var(--SCC-White-light) !important;
+}
+
+tbody tr:nth-child(2n + 1) {
+    background-color: var(--SCC-White) !important;
+}

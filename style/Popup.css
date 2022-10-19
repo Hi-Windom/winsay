@@ -1,0 +1,113 @@
+/* 弹出层 */
+
+
+/* 避免搜索框阴影样式被遮挡 */
+.search__header {
+    z-index: 99;
+}
+
+/* 设置面板关闭按钮 */
+.fn__a {
+    color: var(--SCC-Cyan-186-light);
+}
+.fn__a:hover {
+    color: var(--SCC-Cyan-186);
+}
+/* 搜索图标 */
+.b3-form__icon-icon, .search__arrowdown {
+    color: var(--SCC-Blue-186-light);
+}
+
+/*引用块弹出框*/
+.block__popover {
+    min-height: 13vh;
+    max-height: 58vh;
+}
+.block__popover--open{
+	animation: menu 0.13s ease-in-out;
+    opacity: .96;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px !important;
+}
+.block__popover--open:hover {
+    opacity: 1;
+    box-shadow: rgba(85, 91, 255,0.31) 0px 0px 0px 3px, rgba(31, 193, 27,0.38) 0px 0px 0px 6px, rgba(255, 217, 19,0.58) 0px 0px 0px 9px, rgba(255, 156, 85,0.96) 0px 0px 58px 12px, rgba(255, 85, 85,0.88) 0px 0px 0px 15px !important;
+}
+.block__popover--open:hover *:not(span){
+    background-color: var(--SCC-White) !important;
+}
+
+
+/* 按钮的样式 */
+.b3-button--outline {
+    color: var(--SCC-White);
+    background-color: var(--SCColor);
+    box-shadow: rgba(254,239,234,0.13) 0px 2px 1px, rgba(254,239,234,0.13) 0px 4px 4px, rgba(254,239,234,0.13) 0px 8px 4px, rgba(254,239,234,0.13) 0px 6px 8px;
+}
+.b3-button--outline:focus, .b3-button--outline:hover {
+    color: var(--SCC-Purple-Soledar);
+    background-color: var(--b3-theme-primary-lightest);
+    box-shadow: rgba(254,239,234, 0.4) 0px 3px, rgba(0,6,85, 0.3) 0px 5px, rgba(72,69,80, 0.1) 0px 8px;
+}
+/* 输入框样式 */
+.b3-text-field, .pcr-app .pcr-interaction .pcr-result {
+    border: 1px;
+    border-radius: 4px;
+    box-shadow: rgba(128,81,231,0.31) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    padding: 4px 8px;
+    line-height: 20px;
+    box-sizing: border-box;
+    color: var(--b3-theme-on-background);
+    transition: box-shadow 120ms 0ms cubic-bezier(0, 0, 0.2, 1);
+    background-color: var(--b3-theme-background);
+}
+.b3-text-field:hover {
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.b3-text-field:focus {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+/* 选择框样式 */
+.b3-dialog--open .b3-dialog__container .b3-select {
+    border: 1px solid var(--SCC-Purple-186-light);
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+/* 检查框样式 */
+.b3-switch:checked {
+    background-color: var(--SCC-Purple-186-light);
+}
+.b3-switch:checked:after {
+    background-color: var(--SCC-Purple-186);
+    border-color: var(--SCC-Purple-186);
+}
+
+/* 优化块级清除样式按钮显示效果 */
+.b3-menu__label > div[aria-label="清除样式"] span {
+    color:var(--b3-theme-background);
+}
+.b3-menu__submenu--row button:nth-last-child(2) {
+    background-color:var(--b3-theme-surface-lighter) !important;
+    margin-top: 8px!important;
+    margin-bottom: 8px!important;
+}
+[aria-label="清除样式"]:after{
+	content:"Clear Block Style";
+	color:var(--SCC-Gray-Soledar);
+    opacity: .58;
+	position:absolute;
+	left:30px;
+    font-size: .77rem;
+	bottom:-3px;
+}
+[aria-label="清除样式"]:hover:after{
+	content:"Clear Block Style";
+	color: var(--b3-theme-on-background);
+    opacity: 1;
+	position:absolute;
+	left:30px;
+    font-size: .77rem;
+	bottom:-3px;
+}

@@ -1,0 +1,119 @@
+/* 行内元氏 */
+
+/* 搜索击中高亮应显著区分于文本背景色 */
+.b3-list mark, .protyle-wysiwyg [data-node-id] span[data-type=search-mark] {
+    background-color: var(--SCC-Green-186-light);
+    color: var(--b3-theme-on-background);
+}
+
+/* 默认颜色加粗样式应当保留原颜色 */
+.b3-typography span[data-type=strong],
+.protyle-wysiwyg span[data-type=strong]
+{
+    color: inherit !important;
+    font-weight: bold;
+}
+
+/* 普通标签tag样式 */
+.protyle-wysiwyg [data-node-id]:not([data-type="NodeHeading"]) span[data-type~=tag] {
+    background-color: var(--SCC-White-light);
+    transition: all .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    color: var(--text-focus);
+    border-radius: 5px;
+    position: relative;
+    padding: .1rem .3rem .1rem .1rem;
+    font-size: 85%;
+    box-shadow: var(--SCColor) 3.6em 0px 0px -2.2em inset,0px 0px 0px 1px inset;
+    border: none;
+    margin: .2rem;
+}
+/* 普通标签tag样式的前缀部分 */
+.protyle-wysiwyg [data-node-id]:not([data-type="NodeHeading"]) span[data-type~=tag]::before {
+    content: "#";
+    color: var(--SCC-White);
+    display: inline-block;
+    margin-right: .2rem;
+    padding: .2rem;
+}
+/* 标题中标签tag样式在 Block-NodeHeading.css 中定义 */
+
+
+/* 删除线 */
+.b3-typography s,
+.b3-typography span[data-type=s],
+.protyle-wysiwyg s,
+.protyle-wysiwyg span[data-type=s] {
+    text-decoration: line-through;
+    text-decoration-color: var(--b3-protyle-inline-s-color);
+    color: var(--b3-protyle-inline-s-color);
+}
+
+
+/* kbd 按键的样式 */
+.b3-typography kbd, .b3-typography span[data-type~=kbd], .protyle-wysiwyg kbd, .protyle-wysiwyg span[data-type~=kbd]{
+    border-radius: 6px;
+    color: var(--SCC-Black-186);
+    background-color: var(--SCC-White-light);
+    vertical-align: 2px;
+    /* box-shadow: rgba(191,250,226, 0.4) 0px 2px, rgba(72,69,80,0.3) 0px 4px; // Sofill+ 备选方案 */
+    box-shadow: rgba(254,239,234, 0.4) 0px 3px, rgba(0,6,85, 0.3) 0px 5px;
+    border: 0px solid;
+    margin-right: 2px;
+    font-family: var(--b3-font-family);
+}
+
+/* 行内代码样式 */
+span[data-type=code] {
+    border-radius: 6px;
+    color: var(--SCC-White);
+    background-color: var(--SCC-primary-light) !important;
+    vertical-align: 2px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 3px 2px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border: 0px solid;
+    margin-right: 2px;
+    font-family: var(--b3-font-family-code);
+}
+span[data-type=code]::before {
+    content: "<";
+    color: var(--SCC-White-lighter);
+    display: inline-block;
+    margin-right: .1rem;
+    padding: 0;
+}
+span[data-type=code]::after {
+    content: ">";
+    color: var(--SCC-White-lighter);
+    display: inline-block;
+    margin-left: .1rem;
+    padding: 0;
+}
+
+
+/* 双链样式 */
+.protyle-wysiwyg [data-node-id] span[data-type~=block-ref]::before {
+    /*前半部分的符号*/
+    content: "⁅⁅";
+    color: var(--SCC-Red-WPS);
+    font-weight: bold;
+    display: inline-block;
+    width: 1.31em;
+    text-align: center;
+  }
+  .protyle-wysiwyg [data-node-id] span[data-type~=block-ref]::after {
+    /*后半部分的符号*/
+    content: "⁆⁆";
+    color: var(--SCC-Red-WPS);
+    /* font-size: 1em; */
+    /* margin-right: 0.5em; */
+    font-weight: bold;
+    display: inline-block;
+    width: 1.31em;
+    /* text-align: left; */
+    text-align: center;
+  }
+  .protyle-wysiwyg [data-node-id] span[data-type~=block-ref]:hover {
+    padding-bottom: 3px;
+    animation: waveMove 1s infinite linear;
+    background: var(--custom-span-ref-animation-icon) repeat-x 0 100%;
+    background-size: 16px auto;
+  }

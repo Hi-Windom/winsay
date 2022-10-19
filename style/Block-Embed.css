@@ -1,0 +1,18 @@
+
+/* 嵌入内容块 embed */
+.protyle-wysiwyg__embed {
+    /* box-shadow: rgba(6, 24, 44, 0.31) 0px 0px 1px 2px, rgba(6, 24, 44, 0.13) 0px 2px 2px -1px inset; */
+    border-radius: 6px;
+    opacity: .86;
+    background: var(--SCC-Gray-HellisePotter);
+    box-shadow: inset 9px 9px 29px #cacfde, inset -9px -9px 29px #f2f7ff;
+}
+.protyle-wysiwyg__embed:hover, .protyle-wysiwyg [data-node-id].sb:hover {
+    box-shadow: rgba(6, 24, 44, 0.31) 0px 0px 1px 2px inset;
+    border-radius: 6px;
+    opacity: 1;
+}
+/* 隐藏 NodeBlockQueryEmbed 左边缘细线 */
+.protyle-wysiwyg [data-node-id].render-node[data-type=NodeBlockQueryEmbed] {
+    border-left: 1px dashed transparent !important;
+}

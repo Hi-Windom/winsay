@@ -1,5 +1,34 @@
-/* -------------------------------------------------代码块样式--------------------------------------------------- */
+/* 代码块样式 */
 
+.code-block {
+    border-radius: 7px !important;
+    background-color: transparent !important;
+    border: 0.1em solid var(--b3-border-color) !important;
+    margin-left: 4px !important;
+}
+/* 代码块主体部分设置 */
+.protyle-reset .hljs,
+.protyle-wysiwyg .hljs, .b3-typography .hljs {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    padding-left: 16px;
+    font-family: var(--b3-font-family-code);
+    background-size: 20px 20px;
+    background-image: none !important;
+    background: transparent !important;
+    border-top-right-radius: 4px;
+    /* background-color: var(--b3-theme-background2); */
+    /* z-index: -1; */
+}
+/*  代码块行数 */
+.protyle-linenumber__rows {
+    margin-top: 32px !important;
+    padding: 4px;
+    background-color: transparent !important;
+    margin-bottom: 0px;
+    font-family: var(--b3-font-family-code);
+    border-top-left-radius: 4px;
+}
 
 /* 代码块上方部分设置 */
 .protyle-wysiwyg .code-block,
@@ -77,5 +106,3 @@ code.hljs {
     color: var(--SCColor);
     opacity: 1;
 }
-
-/* -------------------------------------------------代码块样式 END--------------------------------------------------- */

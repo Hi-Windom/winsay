@@ -36,14 +36,14 @@
 }
 
 
-/* @page {
-    size: A4;
+
+/* PDF */
+.textLayer,
+.pdf__resize {
+    /* dark 蓝色、紫色背景显示不清楚，文档位于 https://github.com/siyuan-note/siyuan/issues/5351 */
+    mix-blend-mode: multiply;
 }
 
-@page :left {
-    margin: 2cm;
+.b3-typography div.hljs, .protyle-wysiwyg div.hljs {
+    background-color: #f8f9fa;
 }
-
-@page :right {
-    margin: 2cm;
-} */
