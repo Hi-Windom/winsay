@@ -11,17 +11,11 @@ Windows 端效果
 
 <p><img src="https://user-images.githubusercontent.com/83791825/196647225-68255f96-f1d0-466e-aa88-c1a5ea3d885e.png"/></p>
 
-Android 端效果展示
-
-<p><img src="https://user-images.githubusercontent.com/83791825/196648028-95580051-0f5a-493d-88c8-7ff3a200ce2a.jpg"/></p>
+[Android 端效果](https://user-images.githubusercontent.com/83791825/196648028-95580051-0f5a-493d-88c8-7ff3a200ce2a.jpg)
 
 ### 轻量化简洁风绛亽特色思源笔记主题
 
-外观部分重写部分样式，依据绛亽有关标准和约定俗成。原则上不添加额外功能，功能强大的 Sofill= 和 Sofill+ 主题 Coming Soon
-
-[Sofill 系列主题如何选择 · Hi-Windom/Sofill Wiki (github.com)](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E4%B8%BB%E9%A2%98%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9)
-
-[Sofill 系列主题时间线 · Hi-Windom/Sofill Wiki (github.com)](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E5%AE%B6%E6%97%8F%E6%97%B6%E9%97%B4%E7%BA%BF)
+外观部分重写部分样式，依据绛亽有关标准和约定俗成。原则上不添加额外功能，功能强大的 Sofill= 和 Sofill+ 主题 Coming Soon ...  [Sofill 系列主题对比](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E4%B8%BB%E9%A2%98%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9)  |  [Sofill 系列主题时间线 ](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E5%AE%B6%E6%97%8F%E6%97%B6%E9%97%B4%E7%BA%BF)
 
 Sofill- 主题根据 [绛亽标准色](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E4%B8%BB%E9%A2%98%E9%80%9A%E7%94%A8%E6%A0%87%E5%87%86%E8%89%B2) 设计
 
@@ -29,14 +23,13 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 
 ## 集市更新版本日志
 
-> v0.14 ▶ v0.18 2022-10-19推送
+> v0.14 ▶ v0.18
 
 版本说明：
 
 * 包含【适配】标签的版本，建议更新思源后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * 集市更新版本推送前会专门适配 Android 端，暂无 Mac 端可供适配
-* 关于主题更新的更多信息可访问 [Releases · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/releases)
-* 关注后续版本动态可访问 [Milestones - Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/milestones)
+* [主题版本更新的详细信息](https://github.com/Hi-Windom/winsay/releases)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
 ### 0.18 Release for 2210累计更新
 
@@ -44,6 +37,23 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 
 <p><img src="https://img.shields.io/badge/%E9%80%82%E9%85%8D-2.4.2-green"/>
 <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow"/></p>
+
+#### 建议手动删除旧版本后再下载喔
+
+引入特性：
+
+1. [iframe右下角拖拽调整样式美化 · Issue #40 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/40)
+
+改进优化：
+
+1. [删除线改为红色 · Issue #41 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/41)
+2. [部分颜色显示效果优化 · Issue #42 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/42)
+3. [多级折叠标题样式适配 Android 端 · Issue #37 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/37)
+
+文档相关：
+
+1. [README.md 添加展示图片 · Issue #38 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/38)
+2. [更换主题预览图 · Issue #15 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/15)
 
 ### 0.16 Release for 2210累计更新
 

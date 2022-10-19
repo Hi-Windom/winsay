@@ -83,7 +83,7 @@
     margin: 8px 0 0 -1px;
 }
 
-.protyle-icon>svg {
+.protyle-background__iconw .protyle-icons .protyle-icon > svg {
     height: 28px;
     width: 15px;
     margin-right: 5px;
