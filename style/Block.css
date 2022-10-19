@@ -1,0 +1,4 @@
+/* 分割线 */
+[data-type="NodeThematicBreak"] div {
+    border-bottom: 1px solid #585858 !important;
+}
