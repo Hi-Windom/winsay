@@ -67,3 +67,42 @@
     background-color: var(--SCC-Purple-186-lightest);
 }
 
+/* 文档头部区域美化 */
+.protyle-background__iconw .protyle-icons .protyle-icon {
+    background-color: rgba(var(--page-1), 1);
+    transition: all .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border-radius: 4px;
+    padding: 4px 8px;
+    height: 28px;
+    line-height: 28px;
+    vertical-align: middle;
+    display: inline-flex;
+    width: auto;
+    font-size: 14px;
+    padding: 0 8px;
+    margin: 8px 0 0 -1px;
+}
+
+.protyle-icon>svg {
+    height: 28px;
+    width: 15px;
+    margin-right: 5px;
+    fill: var(--SCColor) !important;
+}
+.protyle-background__iconw .protyle-icons .protyle-icon::after {
+    opacity: .58;
+    transform: unset;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+    outline: unset;
+    position: unset;
+    height: 28px;
+    line-height: 28px;
+    vertical-align: middle;
+    display: inline-flex;
+    color: var(--SCColor) !important;
+    font-size: 14px;
+    position: unset;
+    z-index: 0;
+}
