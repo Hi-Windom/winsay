@@ -8,7 +8,7 @@
 }
 
 /* 顶栏调整 */
-#toolbar {
+body.body--win32 #toolbar {
   background-color: transparent !important;
   box-sizing: border-box;
   height: 18px;
@@ -17,12 +17,30 @@
   border-bottom: 0px solid var(--b3-border-color);
   transition: all 0.13s ease-in-out;
 }
-#toolbar:hover {
+body.body--win32 #toolbar:hover {
   background-color: transparent !important;
   box-sizing: border-box;
   height: 32px;
   line-height: 32px;
   padding: 0 5px 0 3px;
+  border-bottom: 0.5px solid var(--b3-border-color);
+  transition: all 0.31s ease-in-out;
+}
+body:not(.body--win32) #toolbar {
+  background-color: transparent !important;
+  box-sizing: border-box;
+  height: 18px;
+  line-height: 18px;
+  padding: 0 5px 0 69px;
+  border-bottom: 0px solid var(--b3-border-color);
+  transition: all 0.13s ease-in-out;
+}
+body:not(.body--win32) #toolbar:hover {
+  background-color: transparent !important;
+  box-sizing: border-box;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 5px 0 69px;
   border-bottom: 0.5px solid var(--b3-border-color);
   transition: all 0.31s ease-in-out;
 }
