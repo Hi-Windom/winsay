@@ -18,7 +18,7 @@
   transition: all 0.13s ease-in-out;
 }
 #toolbar:hover {
-  background-color: var(--b3-toolbar-background);
+  background-color: transparent !important;
   box-sizing: border-box;
   height: 32px;
   line-height: 32px;
