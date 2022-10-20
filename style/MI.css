@@ -31,7 +31,7 @@ body:not(.body--win32) #toolbar {
   box-sizing: border-box;
   height: 18px;
   line-height: 18px;
-  padding: 0 5px 0 69px;
+  padding: 0 5px 0 69px; /* mac 端保持默认 69px 边距 */
   border-bottom: 0px solid var(--b3-border-color);
   transition: all 0.13s ease-in-out;
 }
