@@ -26,18 +26,6 @@
 
 @media screen and (min-width: 960px) {
 
-    /* 隐藏左上角设置按钮，鼠标悬浮时显示 */
-    #toolbar .toolbar__item svg {
-        opacity: 0;
-    }
-
-    #toolbar:hover svg {
-        opacity: 0.58;
-    }
-    #toolbar .toolbar__item:hover svg {
-        opacity: 1;
-        color: var(--SCC-Red-Firole);
-    }
     /* windowControls 视觉效果优化 */
     #windowControls svg {
         opacity: 1 !important;
@@ -48,9 +36,4 @@
     } */
 
 }
-@media screen and (max-width: 960px) {
-    /* 宽度过小时隐藏 */
-    ul.layout-tab-bar li [title="新建文档"], ul.layout-tab-bar li [title="更多"]  {
-        display: none;
-    }
-}
+
