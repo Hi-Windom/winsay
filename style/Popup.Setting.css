@@ -1,35 +1,31 @@
-
 /* 【设置】-【账户】界面美化 */
 .config-account__name a {
-    color: var(--SCC-Orange-Windom);
-    text-shadow: 2px 2px 2px #737373;
+  color: var(--SCC-Orange-Windom);
+  text-shadow: 2px 2px 2px #737373;
 }
 .ft__center > a > span > big {
-    color: var(--SCC-Orange-Windom);
-    text-shadow: 1px 1px 1px #320b11;
+  color: var(--SCC-Orange-Windom);
+  text-shadow: 1px 1px 1px #320b11;
 }
 .ft__center > a:hover > span > big {
-    color: var(--SCC-Blue-186);
-    text-shadow: none;
+  color: var(--SCC-Blue-186);
+  text-shadow: none;
 }
-
 
 /* 搜索界面标签页中文字居中 */
 .b3-dialog--open .b3-dialog__container span.item__text {
-    padding: 4px !important;
+  padding: 4px !important;
 }
 
-/* 给设置界面选择的地方加上边框 */
-.b3-dialog--open .b3-dialog__container .b3-select {
-    border: 1px solid var(--SCC-Purple-186-lighter);
-}
 /* 设置左侧选中样式 */
-li.b3-list-item--focus.b3-list-item.b3-list-item--big, li.b3-list-item--focus.b3-list-item.b3-list-item--big svg.b3-list-item__graphic {
-    color: var(--SCC-Blue-186);
+li.b3-list-item--focus.b3-list-item.b3-list-item--big,
+li.b3-list-item--focus.b3-list-item.b3-list-item--big
+  svg.b3-list-item__graphic {
+  color: var(--SCC-Blue-186);
 }
 
 /* 集市主题详情页 */
 .config-bazaar__readme {
-    background-color: var(--b3-theme-background);
-    z-index: 99;
+  background-color: var(--b3-theme-background);
+  z-index: 99;
 }
