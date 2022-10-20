@@ -31,7 +31,7 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 
 ## 集市更新版本日志
 
-> v0.20 ▶ v0.22
+> v0.22 ▶ v0.24
 
 版本说明：
 
@@ -98,31 +98,6 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 文档相关：
 
 1. [主题预览图显示优化 · Issue #51 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/51)
-
-### 0.18 Release for 2210累计更新
-
-> 2022-10-19 released
-
-<p><img src="https://img.shields.io/badge/%E9%80%82%E9%85%8D-2.4.1-green"/>
-<img src="https://img.shields.io/badge/%E4%B8%8D%E5%85%BC%E5%AE%B9-2.4.2+-red"/>
-<img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow"/></p>
-
-#### 建议手动删除旧版本后再下载喔
-
-引入特性：
-
-1. [iframe右下角拖拽调整样式美化 · Issue #40 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/40)
-
-改进优化：
-
-1. [删除线改为红色 · Issue #41 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/41)
-2. [部分颜色显示效果优化 · Issue #42 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/42)
-3. [多级折叠标题样式适配 Android 端 · Issue #37 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/37)
-
-文档相关：
-
-1. [README.md 添加展示图片 · Issue #38 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/38)
-2. [更换主题预览图 · Issue #15 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/15)
 
 ## 鸣谢
 
