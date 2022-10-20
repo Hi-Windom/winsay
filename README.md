@@ -39,6 +39,21 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 * 集市更新版本推送前会专门适配 Android 端，暂无 Mac 端可供适配
 * [主题版本更新的详细信息](https://github.com/Hi-Windom/winsay/releases)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
+### 0.24 Release for 2210累计更新
+
+> 2022-10-20 released
+
+<p><img src="https://img.shields.io/badge/%E9%80%82%E9%85%8D-2.4.3-green"/></p>
+
+改进优化：
+
+1. [代码块样式调整 · Issue #69 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/69)
+2. [字体面板调整 · Issue #44 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/44)
+
+缺陷修复：
+
+1. [Mac 端左上角图标错位 · Issue #67 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/67)
+
 ### 0.22 Release for 2210累计更新
 
 > 2022-10-20 released

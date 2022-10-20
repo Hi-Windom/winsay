@@ -142,6 +142,9 @@ body:not(.body--win32) #toolbar:hover {
   padding: 0 8px;
   margin: 8px 0 0 -1px;
 }
+.b3-tooltips:hover, .b3-tooltips:focus-within {
+  overflow: hidden;
+}
 
 .protyle-background__iconw .protyle-icons .protyle-icon > svg {
   height: 28px;
