@@ -123,10 +123,10 @@ code.hljs {
     position: absolute;
     background-color: red; /* 不支持线性的时候显示 */
     background-image: linear-gradient(#ff0000, #0070c0, #ff3399, #912997);
-    top: 1.3px;
+    top: 22px;
     left: 1.3px;
-    bottom: 1.3px;
-    height: 99.9%;
+    bottom: 1px;
+    height: calc(100% - 23px);
     width: 1.86px;
     z-index: 1;
     opacity: 0.13;
