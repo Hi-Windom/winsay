@@ -1,3 +1,90 @@
+window.theme = {};
+
+// 如果 version1 > version2 返回 1，如果 version1 < version2 返回 -1， 除此之外返回 0。
+function compareVersion(version1, version2) {
+  const arr1 = version1.split('.')
+  const arr2 = version2.split('.')
+  const length1 = arr1.length
+  const length2 = arr2.length
+  const minlength = Math.min(length1, length2)
+  let i = 0
+  for (i ; i < minlength; i++) {
+    let a = parseInt(arr1[i])
+    let b = parseInt(arr2[i])
+    if (a > b) {
+      return 1
+    } else if (a < b) {
+      return -1
+    }
+  }
+  if (length1 > length2) {
+    for(let j = i; j < length1; j++) {
+      if (parseInt(arr1[j]) != 0) {
+        return 1
+      }
+    }
+    return 0
+  } else if (length1 < length2) {
+    for(let j = i; j < length2; j++) {
+      if (parseInt(arr2[j]) != 0) {
+        return -1
+      }
+    }
+    return 0
+  }
+  return 0
+}
+/**
+ * 加载样式文件
+ * @params {string} href 样式地址
+ * @params {string} id 样式 ID
+ */
+ window.theme.loadStyle = function (href, id = null) {
+  let style = document.createElement('link');
+  if (id) style.id = id;
+  style.type = 'text/css';
+  style.rel = 'stylesheet';
+  style.href = href;
+  document.head.appendChild(style);
+}
+/**
+ * 更新样式文件
+ * @params {string} id 样式文件 ID
+ * @params {string} href 样式文件地址
+ */
+ window.theme.updateStyle = function (id, href) {
+  let style = document.getElementById(id);
+  if (style) {
+      style.setAttribute('href', href);
+  }
+  else {
+      window.theme.loadStyle(href, id);
+  }
+}
+/**
+ * 获取思源版本号
+ * @return {string} 思源版本号
+ */
+ window.theme.kernelVersion = window.siyuan.config.system.kernelVersion;
+ window.theme.cv = compareVersion(window.theme.kernelVersion, "2.4.2");
+ console.log(window.theme.cv);
+
+ /* 根据版本加载样式配置文件 */
+ window.theme.changeThemeMode = function () {
+  switch ( window.theme.cv) {
+      case -1:
+        window.theme.updateStyle("MI", `/appearance/themes/Sofill-/style-old/MI.css`);
+        window.theme.updateStyle("TabBar", `/appearance/themes/Sofill-/style-old/MI-TabBar.css`);
+        break;
+      default:
+        window.theme.updateStyle("MI", `/appearance/themes/Sofill-/style/MI.css`);
+        window.theme.updateStyle("TabBar", `/appearance/themes/Sofill-/style/MI-TabBar.css`);
+        break;
+  }
+}
+
+window.theme.changeThemeMode();
+
 // 初始缩放比例
 let originPixelRatio = localStorage.devicePixelRatio;
 if (!originPixelRatio) {

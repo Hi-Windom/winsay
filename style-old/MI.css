@@ -1,0 +1,108 @@
+/* 主界面UI */
+
+/* 解决特定缩放下出现意外滚动条 */
+.fn__flex-column, .b3-typography, .protyle-wysiwyg {
+    overflow: hidden;
+}
+
+/* 当前打开文档右上角【更多】按钮位置和大小微调 */
+.protyle-breadcrumb > button svg {
+    scale: 1.31 !important;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+/* 减少左下角元素对视线的抢夺 */
+#barDock svg {
+    opacity: .58;
+    scale: 1.13 !important;
+    margin-left: 5px;
+    margin-right: 22px;
+    margin-bottom: 5px;
+}
+#barDock:hover svg {
+    opacity: 1;
+}
+.status__msg {
+    opacity: .3;
+}
+.status__msg:hover {
+    opacity: .9;
+}
+/* 减少右下角元素对视线的抢夺 */
+#barFeedback, #barLock, #barDebug, #barHelp {
+    opacity: .13;
+}
+#barFeedback:hover, #barLock:hover, #barDebug:hover, #barHelp:hover {
+    opacity: 1;
+}
+.status__counter{
+    opacity: .58;
+}
+.status__counter:hover{
+    opacity: 1;
+}
+
+/* 侧边栏引用计数 */
+.counter {
+    color: var(--SCC-Red-WPS);
+    background-color: var(--SCC-Purple-186-lightest);
+    border-radius: 13px;
+}
+/* 文档内引用计数 */
+.protyle-attr--refcount {
+    right: 0px;
+    top: 0px;
+    position: absolute;
+    line-height: 16px;
+    padding: 0 4px;
+    margin-top: 0px;
+    margin-right: 0px;
+    color: var(--SCC-Red-WPS);
+    border-radius: 13px;
+    font-size: 12px;
+    user-select: none;
+    cursor: pointer;
+    height: 16px;
+    background-color: var(--SCC-Purple-186-lightest);
+}
+
+/* 文档头部区域美化 */
+.protyle-background__iconw .protyle-icons .protyle-icon {
+    background-color: rgba(var(--page-1), 1);
+    transition: all .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border-radius: 4px;
+    padding: 4px 8px;
+    height: 28px;
+    line-height: 28px;
+    vertical-align: middle;
+    display: inline-flex;
+    width: auto;
+    font-size: 14px;
+    padding: 0 8px;
+    margin: 8px 0 0 -1px;
+}
+
+.protyle-background__iconw .protyle-icons .protyle-icon > svg {
+    height: 28px;
+    width: 15px;
+    margin-right: 5px;
+    fill: var(--SCColor) !important;
+}
+.protyle-background__iconw .protyle-icons .protyle-icon::after {
+    opacity: .58;
+    transform: unset;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+    outline: unset;
+    position: unset;
+    height: 28px;
+    line-height: 28px;
+    vertical-align: middle;
+    display: inline-flex;
+    color: var(--SCColor) !important;
+    font-size: 14px;
+    position: unset;
+    z-index: 0;
+}
