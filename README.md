@@ -9,7 +9,7 @@
 
 Windows 端效果
 
-<p><img src="https://user-images.githubusercontent.com/83791825/196647225-68255f96-f1d0-466e-aa88-c1a5ea3d885e.png"/></p>
+<p><img src="https://user-images.githubusercontent.com/83791825/196888509-cdab80ee-e68d-4bd3-a46a-c1d4fbb7893a.png"/></p>
 
 [Android 端效果](https://user-images.githubusercontent.com/83791825/196648028-95580051-0f5a-493d-88c8-7ff3a200ce2a.jpg)
 
