@@ -68,7 +68,6 @@ body:not(.body--win32) #toolbar:not(.toolbar--browser):hover {
 /* 当前打开文档右上角【更多】按钮位置和大小微调 */
 .protyle-breadcrumb > button svg {
   scale: 1.31 !important;
-  margin-right: 20px;
 }
 
 /* 减少左下角元素对视线的抢夺 */
