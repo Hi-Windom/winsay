@@ -41,19 +41,39 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 
 ## 集市更新版本日志
 
-> v0.28 ▶ v0.30
+> v0.28 ▶ v0.32
 
 版本说明：
 
-* 包含【适配】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
+* 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * 集市更新版本推送前会专门适配 Android 端，暂无 Mac 端可供适配
 * [主题版本更新的详细信息](https://github.com/Hi-Windom/winsay/releases)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
+
+### 0.32 Release for 2210累计更新
+
+> 2022-10-21 released
+
+<p><img src="https://img.shields.io/badge/SiYuan-2.4.4-green"/></p>
+
+引入特性：
+
+1. [适配思源v2.4.4 · Issue #76 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/76)
+2. [Android 端文档树功能区视觉效果调整 · Issue #58 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/58)
+
+优化改进：
+
+1. [优化改进：图标调整 · Issue #83 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/83)
+2. [面包屑尾部效果优化 · Issue #80 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/80)
+
+缺陷修复：
+
+1. [由 https://github.com/Hi-Windom/winsay/issues/16#issuecomment-1284153071 引发的修改 · Issue #82 · Hi-Windom/winsay](https://github.com/Hi-Windom/winsay/issues/82)
 
 ### 0.30 Release for 2210累计更新
 
 > 2022-10-21 released
 
-<p><img src="https://img.shields.io/badge/%E9%80%82%E9%85%8D-2.4.3-green"/></p>
+<p><img src="https://img.shields.io/badge/SiYuan-2.4.3-green"/></p>
 
 引入特性：
 
@@ -68,7 +88,7 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 
 > 2022-10-21 released
 
-<p><img src="https://img.shields.io/badge/%E9%80%82%E9%85%8D-2.4.3-green"/></p>
+<p><img src="https://img.shields.io/badge/SiYuan-2.4.3-green"/></p>
 
 引入特性：
 
