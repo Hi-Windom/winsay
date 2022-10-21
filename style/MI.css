@@ -24,7 +24,7 @@ body .toolbar--browser:hover {
   box-sizing: border-box;
   height: 32px;
   line-height: 32px;
-  padding: 0 5px 0 3px;
+  padding: 0 0 0 3px;
   border-bottom: 0.5px solid var(--b3-border-color);
   transition: all 0.31s ease-in-out;
 }
@@ -73,7 +73,7 @@ body:not(.body--win32) #toolbar:not(.toolbar--browser):hover {
 /* 减少左下角元素对视线的抢夺 */
 #barDock svg {
   opacity: 0.58;
-  scale: 1.31 !important;
+  scale: 1.13 !important;
   margin-left: 2px;
   margin-right: 22px;
   margin-bottom: 5px;
