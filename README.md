@@ -28,21 +28,37 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 
 1. 非常重视导出PDF
 2. 非常重视双链
-3. 非常重视与默认主题的兼容性
-4. 非常重视与思源的向后兼容性
-5. 非常重视 Android 端适配
-6. 非常重视主题包的轻量化
-7. 重视浏览器环境的使用体验
+3. 非常重视与默认主题的兼容性，[自定义主题特性 · Issue #75 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/75)
+4. 非常重视与思源的向后兼容性，以及Android 端适配，[后续版本上架前测试要求 · Issue #66 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/66)
+5. 非常重视主题包的轻量化，严格限制包大小不会超过 1 MB
+6. 重视浏览器环境的使用体验
+7. 重视不同窗口大小的适配（源自 [ Hellise Potter ] ）
+8. 重视过渡动画
 
 ## 集市更新版本日志
 
-> v0.24 ▶ v0.28
+> v0.28 ▶ v0.30
 
 版本说明：
 
 * 包含【适配】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * 集市更新版本推送前会专门适配 Android 端，暂无 Mac 端可供适配
 * [主题版本更新的详细信息](https://github.com/Hi-Windom/winsay/releases)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
+
+### 0.30 Release for 2210累计更新
+
+> 2022-10-21 released
+
+<p><img src="https://img.shields.io/badge/%E9%80%82%E9%85%8D-2.4.3-green"/></p>
+
+引入特性：
+
+1. [输入框动效 · Issue #74 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/74)
+2. [Ctrl + 滚轮 调整文档字体大小 · Issue #77 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/77)
+
+缺陷修复：
+
+1. [【设置】-【编辑器】tooltips 消失 · Issue #73 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/73)
 
 ### 0.28 Release for 2210累计更新
 
@@ -58,33 +74,6 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 
 1. [【设置】-【快捷键】搜索框样式异常 · Issue #72 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/72)
 2. [浏览器环境顶栏图标缩进适配 · Issue #71 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/71)
-
-### 0.26 Release for 2210累计更新
-
-> 2022-10-21 released
-
-<p><img src="https://img.shields.io/badge/%E9%80%82%E9%85%8D-2.4.3-green"/></p>
-
-引入特性：
-
-1. [增加标题折叠展开动效 · Issue #46 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/46)
-2. [为文档标题创建动态下划线 · Issue #70 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/70)
-3. [文档头部区域美化 · Issue #43 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/43)
-
-### 0.24 Release for 2210累计更新
-
-> 2022-10-20 released
-
-<p><img src="https://img.shields.io/badge/%E9%80%82%E9%85%8D-2.4.3-green"/></p>
-
-改进优化：
-
-1. [代码块样式调整 · Issue #69 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/69)
-2. [字体面板调整 · Issue #44 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/44)
-
-缺陷修复：
-
-1. [Mac 端左上角图标错位 · Issue #67 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/67)
 
 ## 鸣谢
 
