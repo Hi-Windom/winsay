@@ -169,3 +169,8 @@ body:not(.body--win32) #toolbar:hover {
   position: unset;
   z-index: 0;
 }
+
+/* 文档头部标签添加质感 */
+.protyle-background__tags div {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 1px, rgba(255, 255, 255, 0.3) 0px 8px 58px 1px, rgba(0, 0, 0, 0.2) 0px 3px 18px inset;
+}
