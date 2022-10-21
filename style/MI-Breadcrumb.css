@@ -19,9 +19,17 @@
   .protyle-breadcrumb__bar {
     opacity: 0;
   }
+  /* 嵌入块的面包屑 */
+  .protyle-wysiwyg__embed .protyle-breadcrumb__bar {
+    opacity: 0.31 !important;
+  }
+  /* 弹出面板的面包屑 */
+  .block__popover .protyle-breadcrumb__bar {
+    opacity: 0.58 !important;
+  }
   .protyle-breadcrumb:hover .protyle-breadcrumb__bar,
   .protyle-breadcrumb__bar:hover {
-    opacity: 1;
+    opacity: 1 !important;
   }
   .protyle-breadcrumb__item {
     cursor: pointer;
