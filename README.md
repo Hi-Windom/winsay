@@ -36,13 +36,25 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 
 ## 集市更新版本日志
 
-> v0.22 ▶ v0.24
+> v0.24 ▶ v0.26
 
 版本说明：
 
 * 包含【适配】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * 集市更新版本推送前会专门适配 Android 端，暂无 Mac 端可供适配
 * [主题版本更新的详细信息](https://github.com/Hi-Windom/winsay/releases)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
+
+### 0.26 Release for 2210累计更新
+
+> 2022-10-21 released
+
+<p><img src="https://img.shields.io/badge/%E9%80%82%E9%85%8D-2.4.3-green"/></p>
+
+引入特性：
+
+1. [增加标题折叠展开动效 · Issue #46 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/46)
+2. [为文档标题创建动态下划线 · Issue #70 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/70)
+3. [文档头部区域美化 · Issue #43 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/43)
 
 ### 0.24 Release for 2210累计更新
 
@@ -58,51 +70,6 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 缺陷修复：
 
 1. [Mac 端左上角图标错位 · Issue #67 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/67)
-
-### 0.22 Release for 2210累计更新
-
-> 2022-10-20 released
-
-<p><img src="https://img.shields.io/badge/%E9%80%82%E9%85%8D-2.4.3-green"/></p>
-
-改进优化：
-
-1. [顶栏样式调整（仅限思源v2.4.2+） · Issue #65 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/65)
-2. [调整行内代码左右边距 · Issue #62 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/62)
-3. 其他细节调整
-
-### 0.20 Release for 2210累计更新
-
-> 2022-10-20 released
-
-<p><img src="https://img.shields.io/badge/%E9%80%82%E9%85%8D-2.4.3-green"/>
-<img src="https://img.shields.io/badge/%E4%B8%8D%E5%85%BC%E5%AE%B9-2.4.1---red"/></p>
-
-#### 注意：Sofill- 0.20 通过 theme.js 判断思源版本号，低于 `2.4.2` 则引入旧的 `影响较大的` 标签页样式，其他样式未做处理
-
-> 标签页兼容性测试仅在以下版本测试通过：
->
-> * 2.4.1 for Windows
-> * 2.3.3 for Windows
-> * 2.1.14 for Windows
->
-> 0.18 仍是最适配思源v2.4.1的 Sofill- 版本
-
-改进优化：
-
-1. [左下角功能区优化，适配思源2.4.3 · Issue #55 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/55)
-2. [右下角功能区优化，适配思源2.4.3 · Issue #54 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/54)
-3. [右上角功能区优化，适配思源2.4.3 · Issue #53 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/53)
-4. [标签页样式优化，适配思源2.4.3 · Issue #52 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/52)
-
-缺陷修复：
-
-1. [删除线显示异常 · Issue #57 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/57)
-2. [表格样式丢失 · Issue #56 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/56)
-
-文档相关：
-
-1. [主题预览图显示优化 · Issue #51 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/51)
 
 ## 鸣谢
 
