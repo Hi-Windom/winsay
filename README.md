@@ -2,11 +2,15 @@
 
 <p align="center">
     <img src="https://img.shields.io/pypi/l/color-theme-analyse.svg" alt="License">
+    <a href="https://github.com/Hi-Windom/winsay/releases">
     <img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/Hi-Windom/winsay?include_prereleases">
     <img alt="GitHub (Pre-)Release Date" src="https://img.shields.io/github/release-date-pre/Hi-Windom/winsay">
+    </a><a href="https://github.com/Hi-Windom/winsay/issues?q=is%3Aopen+is%3Aissue">
     <img alt="GitHub open issues" src="https://img.shields.io/github/issues-raw/Hi-Windom/winsay"/>
+    </a><a href="https://github.com/Hi-Windom/winsay/issues?q=is%3Aissue+is%3Aclosed">
     <img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed-raw/Hi-Windom/winsay">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Hi-Windom/winsay">
+    </a><a href="https://github.com/Hi-Windom/winsay/commits/main">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Hi-Windom/winsay"></a>
     <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=694357845&website=www.oicqzone.com"><img src="https://img.shields.io/badge/QQ-694357845-orange"></a>
 </p>
 
@@ -30,7 +34,7 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 2. 非常重视双链
 3. 非常重视与默认主题的兼容性，[自定义主题特性 · Issue #75 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/75)
 4. 非常重视与思源的向后兼容性，以及Android 端适配，[后续版本上架前测试要求 · Issue #66 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/66)
-5. 非常重视主题包的轻量化，严格限制包大小不会超过 1 MB
+5. 非常重视主题包的轻量化，主题包大小不会超过 1 MB
 6. 重视浏览器环境的使用体验
 7. 重视不同窗口大小的适配（源自 [ Hellise Potter ] ）
 8. 重视过渡动画
