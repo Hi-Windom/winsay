@@ -34,6 +34,68 @@ function compareVersion(version1, version2) {
   }
   return 0
 }
+
+/**
+ * 静态资源请求 URL 添加参数
+ * @params {string} url 资源请求 URL
+ * @return {string} 返回添加参数后的 URL
+ */
+ window.theme.addURLParam = function (
+  url,
+  param = {
+      // t: Date.now().toString(),
+      v: window.siyuan.config.appearance.themeVer,
+  },
+) {
+  let new_url;
+  switch (true) {
+      case url.startsWith('//'):
+          new_url = new URL(`https:${url}`);
+          break;
+      case url.startsWith('http://'):
+      case url.startsWith('https://'):
+          new_url = new URL(url);
+          break;
+      case url.startsWith('/'):
+          new_url = new URL(url, window.location.origin);
+          break;
+      default:
+          new_url = new URL(url, window.location.origin + window.location.pathname);
+          break;
+  }
+  for (let [key, value] of Object.entries(param)) {
+      new_url.searchParams.set(key, value);
+  }
+  switch (true) {
+      case url.startsWith('//'):
+          return new_url.href.substring(new_url.protocol.length);
+      case url.startsWith('http://'):
+      case url.startsWith('https://'):
+          return new_url.href;
+      case url.startsWith('/'):
+          return new_url.href.substring(new_url.origin.length);
+      default:
+          return new_url.href.substring((window.location.origin + window.location.pathname).length);
+  }
+}
+/**
+ * 加载脚本文件
+ * @params {string} url 脚本地址
+ * @params {string} type 脚本类型
+ */
+ window.theme.loadScript = function (src, type = 'module', async = false, defer = false) {
+  const script = document.createElement('script');
+  if (type) script.type = type;
+  if (async) script.async = true;
+  if (defer) script.defer = true;
+  script.src = src;
+  document.head.appendChild(script);
+}
+
+
+window.theme.loadScript(window.theme.addURLParam("/appearance/themes/Sofill-/script/ChangeFontSize.js"), undefined, true);
+
+
 /**
  * 加载样式文件
  * @params {string} href 样式地址
