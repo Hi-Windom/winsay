@@ -1,6 +1,6 @@
-
-/* 将面包屑设置为毛玻璃效果，来自于Dark+作者的建议 */
-.protyle-breadcrumb {
+@media screen and (min-width: 960px) {
+  /* 将面包屑设置为毛玻璃效果，来自于Dark+作者的建议 */
+  .protyle-breadcrumb {
     position: absolute;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -12,17 +12,18 @@
     width: 99%;
     margin-left: 1px;
     margin-right: 13px;
-    opacity: .95;
-    box-shadow: rgba(222,227,240, 0.58) 1px 0px 6px, rgba(222,227,240, 0.31) 0px 8px 5px 1px inset;
-}
-.protyle-breadcrumb__bar{
+    opacity: 0.95;
+    box-shadow: rgba(222, 227, 240, 0.58) 1px 0px 6px,
+      rgba(222, 227, 240, 0.31) 0px 8px 5px 1px inset;
+  }
+  .protyle-breadcrumb__bar {
     opacity: 0;
-}
-.protyle-breadcrumb:hover .protyle-breadcrumb__bar,
-.protyle-breadcrumb__bar:hover{
+  }
+  .protyle-breadcrumb:hover .protyle-breadcrumb__bar,
+  .protyle-breadcrumb__bar:hover {
     opacity: 1;
-}
-.protyle-breadcrumb__item {
+  }
+  .protyle-breadcrumb__item {
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -33,22 +34,22 @@
     margin: 3px 0;
     color: var(--SCColor);
     max-width: 70%;
-}
+  }
 
-/* 02 将正文设置为浮动布局 */
-.protyle-content {
+  /* 02 将正文设置为浮动布局 */
+  .protyle-content {
     float: left;
     padding-top: 30px;
-}
+  }
 
-
-/* 设置面包屑中icon大小 */
-.protyle-breadcrumb__item svg {
+  /* 设置面包屑中icon大小 */
+  .protyle-breadcrumb__item svg {
     height: 13px;
     width: 13px;
-}
+  }
 
-.protyle-breadcrumb__item:hover,
-.protyle-breadcrumb__item--active {
+  .protyle-breadcrumb__item:hover,
+  .protyle-breadcrumb__item--active {
     background-color: var(--b3-theme-tm2) !important;
+  }
 }
