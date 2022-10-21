@@ -1,6 +1,7 @@
 :root {
     /* 绛亽色 */
     --SCColor: #484550;
+    --SCC-primary: #484550;
     --SCC-primary-light: rgba(72,69,80,0.58);
     --SCC-primary-lighter: rgba(72,69,80,0.31);
     --SCC-primary-lightest: rgba(72,69,80,0.13);

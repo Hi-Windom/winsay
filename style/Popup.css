@@ -5,6 +5,11 @@
   z-index: 99;
 }
 
+/* 更圆润 */
+.b3-list--background .b3-list-item {
+  border-radius: 13px;
+}
+
 /* 设置面板关闭按钮 */
 .fn__a {
   color: var(--SCC-Cyan-186-light);
