@@ -144,7 +144,7 @@ body:not(.body--win32) #toolbar:not(.toolbar--browser):hover {
   padding: 0 8px;
   margin: 8px 0 0 -1px;
 }
-.b3-tooltips:hover, .b3-tooltips:focus-within {
+.protyle-icons .b3-tooltips:hover, .protyle-icons .b3-tooltips:focus-within {
   overflow: hidden;
 }
 
