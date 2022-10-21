@@ -8,7 +8,8 @@
 }
 
 /* 顶栏调整 */
-body.body--win32 #toolbar {
+body.body--win32 #toolbar,
+body .toolbar--browser {
   background-color: transparent !important;
   box-sizing: border-box;
   height: 18px;
@@ -17,7 +18,8 @@ body.body--win32 #toolbar {
   border-bottom: 0px solid var(--b3-border-color);
   transition: all 0.13s ease-in-out;
 }
-body.body--win32 #toolbar:hover {
+body.body--win32 #toolbar:hover,
+body .toolbar--browser:hover {
   background-color: transparent !important;
   box-sizing: border-box;
   height: 32px;
@@ -26,7 +28,7 @@ body.body--win32 #toolbar:hover {
   border-bottom: 0.5px solid var(--b3-border-color);
   transition: all 0.31s ease-in-out;
 }
-body:not(.body--win32) #toolbar {
+body:not(.body--win32) #toolbar:not(.toolbar--browser) {
   background-color: transparent !important;
   box-sizing: border-box;
   height: 18px;
@@ -35,7 +37,7 @@ body:not(.body--win32) #toolbar {
   border-bottom: 0px solid var(--b3-border-color);
   transition: all 0.13s ease-in-out;
 }
-body:not(.body--win32) #toolbar:hover {
+body:not(.body--win32) #toolbar:not(.toolbar--browser):hover {
   background-color: transparent !important;
   box-sizing: border-box;
   height: 32px;
