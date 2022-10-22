@@ -2,13 +2,15 @@
 .protyle-hint.b3-list.b3-list--background.hint--menu {
     column-count: 4;
     column-width: 178px !important;
-    column-gap: 5px;
+    column-gap: .13em;
+    column-rule: 1px solid var(--SCC-Cyan-186-lighter) !important;
     min-width: 50vw !important;
-    max-height: 600px !important;
+    max-height: 86vh !important;
     padding: 13px;
     background-color: rgba(0,6,85,0.78);
     border-radius: 18.6px;
     border-bottom: 1.86px ridge rgba(244,244,0, .86);
+    overflow-x: visible !important;
 }
 
 .protyle-hint.b3-list.b3-list--background.hint--menu *:not(use) {
