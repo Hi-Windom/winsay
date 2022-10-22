@@ -12,6 +12,19 @@
   opacity: .58;
 }
 
+/* 文档页文档名输入框文本淡化 */
+#layouts > div.fn__flex.fn__flex-1 div.layout-tab-container.fn__flex-1 div.protyle-content > div.protyle-title.protyle-wysiwyg--attr > div.protyle-title__input {
+  opacity: .13;
+  transition-duration: 1.31s;
+}
+#layouts > div.fn__flex.fn__flex-1 div.layout-tab-container.fn__flex-1 div.protyle-content > div.protyle-title.protyle-wysiwyg--attr > div.protyle-title__input:hover {
+  opacity: .58;
+  transition-duration: .58s;
+}
+#layouts > div.fn__flex.fn__flex-1 div.layout-tab-container.fn__flex-1 div.protyle-content > div.protyle-title.protyle-wysiwyg--attr > div.protyle-title__input:focus {
+  opacity: 1;
+  transition-duration: .58s;
+}
 /* 顶栏调整 */
 body.body--win32 #toolbar,
 body .toolbar--browser {
