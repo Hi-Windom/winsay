@@ -16,10 +16,13 @@
     box-shadow: rgba(222, 227, 240, 0.58) 1px 0px 6px,
       rgba(222, 227, 240, 0.31) 0px 8px 5px 1px inset;
   }
-  .protyle-breadcrumb__bar {
+  /* 普通打开文档的面包屑 */
+  #layouts .layout__center .protyle-breadcrumb .protyle-breadcrumb__bar {
     opacity: 0;
   }
-  /* 嵌入块的面包屑 */
+  /* 依次为 反链面板中【反向链接】、【提及】、嵌入块的面包屑 */
+  .backlinkList .protyle-breadcrumb__bar,
+  .backlinkMList .protyle-breadcrumb__bar,
   .protyle-wysiwyg__embed .protyle-breadcrumb__bar {
     opacity: 0.31 !important;
   }
@@ -44,8 +47,9 @@
     max-width: 70%;
   }
 
-  /* 02 将正文设置为浮动布局 */
-  .protyle-content {
+  /* 依次为 打开的文档、引用悬浮面板 设置上边距避免被遮挡，排除了反链面板 */
+  #layouts .layout__center div:not(.backlinkList) .protyle-content,
+  .block__popover.block__popover--move.block__popover--open > div.block__content div.protyle-content {
     float: left;
     padding-top: 30px;
   }
