@@ -36,7 +36,7 @@
     #layouts > div.fn__flex.fn__flex-1 > div.layout__center.fn__flex.fn__flex-1 {
         transition: all 0s !important;
     }
-    /* 优化右上角窗口关闭按钮焦点样式，仅适用于思源2.4.1 */
+    /* 优化右上角窗口关闭按钮焦点样式，不适用于思源2.4.3 */
     #closeWindow:hover svg {
         color: var(--SCC-Gray-HellisePotter) !important;
     }
