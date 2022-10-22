@@ -4,6 +4,9 @@
 a {
   color: var(--b3-protyle-inline-link-color);
 }
+span img:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
 
 @media screen and (min-width: 960px) {
   /* 部分颜色显示效果优化 */
