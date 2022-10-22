@@ -1,53 +1,60 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
+/* 集市主题详情页链接颜色与文档内链接颜色不一致 #97 */
+a {
+  color: var(--b3-protyle-inline-link-color);
+}
+
 @media screen and (min-width: 960px) {
-    /* 部分颜色显示效果优化 */
-    [style="color: var(--b3-font-color8);"], [style="color: var(--b3-font-color9);"] {
-        text-shadow: 1px 0.5px 1px #40051D31 !important;
-    }
-    [style="color: var(--b3-font-color10);"] {
-        text-shadow: 1px 0.5px 1px #7F04F558 !important;
-    }
-    [style="color: var(--b3-font-color11);"] {
-        text-shadow: 1px 0.5px 1px #0B0BFF31 !important;
-    }
+  /* 部分颜色显示效果优化 */
+  [style="color: var(--b3-font-color8);"],
+  [style="color: var(--b3-font-color9);"] {
+    text-shadow: 1px 0.5px 1px #40051d31 !important;
+  }
+  [style="color: var(--b3-font-color10);"] {
+    text-shadow: 1px 0.5px 1px #7f04f558 !important;
+  }
+  [style="color: var(--b3-font-color11);"] {
+    text-shadow: 1px 0.5px 1px #0b0bff31 !important;
+  }
 }
 @media screen and (max-width: 960px) {
-    /* 部分颜色显示效果优化 */
-    [style="color: var(--b3-font-color8);"], [style="color: var(--b3-font-color9);"] {
-        text-shadow:-0.5px 0.5px 0.5px #40051D58 !important;
-    }
-    [style="color: var(--b3-font-color10);"] {
-        text-shadow: -0.5px 0.5px 1px #7F04F531 !important;
-    }
-    [style="color: var(--b3-font-color11);"] {
-        text-shadow: -0.5px 0.5px 1px #0B0BFF31 !important;
-    }
+  /* 部分颜色显示效果优化 */
+  [style="color: var(--b3-font-color8);"],
+  [style="color: var(--b3-font-color9);"] {
+    text-shadow: -0.5px 0.5px 0.5px #40051d58 !important;
+  }
+  [style="color: var(--b3-font-color10);"] {
+    text-shadow: -0.5px 0.5px 1px #7f04f531 !important;
+  }
+  [style="color: var(--b3-font-color11);"] {
+    text-shadow: -0.5px 0.5px 1px #0b0bff31 !important;
+  }
 }
 
 /* Android 端文档树功能区视觉效果调整 #58 */
 @media screen and (max-width: 960px) {
-    .b3-list-item__arrow {
-        scale: 1.31 !important;
-        margin-right: 0px !important;
-        opacity: .58 !important;
-    }
-    .b3-list-item__icon {
-        scale: 0.8 !important;
-        opacity: .8 !important;
-        margin-right: 0px !important;
-        padding: 0 1px !important;
-    }
-    .b3-list-item__toggle {
-        min-height: 1.3em !important;
-    }
-    .b3-list-item__toggle:hover {
-        background-color: transparent !important;
-    }
-    .b3-list {
-        min-height: 40px !important;
-    }
-    .b3-list-item__text {
-        font-size: 0.88em !important;
-    }
+  .b3-list-item__arrow {
+    scale: 1.31 !important;
+    margin-right: 0px !important;
+    opacity: 0.58 !important;
+  }
+  .b3-list-item__icon {
+    scale: 0.8 !important;
+    opacity: 0.8 !important;
+    margin-right: 0px !important;
+    padding: 0 1px !important;
+  }
+  .b3-list-item__toggle {
+    min-height: 1.3em !important;
+  }
+  .b3-list-item__toggle:hover {
+    background-color: transparent !important;
+  }
+  .b3-list {
+    min-height: 40px !important;
+  }
+  .b3-list-item__text {
+    font-size: 0.88em !important;
+  }
 }
