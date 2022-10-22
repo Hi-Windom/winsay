@@ -2,8 +2,8 @@
 
 /* 搜索击中高亮应显著区分于文本背景色 */
 .b3-list mark, .protyle-wysiwyg [data-node-id] span[data-type=search-mark] {
-    background-color: var(--SCC-Green-186-lighter);
-    color: var(--b3-theme-on-background);
+    background-color: var(--SCC-Blue-HellisePotter);
+    color: var(--SCC-Yellow-HellisePotter-light) !important;
 }
 
 /* 默认颜色加粗样式应当保留原颜色 */
