@@ -189,15 +189,15 @@ li.item.item--pin.item--focus:after {
 }
 
 /* 缩窄更多标签页弹出层 */
-#commonMenu .b3-menu__item--custom {
+#commonMenu > .b3-menu__item--custom {
   border-top: 1px solid #c2c2c258 !important;
 }
-#commonMenu div:not(.b3-menu__submenu) .b3-menu__item--custom .b3-menu__label:before {
+#commonMenu > .b3-menu__item--custom .b3-menu__label:before {
   content: "◉  ";
   opacity: .58;
   color: #585858
 }
-#commonMenu div:not(.b3-menu__submenu) .b3-menu__item--selected .b3-menu__label:before {
+#commonMenu > .b3-menu__item--selected .b3-menu__label:before {
   content: "⫸  ";
 }
 #commonMenu .b3-menu__item--custom .b3-menu__label {
