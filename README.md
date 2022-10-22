@@ -42,13 +42,34 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 
 ## 集市更新版本日志
 
-> v0.32 ▶ v0.34
+> v0.34 ▶ v0.36
 
 版本说明：
 
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
-* 集市更新版本推送前会专门适配 Android 端，暂无 Mac 端可供适配
+* 集市更新版本推送前会专门适配 Android 端，暂无 Mac 端和 Docker 端可供适配，欢迎加我QQ参与内测
 * [主题版本更新的详细信息](https://github.com/Hi-Windom/winsay/releases)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
+
+### 0.36 Release for 2210累计更新
+
+> 2022-10-22 released
+
+<p><img src="https://img.shields.io/badge/SiYuan-2.4.4-green"/></p>
+
+引入特性：
+
+1. [文档页文档名输入框文本淡化 · Issue #102 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/102)
+2. [资源（图片）hover显示阴影 · Issue #101 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/101)
+
+改进优化：
+
+1. [文档标题下方动态下划线淡化 · Issue #103 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/103)
+
+缺陷修复：
+
+1. [反链面板面包屑区域显示异常 · Issue #105 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/105)
+2. [集市主题详情页链接颜色与文档内链接颜色不一致 · Issue #97 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/97)
+3. [折叠标题拖拽时看不到指引线 · Issue #84 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/84)
 
 ### 0.34 Release for 2210累计更新
 
