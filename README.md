@@ -41,13 +41,27 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 
 ## 集市更新版本日志
 
-> v0.28 ▶ v0.32
+> v0.32 ▶ v0.34
 
 版本说明：
 
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * 集市更新版本推送前会专门适配 Android 端，暂无 Mac 端可供适配
 * [主题版本更新的详细信息](https://github.com/Hi-Windom/winsay/releases)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
+
+### 0.34 Release for 2210累计更新
+
+> 2022-10-22 released
+
+<p><img src="https://img.shields.io/badge/SiYuan-2.4.4-green"/></p>
+
+改进优化：
+
+1. [无打开文档时默认界面美化 · Issue #90 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/90)
+2. [标签页【更多】弹出层缩窄 · Issue #92 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/92)
+3. [取消始终显示右上角三大窗口按钮 · Issue #93 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/93)
+4. [各级标题样式调整 · Issue #95 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/95)
+5. [取消隐藏弹出面板和嵌入块的面包屑 · Issue #85 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/85)
 
 ### 0.32 Release for 2210累计更新
 
@@ -60,7 +74,7 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 1. [适配思源v2.4.4 · Issue #76 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/76)
 2. [Android 端文档树功能区视觉效果调整 · Issue #58 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/58)
 
-优化改进：
+改进优化：
 
 1. [优化改进：图标调整 · Issue #83 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/83)
 2. [面包屑尾部效果优化 · Issue #80 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/80)
@@ -68,36 +82,6 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 缺陷修复：
 
 1. [由 https://github.com/Hi-Windom/winsay/issues/16#issuecomment-1284153071 引发的修改 · Issue #82 · Hi-Windom/winsay](https://github.com/Hi-Windom/winsay/issues/82)
-
-### 0.30 Release for 2210累计更新
-
-> 2022-10-21 released
-
-<p><img src="https://img.shields.io/badge/SiYuan-2.4.3-green"/></p>
-
-引入特性：
-
-1. [输入框动效 · Issue #74 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/74)
-2. [Ctrl + 滚轮 调整文档字体大小 · Issue #77 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/77)
-
-缺陷修复：
-
-1. [【设置】-【编辑器】tooltips 消失 · Issue #73 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/73)
-
-### 0.28 Release for 2210累计更新
-
-> 2022-10-21 released
-
-<p><img src="https://img.shields.io/badge/SiYuan-2.4.3-green"/></p>
-
-引入特性：
-
-1. [面包屑样式 · Issue #48 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/48)
-
-缺陷修复：
-
-1. [【设置】-【快捷键】搜索框样式异常 · Issue #72 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/72)
-2. [浏览器环境顶栏图标缩进适配 · Issue #71 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/71)
 
 ## 鸣谢
 
