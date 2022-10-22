@@ -27,10 +27,10 @@
 
 @media screen and (min-width: 960px) {
 
-    /* windowControls 视觉效果优化 */
-    #windowControls svg {
+    /* 取消注释后右上角窗口三大按钮始终显示 */
+    /* #windowControls svg {
         opacity: 1 !important;
-    }
+    } */
     /* 可能对解决动效抖动有帮助 */
     #layouts, #layouts > div.fn__flex.fn__flex-1,
     #layouts > div.fn__flex.fn__flex-1 > div.layout__center.fn__flex.fn__flex-1 {
