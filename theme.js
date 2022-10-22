@@ -278,6 +278,9 @@ function createLine(TitleElement) {
   }
   var line = insertCreateAfter(TitleElement, "div");
   line.setAttribute("Line", "true");
+  line.setAttribute("class", "scc-dynamic");
+  line.setAttribute("id", "doc-underline");
+  line.style.opacity = "0.13";
   line.style.height = "1.3px";
   line.style.marginTop = "3.1px";
   line.style.marginBottom = "5.8px";
