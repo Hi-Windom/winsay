@@ -254,6 +254,7 @@ div[style*="background-color"] div[data-type="NodeHeading"]::after {
 }
 
 /* 折叠后不显示*/
+.protyle-wysiwyg div[fold="1"][data-type=NodeHeading]:before,
 .protyle-wysiwyg div[fold="1"][data-type="NodeHeading"]:after {
   display: none !important;
 }
