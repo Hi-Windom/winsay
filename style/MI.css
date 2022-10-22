@@ -7,6 +7,11 @@
   overflow: hidden;
 }
 
+/* 无打开文档时默认界面美化 */
+.layout__empty {
+  opacity: .58;
+}
+
 /* 顶栏调整 */
 body.body--win32 #toolbar,
 body .toolbar--browser {
