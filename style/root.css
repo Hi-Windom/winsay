@@ -74,6 +74,8 @@
     /* 一八六战略蓝 */
     --SCC-Blue-186: #494bc3;
     --SCC-Blue-186-light: rgba(73,75,195,0.58);
+    --SCC-Blue-186-lighter: rgba(73,75,195,0.31);
+    --SCC-Blue-186-lightest: rgba(73,75,195,0.13);
     /* 绛亽束彖园络管理系统内部代号：[ Hellise Potter ]（赫礼斯叵特） */
     --SCC-Yellow-HellisePotter: #f4f400;
     --SCC-Yellow-HellisePotter-light: rgba(244,244,0, .8);
