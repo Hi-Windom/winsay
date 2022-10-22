@@ -34,3 +34,8 @@
 .protyle-gutters {
     transition: all 200ms ease-out;
 }
+
+/* hint--menu */
+.protyle-hint.b3-list.b3-list--background.hint--menu {
+    animation: menu 0.13s ease-in-out;
+}

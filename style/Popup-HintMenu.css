@@ -1,0 +1,35 @@
+
+.protyle-hint.b3-list.b3-list--background.hint--menu {
+    column-count: 4;
+    column-width: 178px !important;
+    column-gap: 5px;
+    min-width: 50vw !important;
+    max-height: 600px !important;
+    padding: 13px;
+    background-color: rgba(0,6,85,0.78);
+    border-radius: 18.6px;
+}
+
+.protyle-hint.b3-list.b3-list--background.hint--menu *:not(use) {
+    color: rgba(254,239,234,0.78);
+    transition-duration: 0.86s;
+}
+.b3-list--background.hint--menu .b3-list-item:hover:not(.b3-list-item--focus) {
+    background-color: var(--SCC-Orange-Windom-light);
+    border-radius: 8.6px;
+    transition-duration: 0.03s;
+    transition-delay: 0.06s;
+}
+.protyle-hint.b3-list.b3-list--background.hint--menu svg {
+    background-color: var(--SCC-White-lighter);
+    padding: 3px;
+    transition-duration: 1.86s;
+}
+.protyle-hint.b3-list.b3-list--background.hint--menu > button:hover svg {
+    background-color: transparent;
+    transition-duration: 0.31s;
+}
+.protyle-hint.b3-list.b3-list--background.hint--menu > button use {
+    background-color: var(--SCC-White);
+    scale: 1.05 !important;
+}
