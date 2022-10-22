@@ -8,6 +8,7 @@
     padding: 13px;
     background-color: rgba(0,6,85,0.78);
     border-radius: 18.6px;
+    border-bottom: 1.86px ridge rgba(244,244,0, .86);
 }
 
 .protyle-hint.b3-list.b3-list--background.hint--menu *:not(use) {
