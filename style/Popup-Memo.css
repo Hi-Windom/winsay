@@ -1,11 +1,10 @@
 .tooltip--memo {
   min-width: 58px;
-  max-width: 58vw;
+  width: 58vw;
   min-height: fit-content;
   max-height: 186px;
   font-size: 14px;
   line-height: 20px;
-  /* text-align: justify; */
   overflow: hidden;
   color: #585858;
   background-color: #fffccf;
