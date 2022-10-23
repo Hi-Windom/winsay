@@ -7,6 +7,7 @@
     padding: 13px;
     background-color: rgba(72,69,80,0.88);
     border-radius: 18.6px;
+    overflow-x: hidden;
 }
 .protyle-hint.b3-list.b3-list--background:not(.hint--menu) > button {
     margin-bottom: 9px !important;
@@ -17,10 +18,10 @@
     padding-left: 5px !important;
     padding-top: 5px !important;
     font-size: 0.8em;
-    color: var(--SCC-White-lighter);
+    color: var(--SCC-Cyan-186-light);
 }
 .protyle-hint.b3-list.b3-list--background:not(.hint--menu) .b3-list-item:hover:not(.b3-list-item--focus) .b3-list-item__meta {
-    color: var(--SCC-White-light);
+    color: var(--SCC-Cyan-186);
 }
 .protyle-hint.b3-list.b3-list--background:not(.hint--menu) *:not(use) {
     color: rgba(254,239,234,0.78);
@@ -33,8 +34,8 @@
     color: var(--SCC-Yellow-HellisePotter-light);
 }
 .protyle-hint.b3-list.b3-list--background:not(.hint--menu) .b3-list-item:not(.b3-list-item--focus) .b3-list-item__first * {
-    color: var(--SCC-White-light);
-    font-size: 1.13em;
+    color: var(--SCC-White);
+    font-weight: 58 !important;
     transition-duration: 0.02s;
     transition-delay: 0.04s;
 }
