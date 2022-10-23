@@ -78,7 +78,7 @@
     --SCC-Blue-186-lightest: rgba(73,75,195,0.13);
     /* 绛亽束彖园络管理系统内部代号：[ Hellise Potter ]（赫礼斯叵特） */
     --SCC-Blue-HellisePotter: #1F1FBA;
-    --SCC-Blue-HellisePotter: rgba(31,31,186,0.58s);
+    --SCC-Blue-HellisePotter-light: rgba(31,31,186,0.58s);
     --SCC-Yellow-HellisePotter: #f4f400;
     --SCC-Yellow-HellisePotter-light: rgba(244,244,0, .8);
     --SCC-Gray-HellisePotter: #dee3f4;
@@ -107,7 +107,7 @@
     /* 文字颜色 */
     --b3-theme-on-primary: #fff;
     --b3-theme-on-secondary: #fff;
-    --b3-theme-on-background: var(--SCC-Blue-Windom); /* 多级标题默认字色 */
+    --b3-theme-on-background: var(--SCC-Blue-Windom); /* 默认字色 */
     --b3-theme-on-surface: var(--SCColor); /* 此色影响顶部栏图标颜色和不少界面区域中的文字颜色 */
     --b3-theme-on-surface-light: var(--SCC-primary-light);
     --b3-theme-on-error: #fff; /* 不修改 */

@@ -33,7 +33,7 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 1. 非常重视导出PDF
 2. 非常重视双链
 3. 非常重视与默认主题的兼容性，[自定义主题特性 · Issue #75 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/75)
-4. 非常重视与思源的向后兼容性，以及Android 端适配，[后续版本上架前测试要求 · Issue #66 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/66)
+4. 非常重视与思源的向后兼容性，以及 Android 端适配（即将适配 Android Pad）
 5. 非常重视主题包的轻量化，主题包大小不会超过 1 MB
 6. 重视浏览器环境的使用体验
 7. 重视不同窗口大小的适配（源自 [ Hellise Potter ] ）
@@ -42,13 +42,37 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 
 ## 集市更新版本日志
 
-> v0.36 ▶ v0.38
+> v0.38 ▶ v0.40
 
 版本说明：
 
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * 集市更新版本推送前会专门适配 Android 端，暂无 Mac 端和 Docker 端可供适配，欢迎加我QQ参与内测
 * [主题版本更新的详细信息](https://github.com/Hi-Windom/winsay/releases)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
+
+### 0.40 Release for 2210累计更新
+
+> 2022-10-24 released
+
+<p><a href="https://github.com/Hi-Windom/winsay/issues/104">
+<img src="https://img.shields.io/badge/SiYuan-2.4.5-green"/></a>
+<img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow"/></p>
+
+引入特性：
+
+1. [备注提示层样式 · Issue #98 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/98)
+2. [软件右上角通知改为在右下角显示（Windows） · Issue #113 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/113)
+3. [Popup-HintMenu for Android · Issue #112 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/112)
+
+改进优化：
+
+1. [引用弹出层样式优化 · Issue #111 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/111)
+2. [折叠标题文字立体感增强 · Issue #89 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/89)
+3. [Android 端题头图区域始终显示操作控件 · Issue #96 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/96)
+
+缺陷修复：
+
+1. [列表辅助线未显示 · Issue #108 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/108)
 
 ### 0.38 Release for 2210累计更新
 
@@ -65,27 +89,6 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 改进优化：
 
 1. [多级标题折叠效果优化 · Issue #107 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/107)
-
-### 0.36 Release for 2210累计更新
-
-> 2022-10-22 released
-
-<p><img src="https://img.shields.io/badge/SiYuan-2.4.4-green"/></p>
-
-引入特性：
-
-1. [文档页文档名输入框文本淡化 · Issue #102 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/102)
-2. [资源（图片）hover显示阴影 · Issue #101 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/101)
-
-改进优化：
-
-1. [文档标题下方动态下划线淡化 · Issue #103 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/103)
-
-缺陷修复：
-
-1. [反链面板面包屑区域显示异常 · Issue #105 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/105)
-2. [集市主题详情页链接颜色与文档内链接颜色不一致 · Issue #97 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/97)
-3. [折叠标题拖拽时看不到指引线 · Issue #84 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/84)
 
 ## 鸣谢
 
