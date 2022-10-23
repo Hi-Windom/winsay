@@ -1,0 +1,13 @@
+.protyle-wysiwyg [data-node-id].li>[data-node-id]:before {
+    content: "";
+    position: absolute;
+    height: calc(100% + 4px);
+    border-left: 1px solid var(--SCC-Red-WPS-lightest);
+    top: 4px;
+    left: -18px;
+    transition: all 0.31s;
+}
+.protyle-wysiwyg [data-node-id].li>[data-node-id]:hover:before {
+    border-left: 2px solid var(--SCC-Red-WPS-lighter);
+    transition: all 0.31s;
+}

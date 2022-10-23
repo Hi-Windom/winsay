@@ -14,6 +14,10 @@
     <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=694357845&website=www.oicqzone.com"><img src="https://img.shields.io/badge/QQ-694357845-orange"></a>
 </p>
 
+## 当前版本注意事项
+
+* 请先删除旧版本再下载，当前更新为构建版本，不建议直接更新
+
 ## 主题特色介绍
 
 <p><img src="https://user-images.githubusercontent.com/83791825/196950046-492cf9ee-14b3-4ba0-995d-2e2323acb9e4.png"/></p>
@@ -33,7 +37,7 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 1. 非常重视导出PDF
 2. 非常重视双链
 3. 非常重视与默认主题的兼容性，[自定义主题特性 · Issue #75 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/75)
-4. 非常重视与思源的向后兼容性，以及Android 端适配，[后续版本上架前测试要求 · Issue #66 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/66)
+4. 非常重视与思源的向后兼容性，以及 Android 端适配（即将适配 Android Pad）
 5. 非常重视主题包的轻量化，主题包大小不会超过 1 MB
 6. 重视浏览器环境的使用体验
 7. 重视不同窗口大小的适配（源自 [ Hellise Potter ] ）

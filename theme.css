@@ -23,7 +23,8 @@
 @import url("style/Block-Table.css");
 @import url("style/Block-CodeBlock.css");
 @import url("style/Block-Embed.css");
-@import url("style/Block-Task.css");
+@import url("style/Block-List.css");
+@import url("style/Block-List-Task.css");
 @import url("style/Block-Iframe.css");
 
 @import url("style/Patch.css");
