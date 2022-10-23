@@ -41,7 +41,7 @@
   
   /* Popup-HintMenu for Android #112 */
   @media screen and (max-width: 960px) {
-    .protyle-hint.b3-list.b3-list--background.hint--menu {
+      body:not(.body--win32) .protyle-hint.b3-list.b3-list--background.hint--menu {
       min-width: 28vw !important;
       max-width: 68vw !important;
       max-height: 86vh !important;
@@ -52,23 +52,23 @@
       border-left: 1.31px ridge rgba(244, 244, 0, 0.86);
       overflow-x: visible !important;
     }
-    .b3-list--background.hint--menu
+    body:not(.body--win32) .b3-list--background.hint--menu
       .b3-list-item:hover:not(.b3-list-item--focus) {
       background-color: var(--SCC-Orange-Windom-light);
       border-radius: 3.1px;
       transition-duration: 0.03s;
       transition-delay: 0.06s;
     }
-    .protyle-hint.b3-list.b3-list--background.hint--menu *:not(use) {
+    body:not(.body--win32) .protyle-hint.b3-list.b3-list--background.hint--menu *:not(use) {
       color: rgba(254, 239, 234, 0.78);
       transition-duration: 0.86s;
     }
-    .protyle-hint.b3-list.b3-list--background.hint--menu svg {
+    body:not(.body--win32) .protyle-hint.b3-list.b3-list--background.hint--menu svg {
       background-color: var(--SCC-White-lighter);
       padding: 3px;
       transition-duration: 1.86s;
     }
-    .protyle-hint.b3-list.b3-list--background.hint--menu > button use {
+    body:not(.body--win32) .protyle-hint.b3-list.b3-list--background.hint--menu > button use {
       background-color: var(--SCC-White);
       scale: 0.98 !important;
     }
