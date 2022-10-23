@@ -2,11 +2,11 @@
     content: "";
     position: absolute;
     height: calc(100% + 4px);
-    border-left: 1px solid var(--SCC-Red-WPS-lightest);
+    border-left: 1px solid var(--SCC-Yellow-HellisePotter-light);
     top: 4px;
+    opacity: 0.18;
     transition: all 0.31s;
 }
 .protyle-wysiwyg [data-node-id].li:not(.protyle-task--done)>[data-node-id]:hover:before {
-    border-left: 1px solid var(--SCC-Red-WPS-lighter);
-    transition: all 0.31s;
+    opacity: 0.58;
 }
