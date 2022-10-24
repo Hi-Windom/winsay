@@ -1,5 +1,11 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
+  /* Android Pad 端拖拽页签异常问题 #120
+  屏蔽 Android 端拖拽  */
+  body.android .layout-tab-bar li {
+    -webkit-user-drag: none;
+  }
+
 /* 文档树显示文档图标异常 #119 */
 .b3-list-item__icon {
   font-family: Segoe UI emoji;
