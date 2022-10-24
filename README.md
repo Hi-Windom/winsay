@@ -42,13 +42,33 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 
 ## 集市更新版本日志
 
-> v0.38 ▶ v0.40
+> v0.40 ▶ v0.42
 
-版本说明：
+### 版本说明
 
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * 集市更新版本推送前会专门适配 Android 端，暂无 Mac 端和 Docker 端可供适配，欢迎加我QQ参与内测
 * [主题版本更新的详细信息](https://github.com/Hi-Windom/winsay/releases)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
+
+### 0.42 Release for 2210累计更新
+
+> 2022-10-24 released
+
+<p><a href="https://github.com/Hi-Windom/winsay/issues/104">
+<img src="https://img.shields.io/badge/SiYuan-2.4.5-green"/></a></p>
+
+引入特性：
+
+1. [多种块折叠态区分样式 · Issue #81 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/81)
+
+改进优化：
+
+1. [标签页条样式调整 · Issue #117 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/117)
+
+缺陷修复：
+
+1. [缩放界面引发代码块行号与代码行不对齐 · Issue #116 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/116)
+2. [通用弹出层commonMenu样式污染 · Issue #100 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/100)
 
 ### 0.40 Release for 2210累计更新
 
@@ -74,21 +94,11 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 
 1. [列表辅助线未显示 · Issue #108 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/108)
 
-### 0.38 Release for 2210累计更新
+### 手机端安装指南
 
-> 2022-10-23 released
-
-<a href="https://github.com/Hi-Windom/winsay/issues/104">
-<p><img src="https://img.shields.io/badge/SiYuan-2.4.5-green"/></p></a>
-
-引入特性：
-
-1. [Popup-HintMenu Styles · Issue #106 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/106)
-2. [插入引用提示面板样式 · Issue #99 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/99)
-
-改进优化：
-
-1. [多级标题折叠效果优化 · Issue #107 · Hi-Windom/winsay (github.com)](https://github.com/Hi-Windom/winsay/issues/107)
+1. 在手机端 `关于 `中开启网络伺服
+2. 在另外一台电脑或 Pad 浏览器中访问手机端伺服的URL，一般为 `http://192.168.1.x:6806`
+3. 从集市下载主题，然后重启手机端，在 `外观 `中选择下载的主题
 
 ## 鸣谢
 
@@ -107,6 +117,5 @@ Sofill 系列家族的诞生与成长离不开下列开源项目的贡献，以�
 * [Zhang-Light](https://github.com/UserZYF/zhang-light)
 * [Chrome-A4](https://github.com/UserZYF/Chrome-A4)
 * [pink-room](https://github.com/StarDustSheep/pink-room)
-* [HBuilderX-light](https://github.com/UFDXD/HBuilderX-Light)
 * [notion-theme](https://github.com/royc01/notion-theme)
 * [blue-dog](https://github.com/UserZYF/blue-dog)
