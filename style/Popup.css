@@ -11,10 +11,10 @@
 }
 
 /* 设置面板关闭按钮 */
-.fn__a {
+.b3-dialog--open .b3-dialog__container .b3-dialog__close {
   color: var(--SCC-Cyan-186-light);
 }
-.fn__a:hover {
+.b3-dialog--open .b3-dialog__container .b3-dialog__close:hover {
   color: var(--SCC-Cyan-186);
 }
 /* 搜索图标 */
