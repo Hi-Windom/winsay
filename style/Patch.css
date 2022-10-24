@@ -11,6 +11,11 @@
   font-family: Segoe UI emoji;
 }
 
+/* 右下角统计区适当增加右填充 #132 */
+#status .status__counter {
+  padding-right: 5.8px;
+}
+
 /* 集市主题详情页链接颜色与文档内链接颜色不一致 #97 */
 a:not([id="appearanceOpenTheme"]):not([id="appearanceOpenIcon"]):not([id="appearanceOpenEmoji"]):not([id="clearHistory"]):not(.fn__a):not(.b3-chip) {
   color: var(--b3-protyle-inline-link-color);
