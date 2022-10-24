@@ -207,10 +207,7 @@ body.android
 body.android
   .protyle-background.protyle-background--enable:hover
   > .protyle-background__iconw
-  > .protyle-icons {
-  opacity: 0.31;
-  display: flex;
-}
+  > .protyle-icons,
 body.android
   .protyle-background.protyle-background--enable:hover
   .protyle-background__img
