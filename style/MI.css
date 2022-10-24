@@ -1,5 +1,34 @@
 /* 主界面UI */
 
+/* fix Android Pad 端竖屏状态下，【设置】搜索输入时被输入法面板顶出可视范围 #125 */
+body.body--desktop .b3-dialog__container {
+  max-height: 100%;
+}
+/* Android Pad 端始终显示侧栏操作控件 #127 */
+body.body--desktop .layout-tab-container.fn__flex-1 .block__icons,
+body.body--desktop .layout-tab-container.fn__flex-1 .block__icon {
+  cursor: pointer;
+  opacity: 0.58;
+}
+/* Android Pad 端取消隐藏侧栏边框线 #126 */
+body.body--desktop .layout__resize:after {
+  content: "";
+  width: 100%;
+  height: 0.5px;
+  display: block;
+  background-color: #aaaaaa58;
+  top: 3px;
+  position: absolute;
+  left: 0;
+  transition: var(--b3-transition);
+}
+body.body--desktop .layout__resize--lr:after {
+  top: 0;
+  width: 1.3px;
+  left: 0;
+  height: 100%;
+}
+
 /* 解决特定缩放下出现意外滚动条 */
 .fn__flex-column,
 .b3-typography,
@@ -9,25 +38,41 @@
 
 /* 无打开文档时默认界面美化 */
 .layout__empty {
-  opacity: .58;
+  opacity: 0.58;
 }
 
 /* 文档页文档名输入框文本淡化 */
-#layouts > div.fn__flex.fn__flex-1 div.layout-tab-container.fn__flex-1 div.protyle-content > div.protyle-title.protyle-wysiwyg--attr > div.protyle-title__input {
-  opacity: .13;
+#layouts
+  > div.fn__flex.fn__flex-1
+  div.layout-tab-container.fn__flex-1
+  div.protyle-content
+  > div.protyle-title.protyle-wysiwyg--attr
+  > div.protyle-title__input {
+  opacity: 0.13;
   transition-duration: 1.31s;
 }
-#layouts > div.fn__flex.fn__flex-1 div.layout-tab-container.fn__flex-1 div.protyle-content > div.protyle-title.protyle-wysiwyg--attr > div.protyle-title__input:hover {
-  opacity: .58;
-  transition-duration: .58s;
+#layouts
+  > div.fn__flex.fn__flex-1
+  div.layout-tab-container.fn__flex-1
+  div.protyle-content
+  > div.protyle-title.protyle-wysiwyg--attr
+  > div.protyle-title__input:hover {
+  opacity: 0.58;
+  transition-duration: 0.58s;
 }
-#layouts > div.fn__flex.fn__flex-1 div.layout-tab-container.fn__flex-1 div.protyle-content > div.protyle-title.protyle-wysiwyg--attr > div.protyle-title__input:focus {
+#layouts
+  > div.fn__flex.fn__flex-1
+  div.layout-tab-container.fn__flex-1
+  div.protyle-content
+  > div.protyle-title.protyle-wysiwyg--attr
+  > div.protyle-title__input:focus {
   opacity: 1;
-  transition-duration: .58s;
+  transition-duration: 0.58s;
 }
 /* 顶栏调整 */
 body.body--win32 #toolbar,
-body .toolbar--browser {
+body:not(.body--desktop) .toolbar--browser {
+  /*Android Pad 是 .body--desktop */
   background-color: transparent !important;
   box-sizing: border-box;
   height: 5.8px;
@@ -37,7 +82,7 @@ body .toolbar--browser {
   transition: all 0.13s ease-in-out;
 }
 body.body--win32 #toolbar:hover,
-body .toolbar--browser:hover {
+body:not(.body--desktop) .toolbar--browser:hover {
   background-color: transparent !important;
   box-sizing: border-box;
   height: 32px;
@@ -49,7 +94,7 @@ body .toolbar--browser:hover {
 body:not(.body--win32) #toolbar:not(.toolbar--browser) {
   background-color: transparent !important;
   box-sizing: border-box;
-  height: 18px;
+  height: 5.8px;
   line-height: 18px;
   padding: 0 5px 0 69px; /* mac 端保持默认 69px 边距 */
   border-bottom: 0px solid var(--b3-border-color);
@@ -176,7 +221,8 @@ body:not(.body--win32) #toolbar:not(.toolbar--browser):hover {
   padding: 0 8px;
   margin: 8px 0 0 -1px;
 }
-.protyle-icons .b3-tooltips:hover, .protyle-icons .b3-tooltips:focus-within {
+.protyle-icons .b3-tooltips:hover,
+.protyle-icons .b3-tooltips:focus-within {
   overflow: hidden;
 }
 
@@ -206,5 +252,7 @@ body:not(.body--win32) #toolbar:not(.toolbar--browser):hover {
 
 /* 文档头部标签添加质感 */
 .protyle-background__tags div {
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 1px, rgba(255, 255, 255, 0.3) 0px 8px 58px 1px, rgba(0, 0, 0, 0.2) 0px 3px 18px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 1px,
+    rgba(255, 255, 255, 0.3) 0px 8px 58px 1px,
+    rgba(0, 0, 0, 0.2) 0px 3px 18px inset;
 }

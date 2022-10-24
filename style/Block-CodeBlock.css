@@ -148,8 +148,9 @@ code.hljs {
     margin-left: 13px;
   }
 }
-@media screen and (max-width: 600px) {
-  /* 代码块顶部添加风格元素 ，适配手机端*/
+@media screen and (max-width: 960px) {
+  /* 代码块顶部添加风格元素 ，适配移动端*/
+  body.body--desktop .code-block::after,
   body.body--mobile .code-block::after {
     content: " ";
     position: absolute;
@@ -162,11 +163,13 @@ code.hljs {
     width: 13px;
     z-index: 1;
   }
-  /* 代码块行号，适配手机端 */
+  /* 代码块行号，适配移动端 */
+  body.body--desktop .protyle-linenumber__rows
   body.body--mobile .protyle-linenumber__rows {
     padding: 22px 4px;
     width: 1.3em;
   }
+  body.body--desktop .protyle-linenumber
   body.body--mobile .protyle-linenumber {
     margin-left: 1.3em;
   }
