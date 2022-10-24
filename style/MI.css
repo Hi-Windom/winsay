@@ -1,5 +1,10 @@
 /* 主界面UI */
 
+/* fix Android Pad 端竖屏状态下，【设置】搜索输入时被输入法面板顶出可视范围 #125 */
+body.body--desktop .b3-dialog__container {
+  max-height: 100%;
+}
+
 /* 解决特定缩放下出现意外滚动条 */
 .fn__flex-column,
 .b3-typography,
