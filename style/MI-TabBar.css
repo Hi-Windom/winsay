@@ -206,15 +206,7 @@ li.item.item--pin.item--focus:after {
 
 /* 缩窄更多标签页弹出层 */
 #commonMenu > .b3-menu__item--custom {
-  border-top: 1px solid #c2c2c258 !important;
-}
-#commonMenu > .b3-menu__item--custom .b3-menu__label:before {
-  content: "◉  ";
-  opacity: 0.58;
-  color: #585858;
-}
-#commonMenu > .b3-menu__item--selected .b3-menu__label:before {
-  content: "⫸  ";
+  border-top: 1px solid #c2c2c231 !important;
 }
 #commonMenu .b3-menu__item--custom .b3-menu__label {
   margin-right: 5.8px !important;
