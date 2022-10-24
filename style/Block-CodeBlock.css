@@ -116,6 +116,13 @@ code.hljs {
   right: 4px;
 }
 
+/* 折叠态提醒 */
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeCodeBlock"]:not(.li):not([data-type=NodeHeading]) {
+  box-shadow: rgba(17, 17, 26, 0.1) 3px 13px 13px -3px;
+  border-bottom: 3px solid #58585800;
+  transition-duration: .31s;
+}
+
 @media screen and (min-width: 960px) {
   /* 代码块顶部添加风格元素 */
   .code-block::after {
