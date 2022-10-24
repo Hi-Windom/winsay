@@ -18,6 +18,32 @@
     100% { transform: scale(1,1); transform-origin: 0 0 ;}
 }
 
+/* from http://web.chacuo.net/css3transition */
+@keyframes background-color-2{
+	from{background-color:#dee3f4}
+	to{background-color:#dfe0f6}
+}
+@keyframes text-shadow{
+	from{text-shadow:0 0 0 white}
+	to{text-shadow:0 0 10px white}
+}
+@keyframes text-shadow-4{
+	from{text-shadow:0 0 black}
+	to{text-shadow:-3px -3px 30px rgba(0,0,0,.5)}
+}
+@keyframes letter-spacing-2{
+	from{letter-spacing:0}
+	to{letter-spacing:100px}
+}
+@keyframes letter-spacing-more-list-1{
+	from{letter-spacing:3px;line-height:30px;opacity: .13;margin-top:-7px}
+	to{letter-spacing:.31px;line-height:31px;opacity: 1;margin-top: 0px;}
+}
+@keyframes letter-spacing-more-list-2{
+	from{top:-58px}
+	to{top:58px}
+}
+
 .layout__wnd--active .layout-tab-bar .item--focus::after{
 	animation: item-focus 0.2s ease-in-out;
 }
