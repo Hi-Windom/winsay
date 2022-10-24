@@ -192,21 +192,34 @@ body:not(.body--win32) #toolbar:not(.toolbar--browser):hover {
 }
 
 /* 文档头部区域美化 */
-@media screen and (max-width: 960px) {
-  /* 安卓端始终显示 */
-  body:not(.body--win32)
-    .protyle-background--enable
-    > .protyle-background__iconw
-    > .protyle-icons {
-    opacity: 0.31;
-  }
-  body:not(.body--win32)
-    .protyle-background--enable
-    .protyle-background__img
-    .protyle-icons {
-    opacity: 0.31;
-  }
+
+/* 安卓端 */
+body.android
+  .protyle-background.protyle-background--enable
+  > .protyle-background__iconw
+  > .protyle-icons,
+body.android
+  .protyle-background.protyle-background--enable
+  .protyle-background__img
+  .protyle-icons {
+  display: none;
 }
+body.android
+  .protyle-background.protyle-background--enable:hover
+  > .protyle-background__iconw
+  > .protyle-icons {
+  opacity: 0.31;
+  display: flex;
+}
+body.android
+  .protyle-background.protyle-background--enable:hover
+  .protyle-background__img
+  .protyle-icons {
+  opacity: 0.58;
+  display: flex;
+  /* margin-bottom: -44px; */
+}
+
 .protyle-background__iconw .protyle-icons .protyle-icon {
   background-color: rgba(var(--page-1), 1);
   transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
