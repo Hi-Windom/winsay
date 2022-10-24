@@ -124,6 +124,25 @@ window.theme.loadScript(window.theme.addURLParam("/appearance/themes/Sofill-/scr
   }
 }
 /**
+ * 获取客户端模式
+ * @return {string} 'app' 或 'desktop' 或 'mobile'
+ */
+ window.theme.clientMode = (() => {
+  let url = new URL(window.location.href);
+  switch (true) {
+      case url.pathname.startsWith('/stage/build/app'):
+          return 'body--app';
+      case url.pathname.startsWith('/stage/build/desktop'):
+          return 'body--desktop';
+      case url.pathname.startsWith('/stage/build/mobile'):
+          return 'body--mobile';
+      default:
+          return null;
+  }
+})();
+document.body.classList.add(window.theme.clientMode);
+
+/**
  * 获取思源版本号
  * @return {string} 思源版本号
  */

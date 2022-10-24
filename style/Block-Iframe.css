@@ -12,3 +12,14 @@
     border-radius: 4px !important;
     bottom: -3px !important;
 }
+
+/* 折叠态提醒 */
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeIFrame"]:not(.li):not([data-type=NodeHeading]) {
+    box-shadow: rgba(17, 17, 26, 0.1) 3px 13px 13px -3px;
+    border-bottom: 3px solid #58585800;
+    transition-duration: .31s;
+}
+/* 折叠态禁用鼠标操作 */
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeIFrame"]:not(.li):not([data-type=NodeHeading])>div {
+    pointer-events: none; /* 值none表示鼠标事件“穿透”该元素并且指定该元素“下面”的任何东西。 */
+}

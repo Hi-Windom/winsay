@@ -1,7 +1,9 @@
 /* 标签页底部背景颜色,标签页数量较少时可以看到，颜色和标签页颜色保持一致 */
-.layout-tab-bar.fn__flex,
 ul.fn__flex.layout-tab-bar {
   background-color: var(--SCC-Gray-HellisePotter);
+  height: 100%;
+  padding-left: 3px;
+  animation: menu 0.2s ease-in-out;
 }
 
 /* 标签页鼠标悬浮时背景颜色 */
@@ -10,10 +12,14 @@ ul.fn__flex.layout-tab-bar {
 }
 
 /* 标签页中文字的相关设置 */
-.layout-tab-bar .item .item__text {
+.layout-tab-bar .item--pin .item__text {
+  margin-right: 13px; /* 预留位置给钉住图标 */
+  color: var(--SCC-Brown-186-light);
+}
+.layout-tab-bar .item:not(.item--pin) .item__text {
   width: auto;
   min-width: 3em;
-  margin-right: 13px; /* 预留位置给钉住图标 */
+  margin-right: 5px;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
   white-space: nowrap !important;
@@ -93,40 +99,44 @@ li.item.item--readonly .item__close[title="新建文档"] + span.fn__flex-1 {
 /* 非当前页签样式 */
 .layout-tab-bar li.item:not(:last-child).item:not(.item--focus),
 .layout-tab-bar li.item:last-child:not(.item--focus):not(.item--readonly) {
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-    rgba(0, 0, 0, 0.3) 0px 7px 3px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset !important;
-  border-radius: 6px !important;
-  border-bottom: 0px inset transparent !important;
-  margin-bottom: 3px !important;
+  box-shadow: rgba(131, 131, 131, 0.4) 0px 2px 4px,
+    rgba(131, 131, 131, 0.3) 0px 7px 3px -3px,
+    rgba(131, 131, 131, 0.2) 0px -3px 0px inset !important;
+  border-radius: 3px !important;
+  border: 0px ridge transparent !important;
+  /* margin-bottom: 0px !important; */
   max-width: 186px !important;
   min-width: 58px !important;
-  transition-duration: 1.58s;
+  transition-duration: 0.58s;
+  transition-delay: 0.2s;
   font-weight: 520 !important;
-  margin-right: 5.8px !important;
-  margin-left: 5.8px !important;
+  margin-right: 1px !important;
+  margin-left: 1px !important;
 }
 /* 设置当前标签页样式 */
 .layout-tab-bar .item--focus:after {
-  height: 0 !important;
+  height: 2px !important; /* 默认主题自带的 */
+  opacity: 0.31;
 }
 #layouts .layout-tab-bar .item--focus {
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-    rgba(0, 0, 0, 0.3) 0px 7px 3px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset !important;
-  border-radius: 6px !important;
-  border-bottom: 2px ridge var(--b3-theme-primary-light) !important;
+  box-shadow: rgba(131, 131, 131, 0.4) 0px 2px 4px,
+    rgba(131, 131, 131, 0.3) 0px 7px 3px -3px,
+    rgba(131, 131, 131, 0.2) 0px -3px 0px inset !important;
+  border-radius: 3px !important;
+  /* border-bottom: 2px ridge var(--b3-theme-primary-light) !important; */
   margin-bottom: 3px !important;
   max-width: 666px !important;
   min-width: 58px !important;
-  transition-duration: 2s;
-  transition-delay: 0.31s;
-  margin-right: 5.8px !important;
-  margin-left: 5.8px !important;
+  transition-timing-function: cubic-bezier(1, 0, 0, 1);
+  transition-duration: 0.2s;
+  margin-right: 1px !important;
+  margin-left: 1px !important;
 }
 /* 钉住标签页优化排版 */
-li.item.item--pin {
+/* li.item.item--pin {
   margin-right: 5.8px !important;
   margin-left: 5.8px !important;
-}
+} */
 
 /* 设置当前标签页文字样式 */
 .layout-tab-bar .item--focus .item__text {
@@ -142,10 +152,10 @@ li.item.item--pin:not(.item--focus):after {
   position: absolute;
   right: 5px;
   top: 0px;
-  width: 12px;
-  height: 12px;
-  opacity: 0.3;
-  filter: grayscale(100%);
+  width: 11px;
+  height: 11px;
+  opacity: 0.8;
+  filter: grayscale(58%);
 }
 
 li.item.item--pin.item--focus:after {
@@ -154,8 +164,9 @@ li.item.item--pin.item--focus:after {
   position: absolute;
   right: 5px;
   top: 0px;
-  width: 12px;
-  height: 12px;
+  width: 11px;
+  height: 11px;
+  opacity: 1;
   background-color: transparent !important;
 }
 
@@ -171,6 +182,11 @@ li.item.item--pin.item--focus:after {
 }
 .layout-tab-bar .item__icon:hover {
   opacity: 1;
+}
+.layout-tab-bar .item--pin .item__graphic,
+.layout-tab-bar .item--pin .item__icon,
+.layout-tab-bar .item__icon {
+  padding: 4px 0 4px 8px;
 }
 
 /* 减小标签页上的emoji大小 */
@@ -190,15 +206,7 @@ li.item.item--pin.item--focus:after {
 
 /* 缩窄更多标签页弹出层 */
 #commonMenu > .b3-menu__item--custom {
-  border-top: 1px solid #c2c2c258 !important;
-}
-#commonMenu > .b3-menu__item--custom .b3-menu__label:before {
-  content: "◉  ";
-  opacity: .58;
-  color: #585858
-}
-#commonMenu > .b3-menu__item--selected .b3-menu__label:before {
-  content: "⫸  ";
+  border-top: 1px solid #c2c2c231 !important;
 }
 #commonMenu .b3-menu__item--custom .b3-menu__label {
   margin-right: 5.8px !important;

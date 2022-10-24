@@ -30,7 +30,7 @@ body.body--win32 #toolbar,
 body .toolbar--browser {
   background-color: transparent !important;
   box-sizing: border-box;
-  height: 18px;
+  height: 5.8px;
   line-height: 18px;
   padding: 0 5px 0 -69px;
   border-bottom: 0px solid var(--b3-border-color);
