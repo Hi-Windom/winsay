@@ -123,12 +123,6 @@ window.theme.loadScript(window.theme.addURLParam("/appearance/themes/Sofill-/scr
       window.theme.loadStyle(href, id);
   }
 }
-
-/**
- * 获取操作系统
- */
- window.theme.OS = window.siyuan.config.system.os;
- alert( window.theme.OS);
 /**
  * 获取客户端模式
  * @return {string} 'app' 或 'desktop' 或 'mobile'
@@ -147,7 +141,6 @@ window.theme.loadScript(window.theme.addURLParam("/appearance/themes/Sofill-/scr
   }
 })();
 document.body.classList.add(window.theme.clientMode);
-document.body.classList.add(window.theme.OS);
 // alert(window.theme.clientMode);
 
 /**
