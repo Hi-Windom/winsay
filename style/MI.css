@@ -10,6 +10,24 @@ body.body--desktop .layout-tab-container.fn__flex-1 .block__icon {
   cursor: pointer;
   opacity: 0.58;
 }
+/* Android Pad 端取消隐藏侧栏边框线 #126 */
+body.body--desktop .layout__resize:after {
+  content: "";
+  width: 100%;
+  height: 0.5px;
+  display: block;
+  background-color: #aaaaaa58;
+  top: 3px;
+  position: absolute;
+  left: 0;
+  transition: var(--b3-transition);
+}
+body.body--desktop .layout__resize--lr:after {
+  top: 0;
+  width: 1.3px;
+  left: 0;
+  height: 100%;
+}
 
 /* 解决特定缩放下出现意外滚动条 */
 .fn__flex-column,
