@@ -27,7 +27,7 @@
 }
 /* 顶栏调整 */
 body.body--win32 #toolbar,
-body .toolbar--browser {
+body:not(.body--desktop) .toolbar--browser { /*Android Pad 是 .body--desktop */
   background-color: transparent !important;
   box-sizing: border-box;
   height: 5.8px;
@@ -37,7 +37,7 @@ body .toolbar--browser {
   transition: all 0.13s ease-in-out;
 }
 body.body--win32 #toolbar:hover,
-body .toolbar--browser:hover {
+body:not(.body--desktop) .toolbar--browser:hover {
   background-color: transparent !important;
   box-sizing: border-box;
   height: 32px;
@@ -49,7 +49,7 @@ body .toolbar--browser:hover {
 body:not(.body--win32) #toolbar:not(.toolbar--browser) {
   background-color: transparent !important;
   box-sizing: border-box;
-  height: 18px;
+  height: 5.8px;
   line-height: 18px;
   padding: 0 5px 0 69px; /* mac 端保持默认 69px 边距 */
   border-bottom: 0px solid var(--b3-border-color);

@@ -141,6 +141,7 @@ window.theme.loadScript(window.theme.addURLParam("/appearance/themes/Sofill-/scr
   }
 })();
 document.body.classList.add(window.theme.clientMode);
+// alert(window.theme.clientMode);
 
 /**
  * 获取思源版本号
