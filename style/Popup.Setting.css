@@ -1,6 +1,11 @@
 /* 【设置】-【账户】界面美化 */
 .config-account__name a {
-  color: var(--SCC-Orange-Windom);
+  color: var(--SCColor);
+  animation: text-shadow-4 1s alternate;
+  animation-fill-mode:both;
+}
+.config-account__name a:hover {
+  /* animation-fill-mode:none; */
   text-shadow: 2px 2px 2px #737373;
 }
 .ft__center > a > span > big {
