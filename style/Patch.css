@@ -1,7 +1,9 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
 /* Android Pad 端拖拽页签异常问题 #120
+  Android Pad 端长按文档树列表项引发透明度异常问题 #141
   屏蔽 Android 端拖拽  */
+body.android .b3-list-item,
 body.android .layout-tab-bar li {
   -webkit-user-drag: none;
 }
