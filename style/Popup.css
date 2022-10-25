@@ -38,6 +38,7 @@
 }
 .block__popover.block__popover--move.block__popover--open:not([data-pin="true"]):hover * {
   background-color: #fafafafa;
+  transition-delay: 1s;
 }
 .block__popover.block__popover--move.block__popover--open[data-pin="true"]
 {
