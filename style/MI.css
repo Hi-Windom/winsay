@@ -28,6 +28,13 @@ body.body--desktop .layout__resize--lr:after {
   left: 0;
   height: 100%;
 }
+
+/*【集市】filter 宽度缩窄 #143 */
+#bazaarSelect  {
+  width: 100px;
+  min-width: 100px;
+}
+
 /* Android Pad 端竖屏状态下【设置】-【快捷键】布局问题 #130 */
 body.body--desktop.android .fn__size200 {
   width: 131px;
