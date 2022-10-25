@@ -7,16 +7,16 @@ ul.fn__flex.layout-tab-bar {
 }
 
 /* 标签页鼠标悬浮时背景颜色 */
-.layout-tab-bar .item:not(.item--readonly):hover {
+ul.layout-tab-bar .item:not(.item--readonly):hover {
   background-color: var(--SCC-Blue-Windom_2-lighter);
 }
 
 /* 标签页中文字的相关设置 */
-.layout-tab-bar .item--pin .item__text {
+ul.layout-tab-bar .item--pin .item__text {
   margin-right: 13px; /* 预留位置给钉住图标 */
   color: var(--SCC-Brown-186-light);
 }
-.layout-tab-bar .item:not(.item--pin) .item__text {
+ul.layout-tab-bar .item:not(.item--pin) .item__text {
   width: auto;
   min-width: 3em;
   margin-right: 5px;
@@ -24,14 +24,14 @@ ul.fn__flex.layout-tab-bar {
   text-overflow: ellipsis !important;
   white-space: nowrap !important;
   display: inline;
-  color: var(--SCC-Brown-186-lightest);
+  color: var(--SCC-Brown-186-lighter);
 }
-.layout-tab-bar .item:hover .item__text {
+ul.layout-tab-bar .item:hover .item__text {
   color: var(--SCC-Brown-186);
 }
 
 /* 标签页svg */
-.layout-tab-bar .item:not(.item--focus) .item__close svg {
+ul.layout-tab-bar .item:not(.item--focus) .item__close svg {
   color: var(--SCC-Purple-Soledar);
 }
 /* 样式优化 */
@@ -196,7 +196,7 @@ li.item.item--readonly .item__close[title="新建文档"] + span.fn__flex-1 {
   margin-left: 5.8px !important;
 } */
 
-/* 设置当前标签页文字样式 */
+/* 设置当前标签页文字样式，影响【设置】-【集市】 */
 .layout-tab-bar .item--focus .item__text {
   color: var(--SCC-Red-Firole) !important;
   text-shadow: -1px 1px 13px var(--SCC-Orange-Windom);
