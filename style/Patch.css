@@ -6,6 +6,10 @@ body > div.b3-dialog--open > div > div.b3-dialog__container > div:nth-child(3) >
   box-shadow: rgb(254 239 234 / 40%) 0px 3px, rgb(0 6 85 / 30%) 0px 5px, rgb(72 69 80 / 10%) 0px 8px;
 }
 
+.protyle-background {
+  margin-right: 1px;
+}
+
 /* Android Pad 端拖拽页签异常问题 #120
   Android Pad 端长按文档树列表项引发透明度异常问题 #141
   屏蔽 Android 端拖拽  */
