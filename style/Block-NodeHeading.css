@@ -284,8 +284,10 @@ div[style*="background-color"] div[data-type="NodeHeading"]::after {
 }
 /* 多级折叠标题共用的:hover样式 */
 .protyle-wysiwyg
-  div[fold="1"][data-type="NodeHeading"]:not([class~=protyle-wysiwyg--select]):hover {
-  border: 1.31px solid var(--b3-theme-background) !important;
+  div[fold="1"][data-type="NodeHeading"]:not([class~=protyle-wysiwyg--select]):focus-within > div{
+  /* border: 1.31px solid var(--b3-theme-background) !important; */
+  animation: letter-spacing-head .31s ease-in-out .58s;
+  animation-fill-mode: both;
 }
 /* 透明border占位，避免抖动 */
 /* .protyle-wysiwyg

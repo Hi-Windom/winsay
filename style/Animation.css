@@ -18,6 +18,18 @@
     100% { transform: scale(1,1); transform-origin: 0 0 ;}
 }
 
+/* 动态波浪线 */
+@keyframes waveMove {
+    from {
+        background-position: -13px 100%;
+    }
+
+    to {
+        background-position: 0px 100%;
+    }
+}
+
+
 /* from http://web.chacuo.net/css3transition */
 @keyframes background-color-2{
 	from{background-color:#dee3f4}
@@ -34,6 +46,10 @@
 @keyframes letter-spacing-2{
 	from{letter-spacing:0}
 	to{letter-spacing:100px}
+}
+@keyframes letter-spacing-head{
+	from{letter-spacing:0}
+	to{letter-spacing:1px}
 }
 @keyframes letter-spacing-more-list-1{
 	from{letter-spacing:3px;line-height:30px;opacity: .13;margin-top:-7px}

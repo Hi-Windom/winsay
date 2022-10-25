@@ -108,8 +108,8 @@ span[data-type=code]::after {
     text-align: center;
   }
   .protyle-wysiwyg [data-node-id] span[data-type~=block-ref]:hover {
-    padding-bottom: 3px;
-    animation: waveMove 1s infinite linear;
-    background: var(--custom-span-ref-animation-icon) repeat-x 0 100%;
+    padding-bottom: 5px;
+    animation: waveMove .31s infinite cubic-bezier(0.4, 0, 1, 1);
+    background: var(--custom-span-ref-animation-icon) repeat-x 0 58%;
     background-size: 16px auto;
   }

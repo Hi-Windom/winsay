@@ -4,6 +4,11 @@
     padding: 0px;
 }
 
+/* https://www.zhangxinxu.com/wordpress/2019/03/css-focus-visible */
+:focus:not(:focus-visible) {
+    outline: 0;
+}
+
 /* 思源笔记右侧进度滚动条 */
 .protyle-scroll .b3-slider {
     opacity: 0;
