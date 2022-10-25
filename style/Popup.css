@@ -97,6 +97,8 @@
 /* 选择框样式 */
 .b3-select {
   border: 1px solid var(--SCC-Purple-186-lighter);
+  background-color: #eeeeeeee;
+  backdrop-filter: blur(1.86px);
   padding-top: 0px !important;
   padding-bottom: 0px !important;
   box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
