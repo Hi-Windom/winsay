@@ -2,9 +2,9 @@
     content: "";
     position: absolute;
     height: calc(100% + 4px);
-    border-left: 1px solid var(--SCC-Yellow-HellisePotter-light);
+    border-left: 3.1px dotted #444477cc;
     top: 4px;
-    opacity: 0.18;
+    opacity: 0.31;
     transition: all 0.31s;
 }
 .protyle-wysiwyg [data-node-id].li:not(.protyle-task--done)>[data-node-id]:hover:before {
