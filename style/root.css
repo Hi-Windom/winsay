@@ -88,6 +88,8 @@
     --SCC-Red-WPS-light: rgba(153,0,51,0.58);
     --SCC-Red-WPS-lighter: rgba(153,0,51,0.31);
     --SCC-Red-WPS-lightest: rgba(153,0,51,0.13);
+    --SCC-White-WPS: #fafafa;
+    --SCC-White-WPS-light: #fafafafa;
     /* -- */
     /* 块引用波浪线动画图标 | The icon of wavy line animation */
     --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/icon/wavy-line.svg);
