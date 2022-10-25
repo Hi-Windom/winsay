@@ -61,13 +61,19 @@ ul.layout-tab-bar li [title="更多"] {
   margin-right: 0.13em;
   width: 26px;
 }
-ul.layout-tab-bar li [title="新建文档"] svg,
-ul.layout-tab-bar li [title="更多"] svg {
+body.android ul.layout-tab-bar li [title="新建文档"] svg,
+body.android ul.layout-tab-bar li [title="更多"] svg {
+  color: var(--SCColor) !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+body:not(.android) ul.layout-tab-bar li [title="新建文档"] svg,
+body:not(.android) ul.layout-tab-bar li [title="更多"] svg {
   color: var(--SCColor) !important;
   scale: 1.86 !important;
 }
-ul.layout-tab-bar li [title="新建文档"] svg:hover,
-ul.layout-tab-bar li [title="更多"] svg:hover {
+body:not(.android) ul.layout-tab-bar li [title="新建文档"] svg:hover,
+body:not(.android) ul.layout-tab-bar li [title="更多"] svg:hover {
   color: var(--SCC-Red-Firole) !important;
   scale: 1.13 !important;
 }
