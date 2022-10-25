@@ -16,3 +16,41 @@
     font-size: 12pt;
     font-weight: 520;
 }
+
+/* 侧边栏引用计数 */
+/* .counter {
+  color: var(--SCC-Red-WPS);
+  background-color: var(--SCC-Purple-186-lightest);
+  border-radius: 13px;
+} */
+.counter {
+    color: #fff;
+    font-size: 10px;
+    height: 20px;
+    line-height: 20px;
+    background-color: #13440098;
+    border-radius: 5.8px;
+    border: 1.3px solid #f4f40099;
+    opacity: .8;
+  }
+  .b3-list-item .counter:hover {
+    color: #fff !important;
+    background-color: var(--SCC-Red-WPS) !important;
+  }
+  /* 文档内引用计数 */
+  .protyle-attr--refcount {
+    right: 0px;
+    top: 0px;
+    position: absolute;
+    line-height: 16px;
+    padding: 0 4px;
+    margin-top: 0px;
+    margin-right: 0px;
+    color: var(--SCC-Red-WPS);
+    border-radius: 13px;
+    font-size: 12px;
+    user-select: none;
+    cursor: pointer;
+    height: 16px;
+    background-color: var(--SCC-Purple-186-lightest);
+  }

@@ -1,5 +1,15 @@
 /* 主界面UI */
 
+
+/* 块滚动条 */
+.protyle-scroll .b3-slider {
+  opacity: 0;
+}
+
+.protyle-scroll .b3-slider:hover {
+  opacity: .58;
+}
+
 /* fix Android Pad 端竖屏状态下，【设置】搜索输入时被输入法面板顶出可视范围 #125 */
 body.body--desktop .b3-dialog__container {
   max-height: 100%;
@@ -186,29 +196,7 @@ body.android .protyle-breadcrumb > button svg {
     opacity: 1;
 } */
 
-/* 侧边栏引用计数 */
-.counter {
-  color: var(--SCC-Red-WPS);
-  background-color: var(--SCC-Purple-186-lightest);
-  border-radius: 13px;
-}
-/* 文档内引用计数 */
-.protyle-attr--refcount {
-  right: 0px;
-  top: 0px;
-  position: absolute;
-  line-height: 16px;
-  padding: 0 4px;
-  margin-top: 0px;
-  margin-right: 0px;
-  color: var(--SCC-Red-WPS);
-  border-radius: 13px;
-  font-size: 12px;
-  user-select: none;
-  cursor: pointer;
-  height: 16px;
-  background-color: var(--SCC-Purple-186-lightest);
-}
+
 
 /* 文档头部区域美化 */
 
