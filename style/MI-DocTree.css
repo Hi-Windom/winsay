@@ -1,0 +1,18 @@
+.b3-list-item__toggle--hl:hover {
+    color: var(--b3-theme-on-background);
+    background-color: transparent !important;
+    border-radius: 2px;
+}
+
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background {
+    border-radius: 1px;
+    margin-top: .58em;
+    border-bottom: 1.86px inset ;
+    border-image: linear-gradient(to right, #eeeeee13 0%,#58585813 20%, #58585813 80%,#eeeeee13 100%) 1;
+}
+
+.fn__flex-1.fn__flex-column.file-tree.sy__file .b3-list-item__text {
+    color: var(--SCC-Brown-186);
+    font-size: 12pt;
+    font-weight: 520;
+}
