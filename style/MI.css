@@ -29,6 +29,21 @@ body.body--desktop .layout__resize--lr:after {
   height: 100%;
 }
 
+/*【集市】filter 宽度缩窄 #143 */
+#bazaarSelect  {
+  width: 100px;
+  min-width: 100px;
+}
+
+/* Android Pad 端竖屏状态下【设置】-【快捷键】布局问题 #130 */
+body.body--desktop.android .fn__size200 {
+  width: 131px;
+}
+body.body--desktop.android #keymapList > div.fn__flex > label:nth-child(3) > svg,
+body.body--desktop.android #searchByKey {
+  display: none;
+}
+
 /* 解决特定缩放下出现意外滚动条 */
 .fn__flex-column,
 .b3-typography,
@@ -71,7 +86,7 @@ body.body--desktop .layout__resize--lr:after {
 }
 /* 顶栏调整 */
 body.body--win32 #toolbar,
-body:not(.body--desktop) .toolbar--browser {
+body.windows .toolbar--browser {
   /*Android Pad 是 .body--desktop */
   background-color: transparent !important;
   box-sizing: border-box;
@@ -82,7 +97,7 @@ body:not(.body--desktop) .toolbar--browser {
   transition: all 0.13s ease-in-out;
 }
 body.body--win32 #toolbar:hover,
-body:not(.body--desktop) .toolbar--browser:hover {
+body.windows .toolbar--browser:hover {
   background-color: transparent !important;
   box-sizing: border-box;
   height: 32px;
@@ -91,7 +106,7 @@ body:not(.body--desktop) .toolbar--browser:hover {
   border-bottom: 0.5px solid var(--b3-border-color);
   transition: all 0.31s ease-in-out;
 }
-body:not(.body--win32) #toolbar:not(.toolbar--browser) {
+body.darwin {
   background-color: transparent !important;
   box-sizing: border-box;
   height: 5.8px;
@@ -100,7 +115,7 @@ body:not(.body--win32) #toolbar:not(.toolbar--browser) {
   border-bottom: 0px solid var(--b3-border-color);
   transition: all 0.13s ease-in-out;
 }
-body:not(.body--win32) #toolbar:not(.toolbar--browser):hover {
+body.darwin #toolbar:hover {
   background-color: transparent !important;
   box-sizing: border-box;
   height: 32px;
@@ -129,8 +144,12 @@ body:not(.body--win32) #toolbar:not(.toolbar--browser):hover {
 }
 
 /* 当前打开文档右上角【更多】按钮位置和大小微调 */
-.protyle-breadcrumb > button svg {
+body:not(.android) .protyle-breadcrumb > button svg {
   scale: 1.31 !important;
+}
+body.android .protyle-breadcrumb > button svg {
+  width: 16px !important;
+  height: 16px !important;
 }
 
 /* 减少左下角元素对视线的抢夺 */
@@ -192,21 +211,31 @@ body:not(.body--win32) #toolbar:not(.toolbar--browser):hover {
 }
 
 /* 文档头部区域美化 */
-@media screen and (max-width: 960px) {
-  /* 安卓端始终显示 */
-  body:not(.body--win32)
-    .protyle-background--enable
-    > .protyle-background__iconw
-    > .protyle-icons {
-    opacity: 0.31;
-  }
-  body:not(.body--win32)
-    .protyle-background--enable
-    .protyle-background__img
-    .protyle-icons {
-    opacity: 0.31;
-  }
+
+/* 安卓端 */
+body.android
+  .protyle-background.protyle-background--enable
+  > .protyle-background__iconw
+  > .protyle-icons,
+body.android
+  .protyle-background.protyle-background--enable
+  .protyle-background__img
+  .protyle-icons {
+  display: none;
 }
+body.android
+  .protyle-background.protyle-background--enable:hover
+  > .protyle-background__iconw
+  > .protyle-icons,
+body.android
+  .protyle-background.protyle-background--enable:hover
+  .protyle-background__img
+  .protyle-icons {
+  opacity: 0.58;
+  display: flex;
+  /* margin-bottom: -44px; */
+}
+
 .protyle-background__iconw .protyle-icons .protyle-icon {
   background-color: rgba(var(--page-1), 1);
   transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);

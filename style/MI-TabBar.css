@@ -61,13 +61,19 @@ ul.layout-tab-bar li [title="更多"] {
   margin-right: 0.13em;
   width: 26px;
 }
-ul.layout-tab-bar li [title="新建文档"] svg,
-ul.layout-tab-bar li [title="更多"] svg {
+body.android ul.layout-tab-bar li [title="新建文档"] svg,
+body.android ul.layout-tab-bar li [title="更多"] svg {
+  color: var(--SCColor) !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+body:not(.android) ul.layout-tab-bar li [title="新建文档"] svg,
+body:not(.android) ul.layout-tab-bar li [title="更多"] svg {
   color: var(--SCColor) !important;
   scale: 1.86 !important;
 }
-ul.layout-tab-bar li [title="新建文档"] svg:hover,
-ul.layout-tab-bar li [title="更多"] svg:hover {
+body:not(.android) ul.layout-tab-bar li [title="新建文档"] svg:hover,
+body:not(.android) ul.layout-tab-bar li [title="更多"] svg:hover {
   color: var(--SCC-Red-Firole) !important;
   scale: 1.13 !important;
 }
@@ -82,14 +88,12 @@ ul.layout-tab-bar li [title="更多"] svg:hover {
 #layouts
   > div.fn__flex.fn__flex-1
   > div.layout__center.fn__flex.fn__flex-1
-  > div
-  > div
-  > div.layout-tab-container.fn__flex-1
+    div.layout-tab-container.fn__flex-1
   > div.fn__flex-1.protyle
   > div.protyle-breadcrumb
   > button {
   background-color: transparent !important;
-  margin-right: 11px;
+  margin-right: 10px;
 }
 li.item.item--readonly .item__close[title="新建文档"] + span.fn__flex-1 {
   display: none;
@@ -204,9 +208,14 @@ li.item.item--pin.item--focus:after {
   }
 }
 
-/* 缩窄更多标签页弹出层 */
+/* 标签页【更多】弹出层缩窄 #92
+# 92 后续改进：增加动画 #136 */
 #commonMenu > .b3-menu__item--custom {
   border-top: 1px solid #c2c2c231 !important;
+  animation: background-color-2 3.1s infinite alternate;
+  animation: letter-spacing-more-list-1 0.26s alternate;
+  transition-duration: 0.2s;
+  letter-spacing: .31px;
 }
 #commonMenu .b3-menu__item--custom .b3-menu__label {
   margin-right: 5.8px !important;
@@ -218,4 +227,19 @@ li.item.item--pin.item--focus:after {
   white-space: nowrap !important;
   overflow: hidden !important;
   font-size: 16px !important;
+}
+body:not(.android) #commonMenu > button.b3-menu__item.b3-menu__item--custom:hover svg.b3-menu__action {
+  opacity: .58;
+  scale: 1.38;
+}
+body:not(.android) #commonMenu > button.b3-menu__item.b3-menu__item--custom.b3-menu__item--current svg.b3-menu__action:hover {
+  opacity: 1 !important;
+  scale: 1.38 !important;
+  color: var(--SCC-Red-WPS);
+}
+body.android #commonMenu > button.b3-menu__item.b3-menu__item--custom svg.b3-menu__action {
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  color: var(--SCC-Red-WPS);
 }

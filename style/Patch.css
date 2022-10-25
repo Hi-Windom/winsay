@@ -1,8 +1,36 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
+/* 【设置】-【账号】订阅按钮 */
+body > div.b3-dialog--open > div > div.b3-dialog__container > div:nth-child(3) > div > div.fn__flex-1.fn__flex > div:nth-child(10) > div > div.config-account__center.config-account__center--text > div.ft__center > a.b3-button.b3-button--outline  {
+  background-color: var(--b3-theme-primary-lightest);
+  box-shadow: rgb(254 239 234 / 40%) 0px 3px, rgb(0 6 85 / 30%) 0px 5px, rgb(72 69 80 / 10%) 0px 8px;
+}
+
+.protyle-background {
+  margin-right: 1px;
+}
+
+/* Android Pad 端拖拽页签异常问题 #120
+  Android Pad 端长按文档树列表项引发透明度异常问题 #141
+  屏蔽 Android 端拖拽  */
+body.android .b3-list-item,
+body.android .layout-tab-bar li {
+  -webkit-user-drag: none;
+}
+
 /* 文档树显示文档图标异常 #119 */
 .b3-list-item__icon {
   font-family: Segoe UI emoji;
+}
+
+/* Android Pad 端禁止在文档树修改图标 #139 */
+body.android .b3-list-item__icon {
+  pointer-events: none;
+}
+
+/* 右下角统计区适当增加右填充 #132 */
+#status .status__counter {
+  padding-right: 5.8px;
 }
 
 /* 集市主题详情页链接颜色与文档内链接颜色不一致 #97 */
@@ -41,28 +69,27 @@ span img:hover {
 }
 
 /* Android 端文档树功能区视觉效果调整 #58 */
-@media screen and (max-width: 960px) {
-  .b3-list-item__arrow {
-    scale: 1.31 !important;
-    margin-right: 0px !important;
-    opacity: 0.58 !important;
-  }
-  .b3-list-item__icon {
-    scale: 0.8 !important;
-    opacity: 0.8 !important;
-    margin-right: 0px !important;
-    padding: 0 1px !important;
-  }
-  .b3-list-item__toggle {
-    min-height: 1.3em !important;
-  }
-  .b3-list-item__toggle:hover {
-    background-color: transparent !important;
-  }
-  .b3-list {
-    min-height: 40px !important;
-  }
-  .b3-list-item__text {
-    font-size: 0.88em !important;
-  }
+
+body.android .b3-list-item__arrow {
+  scale: 1.31 !important;
+  margin-right: 0px !important;
+  opacity: 0.58 !important;
+}
+body.android .b3-list-item__icon {
+  scale: 0.8 !important;
+  opacity: 0.8 !important;
+  margin-right: 0px !important;
+  padding: 0 1px !important;
+}
+body.android .b3-list-item__toggle {
+  min-height: 1.3em !important;
+}
+body.android .b3-list-item__toggle:hover {
+  background-color: transparent !important;
+}
+body.android .b3-list {
+  min-height: 40px !important;
+}
+body.android .b3-list-item__text {
+  font-size: 0.88em !important;
 }
