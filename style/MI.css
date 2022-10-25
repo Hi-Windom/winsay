@@ -90,7 +90,7 @@ body.windows .toolbar--browser {
   /*Android Pad 是 .body--desktop */
   background-color: transparent !important;
   box-sizing: border-box;
-  height: 5.8px;
+  height: 13px;
   line-height: 18px;
   padding: 0 5px 0 -69px;
   border-bottom: 0px solid var(--b3-border-color);
@@ -109,7 +109,7 @@ body.windows .toolbar--browser:hover {
 body.darwin {
   background-color: transparent !important;
   box-sizing: border-box;
-  height: 5.8px;
+  height: 8px;
   line-height: 18px;
   padding: 0 5px 0 69px; /* mac 端保持默认 69px 边距 */
   border-bottom: 0px solid var(--b3-border-color);
@@ -145,7 +145,7 @@ body.darwin #toolbar:hover {
 
 /* 当前打开文档右上角【更多】按钮位置和大小微调 */
 body:not(.android) .protyle-breadcrumb > button svg {
-  scale: 1.31 !important;
+  scale: 1.22 !important;
 }
 body.android .protyle-breadcrumb > button svg {
   width: 16px !important;

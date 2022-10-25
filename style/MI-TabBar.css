@@ -24,7 +24,7 @@ ul.fn__flex.layout-tab-bar {
   text-overflow: ellipsis !important;
   white-space: nowrap !important;
   display: inline;
-  color: var(--SCC-Brown-186-lighter);
+  color: var(--SCC-Brown-186-lightest);
 }
 .layout-tab-bar .item:hover .item__text {
   color: var(--SCC-Brown-186);
@@ -39,52 +39,102 @@ ul.fn__flex.layout-tab-bar {
 ul.fn__flex.layout-tab-bar li {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px; /* 影响【设置】-【集市】标签页 */
 }
-ul.layout-tab-bar {
+body:not(.android) ul.layout-tab-bar:not(.layout-tab-bar--readonly) {
   flex: 1;
-  min-width: calc(100% - 106px) !important;
+  min-width: 100% !important;
   width: auto;
   /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
 }
-ul.layout-tab-bar li:hover {
-  background-color: var(--b3-theme-background);
-  /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
+body.android ul.layout-tab-bar:not(.layout-tab-bar--readonly) {
+  flex: 1;
+  min-width: calc(100% - 70px)  !important;
+  width: auto;
+  /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
 }
+
+body:not(.android) ul.layout-tab-bar.layout-tab-bar--readonly {
+  flex-shrink: 0;
+  min-width: 70px;
+  max-width: 70px;
+  width: 70px;
+  position: absolute;
+  right: 0px;
+  padding-right: 42px;
+  border-bottom: 3px ridge #ffffff13;
+  background-color: #ffffff13;
+  backdrop-filter: blur(1.86px);
+}
+body.android ul.layout-tab-bar.layout-tab-bar--readonly {
+  flex-shrink: 0;
+  min-width: 111px;
+  max-width: 111px;
+  width: 111px;
+  position: absolute;
+  right: 0px;
+  padding-right: 31px;
+  border-bottom: 3px ridge #ffffff13;
+  background-color: #ffffff13;
+  backdrop-filter: blur(1.86px);
+}
+body:not(.android) ul.layout-tab-bar.layout-tab-bar--readonly li.item--readonly {
+  padding: 0px;
+  width: 100%;
+  opacity: 0;
+}
+body:not(.android) ul.layout-tab-bar.layout-tab-bar--readonly li.item--readonly:hover {
+  opacity: 1;
+}
+/* ul.layout-tab-bar.layout-tab-bar--readonly .item__close {
+  margin: 13px 13px 13px 0;
+  display: flex;
+  align-items: center;
+} */
+
 ul.layout-tab-bar li [title="新建文档"] {
-  background-color: var(--b3-theme-background);
-  margin-left: 0.31em;
-  margin-right: 0;
-  width: 26px;
+  margin-left: 12px;
+  margin-right: 16px;
+  padding: 0;
+  width: 15px;
 }
 ul.layout-tab-bar li [title="更多"] {
-  background-color: var(--b3-theme-background);
-  margin-left: 0.13em;
-  margin-right: 0.13em;
-  width: 26px;
+  margin-left: 8px;
+  margin-right: 12px;
+  padding: 0;
+  width: 15px;
+}
+body.android ul.layout-tab-bar li [title="新建文档"] svg,
+body.android ul.layout-tab-bar li [title="更多"] svg {
+  min-width: 20px !important;
+  width: 20px !important;
+  min-height: 20px !important;
+  height: 20px !important;
 }
 body.android ul.layout-tab-bar li [title="新建文档"] svg,
 body.android ul.layout-tab-bar li [title="更多"] svg {
   color: var(--SCColor) !important;
-  width: 16px !important;
-  height: 16px !important;
+  scale: 1.13 !important;
 }
 body:not(.android) ul.layout-tab-bar li [title="新建文档"] svg,
 body:not(.android) ul.layout-tab-bar li [title="更多"] svg {
   color: var(--SCColor) !important;
-  scale: 1.86 !important;
+  scale: 1.58 !important;
+  padding: 0 !important;
+  text-align: center !important;
+  opacity: 0;
 }
 body:not(.android) ul.layout-tab-bar li [title="新建文档"] svg:hover,
 body:not(.android) ul.layout-tab-bar li [title="更多"] svg:hover {
   color: var(--SCC-Red-Firole) !important;
-  scale: 1.13 !important;
+  opacity: 1;
 }
-.item__close svg:hover {
+/* .item__close svg:hover {
   color: var(--SCC-Red-Firole);
   box-shadow: rgba(85, 91, 255, 0.06) 0px 0px 0px 1px,
     rgba(31, 193, 27, 0.01) 0px 0px 0px 2px,
     rgba(255, 217, 19, 0.2) 0px 0px 0px 3px,
     rgba(255, 156, 85, 0.3) 0px 0px 0px 4px,
     rgba(255, 85, 85, 0.1) 0px 0px 0px 5px;
-}
+} */
 #layouts
   > div.fn__flex.fn__flex-1
   > div.layout__center.fn__flex.fn__flex-1
@@ -93,10 +143,14 @@ body:not(.android) ul.layout-tab-bar li [title="更多"] svg:hover {
   > div.protyle-breadcrumb
   > button {
   background-color: transparent !important;
-  margin-right: 10px;
 }
 li.item.item--readonly .item__close[title="新建文档"] + span.fn__flex-1 {
   display: none;
+}
+
+.layout-tab-bar .item {
+  min-height: 35px;
+  height: 35px;
 }
 
 /* 使用 li.item 而不是 .item ，避免修改影响【设置】-【集市】的标签页 */
@@ -210,6 +264,11 @@ li.item.item--pin.item--focus:after {
 
 /* 标签页【更多】弹出层缩窄 #92
 # 92 后续改进：增加动画 #136 */
+/* #commonMenu {
+  max-height: 80vh !important;
+  overflow-y: scroll !important;
+  因共用ID，启用会造成样式污染
+} */
 #commonMenu > .b3-menu__item--custom {
   border-top: 1px solid #c2c2c231 !important;
   animation: background-color-2 3.1s infinite alternate;
