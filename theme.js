@@ -125,7 +125,7 @@ window.theme.loadScript(window.theme.addURLParam("/appearance/themes/Sofill-/scr
 }
 
 /**
- * 获取操作系统
+ * 获取操作系统 'windows' 或 'darwin' (MacOS) 或 'android'
  */
  window.theme.OS = window.siyuan.config.system.os;
 //  alert( window.theme.OS);

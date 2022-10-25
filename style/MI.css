@@ -79,7 +79,7 @@ body.body--desktop.android #searchByKey {
 }
 /* 顶栏调整 */
 body.body--win32 #toolbar,
-body:not(.body--desktop) .toolbar--browser {
+body.windows .toolbar--browser {
   /*Android Pad 是 .body--desktop */
   background-color: transparent !important;
   box-sizing: border-box;
@@ -90,7 +90,7 @@ body:not(.body--desktop) .toolbar--browser {
   transition: all 0.13s ease-in-out;
 }
 body.body--win32 #toolbar:hover,
-body:not(.body--desktop) .toolbar--browser:hover {
+body.windows .toolbar--browser:hover {
   background-color: transparent !important;
   box-sizing: border-box;
   height: 32px;
@@ -99,7 +99,7 @@ body:not(.body--desktop) .toolbar--browser:hover {
   border-bottom: 0.5px solid var(--b3-border-color);
   transition: all 0.31s ease-in-out;
 }
-body:not(.body--win32) #toolbar:not(.toolbar--browser) {
+body.darwin {
   background-color: transparent !important;
   box-sizing: border-box;
   height: 5.8px;
@@ -108,7 +108,7 @@ body:not(.body--win32) #toolbar:not(.toolbar--browser) {
   border-bottom: 0px solid var(--b3-border-color);
   transition: all 0.13s ease-in-out;
 }
-body:not(.body--win32) #toolbar:not(.toolbar--browser):hover {
+body.darwin #toolbar:hover {
   background-color: transparent !important;
   box-sizing: border-box;
   height: 32px;
