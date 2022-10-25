@@ -10,6 +10,7 @@
 }
 .body--win32 #message button[aria-label="已读"] svg {
   scale: 1.6em !important;
+  color: #fff !important;
 }
 .body--win32 .b3-snackbars {
   position: fixed;
