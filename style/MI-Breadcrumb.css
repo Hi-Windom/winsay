@@ -62,6 +62,6 @@
 
   .protyle-breadcrumb__item:hover,
   .protyle-breadcrumb__item--active {
-    background-color: var(--b3-theme-tm2) !important;
+    background-color: transparent !important;
   }
 }
