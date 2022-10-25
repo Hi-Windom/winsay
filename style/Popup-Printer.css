@@ -50,8 +50,8 @@
 
 /* pdf导出界面有两部分，左边预览界面是#preview，右边设置界面是#action */
 #action {
-    background-color: var(--SCC-primary-lightest) !important;
-    border-left: 8px ridge var(--SCC-primary-lightest); /* 滚动条遮罩 */
+    background-color: #dfe0e168 !important;
+    border-left: 8px ridge var(--SCC-primary-lightest); /* 滚动条遮罩，2.4.6失效 */
 }
 #action > div > button {
     border-radius: 13px;
