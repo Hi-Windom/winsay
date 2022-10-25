@@ -1,5 +1,6 @@
 @media screen and (min-width: 960px) {
-  /* 将面包屑设置为毛玻璃效果，来自于Dark+作者的建议 */
+  /* 将当前打开文档面包屑设置为毛玻璃效果 */
+  /* 面包屑毛玻璃导致思源v2.4.6块滚动条无法跟随滚动 #154 暂不解决，等待后续方案 */
   .protyle-breadcrumb {
     position: absolute;
     text-overflow: ellipsis;
@@ -15,8 +16,8 @@
     box-shadow: rgba(222, 227, 240, 0.58) 1px 0px 6px,
       rgba(222, 227, 240, 0.31) 0px 8px 5px 1px inset;
   }
-  /* 普通打开文档的面包屑 */
-  #layouts .layout__center .protyle-breadcrumb .protyle-breadcrumb__bar {
+  /* 当前打开文档的面包屑 */
+  #layouts .layout__wnd--active .protyle-breadcrumb .protyle-breadcrumb__bar {
     opacity: 0;
   }
   /* 依次为 反链面板中【反向链接】、【提及】、嵌入块的面包屑 */
