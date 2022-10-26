@@ -50,14 +50,16 @@
   font-weight: 186;
 }
 
-#layouts > div.fn__flex.fn__flex-1 > div.fn__flex-column.fn__flex-shrink > div:nth-child(1) > div > div.layout-tab-container.fn__flex-1 > div > div.fn__flex-1 > ul > ul > li {
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul > ul > li {
   line-height: 23px;
   background-color: #ffffff11;
 }
 
-#layouts > div.fn__flex.fn__flex-1 > div.fn__flex-column.fn__flex-shrink > div:nth-child(1) > div > div.layout-tab-container.fn__flex-1 > div > div.fn__flex-1 > ul > ul {
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul > ul {
   max-height: 70vh;
   overflow-y: scroll;
+  overscroll-behavior: none;
+  /* 已知缺陷：需要展开的列表过长时双击打开正常，点击 toggle 引发高度改变事件引发父容器滚动 */
 }
 
 /* 侧边栏引用计数 */

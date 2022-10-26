@@ -9,6 +9,13 @@
     outline: 0;
 }
 
+/* https://www.zhangxinxu.com/wordpress/2018/10/scroll-behavior-scrollintoview-%e5%b9%b3%e6%bb%91%e6%bb%9a%e5%8a%a8/# */
+html, body, ul { scroll-behavior:smooth; }
+
+/* https://www.zhangxinxu.com/wordpress/2018/11/know-css-scroll-snap/ */
+ul { scroll-snap-type: x mandatory;}
+ul * { scroll-snap-align: start;}
+
 
 /* 文档树滚动条 */
 /* .fn__flex-1::-webkit-scrollbar-thumb {
