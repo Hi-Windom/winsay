@@ -90,12 +90,18 @@
     --SCC-Red-WPS-lightest: rgba(153,0,51,0.13);
     --SCC-White-WPS: #fafafa;
     --SCC-White-WPS-light: #fafafafa;
+    --SCC-Blue-WPS: #3c77eb;
+    --SCC-Blue-WPS-light: #3c77ebfa;
+    --SCC-Green-WPS: #537953;
+    --SCC-Green-WPS-light: #537953fa;
+    --SCC-Pink-WPS: #ef8fb0;
+    --SCC-Pink-WPS-light: #ef8fb0fa;
     /* -- */
     /* 块引用波浪线动画图标 | The icon of wavy line animation */
     --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/icon/wavy-line.svg);
     /* --- */
     /* 主色 */
-    --b3-theme-primary: #3573f0;
+    --b3-theme-primary: var(--SCC-Blue-WPS);
     --b3-theme-primary-light: var(--SCC-Pink-Firole-light);
     --b3-theme-primary-lighter: var(--SCC-Pink-Firole-lighter);
     --b3-theme-primary-lightest: var(--SCC-Pink-Firole-lightest);
