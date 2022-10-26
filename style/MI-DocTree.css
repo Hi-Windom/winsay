@@ -115,3 +115,7 @@
 body:not(.android) .block__logo {
   opacity: .98;
 }
+
+li[data-name="Untitled.sy"] > span.b3-list-item__text {
+  opacity: 0;
+}
