@@ -150,7 +150,7 @@ body.darwin #toolbar:hover {
 }
 #toolbar .toolbar__item:hover svg {
   opacity: 1;
-  color: var(--SCC-Red-Firole);
+  color: var(--b3-theme-primary);
 }
 
 /* 当前打开文档右上角【更多】按钮位置和大小微调 */
