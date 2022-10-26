@@ -34,3 +34,39 @@ li.b3-list-item--focus.b3-list-item.b3-list-item--big
   background-color: var(--b3-theme-background);
   z-index: 99;
 }
+
+body > div.b3-dialog--open > div > div.b3-dialog__container  div.fn__flex-1.fn__flex > ul::-webkit-scrollbar {
+  width: 0px; /* 允许滚动但不显示滚动条 */
+}
+.b3-dialog__container {
+  max-width: 1386px !important;
+}
+
+.config-account__center.config-account__center--text > div.ft__center > div:nth-child(7),
+.config-account__center.config-account__center--text > div.ft__center > div:nth-child(8),
+.config-account__center.config-account__center--text > div.ft__center > div:nth-child(9),
+.config-account__center.config-account__center--text > div.ft__center > div:nth-child(10),
+.config-account__center.config-account__center--text > div.ft__center > div:nth-child(11)
+{
+  letter-spacing: 3.1px;
+  color: #585858;
+  text-align: left;
+}
+
+.b3-tab-container {
+  font-size: 1.13em;
+}
+.b3-dialog--open .b3-dialog__container .b3-tab-container {
+  box-shadow: 0px 0px 13px #58586213 inset;
+  transition: all 1.86s;
+  transition-delay: .31s;
+}
+.b3-dialog--open .b3-dialog__container:focus-within .b3-tab-container {
+  box-shadow: 0px 0px 58px #58586213 inset;
+  transition: all 1.86s;
+  transition-delay: .31s;
+}
+.b3-dialog__container .b3-label__text {
+  opacity: .88;
+  letter-spacing: .13px;
+}
