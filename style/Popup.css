@@ -109,7 +109,7 @@
 
 /* 检查框样式 */
 .b3-switch:checked {
-  background-color: var(--SCC-Purple-186-light);
+  background-color: var(--SCC-Purple-186-lighter);
 }
 .b3-switch:checked:after {
   background-color: var(--SCC-Purple-186);
