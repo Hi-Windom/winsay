@@ -5,6 +5,7 @@ window.theme.colors = [
   'root.css',
   'style-S2/root-Blue.css',
   'style-S2/root-Pink.css',
+  'style-S2/root-Green.css',
 ];
 
 /* DOM 节点 ID */

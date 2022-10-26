@@ -153,6 +153,10 @@ textarea.b3-text-field.fn__flex-1 {
     --SCC-White-WPS-light: #fafafac5;
     --SCC-White-WPS-lighter: #fafafaa5;
     --SCC-White-WPS-lightest: #fafafa35;
+    --SCC-Pink-WPS: #ef8fb0;
+    --SCC-Pink-WPS-light: #ef8fb0c5;
+    --SCC-Pink-WPS-lighter: #ef8fb0a5;
+    --SCC-Pink-WPS-lightest: #ef8fb035;
     --SCC-Pink-WPS_Vivian: #f8edef;
     --SCC-Pink-WPS_Vivian-light: #f8edefc5;
     --SCC-Pink-WPS_Vivian-lighter: #f8edefa5;
@@ -165,10 +169,10 @@ textarea.b3-text-field.fn__flex-1 {
     --SCC-Green-WPS-light: #537953c5;
     --SCC-Green-WPS-lighter: #537953a5;
     --SCC-Green-WPS-lightest: #53795335;
-    --SCC-Pink-WPS: #ef8fb0;
-    --SCC-Pink-WPS-light: #ef8fb0c5;
-    --SCC-Pink-WPS-lighter: #ef8fb0a5;
-    --SCC-Pink-WPS-lightest: #ef8fb035;
+    --SCC-Green-WPS_Vivian: #e4f1e4;
+    --SCC-Green-WPS_Vivian-light: #e4f1e4c5;
+    --SCC-Green-WPS_Vivian-lighter: #e4f1e4a5;
+    --SCC-Green-WPS_Vivian-lightest: #e4f1e435;
     /* -- */
 }
 
