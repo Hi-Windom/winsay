@@ -113,7 +113,7 @@
 }
 .b3-switch:checked:after {
   background-color: var(--SCC-Purple-186);
-  border-color: var(--SCC-Purple-186);
+  border-color: #fff;
 }
 
 /* 优化块级清除样式按钮显示效果 */
