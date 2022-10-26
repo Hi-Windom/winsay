@@ -1,6 +1,6 @@
 /* 标签页底部背景颜色,标签页数量较少时可以看到，颜色和标签页颜色保持一致 */
 ul.fn__flex.layout-tab-bar {
-  background-color: var(--SCC-Gray-HellisePotter);
+  background-color: var(--b3-theme-background);
   height: 100%;
   padding-left: 3px;
   animation: menu 0.2s ease-in-out;
