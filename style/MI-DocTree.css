@@ -28,15 +28,15 @@
   margin-left: 5.8px;
   margin-right: 13px;
   outline: 1.3px ridge var(--b3-scroll-color);
-  background-color: #ffffff58;
+  background-color: var(--b3-theme-surface);
   transition-duration: .31s;
 }
-.fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background .b3-list-item:hover:not(.b3-list-item--focus) {
-  background-color: transparent !important;
+/* .fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background .b3-list-item:hover:not(.b3-list-item--focus) {
+  background-color: transparent;
 }
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background .b3-list-item--focus:not(.dragover):not(.dragover__top):not(.dragover__bottom) {
-  background-color: transparent !important;
-}
+  background-color: transparent;
+} */
 
 /* 笔记本文字 */
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul > li .b3-list-item__text {
@@ -55,11 +55,24 @@
   background-color: #ffffff11;
 }
 
-.fn__flex-1.fn__flex-column.file-tree.sy__file ul > ul {
+/* 已知缺陷：需要展开的列表过长时双击打开正常，点击 toggle 引发高度改变事件引发父容器滚动 */
+/* .fn__flex-1.fn__flex-column.file-tree.sy__file ul > ul {
   max-height: 70vh;
   overflow-y: scroll;
   overscroll-behavior: none;
-  /* 已知缺陷：需要展开的列表过长时双击打开正常，点击 toggle 引发高度改变事件引发父容器滚动 */
+} */
+
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background > li {
+  position: sticky;
+  top: 0px;
+  background-color: transparent;
+  z-index: 99;
+  padding-bottom: 1px;
+  transition: padding-bottom 0.2s ease-out;
+}
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background:has(ul) > li {
+  background-color: var(--b3-theme-surface) !important;
+  padding-bottom: 10px !important;
 }
 
 /* 侧边栏引用计数 */
