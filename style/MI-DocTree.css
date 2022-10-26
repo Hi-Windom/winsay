@@ -5,7 +5,8 @@
 }
 
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background {
-  border-radius: 5.8px;
+  border-radius: 1.8px;
+  margin-left: 5.8px;
   margin-top: 0.58em;
   margin-bottom: 0.58em;
   padding-top: 0.31em;
@@ -13,7 +14,7 @@
   border-bottom: 1.86px inset;
   background-color: transparent;
   transition-duration: .31s;
-  outline: none;
+  outline: 1.3px ridge transparent;
   border-image: linear-gradient(
       to right,
       #eeeeee13 0%,
@@ -24,7 +25,8 @@
     1;
 }
 .fn__flex-1.fn__flex-column.file-tree.sy__file:hover ul.b3-list.b3-list--background {
-  margin-right: 5.8px;
+  margin-left: 5.8px;
+  margin-right: 13px;
   outline: 1.3px ridge var(--b3-scroll-color);
   background-color: #ffffff58;
   transition-duration: .31s;
@@ -51,6 +53,11 @@
 #layouts > div.fn__flex.fn__flex-1 > div.fn__flex-column.fn__flex-shrink > div:nth-child(1) > div > div.layout-tab-container.fn__flex-1 > div > div.fn__flex-1 > ul > ul > li {
   line-height: 23px;
   background-color: #ffffff11;
+}
+
+#layouts > div.fn__flex.fn__flex-1 > div.fn__flex-column.fn__flex-shrink > div:nth-child(1) > div > div.layout-tab-container.fn__flex-1 > div > div.fn__flex-1 > ul > ul {
+  max-height: 70vh;
+  overflow-y: scroll;
 }
 
 /* 侧边栏引用计数 */
