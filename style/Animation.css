@@ -164,6 +164,16 @@
   animation: menu 0.2s ease-in-out;
 }
 /*侧栏展开动画*/
+#layouts
+  > .fn__flex
+  > .fn__flex-column
+  > .fn__flex
+  > div[data-type="wnd"]
+  > .layout-tab-container
+  > .fn__flex-column
+  ul::-webkit-scrollbar {
+  width: 0px; /* 允许滚动但不显示滚动条 */
+}
 @media screen and (min-width: 1300px) {
   #layouts
     > .fn__flex
@@ -174,6 +184,9 @@
     > .fn__flex-column {
     animation: flex-column-y-longer 0.35s cubic-bezier(0.37, -0.02, 0.54, 1.09);
     animation-delay: 0.1s;
+    /* 可能对解决动画动效抖动抽搐有帮助 */
+    -webkit-transform: translate3D(0);
+    transform: translate3D(0);
   }
 }
 @media screen and (min-width: 960px) and (max-width: 1300px) {
@@ -186,10 +199,14 @@
     > .fn__flex-column {
     animation: flex-column-y-long 0.35s cubic-bezier(0.37, -0.02, 0.54, 1.09);
     animation-delay: 0.1s;
+    /* 可能对解决动画动效抖动抽搐有帮助 */
+    -webkit-transform: translate3D(0);
+    transform: translate3D(0);
   }
 }
 @media screen and (max-width: 960px) {
-  #layouts
+  body:not(android)
+    #layouts
     > .fn__flex
     > .fn__flex-column
     > .fn__flex

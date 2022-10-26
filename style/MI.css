@@ -55,10 +55,10 @@ body.body--desktop.android #searchByKey {
 }
 
 /* 解决特定缩放下出现意外滚动条 */
-.fn__flex-column,
-.b3-typography,
-.protyle-wysiwyg {
-  overflow: hidden;
+.fn__flex-column::-webkit-scrollbar,
+.b3-typography::-webkit-scrollbar,
+.protyle-wysiwyg::-webkit-scrollbar {
+  width: 0px; /* 允许滚动但不显示滚动条 */
 }
 
 /* 无打开文档时默认界面美化 */

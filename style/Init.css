@@ -33,13 +33,6 @@ ul * {
 :root {
   scrollbar-gutter: stable;
   overflow-anchor: auto;
-  /* 可能对解决动画动效抖动抽搐有帮助 */
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  perspective: 1000;
-  -webkit-perspective: 1000;
-  -webkit-transform: translate3D(0);
-  transform: translate3D(0);
 }
 
 /* 可能对解决动画动效抖动抽搐有帮助 */
