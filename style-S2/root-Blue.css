@@ -4,9 +4,9 @@
     /* --- */
     /* 主色 */
     --b3-theme-primary: var(--SCC-Blue-WPS);
-    --b3-theme-primary-light: var(--SCC-Pink-Firole-light);
-    --b3-theme-primary-lighter: var(--SCC-Pink-Firole-lighter);
-    --b3-theme-primary-lightest: var(--SCC-Pink-Firole-lightest);
+    --b3-theme-primary-light: var(--SCC-Blue-WPS-light);
+    --b3-theme-primary-lighter: var(--SCC-Blue-WPS-lighter);
+    --b3-theme-primary-lightest: var(--SCC-Blue-WPS-lightest);
     --b3-theme-secondary: var(--SCC-Brown-186-light);
     --b3-theme-background: var(--SCC-White-WPS);
     --b3-theme-background-light: var(--SCC-White-WPS-light);
@@ -39,10 +39,10 @@
     --b3-border-color: var(--SCC-White-WPS-light);
 
     /* 滚动条 */
-    --b3-scroll-color: var(--SCC-Purple-186-lightest);
+    --b3-scroll-color: var(--SCC-Blue-Windom-lightest);
 
     /* 列表 */
-    --b3-list-hover: var(--SCC-Purple-186-lightest);
+    --b3-list-hover: var(--SCC-Blue-Windom-lightest);
 
     /* 菜单 */
     --b3-menu-background: var(--SCC-White-WPS);

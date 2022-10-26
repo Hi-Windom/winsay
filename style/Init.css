@@ -60,7 +60,6 @@ textarea.b3-text-field.fn__flex-1 {
 }
 
 :root {
-
     /* 绛亽色 */
     --SCColor: #484550;
     --SCC-primary: #484550;
@@ -140,24 +139,36 @@ textarea.b3-text-field.fn__flex-1 {
     --SCC-Blue-186-lightest: rgba(73,75,195,0.13);
     /* 绛亽束彖园络管理系统内部代号：[ Hellise Potter ]（赫礼斯叵特） */
     --SCC-Blue-HellisePotter: #1F1FBA;
-    --SCC-Blue-HellisePotter-light: rgba(31,31,186,0.58s);
+    --SCC-Blue-HellisePotter-light: rgba(31,31,186,0.58);
     --SCC-Yellow-HellisePotter: #f4f400;
     --SCC-Yellow-HellisePotter-light: rgba(244,244,0, .8);
     --SCC-Gray-HellisePotter: #dee3f4;
     --SCC-Gray-HellisePotter-light: rgba(222,227,244, .8);
     /* 云上高组 */
     --SCC-Red-WPS: #990033;
-    --SCC-Red-WPS-light: rgba(153,0,51,0.58);
-    --SCC-Red-WPS-lighter: rgba(153,0,51,0.31);
-    --SCC-Red-WPS-lightest: rgba(153,0,51,0.13);
+    --SCC-Red-WPS-light: #990033c5;
+    --SCC-Red-WPS-lighter: #990033a5;
+    --SCC-Red-WPS-lightest: #99003335;
     --SCC-White-WPS: #fafafa;
-    --SCC-White-WPS-light: #fafafafa;
+    --SCC-White-WPS-light: #fafafac5;
+    --SCC-White-WPS-lighter: #fafafaa5;
+    --SCC-White-WPS-lightest: #fafafa35;
+    --SCC-Pink-WPS_Vivian: #f8edef;
+    --SCC-Pink-WPS_Vivian-light: #f8edefc5;
+    --SCC-Pink-WPS_Vivian-lighter: #f8edefa5;
+    --SCC-Pink-WPS_Vivian-lightest: #f8edef35;
     --SCC-Blue-WPS: #3c77eb;
-    --SCC-Blue-WPS-light: #3c77ebfa;
+    --SCC-Blue-WPS-light: #3c77ebc5;
+    --SCC-Blue-WPS-lighter: #3c77eba5;
+    --SCC-Blue-WPS-lightest: #3c77eb35;
     --SCC-Green-WPS: #537953;
-    --SCC-Green-WPS-light: #537953fa;
+    --SCC-Green-WPS-light: #537953c5;
+    --SCC-Green-WPS-lighter: #537953a5;
+    --SCC-Green-WPS-lightest: #53795335;
     --SCC-Pink-WPS: #ef8fb0;
-    --SCC-Pink-WPS-light: #ef8fb0fa;
+    --SCC-Pink-WPS-light: #ef8fb0c5;
+    --SCC-Pink-WPS-lighter: #ef8fb0a5;
+    --SCC-Pink-WPS-lightest: #ef8fb035;
     /* -- */
 }
 

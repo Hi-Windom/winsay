@@ -3,7 +3,8 @@ window.theme = {};
 /* 实验性功能 */
 window.theme.colors = [
   'root.css',
-  'style-S2/root.css',
+  'style-S2/root-Blue.css',
+  'style-S2/root-Pink.css',
 ];
 
 /* DOM 节点 ID */

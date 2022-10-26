@@ -109,10 +109,11 @@
 
 /* 检查框样式 */
 .b3-switch:checked {
-  background-color: var(--SCC-Purple-186-lighter);
+  /* background-color: var(--SCC-Purple-186-lighter); */
+  opacity: .98;
 }
 .b3-switch:checked:after {
-  background-color: var(--SCC-Purple-186);
+  /* background-color: var(--SCC-Purple-186); */
   border-color: #fff;
 }
 
