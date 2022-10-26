@@ -5,9 +5,15 @@
 }
 
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background {
-  border-radius: 1px;
+  border-radius: 5.8px;
   margin-top: 0.58em;
+  margin-bottom: 0.58em;
+  padding-top: 0.31em;
+  padding-bottom: 0.31em;
   border-bottom: 1.86px inset;
+  background-color: transparent;
+  transition-duration: .31s;
+  outline: none;
   border-image: linear-gradient(
       to right,
       #eeeeee13 0%,
@@ -17,11 +23,34 @@
     )
     1;
 }
+.fn__flex-1.fn__flex-column.file-tree.sy__file:hover ul.b3-list.b3-list--background {
+  margin-right: 5.8px;
+  outline: 1.3px ridge var(--b3-scroll-color);
+  background-color: #ffffff58;
+  transition-duration: .31s;
+}
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background .b3-list-item:hover:not(.b3-list-item--focus) {
+  background-color: transparent !important;
+}
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background .b3-list-item--focus:not(.dragover):not(.dragover__top):not(.dragover__bottom) {
+  background-color: transparent !important;
+}
 
-.fn__flex-1.fn__flex-column.file-tree.sy__file .b3-list-item__text {
-  color: var(--SCC-Brown-186);
-  font-size: 12pt;
-  font-weight: 520;
+/* 笔记本文字 */
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul > li .b3-list-item__text {
+  color: #12345678;
+  font-size: 13pt !important;
+}
+/* 文档文字 */
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul > ul > li .b3-list-item__text {
+  color: var(--SCColor);
+  font-size: 11pt !important;
+  font-weight: 186;
+}
+
+#layouts > div.fn__flex.fn__flex-1 > div.fn__flex-column.fn__flex-shrink > div:nth-child(1) > div > div.layout-tab-container.fn__flex-1 > div > div.fn__flex-1 > ul > ul > li {
+  line-height: 23px;
+  background-color: #ffffff11;
 }
 
 /* 侧边栏引用计数 */
@@ -72,4 +101,8 @@
   padding: 5px;
   margin: 0 -5px 0 5px;
   border-radius: 3px;
+}
+
+body:not(.android) .block__logo {
+  opacity: .98;
 }
