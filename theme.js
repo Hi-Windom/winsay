@@ -181,9 +181,9 @@ document.body.classList.add(window.theme.OS);
  window.theme.cv = compareVersion(window.theme.kernelVersion, "2.4.2");
  console.log(window.theme.cv);
 
- /* 根据版本加载样式配置文件 */
  window.theme.changeThemeMode = function () {
-  switch ( window.theme.cv) {
+  /* 根据版本加载样式配置文件 */
+  switch (window.theme.cv) {
       case -1:
         window.theme.updateStyle("MI", `/appearance/themes/Sofill-/style-old/MI.css`);
         window.theme.updateStyle("TabBar", `/appearance/themes/Sofill-/style-old/MI-TabBar.css`);
@@ -192,6 +192,15 @@ document.body.classList.add(window.theme.OS);
         window.theme.updateStyle("MI", `/appearance/themes/Sofill-/style/MI.css`);
         window.theme.updateStyle("TabBar", `/appearance/themes/Sofill-/style/MI-TabBar.css`);
         break;
+  }
+  /* 根据不同设备加载样式配置文件 */
+  switch (window.theme.OS) {
+    case 'android':
+      break;
+    default:
+      window.theme.updateStyle("MI-DocTree", `/appearance/themes/Sofill-/style/MI-DocTree.css`);
+      window.theme.updateStyle("MI-Breadcrumb", `/appearance/themes/Sofill-/style/MI-Breadcrumb.css`);
+      break;
   }
 }
 

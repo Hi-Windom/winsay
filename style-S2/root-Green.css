@@ -8,10 +8,10 @@
     --b3-theme-primary-lighter: var(--SCC-Green-WPS-lighter);
     --b3-theme-primary-lightest: var(--SCC-Green-WPS-lightest);
     --b3-theme-secondary: var(--SCC-Brown-186-light);
-    --b3-theme-background: var(--SCC-Green-WPS_Vivian);
-    --b3-theme-background-light: var(--SCC-Green-WPS_Vivian-light);
-    --b3-theme-surface: var(--SCC-Green-WPS_Vivian);
-    --b3-theme-surface-light: var(--SCC-Green-WPS_Vivian-light);
+    --b3-theme-background: var(--SCC-Green-WPS_Vivid);
+    --b3-theme-background-light: var(--SCC-Green-WPS_Vivid-light);
+    --b3-theme-surface: var(--SCC-Green-WPS_Vivid);
+    --b3-theme-surface-light: var(--SCC-Green-WPS_Vivid-light);
     --b3-theme-error: #d23f31; /* 不修改 */
 
     /* 文字颜色 */
