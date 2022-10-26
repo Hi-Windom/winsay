@@ -44,11 +44,6 @@
     /* #windowControls svg {
         opacity: 1 !important;
     } */
-    /* 可能对解决动效抖动有帮助 */
-    #layouts, #layouts > div.fn__flex.fn__flex-1,
-    #layouts > div.fn__flex.fn__flex-1 > div.layout__center.fn__flex.fn__flex-1 {
-        transition: all 0s !important;
-    }
     /* 优化右上角窗口关闭按钮焦点样式，不适用于思源2.4.3 */
     #closeWindow:hover svg {
         color: var(--SCC-Gray-HellisePotter) !important;

@@ -1,192 +1,215 @@
 /* 所有边距初始化 */
 * {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 /* https://www.zhangxinxu.com/wordpress/2019/03/css-focus-visible */
 :focus:not(:focus-visible) {
-    outline: 0;
+  outline: 0;
 }
 
 /* https://www.zhangxinxu.com/wordpress/2018/10/scroll-behavior-scrollintoview-%e5%b9%b3%e6%bb%91%e6%bb%9a%e5%8a%a8/# */
-html, body, ul { scroll-behavior:smooth; }
+html,
+body,
+ul {
+  scroll-behavior: smooth;
+}
 
 /* https://www.zhangxinxu.com/wordpress/2018/11/know-css-scroll-snap/ */
-ul { scroll-snap-type: x mandatory;}
-ul * { scroll-snap-align: start;}
-
+ul {
+  scroll-snap-type: x mandatory;
+}
+ul * {
+  scroll-snap-align: start;
+}
 
 /* https://www.zhangxinxu.com/wordpress/2022/01/css-scrollbar-gutter/ */
 :root {
-    scrollbar-gutter: stable;
-    overflow-anchor: auto;
+  scrollbar-gutter: stable;
+  overflow-anchor: auto;
+  /* 可能对解决动画动效抖动抽搐有帮助 */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  perspective: 1000;
+  -webkit-perspective: 1000;
+  -webkit-transform:translate3D(0);
+  transform:translate3D(0);
 }
 
+/* 可能对解决动画动效抖动抽搐有帮助 */
+#layouts,
+#layouts > div.fn__flex.fn__flex-1,
+#layouts > div.fn__flex.fn__flex-1 > div.layout__center.fn__flex.fn__flex-1 {
+  transition: all 0s !important;
+}
 /* 设置段落两端对齐 */
 .protyle-content .p:not(.list .p) {
-    text-align: justify;
+  text-align: justify;
 }
 
 /* 块添加圆角 */
 .protyle-wysiwyg [data-node-id] {
-    border-radius: 1px;
+  border-radius: 1px;
 }
-
 
 /* 块标提示不被窗口线遮挡 */
 .protyle-gutters {
-    z-index: 3;
+  z-index: 3;
 }
-
 
 /* 去掉软件的边框线 */
 body.body--win32 {
-    border: none !important;
+  border: none !important;
 }
 
 /* 表单设置不能拖拽缩放 */
 textarea.b3-text-field.fn__flex-1 {
-    border: 1px solid transparent;
-    resize: none;
+  border: 1px solid transparent;
+  resize: none;
 }
 
 @font-face {
-    font-family: "SC BASE";
-    src: local('PingFang SC'),
-         local("Microsoft Yahei");
-  }
-  @font-face {
-    font-family: quote;
-    src: local('SimSun');
-    unicode-range: U+201c, U+201d;
-    /* 中文双引号使用宋体样式 #162 */
+  font-family: "SC BASE";
+  src: local("PingFang SC"), local("Microsoft Yahei");
+}
+@font-face {
+  font-family: quote;
+  src: local("SimSun");
+  unicode-range: U+201c, U+201d;
+  /* 中文双引号使用宋体样式 #162 */
 }
 
 :root {
-    /* 字体 */
-    --b3-font-family: quote, 'Inter', 'Inter-Regular', "HarmonyOS Sans SC", "Noto Sans", "Noto Sans CJK SC", "Microsoft YaHei UI", "WenQuanYi Micro Hei", sans-serif, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --b3-font-family-code: "JetBrainsMono-Regular", mononoki, Consolas, "Liberation Mono", Menlo, Courier, monospace, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols", "SC BASE";
-    --b3-font-family-graph: mononoki;
-    --b3-font-family-emoji: "Segoe UI Emoji", "Segoe UI Symbol", "Segoe UI", "Apple Color Emoji", "Twemoji Mozilla", "Noto Color Emoji", "Android Emoji";
-    --b3-font-family-math: KaTeX_Math;
-    /* 绛亽色 */
-    --SCColor: #484550;
-    --SCC-primary: #484550;
-    --SCC-primary-light: rgba(72,69,80,0.58);
-    --SCC-primary-lighter: rgba(72,69,80,0.31);
-    --SCC-primary-lightest: rgba(72,69,80,0.13);
-    /* 绛亽白 */
-    --SCC-White: #feefea;
-    --SCC-White-light: rgba(254,239,234,0.58);
-    --SCC-White-lighter: rgba(254,239,234,0.31);
-    --SCC-White-lightest: rgba(254,239,234,0.13);
-    /* 海文东蓝 */
-    --SCC-Blue-Windom: #000655;
-    --SCC-Blue-Windom-light: rgba(0,6,85,0.58);
-    --SCC-Blue-Windom-lighter: rgba(0,6,85,0.31);
-    --SCC-Blue-Windom-lightest: rgba(0,6,85,0.13);
-    /* 海文东黄 */
-    --SCC-Orange-Windom: #ffbb00;
-    --SCC-Orange-Windom-light: rgba(255,187,0,0.58);
-    --SCC-Orange-Windom-lighter: rgba(255,187,0,0.31);
-    --SCC-Orange-Windom-lightest: rgba(255,187,0,0.13);
-    /* 海文东2号蓝 */
-    --SCC-Blue-Windom_2: #3a83ba;
-    --SCC-Blue-Windom_2-light: rgba(58,131,186,0.58);
-    --SCC-Blue-Windom_2-lighter: rgba(58,131,186,0.31);
-    --SCC-Blue-Windom_2-lightest: rgba(58,131,186,0.13);
-    /* 巴枀紫 */
-    --SCC-Purple-Soledar: #912997;
-    --SCC-Purple-Soledar-light: rgba(145,41,151,0.58);
-    --SCC-Purple-Soledar-lighter: rgba(145,41,151,0.31);
-    --SCC-Purple-Soledar-lightest: rgba(145,41,151,0.13);
-    /* 巴枀灰 */
-    --SCC-Gray-Soledar: #585858;
-    --SCC-Gray-Soledar-light: rgba(88,88,88,0.58);
-    /* 火萝粉 */
-    --SCC-Pink-Firole: #ff3399;
-    --SCC-Pink-Firole-light: rgba(255,51,153,0.58);
-    --SCC-Pink-Firole-lighter: rgba(255,51,153,0.31);
-    --SCC-Pink-Firole-lightest: rgba(255,51,153,0.13);
-    /*  火萝红 */
-    --SCC-Red-Firole: #ff0066;
-    --SCC-Red-Firole-light: rgba(255,0,102,0.58);
-    --SCC-Red-Firole-lighter: rgba(255,0,102,0.31);
-    --SCC-Red-Firole-lightest: rgba(255,0,102,0.13);
-    /* 一八六战略紫 */
-    --SCC-Purple-186: #8051e7;
-    --SCC-Purple-186-light: rgba(128,81,231,0.58);
-    --SCC-Purple-186-lighter: rgba(128,81,231,0.31);
-    --SCC-Purple-186-lightest: rgba(128,81,231,0.13);
-    /* 一八六战略青 */
-    --SCC-Cyan-186: #bffae2;
-    --SCC-Cyan-186-light: rgba(191,250,226,0.58);
-    --SCC-Cyan-186-lighter: rgba(191,250,226,0.31);
-    --SCC-Cyan-186-lightest: rgba(191,250,226,0.13);
-    /* 一八六战略绿 */
-    --SCC-Green-186: #80fb0a;
-    --SCC-Green-186-light: rgba(128,251,10,0.58);
-    --SCC-Green-186-lighter: rgba(128,251,10,0.31);
-    --SCC-Green-186-lightest: rgba(128,251,10,0.13);
-    /* 一八六战略棕 */
-    --SCC-Brown-186: #320b11;
-    --SCC-Brown-186-light: rgba(50,11,17,0.58);
-    --SCC-Brown-186-lighter: rgba(50,11,17,0.31);
-    --SCC-Brown-186-lightest: rgba(50,11,17,0.13);
-    /* 一八六战略黑 */
-    --SCC-Black-186: #0d0d0d;
-    --SCC-Black-186-light: rgba(13,13,13,0.58);
-    --SCC-Black-186-lighter: rgba(13,13,13,0.31);
-    --SCC-Black-186-lightest: rgba(13,13,13,0.13);
-    /* 一八六战略灰 */
-    --SCC-Gray-186: #bfa7b1;
-    --SCC-Gray-186-light: rgba(191,167,177,0.58);
-    /* 一八六战略蓝 */
-    --SCC-Blue-186: #494bc3;
-    --SCC-Blue-186-light: rgba(73,75,195,0.58);
-    --SCC-Blue-186-lighter: rgba(73,75,195,0.31);
-    --SCC-Blue-186-lightest: rgba(73,75,195,0.13);
-    /* 绛亽束彖园络管理系统内部代号：[ Hellise Potter ]（赫礼斯叵特） */
-    --SCC-Blue-HellisePotter: #1F1FBA;
-    --SCC-Blue-HellisePotter-light: rgba(31,31,186,0.58);
-    --SCC-Yellow-HellisePotter: #f4f400;
-    --SCC-Yellow-HellisePotter-light: rgba(244,244,0, .8);
-    --SCC-Gray-HellisePotter: #dee3f4;
-    --SCC-Gray-HellisePotter-light: rgba(222,227,244, .8);
-    /* 云上高组 */
-    --SCC-Red-WPS: #990033;
-    --SCC-Red-WPS-light: #990033c5;
-    --SCC-Red-WPS-lighter: #990033a5;
-    --SCC-Red-WPS-lightest: #99003335;
-    --SCC-White-WPS: #fafafa;
-    --SCC-White-WPS-light: #fafafac5;
-    --SCC-White-WPS-lighter: #fafafaa5;
-    --SCC-White-WPS-lightest: #fafafa35;
-    --SCC-Pink-WPS: #ef8fb0;
-    --SCC-Pink-WPS-light: #ef8fb0c5;
-    --SCC-Pink-WPS-lighter: #ef8fb0a5;
-    --SCC-Pink-WPS-lightest: #ef8fb035;
-    --SCC-Pink-WPS_Vivian: #f8edef;
-    --SCC-Pink-WPS_Vivian-light: #f8edefc5;
-    --SCC-Pink-WPS_Vivian-lighter: #f8edefa5;
-    --SCC-Pink-WPS_Vivian-lightest: #f8edef35;
-    --SCC-Blue-WPS: #3c77eb;
-    --SCC-Blue-WPS-light: #3c77ebc5;
-    --SCC-Blue-WPS-lighter: #3c77eba5;
-    --SCC-Blue-WPS-lightest: #3c77eb35;
-    --SCC-Green-WPS: #537953;
-    --SCC-Green-WPS-light: #537953c5;
-    --SCC-Green-WPS-lighter: #537953a5;
-    --SCC-Green-WPS-lightest: #53795335;
-    --SCC-Green-WPS_Vivian: #e4f1e4;
-    --SCC-Green-WPS_Vivian-light: #e4f1e4c5;
-    --SCC-Green-WPS_Vivian-lighter: #e4f1e4a5;
-    --SCC-Green-WPS_Vivian-lightest: #e4f1e435;
-    --SCC-Green-WPS_Vivid: #ecf4ec;
-    --SCC-Green-WPS_Vivid-light: #ecf4ecc5;
-    --SCC-Green-WPS_Vivid-lighter: #ecf4eca5;
-    --SCC-Green-WPS_Vivid-lightest: #ecf4ec35;
-    /* -- */
+  /* 字体 */
+  --b3-font-family: quote, "Inter", "Inter-Regular", "HarmonyOS Sans SC",
+    "Noto Sans", "Noto Sans CJK SC", "Microsoft YaHei UI", "WenQuanYi Micro Hei",
+    sans-serif, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --b3-font-family-code: "JetBrainsMono-Regular", mononoki, Consolas,
+    "Liberation Mono", Menlo, Courier, monospace, "Apple Color Emoji",
+    "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
+    "EmojiSymbols", "SC BASE";
+  --b3-font-family-graph: mononoki;
+  --b3-font-family-emoji: "Segoe UI Emoji", "Segoe UI Symbol", "Segoe UI",
+    "Apple Color Emoji", "Twemoji Mozilla", "Noto Color Emoji", "Android Emoji";
+  --b3-font-family-math: KaTeX_Math;
+  /* 绛亽色 */
+  --SCColor: #484550;
+  --SCC-primary: #484550;
+  --SCC-primary-light: rgba(72, 69, 80, 0.58);
+  --SCC-primary-lighter: rgba(72, 69, 80, 0.31);
+  --SCC-primary-lightest: rgba(72, 69, 80, 0.13);
+  /* 绛亽白 */
+  --SCC-White: #feefea;
+  --SCC-White-light: rgba(254, 239, 234, 0.58);
+  --SCC-White-lighter: rgba(254, 239, 234, 0.31);
+  --SCC-White-lightest: rgba(254, 239, 234, 0.13);
+  /* 海文东蓝 */
+  --SCC-Blue-Windom: #000655;
+  --SCC-Blue-Windom-light: rgba(0, 6, 85, 0.58);
+  --SCC-Blue-Windom-lighter: rgba(0, 6, 85, 0.31);
+  --SCC-Blue-Windom-lightest: rgba(0, 6, 85, 0.13);
+  /* 海文东黄 */
+  --SCC-Orange-Windom: #ffbb00;
+  --SCC-Orange-Windom-light: rgba(255, 187, 0, 0.58);
+  --SCC-Orange-Windom-lighter: rgba(255, 187, 0, 0.31);
+  --SCC-Orange-Windom-lightest: rgba(255, 187, 0, 0.13);
+  /* 海文东2号蓝 */
+  --SCC-Blue-Windom_2: #3a83ba;
+  --SCC-Blue-Windom_2-light: rgba(58, 131, 186, 0.58);
+  --SCC-Blue-Windom_2-lighter: rgba(58, 131, 186, 0.31);
+  --SCC-Blue-Windom_2-lightest: rgba(58, 131, 186, 0.13);
+  /* 巴枀紫 */
+  --SCC-Purple-Soledar: #912997;
+  --SCC-Purple-Soledar-light: rgba(145, 41, 151, 0.58);
+  --SCC-Purple-Soledar-lighter: rgba(145, 41, 151, 0.31);
+  --SCC-Purple-Soledar-lightest: rgba(145, 41, 151, 0.13);
+  /* 巴枀灰 */
+  --SCC-Gray-Soledar: #585858;
+  --SCC-Gray-Soledar-light: rgba(88, 88, 88, 0.58);
+  /* 火萝粉 */
+  --SCC-Pink-Firole: #ff3399;
+  --SCC-Pink-Firole-light: rgba(255, 51, 153, 0.58);
+  --SCC-Pink-Firole-lighter: rgba(255, 51, 153, 0.31);
+  --SCC-Pink-Firole-lightest: rgba(255, 51, 153, 0.13);
+  /*  火萝红 */
+  --SCC-Red-Firole: #ff0066;
+  --SCC-Red-Firole-light: rgba(255, 0, 102, 0.58);
+  --SCC-Red-Firole-lighter: rgba(255, 0, 102, 0.31);
+  --SCC-Red-Firole-lightest: rgba(255, 0, 102, 0.13);
+  /* 一八六战略紫 */
+  --SCC-Purple-186: #8051e7;
+  --SCC-Purple-186-light: rgba(128, 81, 231, 0.58);
+  --SCC-Purple-186-lighter: rgba(128, 81, 231, 0.31);
+  --SCC-Purple-186-lightest: rgba(128, 81, 231, 0.13);
+  /* 一八六战略青 */
+  --SCC-Cyan-186: #bffae2;
+  --SCC-Cyan-186-light: rgba(191, 250, 226, 0.58);
+  --SCC-Cyan-186-lighter: rgba(191, 250, 226, 0.31);
+  --SCC-Cyan-186-lightest: rgba(191, 250, 226, 0.13);
+  /* 一八六战略绿 */
+  --SCC-Green-186: #80fb0a;
+  --SCC-Green-186-light: rgba(128, 251, 10, 0.58);
+  --SCC-Green-186-lighter: rgba(128, 251, 10, 0.31);
+  --SCC-Green-186-lightest: rgba(128, 251, 10, 0.13);
+  /* 一八六战略棕 */
+  --SCC-Brown-186: #320b11;
+  --SCC-Brown-186-light: rgba(50, 11, 17, 0.58);
+  --SCC-Brown-186-lighter: rgba(50, 11, 17, 0.31);
+  --SCC-Brown-186-lightest: rgba(50, 11, 17, 0.13);
+  /* 一八六战略黑 */
+  --SCC-Black-186: #0d0d0d;
+  --SCC-Black-186-light: rgba(13, 13, 13, 0.58);
+  --SCC-Black-186-lighter: rgba(13, 13, 13, 0.31);
+  --SCC-Black-186-lightest: rgba(13, 13, 13, 0.13);
+  /* 一八六战略灰 */
+  --SCC-Gray-186: #bfa7b1;
+  --SCC-Gray-186-light: rgba(191, 167, 177, 0.58);
+  /* 一八六战略蓝 */
+  --SCC-Blue-186: #494bc3;
+  --SCC-Blue-186-light: rgba(73, 75, 195, 0.58);
+  --SCC-Blue-186-lighter: rgba(73, 75, 195, 0.31);
+  --SCC-Blue-186-lightest: rgba(73, 75, 195, 0.13);
+  /* 绛亽束彖园络管理系统内部代号：[ Hellise Potter ]（赫礼斯叵特） */
+  --SCC-Blue-HellisePotter: #1f1fba;
+  --SCC-Blue-HellisePotter-light: rgba(31, 31, 186, 0.58);
+  --SCC-Yellow-HellisePotter: #f4f400;
+  --SCC-Yellow-HellisePotter-light: rgba(244, 244, 0, 0.8);
+  --SCC-Gray-HellisePotter: #dee3f4;
+  --SCC-Gray-HellisePotter-light: rgba(222, 227, 244, 0.8);
+  /* 云上高组 */
+  --SCC-Red-WPS: #990033;
+  --SCC-Red-WPS-light: #990033c5;
+  --SCC-Red-WPS-lighter: #990033a5;
+  --SCC-Red-WPS-lightest: #99003335;
+  --SCC-White-WPS: #fafafa;
+  --SCC-White-WPS-light: #fafafac5;
+  --SCC-White-WPS-lighter: #fafafaa5;
+  --SCC-White-WPS-lightest: #fafafa35;
+  --SCC-Pink-WPS: #ef8fb0;
+  --SCC-Pink-WPS-light: #ef8fb0c5;
+  --SCC-Pink-WPS-lighter: #ef8fb0a5;
+  --SCC-Pink-WPS-lightest: #ef8fb035;
+  --SCC-Pink-WPS_Vivian: #f8edef;
+  --SCC-Pink-WPS_Vivian-light: #f8edefc5;
+  --SCC-Pink-WPS_Vivian-lighter: #f8edefa5;
+  --SCC-Pink-WPS_Vivian-lightest: #f8edef35;
+  --SCC-Blue-WPS: #3c77eb;
+  --SCC-Blue-WPS-light: #3c77ebc5;
+  --SCC-Blue-WPS-lighter: #3c77eba5;
+  --SCC-Blue-WPS-lightest: #3c77eb35;
+  --SCC-Green-WPS: #537953;
+  --SCC-Green-WPS-light: #537953c5;
+  --SCC-Green-WPS-lighter: #537953a5;
+  --SCC-Green-WPS-lightest: #53795335;
+  --SCC-Green-WPS_Vivian: #e4f1e4;
+  --SCC-Green-WPS_Vivian-light: #e4f1e4c5;
+  --SCC-Green-WPS_Vivian-lighter: #e4f1e4a5;
+  --SCC-Green-WPS_Vivian-lightest: #e4f1e435;
+  --SCC-Green-WPS_Vivid: #ecf4ec;
+  --SCC-Green-WPS_Vivid-light: #ecf4ecc5;
+  --SCC-Green-WPS_Vivid-lighter: #ecf4eca5;
+  --SCC-Green-WPS_Vivid-lightest: #ecf4ec35;
+  /* -- */
 }
-
