@@ -6,7 +6,7 @@
 }
 
 /* 更圆润 */
-.b3-list--background .b3-list-item {
+.b3-tab-bar.b3-list--background .b3-list-item {
   border-radius: 13px;
 }
 

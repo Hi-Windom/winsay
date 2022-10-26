@@ -17,26 +17,11 @@ ul { scroll-snap-type: x mandatory;}
 ul * { scroll-snap-align: start;}
 
 
-/* 文档树滚动条 */
-/* .fn__flex-1::-webkit-scrollbar-thumb {
-    transition: background-color 1s ease !important;
+/* https://www.zhangxinxu.com/wordpress/2022/01/css-scrollbar-gutter/ */
+:root {
+    scrollbar-gutter: stable;
+    overflow-anchor: auto;
 }
-
-.fn__flex-1:hover::-webkit-scrollbar-thumb {
-    background-color: var(--b3-scroll-color);
-} */
-
-/* 修改滚动条宽度 */
-/* ::-webkit-scrollbar {
-    width: 8px;
-} */
-
-
-/* 设置滚动条样式 */
-/* ::-webkit-scrollbar-thumb {
-    background-color: var(--b3-scroll-color);
-    border-radius: 1px;
-} */
 
 /* 设置段落两端对齐 */
 .protyle-content .p:not(.list .p) {
@@ -67,7 +52,7 @@ textarea.b3-text-field.fn__flex-1 {
 }
 
 @font-face {
-    font-family: BASE;
+    font-family: "SC BASE";
     src: local('PingFang SC'),
          local("Microsoft Yahei");
   }
@@ -80,8 +65,8 @@ textarea.b3-text-field.fn__flex-1 {
 
 :root {
     /* 字体 */
-    --b3-font-family: quote, 'Inter', 'Inter-Regular', 'PingFang SC', "Microsoft YaHei", "HarmonyOS Sans SC", "Noto Sans", "Noto Sans CJK SC", "Microsoft YaHei UI", "WenQuanYi Micro Hei", sans-serif, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --b3-font-family-code: "JetBrainsMono-Regular", mononoki, Consolas, "Liberation Mono", Menlo, Courier, monospace, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols";
+    --b3-font-family: quote, 'Inter', 'Inter-Regular', "HarmonyOS Sans SC", "Noto Sans", "Noto Sans CJK SC", "Microsoft YaHei UI", "WenQuanYi Micro Hei", sans-serif, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --b3-font-family-code: "JetBrainsMono-Regular", mononoki, Consolas, "Liberation Mono", Menlo, Courier, monospace, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols", "SC BASE";
     --b3-font-family-graph: mononoki;
     --b3-font-family-emoji: "Segoe UI Emoji", "Segoe UI Symbol", "Segoe UI", "Apple Color Emoji", "Twemoji Mozilla", "Noto Color Emoji", "Android Emoji";
     --b3-font-family-math: KaTeX_Math;
