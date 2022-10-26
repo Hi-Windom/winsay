@@ -4,6 +4,11 @@
   padding: 0px;
 }
 
+body.body--win32 {
+  -webkit-font-smoothing: antialiased;
+  border: none !important; /* 去掉软件的边框线 */
+}
+
 /* https://www.zhangxinxu.com/wordpress/2019/03/css-focus-visible */
 :focus:not(:focus-visible) {
   outline: 0;
@@ -33,8 +38,8 @@ ul * {
   -webkit-backface-visibility: hidden;
   perspective: 1000;
   -webkit-perspective: 1000;
-  -webkit-transform:translate3D(0);
-  transform:translate3D(0);
+  -webkit-transform: translate3D(0);
+  transform: translate3D(0);
 }
 
 /* 可能对解决动画动效抖动抽搐有帮助 */
@@ -56,11 +61,6 @@ ul * {
 /* 块标提示不被窗口线遮挡 */
 .protyle-gutters {
   z-index: 3;
-}
-
-/* 去掉软件的边框线 */
-body.body--win32 {
-  border: none !important;
 }
 
 /* 表单设置不能拖拽缩放 */
