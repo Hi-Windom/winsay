@@ -1,18 +1,18 @@
 /* 软件右上角通知改为在右下角显示 */
-.body--win32 #message {
+#message {
   opacity: 0.98;
 }
-.body--win32 #message button[aria-label="已读"] {
+#message button[aria-label="已读"] {
   height: 2.6em !important;
   width: 5.8em !important;
   border: 3px ridge var(--SCC-Cyan-186-lighter) !important;
   background-color: var(--SCC-Brown-186-light);
 }
-.body--win32 #message button[aria-label="已读"] svg {
+#message button[aria-label="已读"] svg {
   scale: 1.6em !important;
   color: #fff !important;
 }
-.body--win32 .b3-snackbars {
+.b3-snackbars {
   position: fixed;
   right: 22px;
   top: unset;
