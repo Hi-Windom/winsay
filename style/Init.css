@@ -31,8 +31,7 @@ ul * {
 
 @layer {
   /* https://www.zhangxinxu.com/wordpress/2022/01/css-scrollbar-gutter/ */
-  ul,
-  div {
+  ul{
     /* 把滚动条的位置提前预留好（空白） */
     scrollbar-gutter: stable;
     overflow-anchor: auto;
