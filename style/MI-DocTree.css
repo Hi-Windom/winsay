@@ -42,6 +42,10 @@
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul > li .b3-list-item__text {
   color: #12345678;
   font-size: 13pt !important;
+  transition: color 0.2s cubic-bezier(0.47, 0, 0.75, 0.72);
+}
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background:has(ul) > li .b3-list-item__text {
+  color: var(--b3-theme-primary);
 }
 /* 文档文字 */
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul > ul > li .b3-list-item__text {
