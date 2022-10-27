@@ -16,7 +16,7 @@
 table th {
     font-weight: bold;
     text-align: center;
-    background-color: var(--SCC-Red-WPS-lighter) !important;
+    background-color: var(--b3-theme-primary-lightest) !important;
 }
 
 /* 设置表格内部边框 */

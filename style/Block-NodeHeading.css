@@ -215,7 +215,7 @@
 .protyle-wysiwyg [data-node-id].h4:hover,
 .protyle-wysiwyg [data-node-id].h5:hover,
 .protyle-wysiwyg [data-node-id].h6:hover {
-  border-left: 1.31em solid var(--b3-theme-background);
+  border-left: 1.31em solid transparent;
 }
 .protyle-wysiwyg [data-node-id].h2::after {
   box-shadow: 0.25em 0.25em 0 0 #55555a4d;

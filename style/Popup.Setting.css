@@ -1,3 +1,27 @@
+
+/* 避免搜索框阴影样式被遮挡 */
+.search__header {
+  z-index: 99;
+}
+
+/* 更圆润 */
+.b3-tab-bar.b3-list--background .b3-list-item {
+  border-radius: 13px;
+}
+
+/* 设置面板关闭按钮 */
+.b3-dialog--open .b3-dialog__container .b3-dialog__close {
+  color: #ffffffa5;
+}
+.b3-dialog--open .b3-dialog__container .b3-dialog__close:hover {
+  color: #fff;
+}
+/* 搜索图标 */
+.b3-form__icon-icon,
+.search__arrowdown {
+  color: var(--b3-theme-primary-light);
+}
+
 /* 【设置】-【账户】界面美化 */
 .config-account__name a {
   color: var(--SCColor);
@@ -26,11 +50,47 @@
 li.b3-list-item--focus.b3-list-item.b3-list-item--big,
 li.b3-list-item--focus.b3-list-item.b3-list-item--big
   svg.b3-list-item__graphic {
-  color: var(--SCC-Blue-186);
+  color: var(--b3-theme-primary);
 }
 
 /* 集市主题详情页 */
 .config-bazaar__readme {
   background-color: var(--b3-theme-background);
   z-index: 99;
+}
+
+body > div.b3-dialog--open > div > div.b3-dialog__container  div.fn__flex-1.fn__flex > ul::-webkit-scrollbar {
+  width: 0px; /* 允许滚动但不显示滚动条 */
+}
+.b3-dialog__container {
+  max-width: 1386px !important;
+}
+
+.config-account__center.config-account__center--text > div.ft__center > div:nth-child(7),
+.config-account__center.config-account__center--text > div.ft__center > div:nth-child(8),
+.config-account__center.config-account__center--text > div.ft__center > div:nth-child(9),
+.config-account__center.config-account__center--text > div.ft__center > div:nth-child(10),
+.config-account__center.config-account__center--text > div.ft__center > div:nth-child(11)
+{
+  letter-spacing: 3.1px;
+  color: #585858;
+  text-align: left;
+}
+
+.b3-tab-container {
+  font-size: 1.13em;
+}
+.b3-dialog--open .b3-dialog__container .b3-tab-container {
+  box-shadow: 0px 0px 13px #58586213 inset;
+  transition: all 1.86s;
+  transition-delay: .31s;
+}
+.b3-dialog--open .b3-dialog__container:focus-within .b3-tab-container {
+  box-shadow: 0px 0px 58px #58586213 inset;
+  transition: all 1.86s;
+  transition-delay: .31s;
+}
+.b3-dialog__container .b3-label__text {
+  opacity: .88;
+  letter-spacing: .13px;
 }

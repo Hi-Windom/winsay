@@ -2,7 +2,7 @@
 /* 标签页底部背景颜色,标签页数量较少时可以看到，颜色和标签页颜色保持一致 */
 .layout-tab-bar.fn__flex,
 ul.fn__flex.layout-tab-bar {
-    background-color: var(--SCC-Gray-HellisePotter);
+    background-color: var(--b3-theme-background);
 }
 
 
@@ -14,7 +14,7 @@ ul.fn__flex.layout-tab-bar {
 
 .layout-tab-bar .item:not(.item--readonly) {
     position: relative;
-    background-color: var(--SCC-Gray-HellisePotter);
+    background-color: var(--b3-theme-background);
     flex: 1;
     min-width: 1em;
     border-radius: 0px !important;
@@ -29,7 +29,7 @@ ul.fn__flex.layout-tab-bar {
 }
 
 .item--readonly {
-    background-color: var(--SCC-Gray-HellisePotter);
+    background-color: var(--b3-theme-background);
 }
 
 .item--readonly:hover {

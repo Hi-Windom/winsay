@@ -1,18 +1,138 @@
 .b3-list-item__toggle--hl:hover {
-    color: var(--b3-theme-on-background);
-    background-color: transparent !important;
-    border-radius: 2px;
+  color: var(--b3-theme-on-background);
+  background-color: transparent !important;
+  border-radius: 2px;
 }
 
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background {
-    border-radius: 1px;
-    margin-top: .58em;
-    border-bottom: 1.86px inset ;
-    border-image: linear-gradient(to right, #eeeeee13 0%,#58585813 20%, #58585813 80%,#eeeeee13 100%) 1;
+  border-radius: 1.8px;
+  margin-left: 5.8px;
+  margin-top: 0.58em;
+  margin-bottom: 0.58em;
+  padding-top: 0.31em;
+  padding-bottom: 0.31em;
+  border-bottom: 1.86px inset;
+  background-color: transparent;
+  transition-duration: .31s;
+  outline: 1.3px ridge transparent;
+  border-image: linear-gradient(
+      to right,
+      #eeeeee13 0%,
+      #58585813 20%,
+      #58585813 80%,
+      #eeeeee13 100%
+    )
+    1;
+}
+.fn__flex-1.fn__flex-column.file-tree.sy__file:hover ul.b3-list.b3-list--background {
+  margin-left: 5.8px;
+  margin-right: 13px;
+  outline: 1.3px ridge var(--b3-scroll-color);
+  background-color: var(--b3-theme-surface);
+  transition-duration: .31s;
+}
+/* .fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background .b3-list-item:hover:not(.b3-list-item--focus) {
+  background-color: transparent;
+}
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background .b3-list-item--focus:not(.dragover):not(.dragover__top):not(.dragover__bottom) {
+  background-color: transparent;
+} */
+
+/* 笔记本文字 */
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul > li .b3-list-item__text {
+  color: #12345678;
+  font-size: 13pt !important;
+  transition: color 0.2s cubic-bezier(0.47, 0, 0.75, 0.72);
+}
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background:has(ul) > li .b3-list-item__text {
+  color: var(--b3-theme-primary);
+}
+/* 文档文字 */
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul > ul > li .b3-list-item__text {
+  color: var(--SCColor);
+  font-size: 11pt !important;
+  font-weight: 186;
 }
 
-.fn__flex-1.fn__flex-column.file-tree.sy__file .b3-list-item__text {
-    color: var(--SCC-Brown-186);
-    font-size: 12pt;
-    font-weight: 520;
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul > ul > li {
+  line-height: 23px;
+  background-color: #ffffff11;
+}
+
+/* 已知缺陷：需要展开的列表过长时双击打开正常，点击 toggle 引发高度改变事件引发父容器滚动 */
+/* .fn__flex-1.fn__flex-column.file-tree.sy__file ul > ul {
+  max-height: 70vh;
+  overflow-y: scroll;
+  overscroll-behavior: none;
+} */
+
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background > li {
+  position: sticky;
+  top: 0px;
+  background-color: transparent;
+  z-index: 2; /* 高于子容器就可以了，太高会显示在弹出层上面 */
+  padding-bottom: 1px;
+  transition: padding-bottom 0.2s ease-out;
+}
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background:has(ul) > li {
+  background-color: var(--b3-theme-surface) !important;
+  padding-bottom: 10px !important;
+}
+
+/* 侧边栏引用计数 */
+/* .counter {
+  color: var(--SCC-Red-WPS);
+  background-color: var(--SCC-Purple-186-lightest);
+  border-radius: 13px;
+} */
+
+.counter {
+  color: #fff;
+  font-size: 10px;
+  height: 20px;
+  line-height: 20px;
+  background-color: #13440098;
+  border-radius: 5.8px;
+  border: 1.3px solid #f4f40099;
+  opacity: 0.8;
+}
+.b3-list-item .counter:hover {
+  color: #fff !important;
+  background-color: var(--SCC-Red-WPS) !important;
+}
+/* 文档内引用计数 */
+.protyle-attr--refcount {
+  right: 0px;
+  top: 0px;
+  position: absolute;
+  line-height: 16px;
+  padding: 0 4px;
+  margin-top: 0px;
+  margin-right: 0px;
+  color: var(--SCC-Red-WPS);
+  border-radius: 13px;
+  font-size: 12px;
+  user-select: none;
+  cursor: pointer;
+  height: 16px;
+  background-color: var(--SCC-Purple-186-lightest);
+}
+/* 反链面板左侧引用计数 */
+.block__icons .counter {
+  background-color: #335599ee;
+}
+
+.b3-list-item__arrow {
+  color: #12345678;
+  padding: 5px;
+  margin: 0 -5px 0 5px;
+  border-radius: 3px;
+}
+
+body:not(.android) .block__logo {
+  opacity: .98;
+}
+
+li[data-name="Untitled.sy"] > span.b3-list-item__text {
+  opacity: 0;
 }
