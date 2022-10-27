@@ -35,20 +35,27 @@
 }
 
 /* 按钮的样式 */
-.b3-button--outline {
+body:not(.android) .b3-button--outline {
   color: var(--SCC-White);
   background-color: var(--SCColor);
   box-shadow: rgba(254, 239, 234, 0.13) 0px 2px 1px,
     rgba(254, 239, 234, 0.13) 0px 4px 4px, rgba(254, 239, 234, 0.13) 0px 8px 4px,
     rgba(254, 239, 234, 0.13) 0px 6px 8px;
 }
-.b3-button--outline:focus,
-.b3-button--outline:hover {
-  color: var(--SCC-Purple-Soledar);
-  background-color: var(--b3-theme-primary-lightest);
+body:not(.android) .b3-button--outline:focus,
+body:not(.android) .b3-button--outline:hover {
+  color: var(--SCC-Component-button-text-color);
+  background-color: var(--SCC-Component-button-bg-color);
   box-shadow: rgba(254, 239, 234, 0.4) 0px 3px, rgba(0, 6, 85, 0.3) 0px 5px,
     rgba(72, 69, 80, 0.1) 0px 8px;
 }
+body.android .b3-button--outline {
+  color: var(--SCC-Component-button-text-color);
+  background-color: var(--SCC-Component-button-bg-color);
+  box-shadow: rgba(254, 239, 234, 0.4) 0px 3px, rgba(0, 6, 85, 0.3) 0px 5px,
+    rgba(72, 69, 80, 0.1) 0px 8px;
+}
+
 /* 输入框样式 */
 .b3-text-field,
 .pcr-app .pcr-interaction .pcr-result {

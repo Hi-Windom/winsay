@@ -4,6 +4,8 @@
     /* --- */
     --SCC-Component-selector-border: 1px solid var(--SCC-Blue-WPS-light);
     --SCC-Component-selector-bg-color: #eeeeeeee;
+    --SCC-Component-button-text-color: var(--SCC-Blue-WPS);
+    --SCC-Component-button-bg-color: var(--b3-theme-primary-lightest);
     /* 主色 */
     --b3-theme-primary: var(--SCC-Blue-WPS);
     --b3-theme-primary-light: var(--SCC-Blue-WPS-light);
