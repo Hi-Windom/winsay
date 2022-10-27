@@ -12,7 +12,7 @@ window.theme.colors = [
 window.theme.IDs = {
   STYLE_COLOR: 'custom-id-style-theme-color',
   BUTTON_TOOLBAR_CHANGE_COLOR: 'custom-id-button-toolbar-change-color',
-  LOCAL_STORAGE_COLOR_HREF:'pink-room-color-href',
+  LOCAL_STORAGE_COLOR_HREF:'winsay-color-href',
 };
 
 /* 循环迭代器 */
@@ -147,6 +147,8 @@ window.theme.loadScript(window.theme.addURLParam("/appearance/themes/Sofill-/scr
   }
 }
 
+// 安卓手机：android + mobile
+// 安卓平板：android + desktop
 /**
  * 获取操作系统 'windows' 或 'darwin' (MacOS) 或 'android'
  */
@@ -350,11 +352,83 @@ function createLine(TitleElement) {
 function getTileTxt(TitleElement) { return TitleElement.innerText; }
 /**------------------为文档标题创建动态下划线---------------------------结束 */
 
-/* 实验性功能 */
+/* ------------ 形态切换（实验性功能）---------------------- */
+
+function createSofillToolbar() {
+  var siYuanToolbar = document.getElementById("toolbar");
+  var SofillToolbar = document.getElementById("SofillToolbar");
+  var windowControls = document.getElementById("windowControls");
+
+  if (SofillToolbar) siYuanToolbar.removeChild(SofillToolbar);
+  SofillToolbar = insertCreateBefore(windowControls, "div", "SofillToolbar");
+  SofillToolbar.style.marginRight = "3px";
+  SofillToolbar.style.marginTop = "1px";
+  SofillToolbar.style.marginLeft = "10px";
+}
+
+/**
+ * 向指定元素前创建插入一个元素，可选添加ID
+ * @param {*} targetElement 目标元素
+ * @param {*} addElementTxt 要创建添加的元素标签
+ * @param {*} setId 为创建元素设置ID
+ */
+ function insertCreateBefore(targetElement, addElementTxt, setId = null) {
+
+  if (!targetElement) console.error("指定元素对象不存在！");
+  if (!addElementTxt) console.error("未指定字符串！");
+
+  var element = document.createElement(addElementTxt);
+
+  if (setId) element.id = setId;
+
+  targetElement.parentElement.insertBefore(element, targetElement);
+
+  return element;
+}
+
+function AndroidChangeColor() {
+  var SofillToolbar = document.getElementById("SofillToolbar");
+  if (SofillToolbar == null) {
+      var toolbarEdit = document.getElementById("toolbarEdit");
+      var windowControls = document.getElementById("windowControls");
+      if (toolbarEdit == null && windowControls != null) {
+          SofillToolbar = document.createElement("div");
+          SofillToolbar.id = "SofillToolbar";
+          SofillToolbar.style.marginRight = "3px";
+          SofillToolbar.style.marginTop = "1px";
+          SofillToolbar.style.marginLeft = "10px";
+          windowControls.parentElement.insertBefore(SofillToolbar, windowControls);
+      } else if (toolbarEdit != null) {
+          SofillToolbar = insertCreateBefore(toolbarEdit, "div", "SofillToolbar");
+          SofillToolbar.style.position = "relative";
+          SofillToolbar.style.height = "25px";
+          SofillToolbar.style.overflowY = "scroll";
+          SofillToolbar.style.paddingTop = "7px";
+          SofillToolbar.style.marginRight = "9px";
+          SofillToolbar.style.marginLeft = "10px";
+      }
+  }
+  const addButton = addinsertCreateElement(SofillToolbar, "div");
+  addButton.id = window.theme.IDs.BUTTON_TOOLBAR_CHANGE_COLOR;
+  addButton.style.width = "17px";
+  addButton.style.height = "100%";
+  addButton.style.float = "left";
+  addButton.style.marginLeft = "10px";
+  addButton.style.backgroundImage = "url(/appearance/themes/Sofill-/src/S2.svg)";
+  addButton.style.backgroundRepeat = "no-repeat";
+  addButton.style.backgroundPosition = "left top";
+  addButton.style.backgroundSize = "100%";
+  addButton.addEventListener('click', e => {
+      color_href = window.theme.iter.next().value;
+      localStorage.setItem(window.theme.IDs.LOCAL_STORAGE_COLOR_HREF, color_href);
+      window.theme.updateStyle(window.theme.IDs.STYLE_COLOR, color_href);
+  });
+}
+
 setTimeout(() => {
   const drag = document.getElementById('drag'); // 标题栏
   const themeStyle = document.getElementById('themeStyle'); // 当前主题引用路径
-  if (drag && themeStyle) {
+  if (themeStyle) {
       const THEME_ROOT = new URL(themeStyle.href).pathname.replace('theme.css', ''); // 当前主题根目录
       /* 通过颜色配置文件列表生成完整 URL 路径 */
       const colors_href = [];
@@ -384,10 +458,14 @@ setTimeout(() => {
           localStorage.setItem(window.theme.IDs.LOCAL_STORAGE_COLOR_HREF, color_href);
           window.theme.updateStyle(window.theme.IDs.STYLE_COLOR, color_href);
       });
-      // REF [JS DOM 编程复习笔记 -- insertAdjacentHTML（九） - 知乎](https://zhuanlan.zhihu.com/p/425616377)
-      drag.insertAdjacentElement('afterend', button_change_color);
-      drag.insertAdjacentHTML('afterend', `<div class="protyle-toolbar__divider"></div>`);
-
+  if (window.theme.OS=='android' && window.theme.clientMode=='body--mobile') {
+    AndroidChangeColor();
+    createSofillToolbar();
+  } else {
+    drag.insertAdjacentElement('afterend', button_change_color);
+    // REF [JS DOM 编程复习笔记 -- insertAdjacentHTML（九） - 知乎](https://zhuanlan.zhihu.com/p/425616377)
+    // drag.insertAdjacentHTML('afterend', `<div class="protyle-toolbar__divider"></div>`);
+  }
   }
 }, 0);
 
