@@ -2,6 +2,8 @@
     /* 块引用波浪线动画图标 | The icon of wavy line animation */
     --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/icon/wavy-line.svg);
     /* --- */
+    --SCC-Component-selector-border: 1px solid var(--SCC-Pink-Firole-light);
+    --SCC-Component-selector-bg-color: #feeeeeee;
     /* 主色 */
     --b3-theme-primary: var(--SCC-Pink-Firole);
     --b3-theme-primary-light: var(--SCC-Pink-Firole-light);
