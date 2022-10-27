@@ -3,8 +3,8 @@
 .code-block {
   border-radius: 7px !important;
   background-color: transparent !important;
-  border: 0.1em solid var(--b3-border-color) !important;
   margin-left: 4px !important;
+  padding-top: 32px !important;
 }
 /* 代码块主体部分设置 */
 .protyle-reset .hljs,
@@ -34,13 +34,6 @@
   position: relative;
 }
 
-/* 代码块上方部分设置 */
-.code-block {
-  position: relative;
-  display: block;
-  border-radius: 1px;
-  padding-top: 32px !important;
-}
 
 .protyle-linenumber__rows span::before {
   color: rgba(128, 128, 128, 0.5);
