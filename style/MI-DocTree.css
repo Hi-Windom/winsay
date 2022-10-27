@@ -70,7 +70,7 @@
   position: sticky;
   top: 0px;
   background-color: transparent;
-  z-index: 99;
+  z-index: 2; /* 高于子容器就可以了，太高会显示在弹出层上面 */
   padding-bottom: 1px;
   transition: padding-bottom 0.2s ease-out;
 }
