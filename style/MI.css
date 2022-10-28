@@ -173,8 +173,10 @@ body.android .protyle-breadcrumb > button svg {
 #barDock:hover svg {
   opacity: 1;
 }
+
+body.body--mobile #status,
 .status__msg {
-  opacity: 0.3;
+  opacity: 0;
 }
 .status__msg:hover {
   opacity: 0.9;
