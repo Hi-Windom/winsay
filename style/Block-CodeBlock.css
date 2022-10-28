@@ -167,3 +167,18 @@ code.hljs {
     margin-left: 1.3em;
   }
 }
+
+/* 代码块语言选择弹出层分列显示 #175 */
+.b3-list.fn__flex-1.b3-list--background:not(ul.b3-list.b3-list--background.fn__flex-1, div#globalSearchList) {
+  column-count: 3;
+  column-gap: 3px;
+  column-rule: 1px solid var(--SCC-Cyan-186-lighter) !important;
+  font-size: 90%;
+  opacity: .8;
+}
+.b3-list.fn__flex-1.b3-list--background:not(ul.b3-list.b3-list--background.fn__flex-1, div#globalSearchList) > div {
+  border-bottom: 1px solid;
+}
+.b3-list.fn__flex-1.b3-list--background:not(ul.b3-list.b3-list--background.fn__flex-1, div#globalSearchList) > div:hover {
+  color: var(--b3-theme-primary);
+}
