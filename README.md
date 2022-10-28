@@ -40,10 +40,6 @@ Sofill- 一直致力于“第二默认主题”，0.52 版本上架前，已完�
 
 ## 😍 主题特色介绍
 
-<p><img src="https://user-images.githubusercontent.com/83791825/196950046-492cf9ee-14b3-4ba0-995d-2e2323acb9e4.png"/></p>
-
-（图片已过时）
-
 ### 轻量化简洁风绛亽特色思源笔记主题
 
 外观部分重写部分样式，依据绛亽有关标准和约定俗成。原则上不添加额外功能，功能强大的 Sofill= 和 Sofill+ 主题 Coming Soon ...
@@ -81,7 +77,7 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 > 2022-10-27 released
 
 <p><a href="https://github.com/Hi-Windom/winsay/issues/133">
-<img src="https://img.shields.io/badge/SiYuan-2.4.6-green"/></a>
+<img src="https://img.shields.io/badge/SiYuan-2.4.7-green"/></a>
 <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow"/></p></p>
 
 引入特性：
