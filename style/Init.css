@@ -14,9 +14,14 @@ body.body--win32 {
   outline: 0;
 }
 
+html,body,
+.fn__flex-1,
+.layout__wnd--active {
+  overflow-x: hidden;
+}
+
 /* https://www.zhangxinxu.com/wordpress/2018/10/scroll-behavior-scrollintoview-%e5%b9%b3%e6%bb%91%e6%bb%9a%e5%8a%a8/# */
-html,
-body,
+
 ul {
   scroll-behavior: smooth;
 }
@@ -43,6 +48,7 @@ ul * {
 #layouts > div.fn__flex.fn__flex-1,
 #layouts > div.fn__flex.fn__flex-1 > div.layout__center.fn__flex.fn__flex-1 {
   transition: all 0s !important;
+  transition-delay: .58s !important;
 }
 /* 设置段落两端对齐 */
 .protyle-content .p:not(.list .p) {
