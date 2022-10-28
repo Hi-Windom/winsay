@@ -184,9 +184,6 @@
     > .fn__flex-column {
     animation: flex-column-y-longer 0.35s cubic-bezier(0.37, -0.02, 0.54, 1.09);
     animation-delay: 0.1s;
-    /* 可能对解决动画动效抖动抽搐有帮助 */
-    -webkit-transform: translate3D(0);
-    transform: translate3D(0);
   }
 }
 @media screen and (min-width: 960px) and (max-width: 1300px) {
@@ -199,9 +196,6 @@
     > .fn__flex-column {
     animation: flex-column-y-long 0.35s cubic-bezier(0.37, -0.02, 0.54, 1.09);
     animation-delay: 0.1s;
-    /* 可能对解决动画动效抖动抽搐有帮助 */
-    -webkit-transform: translate3D(0);
-    transform: translate3D(0);
   }
 }
 @media screen and (max-width: 960px) {

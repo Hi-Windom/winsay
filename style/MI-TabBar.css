@@ -269,17 +269,21 @@ li.item.item--pin.item--focus:after {
   overflow-y: scroll !important;
   因共用ID，启用会造成样式污染
 } */
-#commonMenu > .b3-menu__item--custom {
+#commonMenu:has(button):not(:has(button.b3-menu__item--readonly)) {
+  overflow-y: scroll;
+  max-height: min(88vh,1000px);
+  max-width: min(88vw,600px);
+}
+#commonMenu:has(button):not(:has(button.b3-menu__item--readonly)) > .b3-menu__item--custom {
   border-top: 1px solid #c2c2c231 !important;
   animation: background-color-2 3.1s infinite alternate;
   animation: letter-spacing-more-list-1 0.26s alternate;
   transition-duration: 0.2s;
   letter-spacing: .31px;
 }
-#commonMenu .b3-menu__item--custom .b3-menu__label {
+#commonMenu:has(button):not(:has(button.b3-menu__item--readonly)) .b3-menu__item--custom .b3-menu__label {
   margin-right: 5.8px !important;
   padding-left: 5.8px !important;
-  max-width: 800px !important;
   word-break: break-all !important;
   -webkit-line-clamp: 1 !important;
   text-overflow: ellipsis !important;
