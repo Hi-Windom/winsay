@@ -44,9 +44,6 @@
     mix-blend-mode: multiply;
 }
 
-.b3-typography div.hljs, .protyle-wysiwyg div.hljs {
-    background-color: #f8f9fa;
-}
 
 /* pdf导出界面有两部分，左边预览界面是#preview，右边设置界面是#action */
 #action {

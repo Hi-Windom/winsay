@@ -1,11 +1,24 @@
 /* 代码块样式 */
 
 .code-block {
-  border-radius: 7px !important;
-  background-color: transparent !important;
+  border-radius: 3px !important;
+  background-color: transparent;
   margin-left: 4px !important;
   padding-top: 32px !important;
 }
+
+body:not(.body--mobile) .b3-typography .code-block,
+body:not(.body--mobile) .protyle-wysiwyg .code-block {
+  position: relative;
+  padding-left: 13px;
+  margin-top: 0.58em;
+  margin-right: 31px;
+  margin-bottom: 1em;
+  background-color: #ffffffa5;
+  border-top: 5.8px ridge #58585858;
+  transition: all 0.58s ease;
+}
+
 /* 代码块主体部分设置 */
 .protyle-reset .hljs,
 .protyle-wysiwyg .hljs,
@@ -34,7 +47,6 @@
   position: relative;
 }
 
-
 .protyle-linenumber__rows span::before {
   color: rgba(128, 128, 128, 0.5);
 }
@@ -43,7 +55,7 @@
 .code-block .protyle-action .protyle-action__language {
   margin-top: 0px;
   position: absolute;
-  right: 6em;
+  left: 3px;
   border-radius: 1px;
   font-family: var(--b3-font-family-code);
 }
@@ -52,24 +64,94 @@
   content: "lang::";
   font-family: var(--b3-font-family-code);
   color: var(--SCC-primary-lighter);
+  top: 2px;
+  bottom: 1px;
 }
 
 .code-block .protyle-action .protyle-action__language::after {
-  content: "›";
+  content: "🎨";
   font-family: var(--b3-font-family-code);
   color: var(--SCColor);
   opacity: 0;
 }
 .code-block:hover .protyle-action .protyle-action__language::after {
-  content: "›";
-  font-family: var(--b3-font-family-code);
-  color: var(--SCColor);
   opacity: 1;
 }
 
 code.hljs {
   border: 1px solid var(--b3-border-color1);
 }
+
+
+@keyframes stripe-slide {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+
+body:not(.body--mobile) .b3-typography .code-block:hover,
+body:not(.body--mobile) .protyle-wysiwyg .code-block:hover {
+  background-color: #fff;
+  border-top: 5.8px ridge #58585831;
+  border-radius: 13px !important;
+}
+body:not(.body--mobile) .b3-typography .code-block:hover:after,
+body:not(.body--mobile) .protyle-wysiwyg .code-block:hover:after {
+  animation: stripe-slide 12s infinite linear forwards;
+}
+
+
+/* 代码块顶部添加风格元素 */
+body:not(.body--mobile) .code-block:after {
+  content: "</>";
+  color: var(--SCC-primary-lighter);
+  position: absolute;
+  top: 1px;
+}
+
+/* 代码块顶部添加风格元素 ，适配移动端*/
+body.body--mobile .code-block::after {
+  content: " ";
+  position: absolute;
+  background: #ff0000;
+  box-shadow: 13px 0 #0070c0, 26px 0 #ff3399, 39px 0 #912997;
+  border-radius: var(--b3-border-radius-round);
+  top: 10px;
+  left: 1px;
+  height: 3px;
+  width: 13px;
+  z-index: 1;
+}
+/* 代码块行号，适配移动端 */
+body.body--mobile .protyle-linenumber__rows {
+  padding: 22px 4px;
+  width: 1.3em;
+}
+body.body--mobile .protyle-linenumber {
+  margin-left: 1.3em;
+}
+
+/* 代码块语言选择弹出层分列显示 #175 */
+.b3-list.fn__flex-1.b3-list--background:not(ul.b3-list.b3-list--background.fn__flex-1, div#globalSearchList) {
+  column-count: 3;
+  column-gap: 3px;
+  column-rule: 1px solid var(--SCC-Cyan-186-lighter) !important;
+  font-size: 90%;
+  opacity: 0.8;
+}
+.b3-list.fn__flex-1.b3-list--background:not(ul.b3-list.b3-list--background.fn__flex-1, div#globalSearchList)
+  > div {
+  border-bottom: 1px solid;
+}
+.b3-list.fn__flex-1.b3-list--background:not(ul.b3-list.b3-list--background.fn__flex-1, div#globalSearchList)
+  > div:hover {
+  color: var(--b3-theme-primary);
+}
+
 
 /* 复制和设置按钮样式 */
 .code-block .protyle-action .protyle-icon,
@@ -110,75 +192,9 @@ code.hljs {
 }
 
 /* 折叠态提醒 */
-.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeCodeBlock"]:not(.li):not([data-type=NodeHeading]) {
+.protyle-wysiwyg
+  [data-node-id][fold="1"][data-type="NodeCodeBlock"]:not(.li):not([data-type="NodeHeading"]) {
   box-shadow: rgba(17, 17, 26, 0.1) 3px 13px 13px -3px;
   border-bottom: 3px solid #58585800;
-  transition-duration: .31s;
-}
-
-@media screen and (min-width: 960px) {
-  /* 代码块顶部添加风格元素 */
-  .code-block::after {
-    content: " ";
-    position: absolute;
-    background-color: red; /* 不支持线性的时候显示 */
-    background-image: linear-gradient(#ff0000, #0070c0, #ff3399, #912997);
-    top: 22px;
-    left: 1.3px;
-    bottom: 1px;
-    height: calc(100% - 23px);
-    width: 1.86px;
-    z-index: 1;
-    opacity: 0.13;
-  }
-  .b3-typography .code-block,
-  .protyle-wysiwyg .code-block {
-    position: relative;
-    padding-left: 13px;
-    margin-top: 0.58em;
-    margin-right: 31px;
-    margin-bottom: 1em;
-    margin-left: 13px;
-  }
-}
-@media screen and (max-width: 960px) {
-  /* 代码块顶部添加风格元素 ，适配移动端*/
-  body.body--desktop .code-block::after,
-  body.body--mobile .code-block::after {
-    content: " ";
-    position: absolute;
-    background: #ff0000;
-    box-shadow: 13px 0 #0070c0, 26px 0 #ff3399, 39px 0 #912997;
-    border-radius: var(--b3-border-radius-round);
-    top: 10px;
-    left: 1px;
-    height: 3px;
-    width: 13px;
-    z-index: 1;
-  }
-  /* 代码块行号，适配移动端 */
-  body.body--desktop .protyle-linenumber__rows
-  body.body--mobile .protyle-linenumber__rows {
-    padding: 22px 4px;
-    width: 1.3em;
-  }
-  body.body--desktop .protyle-linenumber
-  body.body--mobile .protyle-linenumber {
-    margin-left: 1.3em;
-  }
-}
-
-/* 代码块语言选择弹出层分列显示 #175 */
-.b3-list.fn__flex-1.b3-list--background:not(ul.b3-list.b3-list--background.fn__flex-1, div#globalSearchList) {
-  column-count: 3;
-  column-gap: 3px;
-  column-rule: 1px solid var(--SCC-Cyan-186-lighter) !important;
-  font-size: 90%;
-  opacity: .8;
-}
-.b3-list.fn__flex-1.b3-list--background:not(ul.b3-list.b3-list--background.fn__flex-1, div#globalSearchList) > div {
-  border-bottom: 1px solid;
-}
-.b3-list.fn__flex-1.b3-list--background:not(ul.b3-list.b3-list--background.fn__flex-1, div#globalSearchList) > div:hover {
-  color: var(--b3-theme-primary);
+  transition-duration: 0.31s;
 }
