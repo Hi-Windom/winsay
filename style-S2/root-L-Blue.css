@@ -1,7 +1,7 @@
 :root {
   /* --- */
   --SCC-Component-selector-border: 1px solid var(--SCC-Blue-WPS-light);
-  --SCC-Component-selector-bg-color: #eeeeeeee;
+  --SCC-Component-selector-bg-color: var(--SCC-baseComponent-selector-bg-color);
   --SCC-Component-button-text-color: var(--SCC-Blue-WPS);
   --SCC-Component-button-bg-color: var(--b3-theme-primary-lightest);
   /* 主色 */

@@ -1,4 +1,5 @@
 :root {
+  --SCC-baseComponent-selector-bg-color: #313233ee;
   --SCC-baseComponent-text-color-1: var(--SCC-CommonD-text-color-1);
   --SCC-baseComponent-text-color-2: var(--SCC-CommonD-text-color-2);
   /* 块引用波浪线动画图标 | The icon of wavy line animation */
@@ -110,4 +111,5 @@
 #commonMenu button {
   background-color: #28282813;
   backdrop-filter: blur(31px);
+  border-radius: 0px;
 }

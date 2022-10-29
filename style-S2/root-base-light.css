@@ -1,4 +1,5 @@
 :root {
+  --SCC-baseComponent-selector-bg-color: #eefeeeee;
   --SCC-baseComponent-text-color-1: var(--SCC-CommonL-text-color-1);
   --SCC-baseComponent-text-color-2: var(--SCC-CommonL-text-color-2);
   /* 块引用波浪线动画图标 | The icon of wavy line animation */
