@@ -40,7 +40,7 @@
 
 /* 笔记本文字 */
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul > li .b3-list-item__text {
-  color: #12345678;
+  color: var(--SCC-Gray);
   font-size: 13pt !important;
   transition: color 0.2s cubic-bezier(0.47, 0, 0.75, 0.72);
 }
@@ -123,7 +123,7 @@
 }
 
 .b3-list-item__arrow {
-  color: #12345678;
+  color: var(--SCC-Gray);
   padding: 5px;
   margin: 0 -5px 0 5px;
   border-radius: 3px;

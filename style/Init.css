@@ -107,6 +107,11 @@ textarea.b3-text-field.fn__flex-1 {
   --SCC-White-light: rgba(254, 239, 234, 0.58);
   --SCC-White-lighter: rgba(254, 239, 234, 0.31);
   --SCC-White-lightest: rgba(254, 239, 234, 0.13);
+  /* 绛亽灰 */
+  --SCC-Gray: #12345678;
+  --SCC-Gray-light: #12345678;
+  --SCC-Gray-lighter: #12345678;
+  --SCC-Gray-lightest: #12345678;
   /* 海文东蓝 */
   --SCC-Blue-Windom: #000655;
   --SCC-Blue-Windom-light: rgba(0, 6, 85, 0.58);
