@@ -10,6 +10,8 @@
   --SCC-baseComponent-Table-tr-bg-color-2: transparent;
   --SCC-baseComponent-Table-border-1:  0.25pt solid #58585858;
   --SCC-baseComponent-Icon-arrow-color-1: var(--SCC-White);
+  --SCC-baseComponent-EmbedBlock-bg-color: var(--SCC-Cyan-186-lighter);
+  --SCC-baseComponent-EmbedBlock-box-shadow: inset 9px 9px 29px #1d1e23a5, inset -9px -9px 29px #2e483735;
   /* 块引用波浪线动画图标 | The icon of wavy line animation */
   --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/icon/wavy-line.svg);
   /* 卡片背景 */
