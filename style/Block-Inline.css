@@ -113,3 +113,14 @@ span[data-type=code]::after {
     background: var(--custom-span-ref-animation-icon) repeat-x 0 58%;
     background-size: 16px auto;
   }
+
+  /* 虚拟引用样式 #184 */
+  .protyle-wysiwyg [data-node-id] span[data-type=virtual-block-ref] {
+    border-bottom: 1px dotted var(--SCC-Red-WPS-lighter);
+    transition: var(--b3-transition);
+}
+.protyle-wysiwyg [data-node-id] span[data-type=virtual-block-ref]:hover {
+    border-bottom: 1.86px ridge var(--b3-theme-primary);
+    background-color: #ffffffc5;
+    transition: var(--b3-transition);
+}
