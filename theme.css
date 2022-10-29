@@ -1,7 +1,9 @@
 
 @import url("style/Init.css");
 
-@import url("style/root.css");
+/* 支持暗黑模式，改为通过 theme.js 引入 */
+/* @import url("style-S2/root.css");
+@import url("style-S2/root-base-light.css"); */
 @import url("style/Animation.css");
 
 /* 为兼容旧版本，改为通过 theme.js 引入 */

@@ -4,6 +4,6 @@
   "url": "https://github.com/Soltus/winsay",
   "version": "0.54",
   "modes": [
-    "light"
+    "light","dark"
   ]
 }
