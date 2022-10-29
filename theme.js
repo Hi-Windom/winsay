@@ -1,7 +1,46 @@
 window.theme = {};
 
+window.theme.themeStyle = document.getElementById("themeStyle"); // 当前主题引用路径
+window.theme.THEME_ROOT = new URL(
+  window.theme.themeStyle.href
+).pathname.replace("theme.css", "");
+
 window.theme.ID_COLOR_STYLE = "theme-color-style";
-window.theme.ID_CUSTOM_STYLE = "custom-color-style";
+
+/* DOM 节点 ID */
+window.theme.IDs = {
+  STYLE_COLOR: "custom-id-style-theme-color",
+  BUTTON_TOOLBAR_CHANGE_COLOR: "custom-id-button-toolbar-change-color",
+  LOCAL_STORAGE_COLOR_HREF: "winsay-color-href",
+};
+
+window.theme.colors = [
+  "style-S2/root.css",
+  "style-S2/root-L-Blue.css",
+  "style-S2/root-L-Pink.css",
+  "style-S2/root-L-Green.css",
+];
+
+window.theme.colors2 = [
+  "style-S2/root-D-Ink.css",
+  "style-S2/root-D-Red.css",
+  "style-S2/root-D-Orange.css",
+  "style-S2/root-D-Green.css",
+];
+
+/* 循环迭代器 */
+window.theme.Iterator = function* (items) {
+  // REF [ES6中的迭代器(Iterator)和生成器(Generator) - 小火柴的蓝色理想 - 博客园](https://www.cnblogs.com/xiaohuochai/p/7253466.html)
+  for (let i = 0; true; i = (i + 1) % items.length) {
+    yield items[i];
+  }
+};
+window.theme.Iterator2 = function* (items) {
+  // REF [ES6中的迭代器(Iterator)和生成器(Generator) - 小火柴的蓝色理想 - 博客园](https://www.cnblogs.com/xiaohuochai/p/7253466.html)
+  for (let i = 0; true; i = (i + 1) % items.length) {
+    yield items[i];
+  }
+};
 
 /**
  * 静态资源请求 URL 添加参数
@@ -101,6 +140,21 @@ window.theme.updateStyle = function (id, href) {
     window.theme.loadStyle(href, id);
   }
 };
+function removejscssfile(filename, filetype) {
+  var targetelement =
+    filetype == "js" ? "script" : filetype == "css" ? "link" : "none";
+  var targetattr =
+    filetype == "js" ? "src" : filetype == "css" ? "href" : "none";
+  var allsuspects = document.getElementsByTagName(targetelement);
+  for (var i = allsuspects.length; i >= 0; i--) {
+    if (
+      allsuspects[i] &&
+      allsuspects[i].getAttribute(targetattr) != null &&
+      allsuspects[i].getAttribute(targetattr).indexOf(filename) != -1
+    )
+      allsuspects[i].parentNode.removeChild(allsuspects[i]);
+  }
+}
 
 /**
  * 获取主题模式
@@ -117,66 +171,6 @@ window.theme.themeMode = (() => {
       return null;
   }
 })();
-
-/**
- * 更换主题模式
- * @params {string} lightStyle 浅色主题配置文件路径
- * @params {string} darkStyle 深色主题配置文件路径
- * @params {string} customLightStyle 浅色主题自定义配置文件路径
- * @params {string} customDarkStyle 深色主题自定义配置文件路径
- */
-window.theme.changeThemeModeByApp = function (
-  lightStyle,
-  darkStyle
-) {
-  let href_color = null;
-  let href_custom = null;
-  switch (window.theme.themeMode) {
-    case "light":
-      href_color = lightStyle;
-      /* 实验性功能 */
-      window.theme.colors = [
-        "style-S2/root.css",
-        "style-S2/root-L-Blue.css",
-        "style-S2/root-L-Pink.css",
-        "style-S2/root-L-Green.css",
-      ];
-      break;
-    case "dark":
-    default:
-      href_color = darkStyle;
-      /* 实验性功能 */
-      window.theme.colors = [
-        "style-S2/root-D-Ink.css",
-        // "style-S2/root-D-Red.css",
-        // "style-S2/root-D-Orange.css",
-        // "style-S2/root-D-Green.css",
-      ];
-      break;
-  }
-  window.theme.updateStyle(window.theme.ID_COLOR_STYLE, href_color);
-};
-
-/* 根据当前主题模式加载样式配置文件 */
-window.theme.changeThemeModeByApp(
-  `/appearance/themes/Sofill-/style-S2/root-base-light.css`,
-  `/appearance/themes/Sofill-/style-S2/root-base-dark.css`
-);
-
-/* DOM 节点 ID */
-window.theme.IDs = {
-  STYLE_COLOR: "custom-id-style-theme-color",
-  BUTTON_TOOLBAR_CHANGE_COLOR: "custom-id-button-toolbar-change-color",
-  LOCAL_STORAGE_COLOR_HREF: "winsay-color-href",
-};
-
-/* 循环迭代器 */
-window.theme.Iterator = function* (items) {
-  // REF [ES6中的迭代器(Iterator)和生成器(Generator) - 小火柴的蓝色理想 - 博客园](https://www.cnblogs.com/xiaohuochai/p/7253466.html)
-  for (let i = 0; true; i = (i + 1) % items.length) {
-    yield items[i];
-  }
-};
 
 // 如果 version1 > version2 返回 1，如果 version1 < version2 返回 -1， 除此之外返回 0。
 function compareVersion(version1, version2) {
@@ -517,47 +511,66 @@ function AndroidChangeColor() {
   });
 }
 
-function changeStyleMod() {
-  /* 根据当前主题模式加载样式配置文件 */
-  window.theme.changeThemeModeByApp(
-    `/appearance/themes/Sofill-/style-S2/root-base-light.css`,
-    `/appearance/themes/Sofill-/style-S2/root-base-dark.css`,
-    `/appearance/themes/Sofill-/custom.css`,
-    `/appearance/themes/Sofill-/custom.css`
-  );
-  const drag = document.getElementById("drag"); // 标题栏
-  const themeStyle = document.getElementById("themeStyle"); // 当前主题引用路径
-  if (themeStyle) {
-    const THEME_ROOT = new URL(themeStyle.href).pathname.replace(
-      "theme.css",
-      ""
-    ); // 当前主题根目录
-    /* 通过颜色配置文件列表生成完整 URL 路径 */
-    const colors_href = [];
-    window.theme.colors.forEach((color) =>
-      colors_href.push(`${THEME_ROOT}${color}`)
-    );
-    window.theme.iter = window.theme.Iterator(colors_href);
-    var color_href = localStorage.getItem(
-      window.theme.IDs.LOCAL_STORAGE_COLOR_HREF
-    );
-    if (color_href) {
-      // 将迭代器调整为当前配色
-      for (let i = 0; i < window.theme.colors.length; ++i) {
-        if (window.theme.iter.next().value === color_href) break;
-      }
-    } else {
-      // 迭代器第一个为当前配色
-      color_href = window.theme.iter.next().value;
-      localStorage.setItem(
-        window.theme.IDs.LOCAL_STORAGE_COLOR_HREF,
-        color_href
+function iterChangeColor() {
+  /* 通过颜色配置文件列表生成完整 URL 路径 */
+  const colors_href = [];
+  switch (window.theme.themeMode) {
+    case "light":
+      colorList = window.theme.colors;
+      colorList.forEach((color) =>
+        colors_href.push(`${window.theme.THEME_ROOT}${color}`)
       );
-    }
+      window.theme.iter = window.theme.Iterator(colors_href);
+      var color_href = localStorage.getItem(
+        window.theme.IDs.LOCAL_STORAGE_COLOR_HREF
+      );
+      if (color_href) {
+        // 将迭代器调整为当前配色
+        for (let i = 0; i < colorList.length; ++i) {
+          if (window.theme.iter.next().value === color_href) break;
+        }
+      } else {
+        // 迭代器第一个为当前配色
+        color_href = window.theme.iter.next().value;
+        localStorage.setItem(
+          window.theme.IDs.LOCAL_STORAGE_COLOR_HREF,
+          color_href
+        );
+      }
+      break;
+    case "dark":
+    default:
+      colorList = window.theme.colors2;
+      colorList.forEach((color) =>
+        colors_href.push(`${window.theme.THEME_ROOT}${color}`)
+      );
+      window.theme.iter = window.theme.Iterator2(colors_href);
+      var color_href = localStorage.getItem(
+        window.theme.IDs.LOCAL_STORAGE_COLOR_HREF
+      );
+      if (color_href) {
+        // 将迭代器调整为当前配色
+        for (let i = 0; i < colorList.length; ++i) {
+          if (window.theme.iter.next().value === color_href) break;
+        }
+      } else {
+        // 迭代器第一个为当前配色
+        color_href = window.theme.iter.next().value;
+        localStorage.setItem(
+          window.theme.IDs.LOCAL_STORAGE_COLOR_HREF,
+          color_href
+        );
+      }
+      break;
+  }
 
-    /* 加载配色文件 */
-    window.theme.updateStyle(window.theme.IDs.STYLE_COLOR, color_href);
-
+  /* 加载配色文件 */
+  window.theme.updateStyle(window.theme.IDs.STYLE_COLOR, color_href);
+}
+function DesktopChangeColor() {
+  const drag = document.getElementById("drag"); // 标题栏
+  if (window.theme.themeStyle) {
+    iterChangeColor();
     const button_change_color = document.createElement("button"); // 切换主题颜色按钮
     button_change_color.id = window.theme.IDs.BUTTON_TOOLBAR_CHANGE_COLOR;
     button_change_color.className = "toolbar__item b3-tooltips b3-tooltips__sw";
@@ -572,19 +585,58 @@ function changeStyleMod() {
       window.theme.updateStyle(window.theme.IDs.STYLE_COLOR, color_href);
     });
     if (
-      window.theme.OS == "android" &&
-      window.theme.clientMode == "body--mobile"
+      document.getElementById(window.theme.IDs.BUTTON_TOOLBAR_CHANGE_COLOR) ==
+      null
     ) {
-      AndroidChangeColor();
-      createSofillToolbar();
-    } else {
       drag.insertAdjacentElement("afterend", button_change_color);
-      // REF [JS DOM 编程复习笔记 -- insertAdjacentHTML（九） - 知乎](https://zhuanlan.zhihu.com/p/425616377)
-      // drag.insertAdjacentHTML('afterend', `<div class="protyle-toolbar__divider"></div>`);
     }
   }
 }
 
+function changeStyleMod() {
+  if (isPhone()) {
+    AndroidChangeColor();
+    createSofillToolbar();
+  } else {
+    DesktopChangeColor();
+    // REF [JS DOM 编程复习笔记 -- insertAdjacentHTML（九） - 知乎](https://zhuanlan.zhihu.com/p/425616377)
+    // drag.insertAdjacentHTML('afterend', `<div class="protyle-toolbar__divider"></div>`);
+  }
+}
+
+/**
+ * 更换主题模式
+ * @params {string} lightStyle 浅色主题配置文件路径
+ * @params {string} darkStyle 深色主题配置文件路径
+ * @params {string} customLightStyle 浅色主题自定义配置文件路径
+ * @params {string} customDarkStyle 深色主题自定义配置文件路径
+ */
+
+function changeThemeModeByApp() {
+  let href_color = null;
+  switch (window.theme.themeMode) {
+    case "light":
+      href_color = `/appearance/themes/Sofill-/style-S2/root-base-light.css`;
+      /* 实验性功能 */
+      window.theme.colors2.forEach((color) =>
+        removejscssfile(`${window.theme.THEME_ROOT}${color}`, "css")
+      );
+      break;
+    case "dark":
+    default:
+      href_color = `/appearance/themes/Sofill-/style-S2/root-base-dark.css`;
+      /* 实验性功能 */
+      window.theme.colors.forEach((color) =>
+        removejscssfile(`${window.theme.THEME_ROOT}${color}`, "css")
+      );
+      break;
+  }
+  window.theme.updateStyle(window.theme.ID_COLOR_STYLE, href_color);
+  localStorage.removeItem(window.theme.IDs.LOCAL_STORAGE_COLOR_HREF);
+  changeStyleMod();
+}
+/* 支持暗黑模式 */
+changeThemeModeByApp();
 setTimeout(() => {
   changeStyleMod();
 }, 0);

@@ -180,3 +180,4 @@ Sofill 系列主题的诞生与成长离不开下列开源项目的贡献，以�
 * [pink-room](https://github.com/StarDustSheep/pink-room)
 * [notion-theme](https://github.com/royc01/notion-theme)
 * [blue-dog](https://github.com/UserZYF/blue-dog)
+* mini-vlook
