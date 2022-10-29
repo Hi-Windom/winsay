@@ -1,0 +1,7 @@
+li[data-treetype="tag"] {
+  color: var(--b3-theme-primary);
+}
+
+li[data-treetype="tag"] .b3-list-item__text {
+  color: var(--SCC-baseComponent-text-color-2);
+}

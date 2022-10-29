@@ -14,7 +14,7 @@ body:not(.body--mobile) .protyle-wysiwyg .code-block {
   margin-top: 0.58em;
   margin-right: 31px;
   margin-bottom: 1em;
-  background-color: #ffffffa5;
+  background-color: var(--SCC-baseComponent-CodeBlock-bg-color);
   border-top: 5.8px ridge #58585858;
   transition: all 0.58s ease;
 }
@@ -63,7 +63,7 @@ body:not(.body--mobile) .protyle-wysiwyg .code-block {
 .code-block .protyle-action .protyle-action__language::before {
   content: "lang::";
   font-family: var(--b3-font-family-code);
-  color: var(--SCC-primary-lighter);
+  color: var(--SCC-baseComponent-CodeBlock-ab-color);
   top: 2px;
   bottom: 1px;
 }
@@ -95,7 +95,7 @@ code.hljs {
 
 body:not(.body--mobile) .b3-typography .code-block:hover,
 body:not(.body--mobile) .protyle-wysiwyg .code-block:hover {
-  background-color: #fff;
+  background-color: var(--SCC-baseComponent-CodeBlock-bg-color-hover);
   border-top: 5.8px ridge #58585831;
   border-radius: 13px !important;
 }
@@ -108,7 +108,7 @@ body:not(.body--mobile) .protyle-wysiwyg .code-block:hover:after {
 /* 代码块顶部添加风格元素 */
 body:not(.body--mobile) .code-block:after {
   content: "</>";
-  color: var(--SCC-primary-lighter);
+  color: var(--SCC-baseComponent-CodeBlock-ab-color);
   position: absolute;
   top: 1px;
 }

@@ -1,174 +1,239 @@
 window.theme = {};
 
-/* 实验性功能 */
-window.theme.colors = [
-  'root.css',
-  'style-S2/root-Blue.css',
-  'style-S2/root-Pink.css',
-  'style-S2/root-Green.css',
-];
+window.theme.themeStyle = document.getElementById("themeStyle"); // 当前主题引用路径
+window.theme.THEME_ROOT = new URL(
+  window.theme.themeStyle.href
+).pathname.replace("theme.css", "");
+
+window.theme.ID_COLOR_STYLE = "theme-color-style";
 
 /* DOM 节点 ID */
 window.theme.IDs = {
-  STYLE_COLOR: 'custom-id-style-theme-color',
-  BUTTON_TOOLBAR_CHANGE_COLOR: 'custom-id-button-toolbar-change-color',
-  LOCAL_STORAGE_COLOR_HREF:'winsay-color-href',
+  STYLE_COLOR: "custom-id-style-theme-color",
+  BUTTON_TOOLBAR_CHANGE_COLOR: "custom-id-button-toolbar-change-color",
+  LOCAL_STORAGE_COLOR_HREF: "winsay-color-href",
 };
+
+window.theme.colors = [
+  "style-S2/root.css",
+  "style-S2/root-L-Blue.css",
+  "style-S2/root-L-Pink.css",
+  "style-S2/root-L-Green.css",
+];
+
+window.theme.colors2 = [
+  "style-S2/root-D-Ink.css",
+  // "style-S2/root-D-Red.css",
+  // "style-S2/root-D-Orange.css",
+  // "style-S2/root-D-Green.css",
+];
 
 /* 循环迭代器 */
 window.theme.Iterator = function* (items) {
   // REF [ES6中的迭代器(Iterator)和生成器(Generator) - 小火柴的蓝色理想 - 博客园](https://www.cnblogs.com/xiaohuochai/p/7253466.html)
   for (let i = 0; true; i = (i + 1) % items.length) {
-      yield items[i];
+    yield items[i];
   }
-}
-
-// 如果 version1 > version2 返回 1，如果 version1 < version2 返回 -1， 除此之外返回 0。
-function compareVersion(version1, version2) {
-  const arr1 = version1.split('.')
-  const arr2 = version2.split('.')
-  const length1 = arr1.length
-  const length2 = arr2.length
-  const minlength = Math.min(length1, length2)
-  let i = 0
-  for (i ; i < minlength; i++) {
-    let a = parseInt(arr1[i])
-    let b = parseInt(arr2[i])
-    if (a > b) {
-      return 1
-    } else if (a < b) {
-      return -1
-    }
+};
+window.theme.Iterator2 = function* (items) {
+  // REF [ES6中的迭代器(Iterator)和生成器(Generator) - 小火柴的蓝色理想 - 博客园](https://www.cnblogs.com/xiaohuochai/p/7253466.html)
+  for (let i = 0; true; i = (i + 1) % items.length) {
+    yield items[i];
   }
-  if (length1 > length2) {
-    for(let j = i; j < length1; j++) {
-      if (parseInt(arr1[j]) != 0) {
-        return 1
-      }
-    }
-    return 0
-  } else if (length1 < length2) {
-    for(let j = i; j < length2; j++) {
-      if (parseInt(arr2[j]) != 0) {
-        return -1
-      }
-    }
-    return 0
-  }
-  return 0
-}
+};
 
 /**
  * 静态资源请求 URL 添加参数
  * @params {string} url 资源请求 URL
  * @return {string} 返回添加参数后的 URL
  */
- window.theme.addURLParam = function (
+window.theme.addURLParam = function (
   url,
   param = {
-      // t: Date.now().toString(),
-      v: window.siyuan.config.appearance.themeVer,
-  },
+    // t: Date.now().toString(),
+    v: window.siyuan.config.appearance.themeVer,
+  }
 ) {
   let new_url;
   switch (true) {
-      case url.startsWith('//'):
-          new_url = new URL(`https:${url}`);
-          break;
-      case url.startsWith('http://'):
-      case url.startsWith('https://'):
-          new_url = new URL(url);
-          break;
-      case url.startsWith('/'):
-          new_url = new URL(url, window.location.origin);
-          break;
-      default:
-          new_url = new URL(url, window.location.origin + window.location.pathname);
-          break;
+    case url.startsWith("//"):
+      new_url = new URL(`https:${url}`);
+      break;
+    case url.startsWith("http://"):
+    case url.startsWith("https://"):
+      new_url = new URL(url);
+      break;
+    case url.startsWith("/"):
+      new_url = new URL(url, window.location.origin);
+      break;
+    default:
+      new_url = new URL(url, window.location.origin + window.location.pathname);
+      break;
   }
   for (let [key, value] of Object.entries(param)) {
-      new_url.searchParams.set(key, value);
+    new_url.searchParams.set(key, value);
   }
   switch (true) {
-      case url.startsWith('//'):
-          return new_url.href.substring(new_url.protocol.length);
-      case url.startsWith('http://'):
-      case url.startsWith('https://'):
-          return new_url.href;
-      case url.startsWith('/'):
-          return new_url.href.substring(new_url.origin.length);
-      default:
-          return new_url.href.substring((window.location.origin + window.location.pathname).length);
+    case url.startsWith("//"):
+      return new_url.href.substring(new_url.protocol.length);
+    case url.startsWith("http://"):
+    case url.startsWith("https://"):
+      return new_url.href;
+    case url.startsWith("/"):
+      return new_url.href.substring(new_url.origin.length);
+    default:
+      return new_url.href.substring(
+        (window.location.origin + window.location.pathname).length
+      );
   }
-}
+};
 /**
  * 加载脚本文件
  * @params {string} url 脚本地址
  * @params {string} type 脚本类型
  */
- window.theme.loadScript = function (src, type = 'module', async = false, defer = false) {
-  const script = document.createElement('script');
+window.theme.loadScript = function (
+  src,
+  type = "module",
+  async = false,
+  defer = false
+) {
+  const script = document.createElement("script");
   if (type) script.type = type;
   if (async) script.async = true;
   if (defer) script.defer = true;
   script.src = src;
   document.head.appendChild(script);
-}
+};
 
-
-window.theme.loadScript(window.theme.addURLParam("/appearance/themes/Sofill-/script/ChangeFontSize.js"), undefined, true);
-
+window.theme.loadScript(
+  window.theme.addURLParam(
+    "/appearance/themes/Sofill-/script/ChangeFontSize.js"
+  ),
+  undefined,
+  true
+);
 
 /**
  * 加载样式文件
  * @params {string} href 样式地址
  * @params {string} id 样式 ID
  */
- window.theme.loadStyle = function (href, id = null) {
-  let style = document.createElement('link');
+window.theme.loadStyle = function (href, id = null) {
+  let style = document.createElement("link");
   if (id) style.id = id;
-  style.type = 'text/css';
-  style.rel = 'stylesheet';
+  style.type = "text/css";
+  style.rel = "stylesheet";
   style.href = href;
   document.head.appendChild(style);
-}
+};
 /**
  * 更新样式文件
  * @params {string} id 样式文件 ID
  * @params {string} href 样式文件地址
  */
- window.theme.updateStyle = function (id, href) {
+window.theme.updateStyle = function (id, href) {
   let style = document.getElementById(id);
   if (style) {
-      style.setAttribute('href', href);
+    style.setAttribute("href", href);
+  } else {
+    window.theme.loadStyle(href, id);
   }
-  else {
-      window.theme.loadStyle(href, id);
+};
+function removejscssfile(filename, filetype) {
+  var targetelement =
+    filetype == "js" ? "script" : filetype == "css" ? "link" : "none";
+  var targetattr =
+    filetype == "js" ? "src" : filetype == "css" ? "href" : "none";
+  var allsuspects = document.getElementsByTagName(targetelement);
+  for (var i = allsuspects.length; i >= 0; i--) {
+    if (
+      allsuspects[i] &&
+      allsuspects[i].getAttribute(targetattr) != null &&
+      allsuspects[i].getAttribute(targetattr).indexOf(filename) != -1
+    )
+      allsuspects[i].parentNode.removeChild(allsuspects[i]);
   }
 }
 
+/**
+ * 获取主题模式
+ * @return {string} light 或 dark
+ */
+window.theme.themeMode = (() => {
+  /* 根据配置选项判断主题 */
+  switch (window.siyuan.config.appearance.mode) {
+    case 0:
+      return "light";
+    case 1:
+      return "dark";
+    default:
+      return null;
+  }
+})();
+
+// 如果 version1 > version2 返回 1，如果 version1 < version2 返回 -1， 除此之外返回 0。
+function compareVersion(version1, version2) {
+  const arr1 = version1.split(".");
+  const arr2 = version2.split(".");
+  const length1 = arr1.length;
+  const length2 = arr2.length;
+  const minlength = Math.min(length1, length2);
+  let i = 0;
+  for (i; i < minlength; i++) {
+    let a = parseInt(arr1[i]);
+    let b = parseInt(arr2[i]);
+    if (a > b) {
+      return 1;
+    } else if (a < b) {
+      return -1;
+    }
+  }
+  if (length1 > length2) {
+    for (let j = i; j < length1; j++) {
+      if (parseInt(arr1[j]) != 0) {
+        return 1;
+      }
+    }
+    return 0;
+  } else if (length1 < length2) {
+    for (let j = i; j < length2; j++) {
+      if (parseInt(arr2[j]) != 0) {
+        return -1;
+      }
+    }
+    return 0;
+  }
+  return 0;
+}
+
+
+/**简单判断目前思源是否是手机模式（只能判断是手机） */
+function isPhone() {
+  return document.getElementById("toolbar") == null;
+}
 // 安卓手机：android + mobile
 // 安卓平板：android + desktop
 /**
  * 获取操作系统 'windows' 或 'darwin' (MacOS) 或 'android'
  */
- window.theme.OS = window.siyuan.config.system.os;
+window.theme.OS = window.siyuan.config.system.os;
 //  alert( window.theme.OS);
 /**
  * 获取客户端模式
  * @return {string} 'app' 或 'desktop' 或 'mobile'
  */
- window.theme.clientMode = (() => {
+window.theme.clientMode = (() => {
   let url = new URL(window.location.href);
   switch (true) {
-      case url.pathname.startsWith('/stage/build/app'):
-          return 'body--app';
-      case url.pathname.startsWith('/stage/build/desktop'):
-          return 'body--desktop';
-      case url.pathname.startsWith('/stage/build/mobile'):
-          return 'body--mobile';
-      default:
-          return null;
+    case url.pathname.startsWith("/stage/build/app"):
+      return "body--app";
+    case url.pathname.startsWith("/stage/build/desktop"):
+      return "body--desktop";
+    case url.pathname.startsWith("/stage/build/mobile"):
+      return "body--mobile";
+    default:
+      return null;
   }
 })();
 document.body.classList.add(window.theme.clientMode);
@@ -179,34 +244,49 @@ document.body.classList.add(window.theme.OS);
  * 获取思源版本号
  * @return {string} 思源版本号
  */
- window.theme.kernelVersion = window.siyuan.config.system.kernelVersion;
- window.theme.cv = compareVersion(window.theme.kernelVersion, "2.4.2");
- console.log(window.theme.cv);
+window.theme.kernelVersion = window.siyuan.config.system.kernelVersion;
+window.theme.cv = compareVersion(window.theme.kernelVersion, "2.4.2");
+console.log(window.theme.cv);
 
- window.theme.changeThemeMode = function () {
+window.theme.changeThemeModeByEnv = function () {
   /* 根据版本加载样式配置文件 */
   switch (window.theme.cv) {
-      case -1:
-        window.theme.updateStyle("MI", `/appearance/themes/Sofill-/style-old/MI.css`);
-        window.theme.updateStyle("TabBar", `/appearance/themes/Sofill-/style-old/MI-TabBar.css`);
-        break;
-      default:
-        window.theme.updateStyle("MI", `/appearance/themes/Sofill-/style/MI.css`);
-        window.theme.updateStyle("TabBar", `/appearance/themes/Sofill-/style/MI-TabBar.css`);
-        break;
+    case -1:
+      window.theme.updateStyle(
+        "MI",
+        `/appearance/themes/Sofill-/style-old/MI.css`
+      );
+      window.theme.updateStyle(
+        "TabBar",
+        `/appearance/themes/Sofill-/style-old/MI-TabBar.css`
+      );
+      break;
+    default:
+      window.theme.updateStyle("MI", `/appearance/themes/Sofill-/style/MI.css`);
+      window.theme.updateStyle(
+        "TabBar",
+        `/appearance/themes/Sofill-/style/MI-TabBar.css`
+      );
+      break;
   }
   /* 根据不同设备加载样式配置文件 */
   switch (window.theme.OS) {
-    case 'android':
+    case "android":
       break;
     default:
-      window.theme.updateStyle("MI-DocTree", `/appearance/themes/Sofill-/style/MI-DocTree.css`);
-      window.theme.updateStyle("MI-Breadcrumb", `/appearance/themes/Sofill-/style/MI-Breadcrumb.css`);
+      window.theme.updateStyle(
+        "MI-DocTree",
+        `/appearance/themes/Sofill-/style/MI-DocTree.css`
+      );
+      window.theme.updateStyle(
+        "MI-Breadcrumb",
+        `/appearance/themes/Sofill-/style/MI-Breadcrumb.css`
+      );
       break;
   }
-}
+};
 
-window.theme.changeThemeMode();
+window.theme.changeThemeModeByEnv();
 
 // 初始缩放比例
 let originPixelRatio = localStorage.devicePixelRatio;
@@ -313,7 +393,9 @@ function getDocumentTime(tilteElement) {
 /**------------------为打开文档的标题下显示文档创建日期-----------------结束 */
 
 /**------------------为文档标题创建动态下划线---------------------------开始 */
-function rundynamicUnderline() {setInterval(dynamicUnderline, 200);}
+function rundynamicUnderline() {
+  setInterval(dynamicUnderline, 200);
+}
 
 function dynamicUnderline() {
   var AllDocumentTitleElement = getAllDocumentTitleElement();
@@ -325,8 +407,12 @@ function dynamicUnderline() {
     var Style = getComputedStyle(element, null);
     var font = Style.font;
     var width = getTextWidth(txt, font) + 13;
-    if (width < 58) { width = 58; }//动态下划线最小宽度
-    if (width > maxWidth) { width = maxWidth; }//不超过一行
+    if (width < 58) {
+      width = 58;
+    } //动态下划线最小宽度
+    if (width > maxWidth) {
+      width = maxWidth;
+    } //不超过一行
     line.style.width = width + "px";
   }
 }
@@ -335,7 +421,9 @@ function createLine(TitleElement) {
   var item = TitleElement.parentElement.children;
   for (let index = 0; index < item.length; index++) {
     const element = item[index];
-    if (element.getAttribute("Line") != null) { return element; }
+    if (element.getAttribute("Line") != null) {
+      return element;
+    }
   }
   var line = insertCreateAfter(TitleElement, "div");
   line.setAttribute("Line", "true");
@@ -345,11 +433,14 @@ function createLine(TitleElement) {
   line.style.height = "1.3px";
   line.style.marginTop = "3.1px";
   line.style.marginBottom = "5.8px";
-  line.style.backgroundImage = "linear-gradient(to right, #ff0000, #0070c0, #ff3399, #912997)";//动态下划线颜色
+  line.style.backgroundImage =
+    "linear-gradient(to right, #ff0000, #0070c0, #ff3399, #912997)"; //动态下划线颜色
   return line;
 }
 
-function getTileTxt(TitleElement) { return TitleElement.innerText; }
+function getTileTxt(TitleElement) {
+  return TitleElement.innerText;
+}
 /**------------------为文档标题创建动态下划线---------------------------结束 */
 
 /* ------------ 形态切换（实验性功能）---------------------- */
@@ -372,8 +463,7 @@ function createSofillToolbar() {
  * @param {*} addElementTxt 要创建添加的元素标签
  * @param {*} setId 为创建元素设置ID
  */
- function insertCreateBefore(targetElement, addElementTxt, setId = null) {
-
+function insertCreateBefore(targetElement, addElementTxt, setId = null) {
   if (!targetElement) console.error("指定元素对象不存在！");
   if (!addElementTxt) console.error("未指定字符串！");
 
@@ -389,24 +479,24 @@ function createSofillToolbar() {
 function AndroidChangeColor() {
   var SofillToolbar = document.getElementById("SofillToolbar");
   if (SofillToolbar == null) {
-      var toolbarEdit = document.getElementById("toolbarEdit");
-      var windowControls = document.getElementById("windowControls");
-      if (toolbarEdit == null && windowControls != null) {
-          SofillToolbar = document.createElement("div");
-          SofillToolbar.id = "SofillToolbar";
-          SofillToolbar.style.marginRight = "3px";
-          SofillToolbar.style.marginTop = "1px";
-          SofillToolbar.style.marginLeft = "10px";
-          windowControls.parentElement.insertBefore(SofillToolbar, windowControls);
-      } else if (toolbarEdit != null) {
-          SofillToolbar = insertCreateBefore(toolbarEdit, "div", "SofillToolbar");
-          SofillToolbar.style.position = "relative";
-          SofillToolbar.style.height = "25px";
-          SofillToolbar.style.overflowY = "scroll";
-          SofillToolbar.style.paddingTop = "7px";
-          SofillToolbar.style.marginRight = "9px";
-          SofillToolbar.style.marginLeft = "10px";
-      }
+    var toolbarEdit = document.getElementById("toolbarEdit");
+    var windowControls = document.getElementById("windowControls");
+    if (toolbarEdit == null && windowControls != null) {
+      SofillToolbar = document.createElement("div");
+      SofillToolbar.id = "SofillToolbar";
+      SofillToolbar.style.marginRight = "3px";
+      SofillToolbar.style.marginTop = "1px";
+      SofillToolbar.style.marginLeft = "10px";
+      windowControls.parentElement.insertBefore(SofillToolbar, windowControls);
+    } else if (toolbarEdit != null) {
+      SofillToolbar = insertCreateBefore(toolbarEdit, "div", "SofillToolbar");
+      SofillToolbar.style.position = "relative";
+      SofillToolbar.style.height = "25px";
+      SofillToolbar.style.overflowY = "scroll";
+      SofillToolbar.style.paddingTop = "7px";
+      SofillToolbar.style.marginRight = "9px";
+      SofillToolbar.style.marginLeft = "10px";
+    }
   }
   const addButton = addinsertCreateElement(SofillToolbar, "div");
   addButton.id = window.theme.IDs.BUTTON_TOOLBAR_CHANGE_COLOR;
@@ -414,67 +504,151 @@ function AndroidChangeColor() {
   addButton.style.height = "100%";
   addButton.style.float = "left";
   addButton.style.marginLeft = "10px";
-  addButton.style.backgroundImage = "url(/appearance/themes/Sofill-/src/S2.svg)";
+  addButton.style.backgroundImage =
+    "url(/appearance/themes/Sofill-/src/S2.svg)";
   addButton.style.backgroundRepeat = "no-repeat";
   addButton.style.backgroundPosition = "left top";
   addButton.style.backgroundSize = "100%";
-  addButton.addEventListener('click', e => {
-      color_href = window.theme.iter.next().value;
-      localStorage.setItem(window.theme.IDs.LOCAL_STORAGE_COLOR_HREF, color_href);
-      window.theme.updateStyle(window.theme.IDs.STYLE_COLOR, color_href);
+  addButton.addEventListener("click", (e) => {
+    color_href = window.theme.iter.next().value;
+    localStorage.setItem(window.theme.IDs.LOCAL_STORAGE_COLOR_HREF, color_href);
+    window.theme.updateStyle(window.theme.IDs.STYLE_COLOR, color_href);
   });
 }
 
-setTimeout(() => {
-  const drag = document.getElementById('drag'); // 标题栏
-  const themeStyle = document.getElementById('themeStyle'); // 当前主题引用路径
-  if (themeStyle) {
-      const THEME_ROOT = new URL(themeStyle.href).pathname.replace('theme.css', ''); // 当前主题根目录
-      /* 通过颜色配置文件列表生成完整 URL 路径 */
-      const colors_href = [];
-      window.theme.colors.forEach(color => colors_href.push(`${THEME_ROOT}${color}`));
+function iterChangeColor() {
+  /* 通过颜色配置文件列表生成完整 URL 路径 */
+  const colors_href = [];
+  switch (window.theme.themeMode) {
+    case "light":
+      colorList = window.theme.colors;
+      colorList.forEach((color) =>
+        colors_href.push(`${window.theme.THEME_ROOT}${color}`)
+      );
       window.theme.iter = window.theme.Iterator(colors_href);
-      var color_href = localStorage.getItem(window.theme.IDs.LOCAL_STORAGE_COLOR_HREF);
-      if (color_href) { // 将迭代器调整为当前配色
-          for (let i = 0; i < window.theme.colors.length; ++i) {
-              if (window.theme.iter.next().value === color_href) break;
-          }
+      var color_href = localStorage.getItem(
+        window.theme.IDs.LOCAL_STORAGE_COLOR_HREF
+      );
+      if (color_href) {
+        // 将迭代器调整为当前配色
+        for (let i = 0; i < colorList.length; ++i) {
+          if (window.theme.iter.next().value === color_href) break;
+        }
+      } else {
+        // 迭代器第一个为当前配色
+        color_href = window.theme.iter.next().value;
+        localStorage.setItem(
+          window.theme.IDs.LOCAL_STORAGE_COLOR_HREF,
+          color_href
+        );
       }
-      else { // 迭代器第一个为当前配色
-          color_href = window.theme.iter.next().value;
-          localStorage.setItem(window.theme.IDs.LOCAL_STORAGE_COLOR_HREF, color_href);
+      break;
+    case "dark":
+    default:
+      colorList = window.theme.colors2;
+      colorList.forEach((color) =>
+        colors_href.push(`${window.theme.THEME_ROOT}${color}`)
+      );
+      window.theme.iter = window.theme.Iterator2(colors_href);
+      var color_href = localStorage.getItem(
+        window.theme.IDs.LOCAL_STORAGE_COLOR_HREF
+      );
+      if (color_href) {
+        // 将迭代器调整为当前配色
+        for (let i = 0; i < colorList.length; ++i) {
+          if (window.theme.iter.next().value === color_href) break;
+        }
+      } else {
+        // 迭代器第一个为当前配色
+        color_href = window.theme.iter.next().value;
+        localStorage.setItem(
+          window.theme.IDs.LOCAL_STORAGE_COLOR_HREF,
+          color_href
+        );
       }
+      break;
+  }
 
-      /* 加载配色文件 */
+  /* 加载配色文件 */
+  window.theme.updateStyle(window.theme.IDs.STYLE_COLOR, color_href);
+}
+function DesktopChangeColor() {
+  const drag = document.getElementById("drag"); // 标题栏
+  if (window.theme.themeStyle) {
+    const button_change_color = document.createElement("button"); // 切换主题颜色按钮
+    button_change_color.id = window.theme.IDs.BUTTON_TOOLBAR_CHANGE_COLOR;
+    button_change_color.className = "toolbar__item b3-tooltips b3-tooltips__sw";
+    button_change_color.ariaLabel = "形态切换（实验性）";
+    button_change_color.innerHTML = `<svg><use xlink:href="#iconTheme"></use></svg>`;
+    button_change_color.addEventListener("click", (e) => {
+      color_href = window.theme.iter.next().value;
+      localStorage.setItem(
+        window.theme.IDs.LOCAL_STORAGE_COLOR_HREF,
+        color_href
+      );
       window.theme.updateStyle(window.theme.IDs.STYLE_COLOR, color_href);
+    });
+    if (
+      document.getElementById(window.theme.IDs.BUTTON_TOOLBAR_CHANGE_COLOR) ==
+      null
+    ) {
+      drag.insertAdjacentElement("afterend", button_change_color);
+    }
+  }
+}
 
-      const button_change_color = document.createElement('button'); // 切换主题颜色按钮
-      button_change_color.id = window.theme.IDs.BUTTON_TOOLBAR_CHANGE_COLOR;
-      button_change_color.className = 'toolbar__item b3-tooltips b3-tooltips__sw';
-      button_change_color.ariaLabel = '形态切换（实验性）';
-      button_change_color.innerHTML = `<svg><use xlink:href="#iconTheme"></use></svg>`;
-      button_change_color.addEventListener('click', e => {
-          color_href = window.theme.iter.next().value;
-          localStorage.setItem(window.theme.IDs.LOCAL_STORAGE_COLOR_HREF, color_href);
-          window.theme.updateStyle(window.theme.IDs.STYLE_COLOR, color_href);
-      });
-  if (window.theme.OS=='android' && window.theme.clientMode=='body--mobile') {
+function changeStyleMod() {
+  iterChangeColor();
+  if (isPhone()) {
+    alert('sj');
     AndroidChangeColor();
     createSofillToolbar();
   } else {
-    drag.insertAdjacentElement('afterend', button_change_color);
+    DesktopChangeColor();
     // REF [JS DOM 编程复习笔记 -- insertAdjacentHTML（九） - 知乎](https://zhuanlan.zhihu.com/p/425616377)
     // drag.insertAdjacentHTML('afterend', `<div class="protyle-toolbar__divider"></div>`);
   }
+}
+
+/**
+ * 更换主题模式
+ * @params {string} lightStyle 浅色主题配置文件路径
+ * @params {string} darkStyle 深色主题配置文件路径
+ * @params {string} customLightStyle 浅色主题自定义配置文件路径
+ * @params {string} customDarkStyle 深色主题自定义配置文件路径
+ */
+
+function changeThemeModeByApp() {
+  let href_color = null;
+  switch (window.theme.themeMode) {
+    case "light":
+      href_color = `/appearance/themes/Sofill-/style-S2/root-base-light.css`;
+      /* 实验性功能 */
+      window.theme.colors2.forEach((color) =>
+        removejscssfile(`${window.theme.THEME_ROOT}${color}`, "css")
+      );
+      break;
+    case "dark":
+    default:
+      href_color = `/appearance/themes/Sofill-/style-S2/root-base-dark.css`;
+      /* 实验性功能 */
+      window.theme.colors.forEach((color) =>
+        removejscssfile(`${window.theme.THEME_ROOT}${color}`, "css")
+      );
+      break;
   }
+  window.theme.updateStyle(window.theme.ID_COLOR_STYLE, href_color);
+  localStorage.removeItem(window.theme.IDs.LOCAL_STORAGE_COLOR_HREF);
+  changeStyleMod();
+}
+/* 支持暗黑模式 */
+changeThemeModeByApp();
+setTimeout(() => {
+  changeStyleMod();
 }, 0);
 
 //++++++++++++++++++++++++++++++++++++++++api区域+++++++++++++++++++++++++++++++++++++++++++++++
 
-/**简单判断目前思源是否是手机模式 */
-function isPhone() {
-  return document.getElementById("toolbar") == null;
-}
 
 /**
  * 获得文本的占用的宽度

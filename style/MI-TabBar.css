@@ -14,7 +14,8 @@ ul.layout-tab-bar .item:not(.item--readonly):hover {
 /* 标签页中文字的相关设置 */
 ul.layout-tab-bar .item--pin .item__text {
   margin-right: 13px; /* 预留位置给钉住图标 */
-  color: var(--SCC-Brown-186-light);
+  color: var(--SCC-baseComponent-text-color-1);
+  opacity: .58;
 }
 ul.layout-tab-bar .item:not(.item--pin) .item__text {
   width: auto;
@@ -24,10 +25,12 @@ ul.layout-tab-bar .item:not(.item--pin) .item__text {
   text-overflow: ellipsis !important;
   white-space: nowrap !important;
   display: inline;
-  color: var(--SCC-Brown-186-lighter);
+  color: var(--SCC-baseComponent-text-color-1);
+  opacity: .31;
 }
 ul.layout-tab-bar .item:hover .item__text {
-  color: var(--SCC-Brown-186);
+  color: var(--SCC-baseComponent-text-color-1);
+  opacity: 1;
 }
 
 /* 标签页svg */
@@ -170,6 +173,7 @@ li.item.item--readonly .item__close[title="新建文档"] + span.fn__flex-1 {
   font-weight: 520 !important;
   margin-right: 1px !important;
   margin-left: 1px !important;
+  background-color: var(--SCC-baseComponent-Button-bg-color-TabBar);
 }
 /* 设置当前标签页样式 */
 .layout-tab-bar .item--focus:after {
@@ -198,11 +202,11 @@ li.item.item--readonly .item__close[title="新建文档"] + span.fn__flex-1 {
 
 /* 设置当前标签页文字样式，影响【设置】-【集市】 */
 .layout-tab-bar .item--focus .item__text {
-  color: var(--SCC-Red-Firole) !important;
+  color: var(--b3-theme-primary) !important;
+  opacity: 1 !important;
   text-shadow: -1px 1px 13px var(--SCC-Orange-Windom);
   font-weight: 1314 !important;
 }
-
 /* 为钉住的标签页右上角增加大头钉图标 */
 li.item.item--pin:not(.item--focus):after {
   content: "";
@@ -269,19 +273,19 @@ li.item.item--pin.item--focus:after {
   overflow-y: scroll !important;
   因共用ID，启用会造成样式污染
 } */
-#commonMenu:has(button):not(:has(button.b3-menu__item--readonly)) {
+#commonMenu:has(button):not(:has(button.b3-menu__item--readonly)):not(:has(.b3-menu__item--show)) {
   overflow-y: scroll;
   max-height: min(88vh,1000px);
   max-width: min(88vw,600px);
 }
-#commonMenu:has(button):not(:has(button.b3-menu__item--readonly)) > .b3-menu__item--custom {
+#commonMenu:has(button):not(:has(button.b3-menu__item--readonly)):not(:has(.b3-menu__item--show)) > .b3-menu__item--custom {
   border-top: 1px solid #c2c2c231 !important;
   animation: background-color-2 3.1s infinite alternate;
   animation: letter-spacing-more-list-1 0.26s alternate;
   transition-duration: 0.2s;
   letter-spacing: .31px;
 }
-#commonMenu:has(button):not(:has(button.b3-menu__item--readonly)) .b3-menu__item--custom .b3-menu__label {
+#commonMenu:has(button):not(:has(button.b3-menu__item--readonly)):not(:has(.b3-menu__item--show)) .b3-menu__item--custom .b3-menu__label {
   margin-right: 5.8px !important;
   padding-left: 5.8px !important;
   word-break: break-all !important;

@@ -2,8 +2,8 @@
   "name": "Sofill-",
   "author": "Soltus",
   "url": "https://github.com/Soltus/winsay",
-  "version": "0.54",
+  "version": "0.56",
   "modes": [
-    "light"
+    "light","dark"
   ]
 }

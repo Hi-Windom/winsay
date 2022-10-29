@@ -4,8 +4,8 @@
     /* box-shadow: rgba(6, 24, 44, 0.31) 0px 0px 1px 2px, rgba(6, 24, 44, 0.13) 0px 2px 2px -1px inset; */
     border-radius: 6px;
     opacity: .86;
-    background: var(--SCC-Gray-HellisePotter);
-    box-shadow: inset 9px 9px 29px #cacfde, inset -9px -9px 29px #f2f7ff;
+    background: var(--SCC-baseComponent-EmbedBlock-bg-color);
+    box-shadow: var(--SCC-baseComponent-EmbedBlock-box-shadow);
 }
 .protyle-wysiwyg__embed:hover, .protyle-wysiwyg [data-node-id].sb:hover {
     box-shadow: rgb(111 111 111 / 7%) 0px 0px 1px 2px inset;

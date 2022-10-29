@@ -98,7 +98,6 @@ body.body--desktop.android #searchByKey {
 body.body--win32 #toolbar,
 body.windows .toolbar--browser {
   /*Android Pad 是 .body--desktop */
-  background-color: transparent !important;
   box-sizing: border-box;
   height: 13px;
   line-height: 18px;
@@ -117,7 +116,6 @@ body.windows .toolbar--browser:hover {
   transition: all 0.31s ease-in-out;
 }
 body.darwin {
-  background-color: transparent !important;
   box-sizing: border-box;
   height: 8px;
   line-height: 18px;
