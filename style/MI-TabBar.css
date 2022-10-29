@@ -173,6 +173,7 @@ li.item.item--readonly .item__close[title="新建文档"] + span.fn__flex-1 {
   font-weight: 520 !important;
   margin-right: 1px !important;
   margin-left: 1px !important;
+  background-color: var(--SCC-baseComponent-Button-bg-color-TabBar);
 }
 /* 设置当前标签页样式 */
 .layout-tab-bar .item--focus:after {

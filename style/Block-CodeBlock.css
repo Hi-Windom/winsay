@@ -14,7 +14,7 @@ body:not(.body--mobile) .protyle-wysiwyg .code-block {
   margin-top: 0.58em;
   margin-right: 31px;
   margin-bottom: 1em;
-  background-color: #ffffffa5;
+  background-color: var(--SCC-baseComponent-CodeBlock-bg-color);
   border-top: 5.8px ridge #58585858;
   transition: all 0.58s ease;
 }

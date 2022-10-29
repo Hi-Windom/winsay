@@ -1,4 +1,6 @@
 :root {
+  --SCC-baseComponent-Button-bg-color-TabBar: #a5a7a535;
+  --SCC-baseComponent-CodeBlock-bg-color: #ffffefa5;
   --SCC-baseComponent-selector-bg-color: #313233ee;
   --SCC-baseComponent-text-color-1: var(--SCC-CommonD-text-color-1);
   --SCC-baseComponent-text-color-2: var(--SCC-CommonD-text-color-2);
@@ -10,7 +12,7 @@
   --b3-card-warning-color: rgb(102, 60, 0);
   --b3-card-warning-background: #ffe8c8;
   --b3-card-info-color: rgb(13, 60, 97);
-  --b3-card-info-background: #d6eaf9;
+  --b3-card-info-background: #668899;
   --b3-card-success-color: rgb(30, 70, 32);
   --b3-card-success-background: #d7eed8;
 
@@ -92,7 +94,7 @@
   --b3-protyle-inline-mark-background: #ffe955;
   --b3-protyle-inline-mark-color: #202124;
   --b3-protyle-inline-tag-color: #5f6368;
-  --b3-protyle-inline-blockref-color: #660e7a; /* 块引用字色 */
+  --b3-protyle-inline-blockref-color: #f4387a; /* 块引用字色 */
 
   /* PDF */
   --b3-pdf-selection: #d0e9c8;
