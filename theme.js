@@ -127,16 +127,13 @@ window.theme.themeMode = (() => {
  */
 window.theme.changeThemeModeByApp = function (
   lightStyle,
-  darkStyle,
-  customLightStyle,
-  customDarkStyle
+  darkStyle
 ) {
   let href_color = null;
   let href_custom = null;
   switch (window.theme.themeMode) {
     case "light":
       href_color = lightStyle;
-      href_custom = customLightStyle;
       /* 实验性功能 */
       window.theme.colors = [
         "style-S2/root.css",
@@ -148,26 +145,22 @@ window.theme.changeThemeModeByApp = function (
     case "dark":
     default:
       href_color = darkStyle;
-      href_custom = customDarkStyle;
       /* 实验性功能 */
       window.theme.colors = [
         "style-S2/root-D-Ink.css",
-        "style-S2/root-D-Red.css",
-        "style-S2/root-D-Orange.css",
-        "style-S2/root-D-Green.css",
+        // "style-S2/root-D-Red.css",
+        // "style-S2/root-D-Orange.css",
+        // "style-S2/root-D-Green.css",
       ];
       break;
   }
   window.theme.updateStyle(window.theme.ID_COLOR_STYLE, href_color);
-  window.theme.updateStyle(window.theme.ID_CUSTOM_STYLE, href_custom);
 };
 
 /* 根据当前主题模式加载样式配置文件 */
 window.theme.changeThemeModeByApp(
   `/appearance/themes/Sofill-/style-S2/root-base-light.css`,
-  `/appearance/themes/Sofill-/style-S2/root-base-dark.css`,
-  `/appearance/themes/Sofill-/custom.css`,
-  `/appearance/themes/Sofill-/custom.css`
+  `/appearance/themes/Sofill-/style-S2/root-base-dark.css`
 );
 
 /* DOM 节点 ID */

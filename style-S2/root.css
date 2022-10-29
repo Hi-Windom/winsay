@@ -1,53 +1,51 @@
 :root {
-    /* 块引用波浪线动画图标 | The icon of wavy line animation */
-    --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/icon/wavy-line.svg);
-    /* --- */
-    --SCC-Component-selector-border: 1px solid var(--SCC-Purple-186-lighter);
-    --SCC-Component-selector-bg-color: #eeeefeee;
-    --SCC-Component-button-text-color: var(--SCC-Purple-Soledar);
-    --SCC-Component-button-bg-color: var(--b3-theme-primary-lightest);
-    /* 主色 */
-    --b3-theme-primary: var(--SCC-Purple-Soledar);
-    --b3-theme-primary-light: var(--SCC-Purple-Soledar-light);
-    --b3-theme-primary-lighter: var(--SCC-Purple-Soledar-lighter);
-    --b3-theme-primary-lightest: var(--SCC-Purple-Soledar-lightest);
-    --b3-theme-secondary: var(--SCC-Brown-186-light);
-    --b3-theme-background: var(--SCC-Gray-HellisePotter);
-    --b3-theme-background-light: var(--SCC-Gray-HellisePotter-light);
-    --b3-theme-surface: var(--SCC-Gray-HellisePotter);
-    --b3-theme-surface-light: var(--SCC-Gray-HellisePotter-light);
-    --b3-theme-error: #d23f31; /* 不修改 */
+  /* --- */
+  --SCC-Component-selector-border: 1px solid var(--SCC-Purple-186-lighter);
+  --SCC-Component-selector-bg-color: #eeeefeee;
+  --SCC-Component-button-text-color: var(--SCC-Purple-Soledar);
+  --SCC-Component-button-bg-color: var(--b3-theme-primary-lightest);
+  /* 主色 */
+  --b3-theme-primary: var(--SCC-Purple-Soledar);
+  --b3-theme-primary-light: var(--SCC-Purple-Soledar-light);
+  --b3-theme-primary-lighter: var(--SCC-Purple-Soledar-lighter);
+  --b3-theme-primary-lightest: var(--SCC-Purple-Soledar-lightest);
+  --b3-theme-secondary: var(--SCC-Brown-186-light);
+  --b3-theme-background: var(--SCC-Gray-HellisePotter);
+  --b3-theme-background-light: var(--SCC-Gray-HellisePotter-light);
+  --b3-theme-surface: var(--SCC-Gray-HellisePotter);
+  --b3-theme-surface-light: var(--SCC-Gray-HellisePotter-light);
+  --b3-theme-error: #d23f31; /* 不修改 */
 
-    /* 文字颜色 */
-    --b3-theme-on-primary: #fff;
-    --b3-theme-on-secondary: #fff;
-    --b3-theme-on-background: var(--SCC-Blue-Windom); /* 默认字色 */
-    --b3-theme-on-surface: var(--SCColor); /* 此色影响顶部栏图标颜色和不少界面区域中的文字颜色 */
-    --b3-theme-on-surface-light: var(--SCC-primary-light);
-    --b3-theme-on-error: #fff; /* 不修改 */
+  /* 文字颜色 */
+  --b3-theme-on-primary: #fff;
+  --b3-theme-on-secondary: #fff;
+  --b3-theme-on-background: var(--SCC-Blue-Windom); /* 默认字色 */
+  --b3-theme-on-surface: var(
+    --SCColor
+  ); /* 此色影响顶部栏图标颜色和不少界面区域中的文字颜色 */
+  --b3-theme-on-surface-light: var(--SCC-primary-light);
+  --b3-theme-on-error: #fff; /* 不修改 */
 
-    /* 顶部工具栏 */
-    --b3-toolbar-background: var(--SCC-primary-lightest);
-    --b3-toolbar-blur-background: var(--SCC-Gray-HellisePotter-light);
-    --b3-toolbar-color: var(--SCC-Blue-Windom-light);
+  /* 顶部工具栏 */
+  --b3-toolbar-background: var(--SCC-primary-lightest);
+  --b3-toolbar-blur-background: var(--SCC-Gray-HellisePotter-light);
+  --b3-toolbar-color: var(--SCC-Blue-Windom-light);
 
+  /* 线条 */
+  --b3-border-color: var(--SCC-Gray-HellisePotter-light);
 
-    /* 线条 */
-    --b3-border-color: var(--SCC-Gray-HellisePotter-light);
+  /* 滚动条 */
+  --b3-scroll-color: var(--SCC-Purple-186-lightest);
 
-    /* 滚动条 */
-    --b3-scroll-color: var(--SCC-Purple-186-lightest);
+  /* 列表 */
+  --b3-list-hover: var(--SCC-Purple-186-lightest);
 
-    /* 列表 */
-    --b3-list-hover: var(--SCC-Purple-186-lightest);
+  /* 菜单 */
+  --b3-menu-background: var(--SCC-Gray-HellisePotter);
 
-    /* 菜单 */
-    --b3-menu-background: var(--SCC-Gray-HellisePotter);
+  /* 提示 */
+  --b3-tooltips-color: rgba(0, 0, 0, 0.54);
 
-    /* 提示 */
-    --b3-tooltips-color: rgba(0, 0, 0, 0.54);
-
-    /* 遮罩 */
-    --b3-mask-background: var(--SCC-primary-light);
-
+  /* 遮罩 */
+  --b3-mask-background: var(--SCC-primary-light);
 }

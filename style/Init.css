@@ -14,7 +14,8 @@ body.body--win32 {
   outline: 0;
 }
 
-html,body,
+html,
+body,
 .fn__flex-1,
 .layout__wnd--active {
   overflow-x: hidden;
@@ -36,7 +37,7 @@ ul * {
 
 @layer {
   /* https://www.zhangxinxu.com/wordpress/2022/01/css-scrollbar-gutter/ */
-  ul{
+  ul {
     /* 把滚动条的位置提前预留好（空白） */
     scrollbar-gutter: stable;
     overflow-anchor: auto;
@@ -48,7 +49,7 @@ ul * {
 #layouts > div.fn__flex.fn__flex-1,
 #layouts > div.fn__flex.fn__flex-1 > div.layout__center.fn__flex.fn__flex-1 {
   transition: all 0s !important;
-  transition-delay: .58s !important;
+  transition-delay: 0.58s !important;
 }
 /* 设置段落两端对齐 */
 .protyle-content .p:not(.list .p) {
@@ -112,6 +113,11 @@ textarea.b3-text-field.fn__flex-1 {
   --SCC-Gray-light: #12345678;
   --SCC-Gray-lighter: #12345678;
   --SCC-Gray-lightest: #12345678;
+  /* 绛亽金 */
+  --SCC-Gold: #fedcba;
+  --SCC-Gold-light: #fedcbac5;
+  --SCC-Gold-lighter: #fedcbaa5;
+  --SCC-Gold-lightest: #fedcba35;
   /* 海文东蓝 */
   --SCC-Blue-Windom: #000655;
   --SCC-Blue-Windom-light: rgba(0, 6, 85, 0.58);
@@ -173,6 +179,8 @@ textarea.b3-text-field.fn__flex-1 {
   /* 一八六战略灰 */
   --SCC-Gray-186: #bfa7b1;
   --SCC-Gray-186-light: rgba(191, 167, 177, 0.58);
+  --SCC-Gray-186-lighter: rgba(191, 167, 177, 0.31);
+  --SCC-Gray-186-lightest: rgba(191, 167, 177, 0.13);
   /* 一八六战略蓝 */
   --SCC-Blue-186: #494bc3;
   --SCC-Blue-186-light: rgba(73, 75, 195, 0.58);
@@ -219,4 +227,8 @@ textarea.b3-text-field.fn__flex-1 {
   --SCC-Green-WPS_Vivid-lighter: #ecf4eca5;
   --SCC-Green-WPS_Vivid-lightest: #ecf4ec35;
   /* -- */
+  --SCC-CommonL-text-color-1: var(--SCC-Brown-186);
+  --SCC-CommonD-text-color-1: #889999;
+  --SCC-CommonL-text-color-2: var(--SCC-Gray);
+  --SCC-CommonD-text-color-2: var(--SCC-Gray-HellisePotter);
 }
