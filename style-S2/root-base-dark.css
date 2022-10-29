@@ -4,6 +4,11 @@
   --SCC-baseComponent-selector-bg-color: #313233ee;
   --SCC-baseComponent-text-color-1: var(--SCC-CommonD-text-color-1);
   --SCC-baseComponent-text-color-2: var(--SCC-CommonD-text-color-2);
+  --SCC-baseComponent-Table-tr-bg-color-1: transparent;
+  --SCC-baseComponent-Table-tr-bg-color-2: transparent;
+  --SCC-baseComponent-Table-border-1:  0.25pt solid #58585858;
+  --SCC-baseComponent-Icon-arrow-color-1: var(--SCC-White);
+  --SCC-baseComponent-CodeBlock-bg-color-hover: #555;
   /* 块引用波浪线动画图标 | The icon of wavy line animation */
   --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/icon/wavy-line.svg);
   /* 卡片背景 */

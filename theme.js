@@ -23,9 +23,9 @@ window.theme.colors = [
 
 window.theme.colors2 = [
   "style-S2/root-D-Ink.css",
-  "style-S2/root-D-Red.css",
-  "style-S2/root-D-Orange.css",
-  "style-S2/root-D-Green.css",
+  // "style-S2/root-D-Red.css",
+  // "style-S2/root-D-Orange.css",
+  // "style-S2/root-D-Green.css",
 ];
 
 /* 循环迭代器 */
@@ -207,6 +207,11 @@ function compareVersion(version1, version2) {
   return 0;
 }
 
+
+/**简单判断目前思源是否是手机模式（只能判断是手机） */
+function isPhone() {
+  return document.getElementById("toolbar") == null;
+}
 // 安卓手机：android + mobile
 // 安卓平板：android + desktop
 /**
@@ -570,7 +575,6 @@ function iterChangeColor() {
 function DesktopChangeColor() {
   const drag = document.getElementById("drag"); // 标题栏
   if (window.theme.themeStyle) {
-    iterChangeColor();
     const button_change_color = document.createElement("button"); // 切换主题颜色按钮
     button_change_color.id = window.theme.IDs.BUTTON_TOOLBAR_CHANGE_COLOR;
     button_change_color.className = "toolbar__item b3-tooltips b3-tooltips__sw";
@@ -594,7 +598,9 @@ function DesktopChangeColor() {
 }
 
 function changeStyleMod() {
+  iterChangeColor();
   if (isPhone()) {
+    alert('sj');
     AndroidChangeColor();
     createSofillToolbar();
   } else {
@@ -643,10 +649,6 @@ setTimeout(() => {
 
 //++++++++++++++++++++++++++++++++++++++++api区域+++++++++++++++++++++++++++++++++++++++++++++++
 
-/**简单判断目前思源是否是手机模式 */
-function isPhone() {
-  return document.getElementById("toolbar") == null;
-}
 
 /**
  * 获得文本的占用的宽度

@@ -95,7 +95,7 @@ code.hljs {
 
 body:not(.body--mobile) .b3-typography .code-block:hover,
 body:not(.body--mobile) .protyle-wysiwyg .code-block:hover {
-  background-color: #fff;
+  background-color: var(--SCC-baseComponent-CodeBlock-bg-color-hover);
   border-top: 5.8px ridge #58585831;
   border-radius: 13px !important;
 }

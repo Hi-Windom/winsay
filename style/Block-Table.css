@@ -21,15 +21,15 @@ table th {
 
 /* 设置表格内部边框 */
 th, td {
-    border: 0.25pt solid var(--SCC-Red-WPS) !important;
+    border: var(--SCC-baseComponent-Table-border-1) !important;
     border-collapse: collapse;
 }
 
 /* 表格奇偶行不同颜色 */
 tbody tr:nth-child(2n) {
-    background-color: var(--SCC-White-light) !important;
+    background-color: var(--SCC-baseComponent-Table-tr-bg-color-2) !important;
 }
 
 tbody tr:nth-child(2n + 1) {
-    background-color: var(--SCC-White) !important;
+    background-color: var(--SCC-baseComponent-Table-tr-bg-color-1) !important;
 }
