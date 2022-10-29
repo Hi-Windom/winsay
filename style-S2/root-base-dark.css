@@ -121,3 +121,10 @@
   backdrop-filter: blur(31px);
   border-radius: 0px;
 }
+
+.block__popover.block__popover--move.block__popover--open {
+    background-color: var(--b3-theme-background) !important;
+    box-shadow:#77777777 0px 0px 0px 3px !important;
+    opacity: .98 !important;
+    transition: all 0.2s ease-in-out;
+}
