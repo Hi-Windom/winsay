@@ -63,7 +63,7 @@ body:not(.body--mobile) .protyle-wysiwyg .code-block {
 .code-block .protyle-action .protyle-action__language::before {
   content: "lang::";
   font-family: var(--b3-font-family-code);
-  color: var(--SCC-primary-lighter);
+  color: var(--SCC-baseComponent-CodeBlock-ab-color);
   top: 2px;
   bottom: 1px;
 }
@@ -108,7 +108,7 @@ body:not(.body--mobile) .protyle-wysiwyg .code-block:hover:after {
 /* 代码块顶部添加风格元素 */
 body:not(.body--mobile) .code-block:after {
   content: "</>";
-  color: var(--SCC-primary-lighter);
+  color: var(--SCC-baseComponent-CodeBlock-ab-color);
   position: absolute;
   top: 1px;
 }
