@@ -18,7 +18,7 @@
   --SCC-baseComponent-Input-box-shadow-focus: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   --SCC-baseComponent-Switch-checked-ab-color: #fff;
   --SCC-baseComponent-breadcrumb__bar-color: var(--SCColor);
-  --SCC-baseComponent-breadcrumb-box-shadow: rgba(222, 227, 240, 0.58) 1px 0px 6px, rgba(222, 227, 240, 0.31) 0px 8px 5px 1px inset;
+  --SCC-baseComponent-breadcrumb-box-shadow: rgba(222, 227, 240, 0.13) 1px 0px 6px, rgba(222, 227, 240, 0.13) 0px 8px 5px 1px inset;
   --SCC-baseProperty-Opacity-A: 0;
   /* 块引用波浪线动画图标 | The icon of wavy line animation */
   --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/icon/wavy-line.svg);
@@ -62,7 +62,7 @@
 
   /* 动画效果 */
   --b3-transition: all 0.31s cubic-bezier(0, 0, 0.2, 1) 0ms;
-  --b3-width-transition: width 0.31s cubic-bezier(0, 0, 0.2, 1) 0ms;
+  --b3-width-transition: width .15s cubic-bezier(0.22, 0.61, 0.36, 1) 0ms;
 
   /* 阴影 */
   --b3-point-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
