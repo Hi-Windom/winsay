@@ -23,10 +23,8 @@ window.theme.colors = [
 ];
 
 window.theme.colors2 = [
-  "style-S2/root-D-Ink.css",
-  // "style-S2/root-D-Red.css",
-  // "style-S2/root-D-Orange.css",
-  // "style-S2/root-D-Green.css",
+  "style-S2/root-D-InkGreenPurple.css",
+  // "style-S2/root-D-BlackGoldBlue.css",
 ];
 
 /* 循环迭代器 */
