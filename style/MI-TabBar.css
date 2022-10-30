@@ -3,8 +3,11 @@ ul.fn__flex.layout-tab-bar {
   background-color: var(--b3-theme-background);
   height: 100%;
   padding-left: 3px;
-  z-index: 5;
   animation: menu 0.2s ease-in-out;
+}
+
+ul.fn__flex.layout-tab-bar li {
+  z-index: 5;
 }
 
 /* 标签页鼠标悬浮时背景颜色 */
