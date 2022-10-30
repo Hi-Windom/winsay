@@ -599,7 +599,6 @@ function DesktopChangeColor() {
 function changeStyleMod() {
   iterChangeColor();
   if (isPhone()) {
-    alert('sj');
     AndroidChangeColor();
     createSofillToolbar();
   } else {
