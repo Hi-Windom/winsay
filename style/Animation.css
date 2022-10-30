@@ -182,7 +182,7 @@
     > div[data-type="wnd"]
     > .layout-tab-container
     > .fn__flex-column {
-    animation: flex-column-y-longer 0.35s cubic-bezier(0.37, -0.02, 0.54, 1.09);
+    animation: flex-column-y-longer 0.58s cubic-bezier(0.37, -0.02, 0.54, 1.09);
     animation-delay: 0.1s;
   }
 }
@@ -207,7 +207,7 @@
     > div[data-type="wnd"]
     > .layout-tab-container
     > .fn__flex-column {
-    animation: flex-column-y 0.35s cubic-bezier(0.37, -0.02, 0.54, 1.09);
+    animation: flex-column-y 0.13s cubic-bezier(0.37, -0.02, 0.54, 1.09);
     animation-delay: 0.1s;
   }
 }
