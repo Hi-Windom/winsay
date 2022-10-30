@@ -2,7 +2,7 @@
   /* 将当前打开文档面包屑设置为毛玻璃效果 */
   /* 面包屑毛玻璃导致思源v2.4.6块滚动条无法跟随滚动 #154 暂不解决，等待后续方案 */
   .protyle-breadcrumb {
-    position: absolute;
+    position: var(--SCC-baseComponent-breadcrumb-position);
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
