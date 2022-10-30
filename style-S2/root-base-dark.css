@@ -12,6 +12,8 @@
   --SCC-baseComponent-Icon-arrow-color-1: var(--SCC-White);
   --SCC-baseComponent-EmbedBlock-bg-color: var(--SCC-Cyan-186-lighter);
   --SCC-baseComponent-EmbedBlock-box-shadow: inset 9px 9px 29px #1d1e23a5, inset -9px -9px 29px #2e483735;
+  --SCC-baseComponent-Inline-virtual-block-ref-border-bottom: 1px dotted #eeffeec5;
+  --SCC-baseComponent-Inline-virtual-block-ref-bg-color-hover: #ccccccc5;
   /* 块引用波浪线动画图标 | The icon of wavy line animation */
   --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/icon/wavy-line.svg);
   /* 卡片背景 */
@@ -25,12 +27,12 @@
   --b3-card-success-background: #d7eed8;
 
   /* 自定义文字 */
-  --b3-font-color1: var(--SCC-Red-Firole);
-  --b3-font-color2: var(--SCC-Pink-Firole);
-  --b3-font-color3: var(--SCC-Purple-186);
-  --b3-font-color4: var(--SCC-Blue-186);
-  --b3-font-color5: var(--SCC-Black-186);
-  --b3-font-color6: var(--SCColor);
+  --b3-font-color1: var(--SCC-Red-Firole-light);
+  --b3-font-color2: var(--SCC-Pink-Firole-light);
+  --b3-font-color3: var(--SCC-Purple-186-light);
+  --b3-font-color4: var(--SCC-Blue-186-light);
+  --b3-font-color5: var(--SCC-primary-light);
+  --b3-font-color6: var(--SCC-White-light);
   --b3-font-color7: var(--SCC-Gray-186);
   --b3-font-color8: var(--SCC-Cyan-186);
   --b3-font-color9: var(--SCC-Cyan-186-lighter);
@@ -102,7 +104,7 @@
   --b3-protyle-inline-mark-background: #ffe955;
   --b3-protyle-inline-mark-color: #202124;
   --b3-protyle-inline-tag-color: #5f6368;
-  --b3-protyle-inline-blockref-color: #f4387a; /* 块引用字色 */
+  --b3-protyle-inline-blockref-color: var(--SCC-Red-WPS); /* 块引用字色 */
 
   /* PDF */
   --b3-pdf-selection: #d0e9c8;
@@ -129,4 +131,8 @@
     box-shadow:#77777777 0px 0px 0px 3px !important;
     opacity: .98 !important;
     transition: all 0.2s ease-in-out;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type~=block-ref], .protyle-wysiwyg [data-node-id] span[data-type~=file-annotation-ref] {
+  box-shadow: #58585858 0px 0px 0px 1px;
 }

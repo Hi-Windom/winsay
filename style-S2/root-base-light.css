@@ -12,6 +12,8 @@
   --SCC-baseComponent-Icon-arrow-color-1: var(--SCC-Gray);
   --SCC-baseComponent-EmbedBlock-bg-color: var(--SCC-Gray-HellisePotter);
   --SCC-baseComponent-EmbedBlock-box-shadow: inset 9px 9px 29px #cacfde, inset -9px -9px 29px #f2f7ff;
+  --SCC-baseComponent-Inline-virtual-block-ref-border-bottom: 1px dotted var(--SCC-Red-WPS-lighter);
+  --SCC-baseComponent-Inline-virtual-block-ref-bg-color-hover: #ffffffc5;
   /* 块引用波浪线动画图标 | The icon of wavy line animation */
   --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/icon/wavy-line.svg);
   /* 卡片背景 */
@@ -102,7 +104,7 @@
   --b3-protyle-inline-mark-background: #ffe955;
   --b3-protyle-inline-mark-color: #202124;
   --b3-protyle-inline-tag-color: #5f6368;
-  --b3-protyle-inline-blockref-color: #660e7a; /* 块引用字色 */
+  --b3-protyle-inline-blockref-color: var(--SCC-Red-WPS); /* 块引用字色 */
 
   /* PDF */
   --b3-pdf-selection: #d0e9c8;
