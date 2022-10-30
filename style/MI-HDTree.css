@@ -1,0 +1,16 @@
+#layouts ul > li[data-treetype="outline"][data-subtype="h1"] > svg { color: var(--b3-font-color1); padding: 6px; scale: 1.27;}
+#layouts ul > li[data-treetype="outline"][data-subtype="h2"] > svg { color: var(--b3-font-color2); padding: 5px; scale: 1.22;}
+#layouts ul > li[data-treetype="outline"][data-subtype="h3"] > svg { color: var(--b3-font-color3); padding: 4px; scale: 1.17;}
+#layouts ul > li[data-treetype="outline"][data-subtype="h4"] > svg { color: var(--b3-font-color4); padding: 3px; scale: 1.12;}
+#layouts ul > li[data-treetype="outline"][data-subtype="h5"] > svg { color: var(--b3-font-color5); padding: 2px; scale: 1.07;}
+#layouts ul > li[data-treetype="outline"][data-subtype="h6"] > svg { color: var(--b3-font-color6); padding: 1px; scale: 1.02;}
+
+#layouts ul > li[data-treetype="outline"] .b3-list-item__text {color: var(--SCC-baseComponent-text-color-1);}
+#layouts ul > li[data-treetype="outline"][data-subtype="h1"] .b3-list-item__text {color: var(--SCC-baseComponent-text-color-2); font-size: 111%; font-weight: 600;}
+
+.b3-list:not(.b3-list--border):has(li[data-treetype="outline"]) > ul {
+    box-shadow: 31px 0 var(--b3-theme-background) inset, 32px 0 var(--b3-theme-primary-light) inset;
+}
+.b3-list--background .b3-list-item:hover:not(.b3-list-item--focus) {
+    background-color: transparent;
+}
