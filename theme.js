@@ -19,6 +19,7 @@ window.theme.colors = [
   "style-S2/root-L-Blue.css",
   "style-S2/root-L-Pink.css",
   "style-S2/root-L-Green.css",
+  "style-S2/root-L-Yellow.css",
 ];
 
 window.theme.colors2 = [
