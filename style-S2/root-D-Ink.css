@@ -5,10 +5,10 @@
     --SCC-Component-button-text-color: var(--SCC-Gray-186);
     --SCC-Component-button-bg-color: var(--b3-theme-primary-lightest);
     /* 主色 */
-    --b3-theme-primary: var(--SCC-Gray-186);
-    --b3-theme-primary-light: var(--SCC-Gray-186-light);
-    --b3-theme-primary-lighter: var(--SCC-Gray-186-lighter);
-    --b3-theme-primary-lightest: var(--SCC-Gray-186-lightest);
+    --b3-theme-primary: #119966;
+    --b3-theme-primary-light: #119966c5;
+    --b3-theme-primary-lighter: #119966a5;
+    --b3-theme-primary-lightest: #11996635;
     --b3-theme-secondary: var(--SCC-Green-186-light);
     --b3-theme-background: #0d0d0d;
     --b3-theme-background-light: #0d0d0dc5;
