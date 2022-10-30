@@ -91,14 +91,24 @@ body.android .b3-button--outline {
     rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
 }
 
-/* 检查框样式 */
+/* 检查框开关样式 */
+.b3-switch{
+  border-radius: 5.8px;
+}
+.b3-switch:after {
+  box-shadow: var(--b3-point-shadow);
+  width: 16px;
+  height: 16px;
+  border: 1px solid #aaa;
+  border-radius: 31%;
+  background-color: #bbb;
+  transition: transform .31s cubic-bezier(0.18, 0.89, 0.32, 1.28),opacity .2s;
+}
 .b3-switch:checked {
-  /* background-color: var(--SCC-Purple-186-lighter); */
   opacity: .98;
 }
 .b3-switch:checked:after {
-  /* background-color: var(--SCC-Purple-186); */
-  border-color: #fff;
+  border-color: var(--SCC-baseComponent-Switch-checked-ab-color);
 }
 
 /* 优化块级清除样式按钮显示效果 */

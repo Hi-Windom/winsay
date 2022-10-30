@@ -16,6 +16,7 @@
   --SCC-baseComponent-Inline-virtual-block-ref-bg-color-hover: #ffffffc5;
   --SCC-baseComponent-Inline-tag-bg-color: var(--SCC-White-light);
   --SCC-baseComponent-Input-box-shadow-focus: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  --SCC-baseComponent-Switch-checked-ab-color: #fff;
   /* 块引用波浪线动画图标 | The icon of wavy line animation */
   --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/icon/wavy-line.svg);
   /* 卡片背景 */

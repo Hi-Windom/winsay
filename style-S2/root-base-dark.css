@@ -16,6 +16,7 @@
   --SCC-baseComponent-Inline-virtual-block-ref-bg-color-hover: #ccccccc5;
   --SCC-baseComponent-Inline-tag-bg-color: #337755;
   --SCC-baseComponent-Input-box-shadow-focus: none;
+  --SCC-baseComponent-Switch-checked-ab-color: #999;
   /* 块引用波浪线动画图标 | The icon of wavy line animation */
   --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/icon/wavy-line.svg);
   /* 卡片背景 */
@@ -143,4 +144,8 @@
   background-color: var(--b3-theme-background);
   opacity: .96;
   background-color: #20192135;
+}
+
+.b3-list--background .b3-list-item:hover:not(.b3-list-item--focus) {
+  background-color: #a1a2a335;
 }
