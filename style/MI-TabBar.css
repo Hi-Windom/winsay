@@ -277,7 +277,7 @@ li.item.item--pin.item--focus:after {
   overflow-y: scroll !important;
   因共用ID，启用会造成样式污染
 } */
-#commonMenu:has(button):not(:has(button.b3-menu__item--readonly)):not(:has(.b3-menu__item--show)) {
+#commonMenu:has(button):not(:has(button.b3-menu__item--readonly)):not(:has(.b3-menu__item--show)):not(:has(.b3-menu__separator)) {
   overflow-y: scroll;
   max-height: min(88vh,1000px);
   max-width: min(88vw,600px);
