@@ -11,12 +11,11 @@
   --SCC-baseComponent-Table-border-1: 0.25pt solid #58585858;
   --SCC-baseComponent-Icon-arrow-color-1: var(--SCC-White);
   --SCC-baseComponent-EmbedBlock-bg-color: var(--SCC-Cyan-186-lighter);
-  --SCC-baseComponent-EmbedBlock-box-shadow: inset 9px 9px 29px #1d1e23a5,
-    inset -9px -9px 29px #2e483735;
-  --SCC-baseComponent-Inline-virtual-block-ref-border-bottom: 1px dotted
-    #eeffeec5;
+  --SCC-baseComponent-EmbedBlock-box-shadow: inset 9px 9px 29px #1d1e23a5, inset -9px -9px 29px #2e483735;
+  --SCC-baseComponent-Inline-virtual-block-ref-border-bottom: 1px dotted #eeffeec5;
   --SCC-baseComponent-Inline-virtual-block-ref-bg-color-hover: #ccccccc5;
   --SCC-baseComponent-Inline-tag-bg-color: #337755;
+  --SCC-baseComponent-Input-box-shadow-focus: none;
   /* 块引用波浪线动画图标 | The icon of wavy line animation */
   --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/icon/wavy-line.svg);
   /* 卡片背景 */
@@ -96,13 +95,13 @@
   --b3-protyle-search-current-background: #a5d3fe;
 
   /* 代码片段背景 */
-  --b3-protyle-code-background: rgba(27, 31, 35, 0.05);
+  --b3-protyle-code-background: rgba(37, 41, 55, 0.58);
   --b3-protyle-code-linenumber-hl: transparent;
 
   /* 所见即所得行内元素颜色 */
-  --b3-protyle-inline-strong-color: #202124;
-  --b3-protyle-inline-em-color: #202124;
-  --b3-protyle-inline-s-color: #58585831;
+  --b3-protyle-inline-strong-color: #66f144;
+  --b3-protyle-inline-em-color: #bbbcbc; /* 斜体字色 */
+  --b3-protyle-inline-s-color: #a8a2a1c5; /* 删除线字色 */
   --b3-protyle-inline-link-color: var(--SCC-Blue-Windom_2); /* 超链接字色 */
   --b3-protyle-inline-mark-background: #ffe955;
   --b3-protyle-inline-mark-color: #202124;

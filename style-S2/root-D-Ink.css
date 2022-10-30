@@ -46,6 +46,6 @@
     --b3-tooltips-color: rgba(0, 0, 0, 0.54);
 
     /* 遮罩 */
-    --b3-mask-background: var(--SCC-primary-light);
+    --b3-mask-background: #111213cc;
 
 }
