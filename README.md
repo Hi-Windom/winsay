@@ -130,6 +130,7 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 1. [文档页面横向滚动条异常 · 0.52](https://github.com/Hi-Windom/winsay/issues/169)
 2. [#174 引发的表格通用弹出层异常 · 0.56](https://github.com/Hi-Windom/winsay/issues/183)
 3. [未提升页签栏Z轴层级 · 0.58](https://github.com/Hi-Windom/winsay/issues/191)
+4. [暗黑模式搜索框Z轴层级 · 0.58](https://github.com/Hi-Windom/winsay/issues/194)
 
 ### v0.40 ~ v0.48 聚合说明
 
