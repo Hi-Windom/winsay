@@ -132,7 +132,6 @@
   background-color: var(--b3-theme-background) !important;
   box-shadow: #77777777 0px 0px 0px 3px !important;
   opacity: 0.98 !important;
-  transition: all 0.2s ease-in-out;
 }
 
 .protyle-wysiwyg [data-node-id] span[data-type~="block-ref"],
