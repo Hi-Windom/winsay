@@ -123,7 +123,8 @@
 }
 
 #commonMenu,
-#commonMenu button {
+#commonMenu button,
+.b3-list--background .b3-list-item {
   background-color: #28282813;
   backdrop-filter: blur(31px);
   border-radius: 0px;
