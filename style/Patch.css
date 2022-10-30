@@ -1,9 +1,26 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
+/* 优化右上角窗口关闭按钮焦点样式，不适用于思源2.4.3 */
+#closeWindow:hover svg {
+  color: var(--SCC-Gray-HellisePotter) !important;
+}
+
 /* 【设置】-【账号】订阅按钮 */
-body > div.b3-dialog--open > div > div.b3-dialog__container > div:nth-child(3) > div > div.fn__flex-1.fn__flex > div:nth-child(10) > div > div.config-account__center.config-account__center--text > div.ft__center > a.b3-button.b3-button--outline  {
+body
+  > div.b3-dialog--open
+  > div
+  > div.b3-dialog__container
+  > div:nth-child(3)
+  > div
+  > div.fn__flex-1.fn__flex
+  > div:nth-child(10)
+  > div
+  > div.config-account__center.config-account__center--text
+  > div.ft__center
+  > a.b3-button.b3-button--outline {
   background-color: var(--b3-theme-primary-lightest);
-  box-shadow: rgb(254 239 234 / 40%) 0px 3px, rgb(0 6 85 / 30%) 0px 5px, rgb(72 69 80 / 10%) 0px 8px;
+  box-shadow: rgb(254 239 234 / 40%) 0px 3px, rgb(0 6 85 / 30%) 0px 5px,
+    rgb(72 69 80 / 10%) 0px 8px;
 }
 
 .protyle-background {

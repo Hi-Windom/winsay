@@ -10,6 +10,10 @@
     border-radius: 18.6px;
     overflow-x: hidden;
 }
+body.body--mobile .protyle-hint.b3-list.b3-list--background:not(.hint--menu) {
+    padding: 3px;
+    margin: 3px;
+}
 .protyle-hint.b3-list.b3-list--background:not(.hint--menu) > button:not(:nth-child(-n+3)) {
     margin-bottom: 1px !important;
     padding-bottom: 1px !important;
@@ -22,7 +26,7 @@
     margin-bottom: 7px !important;
     border-bottom: 1px solid var(--SCC-Gray-186);
     padding-bottom: 5px !important;
-    font-weight: 88 !important;
+    font-weight: 400 !important;
     font-size: 113%;
     letter-spacing: 1.2px !important;
 }
