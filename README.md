@@ -126,6 +126,8 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 18. [暗黑模式【墨绿紫】形态进化 · 0.58](https://github.com/Hi-Windom/winsay/issues/187)
 19. [双链建议面板视觉效果调整，显示更多建议项 · 0.58](https://github.com/Hi-Windom/winsay/issues/186)
 20. [暗黑模式取消隐藏块进度条 · 0.60](https://github.com/Hi-Windom/winsay/issues/197)
+21. [选择器样式调整 · 0.60](https://github.com/Hi-Windom/winsay/issues/199)
+22. [页签栏调整 · 0.60](https://github.com/Hi-Windom/winsay/issues/200)
 
 缺陷修复：
 
