@@ -1,0 +1,51 @@
+:root {
+  /* --- */
+  --SCC-Component-selector-border: 1px solid #cc5831c5;
+  --SCC-Component-selector-bg-color: var(--SCC-baseComponent-selector-bg-color);
+  --SCC-Component-button-text-color: #cc5831;
+  --SCC-Component-button-bg-color: var(--b3-theme-primary-lightest);
+  /* 主色 */
+  --b3-theme-primary: #cc5831;
+  --b3-theme-primary-light: #cc5831c5;
+  --b3-theme-primary-lighter: #cc5831a5;
+  --b3-theme-primary-lightest: #cc583135;
+  --b3-theme-secondary: var(--SCC-Brown-186-light);
+  --b3-theme-background: #eed289;
+  --b3-theme-background-light: #eed28935;
+  --b3-theme-surface: #eed289;
+  --b3-theme-surface-light: #eed28935;
+  --b3-theme-error: #d23f31; /* 不修改 */
+
+  /* 文字颜色 */
+  --b3-theme-on-primary: #fff;
+  --b3-theme-on-secondary: #fff;
+  --b3-theme-on-background: var(--SCC-Blue-Windom); /* 默认字色 */
+  --b3-theme-on-surface: var(
+    --SCColor
+  ); /* 此色影响顶部栏图标颜色和不少界面区域中的文字颜色 */
+  --b3-theme-on-surface-light: var(--SCC-primary-light);
+  --b3-theme-on-error: #fff; /* 不修改 */
+
+  /* 顶部工具栏 */
+  --b3-toolbar-background: var(--SCC-primary-lightest);
+  --b3-toolbar-blur-background: #eed28935;
+  --b3-toolbar-color: var(--SCC-Red-WPS-light);
+
+  /* 线条 */
+  --b3-border-color: #eed28935;
+
+  /* 滚动条 */
+  --b3-scroll-color: var(--SCC-Pink-WPS-lightest);
+
+  /* 列表 */
+  --b3-list-hover: var(--SCC-Pink-WPS-lightest);
+
+  /* 菜单 */
+  --b3-menu-background: #eed289;
+
+  /* 提示 */
+  --b3-tooltips-color: rgba(0, 0, 0, 0.54);
+
+  /* 遮罩 */
+  --b3-mask-background: var(--SCC-primary-light);
+}

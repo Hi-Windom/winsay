@@ -100,14 +100,14 @@ textarea.b3-text-field.fn__flex-1 {
   /* 绛亽色 */
   --SCColor: #484550;
   --SCC-primary: #484550;
-  --SCC-primary-light: rgba(72, 69, 80, 0.58);
-  --SCC-primary-lighter: rgba(72, 69, 80, 0.31);
-  --SCC-primary-lightest: rgba(72, 69, 80, 0.13);
+  --SCC-primary-light: #484550c5;
+  --SCC-primary-lighter: #484550a5;
+  --SCC-primary-lightest: #48455035;
   /* 绛亽白 */
   --SCC-White: #feefea;
-  --SCC-White-light: rgba(254, 239, 234, 0.58);
-  --SCC-White-lighter: rgba(254, 239, 234, 0.31);
-  --SCC-White-lightest: rgba(254, 239, 234, 0.13);
+  --SCC-White-light: #feefeac5;
+  --SCC-White-lighter: #feefeaa5;
+  --SCC-White-lightest: #feefea35;
   /* 绛亽灰 */
   --SCC-Gray: #12345678;
   --SCC-Gray-light: #12345678;

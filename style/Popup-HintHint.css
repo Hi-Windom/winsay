@@ -1,19 +1,30 @@
 
 .protyle-hint.b3-list.b3-list--background:not(.hint--menu) {
-    min-width: 40vw !important;
-    width: auto !important;
-    max-width: 880px !important;
-    /* max-height: 86vh !important; */
-    padding: 13px;
+    min-width: min(40vw,58px) !important;
+    width: fit-content !important;
+    max-width: min(880px,88vw) !important;
+    max-height: min(86vh,580px) !important;
+    padding: 9px;
+    margin: 9px;
     background-color: rgba(72,69,80,0.88);
     border-radius: 18.6px;
     overflow-x: hidden;
 }
-.protyle-hint.b3-list.b3-list--background:not(.hint--menu) > button {
-    margin-bottom: 9px !important;
+.protyle-hint.b3-list.b3-list--background:not(.hint--menu) > button:not(:nth-child(-n+3)) {
+    margin-bottom: 1px !important;
+    padding-bottom: 1px !important;
+    border-bottom: 1px solid var(--SCC-Gray-186-light);
+    line-height: 15px;
+    font-size: 96%;
+    letter-spacing: 0.8px !important;
+}
+.protyle-hint.b3-list.b3-list--background:not(.hint--menu) > button:nth-child(-n+3) {
+    margin-bottom: 7px !important;
     border-bottom: 1px solid var(--SCC-Gray-186);
     padding-bottom: 5px !important;
-    font-weight: 58 !important;
+    font-weight: 88 !important;
+    font-size: 113%;
+    letter-spacing: 1.2px !important;
 }
 .protyle-hint.b3-list.b3-list--background:not(.hint--menu) .b3-list-item__meta.b3-list-item__showall {
     padding-left: 5px !important;

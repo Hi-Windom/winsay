@@ -19,13 +19,12 @@ window.theme.colors = [
   "style-S2/root-L-Blue.css",
   "style-S2/root-L-Pink.css",
   "style-S2/root-L-Green.css",
+  "style-S2/root-L-Yellow.css",
 ];
 
 window.theme.colors2 = [
-  "style-S2/root-D-Ink.css",
-  // "style-S2/root-D-Red.css",
-  // "style-S2/root-D-Orange.css",
-  // "style-S2/root-D-Green.css",
+  "style-S2/root-D-InkGreenPurple.css",
+  // "style-S2/root-D-BlackGoldBlue.css",
 ];
 
 /* 循环迭代器 */
@@ -600,7 +599,6 @@ function DesktopChangeColor() {
 function changeStyleMod() {
   iterChangeColor();
   if (isPhone()) {
-    alert('sj');
     AndroidChangeColor();
     createSofillToolbar();
   } else {

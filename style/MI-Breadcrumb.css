@@ -13,12 +13,11 @@
     width: calc(100% - 9px);
     margin-right: 0;
     opacity: 0.95;
-    box-shadow: rgba(222, 227, 240, 0.58) 1px 0px 6px,
-      rgba(222, 227, 240, 0.31) 0px 8px 5px 1px inset;
+    box-shadow: var(--SCC-baseComponent-breadcrumb-box-shadow);
   }
   /* 当前打开文档的面包屑 */
   #layouts .layout__wnd--active .protyle-breadcrumb .protyle-breadcrumb__bar {
-    opacity: 0;
+    opacity: var(--SCC-baseProperty-Opacity-A);
   }
   /* 依次为 反链面板中【反向链接】、【提及】、嵌入块的面包屑 */
   .backlinkList .protyle-breadcrumb__bar,
@@ -43,7 +42,7 @@
     height: 16px;
     border-radius: 4px;
     margin: 3px 0;
-    color: var(--SCColor);
+    color: var(--SCC-baseComponent-breadcrumb__bar-color);
     max-width: 70%;
   }
 

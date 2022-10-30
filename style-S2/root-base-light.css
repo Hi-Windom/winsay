@@ -12,6 +12,14 @@
   --SCC-baseComponent-Icon-arrow-color-1: var(--SCC-Gray);
   --SCC-baseComponent-EmbedBlock-bg-color: var(--SCC-Gray-HellisePotter);
   --SCC-baseComponent-EmbedBlock-box-shadow: inset 9px 9px 29px #cacfde, inset -9px -9px 29px #f2f7ff;
+  --SCC-baseComponent-Inline-virtual-block-ref-border-bottom: 1px dotted var(--SCC-Red-WPS-lighter);
+  --SCC-baseComponent-Inline-virtual-block-ref-bg-color-hover: #ffffffc5;
+  --SCC-baseComponent-Inline-tag-bg-color: var(--SCC-White-light);
+  --SCC-baseComponent-Input-box-shadow-focus: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  --SCC-baseComponent-Switch-checked-ab-color: #fff;
+  --SCC-baseComponent-breadcrumb__bar-color: var(--SCColor);
+  --SCC-baseComponent-breadcrumb-box-shadow: rgba(222, 227, 240, 0.13) 1px 0px 6px, rgba(222, 227, 240, 0.13) 0px 8px 5px 1px inset;
+  --SCC-baseProperty-Opacity-A: 0;
   /* 块引用波浪线动画图标 | The icon of wavy line animation */
   --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/icon/wavy-line.svg);
   /* 卡片背景 */
@@ -54,7 +62,7 @@
 
   /* 动画效果 */
   --b3-transition: all 0.31s cubic-bezier(0, 0, 0.2, 1) 0ms;
-  --b3-width-transition: width 0.31s cubic-bezier(0, 0, 0.2, 1) 0ms;
+  --b3-width-transition: width .15s cubic-bezier(0.22, 0.61, 0.36, 1) 0ms;
 
   /* 阴影 */
   --b3-point-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
@@ -102,7 +110,7 @@
   --b3-protyle-inline-mark-background: #ffe955;
   --b3-protyle-inline-mark-color: #202124;
   --b3-protyle-inline-tag-color: #5f6368;
-  --b3-protyle-inline-blockref-color: #660e7a; /* 块引用字色 */
+  --b3-protyle-inline-blockref-color: var(--SCC-Red-WPS); /* 块引用字色 */
 
   /* PDF */
   --b3-pdf-selection: #d0e9c8;
@@ -115,4 +123,15 @@
   --b3-pdf-background5: #f5539e;
   --b3-pdf-background6: var(--b3-theme-primary);
   --b3-pdf-background7: #944194;
+}
+
+
+/* 集市主题详情页 */
+.config-bazaar__readme {
+  background-color: var(--b3-theme-background);
+  z-index: 99;
+}
+/* 避免搜索框阴影样式被遮挡 */
+.search__header {
+  z-index: 99;
 }

@@ -8,10 +8,18 @@
   --SCC-baseComponent-text-color-2: var(--SCC-CommonD-text-color-2);
   --SCC-baseComponent-Table-tr-bg-color-1: transparent;
   --SCC-baseComponent-Table-tr-bg-color-2: transparent;
-  --SCC-baseComponent-Table-border-1:  0.25pt solid #58585858;
+  --SCC-baseComponent-Table-border-1: 0.25pt solid #58585858;
   --SCC-baseComponent-Icon-arrow-color-1: var(--SCC-White);
   --SCC-baseComponent-EmbedBlock-bg-color: var(--SCC-Cyan-186-lighter);
   --SCC-baseComponent-EmbedBlock-box-shadow: inset 9px 9px 29px #1d1e23a5, inset -9px -9px 29px #2e483735;
+  --SCC-baseComponent-Inline-virtual-block-ref-border-bottom: 1px dotted #eeffeec5;
+  --SCC-baseComponent-Inline-virtual-block-ref-bg-color-hover: #ccccccc5;
+  --SCC-baseComponent-Inline-tag-bg-color: #337755;
+  --SCC-baseComponent-Input-box-shadow-focus: none;
+  --SCC-baseComponent-Switch-checked-ab-color: #999;
+  --SCC-baseComponent-breadcrumb__bar-color: #999999;
+  --SCC-baseComponent-breadcrumb-box-shadow: none;
+  --SCC-baseProperty-Opacity-A: .58;
   /* 块引用波浪线动画图标 | The icon of wavy line animation */
   --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/icon/wavy-line.svg);
   /* 卡片背景 */
@@ -25,12 +33,12 @@
   --b3-card-success-background: #d7eed8;
 
   /* 自定义文字 */
-  --b3-font-color1: var(--SCC-Red-Firole);
-  --b3-font-color2: var(--SCC-Pink-Firole);
-  --b3-font-color3: var(--SCC-Purple-186);
-  --b3-font-color4: var(--SCC-Blue-186);
-  --b3-font-color5: var(--SCC-Black-186);
-  --b3-font-color6: var(--SCColor);
+  --b3-font-color1: var(--SCC-Red-Firole-light);
+  --b3-font-color2: var(--SCC-Pink-Firole-light);
+  --b3-font-color3: var(--SCC-Purple-186-light);
+  --b3-font-color4: var(--SCC-Blue-186-light);
+  --b3-font-color5: var(--SCC-primary-light);
+  --b3-font-color6: var(--SCC-White-light);
   --b3-font-color7: var(--SCC-Gray-186);
   --b3-font-color8: var(--SCC-Cyan-186);
   --b3-font-color9: var(--SCC-Cyan-186-lighter);
@@ -38,23 +46,23 @@
   --b3-font-color11: var(--SCC-Yellow-HellisePotter);
   --b3-font-color12: var(--SCC-Orange-Windom);
   --b3-font-color13: var(--b3-theme-on-background);
-  --b3-font-background1: var(--SCC-Red-Firole-light);
-  --b3-font-background2: var(--SCC-Pink-Firole-light);
-  --b3-font-background3: var(--SCC-Purple-186-light);
-  --b3-font-background4: var(--SCC-Blue-186-light);
-  --b3-font-background5: var(--SCC-Brown-186-light);
-  --b3-font-background6: var(--SCC-Black-186-lighter);
-  --b3-font-background7: var(--SCC-Gray-186-light);
-  --b3-font-background8: var(--SCC-Cyan-186-light);
-  --b3-font-background9: var(--SCC-Blue-Windom_2-light);
-  --b3-font-background10: var(--SCC-Green-186-lighter);
-  --b3-font-background11: var(--SCC-Yellow-HellisePotter-light);
-  --b3-font-background12: var(--SCC-Orange-Windom-light);
+  --b3-font-background1: #e11111c5;
+  --b3-font-background2: #df33ccc5;
+  --b3-font-background3: #9a58fdc5;
+  --b3-font-background4: #58a8ffc5;
+  --b3-font-background5: #c1ac7cc5;
+  --b3-font-background6: #aaaaaac5;
+  --b3-font-background7: #9a7479c5;
+  --b3-font-background8: #338866c5;
+  --b3-font-background9: #119911c5;
+  --b3-font-background10: #00ee70c5;
+  --b3-font-background11: #efaf5fc5;
+  --b3-font-background12: #ea9100c5;
   --b3-font-background13: var(--b3-theme-on-background);
 
   /* 动画效果 */
   --b3-transition: all 0.31s cubic-bezier(0, 0, 0.2, 1) 0ms;
-  --b3-width-transition: width 0.31s cubic-bezier(0, 0, 0.2, 1) 0ms;
+  --b3-width-transition: width .15s cubic-bezier(0.22, 0.61, 0.36, 1) 0ms;
 
   /* 阴影 */
   --b3-point-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
@@ -91,18 +99,18 @@
   --b3-protyle-search-current-background: #a5d3fe;
 
   /* 代码片段背景 */
-  --b3-protyle-code-background: rgba(27, 31, 35, 0.05);
+  --b3-protyle-code-background: rgba(37, 41, 55, 0.58);
   --b3-protyle-code-linenumber-hl: transparent;
 
   /* 所见即所得行内元素颜色 */
-  --b3-protyle-inline-strong-color: #202124;
-  --b3-protyle-inline-em-color: #202124;
-  --b3-protyle-inline-s-color: #58585831;
+  --b3-protyle-inline-strong-color: #66f144;
+  --b3-protyle-inline-em-color: #bbbcbc; /* 斜体字色 */
+  --b3-protyle-inline-s-color: #a8a2a1c5; /* 删除线字色 */
   --b3-protyle-inline-link-color: var(--SCC-Blue-Windom_2); /* 超链接字色 */
   --b3-protyle-inline-mark-background: #ffe955;
   --b3-protyle-inline-mark-color: #202124;
   --b3-protyle-inline-tag-color: #5f6368;
-  --b3-protyle-inline-blockref-color: #f4387a; /* 块引用字色 */
+  --b3-protyle-inline-blockref-color: var(--SCC-Red-WPS); /* 块引用字色 */
 
   /* PDF */
   --b3-pdf-selection: #d0e9c8;
@@ -118,15 +126,30 @@
 }
 
 #commonMenu,
-#commonMenu button {
+#commonMenu button,
+.b3-list--background .b3-list-item {
   background-color: #28282813;
   backdrop-filter: blur(31px);
   border-radius: 0px;
 }
 
 .block__popover.block__popover--move.block__popover--open {
-    background-color: var(--b3-theme-background) !important;
-    box-shadow:#77777777 0px 0px 0px 3px !important;
-    opacity: .98 !important;
-    transition: all 0.2s ease-in-out;
+  background-color: var(--b3-theme-background) !important;
+  box-shadow: #77777777 0px 0px 0px 3px !important;
+  opacity: 0.98 !important;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type~="block-ref"],
+.protyle-wysiwyg [data-node-id] span[data-type~="file-annotation-ref"] {
+  box-shadow: #58585858 0px 0px 0px 1px;
+}
+
+.b3-tab-container {
+  background-color: var(--b3-theme-background);
+  opacity: .96;
+  background-color: #20192135;
+}
+
+.b3-list--background .b3-list-item:hover:not(.b3-list-item--focus) {
+  background-color: #a1a2a335;
 }
