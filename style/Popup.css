@@ -93,7 +93,7 @@ body.android .b3-button--outline {
 
 /* 检查框开关样式 */
 .b3-switch{
-  border-radius: 5.8px;
+  border-radius: 3.1px;
   box-shadow: #585858 -1px -1px 3px 0px;
 }
 .b3-switch:after {
