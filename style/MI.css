@@ -3,11 +3,11 @@
 
 /* 块滚动条 */
 .protyle-scroll .b3-slider {
-  opacity: 0;
+  opacity: var(--SCC-baseProperty-Opacity-B);
 }
 
 .protyle-scroll .b3-slider:hover {
-  opacity: .58;
+  opacity: 1;
 }
 
 /* fix Android Pad 端竖屏状态下，【设置】搜索输入时被输入法面板顶出可视范围 #125 */

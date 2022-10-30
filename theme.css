@@ -15,6 +15,7 @@
 @import url("style/MI-Breadcrumb.css"); */
 
 @import url("style/MI-TagTree.css");
+@import url("style/MI-HDTree.css");
 @import url("style/MI-Dynamic.css");
 
 @import url("style/Popup.css");
@@ -38,19 +39,3 @@
 @import url("style/Block-HR.css");
 
 @import url("style/Patch.css");
-
-
-
-@media screen and (min-width: 960px) {
-
-    /* 取消注释后右上角窗口三大按钮始终显示 */
-    /* #windowControls svg {
-        opacity: 1 !important;
-    } */
-    /* 优化右上角窗口关闭按钮焦点样式，不适用于思源2.4.3 */
-    #closeWindow:hover svg {
-        color: var(--SCC-Gray-HellisePotter) !important;
-    }
-
-}
-
