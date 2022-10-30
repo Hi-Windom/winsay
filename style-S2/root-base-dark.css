@@ -16,6 +16,7 @@
   --SCC-baseComponent-Inline-virtual-block-ref-border-bottom: 1px dotted
     #eeffeec5;
   --SCC-baseComponent-Inline-virtual-block-ref-bg-color-hover: #ccccccc5;
+  --SCC-baseComponent-Inline-tag-bg-color: #337755;
   /* 块引用波浪线动画图标 | The icon of wavy line animation */
   --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/icon/wavy-line.svg);
   /* 卡片背景 */
@@ -138,4 +139,10 @@
 .protyle-wysiwyg [data-node-id] span[data-type~="block-ref"],
 .protyle-wysiwyg [data-node-id] span[data-type~="file-annotation-ref"] {
   box-shadow: #58585858 0px 0px 0px 1px;
+}
+
+.b3-tab-container {
+  background-color: var(--b3-theme-background);
+  opacity: .96;
+  background-color: #20192135;
 }

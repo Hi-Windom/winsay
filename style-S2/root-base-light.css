@@ -14,6 +14,7 @@
   --SCC-baseComponent-EmbedBlock-box-shadow: inset 9px 9px 29px #cacfde, inset -9px -9px 29px #f2f7ff;
   --SCC-baseComponent-Inline-virtual-block-ref-border-bottom: 1px dotted var(--SCC-Red-WPS-lighter);
   --SCC-baseComponent-Inline-virtual-block-ref-bg-color-hover: #ffffffc5;
+  --SCC-baseComponent-Inline-tag-bg-color: var(--SCC-White-light);
   /* 块引用波浪线动画图标 | The icon of wavy line animation */
   --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/icon/wavy-line.svg);
   /* 卡片背景 */

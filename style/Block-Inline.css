@@ -16,7 +16,7 @@
 
 /* 普通标签tag样式 */
 .protyle-wysiwyg [data-node-id]:not([data-type="NodeHeading"]) span[data-type~=tag] {
-    background-color: var(--SCC-White-light);
+    background-color: var(--SCC-baseComponent-Inline-tag-bg-color);
     transition: all .2s cubic-bezier(0.645, 0.045, 0.355, 1);
     color: var(--text-focus);
     border-radius: 5px;

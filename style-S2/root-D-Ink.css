@@ -19,7 +19,7 @@
     /* 文字颜色 */
     --b3-theme-on-primary: #fff;
     --b3-theme-on-secondary: #fff;
-    --b3-theme-on-background: var(--SCC-White); /* 默认字色 */
+    --b3-theme-on-background: var(--SCC-White-light); /* 默认字色 */
     --b3-theme-on-surface: var(--SCC-White-light); /* 此色影响顶部栏图标颜色和不少界面区域中的文字颜色 */
     --b3-theme-on-surface-light: var(--SCC-primary-light);
     --b3-theme-on-error: #fff; /* 不修改 */
