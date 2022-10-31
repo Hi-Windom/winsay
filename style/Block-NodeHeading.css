@@ -7,7 +7,6 @@
 /* 设置标题左边icon的样式 */
 .protyle-title__icon {
   top: 1em;
-  left: -2em;
 }
 
 .protyle-title span svg {
