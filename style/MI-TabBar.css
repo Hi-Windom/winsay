@@ -79,7 +79,7 @@ body:not(.android) ul.layout-tab-bar.layout-tab-bar--readonly {
 }
 
 /* 右侧dock栏被遮挡 #208 */
-body:not(.android) .dock#dockRight {
+.dock#dockRight {
   z-index: 10;
 }
 body.android ul.layout-tab-bar.layout-tab-bar--readonly {
@@ -93,6 +93,7 @@ body.android ul.layout-tab-bar.layout-tab-bar--readonly {
   border-bottom: 3px ridge #ffffff13;
   background-color: #ffffff13;
   backdrop-filter: blur(1.86px);
+  z-index: 9;
 }
 body:not(.android) ul.layout-tab-bar.layout-tab-bar--readonly li.item--readonly {
   padding: 0px;
