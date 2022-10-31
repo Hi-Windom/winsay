@@ -37,12 +37,11 @@
 
 
 
-/* PDF */
-.textLayer,
+/* 暗黑模式下选择明亮模式显示PDF异常 #205 */
+/* .textLayer,
 .pdf__resize {
-    /* dark 蓝色、紫色背景显示不清楚，文档位于 https://github.com/siyuan-note/siyuan/issues/5351 */
     mix-blend-mode: multiply;
-}
+} */
 
 
 /* pdf导出界面有两部分，左边预览界面是#preview，右边设置界面是#action */
