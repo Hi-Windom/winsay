@@ -148,6 +148,7 @@ body:not(.android) ul.layout-tab-bar li [title="更多"] svg:hover {
   > div.protyle-breadcrumb
   > button {
   background-color: transparent !important;
+  margin-right: 9px;
 }
 /* li.item.item--readonly .item__close[title="新建文档"] + span.fn__flex-1 {
   display: none;
