@@ -16,6 +16,8 @@
   --SCC-baseComponent-Inline-virtual-block-ref-bg-color-hover: #ccccccc5;
   --SCC-baseComponent-Inline-tag-bg-color: #337755;
   --SCC-baseComponent-Input-box-shadow-focus: none;
+  --SCC-baseComponent-search__header-input-box-shadow: rgb(128 81 231 / 31%) 3px 3px 6px 0px inset, rgb(255 255 255 / 50%) -3px -3px 6px 1px inset;
+  --SCC-baseComponent-search__header-input-box-shadow-focus: rgb(128 81 231 / 31%) 3px 3px 6px 0px inset, rgb(255 255 255 / 50%) -3px -3px 6px 1px inset;
   --SCC-baseComponent-Switch-checked-ab-color: #999;
   --SCC-baseComponent-breadcrumb__bar-color: #999999;
   --SCC-baseComponent-breadcrumb-box-shadow: none;

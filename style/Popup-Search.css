@@ -24,3 +24,11 @@
     min-height: calc(100% - 50px - 53px) !important;
   }
 }
+
+/* 设置界面搜索框 */
+.search__header .b3-text-field--text {
+  box-shadow: var(--SCC-baseComponent-search__header-input-box-shadow);
+}
+.search__header .b3-text-field--text:focus {
+  box-shadow: var(--SCC-baseComponent-search__header-input-box-shadow-focus);
+}
