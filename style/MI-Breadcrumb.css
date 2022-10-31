@@ -1,66 +1,84 @@
-@media screen and (min-width: 960px) {
-  /* 将当前打开文档面包屑设置为毛玻璃效果 */
-  /* 面包屑毛玻璃导致思源v2.4.6块滚动条无法跟随滚动 #154 暂不解决，等待后续方案 */
-  .protyle-breadcrumb {
-    position: var(--SCC-baseComponent-breadcrumb-position);
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    background-color: var(--b3-theme-background-light);
-    backdrop-filter: blur(15px);
-    z-index: 10;
-    font-size: 13px !important;
-    width: calc(100% - 9px);
-    margin-right: 0;
-    opacity: 0.95;
-    box-shadow: var(--SCC-baseComponent-breadcrumb-box-shadow);
-  }
-  /* 当前打开文档的面包屑 */
-  #layouts .layout__wnd--active .protyle-breadcrumb .protyle-breadcrumb__bar {
-    opacity: var(--SCC-baseProperty-Opacity-A);
-  }
-  /* 依次为 反链面板中【反向链接】、【提及】、嵌入块的面包屑 */
-  .backlinkList .protyle-breadcrumb__bar,
-  .backlinkMList .protyle-breadcrumb__bar,
-  .protyle-wysiwyg__embed .protyle-breadcrumb__bar {
-    opacity: 0.31 !important;
-  }
-  /* 弹出面板的面包屑 */
-  .block__popover .protyle-breadcrumb__bar {
-    opacity: 0.58 !important;
-  }
-  .protyle-breadcrumb:hover .protyle-breadcrumb__bar,
-  .protyle-breadcrumb__bar:hover {
-    opacity: 1 !important;
-  }
-  .protyle-breadcrumb__item {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    padding: 4px;
-    line-height: 16px;
-    height: 16px;
-    border-radius: 4px;
-    margin: 3px 0;
-    color: var(--SCC-baseComponent-breadcrumb__bar-color);
-    max-width: 70%;
-  }
+/* 将当前打开文档面包屑设置为毛玻璃效果 */
+/* 面包屑毛玻璃导致思源v2.4.6块滚动条无法跟随滚动 #154 暂不解决，等待后续方案 */
 
-  /* 依次为 打开的文档、引用悬浮面板 设置上边距避免被遮挡，排除了反链面板 */
-  #layouts .layout__center div:not(.backlinkList) .protyle-content,
-  .block__popover.block__popover--move.block__popover--open > div.block__content div.protyle-content {
-    float: left;
-    padding-top: 30px;
-  }
-
-  /* 设置面包屑中icon大小 */
-  .protyle-breadcrumb__item svg {
-    height: 13px;
-    width: 13px;
-  }
-
-  .protyle-breadcrumb__item:hover,
-  .protyle-breadcrumb__item--active {
-    background-color: transparent !important;
-  }
+/* 聚焦模式不隐藏面包屑 */
+#layouts .layout__wnd--active .protyle-breadcrumb:not(:has(.protyle-breadcrumb__item:first-child:not(.protyle-breadcrumb__item--active))) {
+  position: var(--SCC-baseComponent-breadcrumb-position);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: var(--b3-theme-background-light);
+  backdrop-filter: blur(15px);
+  z-index: 10;
+  font-size: 13px !important;
+  width: 100%;
+  margin-right: 0;
+  opacity: 0;
+  box-shadow: var(--SCC-baseComponent-breadcrumb-box-shadow);
+  transition-delay: 0.31s;
 }
+#layouts .layout__wnd--active .protyle-breadcrumb:not(:has(.protyle-breadcrumb__item:first-child:not(.protyle-breadcrumb__item--active))):hover {
+  position: var(--SCC-baseComponent-breadcrumb-position);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: var(--b3-theme-background-light);
+  backdrop-filter: blur(15px) brightness(0.9);
+  z-index: 10;
+  font-size: 13px !important;
+  width: 100%;
+  margin-right: 0;
+  opacity: 1;
+  box-shadow: var(--SCC-baseComponent-breadcrumb-box-shadow);
+  transition-delay: 0.31s;
+}
+/* 当前打开文档的面包屑 */
+#layouts
+  .layout__wnd--active
+  .protyle-breadcrumb
+  .protyle-breadcrumb__bar
+  .protyle-breadcrumb__item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  line-height: 16px;
+  height: 16px;
+  border-radius: 4px;
+  margin: 3px 0;
+  opacity: var(--SCC-baseProperty-Opacity-A);
+  color: var(--SCC-baseComponent-breadcrumb__bar-color);
+  max-width: 70%;
+}
+
+/* 依次为 反链面板中【反向链接】、【提及】、嵌入块的面包屑 */
+.backlinkList .protyle-breadcrumb__bar,
+.backlinkMList .protyle-breadcrumb__bar,
+.protyle-wysiwyg__embed .protyle-breadcrumb__bar {
+  opacity: 0.31;
+}
+/* 弹出面板的面包屑 */
+.block__popover .protyle-breadcrumb__bar {
+  opacity: 0.58;
+}
+.protyle-breadcrumb__bar:hover,
+.protyle-breadcrumb__item:hover,
+.protyle-breadcrumb:hover .protyle-breadcrumb__bar,
+.protyle-breadcrumb__bar:hover .protyle-breadcrumb__item {
+  opacity: 1 !important;
+}
+/* 依次为 打开的文档、引用悬浮面板 设置上边距避免被遮挡，排除了反链面板 */
+#layouts .layout__center div:not(.backlinkList) .protyle-content,
+.block__popover.block__popover--move.block__popover--open
+  > div.block__content
+  div.protyle-content {
+  float: left;
+  padding-top: 30px;
+}
+
+/* 设置面包屑中icon大小 */
+.protyle-breadcrumb__item svg {
+  height: 13px;
+  width: 13px;
+}
+

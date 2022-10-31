@@ -211,8 +211,8 @@ function compareVersion(version1, version2) {
 function isPhone() {
   return document.getElementById("toolbar") == null;
 }
-// 安卓手机：android + mobile
-// 安卓平板：android + desktop
+// 安卓手机：android + body--mobile
+// 安卓平板：android + body--desktop
 /**
  * 获取操作系统 'windows' 或 'darwin' (MacOS) 或 'android'
  */

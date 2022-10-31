@@ -23,8 +23,8 @@ ul.layout-tab-bar .item--pin .item__text {
 }
 ul.layout-tab-bar .item:not(.item--pin) .item__text {
   width: auto;
-  min-width: 3em;
-  margin-right: 5px;
+  min-width: 1em;
+  margin-right: 1px;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
   white-space: nowrap !important;
@@ -42,30 +42,28 @@ ul.layout-tab-bar .item:not(.item--focus) .item__close svg {
   color: var(--SCC-Purple-Soledar);
   scale: 1.1;
 }
-.layout-tab-bar .item__close {
+/* .layout-tab-bar .item__close {
   padding: 11px 6px 11px 0;
-}
+} */
 
 /* 样式优化 */
 .layout-tab-bar.fn__flex,
 ul.fn__flex.layout-tab-bar li {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px; /* 影响【设置】-【集市】标签页 */
 }
-body:not(.android) ul.layout-tab-bar:not(.layout-tab-bar--readonly) {
+/* body:not(.android) ul.layout-tab-bar:not(.layout-tab-bar--readonly) {
   flex: 1;
   min-width: 100% !important;
   width: auto;
-  /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
 }
 body.android ul.layout-tab-bar:not(.layout-tab-bar--readonly) {
   flex: 1;
   min-width: calc(100% - 70px)  !important;
   width: auto;
-  /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
-}
+} */
 
 body:not(.android) ul.layout-tab-bar.layout-tab-bar--readonly {
-  flex-shrink: 0;
+  /* flex-shrink: 0;
   min-width: 70px;
   max-width: 70px;
   width: 70px;
@@ -74,7 +72,7 @@ body:not(.android) ul.layout-tab-bar.layout-tab-bar--readonly {
   padding-right: 42px;
   border-bottom: 3px ridge #ffffff13;
   background-color: #ffffff13;
-  backdrop-filter: blur(1.86px);
+  backdrop-filter: blur(1.86px); */
   z-index: 9;
 }
 
@@ -83,7 +81,7 @@ body:not(.android) ul.layout-tab-bar.layout-tab-bar--readonly {
   z-index: 10;
 }
 body.android ul.layout-tab-bar.layout-tab-bar--readonly {
-  flex-shrink: 0;
+  /* flex-shrink: 0;
   min-width: 111px;
   max-width: 111px;
   width: 111px;
@@ -92,29 +90,29 @@ body.android ul.layout-tab-bar.layout-tab-bar--readonly {
   padding-right: 31px;
   border-bottom: 3px ridge #ffffff13;
   background-color: #ffffff13;
-  backdrop-filter: blur(1.86px);
+  backdrop-filter: blur(1.86px); */
   z-index: 9;
 }
-body:not(.android) ul.layout-tab-bar.layout-tab-bar--readonly li.item--readonly {
+/* body:not(.android) ul.layout-tab-bar.layout-tab-bar--readonly li.item--readonly {
   padding: 0px;
   width: 100%;
   opacity: 0;
-}
+} */
 body:not(.android) ul.layout-tab-bar.layout-tab-bar--readonly li.item--readonly:hover {
   opacity: 1;
 }
 
-ul.layout-tab-bar li [title="新建文档"] {
+/* ul.layout-tab-bar li [title="新建文档"] {
   margin-left: 12px;
   margin-right: 16px;
   padding: 0;
   width: 15px;
-}
+} */
 ul.layout-tab-bar li [title="更多"] {
-  margin-left: 8px;
-  margin-right: 12px;
+  /* margin-left: 8px;
   padding: 0;
-  width: 15px;
+  width: 15px; */
+  margin-right: 12px;
 }
 body.android ul.layout-tab-bar li [title="新建文档"] svg,
 body.android ul.layout-tab-bar li [title="更多"] svg {
@@ -130,11 +128,11 @@ body.android ul.layout-tab-bar li [title="更多"] svg {
 }
 body:not(.android) ul.layout-tab-bar li [title="新建文档"] svg,
 body:not(.android) ul.layout-tab-bar li [title="更多"] svg {
-  color: var(--SCColor) !important;
+  color: var(--b3-theme-primary-light) !important;
   scale: 1.58 !important;
   padding: 0 !important;
   text-align: center !important;
-  opacity: 0;
+  /* opacity: 0; */
 }
 body:not(.android) ul.layout-tab-bar li [title="新建文档"] svg:hover,
 body:not(.android) ul.layout-tab-bar li [title="更多"] svg:hover {
@@ -150,10 +148,11 @@ body:not(.android) ul.layout-tab-bar li [title="更多"] svg:hover {
   > div.protyle-breadcrumb
   > button {
   background-color: transparent !important;
+  margin-right: 9px;
 }
-li.item.item--readonly .item__close[title="新建文档"] + span.fn__flex-1 {
+/* li.item.item--readonly .item__close[title="新建文档"] + span.fn__flex-1 {
   display: none;
-}
+} */
 
 .layout-tab-bar .item {
   min-height: 35px;

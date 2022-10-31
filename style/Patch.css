@@ -1,5 +1,11 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
+/* 只读模式提示 #214 */
+.fn__flex-1.protyle:has(div[contenteditable="false"][data-doc-type="NodeDocument"]):hover {
+  background-color: #cccccc13;
+  backdrop-filter: brightness(0.96);
+}
+
 /* 优化右上角窗口关闭按钮焦点样式，不适用于思源2.4.3 */
 #closeWindow:hover svg {
   color: var(--SCC-Gray-HellisePotter) !important;
@@ -21,10 +27,6 @@ body
   background-color: var(--b3-theme-primary-lightest);
   box-shadow: rgb(254 239 234 / 40%) 0px 3px, rgb(0 6 85 / 30%) 0px 5px,
     rgb(72 69 80 / 10%) 0px 8px;
-}
-
-.protyle-background {
-  margin-right: 1px;
 }
 
 /* Android Pad 端拖拽页签异常问题 #120
