@@ -137,8 +137,8 @@ body.darwin #toolbar:hover {
   opacity: 0;
 }
 #toolbar:hover #drag {
-  opacity: 0.58;
-  color: var(--SCColor);
+  opacity: var(--SCC-baseProperty-Opacity-C);
+  color: var(--SCC-baseComponent-toolbar-drag-color);
 }
 
 #toolbar:hover svg {
