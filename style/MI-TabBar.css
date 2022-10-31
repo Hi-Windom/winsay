@@ -256,10 +256,9 @@ li.item.item--pin.item--focus:after {
   width: 13px;
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 500px) {
   /* 宽度过小时隐藏 */
-  ul.layout-tab-bar li [title="新建文档"],
-  ul.layout-tab-bar li [title="更多"] {
+  ul.layout-tab-bar:has([title="更多"]) {
     display: none;
   }
 }
