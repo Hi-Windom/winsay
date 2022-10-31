@@ -1,0 +1,22 @@
+@media screen and (min-width: 1300px) {
+  .b3-dialog__container[style*="80vw"] > div > .fn__flex > .fn__flex-column {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+  }
+  .b3-dialog__container[style*="80vw"] .search__header,
+  .b3-dialog__container[style*="80vw"] .b3-form__space--small {
+    width: 100%;
+  }
+  .b3-dialog__container[style*="80vw"] .search__header,
+  .b3-dialog__container[style*="80vw"] .b3-form__space--small {
+    width: 100%;
+  }
+  .b3-dialog__container[style*="80vw"] .b3-form__space--small {
+    margin: 0;
+    padding: 13px 22px 13px 0px;
+  }
+  .b3-dialog__container[style*="80vw"] #searchList {
+    float: left;
+    width: 45%;
+  }
+}
