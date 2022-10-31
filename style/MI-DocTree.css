@@ -26,7 +26,7 @@
 }
 .fn__flex-1.fn__flex-column.file-tree.sy__file:hover ul.b3-list.b3-list--background {
   margin-left: 5.8px;
-  margin-right: 13px;
+  margin-right: 3px;
   outline: 1.3px ridge var(--b3-scroll-color);
   background-color: var(--b3-theme-surface);
   transition-duration: .31s;
@@ -44,7 +44,11 @@
   opacity: .9;
   background-color: #65432103;
   backdrop-filter: brightness(0.97);
-  margin-right: 22px;
+  margin-right: 12px;
+}
+
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul .b3-list-item {
+  margin: 0 3px 0px 0px !important;
 }
 
 /* 笔记本文字 */
@@ -56,11 +60,22 @@
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background:has(ul) > li .b3-list-item__text {
   color: var(--b3-theme-primary);
 }
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul > li .b3-list-item__icon {
+  font-size: 18px;
+  margin-right: 3px;
+  padding: 0px;
+}
 /* 文档文字 */
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul > ul > li .b3-list-item__text {
   color: var(--SCC-baseComponent-text-color-1);
-  font-size: 11pt !important;
-  font-weight: 186;
+  font-size: 9.5pt !important;
+  font-weight: 400;
+  letter-spacing: -0.31px;
+}
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul > ul > li .b3-list-item__icon {
+  font-size: 18px;
+  margin-right: 1px;
+  padding: 0px;
 }
 
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul > ul > li {

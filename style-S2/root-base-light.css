@@ -16,12 +16,16 @@
   --SCC-baseComponent-Inline-virtual-block-ref-bg-color-hover: #ffffffc5;
   --SCC-baseComponent-Inline-tag-bg-color: var(--SCC-White-light);
   --SCC-baseComponent-Input-box-shadow-focus: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  --SCC-baseComponent-search__header-input-box-shadow: none;
+  --SCC-baseComponent-search__header-input-box-shadow-focus: var(--SCC-baseComponent-Input-box-shadow-focus);
   --SCC-baseComponent-Switch-checked-ab-color: #fff;
   --SCC-baseComponent-breadcrumb__bar-color: var(--SCColor);
   --SCC-baseComponent-breadcrumb-box-shadow: rgba(222, 227, 240, 0.13) 1px 0px 6px, rgba(222, 227, 240, 0.13) 0px 8px 5px 1px inset;
   --SCC-baseComponent-breadcrumb-position: absolute;
+  --SCC-baseComponent-toolbar-drag-color: var(--SCColor);
   --SCC-baseProperty-Opacity-A: 0.85;
   --SCC-baseProperty-Opacity-B: 0;
+  --SCC-baseProperty-Opacity-C: 0.58;
   /* 块引用波浪线动画图标 | The icon of wavy line animation */
   --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/icon/wavy-line.svg);
   /* 卡片背景 */
