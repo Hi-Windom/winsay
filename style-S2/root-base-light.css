@@ -20,7 +20,7 @@
   --SCC-baseComponent-breadcrumb__bar-color: var(--SCColor);
   --SCC-baseComponent-breadcrumb-box-shadow: rgba(222, 227, 240, 0.13) 1px 0px 6px, rgba(222, 227, 240, 0.13) 0px 8px 5px 1px inset;
   --SCC-baseComponent-breadcrumb-position: absolute;
-  --SCC-baseProperty-Opacity-A: 0;
+  --SCC-baseProperty-Opacity-A: 0.85;
   --SCC-baseProperty-Opacity-B: 0;
   /* 块引用波浪线动画图标 | The icon of wavy line animation */
   --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/icon/wavy-line.svg);
