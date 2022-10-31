@@ -101,7 +101,7 @@ body.android .b3-button--outline {
   border: 1px solid #aaa;
   border-radius: 31%;
   background-color: #bbb;
-  transition: transform .31s cubic-bezier(0.18, 0.89, 0.32, 1.28),opacity .2s;
+  transition: transform .31s cubic-bezier(0.18, 0.89, 0.32, 1.28),opacity .2s !important;
 }
 .b3-switch:checked {
   opacity: .98;
