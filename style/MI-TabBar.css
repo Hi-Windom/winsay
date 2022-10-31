@@ -23,8 +23,8 @@ ul.layout-tab-bar .item--pin .item__text {
 }
 ul.layout-tab-bar .item:not(.item--pin) .item__text {
   width: auto;
-  min-width: 3em;
-  margin-right: 5px;
+  min-width: 1em;
+  margin-right: 1px;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
   white-space: nowrap !important;
@@ -128,7 +128,7 @@ body.android ul.layout-tab-bar li [title="更多"] svg {
 }
 body:not(.android) ul.layout-tab-bar li [title="新建文档"] svg,
 body:not(.android) ul.layout-tab-bar li [title="更多"] svg {
-  color: var(--SCColor) !important;
+  color: var(--b3-theme-primary-light) !important;
   scale: 1.58 !important;
   padding: 0 !important;
   text-align: center !important;
