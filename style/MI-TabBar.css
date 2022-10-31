@@ -77,6 +77,11 @@ body:not(.android) ul.layout-tab-bar.layout-tab-bar--readonly {
   backdrop-filter: blur(1.86px);
   z-index: 9;
 }
+
+/* 右侧dock栏被遮挡 #208 */
+body:not(.android) .dock#dockRight {
+  z-index: 10;
+}
 body.android ul.layout-tab-bar.layout-tab-bar--readonly {
   flex-shrink: 0;
   min-width: 111px;
