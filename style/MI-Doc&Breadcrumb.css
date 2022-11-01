@@ -5,7 +5,7 @@
 #layouts
   .layout__wnd--active
   .protyle-breadcrumb:not(:has(.protyle-breadcrumb__item:first-child:not(.protyle-breadcrumb__item--active))) {
-  position: var(--SCC-baseComponent-breadcrumb-position);
+  /* position: var(--SCC-baseComponent-breadcrumb-position); */
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -15,14 +15,14 @@
   font-size: 13px !important;
   width: 100%;
   margin-right: 0;
-  opacity: 0;
+  opacity: 0.58;
   box-shadow: var(--SCC-baseComponent-breadcrumb-box-shadow);
   transition-delay: 0.31s;
 }
 #layouts
   .layout__wnd--active
   .protyle-breadcrumb:not(:has(.protyle-breadcrumb__item:first-child:not(.protyle-breadcrumb__item--active))):hover {
-  position: var(--SCC-baseComponent-breadcrumb-position);
+  /* position: var(--SCC-baseComponent-breadcrumb-position); */
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -52,7 +52,7 @@
   margin: 3px 0;
   opacity: var(--SCC-baseProperty-Opacity-A);
   color: var(--SCC-baseComponent-breadcrumb__bar-color);
-  max-width: 70%;
+  max-width: 31%;
 }
 
 /* 依次为 反链面板中【反向链接】、【提及】、嵌入块的面包屑 */
@@ -77,7 +77,7 @@
   > div.block__content
   div.protyle-content {
   float: left;
-  padding-top: 30px;
+  /* padding-top: 30px; */
 }
 
 .b3-typography,
