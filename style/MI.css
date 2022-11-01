@@ -1,6 +1,39 @@
 /* 主界面UI */
 
 
+::-webkit-scrollbar {
+  width: 5px;
+} /* 这是针对缺省样式 (必须的) */
+:hover::-webkit-scrollbar {
+  width: 5px !important;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+} /* 滚动条的滑轨背景 */
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+:focus-within::-webkit-scrollbar-thumb {
+  background-color: var(--b3-theme-primary-lighter);
+} /* 滑块 */
+
+::-webkit-scrollbar-button {
+  background-color: transparent;
+}
+:focus-within::-webkit-scrollbar-button {
+  background-color: var(--b3-theme-primary-lightest);
+  width: 1px;
+  height: 3px;
+  border: 2px ridge var(--b3-theme-primary-light);
+} /* 滑轨两头的监听按钮 */
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+} /* 横向滚动条和纵向滚动条相交处尖角 */
+
+
 /* 块滚动条 */
 .protyle-scroll .b3-slider {
   opacity: var(--SCC-baseProperty-Opacity-B);
