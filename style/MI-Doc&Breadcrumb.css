@@ -41,6 +41,7 @@
   container-type: inline-size;
   container-name: docBreadrumb;
 }
+/* 面包屑文字长度自适应 #226 */
 @container docBreadrumb (max-width: 4000px) {
   .protyle-breadcrumb__bar:has(.protyle-breadcrumb__item:nth-of-type(2)) .protyle-breadcrumb__text {
     max-width: 50cqw;
