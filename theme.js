@@ -278,8 +278,8 @@ window.theme.changeThemeModeByEnv = function () {
         `/appearance/themes/Sofill-/style/MI-DocTree.css`
       );
       window.theme.updateStyle(
-        "MI-Breadcrumb",
-        `/appearance/themes/Sofill-/style/MI-Breadcrumb.css`
+        "MI-Doc&Breadcrumb",
+        `/appearance/themes/Sofill-/style/MI-Doc&Breadcrumb.css`
       );
       break;
   }
