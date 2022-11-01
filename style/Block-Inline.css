@@ -124,3 +124,10 @@ span[data-type=code]::after {
     background-color: var(--SCC-baseComponent-Inline-virtual-block-ref-bg-color-hover);
     transition: none;
 }
+
+/* 行内公式增加左右边距 #222 */
+.b3-typography .katex, .protyle-wysiwyg .katex {
+    font-size: 113%;
+    line-height: normal;
+    margin: 0 3px 0 3px;
+}
