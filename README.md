@@ -1,4 +1,4 @@
-# Sofill-主题：内部代号 [ winsay ]（风颂）
+# 🪁 Sofill-主题：内部代号 [ winsay ]（风颂）
 
 <p align="center">
     <img src="https://img.shields.io/pypi/l/color-theme-analyse.svg" alt="License">
@@ -16,18 +16,18 @@
 
 ## 🔭 更新预告
 
-暗黑模式也即将上线黑金蓝形态💥
+暗黑模式即将上线黑金蓝形态💥
 
-时间过的真快，0.66 是 `2210累计更新` 的最后一个版本啦，转眼间 Sofill- 主题上架也有16天了，让我们相约 ` 2211累计更新` 吧~
-[Sofill系列主题2210累计更新总结与2211累计更新展望](https://flowus.cn/hi-windom/share/7bd688fd-5ea3-4094-81e6-0ff0bcc61372) 我先挂个连接，~~有空可能会写~~
+0.66 是 `2210累计更新` 的最后一个版本啦，转眼间 Sofill- 主题上架也有17天了，让我们相约 ` 2211累计更新` 吧~
+[Sofill系列主题2210累计更新总结与2211累计更新展望](https://flowus.cn/hi-windom/share/7bd688fd-5ea3-4094-81e6-0ff0bcc61372) 我先挂个链接，~~有空可能会写~~
 
 ---
 
-## ✨ 修复一些问题并改进细节，带来更好体验
+## ✨ 优化视觉效果，带来更好体验
 
-> 版本详细更新详细内容请下滑查看
+> 版本更新详细内容请下滑查看
 
-宽度允许时搜索界面将呈现为左右布局；只读模式下鼠标聚焦文档加入了背景色提醒，同时聚焦时不再隐藏面包屑 👁️‍🗨️
+面包屑文字宽度实现自适应，最多支持层级深度为 7 的自适应显示。改进了一些不够优雅的细节 ~
 
 Sofill- 主题形态一览表如下 ✨
 
@@ -53,13 +53,17 @@ Sofill- 一直致力于“第二默认主题”，上架前已完成下表的真
 
 当然，以上只是有限的环境测试，尤其不涉及 Mac 和 Docker 端。加作者QQ好友不需要验证，欢迎反馈问题/提建议/参与内测~
 
-## 😍 主题特色介绍
+## 🏳️‍🌈 主题特色介绍
 
 ### 轻量化简洁风绛亽特色思源笔记主题
 
 <img src="https://b3logfile.com/siyuan/1662398123089/assets/Sofill-%E9%A2%84%E8%A7%88%E5%9B%BE_01-20221031164539-cigw4p5.png"/>
 
-多端适配，体积小巧的“第二默认主题”，明亮/暗黑多种形态随心切换 🏳️‍🌈
+多端适配，体积小巧的“第二默认主题”，明亮/暗黑多种形态随心切换 🎨
+
+如此合适，微风迎怀，永不疲劳的舒适体验 ⛳
+
+### 轻量化简洁风绛亽特色思源笔记主题
 
 [Sofill 系列主题对比](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E4%B8%BB%E9%A2%98%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9)  |  [Sofill 系列主题时间线 ](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E5%AE%B6%E6%97%8F%E6%97%B6%E9%97%B4%E7%BA%BF)
 
@@ -87,13 +91,36 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 
 ## 📜 集市更新版本日志
 
-> v0.60 ▶ v0.66
+> v0.66 ▶ v0.68
 
 ### 版本说明
 
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * 集市更新版本推送前会专门适配 Android 端，暂无 Mac 端和 Docker 端可供适配，欢迎加我QQ参与内测
 * [主题版本更新的详细信息](https://github.com/Hi-Windom/winsay/releases)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
+
+### 0.68 Release for 2211累计更新
+
+> 2022-11-01 released
+
+<p><a href="https://github.com/Hi-Windom/winsay/issues/173">
+<img src="https://img.shields.io/badge/SiYuan-2.4.8-green"/></a></p>
+
+引入特性：
+
+1. [面包屑文字长度自适应 · 0.68](https://github.com/Hi-Windom/winsay/issues/226)
+2. [滚动条样式 · 0.68](https://github.com/Hi-Windom/winsay/issues/229)
+3. [设置界面左侧栏高度自适应 · 0.68](https://github.com/Hi-Windom/winsay/issues/230)
+
+改进优化：
+
+1. [文档树失去焦点时隐藏已关闭笔记本 · 0.68](https://github.com/Hi-Windom/winsay/issues/221)
+2. [行内公式增加左右边距 · 0.68](https://github.com/Hi-Windom/winsay/issues/222)
+3. [宽度不足时显示更多文档文字 · 0.68](https://github.com/Hi-Windom/winsay/issues/223)
+4. [去掉代码块语言前缀 · 0.68](https://github.com/Hi-Windom/winsay/issues/224)
+5. [输入框样式适用范围调整 · 0.68](https://github.com/Hi-Windom/winsay/issues/227)
+6. [默认字色跟随主题形态变化 · 0.68](https://github.com/Hi-Windom/winsay/issues/228)
+7. [明亮模式不再隐藏块滚动条，代价是取消面包屑毛玻璃效果 · 0.68](https://github.com/Hi-Windom/winsay/issues/225)
 
 ### v0.50 ~ v0.66 聚合说明
 
