@@ -120,6 +120,7 @@
     line-height: 1.31 !important;
     padding: 3px !important;
     margin: 1px 0 !important;
+    letter-spacing: 0px;
   }
   .li > .protyle-action {
     height: 30px;
@@ -132,6 +133,7 @@
     line-height: 1.58 !important;
     padding: 4px !important;
     margin: 4px 0 !important;
+    letter-spacing: 0.31px;
   }
   .li > .protyle-action {
     height: 34px;
