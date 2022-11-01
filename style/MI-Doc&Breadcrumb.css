@@ -52,7 +52,7 @@
   margin: 3px 0;
   opacity: var(--SCC-baseProperty-Opacity-A);
   color: var(--SCC-baseComponent-breadcrumb__bar-color);
-  max-width: 31%;
+  max-width: max(31%,100px);
 }
 
 /* 依次为 反链面板中【反向链接】、【提及】、嵌入块的面包屑 */
