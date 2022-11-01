@@ -60,13 +60,13 @@ body:not(.body--mobile) .protyle-wysiwyg .code-block {
   font-family: var(--b3-font-family-code);
 }
 
-.code-block .protyle-action .protyle-action__language::before {
+/* .code-block .protyle-action .protyle-action__language::before {
   content: "lang::";
   font-family: var(--b3-font-family-code);
   color: var(--SCC-baseComponent-CodeBlock-ab-color);
   top: 2px;
   bottom: 1px;
-}
+} */
 
 .code-block .protyle-action .protyle-action__language::after {
   content: "🎨";
@@ -111,7 +111,12 @@ body:not(.body--mobile) .code-block:after {
   color: var(--SCC-baseComponent-CodeBlock-ab-color);
   position: absolute;
   top: 1px;
+  opacity: .31;
 }
+body:not(.body--mobile) .code-block:hover:after {
+  opacity: 1;
+}
+
 
 /* 代码块顶部添加风格元素 ，适配移动端*/
 body.body--mobile .code-block::after {
