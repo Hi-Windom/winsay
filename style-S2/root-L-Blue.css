@@ -19,7 +19,7 @@
   /* 文字颜色 */
   --b3-theme-on-primary: #fff;
   --b3-theme-on-secondary: #fff;
-  --b3-theme-on-background: var(--SCC-Blue-Windom); /* 默认字色 */
+  --b3-theme-on-background: #131131; /* 默认字色 */
   --b3-theme-on-surface: var(
     --SCColor
   ); /* 此色影响顶部栏图标颜色和不少界面区域中的文字颜色 */
