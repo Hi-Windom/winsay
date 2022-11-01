@@ -24,7 +24,7 @@
   --SCC-baseComponent-breadcrumb-position: absolute;
   --SCC-baseComponent-toolbar-drag-color: var(--SCColor);
   --SCC-baseProperty-Opacity-A: 0.85;
-  --SCC-baseProperty-Opacity-B: 0;
+  --SCC-baseProperty-Opacity-B: 0.58;
   --SCC-baseProperty-Opacity-C: 0.58;
   /* 块引用波浪线动画图标 | The icon of wavy line animation */
   --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/icon/wavy-line.svg);

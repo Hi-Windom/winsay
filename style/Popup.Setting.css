@@ -4,6 +4,19 @@
   border-radius: 13px;
 }
 
+/* 设置界面左侧栏高度自适应 #230 */
+.b3-tab-bar.b3-list--background:has(li[data-name="editor"]) {
+  container-type: size;
+  container-name: settingLeft;
+}
+@container settingLeft (max-height: 2000px) {
+  li.b3-list-item--big {
+    padding: 0px 24px;
+    height: 9cqh;
+    min-height: 31px;
+}
+}
+
 /* 设置面板关闭按钮 */
 .b3-dialog--open .b3-dialog__container .b3-dialog__close {
   color: #ffffffa5;
