@@ -17,6 +17,12 @@
 }
 }
 
+/* 设置界面右侧区域边距自适应 #232 */
+.b3-tab-container .b3-label {
+  padding: 13px 0;
+  margin: 0 3.1cqw;
+}
+
 /* 设置面板关闭按钮 */
 .b3-dialog--open .b3-dialog__container .b3-dialog__close {
   color: #ffffffa5;
