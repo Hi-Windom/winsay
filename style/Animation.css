@@ -164,16 +164,6 @@
   animation: menu 0.2s ease-in-out;
 }
 /*侧栏展开动画*/
-#layouts
-  > .fn__flex
-  > .fn__flex-column
-  > .fn__flex
-  > div[data-type="wnd"]
-  > .layout-tab-container
-  > .fn__flex-column
-  ul::-webkit-scrollbar {
-  width: 0px; /* 允许滚动但不显示滚动条 */
-}
 @media screen and (min-width: 1300px) {
   #layouts
     > .fn__flex

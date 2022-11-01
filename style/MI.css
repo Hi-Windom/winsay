@@ -1,11 +1,10 @@
 /* 主界面UI */
 
-
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 5.8px;
 } /* 这是针对缺省样式 (必须的) */
 :hover::-webkit-scrollbar {
-  width: 5px !important;
+  width: 5.8px !important;
 }
 
 ::-webkit-scrollbar-track {
@@ -15,6 +14,7 @@
 ::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
+
 :focus-within::-webkit-scrollbar-thumb {
   background-color: var(--b3-theme-primary-lighter);
 } /* 滑块 */
@@ -33,6 +33,11 @@
   background-color: transparent;
 } /* 横向滚动条和纵向滚动条相交处尖角 */
 
+/* 有些界面不需要滚动条 */
+.b3-tab-bar::-webkit-scrollbar,
+.b3-tab-container::-webkit-scrollbar {
+  width: 0px !important;
+}
 
 /* 块滚动条 */
 .protyle-scroll .b3-slider {
@@ -73,7 +78,7 @@ body.body--desktop .layout__resize--lr:after {
 }
 
 /*【集市】filter 宽度缩窄 #143 */
-#bazaarSelect  {
+#bazaarSelect {
   width: 100px;
   min-width: 100px;
 }
@@ -82,7 +87,11 @@ body.body--desktop .layout__resize--lr:after {
 body.body--desktop.android .fn__size200 {
   width: 131px;
 }
-body.body--desktop.android #keymapList > div.fn__flex > label:nth-child(3) > svg,
+body.body--desktop.android
+  #keymapList
+  > div.fn__flex
+  > label:nth-child(3)
+  > svg,
 body.body--desktop.android #searchByKey {
   display: none;
 }
@@ -228,8 +237,6 @@ body.body--mobile #status,
 .status__counter:hover{
     opacity: 1;
 } */
-
-
 
 /* 文档头部区域美化 */
 
