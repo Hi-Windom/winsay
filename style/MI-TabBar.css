@@ -150,9 +150,6 @@ body:not(.android) ul.layout-tab-bar li [title="更多"] svg:hover {
   background-color: transparent !important;
   margin-right: 9px;
 }
-/* li.item.item--readonly .item__close[title="新建文档"] + span.fn__flex-1 {
-  display: none;
-} */
 
 .layout-tab-bar .item {
   min-height: 35px;
@@ -268,47 +265,3 @@ li.item.item--pin.item--focus:after {
   }
 }
 
-/* 标签页【更多】弹出层缩窄 #92
-# 92 后续改进：增加动画 #136 */
-/* #commonMenu {
-  max-height: 80vh !important;
-  overflow-y: scroll !important;
-  因共用ID，启用会造成样式污染
-} */
-#commonMenu:has(button):not(:has(button.b3-menu__item--readonly)):not(:has(.b3-menu__item--show)):not(:has(.b3-menu__separator)):not(:has(input)) {
-  overflow-y: scroll;
-  max-height: min(88vh,1000px);
-  max-width: min(88vw,600px);
-}
-#commonMenu:has(button):not(:has(button.b3-menu__item--readonly)):not(:has(.b3-menu__item--show)):not(:has(.b3-menu__separator)):not(:has(input)) > .b3-menu__item--custom {
-  border-top: 1px solid #c2c2c231 !important;
-  animation: background-color-2 3.1s infinite alternate;
-  animation: letter-spacing-more-list-1 0.26s alternate;
-  transition-duration: 0.2s;
-  letter-spacing: .31px;
-}
-#commonMenu:has(button):not(:has(button.b3-menu__item--readonly)):not(:has(.b3-menu__item--show)):not(:has(.b3-menu__separator)):not(:has(input)) .b3-menu__item--custom .b3-menu__label {
-  margin-right: 5.8px !important;
-  padding-left: 5.8px !important;
-  word-break: break-all !important;
-  -webkit-line-clamp: 1 !important;
-  text-overflow: ellipsis !important;
-  white-space: nowrap !important;
-  overflow: hidden !important;
-  font-size: 16px !important;
-}
-body:not(.android) #commonMenu > button.b3-menu__item.b3-menu__item--custom:hover svg.b3-menu__action {
-  opacity: .58;
-  scale: 1.38;
-}
-body:not(.android) #commonMenu > button.b3-menu__item.b3-menu__item--custom.b3-menu__item--current svg.b3-menu__action:hover {
-  opacity: 1 !important;
-  scale: 1.38 !important;
-  color: var(--SCC-Red-WPS);
-}
-body.android #commonMenu > button.b3-menu__item.b3-menu__item--custom svg.b3-menu__action {
-  opacity: 1;
-  width: 10px;
-  height: 10px;
-  color: var(--SCC-Red-WPS);
-}

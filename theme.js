@@ -1,9 +1,31 @@
 window.theme = {};
-
+window.theme.config_UI = "/conf/appearance/themes/Sofill-/config/UI.json";
+window.api = {};
 window.theme.themeStyle = document.getElementById("themeStyle"); // 当前主题引用路径
 window.theme.THEME_ROOT = new URL(
   window.theme.themeStyle.href
 ).pathname.replace("theme.css", "");
+
+window.api.pushMessage = function (text) {
+  var url = `http://127.0.0.1:6806/api/notification/pushMsg`;
+  var httpRequest = new XMLHttpRequest();
+  httpRequest.open("POST", url, true);
+  httpRequest.setRequestHeader("Content-type", "application/json");
+  var obj = {
+    msg: text,
+    timeout: 7000,
+  };
+  httpRequest.send(JSON.stringify(obj));
+  // 响应后的回调函数
+  httpRequest.onreadystatechange = function () {
+    if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+      var json = httpRequest.responseText;
+      console.log(json);
+    }
+  };
+};
+
+// window.api.pushMessage("test");
 
 window.theme.ID_COLOR_STYLE = "theme-color-style";
 
@@ -40,6 +62,43 @@ window.theme.Iterator2 = function* (items) {
     yield items[i];
   }
 };
+
+// 支持修改默认形态 #234
+new Promise(function (response) {
+  var url = `http://127.0.0.1:6806/api/file/getFile`;
+  var httpRequest = new XMLHttpRequest();
+  httpRequest.open("POST", url, true);
+  httpRequest.setRequestHeader("Content-type", "application/json");
+  var obj = {
+    path: window.theme.config_UI,
+  };
+  httpRequest.send(JSON.stringify(obj));
+  // 响应后的回调函数
+  httpRequest.onreadystatechange = function () {
+    if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+      var json = httpRequest.responseText;
+      console.log(json);
+      response(JSON.parse(json));
+    }
+  };
+}).then(function (response) {
+  switch (window.theme.themeMode) {
+    case "dark":
+      window.theme.updateStyle(
+        window.theme.IDs.STYLE_COLOR,
+        `/appearance/themes/Sofill-/style-S2/${response.color.dark}`
+      );
+      break;
+    case "light":
+    default:
+      window.theme.updateStyle(
+        window.theme.IDs.STYLE_COLOR,
+        `/appearance/themes/Sofill-/style-S2/${response.color.light}`
+      );
+      break;
+  }
+});
+
 
 /**
  * 静态资源请求 URL 添加参数
@@ -206,7 +265,6 @@ function compareVersion(version1, version2) {
   return 0;
 }
 
-
 /**简单判断目前思源是否是手机模式（只能判断是手机） */
 function isPhone() {
   return document.getElementById("toolbar") == null;
@@ -262,10 +320,33 @@ window.theme.changeThemeModeByEnv = function () {
       break;
     default:
       window.theme.updateStyle("MI", `/appearance/themes/Sofill-/style/MI.css`);
-      window.theme.updateStyle(
-        "TabBar",
-        `/appearance/themes/Sofill-/style/MI-TabBar.css`
-      );
+      // window.theme.updateStyle(
+      //   "TabBar",
+      //   `/appearance/themes/Sofill-/style/MI-TabBar.css`
+      // );
+      new Promise(function (response) {
+        var url = `http://127.0.0.1:6806/api/file/getFile`;
+        var httpRequest = new XMLHttpRequest();
+        httpRequest.open("POST", url, true);
+        httpRequest.setRequestHeader("Content-type", "application/json");
+        var obj = {
+          path: window.theme.config_UI,
+        };
+        httpRequest.send(JSON.stringify(obj));
+        // 响应后的回调函数
+        httpRequest.onreadystatechange = function () {
+          if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+            var json = httpRequest.responseText;
+            console.log(json);
+            response(JSON.parse(json));
+          }
+        };
+      }).then(function (response) {
+        window.theme.updateStyle(
+          "TabBar",
+          `/appearance/themes/Sofill-/style/${response.style.TabBar}`
+        );
+      });
       break;
   }
   /* 根据不同设备加载样式配置文件 */
@@ -646,7 +727,6 @@ setTimeout(() => {
 }, 0);
 
 //++++++++++++++++++++++++++++++++++++++++api区域+++++++++++++++++++++++++++++++++++++++++++++++
-
 
 /**
  * 获得文本的占用的宽度
