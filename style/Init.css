@@ -63,7 +63,7 @@ ul * {
 
 /* 块标提示不被窗口线遮挡 */
 .protyle-gutters {
-  z-index: 3;
+  z-index: 2;
 }
 
 /* 表单设置不能拖拽缩放 */
