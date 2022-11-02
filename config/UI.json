@@ -1,5 +1,5 @@
 {
-  "style": { "TabBar": "sweet/MI-TabBar-V.css" },
+  "style": { "TabBar": "MI-TabBar.css" },
   "script": null,
   "color": {"light": "root.css","dark":"root-D-InkGreenPurple.css"},
   "qq": "694357845"
