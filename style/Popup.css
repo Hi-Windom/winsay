@@ -110,6 +110,53 @@ input:not(.b3-switch):not(.b3-slider):not(#keymapInput):hover {
   border-color: var(--SCC-baseComponent-Switch-checked-ab-color);
 }
 
+/* 滑块slider样式 #242 */
+
+.b3-slider {
+  height: 27px;
+}
+.b3-slider::-webkit-slider-runnable-track {
+  height: 3px;
+  box-shadow: 0 0 4px 1px #acacbc31;
+  background: #87654321;
+  backdrop-filter: brightness(0.91);
+}
+.b3-slider::-webkit-slider-container {
+  padding: 0px;
+  height: 30px;
+  overflow: hidden;
+}
+
+.b3-slider::-webkit-slider-thumb {
+  transform: unset !important;
+  width: 15px;
+  height: 17px;
+  border: 1px ridge var(--b3-theme-primary);
+  border-radius: 31%;
+  margin-top: -7px;
+  background-color: var(--b3-theme-primary);
+  border-image: linear-gradient(
+      to right,
+      var(--SCC-baseComponent-Switch-checked-ab-color) 77%,
+      var(--b3-theme-primary-light) 95%,
+      var(--b3-theme-primary)
+    )
+    0 fill / 7 17 7 0 / 0 0 0 1000px;
+  box-shadow: 0px 0px 3px 2px var(--SCC-baseComponent-Switch-checked-ab-color);
+  transition: all 0.13s;
+}
+.b3-slider:hover::-webkit-slider-thumb {
+  border-image: linear-gradient(
+      to right,
+      var(--SCC-baseComponent-Switch-checked-ab-color) 77%,
+      var(--b3-theme-primary-light) 95%,
+      var(--b3-theme-primary)
+    )
+    0 fill / 5 18 5 0 / 0 0 0 1000px;
+  transition: all 0.13s;
+}
+
+
 /* 优化块级清除样式按钮显示效果 */
 .b3-menu__label > div[aria-label="清除样式"] span {
   color: var(--b3-theme-background);
