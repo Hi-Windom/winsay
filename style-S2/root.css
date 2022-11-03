@@ -44,7 +44,7 @@
   --b3-menu-background: var(--SCC-Gray-HellisePotter);
 
   /* 提示 */
-  --b3-tooltips-color: rgba(0, 0, 0, 0.54);
+  --b3-tooltips-color: #5A4D5Fc5;
 
   /* 遮罩 */
   --b3-mask-background: var(--SCC-primary-light);

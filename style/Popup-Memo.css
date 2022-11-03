@@ -28,3 +28,7 @@
   animation-fill-mode: both;
   animation-name: zoomIn;
 }
+
+.b3-tooltips {
+  -webkit-font-smoothing: subpixel-antialiased;
+}
