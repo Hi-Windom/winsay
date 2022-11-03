@@ -77,8 +77,9 @@ body:not(.android) ul.layout-tab-bar.layout-tab-bar--readonly {
 }
 
 /* 右侧dock栏被遮挡 #208 */
+/* barHelp弹出位置调整 #245 */
 .dock#dockRight {
-  z-index: 10;
+  z-index: 1;
 }
 body.android ul.layout-tab-bar.layout-tab-bar--readonly {
   /* flex-shrink: 0;
