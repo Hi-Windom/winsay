@@ -4,6 +4,8 @@
   --SCC-Component-selector-bg-color: var(--SCC-baseComponent-selector-bg-color);
   --SCC-Component-button-text-color: var(--SCC-Green-WPS);
   --SCC-Component-button-bg-color: var(--b3-theme-primary-lightest);
+  --SCC-Component-textarea-box-shadow: rgba(13, 58, 31, 0.1) 3px 3px 6px 0px inset,
+  rgba(238, 255, 250, 0.3) -3px -3px 30px 1px inset;
   /* 主色 */
   --b3-theme-primary: var(--SCC-Green-WPS);
   --b3-theme-primary-light: var(--SCC-Green-WPS-light);
