@@ -12,7 +12,7 @@ ul.fn__flex.layout-tab-bar li {
 
 /* 标签页鼠标悬浮时背景颜色 */
 ul.layout-tab-bar .item:not(.item--readonly):hover {
-  background-color: var(--SCC-Blue-Windom_2-lighter) !important;
+  background-color: var(--SCC-Component-TabBar-hover-background-color) !important;
 }
 
 /* 标签页中文字的相关设置 */

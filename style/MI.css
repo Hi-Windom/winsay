@@ -149,7 +149,7 @@ body.windows .toolbar--browser {
 }
 body.body--win32 #toolbar:hover,
 body.windows .toolbar--browser:hover {
-  /* background-color: transparent !important; */
+  background-color: transparent !important;
   box-sizing: border-box;
   height: 32px;
   line-height: 32px;
