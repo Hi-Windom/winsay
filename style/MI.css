@@ -161,7 +161,7 @@ body.darwin {
   box-sizing: border-box;
   height: 8px;
   line-height: 18px;
-  padding: 0 5px 0 69px; /* mac 端保持默认 69px 边距 */
+  padding: 0 5px 0 0px;
   border-bottom: 0px solid var(--b3-border-color);
   transition: all 0.13s ease-in-out;
 }
