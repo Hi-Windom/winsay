@@ -1,9 +1,4 @@
 :root {
-    /* --- */
-    --SCC-Component-selector-border: 1px solid var(--SCC-Purple-186-lighter);
-    --SCC-Component-selector-bg-color: var(--SCC-baseComponent-selector-bg-color);
-    --SCC-Component-button-text-color: var(--SCC-Gray-186);
-    --SCC-Component-button-bg-color: var(--b3-theme-primary-lightest);
     /* 主色 */
     --b3-theme-primary: #119966;
     --b3-theme-primary-light: #119966c5;
@@ -14,21 +9,24 @@
     --b3-theme-background-light: #0d0d0dc5;
     --b3-theme-surface: #0d0d0dc5;
     --b3-theme-surface-light: #0d0d0da5;
-    --b3-theme-error: #d23f31; /* 不修改 */
+    --b3-theme-error: #d23f31;
+    /* 不修改 */
 
     /* 文字颜色 */
     --b3-theme-on-primary: #fff;
     --b3-theme-on-secondary: #fff;
-    --b3-theme-on-background: var(--SCC-White-light); /* 默认字色 */
-    --b3-theme-on-surface: var(--SCC-White-light); /* 此色影响顶部栏图标颜色和不少界面区域中的文字颜色 */
+    --b3-theme-on-background: var(--SCC-White-light);
+    /* 默认字色 */
+    --b3-theme-on-surface: var(--SCC-White-light);
+    /* 此色影响顶部栏图标颜色和不少界面区域中的文字颜色 */
     --b3-theme-on-surface-light: var(--SCC-primary-light);
-    --b3-theme-on-error: #fff; /* 不修改 */
+    --b3-theme-on-error: #fff;
+    /* 不修改 */
 
     /* 顶部工具栏 */
     --b3-toolbar-background: var(--SCC-primary-lightest);
     --b3-toolbar-blur-background: #0d0d0dee;
     --b3-toolbar-color: var(--SCC-White-light);
-
 
     /* 线条 */
     --b3-border-color: unset;
@@ -43,9 +41,16 @@
     --b3-menu-background: #131313c5;
 
     /* 提示 */
-    --b3-tooltips-color: rgba(0, 0, 0, 0.54);
+    --b3-tooltips-color: #093904c5;
 
     /* 遮罩 */
     --b3-mask-background: #111213ee;
 
+    /* --- */
+    --SCC-Component-selector-border: 1px solid var(--SCC-Purple-186-lighter);
+    --SCC-Component-selector-bg-color: var(--SCC-baseComponent-selector-bg-color);
+    --SCC-Component-button-text-color: var(--SCC-Gray-186);
+    --SCC-Component-button-bg-color: var(--b3-theme-primary-lightest);
+    --SCC-Component-textarea-box-shadow: rgba(220, 220, 220, 0.1) 2px 2px 0px 111px inset, rgba(220, 220, 220, 0.1) 0px -2px 0px 0px inset;
+    --SCC-Component-TabBar-hover-background-color: #505855a5;
 }

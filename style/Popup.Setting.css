@@ -103,3 +103,7 @@ body > div.b3-dialog--open > div > div.b3-dialog__container  div.fn__flex-1.fn__
   opacity: .88;
   letter-spacing: .13px;
 }
+
+.b3-dialog__container textarea {
+  resize: vertical;
+}

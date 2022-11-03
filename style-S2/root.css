@@ -1,9 +1,4 @@
 :root {
-  /* --- */
-  --SCC-Component-selector-border: 1px solid var(--SCC-Purple-186-lighter);
-  --SCC-Component-selector-bg-color: var(--SCC-baseComponent-selector-bg-color);
-  --SCC-Component-button-text-color: var(--SCC-Purple-Soledar);
-  --SCC-Component-button-bg-color: var(--b3-theme-primary-lightest);
   /* 主色 */
   --b3-theme-primary: var(--SCC-Purple-Soledar);
   --b3-theme-primary-light: var(--SCC-Purple-Soledar-light);
@@ -44,8 +39,18 @@
   --b3-menu-background: var(--SCC-Gray-HellisePotter);
 
   /* 提示 */
-  --b3-tooltips-color: rgba(0, 0, 0, 0.54);
+  --b3-tooltips-color: #5A4D5Fc5;
 
   /* 遮罩 */
   --b3-mask-background: var(--SCC-primary-light);
+
+
+  /* --- */
+  --SCC-Component-selector-border: 1px solid var(--SCC-Purple-186-lighter);
+  --SCC-Component-selector-bg-color: var(--SCC-baseComponent-selector-bg-color);
+  --SCC-Component-button-text-color: var(--SCC-Purple-Soledar);
+  --SCC-Component-button-bg-color: var(--b3-theme-primary-lightest);
+  --SCC-Component-textarea-box-shadow: rgba(128, 81, 231, 0.31) 3px 3px 6px 0px inset,
+  rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  --SCC-Component-TabBar-hover-background-color: #dcd6f4a5;
 }

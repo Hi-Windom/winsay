@@ -12,7 +12,7 @@ ul.fn__flex.layout-tab-bar li {
 
 /* 标签页鼠标悬浮时背景颜色 */
 ul.layout-tab-bar .item:not(.item--readonly):hover {
-  background-color: var(--SCC-Blue-Windom_2-lighter) !important;
+  background-color: var(--SCC-Component-TabBar-hover-background-color) !important;
 }
 
 /* 标签页中文字的相关设置 */
@@ -51,16 +51,6 @@ ul.layout-tab-bar .item:not(.item--focus) .item__close svg {
 ul.fn__flex.layout-tab-bar li {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px; /* 影响【设置】-【集市】标签页 */
 }
-/* body:not(.android) ul.layout-tab-bar:not(.layout-tab-bar--readonly) {
-  flex: 1;
-  min-width: 100% !important;
-  width: auto;
-}
-body.android ul.layout-tab-bar:not(.layout-tab-bar--readonly) {
-  flex: 1;
-  min-width: calc(100% - 70px)  !important;
-  width: auto;
-} */
 
 body:not(.android) ul.layout-tab-bar.layout-tab-bar--readonly {
   /* flex-shrink: 0;
@@ -73,12 +63,13 @@ body:not(.android) ul.layout-tab-bar.layout-tab-bar--readonly {
   border-bottom: 3px ridge #ffffff13;
   background-color: #ffffff13;
   backdrop-filter: blur(1.86px); */
-  z-index: 9;
+  z-index: 1;
 }
 
 /* 右侧dock栏被遮挡 #208 */
+/* barHelp弹出位置调整 #245 */
 .dock#dockRight {
-  z-index: 10;
+  z-index: 1;
 }
 body.android ul.layout-tab-bar.layout-tab-bar--readonly {
   /* flex-shrink: 0;
@@ -91,7 +82,7 @@ body.android ul.layout-tab-bar.layout-tab-bar--readonly {
   border-bottom: 3px ridge #ffffff13;
   background-color: #ffffff13;
   backdrop-filter: blur(1.86px); */
-  z-index: 9;
+  z-index: 1;
 }
 /* body:not(.android) ul.layout-tab-bar.layout-tab-bar--readonly li.item--readonly {
   padding: 0px;

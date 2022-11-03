@@ -149,7 +149,7 @@ body.windows .toolbar--browser {
 }
 body.body--win32 #toolbar:hover,
 body.windows .toolbar--browser:hover {
-  /* background-color: transparent !important; */
+  background-color: transparent !important;
   box-sizing: border-box;
   height: 32px;
   line-height: 32px;
@@ -161,7 +161,7 @@ body.darwin {
   box-sizing: border-box;
   height: 8px;
   line-height: 18px;
-  padding: 0 5px 0 69px; /* mac 端保持默认 69px 边距 */
+  padding: 0 5px 0 0px;
   border-bottom: 0px solid var(--b3-border-color);
   transition: all 0.13s ease-in-out;
 }
@@ -312,4 +312,10 @@ body.android
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 1px,
     rgba(255, 255, 255, 0.3) 0px 8px 58px 1px,
     rgba(0, 0, 0, 0.2) 0px 3px 18px inset;
+}
+
+/* 图片资源protyle-action__drag控件美化 #241 */
+.protyle-wysiwyg [data-node-id] .img:hover .protyle-action__drag {
+  background: var(--b3-theme-primary-lighter);
+  box-shadow: var(--b3-theme-primary-light) 0px 50px 100px -20px, var(--b3-theme-primary-lighter) 0px 30px 60px -30px, var(--b3-theme-primary-lightest) 0px -2px 6px 0px inset;
 }
