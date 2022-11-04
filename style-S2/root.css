@@ -54,4 +54,6 @@
   rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
   --SCC-Component-TabBar-hover-background-color: #dcd6f4a5;
   --SCC-Component-HR-LG1: linear-gradient(to right, transparent, #58315858, transparent);
+  --SCC-Component-Inline-virtual-block-ref-border-bottom: 1px dotted #ce00ca;
+  --SCC-Component-Inline-virtual-block-ref-bg-color-hover: #ffffffc5;
 }

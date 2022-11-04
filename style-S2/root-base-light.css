@@ -12,8 +12,6 @@
   --SCC-baseComponent-Icon-arrow-color-1: var(--SCC-Gray);
   --SCC-baseComponent-EmbedBlock-bg-color: var(--SCC-Gray-HellisePotter);
   --SCC-baseComponent-EmbedBlock-box-shadow: inset 9px 9px 29px #cacfde, inset -9px -9px 29px #f2f7ff;
-  --SCC-baseComponent-Inline-virtual-block-ref-border-bottom: 1px dotted var(--SCC-Red-WPS-lighter);
-  --SCC-baseComponent-Inline-virtual-block-ref-bg-color-hover: #ffffffc5;
   --SCC-baseComponent-Inline-tag-bg-color: var(--SCC-White-light);
   --SCC-baseComponent-Input-box-shadow-focus: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   --SCC-baseComponent-search__header-input-box-shadow: none;

@@ -116,12 +116,12 @@ span[data-type=code]::after {
 
   /* 虚拟引用样式 #184 */
   .protyle-wysiwyg [data-node-id] span[data-type=virtual-block-ref] {
-    border-bottom: var(--SCC-baseComponent-Inline-virtual-block-ref-border-bottom);
+    border-bottom: var(--SCC-Component-Inline-virtual-block-ref-border-bottom);
     transition: none;
 }
 .protyle-wysiwyg [data-node-id] span[data-type=virtual-block-ref]:hover {
     border-bottom: 1.86px solid var(--b3-theme-primary);
-    background-color: var(--SCC-baseComponent-Inline-virtual-block-ref-bg-color-hover);
+    background-color: var(--SCC-Component-Inline-virtual-block-ref-bg-color-hover);
     transition: none;
 }
 
