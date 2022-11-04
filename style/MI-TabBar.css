@@ -17,7 +17,7 @@ body:not(.android) ul.fn__flex.layout-tab-bar li[data-type="tab-header"]:not(.it
 }
 body:not(.android) ul.fn__flex.layout-tab-bar li[data-type="tab-header"]:not(.item--pin):hover .item__close {
   width: 16px;
-  padding: 13px 13px 13px 0;
+  padding: 13px 8px 13px 0;
   transition: all 0.31s cubic-bezier(0.65, 0.05, 0.36, 1) 0.05s;
 }
 
