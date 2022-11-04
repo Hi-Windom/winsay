@@ -19,5 +19,5 @@
 .protyle-wysiwyg [data-node-id].hr {
     border: 0;
     padding-top: 1px;
-    background: linear-gradient(to right, transparent, #58588858, transparent);
+    background: var(--SCC-Component-HR-LG1);
 }

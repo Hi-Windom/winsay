@@ -53,4 +53,5 @@
   --SCC-Component-textarea-box-shadow: rgba(128, 81, 31, 0.1) 3px 3px 6px 0px inset,
   rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
   --SCC-Component-TabBar-hover-background-color: #fed5d0a5;
+  --SCC-Component-HR-LG1: linear-gradient(to right, transparent, #e5585958, transparent);
 }
