@@ -6,8 +6,6 @@
   --SCC-baseComponent-selector-bg-color: #313233ee;
   --SCC-baseComponent-text-color-1: var(--SCC-CommonD-text-color-1);
   --SCC-baseComponent-text-color-2: var(--SCC-CommonD-text-color-2);
-  --SCC-baseComponent-Table-tr-bg-color-1: transparent;
-  --SCC-baseComponent-Table-tr-bg-color-2: transparent;
   --SCC-baseComponent-Table-border-1: 0.25pt solid #58585858;
   --SCC-baseComponent-Icon-arrow-color-1: var(--SCC-White);
   --SCC-baseComponent-Inline-tag-bg-color: #337755;

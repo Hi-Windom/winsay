@@ -27,9 +27,9 @@ th, td {
 
 /* 表格奇偶行不同颜色 */
 tbody tr:nth-child(2n) {
-    background-color: var(--SCC-baseComponent-Table-tr-bg-color-2) !important;
+    background-color: var(--SCC-Component-Table-tr-bg-color-2) !important;
 }
 
 tbody tr:nth-child(2n + 1) {
-    background-color: var(--SCC-baseComponent-Table-tr-bg-color-1) !important;
+    background-color: var(--SCC-Component-Table-tr-bg-color-1) !important;
 }

@@ -58,4 +58,6 @@
   --SCC-Component-Inline-virtual-block-ref-bg-color-hover: #ffffffc5;
   --SCC-Component-EmbedBlock-bg-color: #50588803;
   --SCC-Component-EmbedBlock-box-shadow: inset 9px 9px 29px #38385813, inset -9px -9px 29px #f2f1f931;
+  --SCC-Component-Table-tr-bg-color-1: #fcfefa;
+  --SCC-Component-Table-tr-bg-color-2: #f7fcf013;
 }
