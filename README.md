@@ -18,13 +18,13 @@
 
 ### 短期计划💥
 
-* 暗黑模式即将上线黑金蓝形态
+* S2形态组暗黑模式即将上线黑金蓝形态
 * 护眼提示
 * 部分文档资源链接显示icon
 
 ### 中期计划⛳
 
-* 明亮模式计划增加太空银形态
+* S2形态组明亮模式计划增加太空银和文中红形态，新增S3形态组
 * 右侧面板悬浮
 * 支持配置文档面包屑表现形式
 * 智能大纲层级缩进
@@ -112,7 +112,7 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 
 ## 📜 集市更新版本日志
 
-> v0.68 ▶ v0.72
+> v0.68 ▶ v0.74
 
 ### 版本说明
 
@@ -120,9 +120,9 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 * 集市更新版本推送前会专门适配 Android 端，暂无 Mac 端和 Docker 端可供适配，欢迎加我QQ参与内测
 * [主题版本更新的详细信息](https://github.com/Hi-Windom/winsay/releases)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v0.68 ~ v0.72 聚合说明
+### v0.68 ~ v0.74 聚合说明
 
-> 2022-11-03 released
+> 2022-11-04 released
 
 <p><a href="https://github.com/Hi-Windom/winsay/issues/173">
 <img src="https://img.shields.io/badge/SiYuan-2.4.9-green"/></a>
@@ -154,6 +154,12 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 13. [屏蔽输入框聚焦样式 · Issue #248 · v0.72](https://github.com/Hi-Windom/winsay/issues/248)
 14. [图片资源protyle-action__drag控件美化 · Issue #241 · v0.72](https://github.com/Hi-Windom/winsay/issues/241)
 15. [代码片段textarea禁用水平拉伸 · Issue #243 · v0.72](https://github.com/Hi-Windom/winsay/issues/243)
+16. [安卓端隐藏开发者工具菜单项 · Issue #253 · v0.74](https://github.com/Hi-Windom/winsay/issues/253)
+17. [集市selector去除底色 · Issue #271 · v0.74](https://github.com/Hi-Windom/winsay/issues/271)
+18. [遮罩颜色跟随主题形态 · Issue #255 · v0.74](https://github.com/Hi-Windom/winsay/issues/255)
+19. [分割线颜色跟随主题形态 · Issue #257 · v0.74](https://github.com/Hi-Windom/winsay/issues/257)
+20. [虚拟引用颜色跟随主题形态 · Issue #258 · v0.74](https://github.com/Hi-Windom/winsay/issues/258)
+21. [嵌入块底色跟随主题形态 · Issue #262 · v0.74](https://github.com/Hi-Windom/winsay/issues/262)
 
 缺陷修复：
 
@@ -161,6 +167,7 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 2. [Mac 端左侧异常留白 · Issue #244 · v0.72](https://github.com/Hi-Windom/winsay/issues/244)
 3. [部分区域z-index层级混乱 · Issue #246 · v0.72](https://github.com/Hi-Windom/winsay/issues/246)
 4. [barHelp弹出层被遮挡 · Issue #245 · v0.72](https://github.com/Hi-Windom/winsay/issues/245)
+5. [Android Pad 端页签控件缩放问题 · Issue #270 · v0.74](https://github.com/Hi-Windom/winsay/issues/270)
 
 ### v0.50 ~ v0.66 聚合说明
 
@@ -231,50 +238,6 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 8. [右上角layout-tab-bar固定位置无法避免遮挡 · 0.64](https://github.com/Hi-Windom/winsay/issues/212)
 9. [switch开关动画未生效 · 0.66](https://github.com/Hi-Windom/winsay/issues/217)
 10. [页面间距不足时，文字标题icon显示不全 · 0.66](https://github.com/Hi-Windom/winsay/issues/216)
-
-### v0.40 ~ v0.48 聚合说明
-
-> 2022-10-25 released
-
-<p><a href="https://github.com/Hi-Windom/winsay/issues/104">
-<img src="https://img.shields.io/badge/SiYuan-2.4.5-green"/></a></p>
-
-引入特性：
-
-1. [多种块折叠态区分样式  ·  0.42](https://github.com/Hi-Windom/winsay/issues/81)
-2. [导出PDF界面样式调整  ·  0.44](https://github.com/Hi-Windom/winsay/issues/124)
-3. [#39 的实验性内容  ·  0.48](https://github.com/Hi-Windom/winsay/issues/147)
-
-改进优化：
-
-1. [标签页条样式调整 · 0.42](https://github.com/Hi-Windom/winsay/issues/117)
-2. [二级标题展开态鼠标悬浮样式补充  ·  0.44](https://github.com/Hi-Windom/winsay/issues/123)
-3. [Android Pad 端取消隐藏顶栏  ·  0.44](https://github.com/Hi-Windom/winsay/issues/121)
-4. [Android Pad 端代码显示彩条  ·  0.44](https://github.com/Hi-Windom/winsay/issues/122)
-5. [Android Pad 端始终显示侧栏操作控件  ·  0.44](https://github.com/Hi-Windom/winsay/issues/127)
-6. [Android Pad 端取消隐藏侧栏边框线  ·  0.44](https://github.com/Hi-Windom/winsay/issues/126)
-7. [Android 端protyle-background控件体验优化  ·  0.46](https://github.com/Hi-Windom/winsay/issues/131)
-8. [右下角统计区适当增加右填充  ·  0.46](https://github.com/Hi-Windom/winsay/issues/132)
-9. [# 92 后续改进：增加动画  ·  0.46](https://github.com/Hi-Windom/winsay/issues/136)
-10. [#6 的后续改进  ·  0.46](https://github.com/Hi-Windom/winsay/issues/135)
-11. [Android Pad 端禁止在文档树修改图标  ·  0.46](https://github.com/Hi-Windom/winsay/issues/139)
-12. [细节调整  ·  0.46](https://github.com/Hi-Windom/winsay/issues/142)
-13. [【设置】-【集市】filter 宽度缩窄  ·  0.46](https://github.com/Hi-Windom/winsay/issues/143)
-14. [MI调整  ·  0.48](https://github.com/Hi-Windom/winsay/issues/145)
-
-缺陷修复：
-
-1. [缩放界面引发代码块行号与代码行不对齐  ·  0.42](https://github.com/Hi-Windom/winsay/issues/116)
-2. [通用弹出层commonMenu样式污染  ·  (0.42)](https://github.com/Hi-Windom/winsay/issues/100)
-3. [文档树显示文档图标异常  ·  0.44](https://github.com/Hi-Windom/winsay/issues/119)
-4. [Android Pad 端竖屏状态下，【设置】搜索输入时被输入法面板顶出可视范围  ·  0.44](https://github.com/Hi-Windom/winsay/issues/125)
-5. [Android Pad 端长按页签引发透明度异常问题  ·  0.46](https://github.com/Hi-Windom/winsay/issues/120)
-6. [【设置】关闭按钮样式污染【设置】-【账号】账号名样式  ·  0.46](https://github.com/Hi-Windom/winsay/issues/134)
-7. [Android Pad 端竖屏状态下【设置】-【快捷键】布局问题  ·  0.46](https://github.com/Hi-Windom/winsay/issues/130)
-8. [Android Pad 端【新建文档】【更多】svg 未缩放  ·  0.46](https://github.com/Hi-Windom/winsay/issues/137)
-9. [Mac 端顶栏高度错误  ·  0.46](https://github.com/Hi-Windom/winsay/issues/138)
-10. [文档树缩放异常  ·  0.46](https://github.com/Hi-Windom/winsay/issues/140)
-11. [Android Pad 端长按文档树列表项引发透明度异常问题  ·  0.46](https://github.com/Hi-Windom/winsay/issues/141)
 
 ## 🎈 鸣谢
 
