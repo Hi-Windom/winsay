@@ -107,3 +107,8 @@ body > div.b3-dialog--open > div > div.b3-dialog__container  div.fn__flex-1.fn__
 .b3-dialog__container textarea {
   resize: vertical;
 }
+
+/* 集市selector去除底色 #271 */
+body > div.b3-dialog--open > div > div.b3-dialog__container > div:nth-child(3) > div > div.fn__flex-1.fn__flex > div:nth-child(7) > div > div.fn__flex-1 .b3-select.fn__size200 {
+ background-color: transparent !important;
+}

@@ -1,0 +1,9 @@
+/* 安卓端隐藏开发者工具菜单项 #253 */
+body.android #barDebug {
+    opacity: 0;
+    line-height: 13px;
+}
+
+body:not(.android) #barDebug,#barLock,#barFeedback {
+    line-height: 44px;
+}

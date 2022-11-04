@@ -42,7 +42,7 @@
   --b3-tooltips-color: #2A5A52c5;
 
   /* 遮罩 */
-  --b3-mask-background: var(--SCC-primary-light);
+  --b3-mask-background: #000404a3;
 
 
   /* --- */
@@ -53,4 +53,9 @@
   --SCC-Component-textarea-box-shadow: rgba(13, 58, 31, 0.1) 3px 3px 6px 0px inset,
   rgba(238, 255, 250, 0.3) -3px -3px 30px 1px inset;
   --SCC-Component-TabBar-hover-background-color: #a9baada5;
+  --SCC-Component-HR-LG1: linear-gradient(to right, transparent, #71866158, transparent);
+  --SCC-Component-Inline-virtual-block-ref-border-bottom: 1px dotted #135800;
+  --SCC-Component-Inline-virtual-block-ref-bg-color-hover: #ffffffc5;
+  --SCC-Component-EmbedBlock-bg-color: #f3f6a013;
+  --SCC-Component-EmbedBlock-box-shadow: inset 9px 9px 29px #11314813, inset -9px -9px 29px #eeeee058;
 }

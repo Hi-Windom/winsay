@@ -44,7 +44,7 @@
     --b3-tooltips-color: #093904c5;
 
     /* 遮罩 */
-    --b3-mask-background: #111213ee;
+    --b3-mask-background: #030002dc;
 
     /* --- */
     --SCC-Component-selector-border: 1px solid var(--SCC-Purple-186-lighter);
@@ -53,4 +53,9 @@
     --SCC-Component-button-bg-color: var(--b3-theme-primary-lightest);
     --SCC-Component-textarea-box-shadow: rgba(220, 220, 220, 0.1) 2px 2px 0px 111px inset, rgba(220, 220, 220, 0.1) 0px -2px 0px 0px inset;
     --SCC-Component-TabBar-hover-background-color: #505855a5;
+    --SCC-Component-HR-LG1: linear-gradient(to right, transparent, #58885858, transparent);
+    --SCC-Component-Inline-virtual-block-ref-border-bottom: 1px dotted #587163;
+    --SCC-Component-Inline-virtual-block-ref-bg-color-hover: #ffffffc5;
+    --SCC-Component-EmbedBlock-bg-color: var(--SCC-Cyan-186-lighter);
+    --SCC-Component-EmbedBlock-box-shadow: inset 9px 9px 29px #2d3f3e31, inset -9px -9px 29px #7c887c31;
 }

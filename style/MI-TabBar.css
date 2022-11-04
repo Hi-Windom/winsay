@@ -105,17 +105,19 @@ ul.layout-tab-bar li [title="更多"] {
   width: 15px; */
   margin-right: 12px;
 }
+body.android ul.layout-tab-bar li [title="新建文档"] span,
+body.android ul.layout-tab-bar li [title="更多"] span {
+  padding: 13px 8px 13px 0 !important;
+}
 body.android ul.layout-tab-bar li [title="新建文档"] svg,
 body.android ul.layout-tab-bar li [title="更多"] svg {
-  min-width: 20px !important;
-  width: 20px !important;
-  min-height: 20px !important;
-  height: 20px !important;
+  width: 13px !important;
+  height: 13px !important;
 }
 body.android ul.layout-tab-bar li [title="新建文档"] svg,
 body.android ul.layout-tab-bar li [title="更多"] svg {
   color: var(--SCColor) !important;
-  scale: 1.13 !important;
+  scale: 1.31 !important;
 }
 body:not(.android) ul.layout-tab-bar li [title="新建文档"] svg,
 body:not(.android) ul.layout-tab-bar li [title="更多"] svg {
