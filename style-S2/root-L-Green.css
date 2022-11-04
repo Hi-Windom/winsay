@@ -56,4 +56,6 @@
   --SCC-Component-HR-LG1: linear-gradient(to right, transparent, #71866158, transparent);
   --SCC-Component-Inline-virtual-block-ref-border-bottom: 1px dotted #135800;
   --SCC-Component-Inline-virtual-block-ref-bg-color-hover: #ffffffc5;
+  --SCC-Component-EmbedBlock-bg-color: #f3f6a013;
+  --SCC-Component-EmbedBlock-box-shadow: inset 9px 9px 29px #11314813, inset -9px -9px 29px #eeeee058;
 }
