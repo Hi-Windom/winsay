@@ -4,7 +4,8 @@
 /*引用块弹出框*/
 .block__popover {
   min-height: 13vh;
-  max-height: 58vh;
+  max-height: max(88vh,300px);
+  max-width: max(92vw,300px);
 }
 .block__popover.block__popover--move.block__popover--open {
   animation: menu 0.13s ease-in-out;

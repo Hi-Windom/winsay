@@ -54,8 +54,10 @@
   rgba(255, 230, 80, 0.31) -3px -3px 58px 1px inset;
   --SCC-Component-TabBar-hover-background-color: #ffe389a5;
   --SCC-Component-HR-LG1: linear-gradient(to right, #fff8cc13, #fff8ee58, #fff8cc13);
-  --SCC-Component-Inline-virtual-block-ref-border-bottom: 1px dotted #fcff01;
+  --SCC-Component-Inline-virtual-block-ref-border-bottom: 1px dotted var(--SCC-SGTC-32B);
   --SCC-Component-Inline-virtual-block-ref-bg-color-hover: #ffffffc5;
   --SCC-Component-EmbedBlock-bg-color: #eeb07113;
   --SCC-Component-EmbedBlock-box-shadow: inset 9px 9px 29px #58583113, inset -9px -9px 29px #f4f0ff13;
+  --SCC-Component-Table-tr-bg-color-1: var(--SCC-White-light);
+  --SCC-Component-Table-tr-bg-color-2: var(--SCC-White-lighter);
 }
