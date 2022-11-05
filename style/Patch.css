@@ -1,6 +1,7 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
-/* Android 手机端model元素禁用过渡 #283 */
+/* Android 手机端model元素禁用过渡 #283
+适用于 2.4.9 及更老版本思源 */
 #editor:focus-within + div + div + div + div + div {
   transition: height 0s;
 }
