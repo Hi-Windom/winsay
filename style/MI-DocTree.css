@@ -31,7 +31,7 @@
 }
 
 /* 【已关闭的笔记本】融入文档树样式 #202 */
-#layouts>div.fn__flex.fn__flex-1>div.fn__flex-column.fn__flex-shrink>div:nth-child(1)>div>div.layout-tab-container.fn__flex-1>div>ul {
+#layouts .fn__flex-column.file-tree.sy__file>ul {
   padding: 0px;
   margin-top: 9px;
   margin-left: 5px;
@@ -40,7 +40,12 @@
   transition: all .58s cubic-bezier(0.46, 0.03, 0.52, 0.96) .13s !important;
 }
 
-#layouts>div.fn__flex.fn__flex-1>div.fn__flex-column.fn__flex-shrink>div:nth-child(1)>div>div.layout-tab-container.fn__flex-1>div:hover>ul {
+#layouts .fn__flex-column.file-tree.sy__file>ul * {
+  opacity: 0;
+  transition-delay: .31s;
+}
+
+#layouts .fn__flex-column.file-tree.sy__file:hover>ul {
   border: 1.3px ridge var(--b3-scroll-color);
   opacity: .9;
   background-color: #65432103;
@@ -48,11 +53,7 @@
   margin-right: 7px;
 }
 
-#layouts>div.fn__flex.fn__flex-1>div.fn__flex-column.fn__flex-shrink>div:nth-child(1)>div>div.layout-tab-container.fn__flex-1>div>ul:not(.fn__flex-1) .b3-list-item {
-  opacity: 0;
-}
-
-#layouts>div.fn__flex.fn__flex-1>div.fn__flex-column.fn__flex-shrink>div:nth-child(1)>div>div.layout-tab-container.fn__flex-1>div>ul:not(.fn__flex-1):hover .b3-list-item {
+#layouts .fn__flex-column.file-tree.sy__file>ul:hover * {
   opacity: 1;
 }
 
