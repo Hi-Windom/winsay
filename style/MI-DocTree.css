@@ -7,10 +7,6 @@
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background {
   border-radius: 1.8px;
   margin-left: 5.8px;
-  margin-top: 0.58em;
-  margin-bottom: 0.58em;
-  padding-top: 0.31em;
-  padding-bottom: 0.31em;
   border-bottom: 1.86px inset;
   background-color: transparent;
   transition-duration: .31s;
@@ -28,6 +24,56 @@
   outline: 1.3px ridge var(--b3-scroll-color);
   background-color: var(--b3-theme-surface);
   transition-duration: .31s;
+}
+
+/* 文档树笔记本高度自适应 #288 */
+.fn__flex-1.fn__flex-column.file-tree.sy__file div[data-type="navigation"]:has(>ul:nth-child(1))>ul {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-bottom: 1.31em;
+}
+
+.fn__flex-1.fn__flex-column.file-tree.sy__file div[data-type="navigation"]:has(>ul:nth-child(7))>ul {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+}
+
+.fn__flex-1.fn__flex-column.file-tree.sy__file div[data-type="navigation"]:has(>ul:nth-child(12))>ul {
+  margin-top: 0.58em;
+  margin-bottom: 0.58em;
+  padding-top: 0.58em;
+  padding-bottom: 0.58em;
+}
+
+.fn__flex-1.fn__flex-column.file-tree.sy__file div[data-type="navigation"]:has(>ul:nth-child(16))>ul {
+  margin-top: 0.58em;
+  margin-bottom: 0.58em;
+  padding-top: 0.31em;
+  padding-bottom: 0.31em;
+}
+
+.fn__flex-1.fn__flex-column.file-tree.sy__file div[data-type="navigation"]:has(>ul:nth-child(19))>ul {
+  margin-top: 0.31em;
+  margin-bottom: 0.31em;
+  padding-top: 0.13em;
+  padding-bottom: 0.13em;
+}
+
+.fn__flex-1.fn__flex-column.file-tree.sy__file div[data-type="navigation"]:has(>ul:nth-child(21))>ul {
+  margin-top: 0.13em;
+  margin-bottom: 0.13em;
+  padding-top: 0.13em;
+  padding-bottom: 0.13em;
+}
+/* 缓制文档树笔记本高度自适应副作用 */
+#layouts > div.fn__flex.fn__flex-1 > div.fn__flex-column.fn__flex-shrink > div:nth-child(1) > div > div.layout-tab-container.fn__flex-1 .block__icons {
+  position: sticky;
+  top: 0px;
+  margin-bottom: 3px;
+  padding-bottom: 13px;
 }
 
 /* 【已关闭的笔记本】融入文档树样式 #202 */
