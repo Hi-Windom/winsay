@@ -126,6 +126,13 @@
   color: #fff !important;
   background-color: var(--SCC-Red-WPS) !important;
 }
+/* 反链面板左侧引用计数 */
+.block__icons .counter {
+  background-color: var(--SCC-Component-Counter-bg-color);
+  border: var(--SCC-Component-Counter-border);
+  opacity: 0.58;
+  backdrop-filter: brightness(0.58);
+}
 /* 文档内引用计数 */
 .protyle-attr--refcount {
   right: 0px;
@@ -135,17 +142,16 @@
   padding: 0 4px;
   margin-top: 0px;
   margin-right: 0px;
-  color: var(--SCC-Red-WPS);
+  color: #fff;
   border-radius: 13px;
   font-size: 12px;
   user-select: none;
   cursor: pointer;
   height: 16px;
-  background-color: var(--SCC-Purple-186-lightest);
-}
-/* 反链面板左侧引用计数 */
-.block__icons .counter {
-  background-color: #335599ee;
+  background-color: var(--SCC-Component-Counter-bg-color);
+  border: var(--SCC-Component-Counter-border);
+  opacity: 0.58;
+  backdrop-filter: brightness(0.58);
 }
 
 .b3-list-item__arrow {
