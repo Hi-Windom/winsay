@@ -146,3 +146,10 @@
 .protyle-breadcrumb__item {
   max-width: unset;
 }
+
+.protyle-gutters button svg {
+  color: var(--b3-theme-primary-lighter);
+}
+.protyle-gutters button:hover svg {
+  color: var(--b3-theme-primary);
+}
