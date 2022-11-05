@@ -186,26 +186,6 @@
   }
 }
 
-@keyframes close {
-  from {
-    opacity: 1;
-    transform: scale(1);
-    max-height: 100%
-  }
-
-  50% {
-    opacity: 0;
-    transform: scale(0.75);
-    max-height: 100%
-  }
-
-  to {
-    opacity: 0;
-    transform: scale(0.75);
-    max-height: 0
-  }
-}
-
 .layout__wnd--active .layout-tab-bar .item--focus::after {
   animation: item-focus 0.2s ease-in-out;
 }
@@ -214,20 +194,14 @@
   animation: menu 0.2s ease-in-out;
 }
 
-/*侧栏展开动画*/
-#layouts>.fn__flex>.fn__flex-column:has(li:nth-child(100))>.fn__none:not(.layout__resize) {
-  display: flex !important;
-  animation: close .31s forwards cubic-bezier(0.645, 0.045, 0.355, 1)
-}
-
-#layouts>.fn__flex>.fn__flex-shrink:not(.layout__center)>.fn__none:not(.layout__resize) {
-  animation: close .31s forwards cubic-bezier(0.645, 0.045, 0.355, 1)
-}
 
 #layouts>.fn__flex>.fn__flex-column:has(li:nth-child(100))>.fn__none:not(.layout__resize)>div[data-type=wnd] {
   transition: all .24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }
-
+/*侧栏展开动画*/
+#layouts>.fn__flex>.fn__flex-column>.fn__flex>div[data-type="wnd"]>.layout-tab-container>.fn__flex-column:has(li:nth-child(100)) ul:has(ul) {
+  animation: tree-list .2s ease-in;
+}
 @media screen and (min-width: 1300px) {
   #layouts>.fn__flex>.fn__flex-column>.fn__flex>div[data-type="wnd"]>.layout-tab-container>.fn__flex-column:not(:has(li:nth-child(100))) {
     animation: flex-column-y-longer 0.58s cubic-bezier(0.37, -0.02, 0.54, 1.09);
