@@ -21,7 +21,7 @@
   .b3-dialog__container[style*="80vw"]
     .search__header.fn__none
     ~ #searchPreview {
-    min-height: calc(100% - 50px - 53px) !important;
+    height: calc(100% - 50px - 53px) !important;
   }
 }
 

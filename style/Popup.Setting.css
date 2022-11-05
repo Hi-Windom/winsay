@@ -71,7 +71,7 @@ li.b3-list-item--focus.b3-list-item.b3-list-item--big
 body > div.b3-dialog--open > div > div.b3-dialog__container  div.fn__flex-1.fn__flex > ul::-webkit-scrollbar {
   width: 0px; /* 允许滚动但不显示滚动条 */
 }
-.b3-dialog__container {
+.b3-dialog__container:has(li[data-name="editor"]) {
   max-width: 1386px !important;
 }
 
