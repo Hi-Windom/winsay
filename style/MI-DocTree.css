@@ -7,23 +7,17 @@
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background {
   border-radius: 1.8px;
   margin-left: 5.8px;
-  margin-top: 0.58em;
-  margin-bottom: 0.58em;
-  padding-top: 0.31em;
-  padding-bottom: 0.31em;
   border-bottom: 1.86px inset;
   background-color: transparent;
   transition-duration: .31s;
   outline: 1.3px ridge transparent;
-  border-image: linear-gradient(
-      to right,
+  border-image: linear-gradient(to right,
       #eeeeee13 0%,
       #58585813 20%,
       #58585813 80%,
-      #eeeeee13 100%
-    )
-    1;
+      #eeeeee13 100%) 1;
 }
+
 .fn__flex-1.fn__flex-column.file-tree.sy__file:hover ul.b3-list.b3-list--background {
   margin-left: 5.8px;
   margin-right: 3px;
@@ -31,16 +25,74 @@
   background-color: var(--b3-theme-surface);
   transition-duration: .31s;
 }
+
+/* 文档树笔记本高度自适应 #288 */
+.fn__flex-1.fn__flex-column.file-tree.sy__file div[data-type="navigation"]:has(>ul:nth-child(1))>ul {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-bottom: 1.31em;
+}
+
+.fn__flex-1.fn__flex-column.file-tree.sy__file div[data-type="navigation"]:has(>ul:nth-child(6))>ul {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+}
+
+.fn__flex-1.fn__flex-column.file-tree.sy__file div[data-type="navigation"]:has(>ul:nth-child(9))>ul {
+  margin-top: 0.58em;
+  margin-bottom: 0.58em;
+  padding-top: 0.58em;
+  padding-bottom: 0.58em;
+}
+
+.fn__flex-1.fn__flex-column.file-tree.sy__file div[data-type="navigation"]:has(>ul:nth-child(12))>ul {
+  margin-top: 0.58em;
+  margin-bottom: 0.58em;
+  padding-top: 0.31em;
+  padding-bottom: 0.31em;
+}
+
+.fn__flex-1.fn__flex-column.file-tree.sy__file div[data-type="navigation"]:has(>ul:nth-child(14))>ul {
+  margin-top: 0.31em;
+  margin-bottom: 0.31em;
+  padding-top: 0.13em;
+  padding-bottom: 0.13em;
+}
+
+.fn__flex-1.fn__flex-column.file-tree.sy__file div[data-type="navigation"]:has(>ul:nth-child(16))>ul {
+  margin-top: 0.13em;
+  margin-bottom: 0.13em;
+  padding-top: 0.13em;
+  padding-bottom: 0.13em;
+}
+/* 缓制文档树笔记本高度自适应副作用 */
+#layouts > div.fn__flex.fn__flex-1 > div.fn__flex-column.fn__flex-shrink > div:nth-child(1) > div > div.layout-tab-container.fn__flex-1 .block__icons {
+  position: sticky;
+  top: 0px;
+  margin-bottom: 3px;
+  padding-bottom: 13px;
+}
+
 /* 【已关闭的笔记本】融入文档树样式 #202 */
-#layouts > div.fn__flex.fn__flex-1 > div.fn__flex-column.fn__flex-shrink > div:nth-child(1) > div > div.layout-tab-container.fn__flex-1 > div > ul {
+#layouts .fn__flex-column.file-tree.sy__file>ul {
   padding: 0px;
   margin-top: 9px;
   margin-left: 5px;
   border: 1.3px ridge transparent;
   opacity: 0;
-  transition: all .58s cubic-bezier(0.46, 0.03, 0.52, 0.96) .13s !important;
+  transition: all .2s cubic-bezier(0.46, 0.03, 0.52, 0.96) 0s !important;
+  height: 10px;
 }
-#layouts > div.fn__flex.fn__flex-1 > div.fn__flex-column.fn__flex-shrink > div:nth-child(1) > div > div.layout-tab-container.fn__flex-1 > div:hover > ul {
+
+#layouts .fn__flex-column.file-tree.sy__file>ul * {
+  opacity: 0;
+  transition-delay: .31s;
+}
+
+#layouts .fn__flex-column.file-tree.sy__file:hover>ul {
   border: 1.3px ridge var(--b3-scroll-color);
   opacity: .9;
   background-color: #65432103;
@@ -48,38 +100,50 @@
   margin-right: 7px;
 }
 
+#layouts .fn__flex-column.file-tree.sy__file>ul:hover {
+  height: 30px;
+}
+
+#layouts .fn__flex-column.file-tree.sy__file>ul:hover * {
+  opacity: 1;
+}
+
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul .b3-list-item {
   margin: 0 3px 0px 0px !important;
 }
 
 /* 笔记本文字 */
-.fn__flex-1.fn__flex-column.file-tree.sy__file ul > li .b3-list-item__text {
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul>li .b3-list-item__text {
   color: var(--SCC-baseComponent-text-color-2);
   font-size: 13pt !important;
   transition: color 0.2s cubic-bezier(0.47, 0, 0.75, 0.72);
 }
-.fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background:has(ul) > li .b3-list-item__text {
+
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background:has(ul)>li .b3-list-item__text {
   color: var(--b3-theme-primary);
 }
-.fn__flex-1.fn__flex-column.file-tree.sy__file ul > li .b3-list-item__icon {
+
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul>li .b3-list-item__icon {
   font-size: 18px;
   margin-right: 3px;
   padding: 0px;
 }
+
 /* 文档文字 */
-.fn__flex-1.fn__flex-column.file-tree.sy__file ul > ul > li .b3-list-item__text {
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul>ul>li .b3-list-item__text {
   color: var(--SCC-baseComponent-text-color-1);
   font-size: 9.5pt !important;
   font-weight: 400;
   letter-spacing: -0.31px;
 }
-.fn__flex-1.fn__flex-column.file-tree.sy__file ul > ul > li .b3-list-item__icon {
+
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul>ul>li .b3-list-item__icon {
   font-size: 18px;
   margin-right: 1px;
   padding: 0px;
 }
 
-.fn__flex-1.fn__flex-column.file-tree.sy__file ul > ul > li {
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul>ul>li {
   line-height: 23px;
   background-color: #ffffff11;
 }
@@ -91,15 +155,17 @@
   overscroll-behavior: none;
 } */
 
-.fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background > li {
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background>li {
   position: sticky;
   top: 0px;
   background-color: transparent;
-  z-index: 2; /* 高于子容器就可以了，太高会显示在弹出层上面 */
+  z-index: 2;
+  /* 高于子容器就可以了，太高会显示在弹出层上面 */
   padding-bottom: 1px;
   transition: padding-bottom 0.2s ease-out;
 }
-.fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background:has(ul) > li {
+
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background:has(ul)>li {
   background-color: var(--b3-theme-surface) !important;
   padding-bottom: 10px !important;
 }
@@ -122,10 +188,12 @@
   opacity: 0.58;
   backdrop-filter: brightness(0.58);
 }
+
 .b3-list-item .counter:hover {
   color: #fff !important;
   background-color: var(--SCC-Red-WPS) !important;
 }
+
 /* 反链面板左侧引用计数 */
 .block__icons .counter {
   background-color: var(--SCC-Component-Counter-bg-color);
@@ -133,6 +201,7 @@
   opacity: 0.58;
   backdrop-filter: brightness(0.58);
 }
+
 /* 文档内引用计数 */
 .protyle-attr--refcount {
   right: 0px;
@@ -165,6 +234,6 @@ body:not(.android) .block__logo {
   opacity: .31;
 }
 
-li[data-name="Untitled.sy"] > span.b3-list-item__text {
+li[data-name="Untitled.sy"]>span.b3-list-item__text {
   opacity: 0;
 }
