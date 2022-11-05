@@ -64,4 +64,6 @@
     --SCC-Component-CodeBlock-bg-color-hover: #555;
     --SCC-Component-Message-button-ok-border: 3px ridge var(--SCC-Cyan-186-lighter) !important;
     --SCC-Component-Message-button-ok-bg-color: var(--SCC-CNTC-黛绿);
+    --SCC-Component-meno-bg-color: var(--SCC-CNTC-黛绿);
+    --SCC-Component-meno-border-bottom: 2px solid var(--b3-card-info-color);
 }
