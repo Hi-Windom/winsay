@@ -60,4 +60,6 @@
   --SCC-Component-EmbedBlock-box-shadow: inset 9px 9px 29px #11314813, inset -9px -9px 29px #eeeee058;
   --SCC-Component-Table-tr-bg-color-1: var(--SCC-SGTC-9C);
   --SCC-Component-Table-tr-bg-color-2: var(--SCC-SGTC-4A);
+  --SCC-Component-CodeBlock-bg-color: #fafff5a5;
+  --SCC-Component-CodeBlock-bg-color-hover: #fff;
 }

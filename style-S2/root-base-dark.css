@@ -1,7 +1,5 @@
 :root {
   --SCC-baseComponent-Button-bg-color-TabBar: #a5a7a535;
-  --SCC-baseComponent-CodeBlock-bg-color: #afbbbb35;
-  --SCC-baseComponent-CodeBlock-bg-color-hover: #555;
   --SCC-baseComponent-CodeBlock-ab-color: var(--SCC-White-lighter);
   --SCC-baseComponent-selector-bg-color: #313233ee;
   --SCC-baseComponent-text-color-1: var(--SCC-CommonD-text-color-1);
