@@ -114,7 +114,7 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 
 ## 📜 集市更新版本日志
 
-> v0.72 ▶ v0.76
+> v0.74 ▶ v0.78
 
 ### 版本说明
 
@@ -122,9 +122,9 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 * 集市更新版本推送前会专门适配 Android 端，暂无 Mac 端和 Docker 端可供适配，欢迎加我QQ参与内测
 * [主题版本更新的详细信息](https://github.com/Hi-Windom/winsay/releases)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v0.68 ~ v0.76 聚合说明
+### v0.68 ~ v0.78 聚合说明
 
-> 2022-11-04 released
+> 2022-11-05 released
 
 <p><a href="https://github.com/Hi-Windom/winsay/issues/173">
 <img src="https://img.shields.io/badge/SiYuan-2.4.9-green"/></a>
@@ -167,6 +167,12 @@ Sofill- 适合哪些人：12~34岁非色弱人群；青少年请在家长指导�
 24. [表格底色跟随主题形态 · Issue #274 · v0.76](https://github.com/Hi-Windom/winsay/issues/274)
 25. [#258 的持续改进 · Issue #280 · v0.76](https://github.com/Hi-Windom/winsay/issues/280)
 26. [页签栏显示效果优化 · Issue #281 · v0.76](https://github.com/Hi-Windom/winsay/issues/281)
+27. [Android 手机端model元素禁用过渡 · Issue #283 · v0.78](https://github.com/Hi-Windom/winsay/issues/283)
+28. [Android 手机端左右面板宽度调整 · Issue #284 · v0.78](https://github.com/Hi-Windom/winsay/issues/284)
+29. [代码块颜色跟随主题形态 · Issue #273 · v0.78](https://github.com/Hi-Windom/winsay/issues/273)
+30. [通知确认按钮颜色跟随主题形态 · Issue #277 · v0.78](https://github.com/Hi-Windom/winsay/issues/277)
+31. [备注颜色跟随主题形态 · Issue #259 · v0.78](https://github.com/Hi-Windom/winsay/issues/259)
+32. [引用计数样式跟随主题形态 · Issue #265 · v0.78](https://github.com/Hi-Windom/winsay/issues/265)
 
 缺陷修复：
 

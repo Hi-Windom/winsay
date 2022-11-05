@@ -1,5 +1,22 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
+/* Android 手机端model元素禁用过渡 #283 */
+#editor:focus-within + div + div + div + div + div {
+  transition: height 0s;
+}
+#editor:not(:focus-within) + div + div + div + div + div {
+  transition: all 0s cubic-bezier(0.65, 0.05, 0.36, 1) 0s;
+  /* 如果存在过渡，编辑器呼出键盘时打开左右面板仍会出现，可通过增加过渡延时明显观察到 */
+}
+/* Android 手机端左右面板宽度调整 #284 */
+body.android #menu {
+  width: max-content;
+  overflow-y: scroll;
+}
+body.android #sidebar {
+  width: 90%;
+}
+
 /* 只读模式提示 #214 */
 .fn__flex-1.protyle:has(div[contenteditable="false"][data-doc-type="NodeDocument"]):hover {
   background-color: #cccccc13;

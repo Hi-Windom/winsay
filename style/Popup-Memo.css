@@ -32,3 +32,8 @@
 .b3-tooltips {
   -webkit-font-smoothing: subpixel-antialiased;
 }
+
+.b3-typography span[data-type~=inline-memo], .protyle-wysiwyg span[data-type~=inline-memo] {
+  background-color: var(--SCC-Component-meno-bg-color);
+  border-bottom: var(--SCC-Component-meno-border-bottom);
+}

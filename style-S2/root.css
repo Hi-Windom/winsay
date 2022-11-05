@@ -60,4 +60,12 @@
   --SCC-Component-EmbedBlock-box-shadow: inset 9px 9px 29px #cacfde, inset -9px -9px 29px #f2f7ff;
   --SCC-Component-Table-tr-bg-color-1: var(--SCC-SGTC-9A);
   --SCC-Component-Table-tr-bg-color-2: var(--SCC-SGTC-9B);
+  --SCC-Component-CodeBlock-bg-color: #f7f9fca5;
+  --SCC-Component-CodeBlock-bg-color-hover: #fff;
+  --SCC-Component-Message-button-ok-border: 3px ridge var(--SCC-Cyan-186-lighter) !important;
+  --SCC-Component-Message-button-ok-bg-color: var(--SCC-CNTC-绛紫);
+  --SCC-Component-meno-bg-color: var(--SCC-CNTC-雪青);
+  --SCC-Component-meno-border-bottom: 2px solid var(--b3-card-info-color);
+  --SCC-Component-Counter-bg-color: var(--SCC-CNTC-绛紫);
+  --SCC-Component-Counter-border: 1.3px solid var(--SCC-CNTC-雪青);
 }
