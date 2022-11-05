@@ -46,7 +46,7 @@ window.theme.colors = [
 
 window.theme.colors2 = [
   "style-S2/root-D-InkGreenPurple.css",
-  // "style-S2/root-D-BlackGoldBlue.css",
+  "style-S2/root-D-BlackGoldBlue.css",
 ];
 
 /* 循环迭代器 */
