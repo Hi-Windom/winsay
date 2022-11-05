@@ -66,4 +66,6 @@
   --SCC-Component-Message-button-ok-bg-color: var(--SCC-CNTC-嫣红);
   --SCC-Component-meno-bg-color: var(--SCC-CNTC-藕粉);
   --SCC-Component-meno-border-bottom: 2px solid var(--b3-card-info-color);
+  --SCC-Component-Counter-bg-color: var(--SCC-CNTC-嫣红);
+  --SCC-Component-Counter-border: 1.3px solid var(--SCC-CNTC-藕粉);
 }
