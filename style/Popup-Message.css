@@ -5,8 +5,8 @@
 #message button[aria-label="已读"] {
   height: 2.6em !important;
   width: 5.8em !important;
-  border: 3px ridge var(--SCC-Cyan-186-lighter) !important;
-  background-color: var(--SCC-Brown-186-light);
+  border: var(--SCC-Component-Message-button-ok-border);
+  background-color: var(--SCC-Component-Message-button-ok-bg-color);
 }
 #message button[aria-label="已读"] svg {
   scale: 1.6em !important;
