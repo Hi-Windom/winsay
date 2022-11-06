@@ -6,13 +6,12 @@
     color: var(--SCC-Yellow-HellisePotter-light) !important;
 }
 
-/* 默认颜色加粗样式应当保留原颜色 */
-.b3-typography span[data-type=strong],
-.protyle-wysiwyg span[data-type=strong]
+/* 标题文本加粗样式应当保留原颜色 */
+/* div[data-type="NodeHeading"] span[data-type=strong]
 {
     color: inherit !important;
     font-weight: bold;
-}
+} */
 
 /* 普通标签tag样式 */
 .protyle-wysiwyg [data-node-id]:not([data-type="NodeHeading"]) span[data-type~=tag] {
@@ -89,4 +88,15 @@ span[data-type=code]::after {
     font-size: 113%;
     line-height: normal;
     margin: 0 3px 0 3px;
+}
+
+/* 空文档提醒样式 #304 */
+
+.protyle-wysiwyg.protyle-wysiwyg--attr:empty::after,
+.protyle-wysiwyg.protyle-wysiwyg--attr:not(:has(>div:nth-child(2))) > div > div[contenteditable="true"]:empty::after {
+    content: "键入文字或者 '/' 选择";
+    color: #85858585;
+    opacity: .85;
+    letter-spacing: .13px;
+    padding-left: 1.86pt;
 }

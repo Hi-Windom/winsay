@@ -102,8 +102,8 @@
   --b3-protyle-code-linenumber-hl: transparent;
 
   /* 所见即所得行内元素颜色 */
-  --b3-protyle-inline-strong-color: #202124;
-  --b3-protyle-inline-em-color: #202124;
+  --b3-protyle-inline-strong-color: inherit;
+  --b3-protyle-inline-em-color: inherit;
   --b3-protyle-inline-s-color: #58585831;
   --b3-protyle-inline-link-color: var(--SCC-Blue-Windom_2); /* 超链接字色 */
   --b3-protyle-inline-mark-background: #ffe955;
