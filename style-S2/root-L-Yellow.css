@@ -30,10 +30,10 @@
   --b3-border-color: #eed28935;
 
   /* 滚动条 */
-  --b3-scroll-color: var(--SCC-Pink-WPS-lightest);
+  --b3-scroll-color: var(--SCC-CNTC-枯黄);
 
   /* 列表 */
-  --b3-list-hover: var(--SCC-Pink-WPS-lightest);
+  --b3-list-hover: var(--SCC-CNTC-枯黄);
 
   /* 菜单 */
   --b3-menu-background: #eed289;
