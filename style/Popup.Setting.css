@@ -112,3 +112,11 @@ body > div.b3-dialog--open > div > div.b3-dialog__container  div.fn__flex-1.fn__
 body > div.b3-dialog--open > div > div.b3-dialog__container > div:nth-child(3) > div > div.fn__flex-1.fn__flex > div:nth-child(7) > div > div.fn__flex-1 .b3-select.fn__size200 {
  background-color: transparent !important;
 }
+
+/* 代码片段界面 */
+.b3-dialog__container:has(#addCodeSnippetCSS) div[style*="60vh"] textarea.b3-text-field {
+  height: 131px;
+}
+.b3-dialog__container:has(#addCodeSnippetCSS) input.fn__size200.b3-text-field[placeholder="标题"] {
+  width: 58%;
+}
