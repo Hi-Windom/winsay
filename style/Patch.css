@@ -20,8 +20,7 @@ body.android #sidebar {
 
 /* 只读模式提示 #214 */
 .fn__flex-1.protyle:has(div[contenteditable="false"][data-doc-type="NodeDocument"]):hover {
-  background-color: #cccccc13;
-  backdrop-filter: brightness(0.96);
+  background-color: #cccccc33;
 }
 
 /* 优化右上角窗口关闭按钮焦点样式，不适用于思源2.4.3 */
