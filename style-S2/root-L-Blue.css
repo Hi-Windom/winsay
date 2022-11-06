@@ -12,7 +12,7 @@
   --b3-theme-error: #d23f31; /* 不修改 */
 
   /* 文字颜色 */
-  --b3-theme-on-primary: #fff;
+  --b3-theme-on-primary: var(--SCC-CNTC-靛蓝);
   --b3-theme-on-secondary: #fff;
   --b3-theme-on-background: #131131; /* 默认字色 */
   --b3-theme-on-surface: var(
