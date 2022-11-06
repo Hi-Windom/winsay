@@ -86,4 +86,7 @@
   --SCC-Component__Phone-Heading-folded-box-shadow-h3: var(--SCC-sCt-Hfbs1-color3) 2px 4px, var(--SCC-sCt-Hfbs1-color2) 4px 8px, var(--SCC-sCt-Hfbs1-color1) 6px 12px;
   --SCC-Component__Phone-Heading-folded-box-shadow-h2: var(--SCC-sCt-Hfbs1-color4) 2px 4px, var(--SCC-sCt-Hfbs1-color3) 4px 8px, var(--SCC-sCt-Hfbs1-color2) 6px 12px, var(--SCC-sCt-Hfbs1-color1) 8px 16px;
   --SCC-Component__Phone-Heading-folded-box-shadow-h1: var(--SCC-sCt-Hfbs1-color5) 2px 4px, var(--SCC-sCt-Hfbs1-color4) 4px 8px, var(--SCC-sCt-Hfbs1-color3) 6px 12px, var(--SCC-sCt-Hfbs1-color2) 8px 16px, var(--SCC-sCt-Hfbs1-color1) 10px 20px;
+  --SCC-Component-HintMenu-bg-color: #cc959ccc;
+  --SCC-Component-HintMenu-border-bottom: 1.86px ridge rgba(244, 244, 0, 0.31);
+  --SCC-Component-HintMenu-column-rule: 1px solid var(--SCC-Cyan-186-lighter);
 }
