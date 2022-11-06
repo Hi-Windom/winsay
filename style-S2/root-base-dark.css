@@ -108,7 +108,7 @@
   --b3-protyle-inline-mark-background: #ffe955;
   --b3-protyle-inline-mark-color: #202124;
   --b3-protyle-inline-tag-color: #5f6368;
-  --b3-protyle-inline-blockref-color: var(--SCC-Red-WPS); /* 块引用字色 */
+  --b3-protyle-inline-blockref-color: var(--b3-theme-primary); /* 块引用字色 */
 
   /* PDF */
   --b3-pdf-selection: #d0e9c8;
