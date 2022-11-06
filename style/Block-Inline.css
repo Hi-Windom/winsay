@@ -1,7 +1,8 @@
 /* 行内元氏 */
 
 /* 搜索击中高亮应显著区分于文本背景色 */
-.b3-list mark, .protyle-wysiwyg [data-node-id] span[data-type=search-mark] {
+.b3-list mark,
+.protyle-wysiwyg [data-node-id] span[data-type=search-mark] {
     background-color: var(--SCC-Blue-HellisePotter);
     color: var(--SCC-Yellow-HellisePotter-light) !important;
 }
@@ -22,10 +23,11 @@
     position: relative;
     padding: .1rem .3rem .1rem .1rem;
     font-size: 85%;
-    box-shadow: var(--SCColor) 3.6em 0px 0px -2.2em inset,0px 0px 0px 1px inset;
+    box-shadow: var(--SCColor) 3.6em 0px 0px -2.2em inset, 0px 0px 0px 1px inset;
     border: none;
     margin: .2rem;
 }
+
 /* 普通标签tag样式的前缀部分 */
 .protyle-wysiwyg [data-node-id]:not([data-type="NodeHeading"]) span[data-type~=tag]::before {
     content: "#";
@@ -34,24 +36,30 @@
     margin-right: .2rem;
     padding: .2rem;
 }
+
 /* 标题中标签tag样式在 Block-NodeHeading.css 中定义 */
 
 
 /* 删除线 */
-.b3-typography s, .b3-typography span[data-type=s],
-.protyle-wysiwyg s, .protyle-wysiwyg span[data-type=s] {
+.b3-typography s,
+.b3-typography span[data-type=s],
+.protyle-wysiwyg s,
+.protyle-wysiwyg span[data-type=s] {
     text-decoration-color: var(--SCC-Red-WPS-lighter);
 }
 
 
 /* kbd 按键的样式 */
-.b3-typography kbd, .b3-typography span[data-type~=kbd], .protyle-wysiwyg kbd, .protyle-wysiwyg span[data-type~=kbd]{
+.b3-typography kbd,
+.b3-typography span[data-type~=kbd],
+.protyle-wysiwyg kbd,
+.protyle-wysiwyg span[data-type~=kbd] {
     border-radius: 6px;
     color: var(--SCC-Black-186);
     background-color: var(--SCC-White-light);
     vertical-align: 2px;
     /* box-shadow: rgba(191,250,226, 0.4) 0px 2px, rgba(72,69,80,0.3) 0px 4px; // Sofill+ 备选方案 */
-    box-shadow: rgba(254,239,234, 0.4) 0px 3px, rgba(0,6,85, 0.3) 0px 5px;
+    box-shadow: rgba(254, 239, 234, 0.4) 0px 3px, rgba(0, 6, 85, 0.3) 0px 5px;
     border: 0px solid;
     margin-right: 2px;
     font-family: var(--b3-font-family);
@@ -68,6 +76,7 @@ span[data-type=code] {
     margin: 3px !important;
     font-family: var(--b3-font-family-code);
 }
+
 span[data-type=code]::before {
     content: "<";
     color: var(--SCC-White-lighter);
@@ -75,6 +84,7 @@ span[data-type=code]::before {
     margin-right: .1rem;
     padding: 0;
 }
+
 span[data-type=code]::after {
     content: ">";
     color: var(--SCC-White-lighter);
@@ -84,19 +94,38 @@ span[data-type=code]::after {
 }
 
 /* 行内公式增加左右边距 #222 */
-.b3-typography .katex, .protyle-wysiwyg .katex {
+.b3-typography .katex,
+.protyle-wysiwyg .katex {
     font-size: 113%;
     line-height: normal;
     margin: 0 3px 0 3px;
 }
 
 /* 空文档提醒样式 #304 */
-
 .protyle-wysiwyg.protyle-wysiwyg--attr:empty::after,
-.protyle-wysiwyg.protyle-wysiwyg--attr:not(:has(>div:nth-child(2))) > div > div[contenteditable="true"]:empty::after {
+.protyle-wysiwyg.protyle-wysiwyg--attr:not(:has(>div:nth-child(2)))>div>div[contenteditable="true"]:empty::after {
     content: "键入文字或者 '/' 选择";
     color: #85858585;
     opacity: .85;
     letter-spacing: .13px;
     padding-left: 1.86pt;
+}
+
+
+.protyle-wysiwyg.protyle-wysiwyg--attr div[contenteditable="true"]:empty::after {
+    content: "ヾ(￣▽￣)Bye~Bye~";
+    color: #85858585;
+    opacity: 0;
+    font-size: 80%;
+    transition: opacity 1s ease-in-out .31s;
+}
+/* 超级块空段落子块提示 #306 */
+.protyle-wysiwyg.protyle-wysiwyg--attr:focus-within div[data-type="NodeSuperBlock"]:hover .p div[contenteditable="true"]:empty::after {
+    content: ":empty";
+    color: #85858585;
+    letter-spacing: .31px;
+    font-size: 80%;
+    padding-left: 1.86pt;
+    opacity: 0.8;
+    transition: opacity 1s ease .58s;
 }
