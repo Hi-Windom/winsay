@@ -2,13 +2,14 @@ body:not(.body--mobile) .protyle-hint.b3-list.b3-list--background.hint--menu {
   column-count: 4;
   column-width: 178px !important;
   column-gap: 0.13em;
-  column-rule: 1px solid var(--SCC-Cyan-186-lighter) !important;
+  column-rule: var(--SCC-Component-HintMenu-column-rule) !important;
   min-width: 50vw !important;
   max-height: 86vh !important;
   padding: 13px;
-  background-color: rgba(0, 6, 85, 0.78);
+  background-color: var(--SCC-Component-HintMenu-bg-color);
+  backdrop-filter: blur(13px);
   border-radius: 18.6px;
-  border-bottom: 1.86px ridge rgba(244, 244, 0, 0.86);
+  border-bottom: var(--SCC-Component-HintMenu-border-bottom);
   overflow-x: visible !important;
 }
 
@@ -21,7 +22,7 @@ body:not(.body--mobile)
 body:not(.body--mobile)
   .b3-list--background.hint--menu
   .b3-list-item:hover:not(.b3-list-item--focus) {
-  background-color: var(--SCC-Orange-Windom-light);
+  background-color: var(--b3-theme-primary-lighter);
   border-radius: 8.6px;
   transition-duration: 0.03s;
   transition-delay: 0.06s;
@@ -29,7 +30,6 @@ body:not(.body--mobile)
 body:not(.body--mobile)
   .protyle-hint.b3-list.b3-list--background.hint--menu
   svg {
-  background-color: var(--SCC-White-lighter);
   padding: 3px;
   transition-duration: 1.86s;
 }

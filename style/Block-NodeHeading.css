@@ -304,35 +304,31 @@ div[style*="background-color"] div[data-type="NodeHeading"]::after {
 @media screen and (min-width: 960px) {
   .protyle-wysiwyg div[fold="1"][data-node-id].h5:not([class~=protyle-wysiwyg--select]) {
     background-color: transparent !important;
-    box-shadow: rgba(38, 57, 77, 0.11) 7px 4px;
+    box-shadow: var(--SCC-Component-Heading-folded-box-shadow-h5);
     /* border: 5px inset var(--SCC-Gray-Soledar-light) !important; */
     border-radius: 12px;
   }
   .protyle-wysiwyg div[fold="1"][data-node-id].h4:not([class~=protyle-wysiwyg--select]) {
     background-color: transparent !important;
-    box-shadow: rgba(38, 57, 77, 0.17) 7px 4px, rgba(38, 57, 77, 0.11) 14px 8px;
+    box-shadow: var(--SCC-Component-Heading-folded-box-shadow-h4);
     /* border: 5px inset var(--SCC-Gray-Soledar-light) !important; */
     border-radius: 12px;
   }
   .protyle-wysiwyg div[fold="1"][data-node-id].h3:not([class~=protyle-wysiwyg--select]) {
     background-color: transparent !important;
-    box-shadow: rgba(38, 57, 77, 0.23) 7px 4px, rgba(38, 57, 77, 0.17) 14px 8px,
-      rgba(38, 57, 77, 0.11) 21px 12px;
+    box-shadow: var(--SCC-Component-Heading-folded-box-shadow-h3);
     /* border: 5px inset var(--SCC-Gray-Soledar-light) !important; */
     border-radius: 12px;
   }
   .protyle-wysiwyg div[fold="1"][data-node-id].h2:not([class~=protyle-wysiwyg--select]) {
     background-color: transparent !important;
-    box-shadow: rgba(38, 57, 77, 0.29) 7px 4px, rgba(38, 57, 77, 0.23) 14px 8px,
-      rgba(38, 57, 77, 0.17) 21px 12px, rgba(38, 57, 77, 0.11) 28px 16px;
+    box-shadow: var(--SCC-Component-Heading-folded-box-shadow-h2);
     /* border: 5px inset var(--SCC-Gray-Soledar-light) !important; */
     border-radius: 12px;
   }
   .protyle-wysiwyg div[fold="1"][data-node-id].h1:not([class~=protyle-wysiwyg--select]) {
     background-color: transparent !important;
-    box-shadow: rgba(38, 57, 77, 0.35) 7px 4px, rgba(38, 57, 77, 0.29) 14px 8px,
-      rgba(38, 57, 77, 0.23) 21px 12px, rgba(38, 57, 77, 0.17) 28px 16px,
-      rgba(38, 57, 77, 0.11) 35px 20px;
+    box-shadow: var(--SCC-Component-Heading-folded-box-shadow-h1);
     border-top: 5px ridge var(--b3-theme-background) !important;
     border-radius: 12px;
   }
@@ -340,36 +336,32 @@ div[style*="background-color"] div[data-type="NodeHeading"]::after {
 @media screen and (max-width: 960px) {
   .protyle-wysiwyg div[fold="1"][data-node-id].h5:not([class~=protyle-wysiwyg--select]) {
     background-color: transparent !important;
-    box-shadow: rgba(38, 57, 77, 0.11) 2px 4px;
+    box-shadow: var(--SCC-Component__Phone-Heading-folded-box-shadow-h5);
     /* border: 5px inset var(--SCC-Gray-Soledar-light) !important; */
     border-radius: 12px;
   }
   .protyle-wysiwyg div[fold="1"][data-node-id].h4:not([class~=protyle-wysiwyg--select]) {
     background-color: transparent !important;
-    box-shadow: rgba(38, 57, 77, 0.17) 2px 4px, rgba(38, 57, 77, 0.11) 4px 8px;
+    box-shadow: var(--SCC-Component__Phone-Heading-folded-box-shadow-h4);
     /* border: 5px inset var(--SCC-Gray-Soledar-light) !important; */
     border-radius: 12px;
   }
   .protyle-wysiwyg div[fold="1"][data-node-id].h3:not([class~=protyle-wysiwyg--select]) {
     background-color: transparent !important;
-    box-shadow: rgba(38, 57, 77, 0.23) 2px 4px, rgba(38, 57, 77, 0.17) 4px 8px,
-      rgba(38, 57, 77, 0.11) 6px 12px;
+    box-shadow: var(--SCC-Component__Phone-Heading-folded-box-shadow-h3);
     /* border: 5px inset var(--SCC-Gray-Soledar-light) !important; */
     border-radius: 12px;
   }
   .protyle-wysiwyg div[fold="1"][data-node-id].h2:not([class~=protyle-wysiwyg--select]) {
     background-color: transparent !important;
-    box-shadow: rgba(38, 57, 77, 0.29) 2px 4px, rgba(38, 57, 77, 0.23) 4px 8px,
-      rgba(38, 57, 77, 0.17) 6px 12px, rgba(38, 57, 77, 0.11) 8px 16px;
+    box-shadow: var(--SCC-Component__Phone-Heading-folded-box-shadow-h2);
     /* border: 5px inset var(--SCC-Gray-Soledar-light) !important; */
     border-radius: 12px;
   }
   .protyle-wysiwyg div[fold="1"][data-node-id].h1:not([class~=protyle-wysiwyg--select]) {
     background-color: transparent !important;
-    box-shadow: rgba(38, 57, 77, 0.35) 2px 4px, rgba(38, 57, 77, 0.29) 4px 8px,
-      rgba(38, 57, 77, 0.23) 6px 12px, rgba(38, 57, 77, 0.17) 8px 16px,
-      rgba(38, 57, 77, 0.11) 10px 20px;
-    border: 5px inset var(--SCC-Gray-Soledar-light) !important;
+    box-shadow: var(--SCC-Component__Phone-Heading-folded-box-shadow-h1);
+    border: 3px inset var(--SCC-Gray-Soledar-light) !important;
     border-radius: 12px;
   }
 }
