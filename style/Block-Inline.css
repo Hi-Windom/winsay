@@ -84,47 +84,6 @@ span[data-type=code]::after {
     padding: 0;
 }
 
-
-/* 双链样式 */
-.protyle-wysiwyg [data-node-id] span[data-type~=block-ref]::before {
-    /*前半部分的符号*/
-    content: "⁅⁅";
-    color: var(--SCC-Red-WPS);
-    font-weight: bold;
-    display: inline-block;
-    width: 1.31em;
-    text-align: center;
-  }
-  .protyle-wysiwyg [data-node-id] span[data-type~=block-ref]::after {
-    /*后半部分的符号*/
-    content: "⁆⁆";
-    color: var(--SCC-Red-WPS);
-    /* font-size: 1em; */
-    /* margin-right: 0.5em; */
-    font-weight: bold;
-    display: inline-block;
-    width: 1.31em;
-    /* text-align: left; */
-    text-align: center;
-  }
-  .protyle-wysiwyg [data-node-id] span[data-type~=block-ref]:hover {
-    padding-bottom: 5px;
-    animation: waveMove .31s infinite cubic-bezier(0.4, 0, 1, 1);
-    background: var(--custom-span-ref-animation-icon) repeat-x 0 58%;
-    background-size: 16px auto;
-  }
-
-  /* 虚拟引用样式 #184 */
-  .protyle-wysiwyg [data-node-id] span[data-type=virtual-block-ref] {
-    border-bottom: var(--SCC-Component-Inline-virtual-block-ref-border-bottom);
-    transition: none;
-}
-.protyle-wysiwyg [data-node-id] span[data-type=virtual-block-ref]:hover {
-    border-bottom: 1.86px solid var(--b3-theme-primary);
-    background-color: var(--SCC-Component-Inline-virtual-block-ref-bg-color-hover);
-    transition: none;
-}
-
 /* 行内公式增加左右边距 #222 */
 .b3-typography .katex, .protyle-wysiwyg .katex {
     font-size: 113%;

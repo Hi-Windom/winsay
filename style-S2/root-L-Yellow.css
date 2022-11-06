@@ -30,10 +30,10 @@
   --b3-border-color: #eed28935;
 
   /* 滚动条 */
-  --b3-scroll-color: var(--SCC-Pink-WPS-lightest);
+  --b3-scroll-color: #d3b17dc5;
 
   /* 列表 */
-  --b3-list-hover: var(--SCC-Pink-WPS-lightest);
+  --b3-list-hover: #d3b17dc5;
 
   /* 菜单 */
   --b3-menu-background: #eed289;
@@ -68,4 +68,7 @@
   --SCC-Component-meno-border-bottom: 2px solid var(--b3-card-info-color);
   --SCC-Component-Counter-bg-color: var(--SCC-CNTC-橘红);
   --SCC-Component-Counter-border: 1.3px solid var(--SCC-CNTC-白茶);
+  --SCC-Component-TabBar-item__focus-box-shadow: rgba(131, 131, 131, 0.4) 0px 2px 4px, rgba(131, 131, 131, 0.3) 0px 7px 3px -3px, rgba(131, 131, 131, 0.2) 0px -3px 0px inset;
+  --SCC-Component-TabBar-item-box-shadow: rgba(131, 131, 131, 0.4) 0px 2px 4px, rgba(131, 131, 131, 0.3) 0px 7px 3px -3px, rgba(131, 131, 131, 0.2) 0px -3px 0px inset;
+  --SCC-Component-TabBar-item__close-svg__hover-color: var(--SCC-CNTC-朱膘);
 }

@@ -48,8 +48,8 @@ ul.layout-tab-bar .item:hover .item__text {
 }
 
 /* 标签页svg */
-ul.layout-tab-bar .item:not(.item--focus) .item__close svg {
-  color: var(--SCC-Purple-Soledar);
+ul.layout-tab-bar .item .item__close:hover svg {
+  color: var(--SCC-Component-TabBar-item__close-svg__hover-color);
   scale: 1.1;
 }
 /* .layout-tab-bar .item__close {
@@ -130,9 +130,7 @@ body:not(.android) ul.layout-tab-bar li [title="更多"] svg:hover {
 /* 非当前页签样式 */
 .layout-tab-bar li.item:not(:last-child).item:not(.item--focus),
 .layout-tab-bar li.item:last-child:not(.item--focus):not(.item--readonly) {
-  box-shadow: rgba(131, 131, 131, 0.4) 0px 2px 4px,
-    rgba(131, 131, 131, 0.3) 0px 7px 3px -3px,
-    rgba(131, 131, 131, 0.2) 0px -3px 0px inset !important;
+  box-shadow: var(--SCC-Component-TabBar-item-box-shadow) !important;
   border-radius: 3px !important;
   border: 0px ridge transparent !important;
   /* margin-bottom: 0px !important; */
@@ -151,9 +149,7 @@ body:not(.android) ul.layout-tab-bar li [title="更多"] svg:hover {
   opacity: 0.31;
 }
 #layouts .layout-tab-bar .item--focus {
-  box-shadow: rgba(131, 131, 131, 0.4) 0px 2px 4px,
-    rgba(131, 131, 131, 0.3) 0px 7px 3px -3px,
-    rgba(131, 131, 131, 0.2) 0px -3px 0px inset !important;
+  box-shadow: var(--SCC-Component-TabBar-item__focus-box-shadow) !important;
   border-radius: 3px !important;
   /* border-bottom: 2px ridge var(--b3-theme-primary-light) !important; */
   margin-bottom: 3px !important;
