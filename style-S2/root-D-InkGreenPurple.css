@@ -74,4 +74,19 @@
     --SCC-Component-TabBar-item__focus-box-shadow: rgba(131, 131, 131, 0.4) 0px 2px 4px, rgba(131, 131, 131, 0.3) 0px 7px 3px -3px, rgba(131, 131, 131, 0.2) 0px -3px 0px inset;
     --SCC-Component-TabBar-item-box-shadow: rgba(131, 131, 131, 0.4) 0px 2px 4px, rgba(131, 131, 131, 0.3) 0px 7px 3px -3px, rgba(131, 131, 131, 0.2) 0px -3px 0px inset;
     --SCC-Component-TabBar-item__close-svg__hover-color: var(--SCC-CNTC-石绿);
+    --SCC-sCt-Hfbs1-color1: rgba(30, 35, 30, 0.03);
+    --SCC-sCt-Hfbs1-color2: rgba(30, 34, 30, 0.13);
+    --SCC-sCt-Hfbs1-color3: rgba(30, 33, 30, 0.25);
+    --SCC-sCt-Hfbs1-color4: rgba(30, 32, 30, 0.39);
+    --SCC-sCt-Hfbs1-color5: rgba(30, 31, 30, 0.48);
+    --SCC-Component-Heading-folded-box-shadow-h5: var(--SCC-sCt-Hfbs1-color1) 7px 4px;
+    --SCC-Component-Heading-folded-box-shadow-h4: var(--SCC-sCt-Hfbs1-color2) 7px 4px, var(--SCC-sCt-Hfbs1-color1) 14px 8px;
+    --SCC-Component-Heading-folded-box-shadow-h3: var(--SCC-sCt-Hfbs1-color3) 7px 4px, var(--SCC-sCt-Hfbs1-color2) 14px 8px, var(--SCC-sCt-Hfbs1-color1) 21px 12px;
+    --SCC-Component-Heading-folded-box-shadow-h2: var(--SCC-sCt-Hfbs1-color4) 7px 4px, var(--SCC-sCt-Hfbs1-color3) 14px 8px, var(--SCC-sCt-Hfbs1-color2) 21px 12px, var(--SCC-sCt-Hfbs1-color1) 28px 16px;
+    --SCC-Component-Heading-folded-box-shadow-h1: var(--SCC-sCt-Hfbs1-color5) 7px 4px, var(--SCC-sCt-Hfbs1-color4) 14px 8px, var(--SCC-sCt-Hfbs1-color3) 21px 12px, var(--SCC-sCt-Hfbs1-color2) 28px 16px, var(--SCC-sCt-Hfbs1-color1) 35px 20px;
+    --SCC-Component__Phone-Heading-folded-box-shadow-h5: var(--SCC-sCt-Hfbs1-color1) 2px 4px;
+    --SCC-Component__Phone-Heading-folded-box-shadow-h4: var(--SCC-sCt-Hfbs1-color2) 2px 4px, var(--SCC-sCt-Hfbs1-color1) 4px 8px;
+    --SCC-Component__Phone-Heading-folded-box-shadow-h3: var(--SCC-sCt-Hfbs1-color3) 2px 4px, var(--SCC-sCt-Hfbs1-color2) 4px 8px, var(--SCC-sCt-Hfbs1-color1) 6px 12px;
+    --SCC-Component__Phone-Heading-folded-box-shadow-h2: var(--SCC-sCt-Hfbs1-color4) 2px 4px, var(--SCC-sCt-Hfbs1-color3) 4px 8px, var(--SCC-sCt-Hfbs1-color2) 6px 12px, var(--SCC-sCt-Hfbs1-color1) 8px 16px;
+    --SCC-Component__Phone-Heading-folded-box-shadow-h1: var(--SCC-sCt-Hfbs1-color5) 2px 4px, var(--SCC-sCt-Hfbs1-color4) 4px 8px, var(--SCC-sCt-Hfbs1-color3) 6px 12px, var(--SCC-sCt-Hfbs1-color2) 8px 16px, var(--SCC-sCt-Hfbs1-color1) 10px 20px;
 }
