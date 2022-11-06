@@ -41,7 +41,7 @@
     --b3-menu-background: #131313c5;
 
     /* 提示 */
-    --b3-tooltips-color: #093904c5;
+    --b3-tooltips-color: #50616dc5;
 
     /* 遮罩 */
     --b3-mask-background: #000003dc;
@@ -63,11 +63,11 @@
     --SCC-Component-CodeBlock-bg-color: #afbbbb35;
     --SCC-Component-CodeBlock-bg-color-hover: #555;
     --SCC-Component-Message-button-ok-border: 3px ridge var(--SCC-Cyan-186-lighter) !important;
-    --SCC-Component-Message-button-ok-bg-color: var(--SCC-CNTC-黛绿);
-    --SCC-Component-meno-bg-color: var(--SCC-CNTC-黛绿);
+    --SCC-Component-Message-button-ok-bg-color: var(--SCC-CNTC-黛蓝);
+    --SCC-Component-meno-bg-color: var(--SCC-CNTC-黛蓝);
     --SCC-Component-meno-border-bottom: 2px solid var(--b3-card-info-color);
-    --SCC-Component-Counter-bg-color: var(--SCC-CNTC-黛绿);
-    --SCC-Component-Counter-border: 1.3px solid var(--SCC-CNTC-黛绿);
+    --SCC-Component-Counter-bg-color: var(--SCC-CNTC-黛蓝);
+    --SCC-Component-Counter-border: 1.3px solid var(--SCC-CNTC-黛蓝);
     --SCC-Component-TabBar-item__focus-box-shadow: none;
     --SCC-Component-TabBar-item-box-shadow: none;
 }
