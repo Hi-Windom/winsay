@@ -70,4 +70,5 @@
     --SCC-Component-Counter-border: 1.3px solid var(--SCC-CNTC-黛蓝);
     --SCC-Component-TabBar-item__focus-box-shadow: none;
     --SCC-Component-TabBar-item-box-shadow: none;
+    --SCC-Component-TabBar-item__close-svg__hover-color: var(--SCC-CNTC-杏黄);
 }

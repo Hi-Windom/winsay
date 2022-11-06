@@ -48,8 +48,8 @@ ul.layout-tab-bar .item:hover .item__text {
 }
 
 /* 标签页svg */
-ul.layout-tab-bar .item:not(.item--focus) .item__close svg {
-  color: var(--SCC-Purple-Soledar);
+ul.layout-tab-bar .item .item__close:hover svg {
+  color: var(--SCC-Component-TabBar-item__close-svg__hover-color);
   scale: 1.1;
 }
 /* .layout-tab-bar .item__close {

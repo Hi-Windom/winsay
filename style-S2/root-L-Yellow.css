@@ -70,4 +70,5 @@
   --SCC-Component-Counter-border: 1.3px solid var(--SCC-CNTC-白茶);
   --SCC-Component-TabBar-item__focus-box-shadow: rgba(131, 131, 131, 0.4) 0px 2px 4px, rgba(131, 131, 131, 0.3) 0px 7px 3px -3px, rgba(131, 131, 131, 0.2) 0px -3px 0px inset;
   --SCC-Component-TabBar-item-box-shadow: rgba(131, 131, 131, 0.4) 0px 2px 4px, rgba(131, 131, 131, 0.3) 0px 7px 3px -3px, rgba(131, 131, 131, 0.2) 0px -3px 0px inset;
+  --SCC-Component-TabBar-item__close-svg__hover-color: var(--SCC-CNTC-朱膘);
 }
