@@ -227,9 +227,8 @@
   animation: tree-list 0.13s ease-in;
 }
 
-/* 块标切换动画，来自于Notion主题 */
 .protyle-gutters {
-  transition: all 200ms ease-out;
+  transition: all .2s ease-out;
 }
 
 /* hint--menu */
