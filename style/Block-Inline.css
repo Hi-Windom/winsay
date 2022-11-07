@@ -49,19 +49,19 @@
 }
 
 
-/* kbd 按键的样式 */
+/* kbd 按键的样式，不匹配与其他样式叠加的span（确保显示效果） */
 .b3-typography kbd,
 .b3-typography span[data-type~=kbd],
 .protyle-wysiwyg kbd,
 .protyle-wysiwyg span[data-type~=kbd] {
-    border-radius: 6px;
-    color: var(--SCC-Black-186);
-    background-color: var(--SCC-White-light);
+    border-radius: var(--SCC-Component-Inline-kbd-border-radius);
+    color: var(--SCC-Component-Inline-kbd-color);
+    background-color: var(--SCC-Component-Inline-kbd-bg-color);
     vertical-align: 2px;
-    /* box-shadow: rgba(191,250,226, 0.4) 0px 2px, rgba(72,69,80,0.3) 0px 4px; // Sofill+ 备选方案 */
-    box-shadow: rgba(254, 239, 234, 0.4) 0px 3px, rgba(0, 6, 85, 0.3) 0px 5px;
+    box-shadow: var(--SCC-Component-Inline-kbd-box-shadow);
     border: 0px solid;
     margin-right: 2px;
+    line-height: 2;
     font-family: var(--b3-font-family);
 }
 
@@ -77,20 +77,28 @@ span[data-type=code] {
     font-family: var(--b3-font-family-code);
 }
 
-span[data-type=code]::before {
-    content: "<";
+span[data-type=code]::before,
+span[data-type=code]::after {
+    content: "-";
+    font-size: 0;
+    opacity: .58;
     color: var(--SCC-White-lighter);
-    display: inline-block;
-    margin-right: .1rem;
-    padding: 0;
 }
 
-span[data-type=code]::after {
-    content: ">";
-    color: var(--SCC-White-lighter);
+span[data-type=code]:hover::before {
+    content: "<";
     display: inline-block;
-    margin-left: .1rem;
-    padding: 0;
+    margin-right: .3rem;
+    font-size: 100%;
+    transition: all .31s ease-in-out .58s;
+}
+
+span[data-type=code]:hover::after {
+    content: ">";
+    display: inline-block;
+    margin-left: .3rem;
+    font-size: 100%;
+    transition: all .37s ease-in-out .82s;
 }
 
 /* 行内公式增加左右边距 #222 */
@@ -119,6 +127,7 @@ span[data-type=code]::after {
     font-size: 80%;
     transition: opacity 1s ease-in-out .31s;
 }
+
 /* 超级块空段落子块提示 #306 */
 .protyle-wysiwyg.protyle-wysiwyg--attr:focus-within div[data-type="NodeSuperBlock"]:hover .p div[contenteditable="true"]:empty::after {
     content: ":empty";

@@ -1,9 +1,9 @@
 :root {
     /* 主色 */
-    --b3-theme-primary: #119966;
-    --b3-theme-primary-light: #119966c5;
-    --b3-theme-primary-lighter: #119966a5;
-    --b3-theme-primary-lightest: #11996635;
+    --b3-theme-primary: var(--SCC-CNTC-松花色);
+    --b3-theme-primary-light: #bce672c5;
+    --b3-theme-primary-lighter: #bce672a5;
+    --b3-theme-primary-lightest: #bce67235;
     --b3-theme-secondary: var(--SCC-Green-186-light);
     --b3-theme-background: #0d0d0d;
     --b3-theme-background-light: #0d0d0dc5;
@@ -21,7 +21,6 @@
     /* 此色影响顶部栏图标颜色和不少界面区域中的文字颜色 */
     --b3-theme-on-surface-light: var(--SCC-primary-light);
     --b3-theme-on-error: #fff;
-    /* 不修改 */
 
     /* 顶部工具栏 */
     --b3-toolbar-background: var(--SCC-primary-lightest);
@@ -92,4 +91,8 @@
     --SCC-Component-HintMenu-bg-color: #00353913;
     --SCC-Component-HintMenu-border-bottom: 1.86px ridge #815476;
     --SCC-Component-HintMenu-column-rule: 1px solid var(--SCC-Cyan-186-lighter);
+    --SCC-Component-Inline-kbd-color: var(--SCC-Black-186);
+    --SCC-Component-Inline-kbd-bg-color: var(--SCC-White-light);
+    --SCC-Component-Inline-kbd-box-shadow: rgba(254, 239, 234, 0.4) 0px 3px, rgba(0, 6, 85, 0.3) 0px 5px;
+    --SCC-Component-Inline-kbd-border-radius: 6px;
 }

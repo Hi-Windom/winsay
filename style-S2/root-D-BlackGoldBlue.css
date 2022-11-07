@@ -21,7 +21,6 @@
     /* 此色影响顶部栏图标颜色和不少界面区域中的文字颜色 */
     --b3-theme-on-surface-light: var(--SCC-primary-light);
     --b3-theme-on-error: #fff;
-    /* 不修改 */
 
     /* 顶部工具栏 */
     --b3-toolbar-background: var(--SCC-primary-lightest);
@@ -92,4 +91,8 @@
     --SCC-Component-HintMenu-bg-color: rgba(0, 6, 85, 0.08);
     --SCC-Component-HintMenu-border-bottom: 1.86px ridge rgba(244, 244, 0, 0.86);
     --SCC-Component-HintMenu-column-rule: 1px solid var(--SCC-Cyan-186-lighter);
+    --SCC-Component-Inline-kbd-color: var(--SCC-Black-186);
+    --SCC-Component-Inline-kbd-bg-color: var(--SCC-White-light);
+    --SCC-Component-Inline-kbd-box-shadow: rgba(254, 239, 234, 0.4) 0px 3px, rgba(0, 6, 85, 0.3) 0px 5px;
+    --SCC-Component-Inline-kbd-border-radius: 6px;
 }

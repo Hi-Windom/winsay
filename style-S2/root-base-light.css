@@ -19,9 +19,10 @@
   --SCC-baseProperty-Opacity-B: 0.58;
   --SCC-baseProperty-Opacity-C: 0.58;
   --SCC-baseComponent-HintMenu-backdrop-filter: blur(13px);
+  --SCC-baseComponent-snackbar__content-color: #fff;
   /* 块引用波浪线动画图标 | The icon of wavy line animation */
   --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/icon/wavy-line.svg);
-  /* 卡片背景 */
+  /* 卡片 */
   --b3-card-error-color: rgb(97, 26, 21);
   --b3-card-error-background: #f5d1cf;
   --b3-card-warning-color: rgb(102, 60, 0);

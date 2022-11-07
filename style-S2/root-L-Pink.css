@@ -89,4 +89,8 @@
   --SCC-Component-HintMenu-bg-color: #cc959ccc;
   --SCC-Component-HintMenu-border-bottom: 1.86px ridge rgba(244, 244, 0, 0.31);
   --SCC-Component-HintMenu-column-rule: 1px solid var(--SCC-Cyan-186-lighter);
+  --SCC-Component-Inline-kbd-color: var(--SCC-Black-186);
+  --SCC-Component-Inline-kbd-bg-color: var(--SCC-SGTC-19B);
+  --SCC-Component-Inline-kbd-box-shadow: rgba(234, 199, 214, 0.4) 0px 1px, rgba(130, 96, 105, 0.25) -1px 2px;
+  --SCC-Component-Inline-kbd-border-radius: 6px;
 }
