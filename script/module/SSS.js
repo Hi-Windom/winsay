@@ -1,9 +1,7 @@
-import { addinsertCreateElement, isPhone, removejscssfile } from "./../utils/api.js";
+import * as API from "./../utils/api.js";
 window.theme.config_UI = "/conf/appearance/themes/Sofill-/config/UI.json";
 window.theme.themeStyle = document.getElementById("themeStyle"); // 当前主题引用路径
-window.theme.THEME_ROOT = new URL(
-    window.theme.themeStyle.href
-).pathname.replace("theme.css", "");
+window.theme.THEME_ROOT = new URL(window.theme.themeStyle.href).pathname.replace("theme.css", "");
 
 window.theme.ID_COLOR_STYLE = "theme-color-style";
 
@@ -11,7 +9,6 @@ window.theme.ID_COLOR_STYLE = "theme-color-style";
 window.theme.IDs = {
     STYLE_COLOR: "custom-id-style-theme-color",
     BUTTON_TOOLBAR_CHANGE_COLOR: "custom-id-button-toolbar-change-color",
-    LOCAL_STORAGE_COLOR_HREF: "winsay-color-href",
 };
 
 window.theme.colors = [
@@ -27,25 +24,12 @@ window.theme.colors2 = [
     "style-S2/root-D-BlackGoldBlue.css",
 ];
 
+window.theme.latest_LC_href = "SC-winsay-LC-href";
+window.theme.latest_DC_href = "SC-winsay-DC-href";
 /* 循环迭代器 */
-window.theme.Iterator = function* (items) {
-    // REF [ES6中的迭代器(Iterator)和生成器(Generator) - 小火柴的蓝色理想 - 博客园](https://www.cnblogs.com/xiaohuochai/p/7253466.html)
-    for (let i = 0; true; i = (i + 1) % items.length) {
-        yield items[i];
-    }
-};
-window.theme.Iterator2 = function* (items) {
-    // REF [ES6中的迭代器(Iterator)和生成器(Generator) - 小火柴的蓝色理想 - 博客园](https://www.cnblogs.com/xiaohuochai/p/7253466.html)
-    for (let i = 0; true; i = (i + 1) % items.length) {
-        yield items[i];
-    }
-};
+window.theme.Iterator = function* (items) { for (let i = 0; true; i = (i + 1) % items.length) { yield items[i]; } };
+window.theme.Iterator2 = function* (items) { for (let i = 0; true; i = (i + 1) % items.length) { yield items[i]; } };
 
-/**
- * 加载样式文件
- * @params {string} href 样式地址
- * @params {string} id 样式 ID
- */
 window.theme.loadStyle = function (href, id = null) {
     let style = document.createElement("link");
     if (id) style.id = id;
@@ -54,11 +38,6 @@ window.theme.loadStyle = function (href, id = null) {
     style.href = href;
     document.head.appendChild(style);
 };
-/**
- * 更新样式文件
- * @params {string} id 样式文件 ID
- * @params {string} href 样式文件地址
- */
 window.theme.updateStyle = function (id, href) {
     let style = document.getElementById(id);
     if (style) {
@@ -68,10 +47,7 @@ window.theme.updateStyle = function (id, href) {
     }
 };
 
-/**
- * 获取主题模式
- * @return {string} light 或 dark
- */
+
 window.theme.themeMode = (() => {
     /* 根据配置选项判断主题 */
     switch (window.siyuan.config.appearance.mode) {
@@ -145,7 +121,6 @@ window.theme.clientMode = (() => {
 })();
 document.body.classList.add(window.theme.clientMode);
 document.body.classList.add(window.theme.OS);
-// alert(window.theme.clientMode);
 
 /**
  * 获取思源版本号
@@ -159,43 +134,27 @@ window.theme.changeThemeModeByEnv = function () {
     /* 根据版本加载样式配置文件 */
     switch (window.theme.cv) {
         case -1:
-            window.theme.updateStyle(
-                "MI",
-                `/appearance/themes/Sofill-/style-old/MI.css`
-            );
-            window.theme.updateStyle(
-                "TabBar",
-                `/appearance/themes/Sofill-/style-old/MI-TabBar.css`
-            );
+            window.theme.updateStyle("MI", `/appearance/themes/Sofill-/style-old/MI.css`);
+            window.theme.updateStyle("TabBar", `/appearance/themes/Sofill-/style-old/MI-TabBar.css`);
             break;
         default:
             window.theme.updateStyle("MI", `/appearance/themes/Sofill-/style/MI.css`);
-            // window.theme.updateStyle(
-            //   "TabBar",
-            //   `/appearance/themes/Sofill-/style/MI-TabBar.css`
-            // );
             new Promise(function (response) {
                 var url = `http://127.0.0.1:6806/api/file/getFile`;
                 var httpRequest = new XMLHttpRequest();
                 httpRequest.open("POST", url, true);
                 httpRequest.setRequestHeader("Content-type", "application/json");
-                var obj = {
-                    path: window.theme.config_UI,
-                };
+                var obj = { path: window.theme.config_UI, };
                 httpRequest.send(JSON.stringify(obj));
                 // 响应后的回调函数
                 httpRequest.onreadystatechange = function () {
                     if (httpRequest.readyState == 4 && httpRequest.status == 200) {
                         var json = httpRequest.responseText;
-                        console.log(json);
                         response(JSON.parse(json));
                     }
                 };
             }).then(function (response) {
-                window.theme.updateStyle(
-                    "TabBar",
-                    `/appearance/themes/Sofill-/style/${response.style.TabBar}`
-                );
+                window.theme.updateStyle("TabBar", `/appearance/themes/Sofill-/style/${response.style.TabBar}`);
             });
             break;
     }
@@ -204,55 +163,14 @@ window.theme.changeThemeModeByEnv = function () {
         case "android":
             break;
         default:
-            window.theme.updateStyle(
-                "MI-DocTree",
-                `/appearance/themes/Sofill-/style/MI-DocTree.css`
-            );
-            window.theme.updateStyle(
-                "MI-Doc&Breadcrumb",
-                `/appearance/themes/Sofill-/style/MI-Doc&Breadcrumb.css`
-            );
+            window.theme.updateStyle("MI-DocTree", `/appearance/themes/Sofill-/style/MI-DocTree.css`);
+            window.theme.updateStyle("MI-Doc&Breadcrumb", `/appearance/themes/Sofill-/style/MI-Doc&Breadcrumb.css`);
             break;
     }
 };
 
 window.theme.changeThemeModeByEnv();
 
-// 支持修改默认形态 #234
-new Promise(function (response) {
-    var url = `http://127.0.0.1:6806/api/file/getFile`;
-    var httpRequest = new XMLHttpRequest();
-    httpRequest.open("POST", url, true);
-    httpRequest.setRequestHeader("Content-type", "application/json");
-    var obj = {
-        path: window.theme.config_UI,
-    };
-    httpRequest.send(JSON.stringify(obj));
-    // 响应后的回调函数
-    httpRequest.onreadystatechange = function () {
-        if (httpRequest.readyState == 4 && httpRequest.status == 200) {
-            var json = httpRequest.responseText;
-            console.log(json);
-            response(JSON.parse(json));
-        }
-    };
-}).then(function (response) {
-    switch (window.theme.themeMode) {
-        case "dark":
-            window.theme.updateStyle(
-                window.theme.IDs.STYLE_COLOR,
-                `/appearance/themes/Sofill-/style-S2/${response.color.dark}`
-            );
-            break;
-        case "light":
-        default:
-            window.theme.updateStyle(
-                window.theme.IDs.STYLE_COLOR,
-                `/appearance/themes/Sofill-/style-S2/${response.color.light}`
-            );
-            break;
-    }
-});
 
 /* ------------ 形态切换（实验性功能）---------------------- */
 
@@ -262,29 +180,10 @@ function createSofillToolbar() {
     var windowControls = document.getElementById("windowControls");
 
     if (SofillToolbar) siYuanToolbar.removeChild(SofillToolbar);
-    SofillToolbar = insertCreateBefore(windowControls, "div", "SofillToolbar");
+    SofillToolbar = API.insertCreateBefore(windowControls, "div", "SofillToolbar");
     SofillToolbar.style.marginRight = "3px";
     SofillToolbar.style.marginTop = "1px";
     SofillToolbar.style.marginLeft = "10px";
-}
-
-/**
- * 向指定元素前创建插入一个元素，可选添加ID
- * @param {*} targetElement 目标元素
- * @param {*} addElementTxt 要创建添加的元素标签
- * @param {*} setId 为创建元素设置ID
- */
-function insertCreateBefore(targetElement, addElementTxt, setId = null) {
-    if (!targetElement) console.error("指定元素对象不存在！");
-    if (!addElementTxt) console.error("未指定字符串！");
-
-    var element = document.createElement(addElementTxt);
-
-    if (setId) element.id = setId;
-
-    targetElement.parentElement.insertBefore(element, targetElement);
-
-    return element;
 }
 
 function AndroidChangeColor() {
@@ -300,7 +199,7 @@ function AndroidChangeColor() {
             SofillToolbar.style.marginLeft = "10px";
             windowControls.parentElement.insertBefore(SofillToolbar, windowControls);
         } else if (toolbarEdit != null) {
-            SofillToolbar = insertCreateBefore(toolbarEdit, "div", "SofillToolbar");
+            SofillToolbar = API.insertCreateBefore(toolbarEdit, "div", "SofillToolbar");
             SofillToolbar.style.position = "relative";
             SofillToolbar.style.height = "25px";
             SofillToolbar.style.overflowY = "scroll";
@@ -309,80 +208,125 @@ function AndroidChangeColor() {
             SofillToolbar.style.marginLeft = "10px";
         }
     }
-    const addButton = addinsertCreateElement(SofillToolbar, "div");
+    const addButton = API.addinsertCreateElement(SofillToolbar, "div");
     addButton.id = window.theme.IDs.BUTTON_TOOLBAR_CHANGE_COLOR;
     addButton.style.width = "17px";
     addButton.style.height = "100%";
     addButton.style.float = "left";
     addButton.style.marginLeft = "10px";
-    addButton.style.backgroundImage =
-        "url(/appearance/themes/Sofill-/src/S2.svg)";
+    addButton.style.backgroundImage = "url(/appearance/themes/Sofill-/src/S2.svg)";
     addButton.style.backgroundRepeat = "no-repeat";
     addButton.style.backgroundPosition = "left top";
     addButton.style.backgroundSize = "100%";
     addButton.addEventListener("click", (e) => {
-        color_href = window.theme.iter.next().value;
-        localStorage.setItem(window.theme.IDs.LOCAL_STORAGE_COLOR_HREF, color_href);
-        window.theme.updateStyle(window.theme.IDs.STYLE_COLOR, color_href);
+        const latest_color_href = window.theme.iter.next().value;
+        switch (window.theme.themeMode) {
+            case "dark":
+                localStorage.setItem(window.theme.latest_DC_href, latest_color_href);
+                break;
+            case "light":
+            default:
+                localStorage.setItem(window.theme.latest_LC_href, latest_color_href);
+                break;
+        }
+        window.theme.updateStyle(window.theme.IDs.STYLE_COLOR, latest_color_href);
     });
 }
-
-function iterChangeColor() {
-    /* 通过颜色配置文件列表生成完整 URL 路径 */
+function iterLC() {
     let colors_href = [];
-    let colorList =[];
-    switch (window.theme.themeMode) {
-        case "light":
+    let colorList = [];
+    let latest_color_href = localStorage.getItem(window.theme.latest_LC_href);
+    window.theme.iter = window.theme.Iterator(colors_href);
+    if (latest_color_href) {
+        colorList = window.theme.colors;
+        colorList.forEach((color) => colors_href.push(`${window.theme.THEME_ROOT}${color}`));
+        /* 加载配色文件 */
+        window.theme.updateStyle(window.theme.IDs.STYLE_COLOR, latest_color_href);
+        // 将迭代器调整为当前配色
+        for (let i = 0; i < colorList.length; ++i) {
+            if (window.theme.iter.next().value === latest_color_href) break;
+        }
+    } else {
+        // 支持修改默认形态 #234
+        new Promise(function (response) {
+            var url = `http://127.0.0.1:6806/api/file/getFile`;
+            var httpRequest = new XMLHttpRequest();
+            httpRequest.open("POST", url, true);
+            httpRequest.setRequestHeader("Content-type", "application/json");
+            var obj = {
+                path: window.theme.config_UI,
+            };
+            httpRequest.send(JSON.stringify(obj));
+            // 响应后的回调函数
+            httpRequest.onreadystatechange = function () {
+                if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+                    var json = httpRequest.responseText;
+                    console.log(json);
+                    response(JSON.parse(json));
+                }
+            };
+        }).then(function (response) {
             colorList = window.theme.colors;
-            colorList.forEach((color) =>
-                colors_href.push(`${window.theme.THEME_ROOT}${color}`)
-            );
+            colorList.forEach((color) => colors_href.push(`${window.theme.THEME_ROOT}${color}`));
             window.theme.iter = window.theme.Iterator(colors_href);
-            var color_href = localStorage.getItem(
-                window.theme.IDs.LOCAL_STORAGE_COLOR_HREF
-            );
-            if (color_href) {
-                // 将迭代器调整为当前配色
-                for (let i = 0; i < colorList.length; ++i) {
-                    if (window.theme.iter.next().value === color_href) break;
-                }
-            } else {
-                // 迭代器第一个为当前配色
-                color_href = window.theme.iter.next().value;
-                localStorage.setItem(
-                    window.theme.IDs.LOCAL_STORAGE_COLOR_HREF,
-                    color_href
-                );
+            latest_color_href = `/appearance/themes/Sofill-/style-S2/${response.color.light}`;
+            localStorage.setItem(window.theme.latest_LC_href, latest_color_href);
+            window.theme.updateStyle(window.theme.IDs.STYLE_COLOR, latest_color_href);
+            // 将迭代器调整为当前配色
+            for (let i = 0; i < colorList.length; ++i) {
+                if (window.theme.iter.next().value === latest_color_href) break;
             }
-            break;
-        case "dark":
-        default:
-            colorList = window.theme.colors2;
-            colorList.forEach((color) =>
-                colors_href.push(`${window.theme.THEME_ROOT}${color}`)
-            );
-            window.theme.iter = window.theme.Iterator2(colors_href);
-            var color_href = localStorage.getItem(
-                window.theme.IDs.LOCAL_STORAGE_COLOR_HREF
-            );
-            if (color_href) {
-                // 将迭代器调整为当前配色
-                for (let i = 0; i < colorList.length; ++i) {
-                    if (window.theme.iter.next().value === color_href) break;
-                }
-            } else {
-                // 迭代器第一个为当前配色
-                color_href = window.theme.iter.next().value;
-                localStorage.setItem(
-                    window.theme.IDs.LOCAL_STORAGE_COLOR_HREF,
-                    color_href
-                );
-            }
-            break;
+        });
     }
 
-    /* 加载配色文件 */
-    window.theme.updateStyle(window.theme.IDs.STYLE_COLOR, color_href);
+}
+function iterDC() {
+    let colors_href = [];
+    let colorList = [];
+    let latest_color_href = localStorage.getItem(window.theme.latest_DC_href);
+    window.theme.iter = window.theme.Iterator2(colors_href);
+    if (latest_color_href) {
+        colorList = window.theme.colors2;
+        colorList.forEach((color) => colors_href.push(`${window.theme.THEME_ROOT}${color}`));
+        /* 加载配色文件 */
+        window.theme.updateStyle(window.theme.IDs.STYLE_COLOR, latest_color_href);
+        // 将迭代器调整为当前配色
+        for (let i = 0; i < colorList.length; ++i) {
+            if (window.theme.iter.next().value === latest_color_href) break;
+        }
+    } else {
+        // 支持修改默认形态 #234
+        new Promise(function (response) {
+            var url = `http://127.0.0.1:6806/api/file/getFile`;
+            var httpRequest = new XMLHttpRequest();
+            httpRequest.open("POST", url, true);
+            httpRequest.setRequestHeader("Content-type", "application/json");
+            var obj = {
+                path: window.theme.config_UI,
+            };
+            httpRequest.send(JSON.stringify(obj));
+            // 响应后的回调函数
+            httpRequest.onreadystatechange = function () {
+                if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+                    var json = httpRequest.responseText;
+                    console.log(json);
+                    response(JSON.parse(json));
+                }
+            };
+        }).then(function (response) {
+            colorList = window.theme.colors2;
+            colorList.forEach((color) => colors_href.push(`${window.theme.THEME_ROOT}${color}`));
+            window.theme.iter = window.theme.Iterator2(colors_href);
+            latest_color_href = `/appearance/themes/Sofill-/style-S2/${response.color.dark}`;
+            localStorage.setItem(window.theme.latest_DC_href, latest_color_href);
+            window.theme.updateStyle(window.theme.IDs.STYLE_COLOR, latest_color_href);
+            // 将迭代器调整为当前配色
+            for (let i = 0; i < colorList.length; ++i) {
+                if (window.theme.iter.next().value === latest_color_href) break;
+            }
+        });
+    }
+
 }
 function DesktopChangeColor() {
     const drag = document.getElementById("drag"); // 标题栏
@@ -393,41 +337,39 @@ function DesktopChangeColor() {
         button_change_color.ariaLabel = "形态切换（实验性）";
         button_change_color.innerHTML = `<svg><use xlink:href="#iconTheme"></use></svg>`;
         button_change_color.addEventListener("click", (e) => {
-            const color_href = window.theme.iter.next().value;
-            localStorage.setItem(
-                window.theme.IDs.LOCAL_STORAGE_COLOR_HREF,
-                color_href
-            );
-            window.theme.updateStyle(window.theme.IDs.STYLE_COLOR, color_href);
+            const latest_color_href = window.theme.iter.next().value;
+            switch (window.theme.themeMode) {
+                case "dark":
+                    localStorage.setItem(window.theme.latest_DC_href, latest_color_href);
+                    break;
+                case "light":
+                default:
+                    localStorage.setItem(window.theme.latest_LC_href, latest_color_href);
+                    break;
+            }
+            window.theme.updateStyle(window.theme.IDs.STYLE_COLOR, latest_color_href);
         });
-        if (
-            document.getElementById(window.theme.IDs.BUTTON_TOOLBAR_CHANGE_COLOR) ==
-            null
-        ) {
+        if (document.getElementById(window.theme.IDs.BUTTON_TOOLBAR_CHANGE_COLOR) == null) {
             drag.insertAdjacentElement("afterend", button_change_color);
         }
     }
 }
 
-function changeStyleMod() {
-    iterChangeColor();
-    if (isPhone()) {
+async function changeStyleMod() {
+    switch (window.theme.themeMode) {
+        case "dark":
+            iterDC(); break;
+        case "light":
+        default:
+            iterLC(); break;
+    }
+    if (API.isPhone()) {
         AndroidChangeColor();
         createSofillToolbar();
     } else {
         DesktopChangeColor();
-        // REF [JS DOM 编程复习笔记 -- insertAdjacentHTML（九） - 知乎](https://zhuanlan.zhihu.com/p/425616377)
-        // drag.insertAdjacentHTML('afterend', `<div class="protyle-toolbar__divider"></div>`);
     }
 }
-
-/**
- * 更换主题模式
- * @params {string} lightStyle 浅色主题配置文件路径
- * @params {string} darkStyle 深色主题配置文件路径
- * @params {string} customLightStyle 浅色主题自定义配置文件路径
- * @params {string} customDarkStyle 深色主题自定义配置文件路径
- */
 
 function changeThemeModeByApp() {
     let href_color = null;
@@ -435,17 +377,13 @@ function changeThemeModeByApp() {
         case "light":
             href_color = `/appearance/themes/Sofill-/style-S2/root-base-light.css`;
             /* 实验性功能 */
-            window.theme.colors2.forEach((color) =>
-                removejscssfile(`${window.theme.THEME_ROOT}${color}`, "css")
-            );
+            window.theme.colors2.forEach((color) => API.removejscssfile(`${window.theme.THEME_ROOT}${color}`, "css"));
             break;
         case "dark":
         default:
             href_color = `/appearance/themes/Sofill-/style-S2/root-base-dark.css`;
             /* 实验性功能 */
-            window.theme.colors.forEach((color) =>
-                removejscssfile(`${window.theme.THEME_ROOT}${color}`, "css")
-            );
+            window.theme.colors.forEach((color) => API.removejscssfile(`${window.theme.THEME_ROOT}${color}`, "css"));
             break;
     }
     window.theme.updateStyle(window.theme.ID_COLOR_STYLE, href_color);
