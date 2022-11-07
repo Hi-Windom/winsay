@@ -17,3 +17,29 @@
 .protyle-wysiwyg [data-node-id].render-node[data-type=NodeBlockQueryEmbed] {
     border-left: 1px dashed transparent !important;
 }
+
+/* 嵌入块面包屑文字长度自适应 #263 */
+.protyle-wysiwyg__embed {
+    container-type: inline-size;
+    container-name: embedBreadrumb;
+  }
+  @container embedBreadrumb (max-width: 4000px) {
+    .protyle-breadcrumb__bar:has(.protyle-breadcrumb__item:nth-of-type(2)) .protyle-breadcrumb__text {
+      max-width: 40cqw;
+    }
+    .protyle-breadcrumb__bar:has(.protyle-breadcrumb__item:nth-of-type(3)) .protyle-breadcrumb__text {
+      max-width: 28cqw;
+    }
+    .protyle-breadcrumb__bar:has(.protyle-breadcrumb__item:nth-of-type(4)) .protyle-breadcrumb__text {
+      max-width: 22cqw;
+    }
+    .protyle-breadcrumb__bar:has(.protyle-breadcrumb__item:nth-of-type(5)) .protyle-breadcrumb__text {
+      max-width: 15cqw;
+    }
+    .protyle-breadcrumb__bar:has(.protyle-breadcrumb__item:nth-of-type(6)) .protyle-breadcrumb__text {
+      max-width: 10cqw;
+    }
+    .protyle-breadcrumb__bar:has(.protyle-breadcrumb__item:nth-of-type(7)) .protyle-breadcrumb__text {
+      max-width: 8cqw;
+    }
+  }
