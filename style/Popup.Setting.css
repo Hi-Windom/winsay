@@ -1,4 +1,3 @@
-
 /* 更圆润 */
 .b3-tab-bar.b3-list--background .b3-list-item {
   border-radius: 13px;
@@ -9,12 +8,13 @@
   container-type: size;
   container-name: settingLeft;
 }
+
 @container settingLeft (max-height: 2000px) {
   li.b3-list-item--big {
     padding: 0px 24px;
     height: 9cqh;
     min-height: 31px;
-}
+  }
 }
 
 /* 设置界面右侧区域边距自适应 #232 */
@@ -27,9 +27,17 @@
 .b3-dialog--open .b3-dialog__container .b3-dialog__close {
   color: #ffffffa5;
 }
+
 .b3-dialog--open .b3-dialog__container .b3-dialog__close:hover {
   color: #fff;
 }
+
+@media screen and (max-width:960px) {
+  .b3-dialog--open .b3-dialog__container .b3-dialog__close {
+    display: none;
+  }
+}
+
 /* 搜索图标 */
 .b3-form__icon-icon,
 .search__arrowdown {
@@ -40,17 +48,20 @@
 .config-account__name a {
   color: var(--SCColor);
   animation: text-shadow-4 1s alternate;
-  animation-fill-mode:both;
+  animation-fill-mode: both;
 }
+
 .config-account__name a:hover {
   /* animation-fill-mode:none; */
   text-shadow: 2px 2px 2px #737373;
 }
-.ft__center > a > span > big {
+
+.ft__center>a>span>big {
   color: var(--SCC-Orange-Windom);
   text-shadow: 1px 1px 1px #320b11;
 }
-.ft__center > a:hover > span > big {
+
+.ft__center>a:hover>span>big {
   color: var(--SCC-Blue-186);
   text-shadow: none;
 }
@@ -62,25 +73,25 @@
 
 /* 设置左侧选中样式 */
 li.b3-list-item--focus.b3-list-item.b3-list-item--big,
-li.b3-list-item--focus.b3-list-item.b3-list-item--big
-  svg.b3-list-item__graphic {
+li.b3-list-item--focus.b3-list-item.b3-list-item--big svg.b3-list-item__graphic {
   color: var(--b3-theme-primary);
 }
 
 
-body > div.b3-dialog--open > div > div.b3-dialog__container  div.fn__flex-1.fn__flex > ul::-webkit-scrollbar {
-  width: 0px; /* 允许滚动但不显示滚动条 */
+body>div.b3-dialog--open>div>div.b3-dialog__container div.fn__flex-1.fn__flex>ul::-webkit-scrollbar {
+  width: 0px;
+  /* 允许滚动但不显示滚动条 */
 }
+
 .b3-dialog__container:has(li[data-name="editor"]) {
   max-width: 1386px !important;
 }
 
-.config-account__center.config-account__center--text > div.ft__center > div:nth-child(7),
-.config-account__center.config-account__center--text > div.ft__center > div:nth-child(8),
-.config-account__center.config-account__center--text > div.ft__center > div:nth-child(9),
-.config-account__center.config-account__center--text > div.ft__center > div:nth-child(10),
-.config-account__center.config-account__center--text > div.ft__center > div:nth-child(11)
-{
+.config-account__center.config-account__center--text>div.ft__center>div:nth-child(7),
+.config-account__center.config-account__center--text>div.ft__center>div:nth-child(8),
+.config-account__center.config-account__center--text>div.ft__center>div:nth-child(9),
+.config-account__center.config-account__center--text>div.ft__center>div:nth-child(10),
+.config-account__center.config-account__center--text>div.ft__center>div:nth-child(11) {
   letter-spacing: 3.1px;
   color: #585858;
   text-align: left;
@@ -89,16 +100,19 @@ body > div.b3-dialog--open > div > div.b3-dialog__container  div.fn__flex-1.fn__
 .b3-tab-container {
   font-size: 1.13em;
 }
+
 .b3-dialog--open .b3-dialog__container .b3-tab-container {
   box-shadow: 0px 0px 13px #58586213 inset;
   transition: all 1.86s;
   transition-delay: .31s;
 }
+
 .b3-dialog--open .b3-dialog__container:focus-within .b3-tab-container {
   box-shadow: 0px 0px 58px #58586213 inset;
   transition: all 1.86s;
   transition-delay: .31s;
 }
+
 .b3-dialog__container .b3-label__text {
   opacity: .88;
   letter-spacing: .13px;
@@ -109,14 +123,15 @@ body > div.b3-dialog--open > div > div.b3-dialog__container  div.fn__flex-1.fn__
 }
 
 /* 集市selector去除底色 #271 */
-body > div.b3-dialog--open > div > div.b3-dialog__container > div:nth-child(3) > div > div.fn__flex-1.fn__flex > div:nth-child(7) > div > div.fn__flex-1 .b3-select.fn__size200 {
- background-color: transparent !important;
+body>div.b3-dialog--open>div>div.b3-dialog__container>div:nth-child(3)>div>div.fn__flex-1.fn__flex>div:nth-child(7)>div>div.fn__flex-1 .b3-select.fn__size200 {
+  background-color: transparent !important;
 }
 
 /* 代码片段界面 */
 .b3-dialog__container:has(#addCodeSnippetCSS) div[style*="60vh"] textarea.b3-text-field {
   height: 131px;
 }
+
 .b3-dialog__container:has(#addCodeSnippetCSS) input.fn__size200.b3-text-field[placeholder="标题"] {
   width: 58%;
 }
