@@ -134,3 +134,7 @@
 .search__header {
   z-index: 98;
 }
+
+.dock__item--activefocus {
+  color: #fff !important;
+}
