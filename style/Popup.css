@@ -221,3 +221,8 @@ body.android #commonMenu > button.b3-menu__item.b3-menu__item--custom svg.b3-men
   height: 10px;
   color: var(--SCC-Red-WPS);
 }
+
+/* 禁用.protyle-toolbar过渡效果 #319 */
+.protyle-toolbar {
+  transition: none;
+}
