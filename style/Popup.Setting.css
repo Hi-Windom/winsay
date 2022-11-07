@@ -48,6 +48,12 @@
 }
 
 /* 【设置】-【账户】界面美化 */
+.config-account__form {
+  max-width: 333px;
+  height: 200%;
+  padding-top: 40%;
+  width: 100%;
+}
 .config-account__name a {
   color: var(--SCColor);
   animation: text-shadow-4 1s alternate;
