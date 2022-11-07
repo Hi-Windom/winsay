@@ -77,7 +77,7 @@ span[data-type=code] {
     font-family: var(--b3-font-family-code);
 }
 
-span[data-type=code]::before {
+/* span[data-type=code]::before {
     content: "<";
     color: var(--SCC-White-lighter);
     display: inline-block;
@@ -91,7 +91,7 @@ span[data-type=code]::after {
     display: inline-block;
     margin-left: .1rem;
     padding: 0;
-}
+} */
 
 /* 行内公式增加左右边距 #222 */
 .b3-typography .katex,
