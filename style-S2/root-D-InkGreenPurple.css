@@ -1,9 +1,9 @@
 :root {
     /* 主色 */
-    --b3-theme-primary: #119966;
-    --b3-theme-primary-light: #119966c5;
-    --b3-theme-primary-lighter: #119966a5;
-    --b3-theme-primary-lightest: #11996635;
+    --b3-theme-primary: var(--SCC-CNTC-松花色);
+    --b3-theme-primary-light: #bce672c5;
+    --b3-theme-primary-lighter: #bce672a5;
+    --b3-theme-primary-lightest: #bce67235;
     --b3-theme-secondary: var(--SCC-Green-186-light);
     --b3-theme-background: #0d0d0d;
     --b3-theme-background-light: #0d0d0dc5;
