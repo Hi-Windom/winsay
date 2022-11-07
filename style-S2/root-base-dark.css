@@ -18,15 +18,15 @@
   --SCC-baseComponent-HintMenu-backdrop-filter: blur(99px);
   /* 块引用波浪线动画图标 | The icon of wavy line animation */
   --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/icon/wavy-line.svg);
-  /* 卡片背景 */
+  /* 卡片 */
   --b3-card-error-color: rgb(97, 26, 21);
-  --b3-card-error-background: #f5d1cf;
+  --b3-card-error-background: #f5d1cfc5;
   --b3-card-warning-color: rgb(102, 60, 0);
-  --b3-card-warning-background: #ffe8c8;
+  --b3-card-warning-background: #ffe8c8c5;
   --b3-card-info-color: rgb(13, 60, 97);
-  --b3-card-info-background: #668899;
+  --b3-card-info-background: #668899c5;
   --b3-card-success-color: rgb(30, 70, 32);
-  --b3-card-success-background: #d7eed8;
+  --b3-card-success-background: #d7eed8c5;
 
   /* 自定义文字 */
   --b3-font-color1: var(--SCC-Red-Firole-light);
@@ -133,11 +133,6 @@
   background-color: var(--b3-theme-background) !important;
   box-shadow: #77777777 0px 0px 0px 3px !important;
   opacity: 0.98 !important;
-}
-
-.protyle-wysiwyg [data-node-id] span[data-type~="block-ref"],
-.protyle-wysiwyg [data-node-id] span[data-type~="file-annotation-ref"] {
-  box-shadow: #58585858 0px 0px 0px 1px;
 }
 
 .b3-tab-container {

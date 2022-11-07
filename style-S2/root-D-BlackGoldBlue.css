@@ -21,7 +21,6 @@
     /* 此色影响顶部栏图标颜色和不少界面区域中的文字颜色 */
     --b3-theme-on-surface-light: var(--SCC-primary-light);
     --b3-theme-on-error: #fff;
-    /* 不修改 */
 
     /* 顶部工具栏 */
     --b3-toolbar-background: var(--SCC-primary-lightest);
