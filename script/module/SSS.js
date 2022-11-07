@@ -20,8 +20,8 @@ window.theme.colors = [
 ];
 
 window.theme.colors2 = [
-    "style-S2/root-D-InkGreenPurple.css",
     "style-S2/root-D-BlackGoldBlue.css",
+    "style-S2/root-D-InkGreenPurple.css",
 ];
 
 window.theme.latest_LC_href = "SC-winsay-LC-href";

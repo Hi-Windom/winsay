@@ -52,7 +52,7 @@
 
 ---
 
-修改默认形态为实验性功能，如需修改，请手动修改 Sofill- 主题文件夹路径下的 config/UI.json 文件，形态对应的键值参考 Sofill- 主题形态一览表 ✨
+修改默认形态不会影响形态记忆功能，形态对应的键值参考 Sofill- 主题形态一览表 ✨
 
 | 形态   | 模式      | 是否上线 | 开发阶段 | json键值                   | 说明             |
 | ------ | --------- | -------- | -------- | -------------------------- | ---------------- |
@@ -61,8 +61,8 @@
 | 砰砰粉 | ⬜ light  | ✔️     | 维护     | root-L-Pink.css            |                  |
 | 青葱绿 | ⬜ light  | ✔️     | 维护     | root-L-Green.css           |                  |
 | 智慧金 | ⬜ light  | ✔️     | 维护     | root-L-Yellow.css          |                  |
-| 墨绿紫 | ⬛ dark   | ✔️     | 构建     | root-D-InkGreenPurple.css  | 暗黑模式默认形态 |
-| 黑金蓝 | ⬛ dark   | ✔️     | 构建     | root-D-BlackGoldPurple.css |                  |
+| 黑金蓝 | ⬛ dark   | ✔️     | 构建     | root-D-BlackGoldPurple.css | 暗黑模式默认形态 |
+| 墨绿紫 | ⬛ dark   | ✔️     | 构建     | root-D-InkGreenPurple.css  |                  |
 
 ---
 

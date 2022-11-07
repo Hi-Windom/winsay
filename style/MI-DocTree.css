@@ -11,11 +11,7 @@
   background-color: transparent;
   transition-duration: .31s;
   outline: 1.3px ridge transparent;
-  border-image: linear-gradient(to right,
-      #eeeeee13 0%,
-      #58585813 20%,
-      #58585813 80%,
-      #eeeeee13 100%) 1;
+  border-image: var(--SCC-baseComponent-file__tree-UL-border-image);
 }
 
 .fn__flex-1.fn__flex-column.file-tree.sy__file:hover ul.b3-list.b3-list--background {
