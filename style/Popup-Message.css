@@ -3,11 +3,12 @@
   opacity: 0.98;
 }
 #message button[aria-label="已读"] {
-  height: 2.6em !important;
-  width: 5.8em !important;
+  height: 1.86em !important;
+  width: 3.71em !important;
   border: var(--SCC-Component-Message-button-ok-border);
   background-color: var(--SCC-Component-Message-button-ok-bg-color);
 }
+
 #message button[aria-label="已读"] svg {
   scale: 1.6em !important;
   color: #fff !important;
@@ -17,4 +18,10 @@
   right: 22px;
   top: unset;
   bottom: 31px;
+}
+.b3-snackbar__content{
+  color: var(--SCC-baseComponent-snackbar__content-color);
+  letter-spacing: .58px;
+  font-size: 120%;
+  line-height: 2.5;
 }

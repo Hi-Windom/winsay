@@ -16,6 +16,7 @@
   --SCC-baseProperty-Opacity-B: .58;
   --SCC-baseProperty-Opacity-C: 0.88;
   --SCC-baseComponent-HintMenu-backdrop-filter: blur(99px);
+  --SCC-baseComponent-snackbar__content-color: #585858;
   /* 块引用波浪线动画图标 | The icon of wavy line animation */
   --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/icon/wavy-line.svg);
   /* 卡片 */
