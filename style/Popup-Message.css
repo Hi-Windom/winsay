@@ -3,8 +3,8 @@
   opacity: 0.98;
 }
 #message button[aria-label="已读"] {
-  height: 1.86em !important;
-  width: 3.71em !important;
+  height: 2.2em !important;
+  width: 4em !important;
   border: var(--SCC-Component-Message-button-ok-border);
   background-color: var(--SCC-Component-Message-button-ok-bg-color);
 }
@@ -21,7 +21,12 @@
 }
 .b3-snackbar__content{
   color: var(--SCC-baseComponent-snackbar__content-color);
-  letter-spacing: .58px;
+  letter-spacing: 1.3px;
   font-size: 120%;
-  line-height: 2.5;
+  line-height: 2;
+}
+
+#message .b3-button.b3-button--white:hover {
+  background-color: var(--b3-theme-background);
+  backdrop-filter: brightness(0.85);
 }
