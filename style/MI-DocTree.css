@@ -111,7 +111,7 @@
 /* 笔记本文字 */
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul>li .b3-list-item__text {
   color: var(--SCC-baseComponent-text-color-2);
-  font-size: 13pt !important;
+  font-size: 12pt !important;
   transition: color 0.2s cubic-bezier(0.47, 0, 0.75, 0.72);
 }
 
