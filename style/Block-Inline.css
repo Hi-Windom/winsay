@@ -77,21 +77,29 @@ span[data-type=code] {
     font-family: var(--b3-font-family-code);
 }
 
-/* span[data-type=code]::before {
-    content: "<";
+span[data-type=code]::before,
+span[data-type=code]::after {
+    content: "-";
+    font-size: 0;
+    opacity: .58;
     color: var(--SCC-White-lighter);
-    display: inline-block;
-    margin-right: .1rem;
-    padding: 0;
 }
 
-span[data-type=code]::after {
-    content: ">";
-    color: var(--SCC-White-lighter);
+span[data-type=code]:hover::before {
+    content: "<";
     display: inline-block;
-    margin-left: .1rem;
-    padding: 0;
-} */
+    margin-right: .3rem;
+    font-size: 100%;
+    transition: all .31s ease-in-out .58s;
+}
+
+span[data-type=code]:hover::after {
+    content: ">";
+    display: inline-block;
+    margin-left: .3rem;
+    font-size: 100%;
+    transition: all .37s ease-in-out .82s;
+}
 
 /* 行内公式增加左右边距 #222 */
 .b3-typography .katex,
@@ -119,6 +127,7 @@ span[data-type=code]::after {
     font-size: 80%;
     transition: opacity 1s ease-in-out .31s;
 }
+
 /* 超级块空段落子块提示 #306 */
 .protyle-wysiwyg.protyle-wysiwyg--attr:focus-within div[data-type="NodeSuperBlock"]:hover .p div[contenteditable="true"]:empty::after {
     content: ":empty";
