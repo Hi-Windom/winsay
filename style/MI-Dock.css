@@ -4,6 +4,13 @@ body.android #barDebug {
     line-height: 13px;
 }
 
-body:not(.android) #barDebug,#barLock,#barFeedback {
+body:not(.android) #barDebug,
+#barLock,
+#barFeedback {
     line-height: 44px;
+}
+
+.dock__item--activefocus {
+    color: #fff !important;
+    background-color: var(--b3-theme-primary-lighter) !important;
 }
