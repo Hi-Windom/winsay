@@ -37,6 +37,9 @@
     display: none;
   }
 }
+.b3-dialog__container[style="width:520px"] .b3-dialog__close {
+  display: none;
+}
 
 /* 搜索图标 */
 .b3-form__icon-icon,
