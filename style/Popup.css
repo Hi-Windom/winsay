@@ -31,18 +31,20 @@
 
 /* 按钮的样式 */
 body:not(.android) .b3-button:not(.b3-button--small):not(.b3-tooltips):not(.b3-button--text) {
-  color: var(--SCC-White);
+  color: var(--SCC-White) !important;
   background-color: var(--SCColor);
   box-shadow: rgba(254, 239, 234, 0.13) 0px 2px 1px,
     rgba(254, 239, 234, 0.13) 0px 4px 4px, rgba(254, 239, 234, 0.13) 0px 8px 4px,
     rgba(254, 239, 234, 0.13) 0px 6px 8px;
+  transition: all 0.06s cubic-bezier(0.4, 0, 1, 1) 0.04s;
 }
 body:not(.android) .b3-button:not(.b3-button--small):not(.b3-tooltips):not(.b3-button--text):focus,
-body:not(.android) .b3-button:not(.b3-button--small):not(.b3-tooltips):not(.b3-button--text):hover {
-  color: var(--SCC-Component-button-text-color);
+body:not(.android) .b3-button:not(.b3-button--small):not(.b3-tooltips):not(.b3-button--text):not([disabled]):hover {
+  color: var(--SCC-Component-button-text-color) !important;
   background-color: var(--SCC-Component-button-bg-color);
   box-shadow: rgba(254, 239, 234, 0.4) 0px 3px, rgba(0, 6, 85, 0.3) 0px 5px,
     rgba(72, 69, 80, 0.1) 0px 8px;
+  transition: all 0.06s cubic-bezier(0.4, 0, 1, 1) 0.04s;
 }
 body.android .b3-button:not(.b3-button--small):not(.b3-tooltips):not(.b3-button--text) {
   color: var(--SCC-Component-button-text-color);
@@ -64,11 +66,7 @@ body.android .b3-button:not(.b3-button--small):not(.b3-tooltips):not(.b3-button-
   transition: box-shadow 1.31s 0.31s cubic-bezier(0, 0, 0.2, 1);
   background-color: var(--b3-theme-background);
 }
-/* input:not(.b3-switch):not(.b3-slider):not(#keymapInput):hover {
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
-    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
-    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-} */
+
 .b3-text-field:not([placeholder="搜索"]):not(.fn__size200):not(.fn__flex-1):not(.fn__flex-center):focus {
   box-shadow: var(--SCC-baseComponent-Input-box-shadow-focus);
 }
