@@ -9,22 +9,43 @@
   --b3-theme-background-light: var(--SCC-Pink-WPS_Vivian-light);
   --b3-theme-surface: var(--SCC-Pink-WPS_Vivian);
   --b3-theme-surface-light: var(--SCC-Pink-WPS_Vivian-light);
-  --b3-theme-error: #d23f31; /* 不修改 */
+  --b3-theme-error: #d23f31;
 
   /* 文字颜色 */
   --b3-theme-on-primary: var(--SCC-SGTC-12A);
   --b3-theme-on-secondary: #fff;
-  --b3-theme-on-background: var(--SCC-Black-186); /* 默认字色 */
-  --b3-theme-on-surface: var(
-    --SCColor
-  ); /* 此色影响顶部栏图标颜色和不少界面区域中的文字颜色 */
+  --b3-theme-on-background: var(--SCC-Black-186);
+  --b3-theme-on-surface: var(--SCColor);
+  /* 此色影响顶部栏图标颜色和不少界面区域中的文字颜色 */
   --b3-theme-on-surface-light: var(--SCC-primary-light);
-  --b3-theme-on-error: #fff; /* 不修改 */
+  --b3-theme-on-error: #fff;
 
   /* 顶部工具栏 */
   --b3-toolbar-background: var(--SCC-primary-lightest);
   --b3-toolbar-blur-background: var(--SCC-Pink-WPS_Vivian-light);
   --b3-toolbar-color: var(--SCC-Red-WPS-light);
+
+  /* 自定义颜色 */
+  --b3-font-color1: var(--SCC-Red-Firole);
+  --b3-font-color2: var(--SCC-Pink-Firole);
+  --b3-font-color3: var(--SCC-Purple-186);
+  --b3-font-color4: var(--SCC-Blue-186);
+  --b3-font-color5: var(--SCC-Black-186);
+  --b3-font-color6: var(--SCColor);
+  --b3-font-color7: var(--SCC-Gray-186);
+  --b3-font-color8: var(--SCC-Cyan-186);
+  --b3-font-color9: var(--SCC-Cyan-186-lighter);
+  --b3-font-color10: var(--SCC-Green-186);
+  --b3-font-background1: var(--SCC-Red-Firole-light);
+  --b3-font-background2: var(--SCC-Pink-Firole-light);
+  --b3-font-background3: var(--SCC-Purple-186-light);
+  --b3-font-background4: var(--SCC-Blue-186-light);
+  --b3-font-background5: var(--SCC-Brown-186-light);
+  --b3-font-background6: var(--SCC-Black-186-lighter);
+  --b3-font-background7: var(--SCC-Gray-186-light);
+  --b3-font-background8: var(--SCC-Cyan-186-light);
+  --b3-font-background9: var(--SCC-Blue-Windom_2-light);
+  --b3-font-background10: var(--SCC-Green-186-lighter);
 
   /* 线条 */
   --b3-border-color: var(--SCC-Pink-WPS_Vivian-light);
@@ -51,7 +72,7 @@
   --SCC-Component-button-text-color: var(--SCC-Pink-Firole);
   --SCC-Component-button-bg-color: var(--b3-theme-primary-lightest);
   --SCC-Component-textarea-box-shadow: rgba(128, 81, 31, 0.1) 3px 3px 6px 0px inset,
-  rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
   --SCC-Component-TabBar-hover-background-color: #fed5d0a5;
   --SCC-Component-HR-LG1: linear-gradient(to right, transparent, #e5585958, transparent);
   --SCC-Component-Inline-virtual-block-ref-border-bottom: 1px dotted var(--SCC-Red-WPS-lighter);
