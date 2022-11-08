@@ -90,11 +90,35 @@ div[data-type="search-item"] .b3-list-item__meta {
   background-color: var(--b3-theme-primary-lightest);
 }
 
-#searchList .b3-list-item__text:has(mark:nth-child(9)):before {
+#searchList .b3-list-item__text:has(mark:nth-child(10)):before {
   content: "9+";
   font-size: 90%;
-    background-color: #58585831;
+  background-color: #58585831;
   border-radius: 50%;
-  padding:4px;
+  padding: 4px;
   margin-right: 5px;
+}
+
+#searchList .b3-list-item__text:has(mark:nth-child(100)):before {
+  content: "99+";
+  font-size: 90%;
+  background-color: #58585831;
+  border-radius: 50%;
+  padding: 4px;
+  margin-right: 5px;
+}
+
+#searchList .b3-list-item {
+  counter-increment: search-index;
+}
+
+#searchList .b3-list-item:before {
+  content: counter(search-index);
+  font-size: 90%;
+  width: 26px;
+  opacity: .31;
+}
+
+#searchList {
+  counter-reset: search-index 0;
 }
