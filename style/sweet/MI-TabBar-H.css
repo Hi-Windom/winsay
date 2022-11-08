@@ -1,19 +1,19 @@
 /* 参考VS2022多行页签紧凑布局 */
 .layout__center [data-type="wnd"][data-id] > .fn__flex {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
 }
 
 .layout-tab-bar:not(.layout-tab-bar--readonly) {
   background-color: transparent;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
+  backdrop-filter: saturate(0.8);
   max-height: 111px;
   border-bottom: 1px outset var(--b3-theme-primary-lightest);
   border-radius: 0px 0 6px 6px;
 }
 .layout-tab-bar:not(.layout-tab-bar--readonly) .item__close {
     padding: 1px 3px 1px 0;
-    display: flex;
     align-items: center;
 }
 
@@ -65,10 +65,10 @@ ul.fn__flex.layout-tab-bar li {
 
 .layout-tab-bar--readonly {
   min-width: 31px;
-  border: 0px outset var(--b3-theme-primary-lightest);
-  border-radius: 100%;
+  width: 31px;
+  /* border: 0px outset var(--b3-theme-primary-lightest); */
+  /* border-radius: 100%; */
   margin: 5px;
-  max-height: 85px;
   height: auto;
 }
 .layout-tab-bar--readonly .item--readonly {
@@ -76,13 +76,13 @@ ul.fn__flex.layout-tab-bar li {
   max-width: fit-content;
   flex-direction: column;
   justify-content: center;
-  height: 90%;
+  height: 99%;
 }
 
 ul.layout-tab-bar li [title="新建文档"],
 ul.layout-tab-bar li [title="更多"] {
   margin: 3px 0px 3px 0;
-  /* padding: 13px 8px 13px 0; */
+  padding: 1px 8px 1px 0;
 }
 body.android ul.layout-tab-bar li [title="新建文档"] span,
 body.android ul.layout-tab-bar li [title="更多"] span {
@@ -114,17 +114,40 @@ body:not(.android) ul.layout-tab-bar li [title="更多"] svg:hover {
 
 /* 使用 li.item 而不是 .item ，避免修改影响【设置】-【集市】的标签页 */
 /* 非当前页签样式 */
+.layout-tab-bar:not(.layout-tab-bar--readonly):has(li:nth-child(1)) li {
+  max-width: 90% !important;
+}
+.layout-tab-bar:not(.layout-tab-bar--readonly):has(li:nth-child(3)) li {
+  max-width: min(44%,500px) !important;
+}
+.layout-tab-bar:not(.layout-tab-bar--readonly):has(li:nth-child(6)) li {
+  max-width: min(31%,400px) !important;
+}
+.layout-tab-bar:not(.layout-tab-bar--readonly):has(li:nth-child(11)) li {
+  max-width: min(31%,310px) !important;
+}
+.layout-tab-bar:not(.layout-tab-bar--readonly):has(li:nth-child(13)) li {
+  max-width: min(31%,280px) !important;
+}
+.layout-tab-bar:not(.layout-tab-bar--readonly):has(li:nth-child(16)) li {
+  max-width: min(31%,200px) !important;
+}
+.layout-tab-bar:not(.layout-tab-bar--readonly):has(li:nth-child(20)) li {
+  max-width: min(31%,158px) !important;
+}
+.layout-tab-bar:not(.layout-tab-bar--readonly):has(li:nth-child(26)) li {
+  max-width: min(31%,131px) !important;
+}
 .layout-tab-bar li.item:not(:last-child).item:not(.item--focus),
 .layout-tab-bar li.item:last-child:not(.item--focus):not(.item--readonly) {
   border-radius: 3px !important;
   border: 0px ridge transparent !important;
-  max-width: 111px !important;
   min-width: 47px !important;
   transition-duration: 0.58s;
   transition-delay: 0.2s;
   font-weight: 520 !important;
-  margin-right: 1px !important;
-  margin-left: 1px !important;
+  margin-right: 3px !important;
+  margin-left: 3px !important;
   background-color: var(--SCC-baseComponent-Button-bg-color-TabBar);
 }
 /* 设置当前标签页样式 */
@@ -157,7 +180,7 @@ body:not(.android) ul.layout-tab-bar li [title="更多"] svg:hover {
 
 /*有图标的标签页内文档名钉住时非聚焦隐藏 */
 .layout-tab-bar .item--pin:has(.item__icon) .item__text.fn__none {
-  display: inline-flex !important;
+  display: none !important;
 }
 
 /* 为钉住的标签页右上角增加大头钉图标 */
