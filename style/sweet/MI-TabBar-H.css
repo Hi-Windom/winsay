@@ -9,8 +9,9 @@
   flex-wrap: wrap-reverse;
   backdrop-filter: saturate(0.8);
   max-height: 111px;
-  padding-bottom: 3px;
+  padding: 3px;
   border-bottom: 3px outset #85858519;
+  border-right: 3px outset #cccccc09;
   border-radius: 0px 0 6px 6px;
 }
 .layout-tab-bar:not(.layout-tab-bar--readonly) .item__close {
