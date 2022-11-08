@@ -68,13 +68,13 @@
 
 注意：Sofill- 0.92+ 版本停止支援思源 2.4.5 及更早版本，以下是 Sofill- 最新版本的真机测试表，enjoy 💫
 
-| 测试平台                        | 兼容性               | 高可用 | 已知问题 |
-| ------------------------------- | -------------------- | ------ | -------- |
-| siyuan-2.4.9-android for mobile | ❤️❤️❤️❤️💗   | ✖️   |          |
-| siyuan-2.4.10-android for pad   | ❤️❤️❤️❤️❤️ | ✔️   |          |
-| siyuan-2.4.10-win               | ❤️❤️❤️❤️❤️ | ✔️   |          |
-| siyuan-2.4.9-win                | ❤️❤️❤️❤️❤️ | ✔️   |          |
-| siyuan-2.4.6-win                | ❤️❤️❤️❤️❤️ | ✔️   |          |
+| 测试平台                         | 兼容性               | LTS  | 已知问题 |
+| -------------------------------- | -------------------- | ---- | -------- |
+| siyuan-2.4.11-android for mobile | ❤️❤️❤️❤️💗   | ✖️ |          |
+| siyuan-2.4.11-android for pad    | ❤️❤️❤️❤️❤️ | ✔️ |          |
+| siyuan-2.4.11-win                | ❤️❤️❤️❤️❤️ | ✔️ |          |
+| siyuan-2.4.9-win                 | ❤️❤️❤️❤️❤️ | ✖️ |          |
+| siyuan-2.4.6-win                 | ❤️❤️❤️❤️❤️ | ✖️ |          |
 
 Mac 、iPad 和 Docker 端目前无真机测试
 
@@ -116,19 +116,19 @@ Sofill- 适合哪些人：13~58岁非色弱人群；青少年请在家长指导�
 
 ## 📜 集市更新版本日志
 
-> v0.88 ▶ v0.90
+> v0.90 ▶ v0.92
 
 ### 版本说明
 
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [主题版本更新的详细信息](https://github.com/Hi-Windom/winsay/releases)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v0.90 ~ v0.90 聚合说明
+### v0.90 ~ v0.92 聚合说明
 
 > 2022-11-08 released
 
 <p><a href="https://github.com/Hi-Windom/winsay/issues/94">
-<img src="https://img.shields.io/badge/SiYuan-2.4.10-green"/></a>
+<img src="https://img.shields.io/badge/SiYuan-2.4.11-green"/></a>
 <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow"/></p></p>
 
 引入特性：
@@ -143,6 +143,10 @@ Sofill- 适合哪些人：13~58岁非色弱人群；青少年请在家长指导�
 3. [禁用.protyle-toolbar过渡效果 · Issue #319 · v0.90](https://github.com/Hi-Windom/winsay/issues/319)
 4. [文档内字体颜色与背景色样式部分跟随主题样式 · Issue #260 · v0.90](https://github.com/Hi-Windom/winsay/issues/260)
 5. [一些细节优化 · Issue #317 · v0.90](https://github.com/Hi-Windom/winsay/issues/317)
+6. [多行横向紧凑页签优化 · Issue #323 · v0.92](https://github.com/Hi-Windom/winsay/issues/323)
+7. [页签【更多】界面布局调整 · Issue #324 · v0.92](https://github.com/Hi-Windom/winsay/issues/324)
+8. [搜索高亮优化显示效果 · Issue #325 · v0.92](https://github.com/Hi-Windom/winsay/issues/325)
+9. [一些细节优化 · Issue #326 · v0.92](https://github.com/Hi-Windom/winsay/issues/326)
 
 缺陷修复：
 
@@ -316,6 +320,15 @@ Sofill 系列主题的诞生与成长离不开下列开源项目的贡献，以�
 * [Zhang-Light](https://github.com/UserZYF/zhang-light)
 * [Chrome-A4](https://github.com/UserZYF/Chrome-A4)
 * [pink-room](https://github.com/StarDustSheep/pink-room)
-* [notion-theme](https://github.com/royc01/notion-theme)
+* [Savor](https://github.com/royc01/notion-theme)
 * [blue-dog](https://github.com/UserZYF/blue-dog)
 * [Dark-Blue](https://github.com/Morganwan90/Darkblue-siyuan-theme)
+
+## 💎 特别鸣谢
+
+* [OriginOS](https://www.vivo.com.cn/originos)
+* [搜狗输入法手机版](https://shouji.sogou.com/?r=ime)
+
+---
+
+<p style="text-align:center">- The End -</p>

@@ -2,8 +2,8 @@
   --SCC-baseComponent-Button-bg-color-TabBar: #a5a7a508;
   --SCC-baseComponent-CodeBlock-ab-color: var(--SCC-White-lighter);
   --SCC-baseComponent-selector-bg-color: #313233ee;
-  --SCC-baseComponent-text-color-1: var(--SCC-CommonD-text-color-1);
-  --SCC-baseComponent-text-color-2: var(--SCC-CommonD-text-color-2);
+  --SCC-baseComponent-text-color-1: #889999;
+  --SCC-baseComponent-text-color-2: var(--SCC-Gray-HellisePotter);
   --SCC-baseComponent-Table-border-1: 0.25pt solid #58585858;
   --SCC-baseComponent-Icon-arrow-color-1: var(--SCC-White);
   --SCC-baseComponent-Inline-tag-bg-color: #337755;
@@ -86,8 +86,8 @@
   --b3-protyle-inline-em-color: #bbbcbc; /* 斜体字色 */
   --b3-protyle-inline-s-color: #a8a2a1c5; /* 删除线字色 */
   --b3-protyle-inline-link-color: var(--SCC-Blue-Windom_2); /* 超链接字色 */
-  --b3-protyle-inline-mark-background: #ffe955;
-  --b3-protyle-inline-mark-color: #202124;
+  --b3-protyle-inline-mark-background: #85858531;
+  --b3-protyle-inline-mark-color: var(--SCC-CNTC-茶白);
   --b3-protyle-inline-tag-color: #5f6368;
   --b3-protyle-inline-blockref-color: var(--b3-theme-primary); /* 块引用字色 */
 
@@ -104,13 +104,6 @@
   --b3-pdf-background7: #944194;
 }
 
-#commonMenu,
-#commonMenu button,
-.b3-list--background .b3-list-item {
-  background-color: #28282813;
-  backdrop-filter: blur(31px);
-  border-radius: 0px;
-}
 
 .block__popover.block__popover--move.block__popover--open {
   background-color: var(--b3-theme-background) !important;
