@@ -212,22 +212,28 @@ body.android .b3-button:not(.b3-button--small):not(.b3-tooltips):not(.b3-button-
   text-overflow: ellipsis !important;
   white-space: nowrap !important;
   overflow: hidden !important;
-  transition: all .31s;
+  transition: all .58s ease-in-out .31s;
   min-width: max(20vw, 200px);
+  opacity: .8;
 }
 #commonMenu:has(button):not(:has(button.b3-menu__item--readonly)):not(:has(.b3-menu__item--show)):not(:has(.b3-menu__separator)):not(:has(input)):has(.b3-menu__item--custom:nth-of-type(1)) .b3-menu__item--custom .b3-menu__label {
   line-height: 2.5;
   letter-spacing: .2px;
   font-size: 15px !important;
 }
-#commonMenu:has(button):not(:has(button.b3-menu__item--readonly)):not(:has(.b3-menu__item--show)):not(:has(.b3-menu__separator)):not(:has(input)):has(.b3-menu__item--custom:nth-of-type(10)) .b3-menu__item--custom .b3-menu__label {
+#commonMenu:has(button):not(:has(button.b3-menu__item--readonly)):not(:has(.b3-menu__item--show)):not(:has(.b3-menu__separator)):not(:has(input)):has(.b3-menu__item--custom:nth-of-type(12)) .b3-menu__item--custom .b3-menu__label {
   line-height: 2;
   letter-spacing: .3px;
   font-size: 15px !important;
 }
-#commonMenu:has(button):not(:has(button.b3-menu__item--readonly)):not(:has(.b3-menu__item--show)):not(:has(.b3-menu__separator)):not(:has(input)):has(.b3-menu__item--custom:nth-of-type(16)) .b3-menu__item--custom .b3-menu__label {
-  line-height: 1.7;
-  letter-spacing: .58px;
+#commonMenu:has(button):not(:has(button.b3-menu__item--readonly)):not(:has(.b3-menu__item--show)):not(:has(.b3-menu__separator)):not(:has(input)):has(.b3-menu__item--custom:nth-of-type(18)) .b3-menu__item--custom .b3-menu__label {
+  line-height: 2;
+  letter-spacing: .3px;
+  font-size: 13px !important;
+}
+#commonMenu:has(button):not(:has(button.b3-menu__item--readonly)):not(:has(.b3-menu__item--show)):not(:has(.b3-menu__separator)):not(:has(input)):has(.b3-menu__item--custom:nth-of-type(24)) .b3-menu__item--custom .b3-menu__label {
+  line-height: 1.9;
+  letter-spacing: .4px;
   font-size: 13px !important;
 }
 
