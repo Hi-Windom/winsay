@@ -9,7 +9,8 @@
   flex-wrap: wrap-reverse;
   backdrop-filter: saturate(0.8);
   max-height: 111px;
-  border-bottom: 1px outset var(--b3-theme-primary-lightest);
+  padding-bottom: 3px;
+  border-bottom: 3px outset #85858519;
   border-radius: 0px 0 6px 6px;
 }
 .layout-tab-bar:not(.layout-tab-bar--readonly) .item__close {
@@ -22,7 +23,10 @@
   font-size: 9pt;
   min-height: 25px;
   height: 25px;
-  margin: 1px;
+  margin: -1px -1px -1px -2px !important;
+  border-left: 2px ridge #85858513 !important;
+  border-right: 0px ridge #85858508 !important;
+  border-radius: 4px !important;
 }
 
 /* 标签页鼠标悬浮时背景颜色 */
@@ -44,7 +48,7 @@ ul.layout-tab-bar .item:not(.item--pin) .item__text {
   white-space: nowrap !important;
   display: inline;
   color: var(--SCC-baseComponent-text-color-1);
-  opacity: .31;
+  opacity: .45;
 }
 ul.layout-tab-bar .item:hover .item__text {
   color: var(--SCC-baseComponent-text-color-1);
@@ -52,6 +56,9 @@ ul.layout-tab-bar .item:hover .item__text {
 }
 
 /* 标签页svg */
+ul.layout-tab-bar .item .item__close svg {
+  opacity: .58;
+}
 ul.layout-tab-bar .item .item__close:hover svg {
   color: var(--SCC-Component-TabBar-item__close-svg__hover-color);
   scale: 1.1;
@@ -66,8 +73,6 @@ ul.fn__flex.layout-tab-bar li {
 .layout-tab-bar--readonly {
   min-width: 31px;
   width: 31px;
-  /* border: 0px outset var(--b3-theme-primary-lightest); */
-  /* border-radius: 100%; */
   margin: 5px;
   height: auto;
 }
@@ -140,31 +145,23 @@ body:not(.android) ul.layout-tab-bar li [title="更多"] svg:hover {
 }
 .layout-tab-bar li.item:not(:last-child).item:not(.item--focus),
 .layout-tab-bar li.item:last-child:not(.item--focus):not(.item--readonly) {
-  border-radius: 3px !important;
-  border: 0px ridge transparent !important;
   min-width: 47px !important;
   transition-duration: 0.2s;
-  transition-delay: 0.2s;
+  transition-delay: 0.58s;
   font-weight: 520 !important;
-  margin-right: 3px !important;
-  margin-left: 3px !important;
   background-color: var(--SCC-baseComponent-Button-bg-color-TabBar);
 }
 /* 设置当前标签页样式 */
 .layout-tab-bar .item--focus:after {
   height: 2px !important; /* 默认主题自带的 */
-  opacity: 0.31;
+  opacity: .58;
 }
 #layouts .layout-tab-bar .item--focus {
-  border-radius: 3px !important;
-  margin-bottom: 2px !important;
   max-width: min(500px,96%) !important;
   min-width: 47px !important;
-  transition-timing-function: cubic-bezier(1, 0, 0, 1);
-  transition-duration: 0.58s;
+  transition-timing-function: cubic-bezier(0.92, -0.49, 0, 0.66);
+  transition-duration: .58s;
   transition-delay: .31s;
-  margin-right: 1px !important;
-  margin-left: 1px !important;
 }
 /* 钉住标签页*/
 .layout-tab-bar .item--pin .item__text {
