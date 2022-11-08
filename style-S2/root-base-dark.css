@@ -86,8 +86,8 @@
   --b3-protyle-inline-em-color: #bbbcbc; /* 斜体字色 */
   --b3-protyle-inline-s-color: #a8a2a1c5; /* 删除线字色 */
   --b3-protyle-inline-link-color: var(--SCC-Blue-Windom_2); /* 超链接字色 */
-  --b3-protyle-inline-mark-background: #ffe955;
-  --b3-protyle-inline-mark-color: #202124;
+  --b3-protyle-inline-mark-background: #85858531;
+  --b3-protyle-inline-mark-color: var(--SCC-CNTC-茶白);
   --b3-protyle-inline-tag-color: #5f6368;
   --b3-protyle-inline-blockref-color: var(--b3-theme-primary); /* 块引用字色 */
 

@@ -3,16 +3,15 @@
 /* 搜索击中高亮应显著区分于文本背景色 */
 .b3-list mark,
 .protyle-wysiwyg [data-node-id] span[data-type=search-mark] {
-    background-color: var(--SCC-Blue-HellisePotter);
-    color: var(--SCC-Yellow-HellisePotter-light) !important;
+    /* background-color: var(--SCC-Blue-HellisePotter); */
+    /* color: var(--SCC-Yellow-HellisePotter-light) !important; */
+    font-size: max(107%,10pt);
+    font-weight: 300;
+    padding: 1px 2px;
+    margin: 0 1px;
+    border-radius: 8px 9px 9px 2px;
 }
 
-/* 标题文本加粗样式应当保留原颜色 */
-/* div[data-type="NodeHeading"] span[data-type=strong]
-{
-    color: inherit !important;
-    font-weight: bold;
-} */
 
 /* 普通标签tag样式 */
 .protyle-wysiwyg [data-node-id]:not([data-type="NodeHeading"]) span[data-type~=tag] {
