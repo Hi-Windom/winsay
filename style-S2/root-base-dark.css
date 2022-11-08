@@ -1,5 +1,5 @@
 :root {
-  --SCC-baseComponent-Button-bg-color-TabBar: #a5a7a535;
+  --SCC-baseComponent-Button-bg-color-TabBar: #a5a7a508;
   --SCC-baseComponent-CodeBlock-ab-color: var(--SCC-White-lighter);
   --SCC-baseComponent-selector-bg-color: #313233ee;
   --SCC-baseComponent-text-color-1: var(--SCC-CommonD-text-color-1);
@@ -17,6 +17,8 @@
   --SCC-baseProperty-Opacity-C: 0.88;
   --SCC-baseComponent-HintMenu-backdrop-filter: blur(99px);
   --SCC-baseComponent-snackbar__content-color: #585858;
+  --SCC-baseComponent-file__tree-UL-border-image: linear-gradient(to right, #58585813 0%, #85858531 20%, #85858531 80%, #58585813 100%) 1;
+  --SCC-baseComponent-TabBar-V__item-box-shadow: rgb(131 131 131 / 30%) 0px 1px 1px, rgb(131 131 131 / 20%) 0px 2px 2px -2px, rgb(131 131 131 / 20%) 0px -1px 0px inset;
   /* 块引用波浪线动画图标 | The icon of wavy line animation */
   --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/icon/wavy-line.svg);
   /* 卡片 */
@@ -29,30 +31,10 @@
   --b3-card-success-color: rgb(30, 70, 32);
   --b3-card-success-background: #d7eed8c5;
 
-  /* 自定义文字 */
-  --b3-font-color1: var(--SCC-Red-Firole-light);
-  --b3-font-color2: var(--SCC-Pink-Firole-light);
-  --b3-font-color3: var(--SCC-Purple-186-light);
-  --b3-font-color4: var(--SCC-Blue-186-light);
-  --b3-font-color5: var(--SCC-primary-light);
-  --b3-font-color6: var(--SCC-White-light);
-  --b3-font-color7: var(--SCC-Gray-186);
-  --b3-font-color8: var(--SCC-Cyan-186);
-  --b3-font-color9: var(--SCC-Cyan-186-lighter);
-  --b3-font-color10: var(--SCC-Green-186);
+  /* 自定义颜色 */
   --b3-font-color11: var(--SCC-Yellow-HellisePotter);
   --b3-font-color12: var(--SCC-Orange-Windom);
   --b3-font-color13: var(--b3-theme-on-background);
-  --b3-font-background1: #e11111c5;
-  --b3-font-background2: #df33ccc5;
-  --b3-font-background3: #9a58fdc5;
-  --b3-font-background4: #58a8ffc5;
-  --b3-font-background5: #c1ac7cc5;
-  --b3-font-background6: #aaaaaac5;
-  --b3-font-background7: #9a7479c5;
-  --b3-font-background8: #338866c5;
-  --b3-font-background9: #119911c5;
-  --b3-font-background10: #00ee70c5;
   --b3-font-background11: #efaf5fc5;
   --b3-font-background12: #ea9100c5;
   --b3-font-background13: var(--b3-theme-on-background);
@@ -100,7 +82,7 @@
   --b3-protyle-code-linenumber-hl: transparent;
 
   /* 所见即所得行内元素颜色 */
-  --b3-protyle-inline-strong-color: #66f144;
+  --b3-protyle-inline-strong-color: inherit;
   --b3-protyle-inline-em-color: #bbbcbc; /* 斜体字色 */
   --b3-protyle-inline-s-color: #a8a2a1c5; /* 删除线字色 */
   --b3-protyle-inline-link-color: var(--SCC-Blue-Windom_2); /* 超链接字色 */

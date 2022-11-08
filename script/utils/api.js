@@ -8,6 +8,7 @@ export {
     getTextWidth,
     isPhone,
     removejscssfile,
+    insertCreateBefore,
     向思源请求数据 as request,
     交互业务 as transactions,
     以sql向思源请求块数据 as sql,
@@ -732,5 +733,22 @@ function removejscssfile(filename, filetype) {
             allsuspects[i].parentNode.removeChild(allsuspects[i]);
     }
 }
+/**
+ * 向指定元素前创建插入一个元素，可选添加ID
+ * @param {*} targetElement 目标元素
+ * @param {*} addElementTxt 要创建添加的元素标签
+ * @param {*} setId 为创建元素设置ID
+ */
+ function insertCreateBefore(targetElement, addElementTxt, setId = null) {
+    if (!targetElement) console.error("指定元素对象不存在！");
+    if (!addElementTxt) console.error("未指定字符串！");
 
+    var element = document.createElement(addElementTxt);
+
+    if (setId) element.id = setId;
+
+    targetElement.parentElement.insertBefore(element, targetElement);
+
+    return element;
+}
 //++++++++++++++++++++++++++++++++++++++++api区域+++++++++++++++++++++++++++++++++++++++++++++++

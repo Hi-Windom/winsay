@@ -48,6 +48,12 @@
 }
 
 /* 【设置】-【账户】界面美化 */
+.config-account__form {
+  max-width: 333px;
+  height: 200%;
+  padding-top: 40%;
+  width: 100%;
+}
 .config-account__name a {
   color: var(--SCColor);
   animation: text-shadow-4 1s alternate;
@@ -128,6 +134,11 @@ body>div.b3-dialog--open>div>div.b3-dialog__container div.fn__flex-1.fn__flex>ul
 /* 集市selector去除底色 #271 */
 body>div.b3-dialog--open>div>div.b3-dialog__container>div:nth-child(3)>div>div.fn__flex-1.fn__flex>div:nth-child(7)>div>div.fn__flex-1 .b3-select.fn__size200 {
   background-color: transparent !important;
+}
+/* 订阅去除底色 */
+.b3-chip--primary {
+  background-color: transparent;
+  color: var(--b3-theme-on-primary);
 }
 
 /* 代码片段界面 */

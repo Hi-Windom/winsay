@@ -81,13 +81,43 @@ body:not(.android) ul.fn__flex.layout-tab-bar li[data-type="tab-header"]:not(.it
 
 /* 标签页鼠标悬浮时背景颜色 */
 ul.layout-tab-bar .item:not(.item--readonly):hover {
-  background-color: var(--SCC-Blue-Windom_2-lighter) !important;
+  background-color: var(--SCC-Component-TabBar-item-hover-bg-color) !important;
 }
 
 /* 标签页svg */
-ul.layout-tab-bar .item:not(.item--focus) .item__close svg {
-  color: var(--SCC-Purple-Soledar);
+
+ul.layout-tab-bar li [title="新建文档"],
+ul.layout-tab-bar li [title="更多"] {
+  margin: 0px 3px 0px 3px;
+}
+body.android ul.layout-tab-bar li [title="新建文档"] span,
+body.android ul.layout-tab-bar li [title="更多"] span {
+  padding: 13px 8px 13px 0 !important;
+}
+ul.layout-tab-bar .item:not(.item--focus) .item__close:hover svg {
+  color: var(--b3-theme-primary);
   scale: 1.1;
+}
+body.android ul.layout-tab-bar li [title="新建文档"] svg,
+body.android ul.layout-tab-bar li [title="更多"] svg {
+  width: 13px !important;
+  height: 13px !important;
+}
+body.android ul.layout-tab-bar li [title="新建文档"] svg,
+body.android ul.layout-tab-bar li [title="更多"] svg {
+  color: var(--SCColor) !important;
+  scale: 1.31 !important;
+}
+body:not(.android) ul.layout-tab-bar li [title="新建文档"] svg,
+body:not(.android) ul.layout-tab-bar li [title="更多"] svg {
+  scale: 1.58 !important;
+  padding: 0 !important;
+  text-align: center !important;
+}
+body:not(.android) ul.layout-tab-bar li [title="新建文档"] svg:hover,
+body:not(.android) ul.layout-tab-bar li [title="更多"] svg:hover {
+  color: var(--b3-theme-primary) !important;
+  opacity: 1;
 }
 
 /* 样式优化 */
@@ -140,9 +170,7 @@ ul.fn__flex.layout-tab-bar li {
 /* 非当前页签样式 */
 .layout-tab-bar li.item:not(:last-child).item:not(.item--focus),
 .layout-tab-bar li.item:last-child:not(.item--focus):not(.item--readonly) {
-  box-shadow: rgb(131 131 131 / 40%) 0px 1px 2px,
-    rgb(131 131 131 / 30%) 0px 3px 3px -3px,
-    rgb(131 131 131 / 20%) 0px -3px 0px inset !important;
+  box-shadow: var(--SCC-baseComponent-TabBar-V__item-box-shadow) !important;
   border-radius: 3px !important;
   border: 0px ridge transparent !important;
   /* margin-bottom: 0px !important; */
@@ -159,9 +187,7 @@ ul.fn__flex.layout-tab-bar li {
   opacity: 0.31;
 }
 #layouts .layout-tab-bar .item--focus {
-  box-shadow: rgb(131 131 131 / 40%) 0px 1px 2px,
-    rgb(131 131 131 / 30%) 0px 3px 3px -3px,
-    rgb(131 131 131 / 20%) 0px -3px 0px inset !important;
+  box-shadow: var(--SCC-baseComponent-TabBar-V__item-box-shadow) !important;
   border-radius: 3px !important;
   /* border-bottom: 2px ridge var(--b3-theme-primary-light) !important; */
   margin-bottom: 3px !important;

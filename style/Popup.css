@@ -4,17 +4,17 @@
 /*引用块弹出框*/
 .block__popover {
   min-height: 13vh;
-  max-height: max(88vh,300px);
-  max-width: max(92vw,300px);
+  max-height: max(88vh, 300px);
+  max-width: max(92vw, 300px);
 }
+
 .block__popover.block__popover--move.block__popover--open {
   animation: menu 0.13s ease-in-out;
   opacity: 0.99;
   transition: box-shadow 0.2s ease-in-out;
 }
 
-.block__popover.block__popover--move.block__popover--open[data-pin="true"]
-{
+.block__popover.block__popover--move.block__popover--open[data-pin="true"] {
   background-color: var(--b3-theme-background) !important;
   box-shadow: rgba(85, 91, 255, 0.31) 0px 0px 0px 3px,
     rgba(31, 193, 27, 0.38) 0px 0px 0px 6px,
@@ -24,6 +24,7 @@
   opacity: .98 !important;
   transition: all 0.2s ease-in-out;
 }
+
 .block__popover.block__popover--move.block__popover--open[data-pin="true"]:hover {
   opacity: 1;
   transition: all 0.2s ease-in-out;
@@ -31,19 +32,23 @@
 
 /* 按钮的样式 */
 body:not(.android) .b3-button:not(.b3-button--small):not(.b3-tooltips):not(.b3-button--text) {
-  color: var(--SCC-White);
+  color: var(--SCC-White) !important;
   background-color: var(--SCColor);
   box-shadow: rgba(254, 239, 234, 0.13) 0px 2px 1px,
     rgba(254, 239, 234, 0.13) 0px 4px 4px, rgba(254, 239, 234, 0.13) 0px 8px 4px,
     rgba(254, 239, 234, 0.13) 0px 6px 8px;
+  transition: all 0.06s cubic-bezier(0.4, 0, 1, 1) 0.04s;
 }
+
 body:not(.android) .b3-button:not(.b3-button--small):not(.b3-tooltips):not(.b3-button--text):focus,
-body:not(.android) .b3-button:not(.b3-button--small):not(.b3-tooltips):not(.b3-button--text):hover {
-  color: var(--SCC-Component-button-text-color);
+body:not(.android) .b3-button:not(.b3-button--small):not(.b3-tooltips):not(.b3-button--text):not([disabled]):hover {
+  color: var(--SCC-Component-button-text-color) !important;
   background-color: var(--SCC-Component-button-bg-color);
   box-shadow: rgba(254, 239, 234, 0.4) 0px 3px, rgba(0, 6, 85, 0.3) 0px 5px,
     rgba(72, 69, 80, 0.1) 0px 8px;
+  transition: all 0.06s cubic-bezier(0.4, 0, 1, 1) 0.04s;
 }
+
 body.android .b3-button:not(.b3-button--small):not(.b3-tooltips):not(.b3-button--text) {
   color: var(--SCC-Component-button-text-color);
   background-color: var(--SCC-Component-button-bg-color);
@@ -64,11 +69,7 @@ body.android .b3-button:not(.b3-button--small):not(.b3-tooltips):not(.b3-button-
   transition: box-shadow 1.31s 0.31s cubic-bezier(0, 0, 0.2, 1);
   background-color: var(--b3-theme-background);
 }
-/* input:not(.b3-switch):not(.b3-slider):not(#keymapInput):hover {
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
-    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
-    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-} */
+
 .b3-text-field:not([placeholder="搜索"]):not(.fn__size200):not(.fn__flex-1):not(.fn__flex-center):focus {
   box-shadow: var(--SCC-baseComponent-Input-box-shadow-focus);
 }
@@ -83,10 +84,11 @@ body.android .b3-button:not(.b3-button--small):not(.b3-tooltips):not(.b3-button-
 }
 
 /* 检查框开关样式 */
-.b3-switch{
+.b3-switch {
   border-radius: 5.8px;
   box-shadow: #585858 -1px -1px 3px 0px;
 }
+
 .b3-switch:after {
   box-shadow: var(--b3-point-shadow);
   width: 15px;
@@ -95,11 +97,13 @@ body.android .b3-button:not(.b3-button--small):not(.b3-tooltips):not(.b3-button-
   border: 1px solid #aaa;
   border-radius: 31%;
   background-color: #bbb;
-  transition: transform .31s cubic-bezier(0.18, 0.89, 0.32, 1.28),opacity .2s !important;
+  transition: transform .31s cubic-bezier(0.18, 0.89, 0.32, 1.28), opacity .2s !important;
 }
+
 .b3-switch:checked {
   opacity: .98;
 }
+
 .b3-switch:checked:after {
   border-color: var(--SCC-baseComponent-Switch-checked-ab-color);
 }
@@ -109,12 +113,14 @@ body.android .b3-button:not(.b3-button--small):not(.b3-tooltips):not(.b3-button-
 .b3-slider {
   height: 27px;
 }
+
 .b3-slider::-webkit-slider-runnable-track {
   height: 3px;
   box-shadow: 0 0 4px 1px #acacbc31;
   background: #87654321;
   backdrop-filter: brightness(0.91);
 }
+
 .b3-slider::-webkit-slider-container {
   padding: 0px;
   height: 30px;
@@ -129,37 +135,34 @@ body.android .b3-button:not(.b3-button--small):not(.b3-tooltips):not(.b3-button-
   border-radius: 31%;
   margin-top: -7px;
   background-color: var(--b3-theme-primary);
-  border-image: linear-gradient(
-      to right,
+  border-image: linear-gradient(to right,
       var(--SCC-baseComponent-Switch-checked-ab-color) 77%,
       var(--b3-theme-primary-light) 95%,
-      var(--b3-theme-primary)
-    )
-    0 fill / 7 17 7 0 / 0 0 0 1000px;
+      var(--b3-theme-primary)) 0 fill / 7 17 7 0 / 0 0 0 1000px;
   box-shadow: 0px 0px 3px 2px var(--SCC-baseComponent-Switch-checked-ab-color);
   transition: all 0.13s;
 }
+
 .b3-slider:hover::-webkit-slider-thumb {
-  border-image: linear-gradient(
-      to right,
+  border-image: linear-gradient(to right,
       var(--SCC-baseComponent-Switch-checked-ab-color) 77%,
       var(--b3-theme-primary-light) 95%,
-      var(--b3-theme-primary)
-    )
-    0 fill / 5 18 5 0 / 0 0 0 1000px;
+      var(--b3-theme-primary)) 0 fill / 5 18 5 0 / 0 0 0 1000px;
   transition: all 0.13s;
 }
 
 
 /* 优化块级清除样式按钮显示效果 */
-.b3-menu__label > div[aria-label="清除样式"] span {
+.b3-menu__label>div[aria-label="清除样式"] span {
   color: var(--b3-theme-background);
 }
+
 .b3-menu__submenu--row button:nth-last-child(2) {
   background-color: var(--b3-theme-surface-lighter) !important;
   margin-top: 8px !important;
   margin-bottom: 8px !important;
 }
+
 [aria-label="清除样式"]:after {
   content: "Clear Block Style";
   color: var(--SCC-Gray-Soledar);
@@ -169,6 +172,7 @@ body.android .b3-button:not(.b3-button--small):not(.b3-tooltips):not(.b3-button-
   font-size: 0.77rem;
   bottom: -3px;
 }
+
 [aria-label="清除样式"]:hover:after {
   content: "Clear Block Style";
   color: var(--b3-theme-on-background);
@@ -188,16 +192,18 @@ body.android .b3-button:not(.b3-button--small):not(.b3-tooltips):not(.b3-button-
 } */
 #commonMenu:has(button):not(:has(button.b3-menu__item--readonly)):not(:has(.b3-menu__item--show)):not(:has(.b3-menu__separator)):not(:has(input)) {
   overflow-y: scroll;
-  max-height: min(88vh,1000px);
-  max-width: min(88vw,600px);
+  max-height: min(88vh, 1000px);
+  max-width: min(88vw, 600px);
 }
-#commonMenu:has(button):not(:has(button.b3-menu__item--readonly)):not(:has(.b3-menu__item--show)):not(:has(.b3-menu__separator)):not(:has(input)) > .b3-menu__item--custom {
+
+#commonMenu:has(button):not(:has(button.b3-menu__item--readonly)):not(:has(.b3-menu__item--show)):not(:has(.b3-menu__separator)):not(:has(input))>.b3-menu__item--custom {
   border-top: 1px solid #c2c2c231 !important;
   animation: background-color-2 3.1s infinite alternate;
   animation: letter-spacing-more-list-1 0.26s alternate;
   transition-duration: 0.2s;
   letter-spacing: .31px;
 }
+
 #commonMenu:has(button):not(:has(button.b3-menu__item--readonly)):not(:has(.b3-menu__item--show)):not(:has(.b3-menu__separator)):not(:has(input)) .b3-menu__item--custom .b3-menu__label {
   margin-right: 5.8px !important;
   padding-left: 5.8px !important;
@@ -208,18 +214,41 @@ body.android .b3-button:not(.b3-button--small):not(.b3-tooltips):not(.b3-button-
   overflow: hidden !important;
   font-size: 16px !important;
 }
-body:not(.android) #commonMenu > button.b3-menu__item.b3-menu__item--custom:hover svg.b3-menu__action {
+
+body:not(.android) #commonMenu>button.b3-menu__item.b3-menu__item--custom:hover svg.b3-menu__action {
   opacity: .58;
   scale: 1.38;
 }
-body:not(.android) #commonMenu > button.b3-menu__item.b3-menu__item--custom.b3-menu__item--current svg.b3-menu__action:hover {
+
+body:not(.android) #commonMenu>button.b3-menu__item.b3-menu__item--custom.b3-menu__item--current svg.b3-menu__action:hover {
   opacity: 1 !important;
   scale: 1.38 !important;
   color: var(--SCC-Red-WPS);
 }
-body.android #commonMenu > button.b3-menu__item.b3-menu__item--custom svg.b3-menu__action {
+
+body.android #commonMenu>button.b3-menu__item.b3-menu__item--custom svg.b3-menu__action {
   opacity: 1;
   width: 10px;
   height: 10px;
   color: var(--SCC-Red-WPS);
+}
+
+#commonMenu:has(button:nth-child(3)):not(:has(button:nth-child(4))) {
+  padding: 4px 0 4px 4px;
+}
+
+#commonMenu:has(button:nth-child(3)):not(:has(button:nth-child(4)))>button {
+  padding: 5.8px;
+}
+
+#commonMenu:has(button:nth-child(3)):not(:has(button:nth-child(4)))>button>.b3-menu__label {
+  letter-spacing: .58px;
+  font-weight: 300;
+  font-size: 115%;
+  opacity: .8;
+}
+
+/* 禁用.protyle-toolbar过渡效果 #319 */
+.protyle-toolbar {
+  transition: none;
 }
