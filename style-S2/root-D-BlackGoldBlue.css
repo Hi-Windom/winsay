@@ -74,7 +74,7 @@
     --SCC-Component-button-text-color: var(--SCC-Gray-186);
     --SCC-Component-button-bg-color: var(--b3-theme-primary-lighter);
     --SCC-Component-textarea-box-shadow: rgba(220, 220, 220, 0.1) 2px 2px 0px 111px inset, rgba(220, 220, 220, 0.1) 0px -2px 0px 0px inset;
-    --SCC-Component-TabBar-hover-background-color: #505855a5;
+    --SCC-Component-TabBar-item-hover-bg-color: #505961a5;
     --SCC-Component-HR-LG1: linear-gradient(to right, transparent, #42506658, transparent);
     --SCC-Component-Inline-virtual-block-ref-border-bottom: 1px dotted #587163;
     --SCC-Component-Inline-virtual-block-ref-bg-color-hover: #ffffffc5;

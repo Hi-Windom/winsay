@@ -21,6 +21,7 @@
   --SCC-baseComponent-HintMenu-backdrop-filter: blur(13px);
   --SCC-baseComponent-snackbar__content-color: #fff;
   --SCC-baseComponent-file__tree-UL-border-image: linear-gradient(to right, #eeeeee13 0%, #58585813 20%, #58585813 80%, #eeeeee13 100%) 1;
+  --SCC-baseComponent-TabBar-V__item-box-shadow: rgb(131 131 131 / 40%) 0px 1px 2px, rgb(131 131 131 / 30%) 0px 3px 3px -3px, rgb(131 131 131 / 20%) 0px -3px 0px inset;
   /* 块引用波浪线动画图标 | The icon of wavy line animation */
   --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/icon/wavy-line.svg);
   /* 卡片 */
