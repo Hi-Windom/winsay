@@ -11,7 +11,8 @@
 
 body.body--win32 {
   -webkit-font-smoothing: antialiased;
-  border: none !important; /* 去掉软件的边框线 */
+  border: none !important;
+  /* 去掉软件的边框线 */
 }
 
 /* https://www.zhangxinxu.com/wordpress/2019/03/css-focus-visible */
@@ -36,12 +37,12 @@ ul {
 ul {
   scroll-snap-type: x mandatory;
 }
+
 ul * {
   scroll-snap-align: start;
 }
 
 @layer {
-  /* https://www.zhangxinxu.com/wordpress/2022/01/css-scrollbar-gutter/ */
   ul {
     /* 把滚动条的位置提前预留好（空白） */
     scrollbar-gutter: stable;
@@ -51,11 +52,12 @@ ul * {
 
 /* 可能对解决动画动效抖动抽搐有帮助 */
 #layouts,
-#layouts > div.fn__flex.fn__flex-1,
-#layouts > div.fn__flex.fn__flex-1 > div.layout__center.fn__flex.fn__flex-1 {
+#layouts>div.fn__flex.fn__flex-1,
+#layouts>div.fn__flex.fn__flex-1>div.layout__center.fn__flex.fn__flex-1 {
   transition: all 0s !important;
   transition-delay: 0.58s !important;
 }
+
 /* 设置段落两端对齐 */
 .protyle-content .p:not(.list .p) {
   text-align: justify;
@@ -81,6 +83,7 @@ textarea.b3-text-field.fn__flex-1 {
   font-family: "SC BASE";
   src: local("PingFang SC"), local("Microsoft Yahei");
 }
+
 @font-face {
   font-family: quote;
   src: local("SimSun");
@@ -90,22 +93,11 @@ textarea.b3-text-field.fn__flex-1 {
 
 :root {
   /* 字体 */
-  --b3-font-family: quote, "Inter", "Inter-Regular", "HarmonyOS Sans SC",
-    "Noto Sans", "Noto Sans CJK SC", "Microsoft YaHei UI", "WenQuanYi Micro Hei",
-    sans-serif, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --b3-font-family-code: "JetBrainsMono-Regular", mononoki, Consolas,
-    "Liberation Mono", Menlo, Courier, monospace, "Apple Color Emoji",
-    "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
-    "EmojiSymbols", "SC BASE";
+  --b3-font-family: quote, "Inter", "Inter-Regular", "HarmonyOS Sans SC", "Noto Sans", "Noto Sans CJK SC", "Microsoft YaHei UI", "WenQuanYi Micro Hei", sans-serif, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --b3-font-family-code: "JetBrainsMono-Regular", mononoki, Consolas, "Liberation Mono", Menlo, Courier, monospace, "Apple Color Emoji",
+    "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols", "SC BASE";
   --b3-font-family-graph: mononoki;
-  --b3-font-family-emoji: "Segoe UI Emoji", "Segoe UI Symbol", "Segoe UI",
-    "Apple Color Emoji", "Twemoji Mozilla", "Noto Color Emoji", "Android Emoji";
+  --b3-font-family-emoji: "Segoe UI Emoji", "Segoe UI Symbol", "Segoe UI", "Apple Color Emoji", "Twemoji Mozilla", "Noto Color Emoji", "Android Emoji";
   --b3-font-family-math: KaTeX_Math;
-
-  /* 通用组件 */
-  --SCC-CommonL-text-color-1: var(--SCC-Brown-186);
-  --SCC-CommonD-text-color-1: #889999;
-  --SCC-CommonL-text-color-2: var(--SCC-Gray);
-  --SCC-CommonD-text-color-2: var(--SCC-Gray-HellisePotter);
 }
