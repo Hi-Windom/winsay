@@ -201,7 +201,7 @@ body.android .b3-button:not(.b3-button--small):not(.b3-tooltips):not(.b3-button-
   animation: background-color-2 3.1s infinite alternate;
   animation: letter-spacing-more-list-1 0.26s alternate;
   transition-duration: 0.2s;
-  letter-spacing: .31px;
+  flex-direction: row-reverse;
 }
 
 #commonMenu:has(button):not(:has(button.b3-menu__item--readonly)):not(:has(.b3-menu__item--show)):not(:has(.b3-menu__separator)):not(:has(input)) .b3-menu__item--custom .b3-menu__label {
@@ -212,7 +212,28 @@ body.android .b3-button:not(.b3-button--small):not(.b3-tooltips):not(.b3-button-
   text-overflow: ellipsis !important;
   white-space: nowrap !important;
   overflow: hidden !important;
-  font-size: 16px !important;
+  transition: all .31s;
+  min-width: max(20vw, 200px);
+}
+#commonMenu:has(button):not(:has(button.b3-menu__item--readonly)):not(:has(.b3-menu__item--show)):not(:has(.b3-menu__separator)):not(:has(input)):has(.b3-menu__item--custom:nth-of-type(1)) .b3-menu__item--custom .b3-menu__label {
+  line-height: 2.5;
+  letter-spacing: .2px;
+  font-size: 15px !important;
+}
+#commonMenu:has(button):not(:has(button.b3-menu__item--readonly)):not(:has(.b3-menu__item--show)):not(:has(.b3-menu__separator)):not(:has(input)):has(.b3-menu__item--custom:nth-of-type(10)) .b3-menu__item--custom .b3-menu__label {
+  line-height: 2;
+  letter-spacing: .3px;
+  font-size: 15px !important;
+}
+#commonMenu:has(button):not(:has(button.b3-menu__item--readonly)):not(:has(.b3-menu__item--show)):not(:has(.b3-menu__separator)):not(:has(input)):has(.b3-menu__item--custom:nth-of-type(16)) .b3-menu__item--custom .b3-menu__label {
+  line-height: 1.7;
+  letter-spacing: .58px;
+  font-size: 13px !important;
+}
+
+#commonMenu:has(button):not(:has(button.b3-menu__item--readonly)):not(:has(.b3-menu__item--show)):not(:has(.b3-menu__separator)):not(:has(input)) .b3-menu__item--custom .b3-menu__action {
+  margin-left: 0;
+  margin-right: 4px;
 }
 
 body:not(.android) #commonMenu>button.b3-menu__item.b3-menu__item--custom:hover svg.b3-menu__action {
@@ -233,15 +254,15 @@ body.android #commonMenu>button.b3-menu__item.b3-menu__item--custom svg.b3-menu_
   color: var(--SCC-Red-WPS);
 }
 
-#commonMenu:has(button:nth-child(3)):not(:has(button:nth-child(4))) {
+#commonMenu:not(:has(.b3-menu__item--custom)):has(button:nth-child(3)):not(:has(button:nth-child(4))) {
   padding: 4px 0 4px 4px;
 }
 
-#commonMenu:has(button:nth-child(3)):not(:has(button:nth-child(4)))>button {
+#commonMenu:not(:has(.b3-menu__item--custom)):has(button:nth-child(3)):not(:has(button:nth-child(4)))>button {
   padding: 5.8px;
 }
 
-#commonMenu:has(button:nth-child(3)):not(:has(button:nth-child(4)))>button>.b3-menu__label {
+#commonMenu:not(:has(.b3-menu__item--custom)):has(button:nth-child(3)):not(:has(button:nth-child(4)))>button>.b3-menu__label {
   letter-spacing: .58px;
   font-weight: 300;
   font-size: 115%;
