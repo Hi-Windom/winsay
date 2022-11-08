@@ -55,8 +55,20 @@ ul.fn__flex.layout-tab-bar li {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px; /* 影响【设置】-【集市】标签页 */
 }
 
+.layout-tab-bar--readonly {
+  min-width: 31px;
+}
+.layout-tab-bar--readonly .item--readonly {
+  padding-left: 3px;
+  max-width: fit-content;
+  flex-direction: column;
+  justify-content: center;
+  height: max-content !important;
+}
+
+ul.layout-tab-bar li [title="新建文档"],
 ul.layout-tab-bar li [title="更多"] {
-  margin-right: 12px;
+  margin: 3px 0px 3px 0;
 }
 body.android ul.layout-tab-bar li [title="新建文档"] span,
 body.android ul.layout-tab-bar li [title="更多"] span {
@@ -74,15 +86,13 @@ body.android ul.layout-tab-bar li [title="更多"] svg {
 }
 body:not(.android) ul.layout-tab-bar li [title="新建文档"] svg,
 body:not(.android) ul.layout-tab-bar li [title="更多"] svg {
-  color: var(--b3-theme-primary-light) !important;
   scale: 1.58 !important;
   padding: 0 !important;
   text-align: center !important;
-  /* opacity: 0; */
 }
 body:not(.android) ul.layout-tab-bar li [title="新建文档"] svg:hover,
 body:not(.android) ul.layout-tab-bar li [title="更多"] svg:hover {
-  color: var(--SCC-Red-Firole) !important;
+  color: var(--b3-theme-primary) !important;
   opacity: 1;
 }
 
