@@ -1,4 +1,5 @@
 import * as API from "./../utils/api.js";
+import * as config from "./../config.js";
 
 // 初始缩放比例
 let originPixelRatio = localStorage.devicePixelRatio;
@@ -35,13 +36,28 @@ function isDaylight(){
 }
 
 var setSleepNote;
-
-if(isDaylight) {
-  clearInterval(setSleepNote);
-} else {
-  setSleepNote = setInterval(() => {
-    var currdate = new Date();
-    let h = currdate.getHours();
-    API.通知(`⏰ 现在已经 ${h} 点啦<br>劳逸结合是维持效率的秘诀 ~`);
-  }, 3600000);
-}
+new Promise(function (response) {
+  var url = `http://127.0.0.1:6806/api/file/getFile`;
+  var httpRequest = new XMLHttpRequest();
+  httpRequest.open("POST", url, true);
+  httpRequest.setRequestHeader("Content-type", "application/json");
+  var obj = { path: config.config_Custom, };
+  httpRequest.send(JSON.stringify(obj));
+  // 响应后的回调函数
+  httpRequest.onreadystatechange = function () {
+      if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+          var json = httpRequest.responseText;
+          response(JSON.parse(json));
+      }
+  };
+}).then(function (response) {
+  if(isDaylight || parseInt(response.gotoSleep) < 1) {
+    clearInterval(setSleepNote);
+  } else {
+    setSleepNote = setInterval(() => {
+      var currdate = new Date();
+      let h = currdate.getHours();
+      API.通知(`⏰ 现在已经 ${h} 点啦<br>劳逸结合是维持效率的秘诀 ~`);
+    }, 3600000 * parseInt(response.gotoSleep));
+  }
+});

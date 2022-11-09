@@ -1,5 +1,6 @@
 import * as API from "./utils/api.js";
 
+const config_Custom = "/conf/appearance/themes/Sofill-/config/Custom.json";
 const config_UI = "/conf/appearance/themes/Sofill-/config/UI.json";
 const themeStyle = document.getElementById("themeStyle"); // 当前主题引用路径
 const THEME_ROOT = new URL(themeStyle.href).pathname.replace("theme.css", "");
@@ -58,5 +59,5 @@ var kernelVersion = window.siyuan.config.system.kernelVersion;
 var cv_result = API.compareVersion(kernelVersion, "2.4.2");
 
 export {
-  cv_result, clientMode, Iterator2, Iterator, latest_DC_href, latest_LC_href, colors2, colors, IDs, ID_COLOR_STYLE, THEME_ROOT, themeStyle, config_UI
+  cv_result, clientMode, Iterator2, Iterator, latest_DC_href, latest_LC_href, colors2, colors, IDs, ID_COLOR_STYLE, THEME_ROOT, themeStyle, config_UI, config_Custom
 }
