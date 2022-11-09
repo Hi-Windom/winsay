@@ -141,8 +141,14 @@
 
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul>ul>li {
   line-height: 23px;
+  padding: 1px 0px;
   background-color: #ffffff11;
 }
+
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul>ul>li .b3-list-item__toggle {
+  padding: 0 4px 0 0;
+}
+
 
 /* 已知缺陷：需要展开的列表过长时双击打开正常，点击 toggle 引发高度改变事件引发父容器滚动 */
 /* .fn__flex-1.fn__flex-column.file-tree.sy__file ul > ul {

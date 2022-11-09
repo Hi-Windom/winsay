@@ -19,6 +19,8 @@
   --SCC-baseComponent-snackbar__content-color: #585858;
   --SCC-baseComponent-file__tree-UL-border-image: linear-gradient(to right, #58585813 0%, #85858531 20%, #85858531 80%, #58585813 100%) 1;
   --SCC-baseComponent-TabBar-V__item-box-shadow: rgb(131 131 131 / 30%) 0px 1px 1px, rgb(131 131 131 / 20%) 0px 2px 2px -2px, rgb(131 131 131 / 20%) 0px -1px 0px inset;
+  --SCC-funs__baseComponent-list2map-line: 2px solid var(--b3-theme-primary-light);
+  --SCC-funs__baseComponent-list2table-border: 1px solid var(--b3-theme-primary-lightest);
   /* 块引用波浪线动画图标 | The icon of wavy line animation */
   --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/icon/wavy-line.svg);
   /* 卡片 */

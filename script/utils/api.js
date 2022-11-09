@@ -9,6 +9,8 @@ export {
     isPhone,
     removejscssfile,
     insertCreateBefore,
+    getBlockSelected,
+    compareVersion,
     向思源请求数据 as request,
     交互业务 as transactions,
     以sql向思源请求块数据 as sql,
@@ -57,6 +59,7 @@ export {
     写入文件 as putFile,
     推送消息 as pushMsg,
     推送报错消息 as pushErrMsg,
+    通知,
 };
 
 async function 向思源请求数据(url, data) {
@@ -65,11 +68,12 @@ async function 向思源请求数据(url, data) {
         body: JSON.stringify(data),
         method: "POST",
         headers: {
-            Authorization: `Token ${config.token}`,
+            Authorization: `Token ''`,
         },
     }).then(function (response) {
         resData = response.json();
     });
+    console.log(resData);
     return resData;
 }
 
@@ -270,12 +274,10 @@ async function 获取块面包屑(ID) {
 
 async function 设置思源块属性(内容块id, 属性对象) {
     let url = "/api/attr/setBlockAttrs";
-    return 解析响应体(
-        向思源请求数据(url, {
-            id: 内容块id,
-            attrs: 属性对象,
-        })
-    );
+    return 解析响应体(向思源请求数据(url, {
+        id: 内容块id,
+        attrs: 属性对象,
+    }));
 }
 
 async function 以id获取文档块markdown(文档id) {
@@ -538,18 +540,7 @@ async function 推送消息(message = null, text = null, timeout = 7000) {
     };
     return 解析响应体(向思源请求数据(url, data));
 }
-
-async function 推送报错消息(message = null, text = null, timeout = 7000) {
-    const url = "/api/notification/pushErrMsg";
-    const data = {
-        msg: message ? message[language] || message.other : text,
-        timeout: timeout,
-    };
-    return 解析响应体(向思源请求数据(url, data));
-}
-
-//++++++++++++++++++++++++++++++++++++++++api区域+++++++++++++++++++++++++++++++++++++++++++++++
-function pushMessage (text) {
+function 通知(text, timeout = 7000) {
     var url = `http://127.0.0.1:6806/api/notification/pushMsg`;
     var httpRequest = new XMLHttpRequest();
     httpRequest.open("POST", url, true);
@@ -567,6 +558,35 @@ function pushMessage (text) {
       }
     };
   };
+
+async function 推送报错消息(message = null, text = null, timeout = 7000) {
+    const url = "/api/notification/pushErrMsg";
+    const data = {
+        msg: message ? message[language] || message.other : text,
+        timeout: timeout,
+    };
+    return 解析响应体(向思源请求数据(url, data));
+}
+
+//++++++++++++++++++++++++++++++++++++++++api区域+++++++++++++++++++++++++++++++++++++++++++++++
+function pushMessage(text) {
+    var url = `http://127.0.0.1:6806/api/notification/pushMsg`;
+    var httpRequest = new XMLHttpRequest();
+    httpRequest.open("POST", url, true);
+    httpRequest.setRequestHeader("Content-type", "application/json");
+    var obj = {
+        msg: text,
+        timeout: 7000,
+    };
+    httpRequest.send(JSON.stringify(obj));
+    // 响应后的回调函数
+    httpRequest.onreadystatechange = function () {
+        if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+            var json = httpRequest.responseText;
+            console.log(json);
+        }
+    };
+};
 /**
  * 获得文本的占用的宽度
  * @param {*} text 字符串文班
@@ -739,7 +759,7 @@ function removejscssfile(filename, filetype) {
  * @param {*} addElementTxt 要创建添加的元素标签
  * @param {*} setId 为创建元素设置ID
  */
- function insertCreateBefore(targetElement, addElementTxt, setId = null) {
+function insertCreateBefore(targetElement, addElementTxt, setId = null) {
     if (!targetElement) console.error("指定元素对象不存在！");
     if (!addElementTxt) console.error("未指定字符串！");
 
@@ -752,3 +772,37 @@ function removejscssfile(filename, filetype) {
     return element;
 }
 //++++++++++++++++++++++++++++++++++++++++api区域+++++++++++++++++++++++++++++++++++++++++++++++
+// 如果 version1 > version2 返回 1，如果 version1 < version2 返回 -1， 除此之外返回 0。
+function compareVersion(version1, version2) {
+    const arr1 = version1.split(".");
+    const arr2 = version2.split(".");
+    const length1 = arr1.length;
+    const length2 = arr2.length;
+    const minlength = Math.min(length1, length2);
+    let i = 0;
+    for (i; i < minlength; i++) {
+        let a = parseInt(arr1[i]);
+        let b = parseInt(arr2[i]);
+        if (a > b) {
+            return 1;
+        } else if (a < b) {
+            return -1;
+        }
+    }
+    if (length1 > length2) {
+        for (let j = i; j < length1; j++) {
+            if (parseInt(arr1[j]) != 0) {
+                return 1;
+            }
+        }
+        return 0;
+    } else if (length1 < length2) {
+        for (let j = i; j < length2; j++) {
+            if (parseInt(arr2[j]) != 0) {
+                return -1;
+            }
+        }
+        return 0;
+    }
+    return 0;
+}

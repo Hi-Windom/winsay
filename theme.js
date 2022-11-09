@@ -1,5 +1,28 @@
 window.theme = {};
-window.theme.loadScript = function (src, type = "module", async = false, defer = false) {
+window.funs = {};
+
+/**
+* 获取操作系统 'windows' 或 'darwin' (MacOS) 或 'android'
+*/
+window.theme.OS = window.siyuan.config.system.os;
+
+window.funs.loadStyle = function (href, id = null) {
+  let style = document.createElement("link");
+  if (id) style.id = id;
+  style.type = "text/css";
+  style.rel = "stylesheet";
+  style.href = href;
+  document.head.appendChild(style);
+};
+window.funs.updateStyle = function (id, href) {
+  let style = document.getElementById(id);
+  if (style) {
+      style.setAttribute("href", href);
+  } else {
+      window.funs.loadStyle(href, id);
+  }
+};
+window.funs.loadScript = function (src, type = "module", async = false, defer = false) {
   const script = document.createElement("script");
   if (type) script.type = type;
   if (async) script.async = true;
@@ -7,7 +30,7 @@ window.theme.loadScript = function (src, type = "module", async = false, defer =
   script.src = src;
   document.head.appendChild(script);
 };
-window.theme.addURLParam = function (url,
+window.funs.addURLParam = function (url,
   param = {
     v: window.siyuan.config.appearance.themeVer,
   }
@@ -41,10 +64,10 @@ window.theme.addURLParam = function (url,
       );
   }
 };
-window.theme.config_UI = "/conf/appearance/themes/Sofill-/config/UI.json";
-window.theme.themeStyle = document.getElementById("themeStyle");
-window.theme.THEME_ROOT = new URL(window.theme.themeStyle.href).pathname.replace("theme.css", "");
-window.theme.loadScript(window.theme.addURLParam("/appearance/themes/Sofill-/script/module/SSS.js"), undefined, true);
-window.theme.loadScript(window.theme.addURLParam("/appearance/themes/Sofill-/script/module/DTL.js"), undefined, true);
-window.theme.loadScript(window.theme.addURLParam("/appearance/themes/Sofill-/script/module/ChangeFontSize.js"), undefined, true);
-window.theme.loadScript(window.theme.addURLParam("/appearance/themes/Sofill-/script/module/dev.js"), undefined, true);
+window.funs.loadScript(window.funs.addURLParam("/appearance/themes/Sofill-/script/fun.js"), undefined, true);
+window.funs.loadScript(window.funs.addURLParam("/appearance/themes/Sofill-/script/config.js"), undefined, true);
+
+window.funs.loadScript(window.funs.addURLParam("/appearance/themes/Sofill-/script/module/SSS.js"), undefined, true);
+window.funs.loadScript(window.funs.addURLParam("/appearance/themes/Sofill-/script/module/DTL.js"), undefined, true);
+window.funs.loadScript(window.funs.addURLParam("/appearance/themes/Sofill-/script/module/ChangeFontSize.js"), undefined, true);
+window.funs.loadScript(window.funs.addURLParam("/appearance/themes/Sofill-/script/module/dev.js"), undefined, true);
