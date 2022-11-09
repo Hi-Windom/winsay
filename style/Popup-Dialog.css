@@ -17,7 +17,8 @@
 
 .b3-dialog__container[style*="520px"]:hover {
   box-shadow: 13px 31px 131px -58px rgb(0 0 0 / 50%), 60px 111px 52px -8px rgb(0 0 0 / 13%), -262px -31px 777px -82px rgb(255 255 255 / 99%);
-  opacity: .9;
+  background-color: var(--b3-theme-surface-light);
+  backdrop-filter: blur(2px);
 }
 
 .b3-dialog__container[style*="50vw"] .b3-dialog__close,
