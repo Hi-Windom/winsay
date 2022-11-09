@@ -52,6 +52,21 @@ div[data-type="search-item"] .b3-list-item__meta {
   padding: 3px;
 }
 
+@media screen and (min-width: 960px) {
+  #searchResult::before {
+    content: "🎯";
+    opacity: .8;
+    padding: 0 3px 0 18px;
+  }
+
+  #searchResult::after {
+    content: "|  💡Ctrl + R 转为替换";
+    opacity: .58;
+    padding: 0 18px 0 12px;
+  }
+}
+
+
 #searchPathInput {
   word-break: break-all;
   -webkit-line-clamp: 1;
