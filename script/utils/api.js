@@ -59,6 +59,7 @@ export {
     写入文件 as putFile,
     推送消息 as pushMsg,
     推送报错消息 as pushErrMsg,
+    通知,
 };
 
 async function 向思源请求数据(url, data) {
@@ -539,6 +540,24 @@ async function 推送消息(message = null, text = null, timeout = 7000) {
     };
     return 解析响应体(向思源请求数据(url, data));
 }
+function 通知(text, timeout = 7000) {
+    var url = `http://127.0.0.1:6806/api/notification/pushMsg`;
+    var httpRequest = new XMLHttpRequest();
+    httpRequest.open("POST", url, true);
+    httpRequest.setRequestHeader("Content-type", "application/json");
+    var obj = {
+      msg: text,
+      timeout: 7000,
+    };
+    httpRequest.send(JSON.stringify(obj));
+    // 响应后的回调函数
+    httpRequest.onreadystatechange = function () {
+      if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+        var json = httpRequest.responseText;
+        console.log(json);
+      }
+    };
+  };
 
 async function 推送报错消息(message = null, text = null, timeout = 7000) {
     const url = "/api/notification/pushErrMsg";

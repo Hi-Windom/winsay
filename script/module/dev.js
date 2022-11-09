@@ -23,3 +23,25 @@ window.addEventListener("resize", function () {
   // 记住上一次的设备像素比
   lastPixelRatio = currentPixelRatio;
 });
+
+//夜间返回true，白天返回false，（这里夜间时间设置为23:00 -- 07:00）
+function isDaylight(){
+  var currdate = new Date();
+  if(currdate.getHours()>=23 || currdate.getHours()<7){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+var setSleepNote;
+
+if(isDaylight) {
+  clearInterval(setSleepNote);
+} else {
+  setSleepNote = setInterval(() => {
+    var currdate = new Date();
+    let h = currdate.getHours();
+    API.通知(`⏰ 现在已经 ${h} 点啦<br>劳逸结合是维持效率的秘诀 ~`);
+  }, 3600000);
+}
