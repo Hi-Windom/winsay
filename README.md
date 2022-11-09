@@ -58,7 +58,7 @@
 | 形态   | 模式      | 是否上线 | 开发阶段 | json键值                   | 说明             |
 | ------ | --------- | -------- | -------- | -------------------------- | ---------------- |
 | 绝绝紫 | ⬜ light | ✔️     | 维护     | root.css                   | 默认形态         |
-| 纯洁蓝 | ⬜ light  | ✔️     | 维护     | root-L-Blue.css            |                  |
+| 纯洁蓝 | ⬜ light  | ✔️     | 维护     | root-L-Blue.css            | 缺省形态         |
 | 砰砰粉 | ⬜ light  | ✔️     | 维护     | root-L-Pink.css            |                  |
 | 青葱绿 | ⬜ light  | ✔️     | 维护     | root-L-Green.css           |                  |
 | 智慧金 | ⬜ light  | ✔️     | 维护     | root-L-Yellow.css          |                  |
