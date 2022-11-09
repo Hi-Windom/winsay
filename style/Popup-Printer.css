@@ -77,10 +77,10 @@
     display: none;
 }
 #action > div > button.b3-button.b3-button--cancel {
-    color: #58585888;
+    color: #58585888 !important;
 }
 #action > div > button.b3-button.b3-button--text {
-    color: #227acffc;
+    color: #227acffc !important;
 }
 /* 导出PDF界面异常 #166 */
 #action, #preview {
