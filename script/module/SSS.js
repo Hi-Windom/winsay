@@ -1,9 +1,10 @@
 import * as API from "./../utils/api.js";
+import * as config from "./../config.js";
 
 
 window.theme.changeThemeModeByEnv = function () {
     /* 根据版本加载样式配置文件 */
-    switch (window.theme.cv) {
+    switch (config.cv_result) {
         case -1:
             window.funs.updateStyle("MI", `/appearance/themes/Sofill-/style-old/MI.css`);
             window.funs.updateStyle("TabBar", `/appearance/themes/Sofill-/style-old/MI-TabBar.css`);
@@ -15,7 +16,7 @@ window.theme.changeThemeModeByEnv = function () {
                 var httpRequest = new XMLHttpRequest();
                 httpRequest.open("POST", url, true);
                 httpRequest.setRequestHeader("Content-type", "application/json");
-                var obj = { path: window.theme.config_UI, };
+                var obj = { path: config.config_UI, };
                 httpRequest.send(JSON.stringify(obj));
                 // 响应后的回调函数
                 httpRequest.onreadystatechange = function () {
@@ -80,7 +81,7 @@ function AndroidChangeColor() {
         }
     }
     const addButton = API.addinsertCreateElement(SofillToolbar, "div");
-    addButton.id = window.theme.IDs.BUTTON_TOOLBAR_CHANGE_COLOR;
+    addButton.id = config.IDs.BUTTON_TOOLBAR_CHANGE_COLOR;
     addButton.style.width = "17px";
     addButton.style.height = "100%";
     addButton.style.float = "left";
@@ -93,26 +94,26 @@ function AndroidChangeColor() {
         const latest_color_href = window.theme.iter.next().value;
         switch (window.funs.getThemeMode) {
             case "dark":
-                localStorage.setItem(window.theme.latest_DC_href, latest_color_href);
+                localStorage.setItem(config.latest_DC_href, latest_color_href);
                 break;
             case "light":
             default:
-                localStorage.setItem(window.theme.latest_LC_href, latest_color_href);
+                localStorage.setItem(config.latest_LC_href, latest_color_href);
                 break;
         }
-        window.funs.updateStyle(window.theme.IDs.STYLE_COLOR, latest_color_href);
+        window.funs.updateStyle(config.IDs.STYLE_COLOR, latest_color_href);
     });
 }
 function iterLC() {
     let colors_href = [];
     let colorList = [];
-    let latest_color_href = localStorage.getItem(window.theme.latest_LC_href);
-    window.theme.iter = window.theme.Iterator(colors_href);
+    let latest_color_href = localStorage.getItem(config.latest_LC_href);
+    window.theme.iter = config.Iterator(colors_href);
     if (latest_color_href) {
-        colorList = window.theme.colors;
-        colorList.forEach((color) => colors_href.push(`${window.theme.THEME_ROOT}${color}`));
+        colorList = config.colors;
+        colorList.forEach((color) => colors_href.push(`${config.THEME_ROOT}${color}`));
         /* 加载配色文件 */
-        window.funs.updateStyle(window.theme.IDs.STYLE_COLOR, latest_color_href);
+        window.funs.updateStyle(config.IDs.STYLE_COLOR, latest_color_href);
         // 将迭代器调整为当前配色
         for (let i = 0; i < colorList.length; ++i) {
             if (window.theme.iter.next().value === latest_color_href) break;
@@ -125,7 +126,7 @@ function iterLC() {
             httpRequest.open("POST", url, true);
             httpRequest.setRequestHeader("Content-type", "application/json");
             var obj = {
-                path: window.theme.config_UI,
+                path: config.config_UI,
             };
             httpRequest.send(JSON.stringify(obj));
             // 响应后的回调函数
@@ -137,12 +138,12 @@ function iterLC() {
                 }
             };
         }).then(function (response) {
-            colorList = window.theme.colors;
-            colorList.forEach((color) => colors_href.push(`${window.theme.THEME_ROOT}${color}`));
-            window.theme.iter = window.theme.Iterator(colors_href);
+            colorList = config.colors;
+            colorList.forEach((color) => colors_href.push(`${config.THEME_ROOT}${color}`));
+            window.theme.iter = config.Iterator(colors_href);
             latest_color_href = `/appearance/themes/Sofill-/style-S2/${response.color.light}`;
-            localStorage.setItem(window.theme.latest_LC_href, latest_color_href);
-            window.funs.updateStyle(window.theme.IDs.STYLE_COLOR, latest_color_href);
+            localStorage.setItem(config.latest_LC_href, latest_color_href);
+            window.funs.updateStyle(config.IDs.STYLE_COLOR, latest_color_href);
             // 将迭代器调整为当前配色
             for (let i = 0; i < colorList.length; ++i) {
                 if (window.theme.iter.next().value === latest_color_href) break;
@@ -154,13 +155,13 @@ function iterLC() {
 function iterDC() {
     let colors_href = [];
     let colorList = [];
-    let latest_color_href = localStorage.getItem(window.theme.latest_DC_href);
-    window.theme.iter = window.theme.Iterator2(colors_href);
+    let latest_color_href = localStorage.getItem(config.latest_DC_href);
+    window.theme.iter = config.Iterator2(colors_href);
     if (latest_color_href) {
-        colorList = window.theme.colors2;
-        colorList.forEach((color) => colors_href.push(`${window.theme.THEME_ROOT}${color}`));
+        colorList = config.colors2;
+        colorList.forEach((color) => colors_href.push(`${config.THEME_ROOT}${color}`));
         /* 加载配色文件 */
-        window.funs.updateStyle(window.theme.IDs.STYLE_COLOR, latest_color_href);
+        window.funs.updateStyle(config.IDs.STYLE_COLOR, latest_color_href);
         // 将迭代器调整为当前配色
         for (let i = 0; i < colorList.length; ++i) {
             if (window.theme.iter.next().value === latest_color_href) break;
@@ -173,7 +174,7 @@ function iterDC() {
             httpRequest.open("POST", url, true);
             httpRequest.setRequestHeader("Content-type", "application/json");
             var obj = {
-                path: window.theme.config_UI,
+                path: config.config_UI,
             };
             httpRequest.send(JSON.stringify(obj));
             // 响应后的回调函数
@@ -185,12 +186,12 @@ function iterDC() {
                 }
             };
         }).then(function (response) {
-            colorList = window.theme.colors2;
-            colorList.forEach((color) => colors_href.push(`${window.theme.THEME_ROOT}${color}`));
-            window.theme.iter = window.theme.Iterator2(colors_href);
+            colorList = config.colors2;
+            colorList.forEach((color) => colors_href.push(`${config.THEME_ROOT}${color}`));
+            window.theme.iter = config.Iterator2(colors_href);
             latest_color_href = `/appearance/themes/Sofill-/style-S2/${response.color.dark}`;
-            localStorage.setItem(window.theme.latest_DC_href, latest_color_href);
-            window.funs.updateStyle(window.theme.IDs.STYLE_COLOR, latest_color_href);
+            localStorage.setItem(config.latest_DC_href, latest_color_href);
+            window.funs.updateStyle(config.IDs.STYLE_COLOR, latest_color_href);
             // 将迭代器调整为当前配色
             for (let i = 0; i < colorList.length; ++i) {
                 if (window.theme.iter.next().value === latest_color_href) break;
@@ -201,9 +202,9 @@ function iterDC() {
 }
 function DesktopChangeColor() {
     const drag = document.getElementById("drag"); // 标题栏
-    if (window.theme.themeStyle) {
+    if (config.themeStyle) {
         const button_change_color = document.createElement("button"); // 切换主题颜色按钮
-        button_change_color.id = window.theme.IDs.BUTTON_TOOLBAR_CHANGE_COLOR;
+        button_change_color.id = config.IDs.BUTTON_TOOLBAR_CHANGE_COLOR;
         button_change_color.className = "toolbar__item b3-tooltips b3-tooltips__sw";
         button_change_color.ariaLabel = "形态切换（实验性）";
         button_change_color.innerHTML = `<svg><use xlink:href="#iconTheme"></use></svg>`;
@@ -211,16 +212,16 @@ function DesktopChangeColor() {
             const latest_color_href = window.theme.iter.next().value;
             switch (window.funs.getThemeMode) {
                 case "dark":
-                    localStorage.setItem(window.theme.latest_DC_href, latest_color_href);
+                    localStorage.setItem(config.latest_DC_href, latest_color_href);
                     break;
                 case "light":
                 default:
-                    localStorage.setItem(window.theme.latest_LC_href, latest_color_href);
+                    localStorage.setItem(config.latest_LC_href, latest_color_href);
                     break;
             }
-            window.funs.updateStyle(window.theme.IDs.STYLE_COLOR, latest_color_href);
+            window.funs.updateStyle(config.IDs.STYLE_COLOR, latest_color_href);
         });
-        if (document.getElementById(window.theme.IDs.BUTTON_TOOLBAR_CHANGE_COLOR) == null) {
+        if (document.getElementById(config.IDs.BUTTON_TOOLBAR_CHANGE_COLOR) == null) {
             drag.insertAdjacentElement("afterend", button_change_color);
         }
     }
@@ -248,17 +249,17 @@ function changeThemeModeByApp() {
         case "light":
             href_color = `/appearance/themes/Sofill-/style-S2/root-base-light.css`;
             /* 实验性功能 */
-            window.theme.colors2.forEach((color) => API.removejscssfile(`${window.theme.THEME_ROOT}${color}`, "css"));
+            config.colors2.forEach((color) => API.removejscssfile(`${config.THEME_ROOT}${color}`, "css"));
             break;
         case "dark":
         default:
             href_color = `/appearance/themes/Sofill-/style-S2/root-base-dark.css`;
             /* 实验性功能 */
-            window.theme.colors.forEach((color) => API.removejscssfile(`${window.theme.THEME_ROOT}${color}`, "css"));
+            config.colors.forEach((color) => API.removejscssfile(`${config.THEME_ROOT}${color}`, "css"));
             break;
     }
-    window.funs.updateStyle(window.theme.ID_COLOR_STYLE, href_color);
-    localStorage.removeItem(window.theme.IDs.LOCAL_STORAGE_COLOR_HREF);
+    window.funs.updateStyle(config.ID_COLOR_STYLE, href_color);
+    localStorage.removeItem(config.IDs.LOCAL_STORAGE_COLOR_HREF);
     changeStyleMod();
 }
 /* 支持暗黑模式 */

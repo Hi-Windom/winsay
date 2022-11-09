@@ -1,3 +1,5 @@
+import * as API from "./../utils/api.js";
+
 // 初始缩放比例
 let originPixelRatio = localStorage.devicePixelRatio;
 if (!originPixelRatio) {

@@ -1,5 +1,27 @@
 window.theme = {};
 window.funs = {};
+
+/**
+* 获取操作系统 'windows' 或 'darwin' (MacOS) 或 'android'
+*/
+window.theme.OS = window.siyuan.config.system.os;
+
+window.funs.loadStyle = function (href, id = null) {
+  let style = document.createElement("link");
+  if (id) style.id = id;
+  style.type = "text/css";
+  style.rel = "stylesheet";
+  style.href = href;
+  document.head.appendChild(style);
+};
+window.funs.updateStyle = function (id, href) {
+  let style = document.getElementById(id);
+  if (style) {
+      style.setAttribute("href", href);
+  } else {
+      window.funs.loadStyle(href, id);
+  }
+};
 window.funs.loadScript = function (src, type = "module", async = false, defer = false) {
   const script = document.createElement("script");
   if (type) script.type = type;
