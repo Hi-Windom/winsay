@@ -120,8 +120,9 @@ body:not(.android) ul.layout-tab-bar li [title="更多"] svg:hover {
 }
 
 .layout-tab-bar .item {
-  min-height: 35px;
-  height: 35px;
+  min-height: 30px;
+  height: 30px;
+  font-size: 10pt;
 }
 
 /* 使用 li.item 而不是 .item ，避免修改影响【设置】-【集市】的标签页 */
