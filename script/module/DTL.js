@@ -5,7 +5,7 @@ import {
   isPhone,
 } from "./../utils/api.js";
 
-/**------------------Îª´ò¿ªÎÄµµµÄ±êÌâÏÂÏÔÊ¾ÎÄµµ´´½¨ÈÕÆÚ-----------------¿ªÊ¼ */
+/** ä¸ºæ‰“å¼€æ–‡æ¡£çš„æ ‡é¢˜ä¸‹æ˜¾ç¤ºæ–‡æ¡£åˆ›å»ºæ—¥æœŸ */
 function showDocumentCreationDate() {
   setInterval(DocumentCreationDate, 300);
 }
@@ -16,19 +16,19 @@ function DocumentCreationDate() {
     const element = allDocumentTitleElement[index];
     var documentCreatTimeElement = creatTimeSpanElement(element.parentElement);
     var spanTxt = documentCreatTimeElement.innerText;
-    if (spanTxt == "" || spanTxt == "ÈÕÆÚ»ñÈ¡ÖĞ¡­¡­") {
+    if (spanTxt == "" || spanTxt == "æ—¥æœŸè·å–ä¸­â€¦â€¦") {
       var documentCreatTimeTxt = getDocumentTime(element);
       documentCreatTimeElement.innerText = documentCreatTimeTxt;
     }
   }
 }
 
-/**»ñÈ¡ËùÓĞ´ò¿ªÎÄµµµÄ±êÌâÔªËØ */
+/**è·å–æ‰€æœ‰æ‰“å¼€æ–‡æ¡£çš„æ ‡é¢˜å…ƒç´  */
 function getAllDocumentTitleElement() {
   return document.querySelectorAll(".protyle-title__input");
 }
 
-/**ÎªÎÄµµ±êÌâÔªËØÏÂ´´½¨Ê±¼äÈİÆ÷ÔªËØ */
+/**ä¸ºæ–‡æ¡£æ ‡é¢˜å…ƒç´ ä¸‹åˆ›å»ºæ—¶é—´å®¹å™¨å…ƒç´  */
 function creatTimeSpanElement(tilteElement) {
   var item = tilteElement.children;
   for (let index = 0; index < item.length; index++) {
@@ -48,14 +48,14 @@ function creatTimeSpanElement(tilteElement) {
   return documentCreatTimeElement;
 }
 
-/**»ñµÃÕâ¸öÎÄµµµÄ´´½¨Ê±¼ä */
+/** è·å¾—è¿™ä¸ªæ–‡æ¡£çš„åˆ›å»ºæ—¶é—´ */
 function getDocumentTime(tilteElement) {
   var tS =
     tilteElement.parentElement.previousElementSibling.getAttribute(
       "data-node-id"
     );
   if (tS == null) {
-    return "ÈÕÆÚ»ñÈ¡ÖĞ¡­¡­";
+    return "";
   }
   var year = tS.substring(0, 4);
   var moon = tS.substring(4, 6);
@@ -66,9 +66,9 @@ function getDocumentTime(tilteElement) {
   console.log(year, moon, day, hour, minute, second);
   return "since " + year + "-" + moon + "-" + day;
 }
-/**------------------Îª´ò¿ªÎÄµµµÄ±êÌâÏÂÏÔÊ¾ÎÄµµ´´½¨ÈÕÆÚ-----------------½áÊø */
 
-/**------------------ÎªÎÄµµ±êÌâ´´½¨¶¯Ì¬ÏÂ»®Ïß---------------------------¿ªÊ¼ */
+
+/** ä¸ºæ–‡æ¡£æ ‡é¢˜åˆ›å»ºåŠ¨æ€ä¸‹åˆ’çº¿ */
 function rundynamicUnderline() {
   setInterval(dynamicUnderline, 200);
 }
@@ -85,10 +85,10 @@ function dynamicUnderline() {
     var width = getTextWidth(txt, font) + 13;
     if (width < 58) {
       width = 58;
-    } //¶¯Ì¬ÏÂ»®Ïß×îĞ¡¿í¶È
+    } //åŠ¨æ€ä¸‹åˆ’çº¿æœ€å°å®½åº¦
     if (width > maxWidth) {
       width = maxWidth;
-    } //²»³¬¹ıÒ»ĞĞ
+    } //ä¸è¶…è¿‡ä¸€è¡Œ
     line.style.width = width + "px";
   }
 }
@@ -110,14 +110,13 @@ function createLine(TitleElement) {
   line.style.marginTop = "3.1px";
   line.style.marginBottom = "5.8px";
   line.style.backgroundImage =
-    "linear-gradient(to right, #ff0000, #0070c0, #ff3399, #912997)"; //¶¯Ì¬ÏÂ»®ÏßÑÕÉ«
+    "linear-gradient(to right, #ff0000, #0070c0, #ff3399, #912997)"; //åŠ¨æ€ä¸‹åˆ’çº¿é¢œè‰²
   return line;
 }
 
 function getTileTxt(TitleElement) {
   return TitleElement.innerText;
 }
-/**------------------ÎªÎÄµµ±êÌâ´´½¨¶¯Ì¬ÏÂ»®Ïß---------------------------½áÊø */
 
 (function (w, und) {
   Refresh();
@@ -125,13 +124,13 @@ function getTileTxt(TitleElement) {
 
 function Refresh() {
   if (isPhone()) {
-    //ÊÖ»úÄ£Ê½Ö´ĞĞµÄ
+    //æ‰‹æœºæ¨¡å¼æ‰§è¡Œçš„
     setTimeout(() => {}, 1000);
   } else {
-    //pcÄ£Ê½Ö´ĞĞµÄ
+    //pcæ¨¡å¼æ‰§è¡Œçš„
     setTimeout(() => {
-      rundynamicUnderline(); //ÎªÎÄµµ±êÌâ´´½¨¶¯Ì¬ÏÂ»®Ïß
-      showDocumentCreationDate(); //Îª´ò¿ªÎÄµµ±êÌâÏÂÃæÏÔÊ¾ÎÄµµ´´½¨ÈÕÆÚ
+      rundynamicUnderline(); //ä¸ºæ–‡æ¡£æ ‡é¢˜åˆ›å»ºåŠ¨æ€ä¸‹åˆ’çº¿
+      showDocumentCreationDate(); //ä¸ºæ‰“å¼€æ–‡æ¡£æ ‡é¢˜ä¸‹é¢æ˜¾ç¤ºæ–‡æ¡£åˆ›å»ºæ—¥æœŸ
     }, 500);
   }
 }
