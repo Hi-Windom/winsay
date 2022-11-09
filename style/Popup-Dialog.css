@@ -5,18 +5,19 @@
   font-size: 13pt;
   letter-spacing: 1px;
   font-weight: 520;
+  color: var(--b3-theme-on-surface);
 }
 
 .b3-dialog__container[style*="520px"] {
   width: 360px !important;
   opacity: .95;
   border-radius: 18.6px;
-  box-shadow: 13px 31px 131px -58px rgb(0 0 0 / 50%), -30px 31px 29px -18px rgb(13 13 13 / 33%), 72px 51px 66px -92px rgb(255 255 255 / 79%);
+  box-shadow: var(--SCC-baseComponent-Dialog-520-box-shadow);
   transition: all .58s ease 0s;
 }
 
 .b3-dialog__container[style*="520px"]:hover {
-  box-shadow: 13px 31px 131px -58px rgb(0 0 0 / 50%), 60px 111px 52px -8px rgb(0 0 0 / 13%), -262px -31px 777px -82px rgb(255 255 255 / 99%);
+  box-shadow: var(--SCC-baseComponent-Dialog-520-hover-box-shadow);
   background-color: var(--b3-theme-surface-light);
   backdrop-filter: blur(2px);
 }
@@ -44,6 +45,7 @@
   padding: 31px 31px 31px 34px;
   letter-spacing: .31px;
   font-weight: 350;
+  color: var(--b3-theme-on-surface);
 }
 
 .b3-dialog__container[style*="50vw"] .b3-dialog__action,
@@ -60,7 +62,6 @@
 .b3-dialog__container[style*="50vw"] .b3-dialog__action .b3-button,
 .b3-dialog__container[style*="520px"] .b3-dialog__action .b3-button {
   transition: all .2s cubic-bezier(0.645, 0.045, 0.355, 1);
-  color: rgba(0, 0, 0, 90%);
   box-shadow: 0 0 13px 3px rgb(131 131 131 / 31%) !important;
   letter-spacing: 3px;
   width: 46%;
@@ -70,7 +71,7 @@
 .b3-dialog__container[style*="50vw"] .b3-dialog__action .b3-button.b3-button--text,
 .b3-dialog__container[style*="520px"] .b3-dialog__action .b3-button.b3-button--text {
   background-color: var(--b3-theme-primary);
-  transition: all .2s cubic-bezier(0.645, 0.045, 0.355, 1);
-  color: #fff;
-  border-radius: 6px;
+  transition: all .58s ease-out;
+  color: var(--SCC-baseComponent-Dialog-520-button-color);
+  font-weight: 520;
 }
