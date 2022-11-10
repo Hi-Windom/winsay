@@ -18,13 +18,37 @@
 
   .b3-dialog__container[style*="80vw"] #searchList {
     float: left;
-    width: 45%;
+    margin-right: 3px;
+    border-right: 2px ridge #58585813;
+    width: max(58%, 700px);
+  }
+
+  .spread-search__preview {
+    border-top: none;
   }
 
   /* CTRL + F 为空时保持高度 */
   .b3-dialog__container[style*="80vw"] .search__header.fn__none~#searchList,
   .b3-dialog__container[style*="80vw"] .search__header.fn__none~#searchPreview {
     height: calc(100% - 50px - 53px) !important;
+  }
+
+  #searchList div[data-type="search-item"]>.b3-list-item__text {
+    opacity: .88;
+    font-size: 92%;
+    letter-spacing: 0.13px;
+    -webkit-line-clamp: 3;
+    line-height: 1.31;
+    white-space: normal;
+    text-align: left;
+  }
+
+  #searchList div[data-type="search-item"] .b3-list-item__meta {
+    -webkit-line-clamp: 2;
+    line-height: 1.37;
+    white-space: normal;
+    text-align: right;
+    padding: 5.8px 0;
   }
 }
 
@@ -38,10 +62,10 @@
 }
 
 div[data-type="search-item"] .b3-list-item__meta {
-  font-size: .7rem;
+  font-size: .75rem;
   direction: rtl;
   margin-left: 31px;
-  max-width: 58% !important;
+  width: 39% !important;
   flex-shrink: 0;
   color: #858585c5;
 }
@@ -84,14 +108,9 @@ div[data-type="search-item"] .b3-list-item__meta {
 }
 
 #searchList div[data-type="search-item"]>.b3-list-item__graphic {
-  opacity: .58;
+  opacity: .31;
 }
 
-#searchList div[data-type="search-item"]>.b3-list-item__text {
-  opacity: .88;
-  font-size: 85%;
-  letter-spacing: 0.13px;
-}
 
 #searchPathCheck,
 #includeChildCheck,
