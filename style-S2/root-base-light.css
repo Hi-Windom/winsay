@@ -6,7 +6,6 @@
   --SCC-baseComponent-text-color-2: var(--SCC-Gray);
   --SCC-baseComponent-Table-border-1: 0.25pt solid var(--SCC-Red-WPS);
   --SCC-baseComponent-Icon-arrow-color-1: var(--SCC-Gray);
-  --SCC-baseComponent-Inline-tag-bg-color: var(--SCC-White-light);
   --SCC-baseComponent-Input-box-shadow-focus: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   --SCC-baseComponent-search__header-input-box-shadow: none;
   --SCC-baseComponent-search__header-input-box-shadow-focus: var(--SCC-baseComponent-Input-box-shadow-focus);
