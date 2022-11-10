@@ -40,7 +40,7 @@ body.body--mobile .protyle-hint.b3-list.b3-list--background:not(.hint--menu) {
     letter-spacing: 1.2px !important;
 }
 
-.protyle-hint.b3-list.b3-list--background:not(.hint--menu)>button:nth-child(1) .b3-list-item__first:after {
+.protyle-hint.b3-list.b3-list--background:not(.hint--menu):has(>button:nth-child(2))>button:nth-child(1) .b3-list-item__first:after {
     content: "🥇";
     font-size: 131%;
 }
