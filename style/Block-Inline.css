@@ -1,12 +1,13 @@
 /* 行内元氏 */
 
 /* 搜索击中高亮应显著区分于文本背景色 */
-.b3-list mark,
+.b3-list span:not(:has(svg)) mark,
 .protyle-wysiwyg [data-node-id] span[data-type=search-mark] {
     /* background-color: var(--SCC-Blue-HellisePotter); */
     /* color: var(--SCC-Yellow-HellisePotter-light) !important; */
-    font-size: max(107%,10pt);
+    font-size: max(107%, 10pt);
     font-weight: 300;
+    line-height: 1.4;
     padding: 1px 2px;
     margin: 0 1px;
     border-radius: 8px 9px 9px 2px;
@@ -15,15 +16,15 @@
 
 /* 普通标签tag样式 */
 .protyle-wysiwyg [data-node-id]:not([data-type="NodeHeading"]) span[data-type~=tag] {
-    background-color: var(--SCC-baseComponent-Inline-tag-bg-color);
+    background-color: var(--b3-theme-primary-lightest);
     transition: all .2s cubic-bezier(0.645, 0.045, 0.355, 1);
     color: var(--text-focus);
     border-radius: 5px;
     position: relative;
-    padding: .1rem .3rem .1rem .1rem;
+    padding: .13rem .5rem .13rem .2rem;
     font-size: 85%;
-    box-shadow: var(--SCColor) 3.6em 0px 0px -2.2em inset, 0px 0px 0px 1px inset;
-    border: none;
+    box-shadow: var(--SCColor) 3.6em 0px 0px -2.2em inset;
+    border-right: 1px outset;
     margin: .2rem;
 }
 
@@ -33,7 +34,7 @@
     color: var(--SCC-White);
     display: inline-block;
     margin-right: .2rem;
-    padding: .2rem;
+    padding: .2rem .5rem .2rem .1rem;
 }
 
 /* 标题中标签tag样式在 Block-NodeHeading.css 中定义 */

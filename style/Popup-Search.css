@@ -1,3 +1,11 @@
+@media screen and (max-width: 1300px) {
+
+  .spread-search__preview {
+    margin-top: 13px;
+    border-top: none;
+  }
+}
+
 @media screen and (min-width: 1300px) {
 
   /* CTRL + P */
@@ -18,13 +26,42 @@
 
   .b3-dialog__container[style*="80vw"] #searchList {
     float: left;
-    width: 45%;
+    margin-right: 3px;
+    border-right: 2px ridge #58585813;
+    width: max(58%, 700px);
+  }
+
+  .spread-search__preview {
+    border-top: none;
   }
 
   /* CTRL + F 为空时保持高度 */
   .b3-dialog__container[style*="80vw"] .search__header.fn__none~#searchList,
   .b3-dialog__container[style*="80vw"] .search__header.fn__none~#searchPreview {
     height: calc(100% - 50px - 53px) !important;
+  }
+
+  #searchList div[data-type="search-item"]>.b3-list-item__text,
+  #searchList div[data-type="search-item"] .b3-list-item__meta {
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    white-space: inherit;
+    padding: 0;
+    line-height: 1.31;
+    opacity: .88;
+    letter-spacing: 0.13px;
+  }
+
+  #searchList div[data-type="search-item"]>.b3-list-item__text {
+    font-size: 87%;
+    text-align: left;
+    margin: 5px 0 2px 0;
+  }
+
+  #searchList div[data-type="search-item"] .b3-list-item__meta {
+    text-align: right;
   }
 }
 
@@ -38,8 +75,8 @@
 }
 
 div[data-type="search-item"] .b3-list-item__meta {
-  font-size: .7rem;
-  direction: rtl;
+  font-size: .75rem;
+  /* direction: rtl; */
   margin-left: 31px;
   max-width: 58% !important;
   flex-shrink: 0;
@@ -80,18 +117,13 @@ div[data-type="search-item"] .b3-list-item__meta {
 }
 
 #searchList div[data-type="search-item"] {
-  border-bottom: 1px solid #85858513;
+  border-bottom: 1px dashed #858585a5;
 }
 
 #searchList div[data-type="search-item"]>.b3-list-item__graphic {
-  opacity: .58;
+  opacity: .31;
 }
 
-#searchList div[data-type="search-item"]>.b3-list-item__text {
-  opacity: .88;
-  font-size: 85%;
-  letter-spacing: 0.13px;
-}
 
 #searchPathCheck,
 #includeChildCheck,
@@ -107,10 +139,10 @@ div[data-type="search-item"] .b3-list-item__meta {
 
 #searchList .b3-list-item__text:has(mark:nth-child(10)):before {
   content: "9+";
-  font-size: 90%;
+  font-size: 85%;
   background-color: #58585831;
   border-radius: 50%;
-  padding: 4px;
+  padding: 3px;
   margin-right: 5px;
 }
 
