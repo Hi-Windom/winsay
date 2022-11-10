@@ -149,3 +149,7 @@ body>div.b3-dialog--open>div>div.b3-dialog__container div.fn__flex-1.fn__flex>ul
 .b3-dialog__container:has(#addCodeSnippetCSS) input.fn__size200.b3-text-field[placeholder="标题"] {
   width: 58%;
 }
+
+#configBazaarReadme .item__preview.item__preview--fullscreen {
+  z-index: 99;
+}
