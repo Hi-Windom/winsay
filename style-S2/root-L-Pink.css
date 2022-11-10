@@ -4,7 +4,7 @@
   --b3-theme-primary-light: var(--SCC-Pink-Firole-light);
   --b3-theme-primary-lighter: var(--SCC-Pink-Firole-lighter);
   --b3-theme-primary-lightest: var(--SCC-Pink-Firole-lightest);
-  --b3-theme-secondary: rgba(158, 97, 100, 0.35);
+  --b3-theme-secondary: var(--SCC-CNTC-粉红);
   --b3-theme-background: var(--SCC-Pink-WPS_Vivian);
   --b3-theme-background-light: var(--SCC-Pink-WPS_Vivian-light);
   --b3-theme-surface: var(--SCC-Pink-WPS_Vivian);

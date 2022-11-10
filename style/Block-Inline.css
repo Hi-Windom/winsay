@@ -7,6 +7,7 @@
     /* color: var(--SCC-Yellow-HellisePotter-light) !important; */
     font-size: max(107%,10pt);
     font-weight: 300;
+    line-height: 1.4;
     padding: 1px 2px;
     margin: 0 1px;
     border-radius: 8px 9px 9px 2px;
