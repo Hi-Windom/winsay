@@ -64,8 +64,9 @@
   padding-top: 0.13em;
   padding-bottom: 0.13em;
 }
+
 /* 缓制文档树笔记本高度自适应副作用 */
-#layouts > div.fn__flex.fn__flex-1 > div.fn__flex-column.fn__flex-shrink > div:nth-child(1) > div > div.layout-tab-container.fn__flex-1 .block__icons {
+#layouts>div.fn__flex.fn__flex-1>div.fn__flex-column.fn__flex-shrink>div:nth-child(1)>div>div.layout-tab-container.fn__flex-1 .block__icons {
   position: sticky;
   top: 0px;
   margin-bottom: 3px;
@@ -238,4 +239,37 @@ body:not(.android) .block__logo {
 
 li[data-name="Untitled.sy"]>span.b3-list-item__text {
   opacity: 0;
+}
+
+.file-tree.sy__file {
+  container-type: inline-size;
+  container-name: FileTree;
+}
+
+@container FileTree (max-width: 360px) {
+
+  .file-tree.sy__file ul.b3-list.b3-list--background>ul>ul>ul>ul>ul li[data-type="navigation-file"] .counter[aria-label="引用块"] {
+    left: 0px;
+    position: absolute;
+    max-width: 25px;
+    margin-left: 1px;
+  }
+
+  .file-tree.sy__file ul.b3-list.b3-list--background:has(>ul>ul>ul>ul>ul)>ul>ul>ul>ul>ul li[data-type="navigation-file"] .b3-list-item__action[aria-label="更多"] {
+    height: 22px;
+    padding: 0 4px;
+    left: 43px;
+    position: absolute;
+    display: inline-flex;
+    opacity: .58;
+  }
+
+  .file-tree.sy__file ul.b3-list.b3-list--background:has(>ul>ul>ul>ul>ul)>ul>ul>ul>ul>ul li[data-type="navigation-file"] .b3-list-item__action[aria-label="新建子文档"] {
+    height: 22px;
+    padding: 0 4px;
+    left: 68px;
+    position: absolute;
+    display: inline-flex;
+    opacity: .58;
+  }
 }
