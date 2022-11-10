@@ -48,7 +48,7 @@ body.body--mobile .protyle-hint.b3-list.b3-list--background:not(.hint--menu) {
     line-height: 17px;
     font-size: 96%;
     font-weight: 200;
-    letter-spacing: 0.8px !important;
+    letter-spacing: 0.6px !important;
 }
 
 .protyle-hint.b3-list.b3-list--background:not(.hint--menu)>button:nth-child(-n+4):not(:nth-child(1)) {
@@ -132,11 +132,12 @@ body.body--mobile .protyle-hint.b3-list.b3-list--background:not(.hint--menu) {
 
 .protyle-hint.b3-list.b3-list--background:not(.hint--menu)>button:not(:nth-child(-n+4))>.b3-list-item__meta.b3-list-item__showall {
     padding-left: 5px !important;
-    padding-top: 5px !important;
-    font-size: 0.8em;
-    opacity: .8;
-    font-weight: 100;
+    padding-top: 3px !important;
+    font-size: 0.95em;
+    opacity: .58;
+    font-weight: 300;
     color: var(--b3-theme-secondary);
+    letter-spacing: 1px;
 }
 
 .protyle-hint.b3-list.b3-list--background:not(.hint--menu) .b3-list-item:hover:not(.b3-list-item--focus) .b3-list-item__meta {
@@ -154,7 +155,7 @@ body.body--mobile .protyle-hint.b3-list.b3-list--background:not(.hint--menu) {
 }
 
 .protyle-hint.b3-list.b3-list--background:not(.hint--menu) .b3-list-item:not(.b3-list-item--focus) .b3-list-item__meta *:not(mark) {
-    color: var(--SCC-Yellow-HellisePotter-light);
+    color: var(--SCC-Yellow-HellisePotter);
 }
 
 .protyle-hint.b3-list.b3-list--background:not(.hint--menu) .b3-list-item:not(.b3-list-item--focus) .b3-list-item__first *:not(mark) {
