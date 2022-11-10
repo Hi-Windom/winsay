@@ -33,22 +33,27 @@
     height: calc(100% - 50px - 53px) !important;
   }
 
-  #searchList div[data-type="search-item"]>.b3-list-item__text {
-    opacity: .88;
-    font-size: 92%;
-    letter-spacing: 0.13px;
-    -webkit-line-clamp: 3;
+  #searchList div[data-type="search-item"]>.b3-list-item__text,
+  #searchList div[data-type="search-item"] .b3-list-item__meta {
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    white-space: inherit;
+    padding: 0;
     line-height: 1.31;
-    white-space: normal;
+    opacity: .88;
+    letter-spacing: 0.13px;
+  }
+
+  #searchList div[data-type="search-item"]>.b3-list-item__text {
+    font-size: 97%;
     text-align: left;
+    margin: 5px 0;
   }
 
   #searchList div[data-type="search-item"] .b3-list-item__meta {
-    -webkit-line-clamp: 2;
-    line-height: 1.37;
-    white-space: normal;
     text-align: right;
-    padding: 5.8px 0;
   }
 }
 
@@ -63,9 +68,9 @@
 
 div[data-type="search-item"] .b3-list-item__meta {
   font-size: .75rem;
-  direction: rtl;
+  /* direction: rtl; */
   margin-left: 31px;
-  width: 39% !important;
+  max-width: 58% !important;
   flex-shrink: 0;
   color: #858585c5;
 }
