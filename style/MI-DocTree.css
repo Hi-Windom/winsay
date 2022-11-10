@@ -1,3 +1,8 @@
+.file-tree.sy__file {
+  container-type: inline-size;
+  container-name: FileTree;
+}
+
 .b3-list-item__toggle--hl:hover {
   color: var(--b3-theme-on-background);
   background-color: transparent !important;
@@ -109,13 +114,6 @@
   margin: 0 3px 0px 0px !important;
 }
 
-/* 笔记本文字 */
-.fn__flex-1.fn__flex-column.file-tree.sy__file ul>li .b3-list-item__text {
-  color: var(--SCC-baseComponent-text-color-2);
-  font-size: 12pt !important;
-  transition: color 0.2s cubic-bezier(0.47, 0, 0.75, 0.72);
-}
-
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background:has(ul)>li .b3-list-item__text {
   color: var(--b3-theme-primary);
 }
@@ -124,14 +122,6 @@
   font-size: 18px;
   margin-right: 3px;
   padding: 0px;
-}
-
-/* 文档文字 */
-.fn__flex-1.fn__flex-column.file-tree.sy__file ul>ul>li .b3-list-item__text {
-  color: var(--SCC-baseComponent-text-color-1);
-  font-size: 9.5pt !important;
-  font-weight: 400;
-  letter-spacing: -0.31px;
 }
 
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul>ul>li .b3-list-item__icon {
@@ -241,12 +231,31 @@ li[data-name="Untitled.sy"]>span.b3-list-item__text {
   opacity: 0;
 }
 
-.file-tree.sy__file {
-  container-type: inline-size;
-  container-name: FileTree;
+/* 笔记本文字 */
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul>li .b3-list-item__text {
+  color: var(--SCC-baseComponent-text-color-2);
+  font-size: max(min(5.5cqw, 14pt), 11pt) !important;
+  transition: color 0.2s cubic-bezier(0.47, 0, 0.75, 0.72) .1s;
+}
+
+/* 文档文字 */
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul>ul>li .b3-list-item__text {
+  color: var(--SCC-baseComponent-text-color-1);
+  font-size: max(min(4.2cqw, 12pt), 9.5pt) !important;
+  letter-spacing: 0.1px;
+  transition: all .31s ease .1s;
+
 }
 
 @container FileTree (max-width: 360px) {
+
+  /* 文档文字 */
+  .fn__flex-1.fn__flex-column.file-tree.sy__file ul>ul>li .b3-list-item__text {
+    color: var(--SCC-baseComponent-text-color-1);
+    /*   font-size: 9.5pt !important; */
+    font-weight: 400;
+    letter-spacing: -0.31px;
+  }
 
   .file-tree.sy__file ul.b3-list.b3-list--background>ul>ul>ul>ul>ul li[data-type="navigation-file"] .counter[aria-label="引用块"] {
     left: 0px;
