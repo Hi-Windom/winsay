@@ -4,9 +4,7 @@ body.android #barDebug {
     line-height: 13px;
 }
 
-body:not(.android) #barDebug,
-#barLock,
-#barFeedback {
+body:not(.android) #barHelp > div >button {
     line-height: 44px;
 }
 

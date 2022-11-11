@@ -302,3 +302,16 @@ body.android #commonMenu>button.b3-menu__item.b3-menu__item--custom svg.b3-menu_
 .protyle-toolbar {
   transition: none;
 }
+
+.b3-menu,
+.protyle-util {
+  border-radius: 13px;
+  box-shadow: rgb(0 0 0 / 31%) -20px 58px 111px -61px, rgb(255 255 255 / 3%) 10px -181px 58px 111px, rgb(0 0 0 / 13%) 0px 3px 18px -12px inset;
+}
+
+input[disabled],
+select[disabled],
+textarea[disabled] {
+  background: #a5a5a5a5 !important;
+  opacity: .31 !important;
+}
