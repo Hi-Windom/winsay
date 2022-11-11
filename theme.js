@@ -66,6 +66,7 @@ window.funs.addURLParam = function (url,
 };
 window.funs.loadScript(window.funs.addURLParam("/appearance/themes/Sofill-/script/fun.js"), undefined, true);
 window.funs.loadScript(window.funs.addURLParam("/appearance/themes/Sofill-/script/config.js"), undefined, true);
+window.funs.loadScript(window.funs.addURLParam("/appearance/themes/Sofill-/script/CPUI.js"), undefined, true);
 
 window.funs.loadScript(window.funs.addURLParam("/appearance/themes/Sofill-/script/module/SSS.js"), undefined, true);
 window.funs.loadScript(window.funs.addURLParam("/appearance/themes/Sofill-/script/module/DTL.js"), undefined, true);
