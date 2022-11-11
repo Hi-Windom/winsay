@@ -1,15 +1,3 @@
-/* .protyle-wysiwyg [data-node-id].li:not(.protyle-task--done)>[data-node-id]:before {
-    content: "";
-    position: absolute;
-    height: calc(100% + 4px);
-    border-left: 3.1px dotted #444477cc;
-    top: 4px;
-    opacity: 0.31;
-    transition: all 0.31s;
-}
-.protyle-wysiwyg [data-node-id].li:not(.protyle-task--done)>[data-node-id]:hover:before {
-    opacity: 0.58;
-} */
 .protyle-wysiwyg [data-node-id].li:before {
     content: "";
     position: absolute;
@@ -21,4 +9,9 @@
 
 .protyle-wysiwyg .list:hover [data-node-id].li:before {
     border-left-color: var(--b3-scroll-color);
+}
+
+.protyle-wysiwyg [data-node-id].li>.protyle-action {
+    transition: var(--b3-transition);
+    color: var(--b3-theme-on-primary);
 }
