@@ -9,10 +9,6 @@ window.theme.changeThemeModeByEnv = function () {
         "MI",
         `/appearance/themes/Sofill-/style-old/MI.css`
       );
-      window.funs.updateStyle(
-        "TabBar",
-        `/appearance/themes/Sofill-/style-old/MI-TabBar.css`
-      );
       break;
     default:
       window.funs.updateStyle("MI", `/appearance/themes/Sofill-/style/MI.css`);

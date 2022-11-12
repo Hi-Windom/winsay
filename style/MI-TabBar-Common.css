@@ -1,0 +1,13 @@
+/* 所有页签栏通用 */
+.layout-tab-bar .item--focus .item__text {
+  color: var(--b3-theme-primary) !important;
+  opacity: 1 !important;
+  text-shadow: -1px 1px 13px var(--SCC-Orange-Windom);
+  font-weight: 1314 !important;
+}
+
+.layout-tab-bar .item {
+  min-height: 30px;
+  height: 30px;
+  font-size: 10pt;
+}

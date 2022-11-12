@@ -8,12 +8,12 @@
 
 /* 为兼容旧版本，改为通过 theme.js 引入 */
 /* @import url("style/MI.css");
-@import url("style/MI-TabBar.css"); */
 
 /* 为兼容不同设备，改为通过 theme.js 引入 */
 /* @import url("style/MI-DocTree.css");
 @import url("style/MI-Breadcrumb.css"); */
 
+@import url("style/MI-TabBar-Common.css");
 @import url("style/MI-TagTree.css");
 @import url("style/MI-HDTree.css");
 @import url("style/MI-Dock.css");
