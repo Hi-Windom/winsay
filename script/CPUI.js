@@ -216,14 +216,14 @@ checkedChange(
   document.getElementById("winsay_cp_appearance__ToolBarMode__HideList__VIP"),
   () => {
     document.documentElement.style.setProperty(
-      "--SCC-Variables-MI-ToolBar-VIP-display",
-      "none"
+      "--SCC-Variables-MI-ToolBar-VIP-opacity",
+      "0"
     );
   },
   () => {
     document.documentElement.style.setProperty(
-      "--SCC-Variables-MI-ToolBar-VIP-display",
-      "flex"
+      "--SCC-Variables-MI-ToolBar-VIP-opacity",
+      "0.77"
     );
   }
 );
