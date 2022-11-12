@@ -12,7 +12,7 @@ async function ghostTabBar() {
       "TabBar",
       `/appearance/themes/Sofill-/style/${winsay_cp_appearance__TabBarMode}`
     );
-    console.log(winsay_cp_appearance__TabBarMode);
+    // console.log(winsay_cp_appearance__TabBarMode);
   } else {
     new Promise(function (response) {
       var url = `http://127.0.0.1:6806/api/file/getFile`;

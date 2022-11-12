@@ -68,12 +68,12 @@ ul.fn__flex.layout-tab-bar li {
     max-width: 90cqw;
   }
 }
-body:not(.android) ul.fn__flex.layout-tab-bar li[data-type="tab-header"]:not(.item--pin) .item__close {
+body:not(.android) ul.fn__flex.layout-tab-bar li[data-type="tab-header"] .item__close {
   width: 0;
   padding: 5.8px;
   transition: all 0.31s cubic-bezier(0.65, 0.05, 0.36, 1) 0.05s;
 }
-body:not(.android) ul.fn__flex.layout-tab-bar li[data-type="tab-header"]:not(.item--pin):hover .item__close {
+body:not(.android) ul.fn__flex.layout-tab-bar li[data-type="tab-header"]:hover .item__close {
   width: 16px;
   padding: 13px 13px 13px 0;
   transition: all 0.31s cubic-bezier(0.65, 0.05, 0.36, 1) 0.05s;
@@ -187,4 +187,8 @@ ul.fn__flex.layout-tab-bar li {
   transition-duration: 0.2s;
   margin-right: 1px !important;
   margin-left: 1px !important;
+}
+
+.layout-tab-bar .item--pin .item__text {
+  max-width: unset;
 }
