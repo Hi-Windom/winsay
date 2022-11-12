@@ -33,19 +33,29 @@
 
 ---
 
-## ✨ 搜索面板和插入 [[ 引用 ]] 提示面板全面升级，持续改善体验
+## ✨ 支持通过主题设置界面修改页签栏布局模式
 
 > 版本更新详细内容请下滑查看
 
-没有收录你心仪的网站？[第一批公开征集投稿](https://www.kdocs.cn/wo/app/view/form/6ti8iIaonhSjVieKzb6L26) 正在进行中，快来参加吧
+使用简易说明：
 
-夜间护眼提示默认开启且在夜间时段每小时提醒一次，可手动修改 Sofill- 主题文件夹路径下的 config/Custom.json 文件，将 "gotoSleep" 键的值修改为一个整数，为 0 则关闭提示
+Step 1 确保在思源软件设置里关闭了【隐藏底部状态栏】
 
-标签栏模式仍处于实验性阶段，如需修改，请手动修改 Sofill- 主题文件夹路径下的 config/UI.json 文件，将 "TabBar" 键的值修改为对应json键值
+<img src="https://b3logfile.com/siyuan/1662398123089/assets/image-20221112135324-f1qefbv.png"/>
+
+Step 2 鼠标悬浮在【帮助（问号）】，在呼出的菜单中点击【主题设置】
+
+<img src="https://b3logfile.com/siyuan/1662398123089/assets/image-20221112135352-1pkn6iv.png"/>
+
+Step 3 在左侧导航栏点击【外观】，然后选择【页签栏布局模式】即可生效
+
+<img src="https://b3logfile.com/siyuan/1662398123089/assets/image-20221112135457-aoefj78.png"/>
+
+缺省值修改： Sofill- 主题文件夹路径下的 config/UI.json 文件，将 "TabBar" 键的值修改为对应json键值
 
 | 样式       | json键值              | 说明                 |
 | ---------- | --------------------- | -------------------- |
-| 默认标签栏 | MI-TabBar.css         |                      |
+| 默认标签栏 | MI-TabBar.css         | 经典永不过时         |
 | 垂直标签栏 | sweet/MI-TabBar-V.css | 灵感来自 Dark+ 主题 |
 | 水平标签栏 | sweet/MI-TabBar-H.css | 灵感来自 VS 2022     |
 
@@ -64,20 +74,6 @@
 | 墨绿紫 | ⬛ dark   | ✔️     | 构建     | root-D-InkGreenPurple.css  |                  |
 
 ---
-
-注意：Sofill- 0.92+ 版本停止支援思源 2.4.5 及更早版本，以下是 Sofill- 最新版本的真机测试表，enjoy 💫
-
-| 测试平台                         | 兼容性               | LTS  | 已知问题 |
-| -------------------------------- | -------------------- | ---- | -------- |
-| siyuan-2.4.12-android for mobile | ❤️❤️❤️❤️❤️ | ✔️ |          |
-| siyuan-2.4.12-android for pad    | ❤️❤️❤️❤️❤️ | ✔️ |          |
-| siyuan-2.4.12-win                | ❤️❤️❤️❤️❤️ | ✔️ |          |
-| siyuan-2.4.11-win                | ❤️❤️❤️❤️❤️ | ✔️ |          |
-| siyuan-2.4.6-win                 | ❤️❤️❤️❤️❤️ | ✖️ |          |
-
-Mac 、iPad 和 Docker 端目前无真机测试
-
-注意：目前暂不兼容自定义主题，详见[开启自定义主题后js引入样式异常](https://github.com/Hi-Windom/winsay/issues/272)
 
 ## 🏳️‍🌈 主题特色介绍
 
@@ -101,13 +97,13 @@ Sofill- 适合哪些人：13~58岁非色弱人群；青少年请在家长指导�
 
 1. 非常重视导出PDF
 2. 非常重视双链
-3. 非常重视与默认主题的兼容性，弥补默认主题在移动端的不足
-4. 非常重视与思源的向后兼容性，以及 Android 端适配（包括 Android Pad）
+3. 非常重视与默认主题的兼容性（注意：目前暂不兼容自定义主题，详见[开启自定义主题后js引入样式异常](https://github.com/Hi-Windom/winsay/issues/272)）与思源的向后兼容性（注意：Sofill- 0.92+ 版本停止支援思源 2.4.5 及更早版本）
+4. 非常重视 Android 端适配（包括 Android Pad），弥补默认主题在移动端的不足
 5. 非常重视主题包的轻量化，主题包大小不会超过 3 MB
 6. 重视浏览器环境的使用体验
 7. 重视不同窗口大小的适配（源自 [ Hellise Potter ] ）
 8. 重视过渡动画
-9. 重视极端使用环境
+9. 重视极端使用环境（源自 [ Hellise Potter ] ）
 
 ## 🧬 手机端安装指南
 
@@ -117,14 +113,14 @@ Sofill- 适合哪些人：13~58岁非色弱人群；青少年请在家长指导�
 
 ## 📜 集市更新版本日志
 
-> v0.100 ▶ v0.102
+> v0.100 ▶ v0.104
 
 ### 版本说明
 
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [主题版本更新的详细信息](https://github.com/Hi-Windom/winsay/releases)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v0.102 ~ v0.102 聚合说明
+### v0.102 ~ v0.104 聚合说明
 
 > 2022-11-12 released
 
@@ -137,6 +133,7 @@ Sofill- 适合哪些人：13~58岁非色弱人群；青少年请在家长指导�
 1. [弹出菜单通用阴影样式 · Issue #350 · v0.102](https://github.com/Hi-Windom/winsay/issues/350)
 2. [不可用控件醒目提示 · Issue #351 · v0.102](https://github.com/Hi-Windom/winsay/issues/351)
 3. [主题设置面板（实验性） · Issue #349 · v0.102](https://github.com/Hi-Windom/winsay/issues/349)
+4. [支持通过主题设置界面修改页签栏布局模式 · Issue #356 · v0.104](https://github.com/Hi-Windom/winsay/issues/356)
 
 改进优化：
 

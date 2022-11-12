@@ -97,3 +97,10 @@
 .sc-custom-container-p .b3-tab-container {
   margin: 11px;
 }
+
+.sc-custom-placeholder {
+  text-align: center;
+  padding-top: 10%;
+  font-size: 2.1rem;
+  color: var(--b3-theme-primary);
+}

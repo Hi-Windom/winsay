@@ -25,48 +25,24 @@ if (document.getElementById("Sofill-CDUI-1") == null) {
 }
 
 var obj = {};
-let winsay_custom_fontFamily = localStorage.getItem("winsay_custom_fontFamil");
-let winsay_custom_fontSize = localStorage.getItem("winsay_custom_fontSize");
-let winsay_custom_virtualBlockRefInclude = localStorage.getItem("winsay_custom_virtualBlockRefInclude");
 bindDomWithObject({
-  id: "fontFamily",
+  id: "winsay_cp_appearance__TabBarMode",
   obj: obj,
-  prop: "winsay_custom_fontFamily",
+  prop: "winsay_cp_appearance__TabBarMode",
   type: "change",
-  updated: function (obj, prop, dom) {},
+  updated: function (obj, prop, dom) {
+    let winsay_cp_appearance__TabBarMode = localStorage.getItem("winsay_cp_appearance__TabBarMode");
+    window.funs.updateStyle(
+      "TabBar",
+      `/appearance/themes/Sofill-/style/${winsay_cp_appearance__TabBarMode}`
+    );
+  },
   callback: function (options, obj, dom) {
-    obj[options.prop] = winsay_custom_fontFamily; // 可以在这里给dom添加默认值
+    let winsay_cp_appearance__TabBarMode = localStorage.getItem("winsay_cp_appearance__TabBarMode");
+    obj[options.prop] = winsay_cp_appearance__TabBarMode;
   },
 });
 
-bindDomWithObject({
-  id: "fontSize",
-  obj: obj,
-  prop: "winsay_custom_fontSize",
-  type: "change",
-  updated: function (obj, prop, dom) {},
-  callback: function (options, obj, dom) {
-    obj[options.prop] = winsay_custom_fontSize; // 可以在这里给dom添加默认值
-  },
-});
-
-
-bindDomWithObject({
-  id: "virtualBlockRefInclude",
-  obj: obj,
-  prop: "winsay_custom_virtualBlockRefInclude",
-  type: "input",
-  updated: function (obj) {},
-  callback: function (options) {
-    obj[options.prop] = winsay_custom_virtualBlockRefInclude;
-  },
-});
-
-/**
- *
- * @param {object} options
- *
- */
 function bindDomWithObject(options) {
   var dom = document.getElementById(options.id); // 获取dom id
   var obj = options.obj; // 需要绑定的obj
