@@ -28,39 +28,39 @@ var obj = {};
 let winsay_custom_fontFamily = localStorage.getItem("winsay_custom_fontFamil");
 let winsay_custom_fontSize = localStorage.getItem("winsay_custom_fontSize");
 let winsay_custom_virtualBlockRefInclude = localStorage.getItem("winsay_custom_virtualBlockRefInclude");
-bindDomWithObject({
-  id: "fontFamily",
-  obj: obj,
-  prop: "winsay_custom_fontFamily",
-  type: "change",
-  updated: function (obj, prop, dom) {},
-  callback: function (options, obj, dom) {
-    obj[options.prop] = winsay_custom_fontFamily; // 可以在这里给dom添加默认值
-  },
-});
+// bindDomWithObject({
+//   id: "fontFamily",
+//   obj: obj,
+//   prop: "winsay_custom_fontFamily",
+//   type: "change",
+//   updated: function (obj, prop, dom) {},
+//   callback: function (options, obj, dom) {
+//     obj[options.prop] = winsay_custom_fontFamily; // 可以在这里给dom添加默认值
+//   },
+// });
 
-bindDomWithObject({
-  id: "fontSize",
-  obj: obj,
-  prop: "winsay_custom_fontSize",
-  type: "change",
-  updated: function (obj, prop, dom) {},
-  callback: function (options, obj, dom) {
-    obj[options.prop] = winsay_custom_fontSize; // 可以在这里给dom添加默认值
-  },
-});
+// bindDomWithObject({
+//   id: "fontSize",
+//   obj: obj,
+//   prop: "winsay_custom_fontSize",
+//   type: "change",
+//   updated: function (obj, prop, dom) {},
+//   callback: function (options, obj, dom) {
+//     obj[options.prop] = winsay_custom_fontSize; // 可以在这里给dom添加默认值
+//   },
+// });
 
 
-bindDomWithObject({
-  id: "virtualBlockRefInclude",
-  obj: obj,
-  prop: "winsay_custom_virtualBlockRefInclude",
-  type: "input",
-  updated: function (obj) {},
-  callback: function (options) {
-    obj[options.prop] = winsay_custom_virtualBlockRefInclude;
-  },
-});
+// bindDomWithObject({
+//   id: "virtualBlockRefInclude",
+//   obj: obj,
+//   prop: "winsay_custom_virtualBlockRefInclude",
+//   type: "input",
+//   updated: function (obj) {},
+//   callback: function (options) {
+//     obj[options.prop] = winsay_custom_virtualBlockRefInclude;
+//   },
+// });
 
 /**
  *
