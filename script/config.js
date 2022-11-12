@@ -29,16 +29,24 @@ var colors2 = [
 const latest_LC_href = "SC-winsay-LC-href";
 const latest_DC_href = "SC-winsay-DC-href";
 /* 循环迭代器 */
-var Iterator = function* (items) { for (let i = 0; true; i = (i + 1) % items.length) { yield items[i]; } };
-var Iterator2 = function* (items) { for (let i = 0; true; i = (i + 1) % items.length) { yield items[i]; } };
+var Iterator = function* (items) {
+  for (let i = 0; true; i = (i + 1) % items.length) {
+    yield items[i];
+  }
+};
+var Iterator2 = function* (items) {
+  for (let i = 0; true; i = (i + 1) % items.length) {
+    yield items[i];
+  }
+};
 
 // 安卓手机：android + body--mobile
 // 安卓平板：android + body--desktop
 
 /**
-* 获取客户端模式
-* @return {string} 'app' 或 'desktop' 或 'mobile'
-*/
+ * 获取客户端模式
+ * @return {string} 'app' 或 'desktop' 或 'mobile'
+ */
 var clientMode = (() => {
   let url = new URL(window.location.href);
   switch (true) {
@@ -58,6 +66,20 @@ document.body.classList.add(window.theme.OS);
 var kernelVersion = window.siyuan.config.system.kernelVersion;
 var cv_result = API.compareVersion(kernelVersion, "2.4.2");
 
+
 export {
-  cv_result, clientMode, Iterator2, Iterator, latest_DC_href, latest_LC_href, colors2, colors, IDs, ID_COLOR_STYLE, THEME_ROOT, themeStyle, config_UI, config_Custom
-}
+  cv_result,
+  clientMode,
+  Iterator2,
+  Iterator,
+  latest_DC_href,
+  latest_LC_href,
+  colors2,
+  colors,
+  IDs,
+  ID_COLOR_STYLE,
+  THEME_ROOT,
+  themeStyle,
+  config_UI,
+  config_Custom,
+};
