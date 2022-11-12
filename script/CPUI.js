@@ -197,3 +197,63 @@ propChange("winsay_cp_appearance__ToolBarMode__height", function () {
     `${parseInt(h) / 2 + 1}px`
   );
 });
+checkedChange(
+  document.getElementById("winsay_cp_appearance__ToolBarMode__HideList__docName"),
+  () => {
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-MI-ToolBar-docName-opacity",
+      "0"
+    );
+  },
+  () => {
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-MI-ToolBar-docName-opacity",
+      "0.77"
+    );
+  }
+);
+checkedChange(
+  document.getElementById("winsay_cp_appearance__ToolBarMode__HideList__VIP"),
+  () => {
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-MI-ToolBar-VIP-display",
+      "none"
+    );
+  },
+  () => {
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-MI-ToolBar-VIP-display",
+      "flex"
+    );
+  }
+);
+checkedChange(
+  document.getElementById("winsay_cp_appearance__ToolBarMode__HideList__windowX"),
+  () => {
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-MI-ToolBar-windowX-opacity",
+      "0"
+    );
+  },
+  () => {
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-MI-ToolBar-windowX-opacity",
+      "0.77"
+    );
+  }
+);
+checkedChange(
+  document.getElementById("winsay_cp_appearance__ToolBarMode__HideList__Other"),
+  () => {
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-MI-ToolBar-Other-opacity",
+      "0"
+    );
+  },
+  () => {
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-MI-ToolBar-Other-opacity",
+      "0.77"
+    );
+  }
+);
