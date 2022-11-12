@@ -1,0 +1,73 @@
+:root {
+  /* 是否自动隐藏 */
+  /* 顶栏隐藏时子元素使用 visibility 控制而不是 opacity 这样比较简单，也不是 display 这样可以保留过渡效果同时不破坏布局 */
+  --SCC-Variables-MI-ToolBar-height-max: 11px;
+  --SCC-Variables-MI-ToolBar-child-visibility: hidden;
+  /* 不隐藏时高度相关 */
+  /* 当 ToolBar-height-max 大于 ToolBar-height 时即不隐藏 */
+  /* 隐藏时高度 11px，不隐藏时MAX高度为 37px，高度分为 26 31 37 三档，对应的 svg 宽高分为 14 16.5 19.5 三档  */
+  --SCC-Variables-MI-ToolBar-height: 26px;
+  --SCC-Variables-MI-ToolBar-svg-height: 13px;
+  /* 不隐藏时透明度相关 */
+}
+
+body.darwin {
+  height: 8px;
+  padding: 0 5px 0 69px !important;
+  border-bottom: 0px solid var(--b3-border-color);
+  transition: all 0.13s ease-in-out;
+}
+body.darwin #toolbar:hover {
+  background-color: transparent !important;
+  height: 32px;
+  border-bottom: 0.5px solid var(--b3-border-color);
+  transition: all 0.31s ease-in-out;
+}
+
+body:not(.darwin):not(.android) #toolbar{
+  height: var(--SCC-Variables-MI-ToolBar-height);
+  max-height: var(--SCC-Variables-MI-ToolBar-height-max);
+  border-bottom: 0px solid var(--b3-border-color);
+  transition: all 0.13s ease-in-out;
+}
+body:not(.darwin):not(.android) #toolbar:hover {
+  background-color: transparent !important;
+  height: var(--SCC-Variables-MI-ToolBar-height);
+  max-height: var(--SCC-Variables-MI-ToolBar-height);
+  border-bottom: 0.5px solid var(--b3-border-color);
+  transition: all 0.31s ease-in-out;
+}
+
+body:not(.darwin):not(.android) #toolbar:hover svg {
+  height: var(--SCC-Variables-MI-ToolBar-svg-height);
+  width: var(--SCC-Variables-MI-ToolBar-svg-height);
+}
+
+body:not(.darwin):not(.android) #toolbar>*{
+  visibility: var(--SCC-Variables-MI-ToolBar-child-visibility);
+}
+body:not(.darwin):not(.android) #toolbar:hover>*{
+  visibility: visible;
+}
+
+body:not(.darwin):not(.android) #toolbar .toolbar__item svg,
+body:not(.darwin):not(.android) .toolbar #drag {
+  opacity: 0;
+}
+body:not(.darwin):not(.android) #toolbar:hover #drag {
+  opacity: var(--SCC-baseProperty-Opacity-C);
+  color: var(--SCC-baseComponent-toolbar-drag-color);
+}
+
+body:not(.darwin):not(.android) #toolbar:hover svg {
+  opacity: 0.58;
+}
+body:not(.darwin):not(.android) #toolbar .toolbar__item:hover svg {
+  opacity: 1;
+  color: var(--b3-theme-primary);
+}
+
+.toolbar__item--disabled {
+  opacity: .31;
+  cursor: not-allowed;
+}

@@ -104,3 +104,35 @@
   font-size: 2.1rem;
   color: var(--b3-theme-primary);
 }
+
+.SCC-dialog .config-query-4cols,
+.SCC-dialog .config-query-3cols,
+.SCC-dialog .config-query-2cols {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.SCC-dialog .config-query-4cols label {
+  max-width: 22%;
+  min-width: 20%;
+  margin: 7px 3% 1px 0px;
+}
+
+.SCC-dialog .config-query-3cols label {
+  max-width: 32%;
+  min-width: 29%;
+  margin: 7px 3% 1px 0px;
+}
+
+.SCC-dialog .config-query-2cols label {
+  max-width: 45%;
+  min-width: 44%;
+  margin: 7px 5% 1px 0px;
+}
+
+/* 【外观】配置区联动显示 */
+
+label:has(#winsay_cp_appearance__ToolBarMode:checked)+label,
+label:has(#winsay_cp_appearance__ToolBarMode:checked)+label+div {
+  display: none;
+}
