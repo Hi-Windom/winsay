@@ -1,6 +1,6 @@
 /* 弹出层 */
 
-.b3-tab-container,
+.b3-tab-container:not(data-name="bazaar"),
 body.android .side-panel {
   background-color: var(--b3-theme-background-light);
   opacity: .88;
