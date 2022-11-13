@@ -86,8 +86,16 @@
   padding: 0;
   margin: 2px !important;
 }
+body.android .sc-custom-nav>li {
+  height: 58px;
+}
+body.android .sc-custom-nav>li .b3-list-item__graphic {
+  margin-right: 4px;
+  height: 20px;
+  width: 20px;
+}
 
-.sc-custom-nav>li>label {
+body:not(.android) .sc-custom-nav>li>label {
   display: inline-flex;
   align-items: center;
   /* justify-content: center; */

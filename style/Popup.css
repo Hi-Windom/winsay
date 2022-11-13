@@ -294,6 +294,7 @@ body.android #commonMenu>button.b3-menu__item.b3-menu__item--custom svg.b3-menu_
   padding: 4px 0 4px 4px;
 }
 
+#barHelp .b3-menu>button,
 #commonMenu:not(:has(.b3-menu__item--custom)):has(button:nth-child(3)):not(:has(button:nth-child(4)))>button {
   padding: 5.8px;
 }

@@ -3,22 +3,44 @@ import { ConfirmDialog1 } from "./module/XML/ConfirmDialog.js";
 import * as API from "./utils/api.min.js";
 import * as config from "./config.js";
 
-const barHelp = document.getElementById("barHelp");
-if (document.getElementById("Sofill-CDUI-1") == null) {
-  const CDUI_1 = document.createElement("button");
-  CDUI_1.id = "Sofill-CDUI-1";
-  CDUI_1.className = "Sofill-CDUI-btn1 b3-menu__item";
-  CDUI_1.ariaLabel = "主题设置（实验性）";
-  CDUI_1.innerHTML = `<svg class="b3-menu__icon" "=""><use xlink:href="#iconSettings"></use></svg><span class="b3-menu__label">主题设置</span>`;
-  barHelp.children[1].insertAdjacentElement("afterbegin", CDUI_1);
-  let dialog = new CPDialog({
-    isCancel: true,
-    dragable: false, //貌似可拖拽会有问题
-    maskable: true,
-  });
-  document.querySelector(".Sofill-CDUI-btn1").onclick = function () {
-    dialog.open();
-  };
+if (API.isPhone()) {
+  const leftPanel = document.getElementById("sidebar");
+  if (document.getElementById("Sofill-CDUI-1") == null) {
+    const CDUI_1 = document.createElement("svg");
+    CDUI_1.id = "Sofill-CDUI-1";
+    CDUI_1.className = "Sofill-CDUI-btn1 toolbar__icon";
+    CDUI_1.innerHTML = `<use xlink:href="#iconSettings"></use>`;
+    CDUI_1.style.width = "17px";
+    CDUI_1.style.height = "100%";
+    CDUI_1.style.marginLeft = "5px";
+    leftPanel.children[0].insertAdjacentElement("beforeend", CDUI_1);
+    let dialog = new CPDialog({
+      isCancel: true,
+      dragable: false, //貌似可拖拽会有问题
+      maskable: true,
+    });
+    document.querySelector(".Sofill-CDUI-btn1").onclick = function () {
+      dialog.open();
+    };
+  }
+} else {
+  const barHelp = document.getElementById("barHelp");
+  if (document.getElementById("Sofill-CDUI-1") == null) {
+    const CDUI_1 = document.createElement("button");
+    CDUI_1.id = "Sofill-CDUI-1";
+    CDUI_1.className = "Sofill-CDUI-btn1 b3-menu__item";
+    CDUI_1.ariaLabel = "主题设置（实验性）";
+    CDUI_1.innerHTML = `<svg class="b3-menu__icon" "=""><use xlink:href="#iconSettings"></use></svg><span class="b3-menu__label">主题设置</span>`;
+    barHelp.children[1].insertAdjacentElement("afterbegin", CDUI_1);
+    let dialog = new CPDialog({
+      isCancel: true,
+      dragable: false, //貌似可拖拽会有问题
+      maskable: true,
+    });
+    document.querySelector(".Sofill-CDUI-btn1").onclick = function () {
+      dialog.open();
+    };
+  }
 }
 
 var obj = {};
@@ -372,28 +394,26 @@ document
 
     clearAll.open();
   });
-  checkedChange(
-    document.getElementById(
-      "SC_winsay_cp_editor__FocusEnhanc_inlineCode"
-    ),
-    () => {
-      document.documentElement.style.setProperty(
-        "--SCC-Variables-Block-Inline-span__code__before-content",
-        "'<'"
-      );
-      document.documentElement.style.setProperty(
-        "--SCC-Variables-Block-Inline-span__code__after-content",
-        "'>'"
-      );
-    },
-    () => {
-      document.documentElement.style.setProperty(
-        "--SCC-Variables-Block-Inline-span__code__before-content",
-        ""
-      );
-      document.documentElement.style.setProperty(
-        "--SCC-Variables-Block-Inline-span__code__after-content",
-        ""
-      );
-    }
-  );
+checkedChange(
+  document.getElementById("SC_winsay_cp_editor__FocusEnhanc_inlineCode"),
+  () => {
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-Block-Inline-span__code__before-content",
+      "'<'"
+    );
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-Block-Inline-span__code__after-content",
+      "'>'"
+    );
+  },
+  () => {
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-Block-Inline-span__code__before-content",
+      ""
+    );
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-Block-Inline-span__code__after-content",
+      ""
+    );
+  }
+);
