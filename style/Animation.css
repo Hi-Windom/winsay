@@ -195,7 +195,7 @@
 }
 
 
-#layouts>.fn__flex>.fn__flex-column:has(li:nth-child(100))>.fn__none:not(.layout__resize)>div[data-type=wnd] {
+#layouts>.fn__flex>.fn__flex-column:has(span[aria-label="定位打开的文档 "])>.fn__none:not(.layout__resize)>div[data-type=wnd] {
   transition: all .24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }
 /*侧栏（不包括文档树）展开动画*/
