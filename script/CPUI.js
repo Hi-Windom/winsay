@@ -1,4 +1,5 @@
-import Dialog, { InputDialog } from "./module/CPM.js";
+import { ConfirmDialog, CPDialog } from "./module/CPM.js";
+import { ConfirmDialog1 } from "./module/XML/ConfirmDialog.js";
 import * as API from "./utils/api.min.js";
 import * as config from "./config.js";
 
@@ -10,15 +11,9 @@ if (document.getElementById("Sofill-CDUI-1") == null) {
   CDUI_1.ariaLabel = "主题设置（实验性）";
   CDUI_1.innerHTML = `<svg class="b3-menu__icon" "=""><use xlink:href="#iconSettings"></use></svg><span class="b3-menu__label">主题设置</span>`;
   barHelp.children[1].insertAdjacentElement("afterbegin", CDUI_1);
-  let dialog = new Dialog({
+  let dialog = new CPDialog({
     isCancel: true,
-    dragable: false, //貌似可拖拽会有问题，以后加点延时看看
-    success() {
-      console.log("点击了确定");
-    },
-    cancel() {
-      console.log("点击了取消");
-    },
+    dragable: false, //貌似可拖拽会有问题
     maskable: true,
   });
   document.querySelector(".Sofill-CDUI-btn1").onclick = function () {
@@ -165,11 +160,8 @@ checkboxList.forEach(function (value) {
 // 选项改变时的业务处理
 propChange("SC_winsay_cp_appearance__TabBarMode", function () {
   var i = localStorage.getItem("SC_winsay_cp_appearance__TabBarMode");
-  var j = API.isEmpty(i)?"sweet/MI-TabBar-D.css":i;
-  window.funs.updateStyle(
-    "TabBar",
-    `/appearance/themes/Sofill-/style/${j}`
-  );
+  var j = API.isEmpty(i) ? "sweet/MI-TabBar-D.css" : i;
+  window.funs.updateStyle("TabBar", `/appearance/themes/Sofill-/style/${j}`);
 });
 checkedChange(
   document.getElementById("SC_winsay_cp_appearance__ToolBarMode"),
@@ -204,7 +196,7 @@ checkedChange(
 );
 propChange("SC_winsay_cp_appearance__ToolBarMode__height", function () {
   var h = localStorage.getItem("SC_winsay_cp_appearance__ToolBarMode__height");
-  if(!API.isEmpty(h)) {
+  if (!API.isEmpty(h)) {
     document.documentElement.style.setProperty(
       "--SCC-Variables-MI-ToolBar-height",
       h
@@ -237,7 +229,9 @@ checkedChange(
   }
 );
 checkedChange(
-  document.getElementById("SC_winsay_cp_appearance__ToolBarMode__HideList__VIP"),
+  document.getElementById(
+    "SC_winsay_cp_appearance__ToolBarMode__HideList__VIP"
+  ),
   () => {
     document.documentElement.style.setProperty(
       "--SCC-Variables-MI-ToolBar-VIP-opacity",
@@ -269,7 +263,9 @@ checkedChange(
   }
 );
 checkedChange(
-  document.getElementById("SC_winsay_cp_appearance__ToolBarMode__HideList__Other"),
+  document.getElementById(
+    "SC_winsay_cp_appearance__ToolBarMode__HideList__Other"
+  ),
   () => {
     document.documentElement.style.setProperty(
       "--SCC-Variables-MI-ToolBar-Other-opacity",
@@ -307,49 +303,72 @@ checkedChange(
     );
   },
   () => {
-    API.removejscssfile(`${config.THEME_ROOT}style/sweet/MI-DocTree-Adaptive.css`, "css");
+    API.removejscssfile(
+      `${config.THEME_ROOT}style/sweet/MI-DocTree-Adaptive.css`,
+      "css"
+    );
   }
 );
 propChange("SC_winsay_cp_filetree__docFontsize", function () {
   var i = localStorage.getItem("SC_winsay_cp_filetree__docFontsize");
-  if(i) {
+  if (!API.isEmpty(i)) {
     document.documentElement.style.setProperty(
       "--SCC-Variables-MI-DocTree-docFontsize",
       `${parseInt(i)}pt`
     );
-    document.getElementById("SC_winsay_cp_filetree__docFontsize__label").setAttribute("aria-label",`${i}`);
+    document
+      .getElementById("SC_winsay_cp_filetree__docFontsize__label")
+      .setAttribute("aria-label", `${i}`);
     localStorage.setItem("SC_winsay_cp_filetree__docFontsize__label", i);
   }
 });
 propChange("SC_winsay_cp_filetree__nbFontsize", function () {
   var i = localStorage.getItem("SC_winsay_cp_filetree__nbFontsize");
-  if(i) {
+  if (!API.isEmpty(i)) {
     document.documentElement.style.setProperty(
       "--SCC-Variables-MI-DocTree-nbFontsize",
       `${parseInt(i)}pt`
     );
-    document.getElementById("SC_winsay_cp_filetree__nbFontsize__label").setAttribute("aria-label",`${i}`);
+    document
+      .getElementById("SC_winsay_cp_filetree__nbFontsize__label")
+      .setAttribute("aria-label", `${i}`);
     localStorage.setItem("SC_winsay_cp_filetree__nbFontsize__label", i);
   }
 });
-document.getElementById("SC_winsay_cp_system__ClearlocalStorage").addEventListener("click", function () {
-  var counter = 0;
-  for (var i = 0; i < localStorage.length; i++) {
-    var key = localStorage.key(i);
-    if(key.startsWith("winsay_")||key.startsWith("SC_winsay_")) {
-    localStorage.removeItem(key);
-    console.log(`${key} removed`);
-    counter++;
-    }
-  }
-  // 简单粗暴的执行两次
-  for (var i = 0; i < localStorage.length; i++) {
-    var key = localStorage.key(i);
-    if(key.startsWith("winsay_")||key.startsWith("SC_winsay_")) {
-    localStorage.removeItem(key);
-    console.log(`${key} removed`);
-    counter++;
-    }
-  }
-  API.通知(`已清理 ${counter} 项`);
-})
+document
+  .getElementById("SC_winsay_cp_system__ClearlocalStorage")
+  .addEventListener("click", function () {
+    let clearAll = new ConfirmDialog({
+      isCancel: true,
+      dragable: false,
+      XML: ConfirmDialog1,
+      success() {
+        console.log("点击了确定");
+        var counter = 0;
+        for (var i = 0; i < localStorage.length; i++) {
+          var key = localStorage.key(i);
+          if (key.startsWith("winsay_") || key.startsWith("SC_winsay_")) {
+            localStorage.removeItem(key);
+            console.log(`${key} removed`);
+            counter++;
+          }
+        }
+        // 简单粗暴的执行两次
+        for (var i = 0; i < localStorage.length; i++) {
+          var key = localStorage.key(i);
+          if (key.startsWith("winsay_") || key.startsWith("SC_winsay_")) {
+            localStorage.removeItem(key);
+            console.log(`${key} removed`);
+            counter++;
+          }
+        }
+        API.通知(`已清理 ${counter} 项`);
+      },
+      cancel() {
+        console.log("点击了取消");
+      },
+      maskable: true,
+    });
+
+    clearAll.open();
+  });
