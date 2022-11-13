@@ -1,5 +1,5 @@
-import {DialogModule} from './XML/CPDialog.js';
-export default class Dialog extends EventTarget {
+import { CP } from "./XML/CPDialog.js";
+class Dialog extends EventTarget {
   constructor(options) {
     super();
 
@@ -8,7 +8,7 @@ export default class Dialog extends EventTarget {
       width: "30%",
       height: "250px",
       title: "测试标题",
-      content: "测试内容",
+      XML: "测试内容",
       dragable: false, //是否可拖拽
       maskable: true, //是否有遮罩
       isCancel: false, //是否有取消
@@ -16,31 +16,13 @@ export default class Dialog extends EventTarget {
       cancel() {},
     };
     // 合并配置；
-    //方法一：
-    // this.opts = Object.assign(defalultOptions,options);
-    //方法二:
     this.opts = { ...defalultOptions, ...options };
-    //方法三：
-    // this.opts = {
-    //     width,
-    //     height,
-    //     title,
-    //     content,
-    //     dragable,
-    //     maskable,
-    //     isCancel,
-    //     success,
-    //     cancel
-    // }
-    // console.log(this.opts);
     this.init();
   }
   // 初始化组件方法
   init() {
     this.createElement();
-    // this.addEvent("success",this.opts.success);
     this.addEventListener("success", this.opts.success);
-    this.addEleEvent();
     if (!this.opts.maskable) {
       this.divEles.querySelector(".SCC-wrapper").style.display = "none";
     }
@@ -52,39 +34,12 @@ export default class Dialog extends EventTarget {
   createElement() {
     // console.log(this.opts.width)
     let divEles = document.createElement("div");
-    divEles.innerHTML = DialogModule;
+    divEles.innerHTML = `<div class="SCC-wrapper"></div><div class="b3-dialog--open"><div class="SCC-dialog b3-dialog"></div></div></div>`;
     divEles.style.display = "none";
     document.body.appendChild(divEles);
     this.divEles = divEles;
   }
-  // 添加事件
-  addEleEvent() {
-    // 事件委托
-    let SCCDialog = this.divEles.querySelector(".SCC-dialog");
-    SCCDialog.addEventListener("click", (e) => {
-        //  console.log(e.target);
-      let className = e.target.className;
-      switch (className) {
-        case "SCC-close":
-          case "b3-dialog__scrim":
-          this.close();
-          break;
-        case "SCC-default":
-          this.opts.cancel();
-          this.close();
-          break;
-        case "SCC-primary":
-          // this.opts.success();
-          // this.trigger("success");
-          this.sure();
-          this.close();
-          break;
-        default:
-          // console.log("未点中");
-          break;
-      }
-    });
-  }
+
   sure(value) {
     let success = new CustomEvent("success", {
       detail: value,
@@ -97,7 +52,6 @@ export default class Dialog extends EventTarget {
   }
   // 打开组件
   open() {
-    // console.log("open");
     this.divEles.style.display = "block";
   }
   drag() {
@@ -117,41 +71,82 @@ export default class Dialog extends EventTarget {
     };
   }
 }
+
 // 通过继承扩展功能；
-export class InputDialog extends Dialog {
+export class ConfirmDialog extends Dialog {
   constructor(options) {
     super(options);
-    this.createInput();
+    this.create();
+    this.addEleEvent();
   }
-  createInput() {
-    let myInput = document.createElement("input");
-    myInput.classList.add("input-inner");
-    this.divEles.querySelector(".k-body").appendChild(myInput);
-    this.myInput = myInput;
+  create() {
+    this.divEles.innerHTML = this.opts.XML;
   }
   sure() {
-    let value = this.myInput.value;
-    super.sure(value);
+    super.sure();
   }
-}
-class ShowDialog extends HTMLElement {
-  constructor() {
-    super();
-    this.innerHTML = `<button>按钮</button>`;
-    let dialog = new Dialog({
-      title: this.title,
-      success: (e) => {
-        // console.log("点击了确定")
-        this.dispatchEvent(new CustomEvent("success"));
-      },
+  // 添加事件
+  addEleEvent() {
+    // 事件委托
+    let SCCDialog = this.divEles.querySelector(".SCC-dialog");
+    SCCDialog.addEventListener("click", (e) => {
+      //  console.log(e.target);
+      let cl = e.target.classList;
+      if (cl.contains("SCC-close") || cl.contains("b3-dialog__scrim")) {
+        this.close();
+      }
+      if (cl.contains("SCC-default") || cl.contains("b3-button--cancel")) {
+        this.opts.cancel();
+        this.close();
+      }
+      if (cl.contains("SCC-primary")) {
+        this.sure();
+        this.close();
+      }
     });
-    // this.title = this.getAttribute("title")
-    this.onclick = function () {
-      dialog.open();
-    };
-  }
-  get title() {
-    return this.getAttribute("title") ?? "默认标题";
   }
 }
-customElements.define("show-dialog", ShowDialog);
+export class CPDialog extends Dialog {
+  constructor(options) {
+    super(options);
+    this.create();
+    this.addEleEvent();
+  }
+  create() {
+    this.divEles.innerHTML = CP;
+  }
+  // 添加事件
+  addEleEvent() {
+    // 事件委托
+    let SCCDialog = this.divEles.querySelector(".SCC-dialog");
+    SCCDialog.addEventListener("click", (e) => {
+      //  console.log(e.target);
+      let cl = e.target.classList;
+      if (cl.contains("SCC-close") || cl.contains("b3-dialog__scrim")) {
+        this.close();
+      }
+      if (cl.contains("SCC-default") || cl.contains("b3-button--cancel")) {
+        this.opts.cancel();
+        this.close();
+      }
+    });
+  }
+}
+
+// class ConfirmDialog extends HTMLElement {
+//   constructor() {
+//     super();
+//     let dialog = new Dialog({
+//       title: this.title,
+//       success: (e) => {
+//         // console.log("点击了确定")
+//         this.dispatchEvent(new CustomEvent("success"));
+//       },
+//     });
+//       dialog.open();
+//   }
+//   get title() {
+//     return this.getAttribute("title") ?? "默认标题";
+//   }
+// }
+// customElements.define("ConfirmDialog", ConfirmDialog);
