@@ -312,7 +312,7 @@ checkedChange(
 );
 propChange("SC_winsay_cp_filetree__docFontsize", function () {
   var i = localStorage.getItem("SC_winsay_cp_filetree__docFontsize");
-  if(i) {
+  if(!API.isEmpty(i)) {
     document.documentElement.style.setProperty(
       "--SCC-Variables-MI-DocTree-docFontsize",
       `${parseInt(i)}pt`
@@ -323,7 +323,7 @@ propChange("SC_winsay_cp_filetree__docFontsize", function () {
 });
 propChange("SC_winsay_cp_filetree__nbFontsize", function () {
   var i = localStorage.getItem("SC_winsay_cp_filetree__nbFontsize");
-  if(i) {
+  if(!API.isEmpty(i)) {
     document.documentElement.style.setProperty(
       "--SCC-Variables-MI-DocTree-nbFontsize",
       `${parseInt(i)}pt`
