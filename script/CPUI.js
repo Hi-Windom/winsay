@@ -384,7 +384,8 @@ document
             counter++;
           }
         }
-        API.通知(`已清理 ${counter} 项`);
+        API.通知(`已清理 ${counter} 项<br>页面即将刷新`);
+        setTimeout(() =>{window.location.reload()},3000)
       },
       cancel() {
         console.log("点击了取消");
