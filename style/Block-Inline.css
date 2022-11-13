@@ -85,7 +85,7 @@ span[data-type=code]::after {
     color: var(--SCC-White-lighter);
 }
 
-span[data-type=code]:hover::before {
+:focus span[data-type=code]::before {
     content: "<";
     display: inline-block;
     margin-right: .3rem;
@@ -93,7 +93,7 @@ span[data-type=code]:hover::before {
     transition: all .31s ease-in-out .58s;
 }
 
-span[data-type=code]:hover::after {
+:focus span[data-type=code]::after {
     content: ">";
     display: inline-block;
     margin-left: .3rem;
