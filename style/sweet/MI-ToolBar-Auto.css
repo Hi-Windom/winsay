@@ -17,13 +17,6 @@
   --SCC-Variables-MI-ToolBar-Other-opacity: var(--SCC-Variables-MI-ToolBar-opacity-hover);
 }
 
-body.darwin {
-  height: 8px;
-  padding: 0 5px 0 69px !important;
-  border-bottom: 0px solid var(--b3-border-color);
-  transition: all 0.13s ease-in-out;
-}
-
 body.darwin #toolbar:hover {
   background-color: transparent !important;
   height: 32px;
