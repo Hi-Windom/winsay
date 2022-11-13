@@ -68,7 +68,6 @@
 
   /* --- */
   --SCC-Component-selector-border: 1px solid #cc5831c5;
-  --SCC-Component-selector-bg-color: var(--SCC-baseComponent-selector-bg-color);
   --SCC-Component-button-text-color: #cc5831;
   --SCC-Component-button-bg-color: var(--b3-theme-primary-lightest);
   --SCC-Component-textarea-box-shadow: rgba(138, 88, 131, 0.1) 1px 1px 1px 1px inset,

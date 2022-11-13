@@ -70,7 +70,6 @@
     --SCC-baseComponent-search__header-input-box-shadow: rgb(128 81 231 / 31%) 3px 3px 6px 0px inset, rgb(255 255 255 / 50%) -3px -3px 6px 1px inset;
     --SCC-baseComponent-search__header-input-box-shadow-focus: rgb(128 81 231 / 31%) 3px 3px 6px 0px inset, rgb(255 255 255 / 50%) -3px -3px 6px 1px inset;
     --SCC-Component-selector-border: 1px solid var(--SCC-Purple-186-lighter);
-    --SCC-Component-selector-bg-color: var(--SCC-baseComponent-selector-bg-color);
     --SCC-Component-button-text-color: var(--SCC-Gray-186);
     --SCC-Component-button-bg-color: var(--b3-theme-primary-lightest);
     --SCC-Component-textarea-box-shadow: rgba(220, 220, 220, 0.1) 2px 2px 0px 111px inset, rgba(220, 220, 220, 0.1) 0px -2px 0px 0px inset;

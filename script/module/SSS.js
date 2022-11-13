@@ -264,6 +264,7 @@ function changeThemeModeByApp() {
       config.colors2.forEach((color) =>
         API.removejscssfile(`${config.THEME_ROOT}${color}`, "css")
       );
+      API.removejscssfile(`/appearance/themes/Sofill-/style-S2/root-base-dark.css`, "css");
       break;
     case "dark":
     default:
@@ -272,14 +273,13 @@ function changeThemeModeByApp() {
       config.colors.forEach((color) =>
         API.removejscssfile(`${config.THEME_ROOT}${color}`, "css")
       );
+      API.removejscssfile(`/appearance/themes/Sofill-/style-S2/root-base-light.css`, "css")
       break;
   }
   window.funs.updateStyle(config.ID_COLOR_STYLE, href_color);
-  localStorage.removeItem(config.IDs.LOCAL_STORAGE_COLOR_HREF);
   changeStyleMod();
 }
-/* 支持暗黑模式 */
-changeThemeModeByApp();
+
 setTimeout(() => {
-  changeStyleMod();
+  changeThemeModeByApp();
 }, 0);
