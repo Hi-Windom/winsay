@@ -372,3 +372,28 @@ document
 
     clearAll.open();
   });
+  checkedChange(
+    document.getElementById(
+      "SC_winsay_cp_editor__FocusEnhanc_inlineCode"
+    ),
+    () => {
+      document.documentElement.style.setProperty(
+        "--SCC-Variables-Block-Inline-span__code__before-content",
+        "'<'"
+      );
+      document.documentElement.style.setProperty(
+        "--SCC-Variables-Block-Inline-span__code__after-content",
+        "'>'"
+      );
+    },
+    () => {
+      document.documentElement.style.setProperty(
+        "--SCC-Variables-Block-Inline-span__code__before-content",
+        ""
+      );
+      document.documentElement.style.setProperty(
+        "--SCC-Variables-Block-Inline-span__code__after-content",
+        ""
+      );
+    }
+  );

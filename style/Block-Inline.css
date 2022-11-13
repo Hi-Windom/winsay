@@ -86,7 +86,7 @@ span[data-type=code]::after {
 }
 
 :focus span[data-type=code]::before {
-    content: "<";
+    content: var(--SCC-Variables-Block-Inline-span__code__before-content);
     display: inline-block;
     margin-right: .3rem;
     font-size: 100%;
@@ -94,7 +94,7 @@ span[data-type=code]::after {
 }
 
 :focus span[data-type=code]::after {
-    content: ">";
+    content: var(--SCC-Variables-Block-Inline-span__code__after-content);
     display: inline-block;
     margin-left: .3rem;
     font-size: 100%;
