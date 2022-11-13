@@ -182,6 +182,10 @@ checkedChange(
       "--SCC-Variables-MI-ToolBar-child-visibility",
       "hidden"
     );
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-MI-ToolBar-svg-height",
+      `0px`
+    );
   },
   () => {
     document.documentElement.style.setProperty(
@@ -192,18 +196,28 @@ checkedChange(
       "--SCC-Variables-MI-ToolBar-child-visibility",
       "visible"
     );
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-MI-ToolBar-svg-height",
+      `14px`
+    );
   }
 );
 propChange("SC_winsay_cp_appearance__ToolBarMode__height", function () {
   var h = localStorage.getItem("SC_winsay_cp_appearance__ToolBarMode__height");
-  document.documentElement.style.setProperty(
-    "--SCC-Variables-MI-ToolBar-height",
-    h
-  );
-  document.documentElement.style.setProperty(
-    "--SCC-Variables-MI-ToolBar-svg-height",
-    `${parseInt(h) / 2 + 1}px`
-  );
+  if(!API.isEmpty(h)) {
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-MI-ToolBar-height",
+      h
+    );
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-MI-ToolBar-svg-height",
+      `${parseInt(h) / 2 + 1}px`
+    );
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-MI-ToolBar-svg-hover-height",
+      `${parseInt(h) / 2 + 1}px`
+    );
+  }
 });
 checkedChange(
   document.getElementById(
@@ -318,12 +332,24 @@ propChange("SC_winsay_cp_filetree__nbFontsize", function () {
     localStorage.setItem("SC_winsay_cp_filetree__nbFontsize__label", i);
   }
 });
-
-//遍历本地存储localStorage
-// for (var i = 0; i < localStorage.length; i++) {
-//   var key = localStorage.key(i); //获取本地存储的Key
-//   if(key.startsWith("winsay_")) {
-//   localStorage.removeItem(key);
-//   console.log(`${key} removed`);
-//   }
-// }
+document.getElementById("SC_winsay_cp_system__ClearlocalStorage").addEventListener("click", function () {
+  var counter = 0;
+  for (var i = 0; i < localStorage.length; i++) {
+    var key = localStorage.key(i);
+    if(key.startsWith("winsay_")||key.startsWith("SC_winsay_")) {
+    localStorage.removeItem(key);
+    console.log(`${key} removed`);
+    counter++;
+    }
+  }
+  // 简单粗暴的执行两次
+  for (var i = 0; i < localStorage.length; i++) {
+    var key = localStorage.key(i);
+    if(key.startsWith("winsay_")||key.startsWith("SC_winsay_")) {
+    localStorage.removeItem(key);
+    console.log(`${key} removed`);
+    counter++;
+    }
+  }
+  API.通知(`已清理 ${counter} 项`);
+})
