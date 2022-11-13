@@ -12,6 +12,7 @@
   animation: menu 0.13s ease-in-out;
   opacity: 0.99;
   transition: box-shadow 0.2s ease-in-out;
+  overflow-x: hidden;
 }
 
 .block__popover.block__popover--move.block__popover--open[data-pin="true"] {
