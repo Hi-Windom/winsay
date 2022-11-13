@@ -1,4 +1,4 @@
-import * as API from "./../utils/api.js";
+import * as API from "./../utils/api.min.js";
 import * as config from "./../config.js";
 
 window.theme.changeThemeModeByEnv = function () {

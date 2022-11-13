@@ -12,7 +12,7 @@
 #sc-custom-nav-bind-id-system:checked~#sc-custom-container-system,
 #sc-custom-nav-bind-id-custom:checked~#sc-custom-container-custom,
 #sc-custom-nav-bind-id-extension:checked~#sc-custom-container-extension,
-#sc-custom-nav-bind-id-explore:checked~#sc-custom-container-explore,
+#sc-custom-nav-bind-id-filetree:checked~#sc-custom-container-filetree,
 #sc-custom-nav-bind-id-eHiWindom:checked~#sc-custom-container-eHiWindom,
 #sc-custom-nav-bind-id-about:checked~#sc-custom-container-about {
   display: block;
@@ -60,7 +60,7 @@
 #sc-custom-nav-bind-id-system:checked~#sc-custom-container-system,
 #sc-custom-nav-bind-id-custom:checked~#sc-custom-container-custom,
 #sc-custom-nav-bind-id-extension:checked~#sc-custom-container-extension,
-#sc-custom-nav-bind-id-explore:checked~#sc-custom-container-explore,
+#sc-custom-nav-bind-id-filetree:checked~#sc-custom-container-filetree,
 #sc-custom-nav-bind-id-eHiWindom:checked~#sc-custom-container-eHiWindom,
 #sc-custom-nav-bind-id-about:checked~#sc-custom-container-about {
   display: block;
@@ -71,9 +71,11 @@
 #sc-custom-nav-bind-id-assets:checked~.sc-custom-nav>li[data-name="assets"],
 #sc-custom-nav-bind-id-editor:checked~.sc-custom-nav>li[data-name="editor"],
 #sc-custom-nav-bind-id-export:checked~.sc-custom-nav>li[data-name="export"],
+#sc-custom-nav-bind-id-search:checked~.sc-custom-nav>li[data-name="search"],
 #sc-custom-nav-bind-id-system:checked~.sc-custom-nav>li[data-name="system"],
 #sc-custom-nav-bind-id-custom:checked~.sc-custom-nav>li[data-name="custom"],
 #sc-custom-nav-bind-id-extension:checked~.sc-custom-nav>li[data-name="extension"],
+#sc-custom-nav-bind-id-filetree:checked~.sc-custom-nav>li[data-name="filetree"],
 #sc-custom-nav-bind-id-eHiWindom:checked~.sc-custom-nav>li[data-name="eHiWindom"],
 #sc-custom-nav-bind-id-about:checked~.sc-custom-nav>li[data-name="about"] {
   background-color: var(--b3-list-hover);
@@ -132,7 +134,13 @@
 
 /* 【外观】配置区联动显示 */
 
-label:has(#winsay_cp_appearance__ToolBarMode:checked)+label,
-label:has(#winsay_cp_appearance__ToolBarMode:checked)+label+div {
+label:has(#SC_winsay_cp_appearance__ToolBarMode:checked)+label,
+label:has(#SC_winsay_cp_appearance__ToolBarMode:checked)+label+div {
+  display: none;
+}
+
+/* 【文档树】配置区联动显示 */
+label:has(#SC_winsay_cp_filetree__Adaptive_display:checked)+label,
+label:has(#SC_winsay_cp_filetree__Adaptive_display:checked)+label+label {
   display: none;
 }

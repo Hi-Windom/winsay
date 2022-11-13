@@ -27,57 +27,6 @@
   transition-duration: .31s;
 }
 
-/* 文档树笔记本高度自适应 #288 */
-.fn__flex-1.fn__flex-column.file-tree.sy__file .fn__flex-1:has(>ul:nth-child(1))>ul {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  padding-top: 1em;
-  padding-bottom: 1.31em;
-}
-
-.fn__flex-1.fn__flex-column.file-tree.sy__file .fn__flex-1:has(>ul:nth-child(6))>ul {
-  margin-top: 0.8em;
-  margin-bottom: 0.8em;
-  padding-top: 0.8em;
-  padding-bottom: 0.8em;
-}
-
-.fn__flex-1.fn__flex-column.file-tree.sy__file .fn__flex-1:has(>ul:nth-child(9))>ul {
-  margin-top: 0.58em;
-  margin-bottom: 0.58em;
-  padding-top: 0.58em;
-  padding-bottom: 0.58em;
-}
-
-.fn__flex-1.fn__flex-column.file-tree.sy__file .fn__flex-1:has(>ul:nth-child(12))>ul {
-  margin-top: 0.58em;
-  margin-bottom: 0.58em;
-  padding-top: 0.31em;
-  padding-bottom: 0.31em;
-}
-
-.fn__flex-1.fn__flex-column.file-tree.sy__file .fn__flex-1:has(>ul:nth-child(16))>ul {
-  margin-top: 0.31em;
-  margin-bottom: 0.31em;
-  padding-top: 0.13em;
-  padding-bottom: 0.13em;
-}
-
-.fn__flex-1.fn__flex-column.file-tree.sy__file .fn__flex-1:has(>ul:nth-child(20))>ul {
-  margin-top: 0.13em;
-  margin-bottom: 0.13em;
-  padding-top: 0.13em;
-  padding-bottom: 0.13em;
-}
-
-/* 缓制文档树笔记本高度自适应副作用 */
-#layouts>div.fn__flex.fn__flex-1>div.fn__flex-column.fn__flex-shrink>div:nth-child(1)>div>div.layout-tab-container.fn__flex-1 .block__icons {
-  position: sticky;
-  top: 0px;
-  margin-bottom: 3px;
-  padding-bottom: 13px;
-}
-
 /* 【已关闭的笔记本】融入文档树样式 #202 */
 #layouts .fn__flex-column.file-tree.sy__file>ul {
   padding: 0px;
@@ -228,57 +177,21 @@ body:not(.android) .block__logo {
 }
 
 li[data-name="Untitled.sy"]>span.b3-list-item__text {
-  opacity: 0;
+  opacity: var(--SCC-Variables-MI-DocTree-Untitle-opacity, 0);
 }
 
-/* 笔记本文字 */
+/* 笔记本名文字 */
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul>li .b3-list-item__text {
   color: var(--SCC-baseComponent-text-color-2);
-  font-size: max(min(5.5cqw, 14pt), 11pt) !important;
+  font-size: var(--SCC-Variables-MI-DocTree-nbFontsize, 10pt);
   transition: color 0.2s cubic-bezier(0.47, 0, 0.75, 0.72) .1s;
 }
 
-/* 文档文字 */
+/* 文档名文字 */
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul>ul>li .b3-list-item__text {
   color: var(--SCC-baseComponent-text-color-1);
-  font-size: max(min(4.2cqw, 12pt), 9.5pt) !important;
+  font-size: var(--SCC-Variables-MI-DocTree-docFontsize, 9pt);
   letter-spacing: 0.1px;
   transition: all .31s ease .1s;
 
-}
-
-@container FileTree (max-width: 360px) {
-
-  /* 文档文字 */
-  .fn__flex-1.fn__flex-column.file-tree.sy__file ul>ul>li .b3-list-item__text {
-    color: var(--SCC-baseComponent-text-color-1);
-    /*   font-size: 9.5pt !important; */
-    font-weight: 400;
-    letter-spacing: -0.31px;
-  }
-
-  .file-tree.sy__file ul.b3-list.b3-list--background>ul>ul>ul>ul>ul li[data-type="navigation-file"] .counter[aria-label="引用块"] {
-    left: 0px;
-    position: absolute;
-    max-width: 25px;
-    margin-left: 1px;
-  }
-
-  .file-tree.sy__file ul.b3-list.b3-list--background:has(>ul>ul>ul>ul>ul)>ul>ul>ul>ul>ul li[data-type="navigation-file"] .b3-list-item__action[aria-label="更多"] {
-    height: 22px;
-    padding: 0 4px;
-    left: 43px;
-    position: absolute;
-    display: inline-flex;
-    opacity: .58;
-  }
-
-  .file-tree.sy__file ul.b3-list.b3-list--background:has(>ul>ul>ul>ul>ul)>ul>ul>ul>ul>ul li[data-type="navigation-file"] .b3-list-item__action[aria-label="新建子文档"] {
-    height: 22px;
-    padding: 0 4px;
-    left: 68px;
-    position: absolute;
-    display: inline-flex;
-    opacity: .58;
-  }
 }

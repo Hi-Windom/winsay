@@ -1,4 +1,4 @@
-import * as API from "./utils/api.js";
+import * as API from "./utils/api.min.js";
 
 const config_Custom = "/conf/appearance/themes/Sofill-/config/Custom.json";
 const config_UI = "/conf/appearance/themes/Sofill-/config/UI.json";
@@ -26,8 +26,8 @@ var colors2 = [
   "style-S2/root-D-InkGreenPurple.css",
 ];
 
-const latest_LC_href = "SC-winsay-LC-href";
-const latest_DC_href = "SC-winsay-DC-href";
+const latest_LC_href = "SC_winsay_style_LC_href";
+const latest_DC_href = "SC_winsay_style_DC_href";
 /* 循环迭代器 */
 var Iterator = function* (items) {
   for (let i = 0; true; i = (i + 1) % items.length) {

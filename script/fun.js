@@ -1,4 +1,4 @@
-import * as API from "./utils/api.js";
+import * as API from "./utils/api.min.js";
 
 
 window.funs.getThemeMode = (() => {

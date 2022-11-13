@@ -1,5 +1,6 @@
 import Dialog, { InputDialog } from "./module/CPM.js";
-var r = document.querySelector(":root");
+import * as API from "./utils/api.min.js";
+import * as config from "./config.js";
 
 const barHelp = document.getElementById("barHelp");
 if (document.getElementById("Sofill-CDUI-1") == null) {
@@ -141,13 +142,20 @@ function checkedChange(obj, YesFn, NoFn) {
 }
 
 // 初始化选项的值
-let selectList = document.querySelectorAll("select[id^='winsay_cp']");
+let selectList = document.querySelectorAll("select[id^='SC_winsay_cp']");
 // console.log(selectList);
 selectList.forEach(function (value) {
   propInit(value.id, "change");
 });
+let rangeSliderList = document.querySelectorAll(
+  "input[id^='SC_winsay_cp'][type='range']"
+);
+// console.log(rangeSliderList);
+rangeSliderList.forEach(function (value) {
+  propInit(value.id, "change");
+});
 let checkboxList = document.querySelectorAll(
-  "input[id^='winsay_cp'][type='checkbox']"
+  "input[id^='SC_winsay_cp'][type='checkbox']"
 );
 // console.log(checkboxList);
 checkboxList.forEach(function (value) {
@@ -155,16 +163,16 @@ checkboxList.forEach(function (value) {
 });
 
 // 选项改变时的业务处理
-propChange("winsay_cp_appearance__TabBarMode", function () {
+propChange("SC_winsay_cp_appearance__TabBarMode", function () {
+  var i = localStorage.getItem("SC_winsay_cp_appearance__TabBarMode");
+  var j = API.isEmpty(i)?"sweet/MI-TabBar-D.css":i;
   window.funs.updateStyle(
     "TabBar",
-    `/appearance/themes/Sofill-/style/${localStorage.getItem(
-      "winsay_cp_appearance__TabBarMode"
-    )}`
+    `/appearance/themes/Sofill-/style/${j}`
   );
 });
 checkedChange(
-  document.getElementById("winsay_cp_appearance__ToolBarMode"),
+  document.getElementById("SC_winsay_cp_appearance__ToolBarMode"),
   () => {
     document.documentElement.style.setProperty(
       "--SCC-Variables-MI-ToolBar-height-max",
@@ -173,6 +181,10 @@ checkedChange(
     document.documentElement.style.setProperty(
       "--SCC-Variables-MI-ToolBar-child-visibility",
       "hidden"
+    );
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-MI-ToolBar-svg-height",
+      `0px`
     );
   },
   () => {
@@ -184,21 +196,33 @@ checkedChange(
       "--SCC-Variables-MI-ToolBar-child-visibility",
       "visible"
     );
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-MI-ToolBar-svg-height",
+      `14px`
+    );
   }
 );
-propChange("winsay_cp_appearance__ToolBarMode__height", function () {
-  var h = localStorage.getItem("winsay_cp_appearance__ToolBarMode__height");
-  document.documentElement.style.setProperty(
-    "--SCC-Variables-MI-ToolBar-height",
-    h
-  );
-  document.documentElement.style.setProperty(
-    "--SCC-Variables-MI-ToolBar-svg-height",
-    `${parseInt(h) / 2 + 1}px`
-  );
+propChange("SC_winsay_cp_appearance__ToolBarMode__height", function () {
+  var h = localStorage.getItem("SC_winsay_cp_appearance__ToolBarMode__height");
+  if(!API.isEmpty(h)) {
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-MI-ToolBar-height",
+      h
+    );
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-MI-ToolBar-svg-height",
+      `${parseInt(h) / 2 + 1}px`
+    );
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-MI-ToolBar-svg-hover-height",
+      `${parseInt(h) / 2 + 1}px`
+    );
+  }
 });
 checkedChange(
-  document.getElementById("winsay_cp_appearance__ToolBarMode__HideList__docName"),
+  document.getElementById(
+    "SC_winsay_cp_appearance__ToolBarMode__HideList__docName"
+  ),
   () => {
     document.documentElement.style.setProperty(
       "--SCC-Variables-MI-ToolBar-docName-opacity",
@@ -213,7 +237,7 @@ checkedChange(
   }
 );
 checkedChange(
-  document.getElementById("winsay_cp_appearance__ToolBarMode__HideList__VIP"),
+  document.getElementById("SC_winsay_cp_appearance__ToolBarMode__HideList__VIP"),
   () => {
     document.documentElement.style.setProperty(
       "--SCC-Variables-MI-ToolBar-VIP-opacity",
@@ -228,7 +252,9 @@ checkedChange(
   }
 );
 checkedChange(
-  document.getElementById("winsay_cp_appearance__ToolBarMode__HideList__windowX"),
+  document.getElementById(
+    "SC_winsay_cp_appearance__ToolBarMode__HideList__windowX"
+  ),
   () => {
     document.documentElement.style.setProperty(
       "--SCC-Variables-MI-ToolBar-windowX-opacity",
@@ -243,7 +269,7 @@ checkedChange(
   }
 );
 checkedChange(
-  document.getElementById("winsay_cp_appearance__ToolBarMode__HideList__Other"),
+  document.getElementById("SC_winsay_cp_appearance__ToolBarMode__HideList__Other"),
   () => {
     document.documentElement.style.setProperty(
       "--SCC-Variables-MI-ToolBar-Other-opacity",
@@ -257,3 +283,73 @@ checkedChange(
     );
   }
 );
+checkedChange(
+  document.getElementById("SC_winsay_cp_filetree__Hide_untitle"),
+  () => {
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-MI-DocTree-Untitle-opacity",
+      "0"
+    );
+  },
+  () => {
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-MI-DocTree-Untitle-opacity",
+      "1"
+    );
+  }
+);
+checkedChange(
+  document.getElementById("SC_winsay_cp_filetree__Adaptive_display"),
+  () => {
+    window.funs.updateStyle(
+      "MI-DocTree-Adaptive",
+      `/appearance/themes/Sofill-/style/sweet/MI-DocTree-Adaptive.css`
+    );
+  },
+  () => {
+    API.removejscssfile(`${config.THEME_ROOT}style/sweet/MI-DocTree-Adaptive.css`, "css");
+  }
+);
+propChange("SC_winsay_cp_filetree__docFontsize", function () {
+  var i = localStorage.getItem("SC_winsay_cp_filetree__docFontsize");
+  if(i) {
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-MI-DocTree-docFontsize",
+      `${parseInt(i)}pt`
+    );
+    document.getElementById("SC_winsay_cp_filetree__docFontsize__label").setAttribute("aria-label",`${i}`);
+    localStorage.setItem("SC_winsay_cp_filetree__docFontsize__label", i);
+  }
+});
+propChange("SC_winsay_cp_filetree__nbFontsize", function () {
+  var i = localStorage.getItem("SC_winsay_cp_filetree__nbFontsize");
+  if(i) {
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-MI-DocTree-nbFontsize",
+      `${parseInt(i)}pt`
+    );
+    document.getElementById("SC_winsay_cp_filetree__nbFontsize__label").setAttribute("aria-label",`${i}`);
+    localStorage.setItem("SC_winsay_cp_filetree__nbFontsize__label", i);
+  }
+});
+document.getElementById("SC_winsay_cp_system__ClearlocalStorage").addEventListener("click", function () {
+  var counter = 0;
+  for (var i = 0; i < localStorage.length; i++) {
+    var key = localStorage.key(i);
+    if(key.startsWith("winsay_")||key.startsWith("SC_winsay_")) {
+    localStorage.removeItem(key);
+    console.log(`${key} removed`);
+    counter++;
+    }
+  }
+  // 简单粗暴的执行两次
+  for (var i = 0; i < localStorage.length; i++) {
+    var key = localStorage.key(i);
+    if(key.startsWith("winsay_")||key.startsWith("SC_winsay_")) {
+    localStorage.removeItem(key);
+    console.log(`${key} removed`);
+    counter++;
+    }
+  }
+  API.通知(`已清理 ${counter} 项`);
+})
