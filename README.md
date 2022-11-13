@@ -149,6 +149,7 @@ Sofill- 适合哪些人：13~58岁非色弱人群；青少年请在家长指导�
 5. [动效优化 · Issue #347 · v0.110](https://github.com/Hi-Windom/winsay/issues/347)
 6. [优化弹出菜单通用阴影在暗黑模式下的呈现效果 · Issue #371 · v0.110](https://github.com/Hi-Windom/winsay/issues/371)
 7. [Android Pad 端隐藏无效的主题设置界面配置项 · Issue #374 · v0.110](https://github.com/Hi-Windom/winsay/issues/374)
+8. [Android 端HintMenu样式更新 · Issue #376 · v0.110](https://github.com/Hi-Windom/winsay/issues/376)
 
 缺陷修复：
 
