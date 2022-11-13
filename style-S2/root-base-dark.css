@@ -115,11 +115,7 @@
   opacity: 0.98 !important;
 }
 
-.b3-tab-container {
-  background-color: var(--b3-theme-background);
-  opacity: .96;
-  background-color: #20192135;
-}
+
 
 .b3-list--background .b3-list-item:hover:not(.b3-list-item--focus) {
   background-color: #c1c2c308;

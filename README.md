@@ -152,6 +152,7 @@ Sofill- 适合哪些人：13~58岁非色弱人群；青少年请在家长指导�
 7. [Android Pad 端隐藏无效的主题设置界面配置项 · Issue #374 · v0.110](https://github.com/Hi-Windom/winsay/issues/374)
 8. [Android 端HintMenu样式更新 · Issue #376 · v0.110](https://github.com/Hi-Windom/winsay/issues/376)
 9. [优化行内代码彩蛋触发逻辑 · Issue #381 · v0.110](https://github.com/Hi-Windom/winsay/issues/381)
+10. [Android 端与桌面端统一背景磨砂效果调整优化 · Issue #388 · v0.110](https://github.com/Hi-Windom/winsay/issues/388)
 
 缺陷修复：
 
@@ -159,6 +160,7 @@ Sofill- 适合哪些人：13~58岁非色弱人群；青少年请在家长指导�
 2. [明亮暗黑模式切换不完整 · Issue #384 · v0.110](https://github.com/Hi-Windom/winsay/issues/384)
 3. [Mac 端左侧异常留白 · Issue #385 · v0.110](https://github.com/Hi-Windom/winsay/issues/385)
 4. [引用块预览浮窗抖动 · Issue #310 · v0.110](https://github.com/Hi-Windom/winsay/issues/310)
+5. [顶栏icon大小异常 · Issue #379 · v0.110](https://github.com/Hi-Windom/winsay/issues/379)
 
 ### v0.90 ~ v0.100 聚合说明
 
