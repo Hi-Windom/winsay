@@ -3,7 +3,7 @@ import {
   addinsertCreateElement,
   getTextWidth,
   isPhone,
-} from "./../utils/api.js";
+} from "./../utils/api.min.js";
 
 /** 为打开文档的标题下显示文档创建日期 */
 function showDocumentCreationDate() {

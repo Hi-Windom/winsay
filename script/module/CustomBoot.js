@@ -1,5 +1,5 @@
 import * as config from "./../config.js";
-import * as API from "./../utils/api.js";
+import * as API from "./../utils/api.min.js";
 
 // 初始化获取用户配置
 let winsay_cp_appearance__TabBarMode = localStorage.getItem(

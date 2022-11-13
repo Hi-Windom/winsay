@@ -1,5 +1,6 @@
 import Dialog, { InputDialog } from "./module/CPM.js";
-var r = document.querySelector(":root");
+import * as API from "./utils/api.min.js";
+import * as config from "./config.js";
 
 const barHelp = document.getElementById("barHelp");
 if (document.getElementById("Sofill-CDUI-1") == null) {
@@ -146,6 +147,13 @@ let selectList = document.querySelectorAll("select[id^='winsay_cp']");
 selectList.forEach(function (value) {
   propInit(value.id, "change");
 });
+let rangeSliderList = document.querySelectorAll(
+  "input[id^='winsay_cp'][type='range']"
+);
+// console.log(rangeSliderList);
+rangeSliderList.forEach(function (value) {
+  propInit(value.id, "change");
+});
 let checkboxList = document.querySelectorAll(
   "input[id^='winsay_cp'][type='checkbox']"
 );
@@ -198,7 +206,9 @@ propChange("winsay_cp_appearance__ToolBarMode__height", function () {
   );
 });
 checkedChange(
-  document.getElementById("winsay_cp_appearance__ToolBarMode__HideList__docName"),
+  document.getElementById(
+    "winsay_cp_appearance__ToolBarMode__HideList__docName"
+  ),
   () => {
     document.documentElement.style.setProperty(
       "--SCC-Variables-MI-ToolBar-docName-opacity",
@@ -228,7 +238,9 @@ checkedChange(
   }
 );
 checkedChange(
-  document.getElementById("winsay_cp_appearance__ToolBarMode__HideList__windowX"),
+  document.getElementById(
+    "winsay_cp_appearance__ToolBarMode__HideList__windowX"
+  ),
   () => {
     document.documentElement.style.setProperty(
       "--SCC-Variables-MI-ToolBar-windowX-opacity",
@@ -272,3 +284,37 @@ checkedChange(
     );
   }
 );
+checkedChange(
+  document.getElementById("winsay_cp_filetree__Adaptive_display"),
+  () => {
+    window.funs.updateStyle(
+      "MI-DocTree-Adaptive",
+      `/appearance/themes/Sofill-/style/sweet/MI-DocTree-Adaptive.css`
+    );
+  },
+  () => {
+    API.removejscssfile(`${config.THEME_ROOT}style/sweet/MI-DocTree-Adaptive.css`, "css");
+  }
+);
+propChange("winsay_cp_filetree__docFontsize", function () {
+  var i = localStorage.getItem("winsay_cp_filetree__docFontsize");
+  if(i) {
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-MI-DocTree-docFontsize",
+      `${parseInt(i)}pt`
+    );
+    document.getElementById("winsay_cp_filetree__docFontsize__label").setAttribute("aria-label",`${i}`);
+    localStorage.setItem("winsay_cp_filetree__docFontsize__label", i);
+  }
+});
+propChange("winsay_cp_filetree__nbFontsize", function () {
+  var i = localStorage.getItem("winsay_cp_filetree__nbFontsize");
+  if(i) {
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-MI-DocTree-nbFontsize",
+      `${parseInt(i)}pt`
+    );
+    document.getElementById("winsay_cp_filetree__nbFontsize__label").setAttribute("aria-label",`${i}`);
+    localStorage.setItem("winsay_cp_filetree__nbFontsize__label", i);
+  }
+});

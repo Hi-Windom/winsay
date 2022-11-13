@@ -1,4 +1,4 @@
-import * as API from "./utils/api.js";
+import * as API from "./utils/api.min.js";
 
 const config_Custom = "/conf/appearance/themes/Sofill-/config/Custom.json";
 const config_UI = "/conf/appearance/themes/Sofill-/config/UI.json";
