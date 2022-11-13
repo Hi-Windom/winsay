@@ -21,6 +21,10 @@ window.theme.changeThemeModeByEnv = function () {
         "MI-DocTree",
         `/appearance/themes/Sofill-/style/MI-DocTree.css`
       );
+      window.funs.updateStyle(
+        "Mobile",
+        `/appearance/themes/Sofill-/style/android/Mobile.css`
+      );
       break;
     default:
       window.funs.updateStyle(
