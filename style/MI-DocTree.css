@@ -1,3 +1,7 @@
+:root {
+  --SCC-Variables-MI-DocTree-Untitle-opacity: 0;
+}
+
 .file-tree.sy__file {
   container-type: inline-size;
   container-name: FileTree;
@@ -228,7 +232,7 @@ body:not(.android) .block__logo {
 }
 
 li[data-name="Untitled.sy"]>span.b3-list-item__text {
-  opacity: 0;
+  opacity: var(--SCC-Variables-MI-DocTree-Untitle-opacity);
 }
 
 /* 笔记本文字 */

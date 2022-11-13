@@ -257,3 +257,18 @@ checkedChange(
     );
   }
 );
+checkedChange(
+  document.getElementById("winsay_cp_filetree__Hide_untitle"),
+  () => {
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-MI-DocTree-Untitle-opacity",
+      "0"
+    );
+  },
+  () => {
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-MI-DocTree-Untitle-opacity",
+      "1"
+    );
+  }
+);
