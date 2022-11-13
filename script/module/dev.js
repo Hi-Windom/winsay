@@ -2,12 +2,12 @@ import * as API from "./../utils/api.min.js";
 import * as config from "./../config.js";
 
 // 初始缩放比例
-let originPixelRatio = localStorage.devicePixelRatio;
+let originPixelRatio = localStorage.SC_winsay_data_devicePixelRatio;
 if (!originPixelRatio) {
   originPixelRatio = window.devicePixelRatio;
   // 整数才保存
   if (Number.isInteger(originPixelRatio)) {
-    localStorage.devicePixelRatio = originPixelRatio;
+    localStorage.SC_winsay_data_devicePixelRatio = originPixelRatio;
   }
 }
 // 来源：https://www.zhangxinxu.com/wordpress/2021/02/js-if-page-zoom/

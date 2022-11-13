@@ -2,17 +2,17 @@ import * as config from "./../config.js";
 import * as API from "./../utils/api.min.js";
 
 // 初始化获取用户配置
-let winsay_cp_appearance__TabBarMode = localStorage.getItem(
-  "winsay_cp_appearance__TabBarMode"
+let SC_winsay_cp_appearance__TabBarMode = localStorage.getItem(
+  "SC_winsay_cp_appearance__TabBarMode"
 );
 
 async function ghostTabBar() {
-  if (!API.isEmpty(winsay_cp_appearance__TabBarMode)) {
+  if (!API.isEmpty(SC_winsay_cp_appearance__TabBarMode)) {
     window.funs.updateStyle(
       "TabBar",
-      `/appearance/themes/Sofill-/style/${winsay_cp_appearance__TabBarMode}`
+      `/appearance/themes/Sofill-/style/${SC_winsay_cp_appearance__TabBarMode}`
     );
-    // console.log(winsay_cp_appearance__TabBarMode);
+    // console.log(SC_winsay_cp_appearance__TabBarMode);
   } else {
     new Promise(function (response) {
       var url = `http://127.0.0.1:6806/api/file/getFile`;

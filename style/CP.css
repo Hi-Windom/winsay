@@ -134,13 +134,13 @@
 
 /* 【外观】配置区联动显示 */
 
-label:has(#winsay_cp_appearance__ToolBarMode:checked)+label,
-label:has(#winsay_cp_appearance__ToolBarMode:checked)+label+div {
+label:has(#SC_winsay_cp_appearance__ToolBarMode:checked)+label,
+label:has(#SC_winsay_cp_appearance__ToolBarMode:checked)+label+div {
   display: none;
 }
 
 /* 【文档树】配置区联动显示 */
-label:has(#winsay_cp_filetree__Adaptive_display:checked)+label,
-label:has(#winsay_cp_filetree__Adaptive_display:checked)+label+label {
+label:has(#SC_winsay_cp_filetree__Adaptive_display:checked)+label,
+label:has(#SC_winsay_cp_filetree__Adaptive_display:checked)+label+label {
   display: none;
 }
