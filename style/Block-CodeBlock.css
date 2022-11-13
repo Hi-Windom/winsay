@@ -83,25 +83,11 @@ code.hljs {
 }
 
 
-@keyframes stripe-slide {
-  0% {
-    background-position: 0% 0;
-  }
-  100% {
-    background-position: 100% 0;
-  }
-}
-
-
 body:not(.body--mobile) .b3-typography .code-block:hover,
 body:not(.body--mobile) .protyle-wysiwyg .code-block:hover {
   background-color: var(--SCC-Component-CodeBlock-bg-color-hover);
   border-top: 5.8px ridge #58585831;
   border-radius: 13px !important;
-}
-body:not(.body--mobile) .b3-typography .code-block:hover:after,
-body:not(.body--mobile) .protyle-wysiwyg .code-block:hover:after {
-  animation: stripe-slide 12s infinite linear forwards;
 }
 
 
