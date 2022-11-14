@@ -126,7 +126,7 @@ body:not(.darwin):not(.android) #toolbar .toolbar__item:hover svg {
     margin-right: 3px;
   }
 
-  #toolbar:hover div.toolbar__item {
+  #toolbar:hover .toolbar__item {
     display: flex;
   }
 
@@ -144,10 +144,11 @@ body:not(.darwin):not(.android) #toolbar .toolbar__item:hover svg {
   }
 }
 
-@media screen and (max-width: 333px) {
+@media screen and (max-width: 370px) {
 
   #toolbar #barSetting,
-  #toolbar #barMode {
+  #toolbar #barMod,
+  #toolbar button {
     display: none !important;
   }
 
