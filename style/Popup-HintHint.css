@@ -1,6 +1,6 @@
 .protyle-hint.b3-list.b3-list--background:not(.hint--menu) {
     min-width: min(40vw, 58px) !important;
-    width: fit-content !important;
+    width: max-content !important;
     max-width: min(888px, 88vw) !important;
     max-height: min(88vh, 888px) !important;
     padding: 9px;
