@@ -39,6 +39,8 @@
 
 > 版本更新详细内容请下滑查看
 
+### 此次更新请务必先彻底卸载而不是覆盖更新！！！
+
 主题设置界面使用简易说明（以修改页签栏布局模式为例）：
 
 Step 1 确保在思源软件设置里关闭了【隐藏底部状态栏】
@@ -126,8 +128,8 @@ Sofill- 适合哪些人：13~58岁非色弱人群；青少年请在家长指导�
 
 > 2022-11-15 released
 
-<p><a href="https://github.com/Hi-Windom/winsay/issues/94">
-<img src="https://img.shields.io/badge/SiYuan-2.4.12-green"/></a>
+<p><a href="https://github.com/Hi-Windom/winsay/issues/399">
+<img src="https://img.shields.io/badge/SiYuan-2.5.0-green"/></a>
 <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow"/></p></p>
 
 引入特性：
