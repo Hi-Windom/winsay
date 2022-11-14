@@ -17,8 +17,8 @@ window.addEventListener("resize", function () {
   if (currentPixelRatio !== lastPixelRatio) {
     console.log(
       "缩放比例是：" +
-      Math.round(1000 * (currentPixelRatio / originPixelRatio)) / 10 +
-      "%（100%基准为软件初始缩放，并非实际缩放，仅供参考）"
+        Math.round(1000 * (currentPixelRatio / originPixelRatio)) / 10 +
+        "%（100%基准为软件初始缩放，并非实际缩放，仅供参考）"
     );
   }
   // 记住上一次的设备像素比
@@ -26,11 +26,11 @@ window.addEventListener("resize", function () {
 });
 
 //夜间返回true，白天返回false，（这里夜间时间设置为23:00 -- 07:00）
-function isDaylight(){
+function isDaylight() {
   var currdate = new Date();
-  if(currdate.getHours()>=23 || currdate.getHours()<7){
+  if (currdate.getHours() >= 23 || currdate.getHours() < 7) {
     return true;
-  }else{
+  } else {
     return false;
   }
 }
@@ -41,17 +41,17 @@ new Promise(function (response) {
   var httpRequest = new XMLHttpRequest();
   httpRequest.open("POST", url, true);
   httpRequest.setRequestHeader("Content-type", "application/json");
-  var obj = { path: config.config_Custom, };
+  var obj = { path: config.config_Custom };
   httpRequest.send(JSON.stringify(obj));
   // 响应后的回调函数
   httpRequest.onreadystatechange = function () {
-      if (httpRequest.readyState == 4 && httpRequest.status == 200) {
-          var json = httpRequest.responseText;
-          response(JSON.parse(json));
-      }
+    if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+      var json = httpRequest.responseText;
+      response(JSON.parse(json));
+    }
   };
 }).then(function (response) {
-  if(isDaylight || parseInt(response.gotoSleep) < 1) {
+  if (isDaylight || parseInt(response.gotoSleep) < 1) {
     clearInterval(setSleepNote);
   } else {
     setSleepNote = setInterval(() => {

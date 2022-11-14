@@ -201,6 +201,7 @@ body.android .b3-button:not(.b3-button--small):not(.b3-tooltips):not(.b3-button-
   overflow-y: scroll;
   max-height: min(88vh, 1000px);
   max-width: min(88vw, 600px);
+  box-shadow: rgb(13 13 13 / 31%) -2720px -88px 12px 4000px, rgb(58 58 58 / 13%) 8px 4px 8px -4px inset;
 }
 
 #commonMenu:has(button):not(:has(button.b3-menu__item--readonly)):not(:has(.b3-menu__item--show)):not(:has(.b3-menu__separator)):not(:has(input))>.b3-menu__item--custom {
