@@ -1,7 +1,7 @@
 /* 弹出层 */
 
-.b3-tab-container:not(data-name="bazaar"),
-body.android .side-panel {
+.b3-tab-container:not([data-name="bazaar"]),
+.side-panel {
   background-color: var(--b3-theme-background-light);
   opacity: .88;
   backdrop-filter: blur(5.8px);
