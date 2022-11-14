@@ -233,6 +233,15 @@ propChange("SC_winsay_cp_appearance__ToolBarMode__height", function () {
     );
   }
 });
+propChange("SC_winsay_cp_appearance__ToolBarMode__NotFocus__bgColor", function () {
+  var h = localStorage.getItem("SC_winsay_cp_appearance__ToolBarMode__NotFocus__bgColor");
+  if (!API.isEmpty(h)) {
+    document.documentElement.style.setProperty(
+      "--b3-toolbar-background",
+      h
+    );
+  }
+});
 checkedChange(
   document.getElementById(
     "SC_winsay_cp_appearance__ToolBarMode__HideList__docName"
