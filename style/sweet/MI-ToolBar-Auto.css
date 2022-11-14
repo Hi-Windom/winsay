@@ -110,3 +110,59 @@ body:not(.darwin):not(.android) #toolbar .toolbar__item:hover svg {
   opacity: .31;
   cursor: not-allowed;
 }
+
+/* 优化极端宽度环境下顶栏的布局和交互 #401 */
+@media screen and (max-width: 666px) {
+  #toolbar .toolbar__item {
+    display: none;
+  }
+
+  #toolbar {
+    align-self: flex-end;
+  }
+
+  #toolbar #drag {
+    letter-spacing: 1.3px;
+    margin-right: 3px;
+  }
+
+  #toolbar:hover div.toolbar__item {
+    display: flex;
+  }
+
+  #toolbar:hover #drag {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 520px) {
+
+  #toolbar #toolbarVIP,
+  #toolbar #barHistory,
+  #toolbar #barDailyNote {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 333px) {
+
+  #toolbar #barSetting,
+  #toolbar #barMode {
+    display: none !important;
+  }
+
+  #toolbar #drag {
+    letter-spacing: .3px;
+    margin-right: 1px;
+  }
+}
+
+@media screen and (max-width: 222px) {
+  #toolbar *:not(#drag) {
+    display: none !important;
+  }
+
+  #toolbar #drag {
+    letter-spacing: .3px;
+  }
+}
