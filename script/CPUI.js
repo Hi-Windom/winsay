@@ -3,22 +3,44 @@ import { ConfirmDialog1 } from "./module/XML/ConfirmDialog.js";
 import * as API from "./utils/api.min.js";
 import * as config from "./config.js";
 
-const barHelp = document.getElementById("barHelp");
-if (document.getElementById("Sofill-CDUI-1") == null) {
-  const CDUI_1 = document.createElement("button");
-  CDUI_1.id = "Sofill-CDUI-1";
-  CDUI_1.className = "Sofill-CDUI-btn1 b3-menu__item";
-  CDUI_1.ariaLabel = "主题设置（实验性）";
-  CDUI_1.innerHTML = `<svg class="b3-menu__icon" "=""><use xlink:href="#iconSettings"></use></svg><span class="b3-menu__label">主题设置</span>`;
-  barHelp.children[1].insertAdjacentElement("afterbegin", CDUI_1);
-  let dialog = new CPDialog({
-    isCancel: true,
-    dragable: false, //貌似可拖拽会有问题
-    maskable: true,
-  });
-  document.querySelector(".Sofill-CDUI-btn1").onclick = function () {
-    dialog.open();
-  };
+if (API.isPhone()) {
+  const leftPanel = document.getElementById("sidebar");
+  if (document.getElementById("Sofill-CDUI-1") == null) {
+    const CDUI_1 = document.createElement("svg");
+    CDUI_1.id = "Sofill-CDUI-1";
+    CDUI_1.className = "Sofill-CDUI-btn1 toolbar__icon";
+    CDUI_1.innerHTML = `<use xlink:href="#iconSettings"></use>`;
+    CDUI_1.style.width = "17px";
+    CDUI_1.style.height = "100%";
+    CDUI_1.style.marginLeft = "5px";
+    leftPanel.children[0].insertAdjacentElement("beforeend", CDUI_1);
+    let dialog = new CPDialog({
+      isCancel: true,
+      dragable: false, //貌似可拖拽会有问题
+      maskable: true,
+    });
+    document.querySelector(".Sofill-CDUI-btn1").onclick = function () {
+      dialog.open();
+    };
+  }
+} else {
+  const barHelp = document.getElementById("barHelp");
+  if (document.getElementById("Sofill-CDUI-1") == null) {
+    const CDUI_1 = document.createElement("button");
+    CDUI_1.id = "Sofill-CDUI-1";
+    CDUI_1.className = "Sofill-CDUI-btn1 b3-menu__item";
+    CDUI_1.ariaLabel = "主题设置（实验性）";
+    CDUI_1.innerHTML = `<svg class="b3-menu__icon" "=""><use xlink:href="#iconSettings"></use></svg><span class="b3-menu__label">主题设置</span>`;
+    barHelp.children[1].insertAdjacentElement("afterbegin", CDUI_1);
+    let dialog = new CPDialog({
+      isCancel: true,
+      dragable: false, //貌似可拖拽会有问题
+      maskable: true,
+    });
+    document.querySelector(".Sofill-CDUI-btn1").onclick = function () {
+      dialog.open();
+    };
+  }
 }
 
 var obj = {};
@@ -53,36 +75,6 @@ function bindDomWithObject(options) {
     callback(options, obj, dom);
   }
 }
-function bindDomWithObject2(options) {
-  var dom = document.getElementById(options.id); // 获取dom id
-  var obj = options.obj; // 需要绑定的obj
-  var prop = options.prop; // 需要绑定的obj 的属性
-  var callback = options.callback; // 绑定成功后调用
-  var type = options.type; // 绑定的事件类型
-  var updated = options.updated; // 更新成功后调用
-
-  Object.defineProperty(obj, prop, {
-    get: function () {
-      return dom.checked;
-    },
-    set: function (value) {
-      dom.checked = value;
-      localStorage.setItem(prop, value);
-    },
-    configurable: true,
-  });
-
-  dom.addEventListener(type, function () {
-    obj[prop] = obj[prop];
-    if (typeof updated === "function") {
-      updated(obj, prop, dom); // 传入对象， 修改的属性， 以及dom节点
-    }
-  });
-
-  if (typeof callback === "function") {
-    callback(options, obj, dom);
-  }
-}
 
 function propInit(id, type) {
   bindDomWithObject({
@@ -91,7 +83,9 @@ function propInit(id, type) {
     prop: id,
     type: type,
     callback: function (options, obj, dom) {
-      obj[options.prop] = localStorage.getItem(id);
+      if (!API.isEmpty(localStorage.getItem(id))) {
+        obj[options.prop] = localStorage.getItem(id);
+      }
     },
   });
   console.log(`${id} binded successfully`);
@@ -211,6 +205,51 @@ propChange("SC_winsay_cp_appearance__ToolBarMode__height", function () {
     );
   }
 });
+propChange(
+  "SC_winsay_cp_appearance__ToolBarMode__NotFocus__bgColor",
+  function () {
+    var h = localStorage.getItem(
+      "SC_winsay_cp_appearance__ToolBarMode__NotFocus__bgColor"
+    );
+    if (!API.isEmpty(h)) {
+      document.documentElement.style.setProperty("--b3-toolbar-background", h);
+    }
+  }
+);
+checkedChange(
+  document.getElementById("SC_winsay_cp_appearance__DockBgColorFilter"),
+  () => {
+    document
+      .querySelector("#dockLeft")
+      .style.setProperty(
+        "background-image",
+        "linear-gradient(to top,#cccccc16,#ffffff06)"
+      );
+    document
+      .querySelector("#dockRight")
+      .style.setProperty(
+        "background-image",
+        "linear-gradient(to top left,#cccccc16,#ffffff06)"
+      );
+    document
+      .querySelector("#status")
+      .style.setProperty(
+        "background-image",
+        "linear-gradient(to top right,#cccccc16,#ffffff06)"
+      );
+  },
+  () => {
+    document
+      .querySelector("#dockLeft")
+      .style.setProperty("background-image", "none");
+    document
+      .querySelector("#dockRight")
+      .style.setProperty("background-image", "none");
+    document
+      .querySelector("#status")
+      .style.setProperty("background-image", "none");
+  }
+);
 checkedChange(
   document.getElementById(
     "SC_winsay_cp_appearance__ToolBarMode__HideList__docName"
@@ -314,7 +353,7 @@ propChange("SC_winsay_cp_filetree__docFontsize", function () {
   if (!API.isEmpty(i)) {
     document.documentElement.style.setProperty(
       "--SCC-Variables-MI-DocTree-docFontsize",
-      `${parseInt(i)}pt`
+      `${i}pt`
     );
     document
       .getElementById("SC_winsay_cp_filetree__docFontsize__label")
@@ -327,12 +366,25 @@ propChange("SC_winsay_cp_filetree__nbFontsize", function () {
   if (!API.isEmpty(i)) {
     document.documentElement.style.setProperty(
       "--SCC-Variables-MI-DocTree-nbFontsize",
-      `${parseInt(i)}pt`
+      `${i}pt`
     );
     document
       .getElementById("SC_winsay_cp_filetree__nbFontsize__label")
       .setAttribute("aria-label", `${i}`);
     localStorage.setItem("SC_winsay_cp_filetree__nbFontsize__label", i);
+  }
+});
+propChange("SC_winsay_cp_filetree__nbMargin", function () {
+  var i = localStorage.getItem("SC_winsay_cp_filetree__nbMargin");
+  if (!API.isEmpty(i)) {
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-MI-DocTree-nbMargin",
+      `${i}em`
+    );
+    document
+      .getElementById("SC_winsay_cp_filetree__nbMargin__label")
+      .setAttribute("aria-label", `${i}`);
+    localStorage.setItem("SC_winsay_cp_filetree__nbMargin__label", i);
   }
 });
 document
@@ -362,7 +414,10 @@ document
             counter++;
           }
         }
-        API.通知(`已清理 ${counter} 项`);
+        API.通知(`已清理 ${counter} 项<br>页面即将刷新`);
+        setTimeout(() => {
+          window.location.reload();
+        }, 3000);
       },
       cancel() {
         console.log("点击了取消");
@@ -372,28 +427,26 @@ document
 
     clearAll.open();
   });
-  checkedChange(
-    document.getElementById(
-      "SC_winsay_cp_editor__FocusEnhanc_inlineCode"
-    ),
-    () => {
-      document.documentElement.style.setProperty(
-        "--SCC-Variables-Block-Inline-span__code__before-content",
-        "'<'"
-      );
-      document.documentElement.style.setProperty(
-        "--SCC-Variables-Block-Inline-span__code__after-content",
-        "'>'"
-      );
-    },
-    () => {
-      document.documentElement.style.setProperty(
-        "--SCC-Variables-Block-Inline-span__code__before-content",
-        ""
-      );
-      document.documentElement.style.setProperty(
-        "--SCC-Variables-Block-Inline-span__code__after-content",
-        ""
-      );
-    }
-  );
+checkedChange(
+  document.getElementById("SC_winsay_cp_editor__FocusEnhanc_inlineCode"),
+  () => {
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-Block-Inline-span__code__before-content",
+      "'<'"
+    );
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-Block-Inline-span__code__after-content",
+      "'>'"
+    );
+  },
+  () => {
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-Block-Inline-span__code__before-content",
+      ""
+    );
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-Block-Inline-span__code__after-content",
+      ""
+    );
+  }
+);

@@ -86,8 +86,16 @@
   padding: 0;
   margin: 2px !important;
 }
+body.android .sc-custom-nav>li {
+  height: 58px;
+}
+body.android .sc-custom-nav>li .b3-list-item__graphic {
+  margin-right: 4px;
+  height: 20px;
+  width: 20px;
+}
 
-.sc-custom-nav>li>label {
+body:not(.android) .sc-custom-nav>li>label {
   display: inline-flex;
   align-items: center;
   /* justify-content: center; */
@@ -141,6 +149,7 @@ label:has(#SC_winsay_cp_appearance__ToolBarMode:checked)+label+div {
 
 /* 【文档树】配置区联动显示 */
 label:has(#SC_winsay_cp_filetree__Adaptive_display:checked)+label,
-label:has(#SC_winsay_cp_filetree__Adaptive_display:checked)+label+label {
+label:has(#SC_winsay_cp_filetree__Adaptive_display:checked)+label+label,
+label:has(#SC_winsay_cp_filetree__Adaptive_display:checked)+label+label+label {
   display: none;
 }

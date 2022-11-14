@@ -1,0 +1,13 @@
+body.android input#toolbarName {
+  width: 200px !important;
+}
+body.android input#toolbarName:focus {
+  width: 217px !important;
+}
+body.android input#toolbarName:focus + div {
+  display: none;
+}
+
+body.android .toolbar.toolbar--border #toolbarMore{
+  margin-right: 8px;
+}

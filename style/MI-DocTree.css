@@ -159,3 +159,11 @@ li[data-name="Untitled.sy"]>span.b3-list-item__text {
   transition: all .31s ease .1s;
 
 }
+
+/* 支持通过主题设置界面调整笔记本间距 #380 */
+.fn__flex-1.fn__flex-column.file-tree.sy__file .fn__flex-1:not(:has(>ul:nth-child(58)))>ul {
+  margin-top: var(--SCC-Variables-MI-DocTree-nbMargin, 0.00em);
+  margin-bottom: var(--SCC-Variables-MI-DocTree-nbMargin, 0.00em);
+  padding-top: calc(var(--SCC-Variables-MI-DocTree-nbMargin, 0.00em)*0.5);
+  padding-bottom: calc(var(--SCC-Variables-MI-DocTree-nbMargin, 0.00em)*0.5);
+}
