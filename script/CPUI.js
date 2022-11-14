@@ -244,6 +244,21 @@ propChange("SC_winsay_cp_appearance__ToolBarMode__NotFocus__bgColor", function (
 });
 checkedChange(
   document.getElementById(
+    "SC_winsay_cp_appearance__DockBgColorFilter"
+  ),
+  () => {
+    document.querySelector("#dockLeft").style.setProperty("background-image","linear-gradient(to top,#cccccc16,#ffffff06)");
+    document.querySelector("#dockRight").style.setProperty("background-image","linear-gradient(to top left,#cccccc16,#ffffff06)");
+    document.querySelector("#status").style.setProperty("background-image","linear-gradient(to top right,#cccccc16,#ffffff06)");
+  },
+  () => {
+    document.querySelector("#dockLeft").style.setProperty("background-image","none");
+    document.querySelector("#dockRight").style.setProperty("background-image","none");
+    document.querySelector("#status").style.setProperty("background-image","none");
+  }
+);
+checkedChange(
+  document.getElementById(
     "SC_winsay_cp_appearance__ToolBarMode__HideList__docName"
   ),
   () => {
