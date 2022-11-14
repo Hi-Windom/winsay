@@ -120,7 +120,7 @@ Sofill- 适合哪些人：13~58岁非色弱人群；青少年请在家长指导�
 ### 版本说明
 
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
-* [主题版本更新的详细信息](https://github.com/Hi-Windom/winsay/releases)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
+* [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
 ### v0.102 ~ v0.114 聚合说明
 
@@ -164,6 +164,7 @@ Sofill- 适合哪些人：13~58岁非色弱人群；青少年请在家长指导�
 14. [优化插入引用面板在屏幕边缘的显示效果 · Issue #396 · v0.112](https://github.com/Hi-Windom/winsay/issues/396)
 15. [表头颜色跟随主题形态 · Issue #400 · v0.114](https://github.com/Hi-Windom/winsay/issues/400)
 16. [优化极端宽度环境下顶栏的布局和交互 · Issue #401 · v0.114](https://github.com/Hi-Windom/winsay/issues/401)
+17. [精简更新日志 · Issue #405 · v0.115](https://github.com/Hi-Windom/winsay/issues/405)
 
 缺陷修复：
 
@@ -173,135 +174,7 @@ Sofill- 适合哪些人：13~58岁非色弱人群；青少年请在家长指导�
 4. [引用块预览浮窗抖动 · Issue #310 · v0.110](https://github.com/Hi-Windom/winsay/issues/310)
 5. [顶栏icon大小异常 · Issue #379 · v0.110](https://github.com/Hi-Windom/winsay/issues/379)
 6. [集市容器异常 · Issue #391 · v0.112](https://github.com/Hi-Windom/winsay/issues/391)
-
-### v0.90 ~ v0.100 聚合说明
-
-> 2022-11-11 released
-
-<p><a href="https://github.com/Hi-Windom/winsay/issues/94">
-<img src="https://img.shields.io/badge/SiYuan-2.4.12-green"/></a>
-<img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow"/></p></p>
-
-引入特性：
-
-1. [主题形态记忆 · Issue #268 · v0.90](https://github.com/Hi-Windom/winsay/issues/268)
-2. [横向排列多行紧凑布局页签 · Issue #321 · v0.90](https://github.com/Hi-Windom/winsay/issues/321)
-3. [页签【更多】和搜索界面支持计数 · Issue #328 · v0.94](https://github.com/Hi-Windom/winsay/issues/328)
-4. [列表视图转换功能（实验性） · Issue #333 · v0.94](https://github.com/Hi-Windom/winsay/issues/333)
-5. [护眼提示 · Issue #30 · v0.94](https://github.com/Hi-Windom/winsay/issues/30)
-6. [搜索界面转替换提示 · Issue #332 · v0.96](https://github.com/Hi-Windom/winsay/issues/332)
-7. [对话框样式 · Issue #256 · v0.96](https://github.com/Hi-Windom/winsay/issues/256)
-8. [文档树面板宽度不足时五层以上节点控件布局优化 · Issue #345 · v0.100](https://github.com/Hi-Windom/winsay/issues/345)
-
-改进优化：
-
-1. [涉及账号界面的一些细节优化 · Issue #316 · v0.90](https://github.com/Hi-Windom/winsay/issues/316)
-2. [暗黑模式默认形态调整为【黑金蓝】 · Issue #318 · v0.90](https://github.com/Hi-Windom/winsay/issues/318)
-3. [禁用.protyle-toolbar过渡效果 · Issue #319 · v0.90](https://github.com/Hi-Windom/winsay/issues/319)
-4. [文档内字体颜色与背景色样式部分跟随主题样式 · Issue #260 · v0.90](https://github.com/Hi-Windom/winsay/issues/260)
-5. [一些细节优化 · Issue #317 · v0.90](https://github.com/Hi-Windom/winsay/issues/317)
-6. [多行横向紧凑页签优化 · Issue #323 · v0.92](https://github.com/Hi-Windom/winsay/issues/323)
-7. [页签【更多】界面布局调整 · Issue #324 · v0.92](https://github.com/Hi-Windom/winsay/issues/324)
-8. [搜索高亮优化显示效果 · Issue #325 · v0.92](https://github.com/Hi-Windom/winsay/issues/325)
-9. [一些细节优化 · Issue #326 · v0.92](https://github.com/Hi-Windom/winsay/issues/326)
-10. [文档树展开按钮触发区域优化 · Issue #330 · v0.94](https://github.com/Hi-Windom/winsay/issues/330)
-11. [默认页签布局调整 · Issue #331 · v0.94](https://github.com/Hi-Windom/winsay/issues/331)
-12. [列表间距自适应 · Issue #176 · v0.94](https://github.com/Hi-Windom/winsay/issues/176)
-13. [设置缺省形态为【纯洁蓝】 · Issue #338 · v0.96](https://github.com/Hi-Windom/winsay/issues/338)
-14. [插入引用提示面板优化 · Issue #340 · v0.98](https://github.com/Hi-Windom/winsay/issues/340)
-15. [搜索面板优化 · Issue #341 · v0.98](https://github.com/Hi-Windom/winsay/issues/341)
-16. [标签底色跟随主题形态 · Issue #275 · v0.98](https://github.com/Hi-Windom/winsay/issues/275)
-17. [文档树字号自适应面板宽度 · Issue #343 · v0.100](https://github.com/Hi-Windom/winsay/issues/343)
-
-缺陷修复：
-
-1. [暗黑模式option背景色丢失 · Issue #335 · v0.94](https://github.com/Hi-Windom/winsay/issues/335)
-2. [主题详情页头图无法正常放大查看 · Issue #344 · v0.100](https://github.com/Hi-Windom/winsay/issues/344)
-
-### v0.68 ~ v0.88 聚合说明
-
-> 2022-11-07 released
-
-<p><a href="https://github.com/Hi-Windom/winsay/issues/94">
-<img src="https://img.shields.io/badge/SiYuan-2.4.10-green"/></a>
-<img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow"/></p></p>
-
-引入特性：
-
-1. [面包屑文字长度自适应 · 0.68](https://github.com/Hi-Windom/winsay/issues/226)
-2. [滚动条样式 · 0.68](https://github.com/Hi-Windom/winsay/issues/229)
-3. [设置界面左侧栏高度自适应 · 0.68](https://github.com/Hi-Windom/winsay/issues/230)
-4. [纵向排列页签 · 0.70](https://github.com/Hi-Windom/winsay/issues/233)
-5. [tooltips颜色跟随主题形态 · Issue #236 · v0.72](https://github.com/Hi-Windom/winsay/issues/236)
-6. [滑块slider样式 · Issue #242 · v0.72](https://github.com/Hi-Windom/winsay/issues/242)
-7. [文档树笔记本高度自适应 · Issue #288 · v0.80](https://github.com/Hi-Windom/winsay/issues/288)
-8. [部分网站超链接显示icon（第一批） · Issue #254 · v0.80](https://github.com/Hi-Windom/winsay/issues/254)
-9. [首发黑金蓝形态 · Issue #292 · v0.82](https://github.com/Hi-Windom/winsay/issues/292)
-10. [代码片段文本框调整 · Issue #301 · v0.86](https://github.com/Hi-Windom/winsay/issues/301)
-11. [空文档提醒样式 · Issue #304 · v0.86](https://github.com/Hi-Windom/winsay/issues/304)
-12. [超级块空段落子块提示 · Issue #306 · v0.86](https://github.com/Hi-Windom/winsay/issues/306)
-13. [嵌入块面包屑文字长度自适应 · Issue #263 · v0.88](https://github.com/Hi-Windom/winsay/issues/263)
-
-改进优化：
-
-1. [文档树失去焦点时隐藏已关闭笔记本 · 0.68](https://github.com/Hi-Windom/winsay/issues/221)
-2. [行内公式增加左右边距 · 0.68](https://github.com/Hi-Windom/winsay/issues/222)
-3. [宽度不足时显示更多文档文字 · 0.68](https://github.com/Hi-Windom/winsay/issues/223)
-4. [去掉代码块语言前缀 · 0.68](https://github.com/Hi-Windom/winsay/issues/224)
-5. [输入框样式适用范围调整 · 0.68](https://github.com/Hi-Windom/winsay/issues/227)
-6. [默认字色跟随主题形态变化 · 0.68](https://github.com/Hi-Windom/winsay/issues/228)
-7. [明亮模式不再隐藏块滚动条，代价是取消面包屑毛玻璃效果 · 0.68](https://github.com/Hi-Windom/winsay/issues/225)
-8. [设置界面右侧区域边距自适应 · 0.70](https://github.com/Hi-Windom/winsay/issues/232)
-9. [文档标题默认透明度调整 · 0.70](https://github.com/Hi-Windom/winsay/issues/235)
-10. [支持修改默认形态 · 0.70](https://github.com/Hi-Windom/winsay/issues/234)
-11. [页签聚焦底色跟随主题形态 · Issue #251 · v0.72](https://github.com/Hi-Windom/winsay/issues/251)
-12. [输入框阴影跟随主题形态 · Issue #247 · v0.72](https://github.com/Hi-Windom/winsay/issues/247)
-13. [屏蔽输入框聚焦样式 · Issue #248 · v0.72](https://github.com/Hi-Windom/winsay/issues/248)
-14. [图片资源protyle-action__drag控件美化 · Issue #241 · v0.72](https://github.com/Hi-Windom/winsay/issues/241)
-15. [代码片段textarea禁用水平拉伸 · Issue #243 · v0.72](https://github.com/Hi-Windom/winsay/issues/243)
-16. [安卓端隐藏开发者工具菜单项 · Issue #253 · v0.74](https://github.com/Hi-Windom/winsay/issues/253)
-17. [集市selector去除底色 · Issue #271 · v0.74](https://github.com/Hi-Windom/winsay/issues/271)
-18. [遮罩颜色跟随主题形态 · Issue #255 · v0.74](https://github.com/Hi-Windom/winsay/issues/255)
-19. [分割线颜色跟随主题形态 · Issue #257 · v0.74](https://github.com/Hi-Windom/winsay/issues/257)
-20. [虚拟引用颜色跟随主题形态 · Issue #258 · v0.74](https://github.com/Hi-Windom/winsay/issues/258)
-21. [嵌入块底色跟随主题形态 · Issue #262 · v0.74](https://github.com/Hi-Windom/winsay/issues/262)
-22. [调整一二级标题字重 · Issue #278 · v0.76](https://github.com/Hi-Windom/winsay/issues/278)
-23. [引用弹出层宽高限制逻辑调整 · Issue #279 · v0.76](https://github.com/Hi-Windom/winsay/issues/279)
-24. [表格底色跟随主题形态 · Issue #274 · v0.76](https://github.com/Hi-Windom/winsay/issues/274)
-25. [#258 的持续改进 · Issue #280 · v0.76](https://github.com/Hi-Windom/winsay/issues/280)
-26. [页签栏显示效果优化 · Issue #281 · v0.76](https://github.com/Hi-Windom/winsay/issues/281)
-27. [Android 手机端model元素禁用过渡 · Issue #283 · v0.78](https://github.com/Hi-Windom/winsay/issues/283)
-28. [Android 手机端左右面板宽度调整 · Issue #284 · v0.78](https://github.com/Hi-Windom/winsay/issues/284)
-29. [代码块颜色跟随主题形态 · Issue #273 · v0.78](https://github.com/Hi-Windom/winsay/issues/273)
-30. [通知确认按钮颜色跟随主题形态 · Issue #277 · v0.78](https://github.com/Hi-Windom/winsay/issues/277)
-31. [备注颜色跟随主题形态 · Issue #259 · v0.78](https://github.com/Hi-Windom/winsay/issues/259)
-32. [引用计数样式跟随主题形态 · Issue #265 · v0.78](https://github.com/Hi-Windom/winsay/issues/265)
-33. [侧边栏展开列表项较多时的动画效果优化 · Issue #287 · v0.80](https://github.com/Hi-Windom/winsay/issues/287)
-34. [protyle-gutters颜色跟随主题形态 · Issue #291 · v0.82](https://github.com/Hi-Windom/winsay/issues/291)
-35. [页签关闭按钮SVG颜色跟随主题形态 · Issue #294 · v0.82](https://github.com/Hi-Windom/winsay/issues/294)
-36. [引用快颜色跟随主题形态 · Issue #295 · v0.82](https://github.com/Hi-Windom/winsay/issues/295)
-37. [淡化暗黑模式设置界面左栏列表项聚焦底色 · Issue #297 · v0.84](https://github.com/Hi-Windom/winsay/issues/297)
-38. [暗黑模式设置界面大搜索框阴影调和 · Issue #298 · v0.84](https://github.com/Hi-Windom/winsay/issues/298)
-39. [超级菜单颜色跟随主题形态 · Issue #267 · v0.84](https://github.com/Hi-Windom/winsay/issues/267)
-40. [标题折叠阴影跟随主题形态 · Issue #293 · v0.84](https://github.com/Hi-Windom/winsay/issues/293)
-41. [加粗文本颜色继承逻辑优化 · Issue #305 · v0.86](https://github.com/Hi-Windom/winsay/issues/305)
-42. [搜索界面调和 · Issue #308 · v0.86](https://github.com/Hi-Windom/winsay/issues/308)
-43. [行内代码前后缀装饰改为隐藏彩蛋形式触发 · Issue #302 · v0.88](https://github.com/Hi-Windom/winsay/issues/302)
-44. [KBD样式跟随主题形态 · Issue #303 · v0.88](https://github.com/Hi-Windom/winsay/issues/303)
-45. [.dock__item--activefocus 颜色在明亮模式下不受 --b3-theme-primary 控制 · Issue #311 · v0.88](https://github.com/Hi-Windom/winsay/issues/311)
-46. [查询嵌入块内如果有至少三个块则增加适当间距 · Issue #312 · v0.88](https://github.com/Hi-Windom/winsay/issues/312)
-47. [暗黑模式卡片背景调和 · Issue #313 · v0.88](https://github.com/Hi-Windom/winsay/issues/313)
-48. [一些细节改进 · Issue #314 · v0.88](https://github.com/Hi-Windom/winsay/issues/314)
-
-缺陷修复：
-
-1. [旧版思源中主题布局错乱 · Issue #249 · v0.72](https://github.com/Hi-Windom/winsay/issues/249)
-2. [Mac 端左侧异常留白 · Issue #244 · v0.72](https://github.com/Hi-Windom/winsay/issues/244)
-3. [部分区域z-index层级混乱 · Issue #246 · v0.72](https://github.com/Hi-Windom/winsay/issues/246)
-4. [barHelp弹出层被遮挡 · Issue #245 · v0.72](https://github.com/Hi-Windom/winsay/issues/245)
-5. [Android Pad 端页签控件缩放问题 · Issue #270 · v0.74](https://github.com/Hi-Windom/winsay/issues/270)
-6. [文档树定位需要两次定位操作 · Issue #290 · v0.82](https://github.com/Hi-Windom/winsay/issues/290)
-7. [只读模式下protyle-gutters显示错位 · Issue #307 · v0.86](https://github.com/Hi-Windom/winsay/issues/307)
+7. [面板背景磨砂效果丢失 · Issue #404 · v0.115](https://github.com/Hi-Windom/winsay/issues/404)
 
 ## 🎈 鸣谢
 
