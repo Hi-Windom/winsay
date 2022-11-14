@@ -1,5 +1,5 @@
 
-@import url("style/Init.css");
+@import url("style/Init.min.css");
 
 /* 引入缺省形态样式，避免导出PDF样式丢失 */
 @import url("style-S2/root-base-light.css");
@@ -20,32 +20,9 @@
 @import url("style/MI-Dock.css");
 @import url("style/MI-Dynamic.css");
 
-@import url("style/Popup.css");
-@import url("style/Popup-Setting.css");
-@import url("style/Popup-TextColorMenu.css");
-@import url("style/Popup-Printer.css");
-@import url("style/Popup-HintMenu.css");
-@import url("style/Popup-HintHint.css");
-@import url("style/Popup-Memo.css");
-@import url("style/Popup-Message.css");
-@import url("style/Popup-Search.css");
-@import url("style/Popup-Dialog.css");
-
-@import url("style/Block.css");
-@import url("style/Block-Inline.css");
-@import url("style/Block-Inline-link.css");
-@import url("style/Block-NodeHeading.css");
-@import url("style/Block-Table.css");
-@import url("style/Block-CodeBlock.css");
-@import url("style/Block-Embed.css");
-@import url("style/Block-List.css");
-@import url("style/Block-List-Task.css");
-@import url("style/Block-Iframe.css");
-@import url("style/Block-HR.css");
-
-@import url("style/Funs-list2board.css");
-@import url("style/Funs-list2map.css");
-@import url("style/Funs-list2table.css");
+@import url("style/Popup.min.css");
+@import url("style/Block.min.css");
+@import url("style/Funs-list2.min.css");
 
 @import url("style/CP.css");
 

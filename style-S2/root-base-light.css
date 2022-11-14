@@ -27,7 +27,7 @@
   --SCC-baseComponent-Dialog-520-hover-box-shadow: 13px 31px 131px -58px rgb(0 0 0 / 50%), 60px 111px 52px -8px rgb(0 0 0 / 13%), -262px -31px 777px -82px rgb(255 255 255 / 99%);
   --SCC-baseComponent-Dialog-520-button-color: var(--SCC-CNTC-月白);
   /* 块引用波浪线动画图标 | The icon of wavy line animation */
-  --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/icon/wavy-line.svg);
+  --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/icon/wavy-line-light.svg);
   /* 卡片 */
   --b3-card-error-color: rgb(97, 26, 21);
   --b3-card-error-background: #f5d1cf;
