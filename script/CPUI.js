@@ -75,36 +75,6 @@ function bindDomWithObject(options) {
     callback(options, obj, dom);
   }
 }
-function bindDomWithObject2(options) {
-  var dom = document.getElementById(options.id); // 获取dom id
-  var obj = options.obj; // 需要绑定的obj
-  var prop = options.prop; // 需要绑定的obj 的属性
-  var callback = options.callback; // 绑定成功后调用
-  var type = options.type; // 绑定的事件类型
-  var updated = options.updated; // 更新成功后调用
-
-  Object.defineProperty(obj, prop, {
-    get: function () {
-      return dom.checked;
-    },
-    set: function (value) {
-      dom.checked = value;
-      localStorage.setItem(prop, value);
-    },
-    configurable: true,
-  });
-
-  dom.addEventListener(type, function () {
-    obj[prop] = obj[prop];
-    if (typeof updated === "function") {
-      updated(obj, prop, dom); // 传入对象， 修改的属性， 以及dom节点
-    }
-  });
-
-  if (typeof callback === "function") {
-    callback(options, obj, dom);
-  }
-}
 
 function propInit(id, type) {
   bindDomWithObject({
@@ -113,7 +83,9 @@ function propInit(id, type) {
     prop: id,
     type: type,
     callback: function (options, obj, dom) {
-      obj[options.prop] = localStorage.getItem(id);
+      if (!API.isEmpty(localStorage.getItem(id))) {
+        obj[options.prop] = localStorage.getItem(id);
+      }
     },
   });
   console.log(`${id} binded successfully`);
@@ -233,28 +205,49 @@ propChange("SC_winsay_cp_appearance__ToolBarMode__height", function () {
     );
   }
 });
-propChange("SC_winsay_cp_appearance__ToolBarMode__NotFocus__bgColor", function () {
-  var h = localStorage.getItem("SC_winsay_cp_appearance__ToolBarMode__NotFocus__bgColor");
-  if (!API.isEmpty(h)) {
-    document.documentElement.style.setProperty(
-      "--b3-toolbar-background",
-      h
+propChange(
+  "SC_winsay_cp_appearance__ToolBarMode__NotFocus__bgColor",
+  function () {
+    var h = localStorage.getItem(
+      "SC_winsay_cp_appearance__ToolBarMode__NotFocus__bgColor"
     );
+    if (!API.isEmpty(h)) {
+      document.documentElement.style.setProperty("--b3-toolbar-background", h);
+    }
   }
-});
+);
 checkedChange(
-  document.getElementById(
-    "SC_winsay_cp_appearance__DockBgColorFilter"
-  ),
+  document.getElementById("SC_winsay_cp_appearance__DockBgColorFilter"),
   () => {
-    document.querySelector("#dockLeft").style.setProperty("background-image","linear-gradient(to top,#cccccc16,#ffffff06)");
-    document.querySelector("#dockRight").style.setProperty("background-image","linear-gradient(to top left,#cccccc16,#ffffff06)");
-    document.querySelector("#status").style.setProperty("background-image","linear-gradient(to top right,#cccccc16,#ffffff06)");
+    document
+      .querySelector("#dockLeft")
+      .style.setProperty(
+        "background-image",
+        "linear-gradient(to top,#cccccc16,#ffffff06)"
+      );
+    document
+      .querySelector("#dockRight")
+      .style.setProperty(
+        "background-image",
+        "linear-gradient(to top left,#cccccc16,#ffffff06)"
+      );
+    document
+      .querySelector("#status")
+      .style.setProperty(
+        "background-image",
+        "linear-gradient(to top right,#cccccc16,#ffffff06)"
+      );
   },
   () => {
-    document.querySelector("#dockLeft").style.setProperty("background-image","none");
-    document.querySelector("#dockRight").style.setProperty("background-image","none");
-    document.querySelector("#status").style.setProperty("background-image","none");
+    document
+      .querySelector("#dockLeft")
+      .style.setProperty("background-image", "none");
+    document
+      .querySelector("#dockRight")
+      .style.setProperty("background-image", "none");
+    document
+      .querySelector("#status")
+      .style.setProperty("background-image", "none");
   }
 );
 checkedChange(
@@ -360,7 +353,7 @@ propChange("SC_winsay_cp_filetree__docFontsize", function () {
   if (!API.isEmpty(i)) {
     document.documentElement.style.setProperty(
       "--SCC-Variables-MI-DocTree-docFontsize",
-      `${parseInt(i)}pt`
+      `${i}pt`
     );
     document
       .getElementById("SC_winsay_cp_filetree__docFontsize__label")
@@ -373,12 +366,25 @@ propChange("SC_winsay_cp_filetree__nbFontsize", function () {
   if (!API.isEmpty(i)) {
     document.documentElement.style.setProperty(
       "--SCC-Variables-MI-DocTree-nbFontsize",
-      `${parseInt(i)}pt`
+      `${i}pt`
     );
     document
       .getElementById("SC_winsay_cp_filetree__nbFontsize__label")
       .setAttribute("aria-label", `${i}`);
     localStorage.setItem("SC_winsay_cp_filetree__nbFontsize__label", i);
+  }
+});
+propChange("SC_winsay_cp_filetree__nbMargin", function () {
+  var i = localStorage.getItem("SC_winsay_cp_filetree__nbMargin");
+  if (!API.isEmpty(i)) {
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-MI-DocTree-nbMargin",
+      `${i}em`
+    );
+    document
+      .getElementById("SC_winsay_cp_filetree__nbMargin__label")
+      .setAttribute("aria-label", `${i}`);
+    localStorage.setItem("SC_winsay_cp_filetree__nbMargin__label", i);
   }
 });
 document
@@ -409,7 +415,9 @@ document
           }
         }
         API.通知(`已清理 ${counter} 项<br>页面即将刷新`);
-        setTimeout(() =>{window.location.reload()},3000)
+        setTimeout(() => {
+          window.location.reload();
+        }, 3000);
       },
       cancel() {
         console.log("点击了取消");

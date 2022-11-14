@@ -149,6 +149,7 @@ label:has(#SC_winsay_cp_appearance__ToolBarMode:checked)+label+div {
 
 /* 【文档树】配置区联动显示 */
 label:has(#SC_winsay_cp_filetree__Adaptive_display:checked)+label,
-label:has(#SC_winsay_cp_filetree__Adaptive_display:checked)+label+label {
+label:has(#SC_winsay_cp_filetree__Adaptive_display:checked)+label+label,
+label:has(#SC_winsay_cp_filetree__Adaptive_display:checked)+label+label+label {
   display: none;
 }
