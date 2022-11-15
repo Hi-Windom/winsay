@@ -1,30 +1,7 @@
-
-@import url("style/Init.min.css");
-@import url("style/SCC.min.css");
-
 /* 引入缺省形态样式，避免导出PDF样式丢失 */
 @import url("style-S2/root-base-light.css");
 @import url("style-S2/root-L-Blue.css");
 @import url("style/Animation.css");
 
-/* 为兼容旧版本，改为通过 theme.js 引入 */
-/* @import url("style/MI.css");
-
-/* 为兼容不同设备，改为通过 theme.js 引入 */
-/* @import url("style/MI-DocTree.css");
-@import url("style/MI-Breadcrumb.css"); */
-
-@import url("style/sweet/MI-ToolBar-Auto.css");
-@import url("style/MI-TabBar-Common.css");
-@import url("style/MI-TagTree.css");
-@import url("style/MI-HDTree.css");
-@import url("style/MI-Dock.css");
-@import url("style/MI-Dynamic.css");
-
-@import url("style/Popup.min.css");
+/* 以下样式会被自定义主题样式覆盖 */
 @import url("style/Block.min.css");
-@import url("style/Funs-list2.min.css");
-
-@import url("style/CP.css");
-
-@import url("style/Patch.css");
