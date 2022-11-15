@@ -140,3 +140,44 @@ body:not(.android) .protyle-wysiwyg [data-node-id].li>.list {
   margin-left: max(min(18px,0.8vw),8px) !important;
   padding-left: min(16px,0.8vw);
 }
+
+/* 集市详情页头图以粘性布局呈现 #423 */
+#configBazaarReadme {
+  padding: 0;
+}
+#configBazaarReadme>.item__side{
+  background-color: var(--b3-theme-background-light);
+  backdrop-filter: blur(31px) brightness(1.86);
+  padding: 31px 31px 0px 16px;
+}
+
+#configBazaarReadme .item__readme {
+  background-color: var(--b3-theme-background-light);
+  backdrop-filter: blur(31px) brightness(1.31);
+  padding-bottom: 1.31%;
+}
+
+#configBazaarReadme .item__preview:not(.item__preview--fullscreen) {
+  width: 100%;
+  height: 70%;
+  position: sticky;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 4px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  left: 0;
+  top: 0;
+  transition: var(--b3-transition);
+}
+
+.config-bazaar__readme .item__main {
+  margin-left: 0px;
+  margin-right: -5px;
+}
+
+.config-bazaar__readme .item__title {
+  font-size: 31px;
+  word-break: break-word;
+}
