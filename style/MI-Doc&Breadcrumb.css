@@ -147,5 +147,9 @@
 
 /* 支持通过主题配置界面调整段前段后间距、行高、段首缩进、字符间距 #422 */
 div.protyle-wysiwyg.protyle-wysiwyg--attr>div.p {
-  text-indent: var(--SCC-Variables-pIndent,0rem);
+  text-indent: var(--SCC-Variables-MI-Doc-pIndent,0rem);
+  line-height: var(--SCC-Variables-MI-Doc-LH,1.5rem);
+  margin-top: var(--SCC-Variables-MI-Doc-marginTop,0rem);
+  margin-bottom: var(--SCC-Variables-MI-Doc-marginBottom,0rem);
+  letter-spacing: var(--SCC-Variables-MI-Doc-lSpacing,0px);
 }
