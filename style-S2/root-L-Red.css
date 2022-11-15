@@ -5,32 +5,32 @@
   --b3-theme-primary-lighter: var(--SCC-Red-WZ-lighter);
   --b3-theme-primary-lightest: var(--SCC-Red-WZ-lightest);
   --b3-theme-secondary: var(--SCC-Green-WZ);
-  --b3-theme-background: var(--SCC-White-WPS);
-  --b3-theme-background-light: var(--SCC-White-WPS-light);
-  --b3-theme-surface: var(--SCC-White-WPS);
-  --b3-theme-surface-light: var(--SCC-White-WPS-light);
+  --b3-theme-background: var(--SCC-SGTC-12B);
+  --b3-theme-background-light: #fffdf7c5;
+  --b3-theme-surface: var(--SCC-SGTC-12B);
+  --b3-theme-surface-light: #fffdf7c5;
   --b3-theme-error: #d23f31;
 
   /* 文字颜色 */
   --b3-theme-on-primary: var(--SCC-CNTC-靛蓝);
   --b3-theme-on-secondary: #fff;
-  --b3-theme-on-background: #131131;
-  --b3-theme-on-surface: var(--SCColor);
+  --b3-theme-on-background: var(--SCColor);
+  --b3-theme-on-surface: var(--SCC-CNTC-中度灰);
   /* 此色影响顶部栏图标颜色和不少界面区域中的文字颜色 */
   --b3-theme-on-surface-light: var(--SCC-primary-light);
   --b3-theme-on-error: #fff;
 
   /* 顶部工具栏 */
   --b3-toolbar-background: var(--SCC-primary-lightest);
-  --b3-toolbar-blur-background: var(--SCC-White-WPS-light);
-  --b3-toolbar-color: var(--SCC-Blue-Windom-light);
+  --b3-toolbar-blur-background: #fffdf7c5;
+  --b3-toolbar-color: var(--SCC-CNTC-绾);
 
   /* 自定义颜色 */
-  --b3-font-color1: var(--SCC-CNTC-利休白茶);
-  --b3-font-color2: var(--SCC-CNTC-宝蓝);
-  --b3-font-color3: var(--SCC-SGTC-13B);
-  --b3-font-color4: var(--SCC-SGTC-16A);
-  --b3-font-color5: var(--SCC-CNTC-淡藤);
+  --b3-font-color1: var(--SCC-Red-WPS);
+  --b3-font-color2: var(--SCC-CNTC-殷红);
+  --b3-font-color3: var(--SCC-CNTC-火红);
+  --b3-font-color4: var(--SCC-SGTC-19D);
+  --b3-font-color5: var(--SCC-CNTC-黒紅);
   --b3-font-color6: var(--SCC-SGTC-11B);
   --b3-font-color7: var(--SCC-CNTC-嫣红);
   --b3-font-color8: var(--SCC-CNTC-山鳩);
@@ -51,19 +51,19 @@
   --b3-border-color: var(--SCC-White-WPS-light);
 
   /* 滚动条 */
-  --b3-scroll-color: var(--SCC-Blue-Windom-lightest);
+  --b3-scroll-color: var(--SCC-primary-lightest);
 
   /* 列表 */
-  --b3-list-hover: var(--SCC-Blue-Windom-lightest);
+  --b3-list-hover: #FFF2F0A5;
 
   /* 菜单 */
-  --b3-menu-background: var(--SCC-White-WPS);
+  --b3-menu-background: #f2ecdea5;
 
   /* 提示 */
-  --b3-tooltips-color: #2A445Ac5;
+  --b3-tooltips-color: #f36838c5;
 
   /* 遮罩 */
-  --b3-mask-background: #030308a3;
+  --b3-mask-background: #070301a3;
 }
 
 /* --- */
