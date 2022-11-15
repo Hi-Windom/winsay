@@ -64,8 +64,10 @@
 
     /* 遮罩 */
     --b3-mask-background: #000003dc;
+}
 
-    /* --- */
+/* --- */
+:root {
     --SCC-baseComponent-Input-box-shadow-focus: none;
     --SCC-baseComponent-search__header-input-box-shadow: rgb(128 181 231 / 3%) 3px 3px 33px 0px inset, rgb(255 255 255 / 1%) -3px -3px 26px 1px inset;
     --SCC-baseComponent-search__header-input-box-shadow-focus: rgb(128 181 231 / 3%) 3px 3px 33px 0px inset, rgb(255 255 255 / 1%) -3px -3px 26px 1px inset;

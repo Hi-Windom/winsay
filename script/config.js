@@ -16,6 +16,7 @@ const IDs = {
 var colors = [
   "style-S2/root.css",
   "style-S2/root-L-Blue.css",
+  "style-S2/root-L-Red.css",
   "style-S2/root-L-Pink.css",
   "style-S2/root-L-Green.css",
   "style-S2/root-L-Yellow.css",
