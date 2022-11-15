@@ -154,6 +154,7 @@ body:not(.android) .protyle-wysiwyg [data-node-id].li>.list {
 #configBazaarReadme .item__readme {
   background-color: var(--b3-theme-background-light);
   backdrop-filter: blur(31px) brightness(1.31);
+  padding-bottom: 1.31%;
 }
 
 #configBazaarReadme .item__preview:not(.item__preview--fullscreen) {
