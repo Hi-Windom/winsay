@@ -170,6 +170,7 @@ Sofill- 适合哪些人：13~58岁非色弱人群；青少年请在家长指导�
 16. [优化极端宽度环境下顶栏的布局和交互 · Issue #401 · v0.114](https://github.com/Hi-Windom/winsay/issues/401)
 17. [精简更新日志 · Issue #405 · v0.116](https://github.com/Hi-Windom/winsay/issues/405)
 18. [主题包轻量化构建 · Issue #406 · v0.116](https://github.com/Hi-Windom/winsay/issues/406)
+19. [表头样式调整 · Issue #411 · v0.118](https://github.com/Hi-Windom/winsay/issues/411)
 
 缺陷修复：
 
