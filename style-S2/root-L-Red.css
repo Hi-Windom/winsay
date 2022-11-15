@@ -1,10 +1,10 @@
 :root {
   /* 主色 */
-  --b3-theme-primary: var(--SCC-Blue-WPS);
-  --b3-theme-primary-light: var(--SCC-Blue-WPS-light);
-  --b3-theme-primary-lighter: var(--SCC-Blue-WPS-lighter);
-  --b3-theme-primary-lightest: var(--SCC-Blue-WPS-lightest);
-  --b3-theme-secondary: var(--SCC-CNTC-花白);
+  --b3-theme-primary: var(--SCC-Red-WZ);
+  --b3-theme-primary-light: var(--SCC-Red-WZ-light);
+  --b3-theme-primary-lighter: var(--SCC-Red-WZ-lighter);
+  --b3-theme-primary-lightest: var(--SCC-Red-WZ-lightest);
+  --b3-theme-secondary: var(--SCC-Green-WZ);
   --b3-theme-background: var(--SCC-White-WPS);
   --b3-theme-background-light: var(--SCC-White-WPS-light);
   --b3-theme-surface: var(--SCC-White-WPS);
@@ -67,9 +67,9 @@
 }
 
 /* --- */
-:root {
-  --SCC-Component-selector-border: 1px solid var(--SCC-Blue-WPS-light);
-  --SCC-Component-button-text-color: var(--SCC-Blue-WPS);
+/* :root {
+  --SCC-Component-selector-border: 1px solid var(--SCC-Red-WZ-light);
+  --SCC-Component-button-text-color: var(--SCC-Red-WZ);
   --SCC-Component-button-bg-color: var(--b3-theme-primary-lightest);
   --SCC-Component-textarea-box-shadow: rgba(88, 101, 131, 0.31) 1px 1px 31px 0px inset,
     rgba(255, 255, 255, 0.5) -3px -3px 66px 1px inset;
@@ -114,4 +114,4 @@
   --SCC-Component-Inline-kbd-bg-color: var(--SCC-SGTC-4B);
   --SCC-Component-Inline-kbd-box-shadow: rgba(254, 239, 234, 0.8) -2px 2px, rgba(10, 16, 18, 0.18) 1px 3px;
   --SCC-Component-Inline-kbd-border-radius: 4px;
-}
+} */

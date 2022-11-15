@@ -64,9 +64,10 @@
 
   /* 遮罩 */
   --b3-mask-background: #050002a3;
+}
 
-
-  /* --- */
+/* --- */
+:root {
   --SCC-Component-selector-border: 1px solid var(--SCC-Pink-Firole-light);
   --SCC-Component-button-text-color: var(--SCC-Pink-Firole);
   --SCC-Component-button-bg-color: var(--b3-theme-primary-lightest);

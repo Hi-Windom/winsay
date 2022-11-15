@@ -64,9 +64,10 @@
 
   /* 遮罩 */
   --b3-mask-background: #020208a3;
+}
 
-
-  /* --- */
+/* --- */
+:root {
   --SCC-Component-selector-border: 1px solid #cc5831c5;
   --SCC-Component-button-text-color: #cc5831;
   --SCC-Component-button-bg-color: var(--b3-theme-primary-lightest);

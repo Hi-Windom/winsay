@@ -1,7 +1,9 @@
 /* 引入缺省形态样式，避免导出PDF样式丢失 */
+@import url("style/Init.min.css");
+@import url("style/SCC.min.css");
 @import url("style-S2/root-base-light.css");
 @import url("style-S2/root-L-Blue.css");
 @import url("style/Animation.css");
-
-/* 以下样式会被自定义主题样式覆盖 */
 @import url("style/Block.min.css");
+@import url("style/Popup.min.css");
+@import url("style/Patch.css");
