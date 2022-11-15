@@ -1,13 +1,51 @@
 body.android input#toolbarName {
   width: 200px !important;
 }
+
 body.android input#toolbarName:focus {
   width: 217px !important;
 }
-body.android input#toolbarName:focus + div {
+
+body.android input#toolbarName:focus+div {
   display: none;
 }
 
-body.android .toolbar.toolbar--border #toolbarMore{
+body.android .toolbar.toolbar--border #toolbarMore {
   margin-right: 8px;
+}
+
+body.android svg {
+  min-height: 14px;
+  min-width: 14px;
+  scale: 1.5;
+}
+
+body.android div:not(.file-tree) .b3-list-item__action {
+  display: flex !important;
+}
+
+
+body.android .file-tree.sy__file ul.b3-list.b3-list--background>ul>ul li[data-type="navigation-file"] .counter[aria-label="引用块"] {
+  left: 0px;
+  position: absolute;
+  max-width: 25px;
+  margin-left: 1px;
+}
+
+body.android .file-tree.sy__file ul.b3-list.b3-list--background>ul>ul>ul>ul li[data-type="navigation-file"] .b3-list-item__action[aria-label="更多"] {
+  height: 22px;
+  padding: 0 4px;
+  left: 43px;
+  position: absolute;
+  display: inline-flex !important;
+  opacity: .58;
+}
+
+body.android .file-tree.sy__file ul.b3-list.b3-list--background>ul>ul>ul>ul>ul li[data-type="navigation-file"] .b3-list-item__action[aria-label="新建子文档"] {
+  height: 22px;
+  padding: 0 4px;
+  left: 68px;
+  position: absolute;
+  display: inline-flex;
+  opacity: .58;
 }
