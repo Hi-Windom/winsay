@@ -49,3 +49,7 @@ body.android .file-tree.sy__file ul.b3-list.b3-list--background>ul>ul>ul>ul>ul l
   display: inline-flex;
   opacity: .58;
 }
+
+body.android .b3-menu__item {
+  margin: 3px;
+}
