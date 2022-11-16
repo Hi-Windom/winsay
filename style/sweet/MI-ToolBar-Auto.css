@@ -24,7 +24,7 @@ body.darwin #toolbar:hover {
   transition: all 0.31s ease-in-out;
 }
 
-body:not(.darwin):not(.android) #toolbar {
+body:not(.darwin) #toolbar {
   height: var(--SCC-Variables-MI-ToolBar-height);
   max-height: var(--SCC-Variables-MI-ToolBar-height-max);
   border-bottom: 0px solid var(--b3-border-color);
