@@ -53,3 +53,29 @@ body.android .file-tree.sy__file ul.b3-list.b3-list--background>ul>ul>ul>ul>ul l
 body.android .b3-menu__item {
   margin: 3px;
 }
+
+
+@media screen and (min-width: 960px) {
+  body.body--desktop.android .fn__size200 {
+    width: 150px;
+    min-width: 131px;
+  }
+}
+@media screen and (max-width: 960px) {
+  body.body--desktop.android .fn__size200 {
+    width: 131px;
+    min-width: 131px;
+  }
+}
+/* Android Pad 端竖屏状态下【设置】-【快捷键】布局问题 #130 */
+body.body--desktop.android
+  #keymapList
+  > div.fn__flex
+  > label:nth-child(3)
+  > svg,
+body.body--desktop.android #searchByKey {
+  display: none;
+}
+body.body--desktop.android .fn__size200#copyKey {
+  letter-spacing: -0.5px;
+}

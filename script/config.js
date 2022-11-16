@@ -64,12 +64,8 @@ var clientMode = (() => {
 document.body.classList.add(clientMode);
 document.body.classList.add(window.theme.OS);
 
-var kernelVersion = window.siyuan.config.system.kernelVersion;
-var cv_result = API.compareVersion(kernelVersion, "2.4.2");
-
 
 export {
-  cv_result,
   clientMode,
   Iterator2,
   Iterator,
