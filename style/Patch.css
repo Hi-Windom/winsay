@@ -181,3 +181,7 @@ body:not(.android) .protyle-wysiwyg [data-node-id].li>.list {
   font-size: 31px;
   word-break: break-word;
 }
+
+#configBazaarReadme:has(.item__preview.item__preview--fullscreen) div:not(.item__main):not(.item__preview.item__preview--fullscreen) {
+  opacity: 0;
+}
