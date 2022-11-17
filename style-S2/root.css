@@ -7,6 +7,7 @@
   --b3-theme-secondary: var(--SCC-CNTC-淡藤);
   --b3-theme-background: var(--SCC-Gray-HellisePotter);
   --b3-theme-background-light: var(--SCC-Gray-HellisePotter-light);
+  --b3-theme-background-blur: #dee3f4e8;
   --b3-theme-surface: var(--SCC-Gray-HellisePotter);
   --b3-theme-surface-light: var(--SCC-Gray-HellisePotter-light);
   --b3-theme-error: #d23f31;

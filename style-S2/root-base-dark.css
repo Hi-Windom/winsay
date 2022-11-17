@@ -23,6 +23,7 @@
   --SCC-baseComponent-Dialog-520-box-shadow: 13px 31px 131px -58px rgb(0 0 0 / 50%), -30px 31px 119px 31px rgb(0 0 0 / 51%), 72px 51px 6px 1111px rgb(58 58 58 / 2%);
   --SCC-baseComponent-Dialog-520-hover-box-shadow: 13px 31px 131px -58px rgb(0 0 0 / 8%), 6px 11px 19px 8px rgb(0 0 0 / 25%), -111px -111px 111px 1111px rgb(5 5 5 / 42%);
   --SCC-baseComponent-Dialog-520-button-color: var(--SCC-CNTC-海松茶);
+  --SCC-baseComponent-Popup-Menu-shadow: 13px 31px 300px -58px rgb(0 0 0 / 51%), -30px 31px 300px 31px rgb(0 0 0 / 31%), 72px 51px 6px 1111px rgb(58 58 58 / 2%), 0px 0px 1px 1.31px rgb(131 131 131 / 28%);
   /* 块引用波浪线动画图标 | The icon of wavy line animation */
   --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/icon/wavy-line.svg);
   /* 卡片 */

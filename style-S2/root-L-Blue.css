@@ -7,6 +7,7 @@
   --b3-theme-secondary: var(--SCC-CNTC-花白);
   --b3-theme-background: var(--SCC-White-WPS);
   --b3-theme-background-light: var(--SCC-White-WPS-light);
+  --b3-theme-background-blur: #fafafae8;
   --b3-theme-surface: var(--SCC-White-WPS);
   --b3-theme-surface-light: var(--SCC-White-WPS-light);
   --b3-theme-error: #d23f31;
