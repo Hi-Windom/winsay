@@ -43,6 +43,8 @@
 
 如果你正在通过集市详情页浏览这段话，应该能够发现集市详情页也是磨砂效果背景，这是之前版本引入的特性，区别在于是否可以关闭。Sofill- 还专门优化了集市详情页头图的撑满显示效果，无论是透明头图还是不透明头图都丝般顺滑。
 
+还有一些细节上的变化，例如我们替换了默认的集市详情页过渡效果，在主题设置面板显示当前版本号，更换了主题预览图，新的预览图较之前的体积减少了 40%
+
 ### 主题设置界面入口指南
 
 Step 1 确保在思源软件设置里关闭了【隐藏底部状态栏】
@@ -130,7 +132,7 @@ Sofill- 适合哪些人：13~58岁非色弱人群；青少年请在家长指导�
 <p><a href="https://github.com/Hi-Windom/winsay/issues/399">
 <img src="https://img.shields.io/badge/SiYuan-2.5.0-green"/></a>
 <a href="https://github.com/Hi-Windom/winsay/issues/409">
-<img src="https://img.shields.io/badge/%E4%B8%8D%E5%85%BC%E5%AE%B9-2.4.2---red"/></a>
+<img src="https://img.shields.io/badge/%E4%B8%8D%E5%85%BC%E5%AE%B9-2.4.5---red"/></a>
 <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow"/></p></p>
 
 引入特性：
