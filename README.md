@@ -37,13 +37,9 @@
 
 ---
 
-## ✨ 支持通过主题设置开启题头图粘性布局，为暗黑模式弹出菜单专门设计的阴影样式
+## ✨ 块滚动条模式和位置、文档宽度模式在主题设置界面现已可用
 
 > 版本更新详细内容请下滑查看
-
-如果你正在通过集市详情页浏览这段话，应该能够发现集市详情页也是磨砂效果背景，这是之前版本引入的特性，区别在于是否可以关闭。Sofill- 还专门优化了集市详情页头图的撑满显示效果，无论是透明头图还是不透明头图都丝般顺滑。
-
-还有一些细节上的变化，例如我们替换了默认的集市详情页过渡效果，在主题设置面板显示当前版本号，更换了主题预览图，新的预览图较之前的体积减少了 75%
 
 ### 主题设置界面入口指南
 
@@ -123,9 +119,9 @@ Sofill- 适合哪些人：13~58岁非色弱人群；青少年请在家长指导�
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v0.102 ~ v0.134 聚合说明
+### v0.136 ~ v0.136 聚合说明
 
-> 2022-11-17 released
+> 2022-11-18 released
 
 <p><a href="https://github.com/Hi-Windom/winsay/issues/399">
 <img src="https://img.shields.io/badge/SiYuan-2.5.0-green"/></a>
@@ -135,70 +131,8 @@ Sofill- 适合哪些人：13~58岁非色弱人群；青少年请在家长指导�
 
 引入特性：
 
-1. [弹出菜单通用阴影样式 · Issue #350 · v0.102](https://github.com/Hi-Windom/winsay/issues/350)
-2. [不可用控件醒目提示 · Issue #351 · v0.102](https://github.com/Hi-Windom/winsay/issues/351)
-3. [主题设置面板（实验性） · Issue #349 · v0.102](https://github.com/Hi-Windom/winsay/issues/349)
-4. [支持通过主题设置界面修改页签栏布局模式 · Issue #356 · v0.104](https://github.com/Hi-Windom/winsay/issues/356)
-5. [支持通过主题设置配置顶栏自动隐藏（仅Windows端有效） · Issue #240 · v0.106](https://github.com/Hi-Windom/winsay/issues/240)
-6. [支持通过主题设置界面选择是否隐藏 Untitle 文档名 · Issue #366 · v0.108](https://github.com/Hi-Windom/winsay/issues/366)
-7. [支持通过主题设置界面配置文档树自适应显示 · Issue #367 · v0.108](https://github.com/Hi-Windom/winsay/issues/367)
-8. [支持通过主题设置界面清理主题本地存储空间数据 · Issue #368 · v0.108](https://github.com/Hi-Windom/winsay/issues/368)
-9. [支持通过主题设置界面配置行内代码聚焦彩蛋 · Issue #382 · v0.110](https://github.com/Hi-Windom/winsay/issues/382)
-10. [支持通过主题设置界面配置顶栏背景颜色 · Issue #394 · v0.112](https://github.com/Hi-Windom/winsay/issues/394)
-11. [支持通过主题设置界面配置dock栏底色增强 · Issue #395 · v0.112](https://github.com/Hi-Windom/winsay/issues/395)
-12. [支持通过主题设置界面调整笔记本间距 · Issue #380 · v0.112](https://github.com/Hi-Windom/winsay/issues/380)
-13. [为页签弹出层设计单独的阴影 · Issue #397 · v0.112](https://github.com/Hi-Windom/winsay/issues/397)
-14. [首发明亮模式【文中红】形态 · Issue #413 · v0.120](https://github.com/Hi-Windom/winsay/issues/413)
-15. [Android Pad 端引入 #345特性 · Issue #417 · v0.122](https://github.com/Hi-Windom/winsay/issues/417)
-16. [全新设计的正向链接弹出面板钉住态阴影 · Issue #419 · v0.124](https://github.com/Hi-Windom/winsay/issues/419)
-17. [支持通过主题配置界面调整段前段后间距、行高、段首缩进、字符间距 · Issue #422 · v0.126](https://github.com/Hi-Windom/winsay/issues/422)
-18. [支持通过主题设置开启题头图粘性布局 · Issue #436 · v0.132](https://github.com/Hi-Windom/winsay/issues/436)
-19. [集市详情页过渡效果 · Issue #442 · v0.134](https://github.com/Hi-Windom/winsay/issues/442)
-
-改进优化：
-
-1. [任务列表前缀颜色跟随主题形态 · Issue #348 · v0.102](https://github.com/Hi-Windom/winsay/issues/348)
-2. [垂直页签不隐藏关闭按钮 · Issue #361 · v0.106](https://github.com/Hi-Windom/winsay/issues/361)
-3. [任务列表颜色跟随主题形态 · Issue #364 · v0.108](https://github.com/Hi-Windom/winsay/issues/364)
-4. [删除主题本地存储空间时弹窗确认 · Issue #370 · v0.110](https://github.com/Hi-Windom/winsay/issues/370)
-5. [动效优化 · Issue #347 · v0.110](https://github.com/Hi-Windom/winsay/issues/347)
-6. [优化弹出菜单通用阴影在暗黑模式下的呈现效果 · Issue #371 · v0.110](https://github.com/Hi-Windom/winsay/issues/371)
-7. [Android Pad 端隐藏无效的主题设置界面配置项 · Issue #374 · v0.110](https://github.com/Hi-Windom/winsay/issues/374)
-8. [Android 端HintMenu样式更新 · Issue #376 · v0.110](https://github.com/Hi-Windom/winsay/issues/376)
-9. [优化行内代码彩蛋触发逻辑 · Issue #381 · v0.110](https://github.com/Hi-Windom/winsay/issues/381)
-10. [Android 端与桌面端统一背景磨砂效果调整优化 · Issue #388 · v0.110](https://github.com/Hi-Windom/winsay/issues/388)
-11. [Android 手机端顶栏调整 · Issue #390 · v0.112](https://github.com/Hi-Windom/winsay/issues/390)
-12. [Android 端主题设置界面优化 · Issue #392 · v0.112](https://github.com/Hi-Windom/winsay/issues/392)
-13. [清理主题本地存储空间数据自动刷新页面 · Issue #393 · v0.112](https://github.com/Hi-Windom/winsay/issues/393)
-14. [优化插入引用面板在屏幕边缘的显示效果 · Issue #396 · v0.112](https://github.com/Hi-Windom/winsay/issues/396)
-15. [表头颜色跟随主题形态 · Issue #400 · v0.114](https://github.com/Hi-Windom/winsay/issues/400)
-16. [优化极端宽度环境下顶栏的布局和交互 · Issue #401 · v0.114](https://github.com/Hi-Windom/winsay/issues/401)
-17. [精简更新日志 · Issue #405 · v0.116](https://github.com/Hi-Windom/winsay/issues/405)
-18. [主题包轻量化构建 · Issue #406 · v0.116](https://github.com/Hi-Windom/winsay/issues/406)
-19. [表头样式调整 · Issue #411 · v0.118](https://github.com/Hi-Windom/winsay/issues/411)
-20. [集市详情页头图以粘性布局呈现 · Issue #423 · v0.126](https://github.com/Hi-Windom/winsay/issues/423)
-21. [取消强制两端对齐 · Issue #426 · v0.126](https://github.com/Hi-Windom/winsay/issues/426)
-22. [改善移动端体验 · Issue #428 · v0.128](https://github.com/Hi-Windom/winsay/issues/428)
-23. [完善【文中红】形态样式 · Issue #429 · v0.128](https://github.com/Hi-Windom/winsay/issues/429)
-24. [停止支援思源 2.4.5 及更早版本 · Issue #432 · v0.130](https://github.com/Hi-Windom/winsay/issues/432)
-25. [优化安卓端主题设置界面逻辑 · Issue #431 · v0.130](https://github.com/Hi-Windom/winsay/issues/431)
-26. [处理用户输入为有效值 · Issue #433 · v0.130](https://github.com/Hi-Windom/winsay/issues/433)
-27. [为暗黑模式弹出菜单专门设计的阴影样式 · Issue #435 · v0.132](https://github.com/Hi-Windom/winsay/issues/435)
-28. [优化集市详情页头图的撑满显示效果 · Issue #439 · v0.134](https://github.com/Hi-Windom/winsay/issues/439)
-29. [在主题设置面板显示当前版本号 · Issue #438 · v0.134](https://github.com/Hi-Windom/winsay/issues/438)
-
-缺陷修复：
-
-1. [云端同步目录弹窗目录项聚焦时撑开容器 · Issue #365 · v0.108](https://github.com/Hi-Windom/winsay/issues/365)
-2. [明亮暗黑模式切换不完整 · Issue #384 · v0.110](https://github.com/Hi-Windom/winsay/issues/384)
-3. [Mac 端左侧异常留白 · Issue #385 · v0.110](https://github.com/Hi-Windom/winsay/issues/385)
-4. [引用块预览浮窗抖动 · Issue #310 · v0.110](https://github.com/Hi-Windom/winsay/issues/310)
-5. [顶栏icon大小异常 · Issue #379 · v0.110](https://github.com/Hi-Windom/winsay/issues/379)
-6. [集市容器异常 · Issue #391 · v0.112](https://github.com/Hi-Windom/winsay/issues/391)
-7. [面板背景磨砂效果丢失 · Issue #404 · v0.116](https://github.com/Hi-Windom/winsay/issues/404)
-8. [开启自定义主题后样式异常 · Issue #272 · v0.118](https://github.com/Hi-Windom/winsay/issues/272)
-9. [Android Pad 端水平页签栏只读控件区显示异常 · Issue #360 · v0.122](https://github.com/Hi-Windom/winsay/issues/360)
-10. [#310 问题未完全解决 · Issue #424 · v0.126](https://github.com/Hi-Windom/winsay/issues/424)
+1. [支持通过主题设置界面修改文档宽度模式 · Issue #363 · v0.136](https://github.com/Hi-Windom/winsay/issues/363)
+2. [支持通过主题设置配置块滚动条模式和位置 · Issue #444 · v0.136](https://github.com/Hi-Windom/winsay/issues/444)
 
 ## 🎈 鸣谢
 
