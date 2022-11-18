@@ -138,6 +138,7 @@ Sofill- 适合哪些人：13~58岁非色弱人群；青少年请在家长指导�
 
 1. [移除主题设置面板无效项 · Issue #448 · 0.138](https://github.com/Hi-Windom/winsay/issues/448)
 2. [行内页签样式调整 · Issue #449 · 0.138](https://github.com/Hi-Windom/winsay/issues/449)
+3. [细节优化 · Issue #451 · v0.138](https://github.com/Hi-Windom/winsay/issues/451)
 
 ## 🎈 鸣谢
 
