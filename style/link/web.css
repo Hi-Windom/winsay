@@ -1,3 +1,35 @@
+@layer {
+
+    .p[data-type="NodeParagraph"] a[href^="http://"]::before,
+    span[data-type~=a][data-href^="http://"]:not(:empty)::before {
+        content: "";
+        background-image: url("./protocal/http.png");
+    }
+
+    .p[data-type="NodeParagraph"] a[href^="https://"]::before,
+    span[data-type~=a][data-href^="https://"]:not(:empty)::before {
+        content: "";
+        background-image: url("./protocal/https.png");
+    }
+
+    .p[data-type="NodeParagraph"] a[href^="ftp://"]::before,
+    span[data-type~=a][data-href^="ftp://"]:not(:empty)::before {
+        content: "";
+        background-image: url("./protocal/ftp.png");
+    }
+
+    .p[data-type="NodeParagraph"] a[href^="thunder://"]::before,
+    span[data-type~=a][data-href^="thunder://"]:not(:empty)::before {
+        content: "";
+        background-image: url("./protocal/thunder.png");
+    }
+
+    .p[data-type="NodeParagraph"] a[href^="magnet:?"]::before,
+    span[data-type~=a][data-href^="magnet:?"]:not(:empty)::before {
+        content: "";
+        background-image: url("./protocal/magnet.png");
+    }
+}
 /* 代码托管专区 */
 a[href*="//pypi.org/"]:not(:has(img))::before,
 span[data-type~=a][data-href*="//pypi.org/"]:not(:empty)::before {

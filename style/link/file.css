@@ -1,3 +1,18 @@
+@import url("./file_noAssetsStyle.css");
+@layer {
+
+  .p[data-type="NodeParagraph"] a[href^="file://"]::before,
+  span[data-type~=a][data-href^="file://"]:not(:empty)::before {
+      content: "";
+      background-image: url("./protocal/file.png");
+  }
+
+  .p[data-type="NodeParagraph"] a[href^="assets/"]::before,
+  span[data-type~=a][data-href^="assets/"]:not(:empty)::before {
+      content: "";
+      background-image: url("./protocal/assets.png");
+  }
+}
 .p a:not([href^="http"])[href$=".zip"]:not(:empty):not(:has(img))::before,
 .p a:not([href^="http"])[href$=".zipx"]:not(:empty):not(:has(img))::before,
 .p a:not([href^="http"])[href$=".egg"]:not(:empty):not(:has(img))::before,
