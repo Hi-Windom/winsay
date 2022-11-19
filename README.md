@@ -190,6 +190,11 @@ Sofill 系列主题的诞生与成长离不开下列开源项目的贡献，以�
 * [OriginOS](https://www.vivo.com.cn/originos)
 * [搜狗输入法手机版](https://shouji.sogou.com/?r=ime)
 
+# 🌐 开源声明
+
+1. Sofill 系列主题均可免费使用和基于交流学习的无限制修改
+2. 基于 Sofill 系列主题二次创作的作品不得在未获得原作者团队授权的情况下擅自在思源集市或者其他渠道公开发行
+
 ---
 
 <p style="text-align:center">- The End -</p>
