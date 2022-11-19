@@ -1,5 +1,16 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
+#keymapList .b3-list-item.toggle {
+  margin: 6px 3px -2px !important;
+  font-size: 105%;
+  border: 1px solid var(--b3-theme-surface-lighter);
+  letter-spacing: .13px;
+}
+#keymapList .b3-list-item--hide-action:not(:hover) .b3-list-item__action {
+  display: flex;
+  opacity: .58;
+}
+
 .protyle-scroll:hover .protyle-scroll__up svg,
 .protyle-scroll:hover .protyle-scroll__down svg {
   opacity: .31 !important;

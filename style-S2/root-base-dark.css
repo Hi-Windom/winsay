@@ -49,10 +49,10 @@
   --b3-width-transition: width .2s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0ms;
 
   /* 阴影 */
-  --b3-point-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
-    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-  --b3-dialog-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2),
-    0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+  --b3-point-shadow: -2px 3px 3px -2px rgba(0, 0, 0, 0.13),
+    0px 58px 131px -10px var(--b3-theme-primary-lightest), 2px 3px 5px 0px rgba(0, 0, 0, 0.1);
+  --b3-dialog-shadow: 1px 13px 8px -1px rgba(0, 0, 0, 0.31),
+    0px 13px 131px -13px rgba(0, 0, 0, 0.07), 1px 1px 6px -2px rgba(0, 0, 0, 0.13);
 
   /* 图表颜色 */
   --b3-graph-p-point: #076f7e;
@@ -88,13 +88,17 @@
 
   /* 所见即所得行内元素颜色 */
   --b3-protyle-inline-strong-color: inherit;
-  --b3-protyle-inline-em-color: #bbbcbc; /* 斜体字色 */
-  --b3-protyle-inline-s-color: #a8a2a1c5; /* 删除线字色 */
-  --b3-protyle-inline-link-color: var(--SCC-Blue-Windom_2); /* 超链接字色 */
+  --b3-protyle-inline-em-color: #bbbcbc;
+  /* 斜体字色 */
+  --b3-protyle-inline-s-color: #a8a2a1c5;
+  /* 删除线字色 */
+  --b3-protyle-inline-link-color: var(--SCC-Blue-Windom_2);
+  /* 超链接字色 */
   --b3-protyle-inline-mark-background: #85858531;
   --b3-protyle-inline-mark-color: var(--SCC-CNTC-茶白);
   --b3-protyle-inline-tag-color: #5f6368;
-  --b3-protyle-inline-blockref-color: var(--b3-theme-primary); /* 块引用字色 */
+  --b3-protyle-inline-blockref-color: var(--b3-theme-primary);
+  /* 块引用字色 */
 
   /* PDF */
   --b3-pdf-selection: #d0e9c8;
