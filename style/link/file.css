@@ -1,126 +1,213 @@
-span[data-type~=a][data-href^="file://"][data-href$=".zip"]:not(:empty)::before,
-span[data-type~=a][data-href^="file://"][data-href$=".zipx"]:not(:empty)::before,
-span[data-type~=a][data-href^="file://"][data-href$=".egg"]:not(:empty)::before {
+.p a:not([href^="http"])[href$=".zip"]:not(:empty):not(:has(img))::before,
+.p a:not([href^="http"])[href$=".zipx"]:not(:empty):not(:has(img))::before,
+.p a:not([href^="http"])[href$=".egg"]:not(:empty):not(:has(img))::before,
+.p a:not([href^="http"])[href$=".whl"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".zip"]:not(:empty)::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".zipx"]:not(:empty)::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".egg"]:not(:empty)::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".whl"]:not(:empty)::before {
   content: "";
   background-image: url("./file/zip.png");
 }
-span[data-type~=a][data-href^="file://"][data-href$=".rar"]:not(:empty)::before {
+.p a:not([href^="http"])[href$=".rar"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".rar"]:not(:empty)::before {
   content: "";
   background-image: url("./file/rar.png");
 }
-span[data-type~=a][data-href^="file://"][data-href$=".7z"]:not(:empty)::before {
+.p a:not([href^="http"])[href$=".7z"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".7z"]:not(:empty)::before {
   content: "";
   background-image: url("./file/7z.png");
 }
-span[data-type~=a][data-href^="file://"][data-href$=".pdf"]:not(:empty)::before {
+.p a:not([href^="http"])[href$=".pdf"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".pdf"]:not(:empty)::before {
   content: "";
   background-image: url("./file/pdf.png");
 }
-span[data-type~=a][data-href^="file://"][data-href$=".doc"]:not(:empty)::before,
-span[data-type~=a][data-href^="file://"][data-href$=".docx"]:not(:empty)::before {
+.p a:not([href^="http"])[href$=".doc"]:not(:empty):not(:has(img))::before,
+.p a:not([href^="http"])[href$=".docx"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".doc"]:not(:empty)::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".docx"]:not(:empty)::before {
   content: "";
   background-image: url("./file/word.png");
 }
-span[data-type~=a][data-href^="file://"][data-href$=".xls"]:not(:empty)::before,
-span[data-type~=a][data-href^="file://"][data-href$=".xlsx"]:not(:empty)::before,
-span[data-type~=a][data-href^="file://"][data-href$=".xlsm"]:not(:empty)::before,
-span[data-type~=a][data-href^="file://"][data-href$=".xlsb"]:not(:empty)::before {
+.p a:not([href^="http"])[href$=".xls"]:not(:empty):not(:has(img))::before,
+.p a:not([href^="http"])[href$=".xlsx"]:not(:empty):not(:has(img))::before,
+.p a:not([href^="http"])[href$=".xlsm"]:not(:empty):not(:has(img))::before,
+.p a:not([href^="http"])[href$=".xlsb"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".xls"]:not(:empty)::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".xlsx"]:not(:empty)::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".xlsm"]:not(:empty)::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".xlsb"]:not(:empty)::before {
   content: "";
   background-image: url("./file/excel.png");
 }
-span[data-type~=a][data-href^="file://"][data-href$=".ppt"]:not(:empty)::before,
-span[data-type~=a][data-href^="file://"][data-href$=".pptx"]:not(:empty)::before,
-span[data-type~=a][data-href^="file://"][data-href$=".pptm"]:not(:empty)::before {
+.p a:not([href^="http"])[href$=".ppt"]:not(:empty):not(:has(img))::before,
+.p a:not([href^="http"])[href$=".pptx"]:not(:empty):not(:has(img))::before,
+.p a:not([href^="http"])[href$=".pptm"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".ppt"]:not(:empty)::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".pptx"]:not(:empty)::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".pptm"]:not(:empty)::before {
   content: "";
   background-image: url("./file/ppt.png");
 }
-span[data-type~=a][data-href^="file://"][data-href$=".psd"]:not(:empty)::before {
+.p a:not([href^="http"])[href$=".psd"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".psd"]:not(:empty)::before {
   content: "";
   background-image: url("./file/ps.png");
 }
-span[data-type~=a][data-href^="file://"][data-href$=".exe"]:not(:empty)::before {
+.p a:not([href^="http"])[href$=".exe"]:not(:empty):not(:has(img))::before,
+.p a:not([href^="http"])[href$=".msi"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".exe"]:not(:empty)::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".msi"]:not(:empty)::before {
   content: "";
   background-image: url("./file/exe.png");
 }
-span[data-type~=a][data-href^="file://"][data-href$=".msi"]:not(:empty)::before {
-  content: "";
-  background-image: url("./file/exe.png");
-}
-span[data-type~=a][data-href^="file://"][data-href$=".apk"]:not(:empty)::before {
+.p a:not([href^="http"])[href$=".apk"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".apk"]:not(:empty)::before {
   content: "";
   background-image: url("./file/apk.png");
 }
-span[data-type~=a][data-href^="file://"][data-href$=".json"]:not(:empty)::before {
+.p a:not([href^="http"])[href$=".json"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".json"]:not(:empty)::before {
   content: "";
   background-image: url("./file/json.png");
 }
-span[data-type~=a][data-href^="file://"][data-href$=".c"]:not(:empty)::before {
+.p a:not([href^="http"])[href$=".c"]:not(:empty):not(:has(img))::before,
+.p a:not([href^="http"])[href$=".h"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".c"]:not(:empty)::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".h"]:not(:empty)::before {
   content: "";
   background-image: url("./file/c.png");
 }
-span[data-type~=a][data-href^="file://"][data-href$=".cs"]:not(:empty)::before {
+.p a:not([href^="http"])[href$=".cs"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".cs"]:not(:empty)::before {
   content: "";
   background-image: url("./file/cs.png");
 }
-span[data-type~=a][data-href^="file://"][data-href$=".cpp"]:not(:empty)::before {
+.p a:not([href^="http"])[href$=".cpp"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".cpp"]:not(:empty)::before {
   content: "";
   background-image: url("./file/cpp.png");
 }
-span[data-type~=a][data-href^="file://"][data-href$=".vue"]:not(:empty)::before {
+.p a:not([href^="http"])[href$=".vue"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".vue"]:not(:empty)::before {
   content: "";
   background-image: url("./file/vue.png");
 }
-span[data-type~=a][data-href^="file://"][data-href$=".ts"]:not(:empty)::before {
+.p a:not([href^="http"])[href$=".ts"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".ts"]:not(:empty)::before {
   content: "";
   background-image: url("./file/ts.png");
 }
-span[data-type~=a][data-href^="file://"][data-href$=".js"]:not(:empty)::before {
+.p a:not([href^="http"])[href$=".js"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".js"]:not(:empty)::before {
   content: "";
   background-image: url("./file/js.png");
 }
-span[data-type~=a][data-href^="file://"][data-href$=".css"]:not(:empty)::before {
+.p a:not([href^="http"])[href$=".css"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".css"]:not(:empty)::before {
   content: "";
   background-image: url("./file/css.png");
 }
-span[data-type~=a][data-href^="file://"][data-href$=".txt"]:not(:empty)::before {
+.p a:not([href^="http"])[href$=".txt"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".txt"]:not(:empty)::before {
   content: "";
   background-image: url("./file/txt.png");
 }
-span[data-type~=a][data-href^="file://"][data-href$=".md"]:not(:empty)::before {
+.p a:not([href^="http"])[href$=".md"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".md"]:not(:empty)::before {
   content: "";
   background-image: url("./file/md.png");
 }
-span[data-type~=a][data-href^="file://"][data-href$=".py"]:not(:empty)::before {
+.p a:not([href^="http"])[href$=".py"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".py"]:not(:empty)::before {
   content: "";
   background-image: url("./file/py.png");
 }
-span[data-type~=a][data-href^="file://"][data-href$=".xml"]:not(:empty)::before {
+.p a:not([href^="http"])[href$=".xml"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".xml"]:not(:empty)::before {
   content: "";
   background-image: url("./file/xml.png");
 }
-span[data-type~=a][data-href^="file://"][data-href$=".htm"]:not(:empty)::before,
-span[data-type~=a][data-href^="file://"][data-href$=".html"]:not(:empty)::before,
-span[data-type~=a][data-href^="file://"][data-href$=".mhtml"]:not(:empty)::before {
+.p a:not([href^="http"])[href$=".htm"]:not(:empty):not(:has(img))::before,
+.p a:not([href^="http"])[href$=".html"]:not(:empty):not(:has(img))::before,
+.p a:not([href^="http"])[href$=".mhtml"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".htm"]:not(:empty)::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".html"]:not(:empty)::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".mhtml"]:not(:empty)::before {
   content: "";
   background-image: url("./file/html.png");
 }
-span[data-type~=a][data-href^="file://"][data-href$=".iso"]:not(:empty)::before {
+.p a:not([href^="http"])[href$=".iso"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".iso"]:not(:empty)::before {
   content: "";
   background-image: url("./file/iso.png");
 }
-span[data-type~=a][data-href^="file://"][data-href$=".log"]:not(:empty)::before {
+.p a:not([href^="http"])[href$=".log"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".log"]:not(:empty)::before {
   content: "";
   background-image: url("./file/log.png");
 }
-span[data-type~=a][data-href^="file://"][data-href$=".csv"]:not(:empty)::before {
+.p a:not([href^="http"])[href$=".csv"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".csv"]:not(:empty)::before {
   content: "";
   background-image: url("./file/csv.png");
 }
-span[data-type~=a][data-href^="file://"][data-href$=".ipynb"]:not(:empty)::before {
+.p a:not([href^="http"])[href$=".ipynb"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".ipynb"]:not(:empty)::before {
   content: "";
   background-image: url("./file/ipynb.png");
 }
-span[data-type~=a][data-href^="file://"][data-href$=".sql"]:not(:empty)::before {
+.p a:not([href^="http"])[href$=".sql"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".sql"]:not(:empty)::before {
   content: "";
   background-image: url("./file/sql.png");
+}
+.p a:not([href^="http"])[href$=".xaml"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".xaml"]:not(:empty)::before {
+  content: "";
+  background-image: url("./file/xaml.png");
+}
+.p a:not([href^="http"])[href$=".sln"]:not(:empty):not(:has(img))::before,
+.p a:not([href^="http"])[href$=".csproj"]:not(:empty):not(:has(img))::before,
+.p a:not([href^="http"])[href$=".csproj.user"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".sln"]:not(:empty)::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".csproj"]:not(:empty)::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".csproj.user"]:not(:empty)::before {
+  content: "";
+  background-image: url("./file/vs.png");
+}
+.p a:not([href^="http"])[href$=".java"]:not(:empty):not(:has(img))::before,
+.p a:not([href^="http"])[href$=".jsp"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".java"]:not(:empty)::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".jsp"]:not(:empty)::before {
+  content: "";
+  background-image: url("./file/java.png");
+}
+.p a:not([href^="http"])[href$=".ai"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".ai"]:not(:empty)::before {
+  content: "";
+  background-image: url("./file/ai.png");
+}
+.p a:not([href^="http"])[href$=".gitignore"]:not(:empty):not(:has(img))::before,
+.p a:not([href^="http"])[href$=".gitattributes"]:not(:empty):not(:has(img))::before,
+.p a:not([href^="http"])[href$=".git_archival.txt"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".gitignore"]:not(:empty)::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".gitattributes"]:not(:empty)::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".git_archival.txt"]:not(:empty)::before {
+  content: "";
+  background-image: url("./file/git.png");
+}
+.p a:not([href^="http"])[href$=".deb"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".deb"]:not(:empty)::before {
+  content: "";
+  background-image: url("./file/debian.png");
+}
+.p a:not([href^="http"])[href$=".sh"]:not(:empty):not(:has(img))::before,
+.p a:not([href^="http"])[href$=".tar.gz"]:not(:empty):not(:has(img))::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".sh"]:not(:empty)::before,
+span[data-type~=a]:not([data-href^="http"])[data-href$=".tar.gz"]:not(:empty)::before {
+  content: "";
+  background-image: url("./file/linux.png");
 }
