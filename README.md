@@ -148,10 +148,12 @@ Sofill- 适合哪些人：13~58岁非色弱人群；青少年请在家长指导�
 3. [细节优化 · Issue #451 · v0.138](https://github.com/Hi-Windom/winsay/issues/451)
 4. [通用阴影样式调整 · Issue #460 · v0.144](https://github.com/Hi-Windom/winsay/issues/460)
 5. [思源快捷键设置界面视觉效果优化 · Issue #459 · v0.144](https://github.com/Hi-Windom/winsay/issues/459)
+6. [细节优化 · Issue #467 · v0.144](https://github.com/Hi-Windom/winsay/issues/467)
 
 缺陷修复：
 
 1. [修改文档宽度模式时文档题目未生效 · Issue #453 · v0.140](https://github.com/Hi-Windom/winsay/issues/453)
+2. [设置块滚动条在左侧显示后许多地方的tooltips无法正常显示 · Issue #466 · v0.144](https://github.com/Hi-Windom/winsay/issues/466)
 
 ## 🎈 鸣谢
 
