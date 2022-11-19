@@ -1,5 +1,9 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
+div[data-name="bazaar"] .b3-card:hover {
+  transform: none;
+}
+
 #keymapList .b3-list-item.toggle {
   margin: 6px 3px -2px !important;
   font-size: 105%;
