@@ -29,6 +29,7 @@
 * [ ] 右侧面板悬浮
 * [ ] Ctrl + 鼠标滚轮缩放显示效果优化
 * [ ] [提供接口 · Issue #425](https://github.com/Hi-Windom/winsay/issues/425)
+* [ ] 支持导入导出主题设置数据
 
 ~~每日更新之我不是肝帝~~
 
