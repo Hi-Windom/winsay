@@ -1,0 +1,32 @@
+span[data-type~=a][data-href^="file://"]:not(:empty)::before {
+    content: "";
+    background-image: url("./protocal/file.png");
+}
+/* span[data-type~=a][data-href^="file://"]:not(:empty)::before {
+    content: "";
+    background-image: url("./protocal/folder.png");
+} */
+span[data-type~=a][data-href^="assets/"]:not(:empty)::before {
+    content: "";
+    background-image: url("./protocal/assets.png");
+}
+span[data-type~=a][data-href^="http://"]:not(:empty)::before {
+    content: "";
+    background-image: url("./protocal/http.png");
+}
+span[data-type~=a][data-href^="https://"]:not(:empty)::before {
+    content: "";
+    background-image: url("./protocal/https.png");
+}
+span[data-type~=a][data-href^="ftp://"]:not(:empty)::before {
+    content: "";
+    background-image: url("./protocal/ftp.png");
+}
+span[data-type~=a][data-href^="thunder://"]:not(:empty)::before {
+    content: "";
+    background-image: url("./protocal/thunder.png");
+}
+span[data-type~=a][data-href^="magnet:?"]:not(:empty)::before {
+    content: "";
+    background-image: url("./protocal/magnet.png");
+}
