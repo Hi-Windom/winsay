@@ -1,0 +1,22 @@
+.fn__flex-column:has(#searchList) {
+  height: 80vh !important;
+}
+
+.spread-search__preview {
+  margin-top: 13px;
+  border-top: none;
+}
+
+#searchList {
+  height: calc(58% - 69px) !important;
+}
+
+#searchList div[data-type="search-item"]>.b3-list-item__text {
+  font-size: 87%;
+  text-align: left;
+  line-height: 1.31rem;
+}
+
+#searchList div[data-type="search-item"]>.b3-list-item__text svg {
+  margin: 3px 0 1px 0;
+}
