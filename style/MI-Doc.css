@@ -1,0 +1,46 @@
+/* 依次为 打开的文档、引用悬浮面板 设置上边距避免被遮挡，排除了反链面板 */
+#layouts .layout__center div:not(.backlinkList) .protyle-content,
+.block__popover.block__popover--move.block__popover--open>div.block__content div.protyle-content {
+  float: left;
+  /* padding-top: 30px; */
+}
+
+.b3-typography,
+.protyle-wysiwyg.protyle-wysiwyg--attr {
+  container-type: inline-size;
+  container-name: doc;
+}
+
+
+.protyle-gutters button svg {
+  color: var(--b3-theme-primary-lighter);
+}
+
+.protyle-gutters button:hover svg {
+  color: var(--b3-theme-primary);
+}
+
+.protyle-wysiwyg.protyle-wysiwyg--attr:has(div:nth-child(100))>div:nth-last-of-type(1):after {
+  content: "";
+  display: flex;
+  position: relative;
+  background-image: url('./../src/loading.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 32px;
+  height: 32px;
+  margin-top: 13px;
+  margin-left: 48%;
+  opacity: .31;
+  box-shadow: rgb(0 0 0 / 30%) 3px 4px 8px -3px;
+}
+
+/* 支持通过主题配置界面调整段前段后间距、行高、段首缩进、字符间距 #422 */
+div.protyle-wysiwyg.protyle-wysiwyg--attr>div.p {
+  text-indent: var(--SCC-Variables-MI-Doc-pIndent, 0rem);
+  line-height: var(--SCC-Variables-MI-Doc-LH, 1.5rem);
+  margin-top: var(--SCC-Variables-MI-Doc-marginTop, 0rem);
+  margin-bottom: var(--SCC-Variables-MI-Doc-marginBottom, 0rem);
+  letter-spacing: var(--SCC-Variables-MI-Doc-lSpacing, 0px);
+}
