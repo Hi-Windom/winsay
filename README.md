@@ -51,7 +51,7 @@ Step 1 确保在思源软件设置里关闭了【隐藏底部状态栏】
 
 Step 2 鼠标悬浮在【帮助（问号）】，在呼出的菜单中点击【主题设置】
 
-<img src="https://b3logfile.com/siyuan/1662398123089/assets/image-20221112135352-1pkn6iv.png"/>
+<img src="https://b3logfile.com/siyuan/1662398123089/assets/image-20221120203418-tafootj.png"/>
 
 ## 🏳️‍🌈 主题特色介绍
 
