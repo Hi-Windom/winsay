@@ -213,7 +213,7 @@ ul.fn__flex.layout-tab-bar li {
   transition-duration: 0.2s;
   margin-right: 1px !important;
   margin-left: 1px !important;
-  background-color: var(--b3-theme-primary-lighter);
+  background-color: var(--b3-theme-primary-lightest);
 }
 
 .layout-tab-bar .item--pin .item__text {
