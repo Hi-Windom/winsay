@@ -11,7 +11,7 @@
 }
 .layout__center [data-type="wnd"][data-id]:focus-within > :first-child {
   justify-content: left;
-  width: max(58px, 3.1vw);
+  width: 36px;
   transition: width 0.03s cubic-bezier(0.46, 0.03, 0.52, 0.96) 0.31s;
   z-index: 2;
 }
@@ -21,6 +21,9 @@
   width: max(186px, 13vw);
   transition: width 0.13s cubic-bezier(0.46, 0.03, 0.52, 0.96) 0.13s;
   z-index: 20;
+}
+.layout-tab-bar .item--pin {
+  min-width: unset;
 }
 li.item.item--readonly .item__close[title="新建文档"] + span.fn__flex-1 {
   display: none;
@@ -42,6 +45,9 @@ li.item.item--readonly .item__close[title="新建文档"] + span.fn__flex-1 {
 .layout__center [data-type="wnd"][data-id] .layout-tab-bar .item .item__text {
   text-align: unset;
   flex-grow: 1;
+}
+.layout__center [data-type="wnd"][data-id]:focus-within .layout-tab-bar:not(:hover) .item .item__text {
+  opacity: 0 !important;
 }
 .layout__center
   [data-type="wnd"][data-id]
