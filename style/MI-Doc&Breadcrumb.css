@@ -33,17 +33,18 @@
   transition-delay: 0.31s;
 }
 
-#layouts .layout__wnd--active .protyle-breadcrumb .protyle-breadcrumb__bar .protyle-breadcrumb__item {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  padding: 4px;
-  line-height: 16px;
-  height: 16px;
-  border-radius: 4px;
+#layouts .layout__wnd--active .protyle-breadcrumb .protyle-breadcrumb__bar .protyle-breadcrumb__item:not(:nth-of-type(1)) {
   margin: 3px 0;
   opacity: var(--SCC-baseProperty-Opacity-A);
   color: var(--SCC-baseComponent-breadcrumb__bar-color);
+}
+
+#layouts .layout__wnd--active .protyle-breadcrumb .protyle-breadcrumb__bar .protyle-breadcrumb__item:nth-of-type(1)  {
+  position: sticky;
+  left: 0px;
+  background-color: var(--b3-theme-background) !important;
+  opacity: 1 !important;
+  z-index: 2;
 }
 
 /* 依次为 反链面板中【反向链接】、【提及】、嵌入块的面包屑 */
