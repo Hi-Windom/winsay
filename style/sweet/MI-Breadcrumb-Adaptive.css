@@ -89,6 +89,10 @@
   z-index: 2;
 }
 
+#layouts .layout__wnd--active .protyle-breadcrumb .protyle-breadcrumb__bar .protyle-breadcrumb__item:nth-of-type(1) svg {
+  color: var(--b3-theme-on-secondary);
+}
+
 /* 依次为 反链面板中【反向链接】、【提及】、嵌入块的面包屑 */
 .backlinkList .protyle-breadcrumb__bar,
 .backlinkMList .protyle-breadcrumb__bar,
