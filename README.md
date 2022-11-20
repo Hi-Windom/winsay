@@ -41,7 +41,7 @@
 
 > 版本更新详细内容请下滑至【集市更新版本日志】部分查看
 
-### 你可能错过的重要更新
+### 可能错过的重要更新
 
 块滚动条模式和位置、文档宽度模式在主题设置界面现已可用
 
@@ -49,11 +49,27 @@
 
 Step 1 确保在思源软件设置里关闭了【隐藏底部状态栏】
 
-<img src="https://b3logfile.com/siyuan/1662398123089/assets/image-20221112135324-f1qefbv.png"/>
-
 Step 2 鼠标悬浮在【帮助（问号）】，在呼出的菜单中点击【主题设置】
 
 <img src="https://b3logfile.com/siyuan/1662398123089/assets/image-20221112135352-1pkn6iv.png"/>
+
+## 🏳️‍🌈 主题特色介绍
+
+<img src="https://b3logfile.com/siyuan/1662398123089/assets/Sofill-%E9%A2%84%E8%A7%88%E5%9B%BE_01-20221031164539-cigw4p5.png"/>
+
+### 打造思源“第二默认主题”
+
+多端适配，体积小巧，深度优化默认主题已知缺陷，明亮/暗黑多种形态随心切换 🎨
+
+如此合适，微风迎怀，看得到的看不到的地方都充满了 Sofill- 的优化印记，满足细节控对 ⌈润物细无声⌋ 的极致追求，永不疲劳的舒适体验 🎡
+
+### 轻量化简洁风绛亽特色思源笔记主题
+
+[Sofill 系列主题对比](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E4%B8%BB%E9%A2%98%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9)  |  [Sofill 系列主题时间线 ](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E5%AE%B6%E6%97%8F%E6%97%B6%E9%97%B4%E7%BA%BF)
+
+Sofill- 主题颜色 [绛亽标准色](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E4%B8%BB%E9%A2%98%E9%80%9A%E7%94%A8%E6%A0%87%E5%87%86%E8%89%B2) + CNTC + SGTC 设计
+
+Sofill- 适合哪些人：13~58岁非色弱人群；青少年请在家长指导下观看，切勿沉迷
 
 缺省值修改： Sofill- 主题文件夹路径下的 config/UI.json 文件，将 "TabBar" 键的值修改为对应json键值
 
@@ -79,24 +95,6 @@ Step 2 鼠标悬浮在【帮助（问号）】，在呼出的菜单中点击【�
 | 墨绿紫 | ⬛ dark   | ✔️     | 构建     | root-D-InkGreenPurple.css  |                  |
 
 ---
-
-## 🏳️‍🌈 主题特色介绍
-
-<img src="https://b3logfile.com/siyuan/1662398123089/assets/Sofill-%E9%A2%84%E8%A7%88%E5%9B%BE_01-20221031164539-cigw4p5.png"/>
-
-### 打造思源“第二默认主题”
-
-多端适配，体积小巧，深度优化默认主题已知缺陷，明亮/暗黑多种形态随心切换 🎨
-
-如此合适，微风迎怀，看得到的看不到的地方都充满了 Sofill- 的优化印记，满足细节控对 ⌈润物细无声⌋ 的极致追求，永不疲劳的舒适体验 🎡
-
-### 轻量化简洁风绛亽特色思源笔记主题
-
-[Sofill 系列主题对比](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E4%B8%BB%E9%A2%98%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9)  |  [Sofill 系列主题时间线 ](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E5%AE%B6%E6%97%8F%E6%97%B6%E9%97%B4%E7%BA%BF)
-
-Sofill- 主题颜色 [绛亽标准色](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E4%B8%BB%E9%A2%98%E9%80%9A%E7%94%A8%E6%A0%87%E5%87%86%E8%89%B2) + CNTC + SGTC 设计
-
-Sofill- 适合哪些人：13~58岁非色弱人群；青少年请在家长指导下观看，切勿沉迷
 
 ## 🎯 Sofill- 重点目标
 
