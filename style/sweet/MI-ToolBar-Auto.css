@@ -84,7 +84,8 @@ body:not(.darwin):not(.android) #toolbar:not(:hover) #drag+button svg,
 body:not(.darwin):not(.android) #toolbar:not(:hover) #barSearch svg,
 body:not(.darwin):not(.android) #toolbar:not(:hover) #barReadonly svg,
 body:not(.darwin):not(.android) #toolbar:not(:hover) #barMode svg,
-body:not(.darwin):not(.android) #toolbar:not(:hover) #barSetting svg {
+body:not(.darwin):not(.android) #toolbar:not(:hover) #barSetting svg,
+body:not(.darwin):not(.android) #toolbar:not(:hover) #barTopHelp svg {
   opacity: var(--SCC-Variables-MI-ToolBar-Other-opacity);
 }
 
