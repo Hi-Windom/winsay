@@ -100,7 +100,7 @@ export class ConfirmDialog extends Dialog {
       //  console.log(e.target);
       let cl = e.target.classList;
       if (cl.contains("SCC-close") || cl.contains("b3-dialog__scrim")) {
-        this.close();
+        this.dispose();
       }
       if (cl.contains("SCC-default") || cl.contains("b3-button--cancel")) {
         this.opts.cancel();
