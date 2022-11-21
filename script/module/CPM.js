@@ -34,6 +34,7 @@ class Dialog extends EventTarget {
   createElement() {
     // console.log(this.opts.width)
     let divEles = document.createElement("div");
+    divEles.id = "SC-CP";
     divEles.innerHTML = `<div class="SCC-wrapper"></div><div class="b3-dialog--open"><div class="SCC-dialog b3-dialog"></div></div></div>`;
     divEles.style.display = "none";
     document.body.appendChild(divEles);
@@ -88,6 +89,7 @@ export class ConfirmDialog extends Dialog {
   }
   create() {
     this.divEles.innerHTML = this.opts.XML;
+    this.divEles.id = "SC-ConfirmDialog";
   }
   sure() {
     super.sure();
@@ -100,7 +102,7 @@ export class ConfirmDialog extends Dialog {
       //  console.log(e.target);
       let cl = e.target.classList;
       if (cl.contains("SCC-close") || cl.contains("b3-dialog__scrim")) {
-        this.close();
+        this.dispose();
       }
       if (cl.contains("SCC-default") || cl.contains("b3-button--cancel")) {
         this.opts.cancel();
@@ -108,7 +110,7 @@ export class ConfirmDialog extends Dialog {
       }
       if (cl.contains("SCC-primary")) {
         this.sure();
-        this.close();
+        this.dispose();
       }
     });
   }
