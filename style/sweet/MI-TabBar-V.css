@@ -15,7 +15,7 @@
 
 .layout__center [data-type="wnd"][data-id]:focus-within> :first-child {
   justify-content: left;
-  width: 2rem;
+  width: var(--SCC-Variables-MI-TabBarV_Auto-width);
   transition: width 0.03s cubic-bezier(0.46, 0.03, 0.52, 0.96) 0.31s;
   z-index: 2;
 }
