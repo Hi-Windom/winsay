@@ -34,6 +34,7 @@ class Dialog extends EventTarget {
   createElement() {
     // console.log(this.opts.width)
     let divEles = document.createElement("div");
+    divEles.id = "SC-CP";
     divEles.innerHTML = `<div class="SCC-wrapper"></div><div class="b3-dialog--open"><div class="SCC-dialog b3-dialog"></div></div></div>`;
     divEles.style.display = "none";
     document.body.appendChild(divEles);
@@ -108,7 +109,7 @@ export class ConfirmDialog extends Dialog {
       }
       if (cl.contains("SCC-primary")) {
         this.sure();
-        this.close();
+        this.dispose();
       }
     });
   }
