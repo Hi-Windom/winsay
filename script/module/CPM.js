@@ -50,9 +50,16 @@ class Dialog extends EventTarget {
   close() {
     this.divEles.style.display = "none";
   }
+  // 销毁组件
+  dispose() {
+    this.divEles.remove();
+  }
   // 打开组件
-  open() {
+  async open(callback=()=>{}) {
     this.divEles.style.display = "block";
+    if (typeof callback === "function") {
+      callback();
+    }
   }
   drag() {
     let kDialog = this.divEles.querySelector(".SCC-dialog");
@@ -97,7 +104,7 @@ export class ConfirmDialog extends Dialog {
       }
       if (cl.contains("SCC-default") || cl.contains("b3-button--cancel")) {
         this.opts.cancel();
-        this.close();
+        this.dispose();
       }
       if (cl.contains("SCC-primary")) {
         this.sure();
