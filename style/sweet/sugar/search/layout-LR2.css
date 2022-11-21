@@ -73,7 +73,7 @@ div[data-type="search-item"] .b3-list-item__meta {
 }
 
 #searchList div[data-type="search-item"] {
-  line-height: 3.8rem;
+  min-height: 3.8rem;
 }
 
 #searchList div[data-type="search-item"]>.b3-list-item__text,
