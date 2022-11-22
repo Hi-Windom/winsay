@@ -23,7 +23,7 @@
 
 ### 中期计划⛳
 
-* [ ] S2形态组明亮模式计划增加太空银，新增S3形态组
+* [ ] S2形态组暗黑模式计划增加午夜风暴，新增S3形态组
 * [ ] 右侧面板悬浮
 * [ ] Ctrl + 鼠标滚轮缩放显示效果优化
 * [ ] [提供接口 · Issue #425](https://github.com/Hi-Windom/winsay/issues/425)
@@ -32,15 +32,15 @@
 
 ---
 
-## ✨ 主题设置界面可配置更多项目了，支持记忆主题设置界面，支持导入导出主题配置数据，持续优化体验
+## ✨ 主题设置界面可配置更多项目了，超级块菜单和表格块菜单加入滚屏显示，持续优化体验
 
 > 版本更新详细内容请下滑至【集市更新版本日志】部分查看
 
 ### 可能错过的重要更新
 
-块滚动条模式和位置、文档宽度模式在主题设置界面现已可用；
-
-部分文件链接显示 icon，支持初始化主题设置；
+1. 块滚动条模式和位置、文档宽度模式在主题设置界面现已可用；
+2. 部分文件链接显示 icon，支持初始化主题设置；
+3. 支持记忆主题设置界面，支持导入导出主题配置数据；
 
 ### 主题设置界面入口指南
 
@@ -108,9 +108,9 @@ Sofill- 主题形态一览表 ✨
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v0.136 ~ v0.176 聚合说明
+### v0.136 ~ v0.178 聚合说明
 
-> 2022-11-21 released
+> 2022-11-22 released
 
 <p><a href="https://github.com/Hi-Windom/winsay/issues/399">
 <img src="https://img.shields.io/badge/SiYuan-2.5.0-green"/></a>
@@ -140,6 +140,8 @@ Sofill- 主题形态一览表 ✨
 18. [支持通过主题设置界面导入导出主题配置数据 · Issue #507 · v0.168](https://github.com/Hi-Windom/winsay/issues/507)
 19. [支持通过主题设置面板配置垂直页签栏自动收起 · Issue #508 · v0.170](https://github.com/Hi-Windom/winsay/issues/508)
 20. [支持通过主题设置面板配置更新检查 · Issue #517 · v0.174](https://github.com/Hi-Windom/winsay/issues/517)
+21. [支持通过主题设置界面配置反链面板边界强化 · Issue #524 · v0.178](https://github.com/Hi-Windom/winsay/issues/524)
+22. [超级块菜单和表格块菜单加入滚屏显示 · Issue #526 · v0.178](https://github.com/Hi-Windom/winsay/issues/526)
 
 改进优化：
 
@@ -158,6 +160,7 @@ Sofill- 主题形态一览表 ✨
 13. [细节优化 · Issue #512 · v0.172](https://github.com/Hi-Windom/winsay/issues/512)
 14. [优化主题设置面板在 Android 端的显示效果 · Issue #516 · v0.174](https://github.com/Hi-Windom/winsay/issues/516)
 15. [细节优化 · Issue #521 · v0.176](https://github.com/Hi-Windom/winsay/issues/521)
+16. [细节优化 · Issue #523 · v0.178](https://github.com/Hi-Windom/winsay/issues/523)
 
 缺陷修复：
 
