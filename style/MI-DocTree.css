@@ -47,6 +47,7 @@
   line-height: 23px;
   padding: 1px 0px;
   background-color: #ffffff11;
+  backdrop-filter: brightness(1.02) blur(58px);
 }
 
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul>ul>li .b3-list-item__toggle {
