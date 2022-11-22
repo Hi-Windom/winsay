@@ -52,7 +52,7 @@
   --b3-border-color: var(--SCC-White-WPS-light);
 
   /* 滚动条 */
-  --b3-scroll-color: var(--SCC-primary-lightest);
+  --b3-scroll-color: var(--SCC-primary-lighter);
 
   /* 列表 */
   --b3-list-hover: #FFF2F0A5;

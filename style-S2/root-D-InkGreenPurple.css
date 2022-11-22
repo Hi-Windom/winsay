@@ -52,7 +52,7 @@
     --b3-border-color: unset;
 
     /* 滚动条 */
-    --b3-scroll-color: var(--SCC-Purple-186-lightest);
+    --b3-scroll-color: var(--SCC-Purple-186-lighter);
 
     /* 列表 */
     --b3-list-hover: var(--SCC-Purple-186-lightest);
