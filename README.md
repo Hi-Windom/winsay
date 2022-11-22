@@ -108,12 +108,12 @@ Sofill- 主题形态一览表 ✨
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v0.136 ~ v0.182 聚合说明
+### v0.136 ~ v0.184 聚合说明
 
 > 2022-11-22 released
 
-<p><a href="https://github.com/Hi-Windom/winsay/issues/399">
-<img src="https://img.shields.io/badge/SiYuan-2.5.0-green"/></a>
+<p><a href="https://github.com/Hi-Windom/winsay/issues/501">
+<img src="https://img.shields.io/badge/SiYuan-2.5.1-green"/></a>
 <a href="https://github.com/Hi-Windom/winsay/issues/409">
 <img src="https://img.shields.io/badge/%E4%B8%8D%E5%85%BC%E5%AE%B9-2.4.5---red"/></a>
 <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow"/></p></p>
@@ -145,6 +145,7 @@ Sofill- 主题形态一览表 ✨
 23. [滚屏显示支持表格块 · Issue #527 · v0.180](https://github.com/Hi-Windom/winsay/issues/527)
 24. [滚屏显示支持列表块 · Issue #529 · v0.180](https://github.com/Hi-Windom/winsay/issues/529)
 25. [支持通过主题设置界面配置表格宽度、表格文字大小和文字对齐、表格居中、 · Issue #531 · v0.182](https://github.com/Hi-Windom/winsay/issues/531)
+26. [支持通过主题设置面板配置侧边栏容器背景增强 · Issue #537 · v0.184](https://github.com/Hi-Windom/winsay/issues/537)
 
 改进优化：
 
