@@ -20,11 +20,11 @@
   color: var(--b3-theme-primary);
 }
 
-.protyle-wysiwyg.protyle-wysiwyg--attr:has(div:nth-child(100))>div:nth-last-of-type(1):after {
+.protyle-wysiwyg.protyle-wysiwyg--attr:has(div:nth-child(58))>div:nth-last-of-type(1):after {
   content: "";
   display: flex;
   position: relative;
-  background-image: url('./../src/loading.gif');
+  background-image: url('./../src/icon/loading.gif');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;

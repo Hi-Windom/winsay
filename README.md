@@ -32,7 +32,7 @@
 
 ---
 
-## ✨ 主题设置界面可配置更多项目了，超级块菜单和表格块菜单加入滚屏显示，持续优化体验
+## ✨ 主题设置界面可配置更多项目了，顶级超级块、表格块和列表块菜单加入滚屏显示，一系列表格相关配置在主题设置面板现已可用，持续优化体验
 
 > 版本更新详细内容请下滑至【集市更新版本日志】部分查看
 
@@ -108,7 +108,7 @@ Sofill- 主题形态一览表 ✨
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v0.136 ~ v0.180 聚合说明
+### v0.136 ~ v0.182 聚合说明
 
 > 2022-11-22 released
 
@@ -144,6 +144,7 @@ Sofill- 主题形态一览表 ✨
 22. [超级块菜单和表格块菜单加入滚屏显示 · Issue #526 · v0.178](https://github.com/Hi-Windom/winsay/issues/526)
 23. [滚屏显示支持表格块 · Issue #527 · v0.180](https://github.com/Hi-Windom/winsay/issues/527)
 24. [滚屏显示支持列表块 · Issue #529 · v0.180](https://github.com/Hi-Windom/winsay/issues/529)
+25. [支持通过主题设置界面配置表格宽度、表格文字大小和文字对齐、表格居中、 · Issue #531 · v0.182](https://github.com/Hi-Windom/winsay/issues/531)
 
 改进优化：
 
@@ -165,6 +166,8 @@ Sofill- 主题形态一览表 ✨
 16. [细节优化 · Issue #523 · v0.178](https://github.com/Hi-Windom/winsay/issues/523)
 17. [视图选择仅支持编辑模式下顶级块 · Issue #530 · v0.180](https://github.com/Hi-Windom/winsay/issues/530)
 18. [主题设置面板引用锚文本业务逻辑优化 · Issue #532 · v0.180](https://github.com/Hi-Windom/winsay/issues/532)
+19. [Github更新链接变更 · Issue #534 · Hi-Windom/winsay](https://github.com/Hi-Windom/winsay/issues/534)
+20. [细节优化 · Issue #535 · v0.182](https://github.com/Hi-Windom/winsay/issues/535)
 
 缺陷修复：
 
