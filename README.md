@@ -108,7 +108,7 @@ Sofill- 主题形态一览表 ✨
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v0.136 ~ v0.186 聚合说明
+### v0.136 ~ v0.188 聚合说明
 
 > 2022-11-23 released
 
@@ -142,6 +142,7 @@ Sofill- 主题形态一览表 ✨
 24. [滚屏显示支持列表块 · Issue #529 · v0.180](https://github.com/Hi-Windom/winsay/issues/529)
 25. [支持通过主题设置界面配置表格宽度、表格文字大小和文字对齐、表格居中、 · Issue #531 · v0.182](https://github.com/Hi-Windom/winsay/issues/531)
 26. [支持通过主题设置面板配置侧边栏容器背景增强 · Issue #537 · v0.184](https://github.com/Hi-Windom/winsay/issues/537)
+27. [支持通过主题设置面板配置列表辅助线聚焦点亮模式 · Issue #539 · v0.188](https://github.com/Hi-Windom/winsay/issues/539)
 
 改进优化：
 
