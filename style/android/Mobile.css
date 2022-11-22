@@ -79,3 +79,9 @@ body.body--desktop.android #searchByKey {
 body.body--desktop.android .fn__size200#copyKey {
   letter-spacing: -0.5px;
 }
+
+body.android .side-panel {
+  background-color: var(--b3-theme-background-light);
+  opacity: .92;
+  backdrop-filter: blur(5.8px);
+}
