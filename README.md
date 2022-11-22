@@ -108,15 +108,11 @@ Sofill- 主题形态一览表 ✨
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v0.136 ~ v0.184 聚合说明
+### v0.136 ~ v0.186 聚合说明
 
-> 2022-11-22 released
+> 2022-11-23 released
 
-<p><a href="https://github.com/Hi-Windom/winsay/issues/501">
-<img src="https://img.shields.io/badge/SiYuan-2.5.1-green"/></a>
-<a href="https://github.com/Hi-Windom/winsay/issues/409">
-<img src="https://img.shields.io/badge/%E4%B8%8D%E5%85%BC%E5%AE%B9-2.4.5---red"/></a>
-<img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow"/></p></p>
+<p><a href="https://github.com/Hi-Windom/winsay/issues/501"><img src="https://img.shields.io/badge/SiYuan-2.5.1-green"/></a> <a href="https://github.com/Hi-Windom/winsay/issues/409"><img src="https://img.shields.io/badge/%E4%B8%8D%E5%85%BC%E5%AE%B9-2.4.5---red"/></a> <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow"/></p></p>
 
 引入特性：
 
@@ -169,11 +165,13 @@ Sofill- 主题形态一览表 ✨
 18. [主题设置面板引用锚文本业务逻辑优化 · Issue #532 · v0.180](https://github.com/Hi-Windom/winsay/issues/532)
 19. [Github更新链接变更 · Issue #534 · Hi-Windom/winsay](https://github.com/Hi-Windom/winsay/issues/534)
 20. [细节优化 · Issue #535 · v0.182](https://github.com/Hi-Windom/winsay/issues/535)
+21. [细节优化 · Issue #541 · v0.186](https://github.com/Hi-Windom/winsay/issues/541)
 
 缺陷修复：
 
 1. [修改文档宽度模式时文档题目未生效 · Issue #453 · v0.140](https://github.com/Hi-Windom/winsay/issues/453)
 2. [设置块滚动条在左侧显示后许多地方的tooltips无法正常显示 · Issue #466 · v0.144](https://github.com/Hi-Windom/winsay/issues/466)
+3. [protyle-gutters位置异常 · Issue #542 · v0.186](https://github.com/Hi-Windom/winsay/issues/542)
 
 ## 🎈 鸣谢
 
