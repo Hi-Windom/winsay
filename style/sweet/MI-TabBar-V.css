@@ -145,11 +145,6 @@ ul.fn__flex.layout-tab-bar li {
   /* 影响【设置】-【集市】标签页 */
 }
 
-.layout-tab-bar .item {
-  min-height: 30px !important;
-  height: 30px !important;
-}
-
 .layout-tab-bar .item__close {
   padding: 13px 5.8px 13px 0;
   display: flex;
@@ -185,7 +180,7 @@ ul.fn__flex.layout-tab-bar li {
 /* 非当前页签样式 */
 .layout-tab-bar li.item:not(:last-child).item:not(.item--focus),
 .layout-tab-bar li.item:last-child:not(.item--focus):not(.item--readonly) {
-  box-shadow: var(--SCC-baseComponent-TabBar-V__item-box-shadow) !important;
+  box-shadow: var(--SCC-Variables-TabBar-V__item-box-shadow) !important;
   border-radius: 3px !important;
   border: 0px ridge transparent !important;
   /* margin-bottom: 0px !important; */
@@ -205,9 +200,9 @@ ul.fn__flex.layout-tab-bar li {
 }
 
 #layouts .layout-tab-bar .item--focus {
-  box-shadow: var(--SCC-baseComponent-TabBar-V__item-box-shadow) !important;
+  box-shadow: var(--SCC-Variables-TabBar-V__item-box-shadow) !important;
   border-radius: 3px !important;
-  /* border-bottom: 2px ridge var(--b3-theme-primary-light) !important; */
+  border-bottom: var(--SCC-Variables-TabBar-border-bottom) !important;
   margin-bottom: 3px !important;
   transition-timing-function: cubic-bezier(1, 0, 0, 1);
   transition-duration: 0.2s;

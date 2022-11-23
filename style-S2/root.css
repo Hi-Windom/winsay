@@ -65,9 +65,10 @@
 
   /* 遮罩 */
   --b3-mask-background: #070809a3;
+}
 
-
-  /* --- */
+/* --- */
+:root {
   --SCC-Component-selector-border: 1px solid var(--SCC-Purple-186-lighter);
   --SCC-Component-button-text-color: var(--SCC-Purple-Soledar);
   --SCC-Component-button-bg-color: var(--b3-theme-primary-lightest);
@@ -89,8 +90,6 @@
   --SCC-Component-meno-border-bottom: 2px solid var(--b3-card-info-color);
   --SCC-Component-Counter-bg-color: var(--SCC-CNTC-绛紫);
   --SCC-Component-Counter-border: 1.3px solid var(--SCC-CNTC-雪青);
-  --SCC-Component-TabBar-item__focus-box-shadow: rgba(131, 131, 131, 0.4) 0px 2px 4px, rgba(131, 131, 131, 0.3) 0px 7px 3px -3px, rgba(131, 131, 131, 0.2) 0px -3px 0px inset;
-  --SCC-Component-TabBar-item-box-shadow: rgba(131, 131, 131, 0.4) 0px 2px 4px, rgba(131, 131, 131, 0.3) 0px 7px 3px -3px, rgba(131, 131, 131, 0.2) 0px -3px 0px inset;
   --SCC-Component-TabBar-item__close-svg__hover-color: var(--SCC-Purple-Soledar);
   --SCC-sCt-Hfbs1-color1: rgba(144, 111, 137, 0.11);
   --SCC-sCt-Hfbs1-color2: rgba(144, 111, 137, 0.17);

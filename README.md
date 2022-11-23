@@ -32,15 +32,15 @@
 
 ---
 
-## ✨ 主题设置界面可配置更多项目了，顶级超级块、表格块和列表块菜单加入滚屏显示，一系列表格相关配置在主题设置面板现已可用，持续优化体验
+## ✨ 主题设置界面可配置更多项目了，一系列页签相关配置在主题设置面板现已可用，持续优化体验
 
 > 版本更新详细内容请下滑至【集市更新版本日志】部分查看
 
 ### 可能错过的重要更新
 
-1. 块滚动条模式和位置、文档宽度模式在主题设置界面现已可用；
-2. 部分文件链接显示 icon，支持初始化主题设置；
+1. 部分文件链接显示 icon，支持初始化主题设置；
 3. 支持记忆主题设置界面，支持导入导出主题配置数据；
+4. 顶级超级块、表格块和列表块菜单加入滚屏显示，一系列表格相关配置在主题设置面板现已可用；
 
 ### 主题设置界面入口指南
 
@@ -108,7 +108,7 @@ Sofill- 主题形态一览表 ✨
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v0.136 ~ v0.188 聚合说明
+### v0.136 ~ v0.190 聚合说明
 
 > 2022-11-23 released
 
@@ -143,6 +143,10 @@ Sofill- 主题形态一览表 ✨
 25. [支持通过主题设置界面配置表格宽度、表格文字大小和文字对齐、表格居中、 · Issue #531 · v0.182](https://github.com/Hi-Windom/winsay/issues/531)
 26. [支持通过主题设置面板配置侧边栏容器背景增强 · Issue #537 · v0.184](https://github.com/Hi-Windom/winsay/issues/537)
 27. [支持通过主题设置面板配置列表辅助线聚焦点亮模式 · Issue #539 · v0.188](https://github.com/Hi-Windom/winsay/issues/539)
+28. [支持通过主题设置界面配置顶栏清爽模式 · Issue #547 · v0.190](https://github.com/Hi-Windom/winsay/issues/547)
+29. [支持通过主题设置界面配置页签大小 · Issue #546 · v0.190](https://github.com/Hi-Windom/winsay/issues/546)
+30. [支持在主题设置界面配置WND页签风格 · Issue #403 · v0.190](https://github.com/Hi-Windom/winsay/issues/403)
+31. [支持通过主题设置面板配置WND页签文字晕染 · Issue #553 · v0.190](https://github.com/Hi-Windom/winsay/issues/553)
 
 改进优化：
 
@@ -167,6 +171,8 @@ Sofill- 主题形态一览表 ✨
 19. [Github更新链接变更 · Issue #534 · Hi-Windom/winsay](https://github.com/Hi-Windom/winsay/issues/534)
 20. [细节优化 · Issue #535 · v0.182](https://github.com/Hi-Windom/winsay/issues/535)
 21. [细节优化 · Issue #541 · v0.186](https://github.com/Hi-Windom/winsay/issues/541)
+22. [Andorid 端显示更多主题设置项 · Issue #551 · v0.190](https://github.com/Hi-Windom/winsay/issues/551)
+23. [细节优化 · Issue #548 · v0.190](https://github.com/Hi-Windom/winsay/issues/548)
 
 缺陷修复：
 

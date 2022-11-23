@@ -90,8 +90,6 @@
   --SCC-Component-meno-border-bottom: 2px solid var(--b3-card-info-color);
   --SCC-Component-Counter-bg-color: var(--SCC-CNTC-煎茶色);
   --SCC-Component-Counter-border: 1.3px solid var(--SCC-CNTC-灰梅);
-  --SCC-Component-TabBar-item__focus-box-shadow: rgba(131, 131, 131, 0.4) 0px 2px 4px, rgba(131, 131, 131, 0.3) 0px 7px 3px -3px, rgba(131, 131, 131, 0.2) 0px -3px 0px inset;
-  --SCC-Component-TabBar-item-box-shadow: rgba(131, 131, 131, 0.4) 0px 2px 4px, rgba(131, 131, 131, 0.3) 0px 7px 3px -3px, rgba(131, 131, 131, 0.2) 0px -3px 0px inset;
   --SCC-Component-TabBar-item__close-svg__hover-color: var(--SCC-CNTC-品红);
   --SCC-sCt-Hfbs1-color1: rgba(101, 117, 131, 0.11);
   --SCC-sCt-Hfbs1-color2: rgba(101, 117, 131, 0.17);
