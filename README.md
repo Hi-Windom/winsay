@@ -108,7 +108,7 @@ Sofill- 主题形态一览表 ✨
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v0.136 ~ v0.194 聚合说明
+### v0.136 ~ v0.196 聚合说明
 
 > 2022-11-23 released
 
@@ -175,6 +175,7 @@ Sofill- 主题形态一览表 ✨
 22. [Andorid 端显示更多主题设置项 · Issue #551 · v0.190](https://github.com/Hi-Windom/winsay/issues/551)
 23. [细节优化 · Issue #548 · v0.190](https://github.com/Hi-Windom/winsay/issues/548)
 24. [细节优化 · Issue #558 · v0.194](https://github.com/Hi-Windom/winsay/issues/558)
+25. [顶栏清爽模式收纳明暗模式切换控件 · Issue #561 · v0.196](https://github.com/Hi-Windom/winsay/issues/561)
 
 缺陷修复：
 
