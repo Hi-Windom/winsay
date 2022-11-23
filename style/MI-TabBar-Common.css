@@ -6,6 +6,10 @@
   font-weight: 1314 !important;
 }
 
+[data-type="wnd"]>div>.layout-tab-bar .item--focus .item__text {
+  text-shadow: var(--SCC-Variables-TabBar_item__textShadow) !important;
+}
+
 .layout-tab-bar .item {
   min-height: calc(var(--SCC-Variables-MI-TabBar-MinHeight, 30) * 1px);
   height: 30px;
