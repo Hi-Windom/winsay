@@ -7,7 +7,7 @@
 }
 
 .layout-tab-bar .item {
-  min-height: 30px;
+  min-height: calc(var(--SCC-Variables-MI-TabBar-MinHeight, 30) * 1px);
   height: 30px;
-  font-size: 10pt;
+  font-size: calc(var(--SCC-Variables-MI-TabBar-FontSize, 10) * 1pt);
 }

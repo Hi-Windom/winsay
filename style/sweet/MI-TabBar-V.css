@@ -145,11 +145,6 @@ ul.fn__flex.layout-tab-bar li {
   /* 影响【设置】-【集市】标签页 */
 }
 
-.layout-tab-bar .item {
-  min-height: 30px !important;
-  height: 30px !important;
-}
-
 .layout-tab-bar .item__close {
   padding: 13px 5.8px 13px 0;
   display: flex;

@@ -21,10 +21,9 @@
 }
 
 #layouts .layout-tab-bar .item {
-  line-height: 13px;
-  font-size: 9pt;
-  min-height: 25px;
-  height: 25px;
+  font-size: calc(var(--SCC-Variables-MI-TabBar-FontSize, 10) * 1pt - 1pt);
+  min-height: calc(var(--SCC-Variables-MI-TabBar-MinHeight, 30) * 1px - 3px);
+  height: calc(var(--SCC-Variables-MI-TabBar-MinHeight, 30) * 1px - 3px);
   margin: -1px -1px -1px -2px !important;
   border-left: 2px ridge #85858513 !important;
   border-right: 0px ridge #85858508 !important;
