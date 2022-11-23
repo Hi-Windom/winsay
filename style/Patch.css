@@ -1,5 +1,10 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
+#barhelp>.b3-menu {
+  right: 13px !important;
+  padding: 3px 13px 13px !important;
+}
+
 div[data-name="bazaar"] .b3-card:hover {
   transform: none;
 }

@@ -112,15 +112,6 @@
   --b3-pdf-background7: #944194;
 }
 
-
-.block__popover.block__popover--move.block__popover--open {
-  background-color: var(--b3-theme-background) !important;
-  box-shadow: #77777777 0px 0px 0px 3px !important;
-  opacity: 0.98 !important;
-}
-
-
-
 .b3-list--background .b3-list-item:hover:not(.b3-list-item--focus) {
   background-color: #c1c2c308;
 }
