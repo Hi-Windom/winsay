@@ -123,7 +123,7 @@ body:not(.android) ul.layout-tab-bar li [title="更多"] svg:hover {
 /* 非当前页签样式 */
 .layout-tab-bar li.item:not(:last-child).item:not(.item--focus),
 .layout-tab-bar li.item:last-child:not(.item--focus):not(.item--readonly) {
-  box-shadow: var(--SCC-Component-TabBar-item-box-shadow) !important;
+  box-shadow: var(--SCC-Variables-TabBar-item-box-shadow) !important;
   border-radius: 3px !important;
   border: 0px ridge transparent !important;
   /* margin-bottom: 0px !important; */
@@ -142,10 +142,12 @@ body:not(.android) ul.layout-tab-bar li [title="更多"] svg:hover {
   opacity: 0.31;
 }
 #layouts .layout-tab-bar .item--focus {
-  box-shadow: var(--SCC-Component-TabBar-item__focus-box-shadow) !important;
+  box-shadow: var(--SCC-Variables-TabBar-item__focus-box-shadow) !important;
   border-radius: 3px !important;
-  /* border-bottom: 2px ridge var(--b3-theme-primary-light) !important; */
-  margin-bottom: 3px !important;
+  border-bottom: var(--SCC-Variables-TabBar-border-bottom) !important;
+  background-color: var(--b3-theme-surface-lighter);
+  backdrop-filter: brightness(1.13);
+  margin-bottom: var(--SCC-Variables-TabBar-margin-bottom) !important;
   max-width: 666px !important;
   min-width: 47px !important;
   transition-timing-function: cubic-bezier(1, 0, 0, 1);
@@ -156,14 +158,6 @@ body:not(.android) ul.layout-tab-bar li [title="更多"] svg:hover {
 /* 钉住标签页*/
 .layout-tab-bar .item--pin .item__text {
   max-width: 100px;
-}
-
-/* 设置当前标签页文字样式，影响【设置】-【集市】 */
-.layout-tab-bar .item--focus .item__text {
-  color: var(--b3-theme-primary) !important;
-  opacity: 1 !important;
-  text-shadow: -1px 1px 13px var(--SCC-Orange-Windom);
-  font-weight: 1314 !important;
 }
 
 /*有图标的标签页内文档名钉住时非聚焦隐藏 */

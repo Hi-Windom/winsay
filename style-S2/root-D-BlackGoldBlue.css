@@ -92,8 +92,6 @@
     --SCC-Component-meno-border-bottom: 2px solid var(--b3-card-info-color);
     --SCC-Component-Counter-bg-color: var(--SCC-CNTC-黛蓝);
     --SCC-Component-Counter-border: 1.3px solid var(--SCC-CNTC-黛蓝);
-    --SCC-Component-TabBar-item__focus-box-shadow: none;
-    --SCC-Component-TabBar-item-box-shadow: none;
     --SCC-Component-TabBar-item__close-svg__hover-color: var(--SCC-CNTC-杏黄);
     --SCC-sCt-Hfbs1-color1: rgba(38, 57, 77, 0.03);
     --SCC-sCt-Hfbs1-color2: rgba(38, 57, 77, 0.13);
