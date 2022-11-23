@@ -173,6 +173,7 @@ Sofill- 主题形态一览表 ✨
 21. [细节优化 · Issue #541 · v0.186](https://github.com/Hi-Windom/winsay/issues/541)
 22. [Andorid 端显示更多主题设置项 · Issue #551 · v0.190](https://github.com/Hi-Windom/winsay/issues/551)
 23. [细节优化 · Issue #548 · v0.190](https://github.com/Hi-Windom/winsay/issues/548)
+24. [Github更新链接变更 · Issue #555 · v0.192](https://github.com/Hi-Windom/winsay/issues/555)
 
 缺陷修复：
 
