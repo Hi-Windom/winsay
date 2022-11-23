@@ -108,7 +108,7 @@ Sofill- 主题形态一览表 ✨
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v0.136 ~ v0.190 聚合说明
+### v0.136 ~ v0.194 聚合说明
 
 > 2022-11-23 released
 
@@ -147,6 +147,7 @@ Sofill- 主题形态一览表 ✨
 29. [支持通过主题设置界面配置页签大小 · Issue #546 · v0.190](https://github.com/Hi-Windom/winsay/issues/546)
 30. [支持在主题设置界面配置WND页签风格 · Issue #403 · v0.190](https://github.com/Hi-Windom/winsay/issues/403)
 31. [支持通过主题设置面板配置WND页签文字晕染 · Issue #553 · v0.190](https://github.com/Hi-Windom/winsay/issues/553)
+32. [支持通过主题设置界面配置引用弹出层钉住辅助感知 · Issue #559 · v0.194](https://github.com/Hi-Windom/winsay/issues/559)
 
 改进优化：
 
@@ -173,7 +174,7 @@ Sofill- 主题形态一览表 ✨
 21. [细节优化 · Issue #541 · v0.186](https://github.com/Hi-Windom/winsay/issues/541)
 22. [Andorid 端显示更多主题设置项 · Issue #551 · v0.190](https://github.com/Hi-Windom/winsay/issues/551)
 23. [细节优化 · Issue #548 · v0.190](https://github.com/Hi-Windom/winsay/issues/548)
-24. [Github更新链接变更 · Issue #555 · v0.192](https://github.com/Hi-Windom/winsay/issues/555)
+24. [细节优化 · Issue #558 · v0.194](https://github.com/Hi-Windom/winsay/issues/558)
 
 缺陷修复：
 
