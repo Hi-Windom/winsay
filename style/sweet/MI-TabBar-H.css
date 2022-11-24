@@ -204,7 +204,7 @@ body:not(.android) ul.layout-tab-bar li [title="更多"] svg:hover {
 /* 为钉住的标签页右上角增加大头钉图标 */
 li.item.item--pin:not(.item--focus):after {
   content: "";
-  content: url("../../src/pin.svg");
+  content: url("../../src/icon/pin.svg");
   position: absolute;
   right: 5px;
   top: 0px;
@@ -216,7 +216,7 @@ li.item.item--pin:not(.item--focus):after {
 
 li.item.item--pin.item--focus:after {
   content: "";
-  content: url("../../src/pin.svg") !important;
+  content: url("../../src/icon/pin.svg") !important;
   position: absolute;
   right: 5px;
   top: 0px;

@@ -87,7 +87,7 @@ protyle_toolbar.addEventListener(
       var text = window.getSelection().toString();
       document.querySelector("#toolbar #barSearch").click();
       setTimeout(() => {
-        let i = document.querySelector(".b3-dialog--open #searchInput")
+        let i = document.querySelector(".b3-dialog--open #searchInput");
         i.value = text;
         let e = new Event("input", { bubbles: true });
         let tracker = i._valueTracker;
