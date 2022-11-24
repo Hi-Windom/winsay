@@ -125,6 +125,7 @@ Sofill- 主题形态一览表 ✨
 1. [细节优化 · Issue #567 · v0.200](https://github.com/Hi-Windom/winsay/issues/567)
 2. [Ctrl + 鼠标滚轮缩放字号优化 · Issue #86 · v0.202](https://github.com/Hi-Windom/winsay/issues/86)
 3. [细节优化 · Issue #571 · v0.202](https://github.com/Hi-Windom/winsay/issues/571)
+4. [细节优化 · Issue #574 · v0.204](https://github.com/Hi-Windom/winsay/issues/574)
 
 ## 🎈 鸣谢
 
