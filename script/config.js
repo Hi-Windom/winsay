@@ -4,6 +4,7 @@ const config_Custom = "/conf/appearance/themes/Sofill-/config/Custom.json";
 const config_UI = "/conf/appearance/themes/Sofill-/config/UI.json";
 const themeStyle = document.getElementById("themeStyle"); // 当前主题引用路径
 const THEME_ROOT = new URL(themeStyle.href).pathname.replace("theme.css", "");
+console.log(THEME_ROOT);
 const S2_BASE = `${THEME_ROOT}style-S2/`;
 const ID_COLOR_STYLE = "theme-color-style";
 
@@ -27,8 +28,8 @@ var colors2 = [
   "root-D-InkGreenPurple.css",
 ];
 
-const latest_LC_href = "SC_winsay_style_LC_href";
-const latest_DC_href = "SC_winsay_style_DC_href";
+const latest_LC_ID = "SC_winsay_cp_custom__LS";
+const latest_DC_ID = "SC_winsay_cp_custom__DS";
 /* 循环迭代器 */
 var Iterator = function* (items) {
   for (let i = 0; true; i = (i + 1) % items.length) {
@@ -69,8 +70,8 @@ export {
   clientMode,
   Iterator2,
   Iterator,
-  latest_DC_href,
-  latest_LC_href,
+  latest_DC_ID,
+  latest_LC_ID,
   colors2,
   colors,
   IDs,
