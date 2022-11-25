@@ -4,7 +4,7 @@ const config_Custom = "/conf/appearance/themes/Sofill-/config/Custom.json";
 const config_UI = "/conf/appearance/themes/Sofill-/config/UI.json";
 const themeStyle = document.getElementById("themeStyle"); // 当前主题引用路径
 const THEME_ROOT = new URL(themeStyle.href).pathname.replace("theme.css", "");
-
+const S2_BASE = `${THEME_ROOT}style-S2/`;
 const ID_COLOR_STYLE = "theme-color-style";
 
 /* DOM 节点 ID */
@@ -14,17 +14,17 @@ const IDs = {
 };
 
 var colors = [
-  "style-S2/root.css",
-  "style-S2/root-L-Blue.css",
-  "style-S2/root-L-Red.css",
-  "style-S2/root-L-Pink.css",
-  "style-S2/root-L-Green.css",
-  "style-S2/root-L-Yellow.css",
+  "root.css",
+  "root-L-Blue.css",
+  "root-L-Red.css",
+  "root-L-Pink.css",
+  "root-L-Green.css",
+  "root-L-Yellow.css",
 ];
 
 var colors2 = [
-  "style-S2/root-D-BlackGoldBlue.css",
-  "style-S2/root-D-InkGreenPurple.css",
+  "root-D-BlackGoldBlue.css",
+  "root-D-InkGreenPurple.css",
 ];
 
 const latest_LC_href = "SC_winsay_style_LC_href";
@@ -76,6 +76,7 @@ export {
   IDs,
   ID_COLOR_STYLE,
   THEME_ROOT,
+  S2_BASE,
   themeStyle,
   config_UI,
   config_Custom,
