@@ -4,7 +4,6 @@ const config_Custom = "/conf/appearance/themes/Sofill-/config/Custom.json";
 const config_UI = "/conf/appearance/themes/Sofill-/config/UI.json";
 const themeStyle = document.getElementById("themeStyle"); // 当前主题引用路径
 const THEME_ROOT = new URL(themeStyle.href).pathname.replace("theme.css", "");
-console.log(THEME_ROOT);
 const S2_BASE = `${THEME_ROOT}style-S2/`;
 const ID_COLOR_STYLE = "theme-color-style";
 
