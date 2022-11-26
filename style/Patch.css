@@ -1,5 +1,44 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
+/* 13号色特殊显示 #320 */
+[style*="color: var(--b3-font-color13)"]:hover{
+  color: inherit !important;
+  transition: all .13s cubic-bezier(0, 0, 0.2, 1) .13s;
+}
+[style*="color: var(--b3-font-color13)"]:not(:hover){
+  transition: all .31s cubic-bezier(0.4, 0, 0.2, 1) .31s;
+}
+[style*="background-color: var(--b3-font-background13)"]:hover{
+  background-color: transparent !important;
+  transition: all .13s cubic-bezier(0, 0, 0.2, 1) .31s;
+}
+[style*="background-color: var(--b3-font-background13)"]:not(:hover){
+  transition: all .31s cubic-bezier(0.4, 0, 0.2, 1) .13s;
+  color: transparent !important;
+}
+
+/* https://ld246.com/article/1669468102342 */
+.b3-dialog__container > div:nth-child(3) > .fn__flex-column.b3-dialog--switch:has(.fn__hr):has(.dialog__path) > div.fn__flex {
+  overflow: auto;
+}
+.b3-dialog__container > div:nth-child(3) > .fn__flex-column.b3-dialog--switch:has(.fn__hr):has(.dialog__path):has(li:nth-of-type(15)) {
+  max-width: 700px;
+}
+.b3-dialog__container > div:nth-child(3) > .fn__flex-column.b3-dialog--switch:has(.fn__hr):has(.dialog__path) > div.fn__flex > ul:nth-child(2):has(li:nth-of-type(15)) {
+  column-count: 2;
+  max-width: 540px;
+}
+.b3-dialog__container > div:nth-child(3) > .fn__flex-column.b3-dialog--switch:has(.fn__hr):has(.dialog__path):has(li:nth-of-type(30)) {
+  max-width: 940px;
+}
+.b3-dialog__container > div:nth-child(3) > .fn__flex-column.b3-dialog--switch:has(.fn__hr):has(.dialog__path) > div.fn__flex > ul:nth-child(2):has(li:nth-of-type(30)) {
+  column-count: 3;
+  max-width: 760px;
+}
+.b3-dialog--switch .dialog__path {
+  min-height: 1.86em;
+}
+
 #barhelp>.b3-menu {
   right: 13px !important;
   padding: 3px 13px 13px !important;
