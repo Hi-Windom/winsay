@@ -38,10 +38,10 @@
   /* 自定义颜色 */
   --b3-font-color11: var(--SCC-Yellow-HellisePotter);
   --b3-font-color12: var(--SCC-Orange-Windom);
-  --b3-font-color13: var(--b3-theme-on-background);
+  --b3-font-color13: transparent;
   --b3-font-background11: #efaf5fc5;
   --b3-font-background12: #ea9100c5;
-  --b3-font-background13: var(--b3-theme-on-background);
+  --b3-font-background13: #000;
 
   /* 动画效果 */
   --b3-transition: all 0.31s cubic-bezier(0, 0, 0.2, 1) 0ms;

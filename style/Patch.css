@@ -1,5 +1,22 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
+/* 13号色特殊显示 #320 */
+[style*="color: var(--b3-font-color13)"]:hover{
+  color: inherit !important;
+  transition: all .13s cubic-bezier(0, 0, 0.2, 1) .13s;
+}
+[style*="color: var(--b3-font-color13)"]:not(:hover){
+  transition: all .31s cubic-bezier(0.4, 0, 0.2, 1) .31s;
+}
+[style*="background-color: var(--b3-font-background13)"]:hover{
+  background-color: transparent !important;
+  transition: all .13s cubic-bezier(0, 0, 0.2, 1) .31s;
+}
+[style*="background-color: var(--b3-font-background13)"]:not(:hover){
+  transition: all .31s cubic-bezier(0.4, 0, 0.2, 1) .13s;
+  color: transparent !important;
+}
+
 /* https://ld246.com/article/1669468102342 */
 .b3-dialog__container > div:nth-child(3) > .fn__flex-column.b3-dialog--switch:has(.fn__hr):has(.dialog__path) > div.fn__flex {
   overflow: auto;
