@@ -131,6 +131,7 @@ Sofill- 主题形态一览表 ✨
 5. [支持通过主题设置界面配置主题明亮模式缺省形态 · Issue #577 · v0.206](https://github.com/Hi-Windom/winsay/issues/577)
 6. [文档宽度模式增加固宽预览类选项 · Issue #583 · v0.208](https://github.com/Hi-Windom/winsay/issues/583)
 7. [13号色特殊显示 · Issue #320 · v0.210](https://github.com/Hi-Windom/winsay/issues/320)
+8. [反链面板粘性布局 · Issue #590 · v0.210](https://github.com/Hi-Windom/winsay/issues/590)
 
 改进优化：
 
