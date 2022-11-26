@@ -3,13 +3,26 @@
   .fn__flex-column:has(#searchList) {
     height: 88vh !important;
   }
+
   .spread-search__preview {
     margin-top: 13px;
     border-top: none;
   }
 
-  #searchList {
-    height: calc(66% - 69px) !important;
+  body.android #searchList {
+    height: calc(58% - 69px) !important;
+  }
+
+  body:not(.android) #searchList {
+    height: calc(31% - 69px) !important;
+  }
+
+  #searchList:has(.b3-list-item:nth-of-type(6)) {
+    height: calc(58% - 69px) !important;
+  }
+
+  #searchList:has(.b3-list-item:nth-of-type(13)) {
+    height: calc(70% - 69px) !important;
   }
 
   #searchList div[data-type="search-item"] {
@@ -21,6 +34,7 @@
     text-align: left;
     line-height: 1.68rem;
   }
+
   #searchList div[data-type="search-item"]>.b3-list-item__text,
   #searchList div[data-type="search-item"]>.b3-list-item__graphic {
     margin: -13px 0 1px 0;
@@ -65,6 +79,17 @@
     float: left;
     margin-right: 3px;
     border-right: 2px ridge #58585813;
+  }
+
+  body.android #searchList {
+    width: max(58%, 700px);
+  }
+
+  body:not(.android) .b3-dialog__container[style*="80vw"] #searchList {
+    width: max(31%, 580px);
+  }
+
+  .b3-dialog__container[style*="80vw"] #searchList:has(.b3-list-item:nth-of-type(13)) {
     width: max(58%, 700px);
   }
 
