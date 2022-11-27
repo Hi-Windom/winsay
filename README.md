@@ -116,9 +116,9 @@ Sofill- 主题形态一览表 ✨
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v0.198 ~ v0.210 聚合说明
+### v0.198 ~ v0.212 聚合说明
 
-> 2022-11-26 released
+> 2022-11-27 released
 
 <p><a href="https://github.com/Hi-Windom/winsay/issues/501"><img src="https://img.shields.io/badge/SiYuan-2.5.1-green"/></a> <a href="https://github.com/Hi-Windom/winsay/issues/409"><img src="https://img.shields.io/badge/%E4%B8%8D%E5%85%BC%E5%AE%B9-2.4.5---red"/></a> <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow"/></p></p>
 
@@ -141,6 +141,11 @@ Sofill- 主题形态一览表 ✨
 4. [细节优化 · Issue #574 · v0.204](https://github.com/Hi-Windom/winsay/issues/574)
 5. [细节优化 · Issue #584 · v0.208](https://github.com/Hi-Windom/winsay/issues/584)
 6. [CTRL + TAB 弹出层鲁棒性增强 · Issue #588 · v0.210](https://github.com/Hi-Windom/winsay/issues/588)
+7. [使用思源集市自检源支持跳转到集市更新 · Issue #592 · v0.212](https://github.com/Hi-Windom/winsay/issues/592)
+
+缺陷修复：
+
+1. [笔记本设置界面复制ID按钮样式未定义 · Issue #573 · v0.212](https://github.com/Hi-Windom/winsay/issues/573)
 
 ## 🎈 鸣谢
 
