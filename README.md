@@ -38,7 +38,7 @@
 
 ---
 
-## ✨ 主题设置界面可配置更多项目了，文档宽度模式增加固宽预览类选项，13号色特殊显示，持续优化体验
+## ✨ 主题设置界面可配置更多项目了，文档宽度模式增加固宽预览类选项，13号色特殊显示，图片预览viewer界面美化，持续优化体验
 
 > 版本更新详细内容请下滑至【集市更新版本日志】部分查看
 
@@ -116,7 +116,7 @@ Sofill- 主题形态一览表 ✨
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v0.198 ~ v0.212 聚合说明
+### v0.198 ~ v0.214 聚合说明
 
 > 2022-11-27 released
 
@@ -132,6 +132,7 @@ Sofill- 主题形态一览表 ✨
 6. [文档宽度模式增加固宽预览类选项 · Issue #583 · v0.208](https://github.com/Hi-Windom/winsay/issues/583)
 7. [13号色特殊显示 · Issue #320 · v0.210](https://github.com/Hi-Windom/winsay/issues/320)
 8. [反链面板粘性布局 · Issue #590 · v0.210](https://github.com/Hi-Windom/winsay/issues/590)
+9. [图片预览viewer界面美化 · Issue #595 · v0.214](https://github.com/Hi-Windom/winsay/issues/595)
 
 改进优化：
 
@@ -142,6 +143,7 @@ Sofill- 主题形态一览表 ✨
 5. [细节优化 · Issue #584 · v0.208](https://github.com/Hi-Windom/winsay/issues/584)
 6. [CTRL + TAB 弹出层鲁棒性增强 · Issue #588 · v0.210](https://github.com/Hi-Windom/winsay/issues/588)
 7. [使用思源集市自检源支持跳转到集市更新 · Issue #592 · v0.212](https://github.com/Hi-Windom/winsay/issues/592)
+8. [去除文档树多余滚动条+细节优化 · Issue #594 · v0.214](https://github.com/Hi-Windom/winsay/issues/594)
 
 缺陷修复：
 
