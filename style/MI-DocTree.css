@@ -7,6 +7,7 @@
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background {
   border-radius: 1.8px;
   margin-left: 5.8px;
+  margin-right: 3px;
   border-bottom: 1.86px inset;
   background-color: transparent;
   transition-duration: .31s;
@@ -15,8 +16,6 @@
 }
 
 .fn__flex-1.fn__flex-column.file-tree.sy__file:hover ul.b3-list.b3-list--background {
-  margin-left: 5.8px;
-  margin-right: 3px;
   outline: 1.3px ridge var(--b3-scroll-color);
   background-color: var(--b3-theme-surface);
   transition-duration: .31s;
@@ -66,7 +65,7 @@
   position: sticky;
   top: 0px;
   background-color: transparent;
-  z-index: 2;
+  z-index: 4;
   /* 高于子容器就可以了，太高会显示在弹出层上面 */
   padding-bottom: 1px;
   transition: padding-bottom 0.2s ease-out;
@@ -74,6 +73,7 @@
 
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background:has(ul)>li {
   background-color: var(--b3-theme-surface) !important;
+  backdrop-filter: blur(7px) brightness(1.31) !important;
   padding-bottom: 10px !important;
 }
 
