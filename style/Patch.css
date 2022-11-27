@@ -15,6 +15,8 @@
 .viewer-title {
   font-size: 14px;
   letter-spacing: .13px;
+  backdrop-filter: blur(3.1px) brightness(.31);
+  padding: 5.8px;
 }
 
 .sy__backlink .b3-list--background .b3-list-item--focus:not(.dragover):not(.dragover__top):not(.dragover__bottom) {
