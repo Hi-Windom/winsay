@@ -63,46 +63,53 @@ new Promise(function (response) {
 });
 
 function ExtendProtyleToolbar() {
-  var protyle_toolbar = document.querySelector(
-    ".layout__center .protyle-toolbar"
-  );
-  var divider = document.createElement("div");
-  divider.className = "protyle-toolbar__divider";
-  protyle_toolbar.insertAdjacentElement("beforeend", divider);
-  var sbutton = document.createElement("button");
-  sbutton.className = "protyle-toolbar__item b3-tooltips b3-tooltips__ne";
-  sbutton.id = "sc_protyle_toolbar_search";
-  sbutton.setAttribute("data-type", "search");
-  sbutton.setAttribute("aria-label", "搜索选中文本");
-  sbutton.innerHTML = `<svg><use xlink:href="#iconSearch"></use></svg>`;
-  protyle_toolbar.insertAdjacentElement("beforeend", sbutton);
-  protyle_toolbar.addEventListener(
-    "click",
-    (event) => {
-      console.log(event.target);
-      console.log(event.target.parentNode);
-      if (
-        event.target.id == "sc_protyle_toolbar_search" ||
-        event.target.parentNode.id == "sc_protyle_toolbar_search"
-      ) {
-        var text = window.getSelection().toString();
-        document.querySelector("#toolbar #barSearch").click();
-        setTimeout(() => {
-          let i = document.querySelector(".b3-dialog--open #searchInput");
-          i.value = text;
-          let e = new Event("input", { bubbles: true });
-          let tracker = i._valueTracker;
-          if (tracker) {
-            tracker.setValue("");
-          }
-          i.dispatchEvent(e);
-        }, 500);
-        event.stopPropagation();
+  setInterval(() => {
+    var all_protyle_toolbar = document.querySelectorAll(".fn__flex-1.protyle .protyle-toolbar");
+    all_protyle_toolbar.forEach(function (protyle_toolbar) {
+      if (protyle_toolbar.querySelectorAll(".sc_protyle_toolbar_search").length == 0) {
+        var divider = document.createElement("div");
+        divider.className = "protyle-toolbar__divider";
+        protyle_toolbar.insertAdjacentElement("beforeend", divider);
+        var sbutton = document.createElement("button");
+        sbutton.className =
+          "protyle-toolbar__item b3-tooltips b3-tooltips__ne sc_protyle_toolbar_search";
+        // sbutton.id = "sc_protyle_toolbar_search";
+        sbutton.setAttribute("data-type", "search");
+        sbutton.setAttribute("aria-label", "搜索选中文本");
+        sbutton.innerHTML = `<svg><use xlink:href="#iconSearch"></use></svg>`;
+        protyle_toolbar.insertAdjacentElement("beforeend", sbutton);
+        protyle_toolbar.addEventListener(
+          "click",
+          (event) => {
+            console.log(event.target);
+            console.log(event.target.parentNode);
+            if (
+              event.target.classList.contains("sc_protyle_toolbar_search") ||
+              event.target.parentNode.classList.contains(
+                "sc_protyle_toolbar_search"
+              )
+            ) {
+              var text = window.getSelection().toString();
+              document.querySelector("#toolbar #barSearch").click();
+              setTimeout(() => {
+                let i = document.querySelector(".b3-dialog--open #searchInput");
+                i.value = text;
+                let e = new Event("input", { bubbles: true });
+                let tracker = i._valueTracker;
+                if (tracker) {
+                  tracker.setValue("");
+                }
+                i.dispatchEvent(e);
+              }, 500);
+              event.stopPropagation();
+            }
+          },
+          true
+        );
       }
-    },
-    true
-  );
+    });
+  }, 2000);
 }
 setTimeout(() => {
   ExtendProtyleToolbar();
-}, 1000)
+}, 200);
