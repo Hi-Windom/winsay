@@ -1,6 +1,23 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
-.b3-list--background .b3-list-item--focus:not(.dragover):not(.dragover__top):not(.dragover__bottom) {
+/* 双击查看图片 */
+.viewer-backdrop {
+  background-color: rgba(0,0,0,.13);
+  backdrop-filter: blur(31px) brightness(.58);
+}
+
+.viewer-toolbar>ul>li {
+  margin: 0 1.3px;
+  padding: 3.8px;
+  border-radius: 38%;
+}
+
+.viewer-title {
+  font-size: 14px;
+  letter-spacing: .13px;
+}
+
+.sy__backlink .b3-list--background .b3-list-item--focus:not(.dragover):not(.dragover__top):not(.dragover__bottom) {
   background-color: var(--b3-list-hover);
   backdrop-filter: blur(5.8px);
   position: sticky;

@@ -1,6 +1,7 @@
 .file-tree.sy__file {
   container-type: inline-size;
   container-name: FileTree;
+  overflow-y: hidden;
 }
 
 /* 文档树笔记本高度自适应 #288 */
