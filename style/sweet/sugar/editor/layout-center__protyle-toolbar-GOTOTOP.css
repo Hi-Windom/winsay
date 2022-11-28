@@ -1,4 +1,4 @@
-.layout__center .protyle {
+.layout__center .protyle:not(.search__preview) {
   container-type: inline-size;
   container-name: protyle;
 }
