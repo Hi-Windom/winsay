@@ -60,17 +60,11 @@
 @media screen and (min-width: 1300px) {
 
   /* CTRL + P */
-  .b3-dialog__container[style*="80vw"] div[style="height:80vh"]>.fn__flex-column {
+  .b3-dialog--open[data-key] .b3-dialog__container[style*="80vw"] [style^="height"]:not(.b3-tab-container)>div>.fn__flex-column,
+  /* 兼容思源v2.5.1及更早版本 */
+  .b3-dialog--open[data-key] .b3-dialog__container[style*="80vw"] [style^="height"]:not(.b3-tab-container)>.fn__flex-column {
     flex-direction: row !important;
     flex-wrap: wrap;
-  }
-
-  .b3-dialog__container[style*="80vw"] div[style="height:80vh"]>.fn__flex-column .block__icons .block__icon {
-    opacity: .58;
-  }
-
-  .b3-dialog__container[style*="80vw"] div[style="height:80vh"]>.fn__flex-column .block__icons .block__icon:hover {
-    opacity: 1;
   }
 
   .b3-dialog__container[style*="80vw"] .search__header,
@@ -145,9 +139,4 @@
   .b3-dialog__container[style*="80vw"] #searchList div[data-type="search-item"]>.b3-list-item__text svg {
     margin: 0;
   }
-}
-
-/* 输入框对齐 */
-.b3-dialog__container[style*="80vw"] #replaceInput {
-  margin-right: 63px !important;
 }
