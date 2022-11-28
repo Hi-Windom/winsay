@@ -81,8 +81,6 @@ function ExtendProtyleToolbar() {
         protyle_toolbar.addEventListener(
           "click",
           (event) => {
-            console.log(event.target);
-            console.log(event.target.parentNode);
             if (
               event.target.classList.contains("sc_protyle_toolbar_search") ||
               event.target.parentNode.classList.contains(
