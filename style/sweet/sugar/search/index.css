@@ -15,11 +15,11 @@
   content: "99+";
 }
 
-#searchList .b3-list-item {
+#searchList>.b3-list-item {
   counter-increment: search-index;
 }
 
-#searchList .b3-list-item:before {
+#searchList>.b3-list-item:before {
   content: counter(search-index);
   font-size: 90%;
   width: 26px;
@@ -28,4 +28,5 @@
 
 #searchList {
   counter-reset: search-index 0;
+  overflow-x: hidden;
 }
