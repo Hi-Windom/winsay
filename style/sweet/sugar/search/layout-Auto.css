@@ -60,9 +60,17 @@
 @media screen and (min-width: 1300px) {
 
   /* CTRL + P */
-  .b3-dialog__container[style*="80vw"]>div>.fn__flex>.fn__flex-column {
+  .b3-dialog__container[style*="80vw"] div[style="height:80vh"]>.fn__flex-column {
     flex-direction: row !important;
     flex-wrap: wrap;
+  }
+
+  .b3-dialog__container[style*="80vw"] div[style="height:80vh"]>.fn__flex-column .block__icons .block__icon {
+    opacity: .58;
+  }
+
+  .b3-dialog__container[style*="80vw"] div[style="height:80vh"]>.fn__flex-column .block__icons .block__icon:hover {
+    opacity: 1;
   }
 
   .b3-dialog__container[style*="80vw"] .search__header,
@@ -98,13 +106,13 @@
   }
 
   /* CTRL + F 为空时保持高度 */
-  .b3-dialog__container[style*="80vw"] .search__header.fn__none~#searchList,
-  .b3-dialog__container[style*="80vw"] .search__header.fn__none~#searchPreview {
+  .b3-dialog__container[style*="80vw"] #searchList,
+  .b3-dialog__container[style*="80vw"] #searchPreview {
     height: calc(100% - 50px - 53px) !important;
   }
 
-  #searchList div[data-type="search-item"]>.b3-list-item__text,
-  #searchList div[data-type="search-item"] .b3-list-item__meta {
+  .b3-dialog__container[style*="80vw"] #searchList div[data-type="search-item"]>.b3-list-item__text,
+  .b3-dialog__container[style*="80vw"] #searchList div[data-type="search-item"] .b3-list-item__meta {
     -webkit-line-clamp: 2;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -116,13 +124,13 @@
     letter-spacing: 0.13px;
   }
 
-  #searchList div[data-type="search-item"]>.b3-list-item__text {
+  .b3-dialog__container[style*="80vw"] #searchList div[data-type="search-item"]>.b3-list-item__text {
     font-size: 87%;
     text-align: left;
     margin: 5px 0 2px 0;
   }
 
-  #searchList div[data-type="search-item"] .b3-list-item__meta {
+  .b3-dialog__container[style*="80vw"] #searchList div[data-type="search-item"] .b3-list-item__meta {
     text-align: right;
   }
 
@@ -134,7 +142,12 @@
     max-width: 58% !important;
   }
 
-  #searchList div[data-type="search-item"]>.b3-list-item__text svg {
+  .b3-dialog__container[style*="80vw"] #searchList div[data-type="search-item"]>.b3-list-item__text svg {
     margin: 0;
   }
+}
+
+/* 输入框对齐 */
+.b3-dialog__container[style*="80vw"] #replaceInput {
+  margin-right: 63px !important;
 }
