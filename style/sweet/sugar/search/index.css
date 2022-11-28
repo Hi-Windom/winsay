@@ -17,12 +17,22 @@
 
 #searchList>.b3-list-item {
   counter-increment: search-index;
+  counter-reset: search-index-2 0;
+}
+#searchList>div>.b3-list-item {
+  counter-increment: search-index-2;
 }
 
 #searchList>.b3-list-item:before {
   content: counter(search-index);
   font-size: 90%;
   width: 26px;
+  opacity: .31;
+}
+#searchList>div>.b3-list-item:before {
+  content: counter(search-index)"."counter(search-index-2);
+  font-size: 85%;
+  width: 36px;
   opacity: .31;
 }
 
