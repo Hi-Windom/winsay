@@ -40,13 +40,13 @@ body:not(.darwin):not(.android) #toolbar:hover {
 }
 
 body:not(.darwin):not(.android) #toolbar svg {
-  height: var(--SCC-Variables-MI-ToolBar-svg-height);
-  width: var(--SCC-Variables-MI-ToolBar-svg-height);
+  height: var(--SCC-Variables-MI-ToolBar-svg-height, 14px);
+  width: var(--SCC-Variables-MI-ToolBar-svg-height, 14px);
 }
 
 body:not(.darwin):not(.android) #toolbar:hover svg {
-  height: var(--SCC-Variables-MI-ToolBar-svg-hover-height);
-  width: var(--SCC-Variables-MI-ToolBar-svg-hover-height);
+  height: var(--SCC-Variables-MI-ToolBar-svg-hover-height, 14px);
+  width: var(--SCC-Variables-MI-ToolBar-svg-hover-height, 14px);
 }
 
 body:not(.darwin):not(.android) #toolbar>* {
