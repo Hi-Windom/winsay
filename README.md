@@ -64,6 +64,8 @@ Step 2 鼠标悬浮在【帮助（问号）】，在呼出的菜单中点击【�
 
 如此合适，微风迎怀，看得到的看不到的地方都充满了 Sofill- 的优化印记，满足细节控对 ⌈润物细无声⌋ 的极致追求，永不疲劳的舒适体验 🎡
 
+亲爱的用户：我们推荐您搭配 [Remix-icon](https://github.com/mozhux/Remix-icon) 图标包使用 Sofill 系列主题
+
 ### 轻量化简洁风绛亽特色思源笔记主题
 
 [Sofill 系列主题对比](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E4%B8%BB%E9%A2%98%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9)  |  [Sofill 系列主题时间线 ](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E5%AE%B6%E6%97%8F%E6%97%B6%E9%97%B4%E7%BA%BF)
