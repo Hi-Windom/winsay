@@ -5,7 +5,7 @@
   --SCC-Variables-MI-ToolBar-child-visibility: hidden;
   /* 不隐藏时高度相关 */
   /* 当 ToolBar-height-max 大于 ToolBar-height 时即不隐藏 */
-  /* 隐藏时高度 11px，不隐藏时MAX高度为 37px，高度分为 26 31 37 三档，对应的 svg 宽高分为 14 16.5 19.5 三档  */
+  /* 隐藏时高度 11px，不隐藏时MAX高度为 unset，高度分为 26 31 37 三档，对应的 svg 宽高分为 14 16.5 19.5 三档  */
   --SCC-Variables-MI-ToolBar-height: 26px;
   --SCC-Variables-MI-ToolBar-svg-height: 0px;
   --SCC-Variables-MI-ToolBar-svg-hover-height: 14px;
@@ -62,7 +62,7 @@ body:not(.darwin):not(.android) #toolbar #drag {
   transition: opacity .2s ease .13s;
 }
 
-body:not(.darwin):not(.android) #toolbar:not(:hover) #drag {
+body:not(.darwin):not(.android) #toolbar #drag {
   opacity: var(--SCC-Variables-MI-ToolBar-docName-opacity);
 }
 
@@ -92,10 +92,6 @@ body:not(.darwin):not(.android) #toolbar:not(:hover) #barTopHelp svg {
 /* 通用 */
 body:not(.darwin):not(.android) #toolbar #drag {
   color: var(--SCC-baseComponent-toolbar-drag-color);
-}
-
-body:not(.darwin):not(.android) #toolbar:hover #drag {
-  opacity: var(--SCC-baseProperty-Opacity-C);
 }
 
 body:not(.darwin):not(.android) #toolbar:hover svg {
