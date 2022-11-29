@@ -1,6 +1,6 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
-.protyle-wysiwyg--attr .protyle-attr {
+.protyle-title__input~.protyle-attr {
   opacity: 1;
   scale: var(--SCC-Variables-protyle-attr-scale, 1);
   letter-spacing: calc(var(--SCC-Variables-protyle-attr-scale, 1) * 1px);
