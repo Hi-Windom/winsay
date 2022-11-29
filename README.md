@@ -135,6 +135,7 @@ Sofill- 主题形态一览表 ✨
 11. [在主题设置面板导出配置时支持附加思源快捷键配置 · Issue #580 · v0.218](https://github.com/Hi-Windom/winsay/issues/580)
 12. [在主题设置面板导出配置时支持附加思源编辑器配置 · Issue #581 · v0.218](https://github.com/Hi-Windom/winsay/issues/581)
 13. [支持通过主题设置界面配置文档属性缩放 · Issue #618 · v0.224](https://github.com/Hi-Windom/winsay/issues/618)
+14. [支持通过主题设置界面配置HintHint限高 · Issue #620 · v0.224](https://github.com/Hi-Windom/winsay/issues/620)
 
 改进优化：
 
