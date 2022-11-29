@@ -116,7 +116,7 @@ Sofill- 主题形态一览表 ✨
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v0.198 ~ v0.224 聚合说明
+### v0.198 ~ v0.226 聚合说明
 
 > 2022-11-30 released
 
@@ -138,6 +138,7 @@ Sofill- 主题形态一览表 ✨
 12. [在主题设置面板导出配置时支持附加思源编辑器配置 · Issue #581 · v0.218](https://github.com/Hi-Windom/winsay/issues/581)
 13. [支持通过主题设置界面配置文档属性缩放 · Issue #618 · v0.224](https://github.com/Hi-Windom/winsay/issues/618)
 14. [支持通过主题设置界面配置HintHint限高 · Issue #620 · v0.224](https://github.com/Hi-Windom/winsay/issues/620)
+15. [支持通过主题设置面板开启主题自我保护 · Issue #353 · v0.226](https://github.com/Hi-Windom/winsay/issues/353)
 
 改进优化：
 
