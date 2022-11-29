@@ -21,8 +21,6 @@
 * [ ] 持续扩大跟随主题形态的样式范围
 * [ ] 持续完善主题设置面板
 * [ ] 支持通过主题设置面板配置导出PDF渲染字体
-* [ ] 在主题设置面板导出配置时支持附加思源编辑器配置
-* [ ] 在主题设置面板导出配置时支持附加思源快捷键配置
 
 ### 中期计划⛳
 
@@ -38,15 +36,15 @@
 
 ---
 
-## ✨ 主题设置界面可配置更多项目了，文档宽度模式增加固宽预览类选项，13号色特殊显示，图片预览viewer界面美化，修复已知问题，持续优化体验
+## ✨ 主题设置界面可配置更多项目了，启动等诸多体验优化
 
 > 版本更新详细内容请下滑至【集市更新版本日志】部分查看
 
 ### 可能错过的重要更新
 
-1. 一系列页签相关配置在主题设置面板现已可用；
-2. 优化 Ctrl + 鼠标滚轮缩放功能；
+1. 优化 Ctrl + 鼠标滚轮缩放功能；
 3. 主题引用锚文本样式配置支持同步至思源导出配置，支持通过主题设置界面配置主题明亮模式缺省形态
+4. 文档宽度模式增加固宽预览类选项，13号色特殊显示，图片预览viewer界面美化
 
 ### 主题设置界面入口指南
 
@@ -116,9 +114,9 @@ Sofill- 主题形态一览表 ✨
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v0.198 ~ v0.218 聚合说明
+### v0.198 ~ v0.220 聚合说明
 
-> 2022-11-28 released
+> 2022-11-29 released
 
 <p><a href="https://github.com/Hi-Windom/winsay/issues/603"><img src="https://img.shields.io/badge/SiYuan-2.5.2-green"/></a> <a href="https://github.com/Hi-Windom/winsay/issues/409"><img src="https://img.shields.io/badge/%E4%B8%8D%E5%85%BC%E5%AE%B9-2.4.5---red"/></a> <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow"/></p></p>
 
@@ -147,6 +145,10 @@ Sofill- 主题形态一览表 ✨
 6. [CTRL + TAB 弹出层鲁棒性增强 · Issue #588 · v0.210](https://github.com/Hi-Windom/winsay/issues/588)
 7. [使用思源集市自检源支持跳转到集市更新 · Issue #592 · v0.212](https://github.com/Hi-Windom/winsay/issues/592)
 8. [去除文档树多余滚动条+细节优化 · Issue #594 · v0.214](https://github.com/Hi-Windom/winsay/issues/594)
+9. [支持将自动检查更新设为静默模式，无更新时不再通知打扰 · Issue #609 · v0.220](https://github.com/Hi-Windom/winsay/issues/609)
+10. [暗黑模式虚拟引用聚焦背景色优化 · Issue #614 · v0.220](https://github.com/Hi-Windom/winsay/issues/614)
+11. [插入模板弹出层【打开文件位置】控件常显 · Issue #613 · v0.220](https://github.com/Hi-Windom/winsay/issues/613)
+12. [启动优化 · Issue #611 · v0.220](https://github.com/Hi-Windom/winsay/issues/611)
 
 缺陷修复：
 
