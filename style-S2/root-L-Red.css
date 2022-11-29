@@ -55,10 +55,10 @@
   --b3-scroll-color: var(--SCC-primary-lighter);
 
   /* 列表 */
-  --b3-list-hover: #FFF2F0A5;
+  --b3-list-hover: #FDF2F035;
 
   /* 菜单 */
-  --b3-menu-background: #f2ecdea5;
+  --b3-menu-background: #f2ecdec5;
 
   /* 提示 */
   --b3-tooltips-color: #f36838c5;
