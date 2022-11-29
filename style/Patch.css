@@ -1,5 +1,12 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
+.protyle-wysiwyg--attr .protyle-attr {
+  opacity: 1;
+  scale: var(--SCC-Variables-protyle-attr-scale, 1);
+  letter-spacing: calc(var(--SCC-Variables-protyle-attr-scale, 1) * 1px);
+  transition: all .31s ease .13s;
+}
+
 .protyle-util span.b3-list-item__action.b3-tooltips.b3-tooltips__w[aria-label="打开文件位置"] {
   display: flex;
   color: var(--b3-theme-on-surface);
