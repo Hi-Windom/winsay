@@ -42,7 +42,8 @@
 
 .protyle-hint.b3-list.b3-list--background:not(.hint--menu):has([data-value^="((newFile"]):has(>button:nth-child(2)):has(>button:nth-child(1):hover) {
   background-color: transparent;
-  backdrop-filter: blur(0.58px);
+  backdrop-filter: blur(0.58px) brightness(.98);
+  transition: background-color .13s cubic-bezier(0.43, -0.02, 0.15, 0.73) .13s;
 }
 
 .protyle-hint.b3-list.b3-list--background:not(.hint--menu):has([data-value^="((newFile"]):has(>button:nth-child(2)):has(>button:nth-child(1):hover)>button:nth-child(1) {
@@ -51,7 +52,7 @@
 }
 
 .protyle-hint.b3-list.b3-list--background:not(.hint--menu):has([data-value^="((newFile"]):has(>button:nth-child(2)):has(>button:nth-child(1):hover):before,
-.protyle-hint.b3-list.b3-list--background:not(.hint--menu):has([data-value^="((newFile"]):has(>button:nth-child(2)):has(>button:nth-child(1):hover)>* {
+.protyle-hint.b3-list.b3-list--background:not(.hint--menu):has([data-value^="((newFile"]):has(>button:nth-child(2)):has(>button:nth-child(1):hover)>button {
   opacity: 0;
 }
 

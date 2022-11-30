@@ -1,9 +1,3 @@
-.file-tree.sy__file {
-  container-type: inline-size;
-  container-name: FileTree;
-  overflow-y: hidden;
-}
-
 /* 文档树笔记本高度自适应 #288 */
 .fn__flex-1.fn__flex-column.file-tree.sy__file .fn__flex-1:has(>ul:nth-child(1))>ul {
   margin-top: 1em;
@@ -134,4 +128,11 @@
 
 #layouts .fn__flex-column.file-tree.sy__file>ul:hover * {
   opacity: 1;
+}
+
+
+.fn__flex-1.fn__flex-column.file-tree.sy__file:hover ul.b3-list.b3-list--background {
+  outline: 1.3px ridge var(--b3-scroll-color);
+  background-color: var(--b3-theme-surface);
+  transition-duration: .31s;
 }

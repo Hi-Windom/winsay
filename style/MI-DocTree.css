@@ -15,12 +15,6 @@
   border-image: var(--SCC-baseComponent-file__tree-UL-border-image);
 }
 
-.fn__flex-1.fn__flex-column.file-tree.sy__file:hover ul.b3-list.b3-list--background {
-  outline: 1.3px ridge var(--b3-scroll-color);
-  background-color: var(--b3-theme-surface);
-  transition-duration: .31s;
-}
-
 
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul .b3-list-item {
   margin: 0 3px 0px 0px !important;
@@ -167,4 +161,9 @@ li[data-name="Untitled.sy"]>span.b3-list-item__text {
   margin-bottom: var(--SCC-Variables-MI-DocTree-nbMargin, 0.00em);
   padding-top: calc(var(--SCC-Variables-MI-DocTree-nbMargin, 0.00em)*0.5);
   padding-bottom: calc(var(--SCC-Variables-MI-DocTree-nbMargin, 0.00em)*0.5);
+}
+
+/* 支持通过主题设置面板隐藏文档树【更多】图标 #633 */
+.file-tree.sy__file li:hover .b3-list-item__action[aria-label="更多"] {
+  display: var(--SCC-Variables-MI-DocTree-item-action-more-display, flex) !important;
 }
