@@ -162,3 +162,8 @@ li[data-name="Untitled.sy"]>span.b3-list-item__text {
   padding-top: calc(var(--SCC-Variables-MI-DocTree-nbMargin, 0.00em)*0.5);
   padding-bottom: calc(var(--SCC-Variables-MI-DocTree-nbMargin, 0.00em)*0.5);
 }
+
+/* 支持通过主题设置面板隐藏文档树【更多】图标 #633 */
+.file-tree.sy__file li:hover .b3-list-item__action[aria-label="更多"] {
+  display: var(--SCC-Variables-MI-DocTree-item-action-more-display, flex) !important;
+}
