@@ -25,7 +25,7 @@
     height: calc(70% - 69px) !important;
   }
 
-  #searchList div[data-type="search-item"] {
+  #searchList>div[data-type="search-item"] {
     min-height: 3.1rem;
   }
 
@@ -35,8 +35,8 @@
     line-height: 1.68rem;
   }
 
-  #searchList div[data-type="search-item"]>.b3-list-item__text,
-  #searchList div[data-type="search-item"]>.b3-list-item__graphic {
+  #searchList>div[data-type="search-item"]>.b3-list-item__text,
+  #searchList>div[data-type="search-item"]>.b3-list-item__graphic {
     margin: -13px 0 1px 0;
   }
 
