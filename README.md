@@ -36,25 +36,23 @@
 
 ---
 
-## ✨ 主题设置界面可配置更多项目了，启动等诸多体验优化，主题设置界面正式支持手机和平板端
+## ✨ 主题设置界面可配置更多项目了，HintHint首项聚焦穿透模式，主题设置界面正式支持手机和平板端
 
 > 版本更新详细内容请下滑至【集市更新版本日志】部分查看
 
 ### 可能错过的重要更新
 
-1. 优化 Ctrl + 鼠标滚轮缩放功能；
-2. 主题引用锚文本样式配置支持同步至思源导出配置，支持通过主题设置界面配置主题明亮模式缺省形态
+1. 主题引用锚文本样式配置支持同步至思源导出配置，支持通过主题设置界面配置主题明亮模式缺省形态
 3. 文档宽度模式增加固宽预览类选项，13号色特殊显示，图片预览viewer界面美化
+4. 启动等诸多体验优化
 
 ### 主题设置界面入口指南
 
 Step 1 确保在思源软件设置里关闭了【隐藏底部状态栏】
 
-Step 2 鼠标悬浮在【帮助（问号）】，在呼出的菜单中点击【主题设置】
+Step 2 鼠标悬浮或左键单击右下角控件，在呼出的菜单中点击【主题设置】
 
-<img src="https://b3logfile.com/siyuan/1662398123089/assets/image-20221120203418-tafootj.png"/>
-
-> 安卓手机端也可以打开主题设置界面，不过因为还不完善，所以入口隐藏起来了
+<img src="https://b3logfile.com/siyuan/1662398123089/assets/image-20221130191023-ml78khi.png"/>
 
 ## 🏳️‍🌈 主题特色介绍
 
@@ -116,7 +114,7 @@ Sofill- 主题形态一览表 ✨
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v0.198 ~ v0.226 聚合说明
+### v0.198 ~ v0.228 聚合说明
 
 > 2022-11-30 released
 
@@ -139,6 +137,8 @@ Sofill- 主题形态一览表 ✨
 13. [支持通过主题设置界面配置文档属性缩放 · Issue #618 · v0.224](https://github.com/Hi-Windom/winsay/issues/618)
 14. [支持通过主题设置界面配置HintHint限高 · Issue #620 · v0.224](https://github.com/Hi-Windom/winsay/issues/620)
 15. [支持通过主题设置面板开启主题自我保护 · Issue #353 · v0.226](https://github.com/Hi-Windom/winsay/issues/353)
+16. [HintHint限宽策略调整+支持通过主题设置界面配置HintHint限宽 · Issue #627 · v0.228](https://github.com/Hi-Windom/winsay/issues/627)
+17. [HintHint首项聚焦穿透模式 · Issue #628 · v0.228](https://github.com/Hi-Windom/winsay/issues/628)
 
 改进优化：
 
@@ -162,6 +162,7 @@ Sofill- 主题形态一览表 ✨
 1. [笔记本设置界面复制ID按钮样式未定义 · Issue #573 · v0.212](https://github.com/Hi-Windom/winsay/issues/573)
 2. [反链面板选区工具条不显示 · Issue #599 · v0.216](https://github.com/Hi-Windom/winsay/issues/599)
 3. [工具条搜索框并不总是存在 · Issue #598 · v0.216](https://github.com/Hi-Windom/winsay/issues/598)
+4. [顶栏清爽模式失效 · Issue #626 · v0.228](https://github.com/Hi-Windom/winsay/issues/626)
 
 ## 🎈 鸣谢
 
