@@ -1,4 +1,3 @@
-
 .protyle-hint.b3-list.b3-list--background:not(.hint--menu):has([data-value^="((newFile"])>button:nth-of-type(2) .b3-list-item__first:after {
   content: "🥇";
   font-size: 150%;
@@ -39,6 +38,21 @@
   font-size: 0%;
   color: #fe4e;
   transition: all .31s ease .31s;
+}
+
+.protyle-hint.b3-list.b3-list--background:not(.hint--menu):has([data-value^="((newFile"]):has(>button:nth-child(2)):has(>button:nth-child(1):hover) {
+  background-color: transparent;
+  backdrop-filter: blur(0.58px);
+}
+
+.protyle-hint.b3-list.b3-list--background:not(.hint--menu):has([data-value^="((newFile"]):has(>button:nth-child(2)):has(>button:nth-child(1):hover)>button:nth-child(1) {
+  background-color: rgba(72, 69, 80, .9);
+  opacity: 1 !important;
+}
+
+.protyle-hint.b3-list.b3-list--background:not(.hint--menu):has([data-value^="((newFile"]):has(>button:nth-child(2)):has(>button:nth-child(1):hover):before,
+.protyle-hint.b3-list.b3-list--background:not(.hint--menu):has([data-value^="((newFile"]):has(>button:nth-child(2)):has(>button:nth-child(1):hover)>* {
+  opacity: 0;
 }
 
 .protyle-hint.b3-list.b3-list--background:not(.hint--menu):has(>button:nth-child(10)):before {
