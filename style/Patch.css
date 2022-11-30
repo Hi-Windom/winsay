@@ -1,5 +1,11 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
+
+/* 搜索匹配列表分组辅助线（需开启搜索面板标号） #639 */
+#searchList>.b3-list-item+div:not([data-type=search-item]) {
+  box-shadow: none;
+}
+
 .protyle-title__input~.protyle-attr {
   opacity: 1;
   scale: var(--SCC-Variables-protyle-attr-scale, 1);
