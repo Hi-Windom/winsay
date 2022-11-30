@@ -2,8 +2,8 @@ import {
   insertCreateAfter,
   addinsertCreateElement,
   getTextWidth,
-  isPhone,
 } from "./../utils/api.min.js";
+import * as config from "./../config.js";
 
 /** 为打开文档的标题下显示文档创建日期 */
 function showDocumentCreationDate() {
@@ -122,11 +122,7 @@ function getTileTxt(TitleElement) {
 })(window, undefined);
 
 function Refresh() {
-  if (isPhone()) {
-    //手机模式执行的
-    setTimeout(() => {}, 1000);
-  } else {
-    //pc模式执行的
+  if (config.clientMode != "body--mobile") {
     setTimeout(() => {
       rundynamicUnderline(); //为文档标题创建动态下划线
       showDocumentCreationDate(); //为打开文档标题下面显示文档创建日期
