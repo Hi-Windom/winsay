@@ -1,6 +1,4 @@
 :root {
-  /* 块引用波浪线动画图标 | The icon of wavy line animation */
-  --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/src/icon/wavy-line.svg);
   /* 卡片 */
   --b3-card-error-color: rgb(97, 26, 21);
   --b3-card-error-background: #f5d1cfc5;
@@ -114,6 +112,8 @@
   --SCC-baseComponent-Dialog-520-button-color: var(--SCC-CNTC-海松茶);
   --SCC-baseComponent-Popup-Menu-shadow: 13px 31px 300px -58px rgb(0 0 0 / 51%), -30px 31px 300px 31px rgb(0 0 0 / 31%), 72px 51px 6px 1111px rgb(58 58 58 / 2%), 0px 0px 1px 1.31px rgb(131 131 131 / 28%);
   --SCC-baseComponent-file-tree-hover-ul-outline: 1.3px ridge var(--b3-scroll-color);
+  /* 块引用波浪线动画图标 | The icon of wavy line animation */
+  --SCC-baseComponent-span-ref-animation-icon: url(/appearance/themes/Sofill-/src/icon/wavy-line.svg);
 }
 
 :root {

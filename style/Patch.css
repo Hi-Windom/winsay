@@ -134,8 +134,9 @@ body.android #sidebar {
 }
 
 /* 只读模式提示 #214 */
-.fn__flex-1.protyle:has(div[contenteditable="false"][data-doc-type="NodeDocument"]):hover {
-  background-color: #cccccc33;
+.fn__flex-1.protyle:has(div[contenteditable="false"][data-doc-type="NodeDocument"]):hover,
+.fn__flex-1.protyle:has(div[contenteditable="false"][data-doc-type="NodeDocument"]):hover [data-doc-type="NodeDocument"] {
+  background-color: var(--SCC-Variables-docReadOnly-hover-bg-color) !important;
 }
 
 /* 优化右上角窗口关闭按钮焦点样式，不适用于思源2.4.3 */
@@ -188,10 +189,7 @@ body.android .b3-list-item__icon {
 a:not([id="appearanceOpenTheme"]):not([id="appearanceOpenIcon"]):not([id="appearanceOpenEmoji"]):not([id="clearHistory"]):not(.fn__a):not(.b3-chip) {
   color: var(--b3-protyle-inline-link-color);
 }
-.b3-typography img:hover, .protyle-wysiwyg img:hover {
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  background-color: var(--SCC-Variables-IMG-bg-color_hover);
-}
+
 #layouts .b3-typography img, #layouts .protyle-wysiwyg img {
   background-color: var(--SCC-Variables-IMG-bg-color);
 }
