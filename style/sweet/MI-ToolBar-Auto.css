@@ -49,11 +49,13 @@ body:not(.darwin):not(.android) #toolbar:hover svg {
   width: var(--SCC-Variables-MI-ToolBar-svg-hover-height, 14px);
 }
 
-body:not(.darwin):not(.android) #toolbar>* {
+body:not(.darwin):not(.android) #toolbar>button,
+body:not(.darwin):not(.android) #toolbar>div {
   visibility: var(--SCC-Variables-MI-ToolBar-child-visibility);
 }
 
-body:not(.darwin):not(.android) #toolbar:hover>* {
+body:not(.darwin):not(.android) #toolbar:hover>button,
+body:not(.darwin):not(.android) #toolbar:hover>div {
   visibility: visible;
 }
 
