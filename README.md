@@ -114,7 +114,7 @@ Sofill- 主题形态一览表 ✨
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v0.198 ~ v0.234 聚合说明
+### v0.198 ~ v0.236 聚合说明
 
 > 2022-12-01 released
 
@@ -143,6 +143,7 @@ Sofill- 主题形态一览表 ✨
 19. [搜索匹配列表分组辅助线（需开启搜索面板标号） · Issue #639 · v0.230](https://github.com/Hi-Windom/winsay/issues/639)
 20. [支持通过主题设置配置滤镜 · Issue #643 · v0.232](https://github.com/Hi-Windom/winsay/issues/643)
 21. [滤镜在移动端可用 · Issue #652 · v0.234](https://github.com/Hi-Windom/winsay/issues/652)
+22. [支持通过主题设置面板配置状态提示增强 · Issue #654 · v0.236](https://github.com/Hi-Windom/winsay/issues/654)
 
 改进优化：
 
@@ -165,6 +166,8 @@ Sofill- 主题形态一览表 ✨
 17. [#628 优化 · Issue #641 · v0.230](https://github.com/Hi-Windom/winsay/issues/641)
 18. [文档树视觉效果升级 · Issue #645 · v0.232](https://github.com/Hi-Windom/winsay/issues/645)
 19. [细节优化 · Issue #651 · v0.234](https://github.com/Hi-Windom/winsay/issues/651)
+20. [重载优化 · Issue #549 · v0.236](https://github.com/Hi-Windom/winsay/issues/549)
+21. [支持通过主题设置面板开启【在文档名下方显示创建日期】 · Issue #655 · v0.236](https://github.com/Hi-Windom/winsay/issues/655)
 
 缺陷修复：
 
