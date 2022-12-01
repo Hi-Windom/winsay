@@ -109,11 +109,6 @@
   height: 10px;
 }
 
-#layouts .fn__flex-column.file-tree.sy__file>ul * {
-  opacity: 0;
-  transition-delay: .31s;
-}
-
 #layouts .fn__flex-column.file-tree.sy__file:hover>ul {
   opacity: .9;
   background-color: #65432103;
@@ -125,10 +120,14 @@
   height: 30px;
 }
 
-#layouts .fn__flex-column.file-tree.sy__file>ul:hover * {
+#layouts .fn__flex-column.file-tree.sy__file>ul:hover li {
   opacity: 1;
 }
 
+#layouts .fn__flex-column.file-tree.sy__file>ul li {
+  opacity: 0;
+  transition-delay: .31s;
+}
 
 .fn__flex-1.fn__flex-column.file-tree.sy__file:hover ul.b3-list.b3-list--background {
   outline: var(--SCC-baseComponent-file-tree-hover-ul-outline);
