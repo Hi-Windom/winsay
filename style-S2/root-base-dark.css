@@ -1,28 +1,4 @@
 :root {
-  --SCC-baseComponent-Button-bg-color-TabBar: #a5a7a508;
-  --SCC-baseComponent-CodeBlock-ab-color: var(--SCC-White-lighter);
-  --SCC-baseComponent-selector-bg-color: #313233ee;
-  --SCC-baseComponent-text-color-1: #889999;
-  --SCC-baseComponent-text-color-2: var(--SCC-Gray-HellisePotter);
-  --SCC-baseComponent-Table-border-1: 0.25pt solid #58585858;
-  --SCC-baseComponent-Icon-arrow-color-1: var(--SCC-White);
-  --SCC-baseComponent-Switch-checked-ab-color: #999;
-  --SCC-baseComponent-breadcrumb__bar-color: #999999;
-  --SCC-baseComponent-breadcrumb-box-shadow: none;
-  --SCC-baseComponent-breadcrumb-position: unset;
-  --SCC-baseComponent-toolbar-drag-color: #eee;
-  --SCC-baseProperty-Opacity-A: 1;
-  --SCC-baseProperty-Opacity-B: .58;
-  --SCC-baseProperty-Opacity-C: 0.88;
-  --SCC-baseComponent-HintMenu-backdrop-filter: blur(99px);
-  --SCC-baseComponent-snackbar__content-color: #585858;
-  --SCC-baseComponent-file__tree-UL-border-image: linear-gradient(to right, #58585813 0%, #85858531 20%, #85858531 80%, #58585813 100%) 1;
-  --SCC-funs__baseComponent-list2map-line: 2px solid var(--b3-theme-primary-light);
-  --SCC-funs__baseComponent-list2table-border: 1px solid var(--b3-theme-primary-lightest);
-  --SCC-baseComponent-Dialog-520-box-shadow: 13px 31px 131px -58px rgb(0 0 0 / 50%), -30px 31px 119px 31px rgb(0 0 0 / 51%), 72px 51px 6px 1111px rgb(58 58 58 / 2%);
-  --SCC-baseComponent-Dialog-520-hover-box-shadow: 13px 31px 131px -58px rgb(0 0 0 / 8%), 6px 11px 19px 8px rgb(0 0 0 / 25%), -111px -111px 111px 1111px rgb(5 5 5 / 42%);
-  --SCC-baseComponent-Dialog-520-button-color: var(--SCC-CNTC-海松茶);
-  --SCC-baseComponent-Popup-Menu-shadow: 13px 31px 300px -58px rgb(0 0 0 / 51%), -30px 31px 300px 31px rgb(0 0 0 / 31%), 72px 51px 6px 1111px rgb(58 58 58 / 2%), 0px 0px 1px 1.31px rgb(131 131 131 / 28%);
   /* 块引用波浪线动画图标 | The icon of wavy line animation */
   --custom-span-ref-animation-icon: url(/appearance/themes/Sofill-/src/icon/wavy-line.svg);
   /* 卡片 */
@@ -110,6 +86,34 @@
   --b3-pdf-background5: #f5539e;
   --b3-pdf-background6: var(--b3-theme-primary);
   --b3-pdf-background7: #944194;
+}
+
+:root {
+  --SCC-baseComponent-Button-bg-color-TabBar: #a5a7a508;
+  --SCC-baseComponent-CodeBlock-ab-color: var(--SCC-White-lighter);
+  --SCC-baseComponent-selector-bg-color: #313233ee;
+  --SCC-baseComponent-text-color-1: #889999;
+  --SCC-baseComponent-text-color-2: var(--SCC-Gray-HellisePotter);
+  --SCC-baseComponent-Table-border-1: 0.25pt solid #58585858;
+  --SCC-baseComponent-Icon-arrow-color-1: var(--SCC-White);
+  --SCC-baseComponent-Switch-checked-ab-color: #999;
+  --SCC-baseComponent-breadcrumb__bar-color: #999999;
+  --SCC-baseComponent-breadcrumb-box-shadow: none;
+  --SCC-baseComponent-breadcrumb-position: unset;
+  --SCC-baseComponent-toolbar-drag-color: #eee;
+  --SCC-baseProperty-Opacity-A: 1;
+  --SCC-baseProperty-Opacity-B: .58;
+  --SCC-baseProperty-Opacity-C: 0.88;
+  --SCC-baseComponent-HintMenu-backdrop-filter: blur(99px);
+  --SCC-baseComponent-snackbar__content-color: #585858;
+  --SCC-baseComponent-file__tree-UL-border-image: linear-gradient(to right, #58585813 0%, #85858531 20%, #85858531 80%, #58585813 100%) 1;
+  --SCC-funs__baseComponent-list2map-line: 2px solid var(--b3-theme-primary-light);
+  --SCC-funs__baseComponent-list2table-border: 1px solid var(--b3-theme-primary-lightest);
+  --SCC-baseComponent-Dialog-520-box-shadow: 13px 31px 131px -58px rgb(0 0 0 / 50%), -30px 31px 119px 31px rgb(0 0 0 / 51%), 72px 51px 6px 1111px rgb(58 58 58 / 2%);
+  --SCC-baseComponent-Dialog-520-hover-box-shadow: 13px 31px 131px -58px rgb(0 0 0 / 8%), 6px 11px 19px 8px rgb(0 0 0 / 25%), -111px -111px 111px 1111px rgb(5 5 5 / 42%);
+  --SCC-baseComponent-Dialog-520-button-color: var(--SCC-CNTC-海松茶);
+  --SCC-baseComponent-Popup-Menu-shadow: 13px 31px 300px -58px rgb(0 0 0 / 51%), -30px 31px 300px 31px rgb(0 0 0 / 31%), 72px 51px 6px 1111px rgb(58 58 58 / 2%), 0px 0px 1px 1.31px rgb(131 131 131 / 28%);
+  --SCC-baseComponent-file-tree-hover-ul-outline: 1.3px ridge var(--b3-scroll-color);
 }
 
 .b3-list--background .b3-list-item:hover:not(.b3-list-item--focus) {

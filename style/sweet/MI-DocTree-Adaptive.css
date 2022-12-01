@@ -115,7 +115,6 @@
 }
 
 #layouts .fn__flex-column.file-tree.sy__file:hover>ul {
-  border: 1.3px ridge var(--b3-scroll-color);
   opacity: .9;
   background-color: #65432103;
   backdrop-filter: brightness(0.97);
@@ -132,7 +131,11 @@
 
 
 .fn__flex-1.fn__flex-column.file-tree.sy__file:hover ul.b3-list.b3-list--background {
-  outline: 1.3px ridge var(--b3-scroll-color);
+  outline: var(--SCC-baseComponent-file-tree-hover-ul-outline);
   background-color: var(--b3-theme-surface);
-  transition-duration: .31s;
+  filter: drop-shadow(-1px 1px 3px var(--b3-theme-primary-lightest));
+  transition: background-color .31s cubic-bezier(0.39, 0.58, 0.57, 1);
+}
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background {
+  outline: none;
 }
