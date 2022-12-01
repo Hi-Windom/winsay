@@ -36,15 +36,15 @@
 
 ---
 
-## ✨ 主题设置界面可配置更多项目了，HintHint首项聚焦穿透模式，持续优化体验
+## ✨ 主题设置界面可配置更多项目了，文档树视觉效果升级，支持通过主题设置配置滤镜，持续优化体验
 
 > 版本更新详细内容请下滑至【集市更新版本日志】部分查看
 
 ### 可能错过的重要更新
 
-1. 主题引用锚文本样式配置支持同步至思源导出配置，支持通过主题设置界面配置主题明亮模式缺省形态
-2. 文档宽度模式增加固宽预览类选项，13号色特殊显示，图片预览viewer界面美化
+1. 文档宽度模式增加固宽预览类选项，13号色特殊显示，图片预览viewer界面美化
 3. 启动等诸多体验优化
+4. HintHint首项聚焦穿透模式
 
 ### 主题设置界面入口指南
 
@@ -114,7 +114,7 @@ Sofill- 主题形态一览表 ✨
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v0.198 ~ v0.230 聚合说明
+### v0.198 ~ v0.232 聚合说明
 
 > 2022-12-01 released
 
@@ -141,6 +141,7 @@ Sofill- 主题形态一览表 ✨
 17. [HintHint首项聚焦穿透模式 · Issue #628 · v0.228](https://github.com/Hi-Windom/winsay/issues/628)
 18. [支持通过主题设置面板隐藏文档树【更多】图标 · Issue #633 · v0.230](https://github.com/Hi-Windom/winsay/issues/633)
 19. [搜索匹配列表分组辅助线（需开启搜索面板标号） · Issue #639 · v0.230](https://github.com/Hi-Windom/winsay/issues/639)
+20. [支持通过主题设置配置滤镜 · Issue #643 · v0.232](https://github.com/Hi-Windom/winsay/issues/643)
 
 改进优化：
 
@@ -161,6 +162,7 @@ Sofill- 主题形态一览表 ✨
 15. [未开启文档树自适应显示时不再显示聚焦辅助线 · Issue #635 · v0.230](https://github.com/Hi-Windom/winsay/issues/635)
 16. [搜索智能布局模式优化 · Issue #640 · v0.230](https://github.com/Hi-Windom/winsay/issues/640)
 17. [#628 优化 · Issue #641 · v0.230](https://github.com/Hi-Windom/winsay/issues/641)
+18. [文档树视觉效果升级 · Issue #645 · v0.232](https://github.com/Hi-Windom/winsay/issues/645)
 
 缺陷修复：
 
