@@ -117,6 +117,10 @@
   --SCC-baseComponent-file-tree-hover-ul-outline: none;
 }
 
+:root {
+  filter: var(--SCC-Variables-root-filter-light, none) !important;
+}
+
 /* 集市主题详情页 */
 .config-bazaar__readme,
 .config-bazaar__readme .item__side {

@@ -116,6 +116,10 @@
   --SCC-baseComponent-file-tree-hover-ul-outline: 1.3px ridge var(--b3-scroll-color);
 }
 
+:root {
+  filter: var(--SCC-Variables-root-filter-dark, none) !important;
+}
+
 .b3-list--background .b3-list-item:hover:not(.b3-list-item--focus) {
   background-color: #c1c2c308;
 }
