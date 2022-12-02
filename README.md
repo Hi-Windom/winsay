@@ -119,7 +119,7 @@ Sofill- 主题形态一览表 ✨
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v0.198 ~ v0.242 聚合说明
+### v0.198 ~ v0.244 聚合说明
 
 > 2022-12-02 released
 
@@ -152,6 +152,7 @@ Sofill- 主题形态一览表 ✨
 23. [Android 手机端新增一个主题设置入口 · Issue #661 · v0.240](https://github.com/Hi-Windom/winsay/issues/661)
 24. [选区搜索支持 Android 手机端 · Issue #662 · v0.240](https://github.com/Hi-Windom/winsay/issues/662)
 25. [支持通过主题设置界面开启【任何时候都不隐藏面包屑】+ 其他细节优化 · Issue #666 · v0.242](https://github.com/Hi-Windom/winsay/issues/666)
+26. [搜索历史弹出层样式 · Issue #672 · v0.244](https://github.com/Hi-Windom/winsay/issues/672)
 
 改进优化：
 
@@ -179,6 +180,7 @@ Sofill- 主题形态一览表 ✨
 22. [搜索界面全屏显示文档效果优化 · Issue #667 · v0.242](https://github.com/Hi-Windom/winsay/issues/667)
 23. [Android 手机端文档树调整 · Issue #664 · v0.242](https://github.com/Hi-Windom/winsay/issues/664)
 24. [搜索标号细节优化 · Issue #668 · v0.242](https://github.com/Hi-Windom/winsay/issues/668)
+25. [变更搜索提示内容 · Issue #670 · v0.244](https://github.com/Hi-Windom/winsay/issues/670)
 
 缺陷修复：
 

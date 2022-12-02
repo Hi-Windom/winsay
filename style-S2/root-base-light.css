@@ -127,8 +127,3 @@
   background-color: var(--b3-theme-background);
   z-index: 99;
 }
-
-/* 避免搜索框阴影样式被遮挡 */
-.search__header {
-  z-index: 98;
-}

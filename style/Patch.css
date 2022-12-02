@@ -1,5 +1,70 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
+/* 搜索头统一层级，有遮挡的地方自行处理 */
+.search__header {
+  z-index: 98;
+}
+
+@media screen and (min-width: 1000px) {
+  .search__header .b3-menu:not(:empty) {
+    column-count: 3;
+    column-width: 13vw !important;
+    column-gap: 0.13em;
+  }
+
+  .search__header .b3-menu .b3-list-item {
+    max-height: 6.2em;
+    min-height: 1em;
+    line-height: 1.2em;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .search__header .b3-menu:not(:empty) {
+    column-count: 2;
+    column-width: 22vw !important;
+    column-gap: 0.13em;
+  }
+
+  .search__header .b3-menu .b3-list-item {
+    max-height: 3.8em;
+    min-height: 1em;
+    line-height: 1.2em;
+  }
+}
+
+.search__header .b3-menu:not(:empty) {
+  max-height: 58vh !important;
+  column-rule: var(--SCC-Component-HintMenu-column-rule) !important;
+  border-bottom: var(--SCC-Component-HintMenu-border-bottom);
+  background-color: var(--b3-theme-surface-lighter) !important;
+  backdrop-filter: blur(13px) brightness(0.88);
+  filter: brightness(1.13) contrast(1.13);
+}
+
+.search__header .b3-menu:empty {
+  background-color: var(--b3-theme-surface-lighter) !important;
+  backdrop-filter: blur(3.1px) brightness(0.7);
+}
+
+.search__header .b3-menu:empty::before {
+  content: "~ no historical record ~";
+}
+
+.search__header .b3-menu .b3-list-item {
+  color: var(--b3-theme-primary);
+  filter: brightness(0.58) opacity(.88);
+  overflow: scroll;
+  letter-spacing: .05px;
+  align-items: flex-start;
+  padding: .58em .31em .31em .31em;
+}
+
+.search__header .b3-menu .b3-list-item:hover {
+  background-color: var(--b3-theme-surface-lighter);
+  backdrop-filter: contrast(0.31) brightness(13) opacity(.58);
+}
+
 .protyle-breadcrumb__bar--hide {
   opacity: var(--SCC-Variables-breadcrumb--hide-opacity, 0) !important;
 }

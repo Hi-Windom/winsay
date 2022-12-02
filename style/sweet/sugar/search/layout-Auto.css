@@ -141,10 +141,15 @@
   }
 }
 
-.layout__center .layout-tab-container>.fn__flex-1>.fn__flex-column:has(#searchPreview.fullscreen) .search__header,
-.b3-dialog--open[data-key] .b3-dialog__container[style*="80vw"] [style^="height"]:not(.b3-tab-container)>div>.fn__flex-column:has(#searchPreview.fullscreen) .search__header,
-.b3-dialog--open[data-key] .b3-dialog__container[style*="80vw"] [style^="height"]:not(.b3-tab-container)>.fn__flex-column:has(#searchPreview.fullscreen) .search__header {
-  z-index: 99 !important;
+.layout__center .layout-tab-container>.fn__flex-1>.fn__flex-column .search__header:has(#searchHistoryList:not(.fn__none))+.search__header,
+.b3-dialog--open[data-key] .b3-dialog__container[style*="80vw"] [style^="height"]:not(.b3-tab-container)>div>.fn__flex-column .search__header:has(#searchHistoryList:not(.fn__none))+.search__header,
+.b3-dialog--open[data-key] .b3-dialog__container[style*="80vw"] [style^="height"]:not(.b3-tab-container)>.fn__flex-column .search__header:has(#searchHistoryList:not(.fn__none))+.search__header {
+  z-index: 1 !important;
+}
+
+.layout__center .layout-tab-container>.fn__flex-1>.fn__flex-column:has(#searchPreview.fullscreen):has(#searchHistoryList.fn__none) .search__header,
+.b3-dialog--open[data-key] .b3-dialog__container[style*="80vw"] [style^="height"]:not(.b3-tab-container)>div>.fn__flex-column:has(#searchPreview.fullscreen):has(#searchHistoryList.fn__none) .search__header,
+.b3-dialog--open[data-key] .b3-dialog__container[style*="80vw"] [style^="height"]:not(.b3-tab-container)>.fn__flex-column:has(#searchPreview.fullscreen):has(#searchHistoryList.fn__none) .search__header {
   box-shadow: 3px 3px 3px -3px var(--b3-theme-secondary);
   filter: brightness(1.08);
 }
@@ -158,4 +163,10 @@
 .b3-dialog--open[data-key] .b3-dialog__container[style*="80vw"] [style^="height"]:not(.b3-tab-container)>.fn__flex-column:has(#searchPreview.fullscreen) .search__header .block__icons .block__icon:not(#searchReplace) {
   pointer-events: none;
   opacity: .13;
+}
+
+.layout__center .layout-tab-container>.fn__flex-1>.fn__flex-column>.search__header>.fn__a>.search__arrowdown,
+.b3-dialog--open[data-key] .b3-dialog__container[style*="80vw"] [style^="height"]:not(.b3-tab-container)>div>.fn__flex-column>.search__header>.fn__a>.search__arrowdown,
+.b3-dialog--open[data-key] .b3-dialog__container[style*="80vw"] [style^="height"]:not(.b3-tab-container)>.fn__flex-column>.search__header>.fn__a>.search__arrowdown{
+  padding-left:1.3px;
 }
