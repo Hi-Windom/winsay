@@ -134,10 +134,11 @@ body.android #sidebar {
 }
 
 /* 只读模式提示 #214 */
-.fn__flex-1.protyle:has(div[contenteditable="false"][data-doc-type="NodeDocument"]):hover,
+/* 部分文档切换编辑/阅读模式卡死 #660 */
+/* .fn__flex-1.protyle:has(div[contenteditable="false"][data-doc-type="NodeDocument"]):hover,
 .fn__flex-1.protyle:has(div[contenteditable="false"][data-doc-type="NodeDocument"]):hover [data-doc-type="NodeDocument"] {
   background-color: var(--SCC-Variables-docReadOnly-hover-bg-color) !important;
-}
+} */
 
 /* 优化右上角窗口关闭按钮焦点样式，不适用于思源2.4.3 */
 #closeWindow:hover svg {
@@ -221,30 +222,5 @@ a:not([id="appearanceOpenTheme"]):not([id="appearanceOpenIcon"]):not([id="appear
   }
 }
 
-/* Android 端文档树功能区视觉效果调整 #58 */
-
-body.android .b3-list-item__arrow {
-  scale: 1.31 !important;
-  margin-right: 0px !important;
-  opacity: 0.58 !important;
-}
-body.android .b3-list-item__icon {
-  scale: 0.8 !important;
-  opacity: 0.8 !important;
-  margin-right: 0px !important;
-  padding: 0 1px !important;
-}
-body.android .b3-list-item__toggle {
-  min-height: 1.3em !important;
-}
-body.android .b3-list-item__toggle:hover {
-  background-color: transparent !important;
-}
-body.android .b3-list {
-  min-height: 40px !important;
-}
-body.android .b3-list-item__text {
-  font-size: 0.88em !important;
-}
 
 
