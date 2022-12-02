@@ -71,7 +71,7 @@
     padding: 0 4px;
     left: 43px;
     position: absolute;
-    display: inline-flex;
+    /* display: inline-flex; */
     opacity: .58;
   }
 
@@ -80,7 +80,7 @@
     padding: 0 4px;
     left: 68px;
     position: absolute;
-    display: inline-flex;
+    /* display: inline-flex; */
     opacity: .58;
   }
 }
@@ -137,4 +137,13 @@
 }
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background {
   outline: none;
+}
+
+/* 更紧凑的布局 */
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list--background>li .b3-list-item__toggle--hl {
+  margin-left: -6px;
+}
+
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list--background>ul .b3-list-item__toggle--hl {
+  margin-left: -9px;
 }
