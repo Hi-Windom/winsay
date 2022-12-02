@@ -1,5 +1,14 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
+.fullscreen button[aria-label="更多"]>svg {
+  color: var(--b3-theme-primary);
+}
+
+.fullscreen>.protyle-breadcrumb {
+  height: 30px;
+  margin-bottom: 5.8px;
+}
+
 
 /* 搜索匹配列表分组辅助线（需开启搜索面板标号） #639 */
 #searchList>.b3-list-item+div:not([data-type=search-item]) {
@@ -21,7 +30,7 @@
 
 /* 双击查看图片 */
 .viewer-backdrop {
-  background-color: rgba(0,0,0,.13);
+  background-color: rgba(0, 0, 0, .13);
   backdrop-filter: blur(31px) brightness(.58);
 }
 
@@ -47,40 +56,48 @@
 }
 
 /* 13号色特殊显示 #320 */
-[style*="color: var(--b3-font-color13)"]:hover{
+[style*="color: var(--b3-font-color13)"]:hover {
   color: inherit !important;
   transition: all .13s cubic-bezier(0, 0, 0.2, 1) .13s;
 }
-[style*="color: var(--b3-font-color13)"]:not(:hover){
+
+[style*="color: var(--b3-font-color13)"]:not(:hover) {
   transition: all .31s cubic-bezier(0.4, 0, 0.2, 1) .31s;
 }
-[style*="background-color: var(--b3-font-background13)"]:hover{
+
+[style*="background-color: var(--b3-font-background13)"]:hover {
   background-color: transparent !important;
   transition: all .13s cubic-bezier(0, 0, 0.2, 1) .31s;
 }
-[style*="background-color: var(--b3-font-background13)"]:not(:hover){
+
+[style*="background-color: var(--b3-font-background13)"]:not(:hover) {
   transition: all .31s cubic-bezier(0.4, 0, 0.2, 1) .13s;
   color: transparent !important;
 }
 
 /* https://ld246.com/article/1669468102342 */
-.b3-dialog__container > div:nth-child(3) > .fn__flex-column.b3-dialog--switch:has(.fn__hr):has(.dialog__path) > div.fn__flex {
+.b3-dialog__container>div:nth-child(3)>.fn__flex-column.b3-dialog--switch:has(.fn__hr):has(.dialog__path)>div.fn__flex {
   overflow: auto;
 }
-.b3-dialog__container > div:nth-child(3) > .fn__flex-column.b3-dialog--switch:has(.fn__hr):has(.dialog__path):has(li:nth-of-type(15)) {
+
+.b3-dialog__container>div:nth-child(3)>.fn__flex-column.b3-dialog--switch:has(.fn__hr):has(.dialog__path):has(li:nth-of-type(15)) {
   max-width: 700px;
 }
-.b3-dialog__container > div:nth-child(3) > .fn__flex-column.b3-dialog--switch:has(.fn__hr):has(.dialog__path) > div.fn__flex > ul:nth-child(2):has(li:nth-of-type(15)) {
+
+.b3-dialog__container>div:nth-child(3)>.fn__flex-column.b3-dialog--switch:has(.fn__hr):has(.dialog__path)>div.fn__flex>ul:nth-child(2):has(li:nth-of-type(15)) {
   column-count: 2;
   max-width: 540px;
 }
-.b3-dialog__container > div:nth-child(3) > .fn__flex-column.b3-dialog--switch:has(.fn__hr):has(.dialog__path):has(li:nth-of-type(30)) {
+
+.b3-dialog__container>div:nth-child(3)>.fn__flex-column.b3-dialog--switch:has(.fn__hr):has(.dialog__path):has(li:nth-of-type(30)) {
   max-width: 940px;
 }
-.b3-dialog__container > div:nth-child(3) > .fn__flex-column.b3-dialog--switch:has(.fn__hr):has(.dialog__path) > div.fn__flex > ul:nth-child(2):has(li:nth-of-type(30)) {
+
+.b3-dialog__container>div:nth-child(3)>.fn__flex-column.b3-dialog--switch:has(.fn__hr):has(.dialog__path)>div.fn__flex>ul:nth-child(2):has(li:nth-of-type(30)) {
   column-count: 3;
   max-width: 760px;
 }
+
 .b3-dialog--switch .dialog__path {
   min-height: 1.86em;
 }
@@ -100,6 +117,7 @@ div[data-name="bazaar"] .b3-card:hover {
   border: 1px solid var(--b3-theme-surface-lighter);
   letter-spacing: .13px;
 }
+
 #keymapList .b3-list-item--hide-action:not(:hover) .b3-list-item__action {
   display: flex;
   opacity: .58;
@@ -117,18 +135,21 @@ div[data-name="bazaar"] .b3-card:hover {
 
 /* Android 手机端model元素禁用过渡 #283
 适用于 2.4.9 及更老版本思源 */
-#editor:focus-within + div + div + div + div + div {
+#editor:focus-within+div+div+div+div+div {
   transition: height 0s;
 }
-#editor:not(:focus-within) + div + div + div + div + div {
+
+#editor:not(:focus-within)+div+div+div+div+div {
   transition: all 0s cubic-bezier(0.65, 0.05, 0.36, 1) 0s;
   /* 如果存在过渡，编辑器呼出键盘时打开左右面板仍会出现，可通过增加过渡延时明显观察到 */
 }
+
 /* Android 手机端左右面板宽度调整 #284 */
 body.android #menu {
   width: max-content;
   overflow-y: scroll;
 }
+
 body.android #sidebar {
   width: 90%;
 }
@@ -146,18 +167,7 @@ body.android #sidebar {
 }
 
 /* 【设置】-【账号】订阅按钮 */
-body
-  > div.b3-dialog--open
-  > div
-  > div.b3-dialog__container
-  > div:nth-child(3)
-  > div
-  > div.fn__flex-1.fn__flex
-  > div:nth-child(10)
-  > div
-  > div.config-account__center.config-account__center--text
-  > div.ft__center
-  > a.b3-button.b3-button--outline {
+body>div.b3-dialog--open>div>div.b3-dialog__container>div:nth-child(3)>div>div.fn__flex-1.fn__flex>div:nth-child(10)>div>div.config-account__center.config-account__center--text>div.ft__center>a.b3-button.b3-button--outline {
   background-color: var(--b3-theme-primary-lightest);
   box-shadow: rgb(254 239 234 / 40%) 0px 3px, rgb(0 6 85 / 30%) 0px 5px,
     rgb(72 69 80 / 10%) 0px 8px;
@@ -191,36 +201,41 @@ a:not([id="appearanceOpenTheme"]):not([id="appearanceOpenIcon"]):not([id="appear
   color: var(--b3-protyle-inline-link-color);
 }
 
-#layouts .b3-typography img, #layouts .protyle-wysiwyg img {
+#layouts .b3-typography img,
+#layouts .protyle-wysiwyg img {
   background-color: var(--SCC-Variables-IMG-bg-color);
 }
 
 @media screen and (min-width: 960px) {
+
   /* 部分颜色显示效果优化 */
   [style="color: var(--b3-font-color8);"],
   [style="color: var(--b3-font-color9);"] {
     text-shadow: 1px 0.5px 1px #40051d31 !important;
   }
+
   [style="color: var(--b3-font-color10);"] {
     text-shadow: 1px 0.5px 1px #7f04f558 !important;
   }
+
   [style="color: var(--b3-font-color11);"] {
     text-shadow: 1px 0.5px 1px #0b0bff31 !important;
   }
 }
+
 @media screen and (max-width: 960px) {
+
   /* 部分颜色显示效果优化 */
   [style="color: var(--b3-font-color8);"],
   [style="color: var(--b3-font-color9);"] {
     text-shadow: -0.5px 0.5px 0.5px #40051d58 !important;
   }
+
   [style="color: var(--b3-font-color10);"] {
     text-shadow: -0.5px 0.5px 1px #7f04f531 !important;
   }
+
   [style="color: var(--b3-font-color11);"] {
     text-shadow: -0.5px 0.5px 1px #0b0bff31 !important;
   }
 }
-
-
-
