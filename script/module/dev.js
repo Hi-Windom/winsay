@@ -64,9 +64,14 @@ new Promise(function (response) {
 
 function ExtendProtyleToolbar() {
   setInterval(() => {
-    var all_protyle_toolbar = document.querySelectorAll(".fn__flex-1.protyle .protyle-toolbar");
+    var all_protyle_toolbar = document.querySelectorAll(
+      ".fn__flex-1.protyle .protyle-toolbar"
+    );
     all_protyle_toolbar.forEach(function (protyle_toolbar) {
-      if (protyle_toolbar.querySelectorAll(".sc_protyle_toolbar_search").length == 0) {
+      if (
+        protyle_toolbar.querySelectorAll(".sc_protyle_toolbar_search").length ==
+        0
+      ) {
         var divider = document.createElement("div");
         divider.className = "protyle-toolbar__divider";
         protyle_toolbar.insertAdjacentElement("beforeend", divider);
@@ -78,32 +83,79 @@ function ExtendProtyleToolbar() {
         sbutton.setAttribute("aria-label", "搜索选中文本");
         sbutton.innerHTML = `<svg><use xlink:href="#iconSearch"></use></svg>`;
         protyle_toolbar.insertAdjacentElement("beforeend", sbutton);
-        protyle_toolbar.addEventListener(
-          "click",
-          (event) => {
-            if (
-              event.target.classList.contains("sc_protyle_toolbar_search") ||
-              event.target.parentNode.classList.contains(
-                "sc_protyle_toolbar_search"
-              )
-            ) {
-              var text = window.getSelection().toString();
-              document.querySelector("#toolbar #barSearch").click();
-              setTimeout(() => {
-                let i = document.querySelector(".b3-dialog--open #searchInput");
-                i.value = text;
-                let e = new Event("input", { bubbles: true });
-                let tracker = i._valueTracker;
-                if (tracker) {
-                  tracker.setValue("");
-                }
-                i.dispatchEvent(e);
-              }, 500);
-              event.stopPropagation();
-            }
-          },
-          true
-        );
+        if (config.clientMode == "body--mobile") {
+          protyle_toolbar.addEventListener(
+            "click",
+            (event) => {
+              if (
+                event.target.classList.contains("sc_protyle_toolbar_search") ||
+                event.target.parentNode.classList.contains(
+                  "sc_protyle_toolbar_search"
+                )
+              ) {
+                var text = window.getSelection().toString();
+                var toolbar = document.querySelector(
+                  ".toolbar.toolbar--border"
+                );
+                toolbar.addEventListener(
+                  "click",
+                  (event) => {
+                    console.log(event.target);
+                    event.target.id == "toolbarMore";
+                  },
+                  true
+                );
+                toolbar.click();
+                setTimeout(() => {
+                  document.querySelector("#menuSearch").click();
+                  setTimeout(() => {
+                    let i = document.querySelector(
+                      ".side-panel #toolbarSearch"
+                    );
+                    i.value = text;
+                    let e = new Event("input", { bubbles: true });
+                    let tracker = i._valueTracker;
+                    if (tracker) {
+                      tracker.setValue("");
+                    }
+                    i.dispatchEvent(e);
+                  }, 300);
+                }, 300);
+                event.stopPropagation();
+              }
+            },
+            true
+          );
+        } else {
+          protyle_toolbar.addEventListener(
+            "click",
+            (event) => {
+              if (
+                event.target.classList.contains("sc_protyle_toolbar_search") ||
+                event.target.parentNode.classList.contains(
+                  "sc_protyle_toolbar_search"
+                )
+              ) {
+                var text = window.getSelection().toString();
+                document.querySelector("#toolbar #barSearch").click();
+                setTimeout(() => {
+                  let i = document.querySelector(
+                    ".b3-dialog--open #searchInput"
+                  );
+                  i.value = text;
+                  let e = new Event("input", { bubbles: true });
+                  let tracker = i._valueTracker;
+                  if (tracker) {
+                    tracker.setValue("");
+                  }
+                  i.dispatchEvent(e);
+                }, 500);
+                event.stopPropagation();
+              }
+            },
+            true
+          );
+        }
       }
     });
   }, 2000);
