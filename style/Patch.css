@@ -1,5 +1,9 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
+.protyle-breadcrumb__bar--hide {
+  opacity: var(--SCC-Variables-breadcrumb--hide-opacity, 0) !important;
+}
+
 .fullscreen button[aria-label="更多"]>svg {
   color: var(--b3-theme-primary);
 }
