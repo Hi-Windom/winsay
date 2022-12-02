@@ -36,7 +36,7 @@
 
 ---
 
-## ✨ 主题设置界面可配置更多项目了，文档树视觉效果升级，支持通过主题设置配置滤镜，持续优化体验
+## ✨ 主题设置界面可配置更多项目了，Android 手机端新增一个主题设置入口，文档树视觉效果升级，支持通过主题设置配置滤镜，持续优化体验
 
 > 版本更新详细内容请下滑至【集市更新版本日志】部分查看
 
@@ -114,9 +114,9 @@ Sofill- 主题形态一览表 ✨
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v0.198 ~ v0.238 聚合说明
+### v0.198 ~ v0.240 聚合说明
 
-> 2022-12-01 released
+> 2022-12-02 released
 
 <p><a href="https://github.com/Hi-Windom/winsay/issues/603"><img src="https://img.shields.io/badge/SiYuan-2.5.2-green"/></a> <a href="https://github.com/Hi-Windom/winsay/issues/409"><img src="https://img.shields.io/badge/%E4%B8%8D%E5%85%BC%E5%AE%B9-2.4.5---red"/></a> <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow"/></p></p>
 
@@ -144,6 +144,8 @@ Sofill- 主题形态一览表 ✨
 20. [支持通过主题设置配置滤镜 · Issue #643 · v0.232](https://github.com/Hi-Windom/winsay/issues/643)
 21. [滤镜在移动端可用 · Issue #652 · v0.234](https://github.com/Hi-Windom/winsay/issues/652)
 22. [支持通过主题设置面板配置状态提示增强 · Issue #654 · v0.236](https://github.com/Hi-Windom/winsay/issues/654)
+23. [Android 手机端新增一个主题设置入口 · Issue #661 · v0.240](https://github.com/Hi-Windom/winsay/issues/661)
+24. [选区搜索支持 Android 手机端 · Issue #662 · v0.240](https://github.com/Hi-Windom/winsay/issues/662)
 
 改进优化：
 
@@ -180,6 +182,7 @@ Sofill- 主题形态一览表 ✨
 7. [顶栏自动隐藏后图标离奇消失 · Issue #650 · v0.234](https://github.com/Hi-Windom/winsay/issues/650)
 8. [顶栏图标过渡浮动问题 · Issue #647 · v0.234](https://github.com/Hi-Windom/winsay/issues/647)
 9. [mac系统显示错误 · Issue #658 · v0.238](https://github.com/Hi-Windom/winsay/issues/658)
+10. [部分文档切换编辑/阅读模式卡死 · Issue #660 · v0.240](https://github.com/Hi-Windom/winsay/issues/660)
 
 ## 🎈 鸣谢
 
