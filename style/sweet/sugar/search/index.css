@@ -30,7 +30,7 @@
   opacity: .31;
 }
 #searchList>div>.b3-list-item:before {
-  content: counter(search-index)"."counter(search-index-2);
+  content: "."counter(search-index-2);
   font-size: 85%;
   width: 36px;
   opacity: .31;

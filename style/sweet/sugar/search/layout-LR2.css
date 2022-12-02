@@ -35,9 +35,9 @@
 
 /* CTRL + F 为空时保持高度 */
 .layout__center .layout-tab-container>.fn__flex-1>.fn__flex-column #searchList,
-.layout__center .layout-tab-container>.fn__flex-1>.fn__flex-column #searchPreview,
+.layout__center .layout-tab-container>.fn__flex-1>.fn__flex-column #searchPreview:not(.fullscreen),
 .b3-dialog__container[style*="80vw"] #searchList,
-.b3-dialog__container[style*="80vw"] #searchPreview {
+.b3-dialog__container[style*="80vw"] #searchPreview:not(.fullscreen) {
   height: calc(100% - 50px - 53px) !important;
 }
 
@@ -97,4 +97,10 @@ div[data-type="search-item"] .b3-list-item__meta {
 
 #searchList .b3-list-item:before {
   max-height: 3.8rem;
+}
+
+.layout__center .layout-tab-container>.fn__flex-1>.fn__flex-column:has(#searchPreview.fullscreen) .search__header,
+.b3-dialog--open[data-key] .b3-dialog__container[style*="80vw"] [style^="height"]:not(.b3-tab-container)>div>.fn__flex-column:has(#searchPreview.fullscreen) .search__header,
+.b3-dialog--open[data-key] .b3-dialog__container[style*="80vw"] [style^="height"]:not(.b3-tab-container)>.fn__flex-column:has(#searchPreview.fullscreen) .search__header {
+  z-index: 1 !important;
 }

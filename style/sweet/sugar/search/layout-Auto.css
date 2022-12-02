@@ -101,7 +101,7 @@
 
   /* CTRL + F 为空时保持高度 */
   .b3-dialog__container[style*="80vw"] #searchList,
-  .b3-dialog__container[style*="80vw"] #searchPreview {
+  .b3-dialog__container[style*="80vw"] #searchPreview:not(.fullscreen) {
     height: calc(100% - 50px - 53px) !important;
   }
 
@@ -139,4 +139,23 @@
   .b3-dialog__container[style*="80vw"] #searchList div[data-type="search-item"]>.b3-list-item__text svg {
     margin: 0;
   }
+}
+
+.layout__center .layout-tab-container>.fn__flex-1>.fn__flex-column:has(#searchPreview.fullscreen) .search__header,
+.b3-dialog--open[data-key] .b3-dialog__container[style*="80vw"] [style^="height"]:not(.b3-tab-container)>div>.fn__flex-column:has(#searchPreview.fullscreen) .search__header,
+.b3-dialog--open[data-key] .b3-dialog__container[style*="80vw"] [style^="height"]:not(.b3-tab-container)>.fn__flex-column:has(#searchPreview.fullscreen) .search__header {
+  z-index: 99 !important;
+  box-shadow: 3px 3px 3px -3px var(--b3-theme-secondary);
+  filter: brightness(1.08);
+}
+
+.layout__center .layout-tab-container>.fn__flex-1>.fn__flex-column:has(#searchPreview.fullscreen) .search__header {
+  width: 40%;
+}
+
+.layout__center .layout-tab-container>.fn__flex-1>.fn__flex-column:has(#searchPreview.fullscreen) .search__header .block__icons .block__icon:not(#searchReplace),
+.b3-dialog--open[data-key] .b3-dialog__container[style*="80vw"] [style^="height"]:not(.b3-tab-container)>div>.fn__flex-column:has(#searchPreview.fullscreen) .search__header .block__icons .block__icon:not(#searchReplace),
+.b3-dialog--open[data-key] .b3-dialog__container[style*="80vw"] [style^="height"]:not(.b3-tab-container)>.fn__flex-column:has(#searchPreview.fullscreen) .search__header .block__icons .block__icon:not(#searchReplace) {
+  pointer-events: none;
+  opacity: .13;
 }
