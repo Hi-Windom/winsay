@@ -1,5 +1,10 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
+/* 搜索头统一层级，有遮挡的地方自行处理 */
+.search__header {
+  z-index: 98;
+}
+
 @media screen and (min-width: 1000px) {
   .search__header .b3-menu:not(:empty) {
     column-count: 3;
@@ -39,17 +44,16 @@
 
 .search__header .b3-menu:empty {
   background-color: var(--b3-theme-surface-lighter) !important;
-  backdrop-filter: blur(3.1px) brightness(0.58);
+  backdrop-filter: blur(3.1px) brightness(0.7);
 }
 
 .search__header .b3-menu:empty::before {
   content: "~ no historical record ~";
-  color: var(--b3-theme-background-blur);
 }
 
 .search__header .b3-menu .b3-list-item {
   color: var(--b3-theme-primary);
-  filter: brightness(0.38) opacity(.88);
+  filter: brightness(0.58) opacity(.88);
   overflow: scroll;
   letter-spacing: .05px;
   align-items: flex-start;

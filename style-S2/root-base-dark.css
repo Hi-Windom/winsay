@@ -123,8 +123,3 @@
 .b3-list--background .b3-list-item:hover:not(.b3-list-item--focus) {
   background-color: #c1c2c308;
 }
-
-/* 避免搜索框遮挡集市主题详情页 */
-.search__header {
-  z-index: unset;
-}
