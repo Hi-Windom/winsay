@@ -256,8 +256,11 @@ body.android .layout-tab-bar li {
 }
 
 /* Android Pad 端禁止在文档树修改图标 #139 */
-body.android .b3-list-item__icon {
-  pointer-events: none;
+/* 支持通过主题设置界面禁用文档树修改图标 #684 */
+.b3-list-item__icon[aria-label="修改图标"],
+.b3-list-item__icon[aria-label="修改圖示"],
+.b3-list-item__icon[aria-label="Change icon"] {
+  pointer-events: var(--SCC-Variables-ChangeIconAvailability, all);
 }
 
 /* 右下角统计区适当增加右填充 #132 */
