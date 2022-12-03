@@ -34,15 +34,15 @@
 
 ---
 
-## ✨ 主题设置界面可配置更多项目了，Android 手机端体验优化，搜索体验优化，持续优化体验
+## ✨ 主题设置界面可配置更多项目了，文档树自适应显示优化，优化导出PDF形态，持续优化体验
 
 > 版本更新详细内容请下滑至【集市更新版本日志】部分查看
 
 ### 可能错过的重要更新
 
-1. 文档宽度模式增加固宽预览类选项，13号色特殊显示，图片预览viewer界面美化
-2. HintHint首项聚焦穿透模式
+1. HintHint首项聚焦穿透模式
 3. 文档树视觉效果升级，支持通过主题设置配置滤镜
+4. Android 手机端体验优化，搜索体验优化
 
 ### 主题设置界面入口指南
 
@@ -117,9 +117,9 @@ Sofill- 主题形态一览表 ✨
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v0.198 ~ v0.244 聚合说明
+### v0.198 ~ v0.246 聚合说明
 
-> 2022-12-02 released
+> 2022-12-03 released
 
 <p><a href="https://github.com/Hi-Windom/winsay/issues/603"><img src="https://img.shields.io/badge/SiYuan-2.5.2-green"/></a> <a href="https://github.com/Hi-Windom/winsay/issues/409"><img src="https://img.shields.io/badge/%E4%B8%8D%E5%85%BC%E5%AE%B9-2.4.5---red"/></a> <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow"/></p></p>
 
@@ -179,6 +179,8 @@ Sofill- 主题形态一览表 ✨
 23. [Android 手机端文档树调整 · Issue #664 · v0.242](https://github.com/Hi-Windom/winsay/issues/664)
 24. [搜索标号细节优化 · Issue #668 · v0.242](https://github.com/Hi-Windom/winsay/issues/668)
 25. [变更搜索提示内容 · Issue #670 · v0.244](https://github.com/Hi-Windom/winsay/issues/670)
+26. [文档树自适应显示优化 · Issue #680 · v0.246](https://github.com/Hi-Windom/winsay/issues/680)
+27. [优化导出PDF形态 · Issue #681 · v0.246](https://github.com/Hi-Windom/winsay/issues/681)
 
 缺陷修复：
 
