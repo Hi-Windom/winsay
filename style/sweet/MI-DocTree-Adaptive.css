@@ -59,14 +59,14 @@
     letter-spacing: -0.31px;
   }
 
-  .file-tree.sy__file ul.b3-list.b3-list--background>ul>ul>ul>ul>ul li[data-type="navigation-file"] .counter[aria-label="引用块"] {
+  .file-tree.sy__file ul.b3-list.b3-list--background>ul>ul>ul>ul>ul li[data-type="navigation-file"] .counter.popover__block {
     left: 0px;
     position: absolute;
     max-width: 25px;
     margin-left: 1px;
   }
 
-  .file-tree.sy__file ul.b3-list.b3-list--background:has(>ul>ul>ul>ul>ul)>ul>ul>ul>ul>ul li[data-type="navigation-file"] .b3-list-item__action[aria-label="更多"] {
+  .file-tree.sy__file ul.b3-list.b3-list--background:has(>ul>ul>ul>ul>ul)>ul>ul>ul>ul>ul li[data-type="navigation-file"] .b3-list-item__action[data-type="more-file"] {
     height: 22px;
     padding: 0 4px;
     left: 43px;
@@ -75,7 +75,7 @@
     opacity: .58;
   }
 
-  .file-tree.sy__file ul.b3-list.b3-list--background:has(>ul>ul>ul>ul>ul)>ul>ul>ul>ul>ul li[data-type="navigation-file"] .b3-list-item__action[aria-label="新建子文档"] {
+  .file-tree.sy__file ul.b3-list.b3-list--background:has(>ul>ul>ul>ul>ul)>ul>ul>ul>ul>ul li[data-type="navigation-file"] .b3-list-item__action[data-type="new"] {
     height: 22px;
     padding: 0 4px;
     left: 68px;

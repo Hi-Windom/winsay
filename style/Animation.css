@@ -195,29 +195,29 @@
 }
 
 
-#layouts>.fn__flex>.fn__flex-column:has(span[aria-label="定位打开的文档 "])>.fn__none:not(.layout__resize)>div[data-type=wnd] {
+#layouts>.fn__flex>.fn__flex-column:has(span[data-type="focus"])>.fn__none:not(.layout__resize)>div[data-type=wnd] {
   transition: all .24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }
 /*侧栏（不包括文档树）展开动画*/
-#layouts div[data-type="wnd"]>.layout-tab-container>.fn__flex-column:not(:has(span[aria-label="定位打开的文档 "])):has(li:nth-child(100)) ul:has(ul) {
+#layouts div[data-type="wnd"]>.layout-tab-container>.fn__flex-column:not(:has(span[data-type="focus"])):has(li:nth-child(100)) ul:has(ul) {
   animation: tree-list .2s ease-in;
 }
 @media screen and (min-width: 1300px) {
-  #layouts div[data-type="wnd"]>.layout-tab-container>.fn__flex-column:not(:has(span[aria-label="定位打开的文档 "])):not(:has(li:nth-child(100))) {
+  #layouts div[data-type="wnd"]>.layout-tab-container>.fn__flex-column:not(:has(span[data-type="focus"])):not(:has(li:nth-child(100))) {
     animation: flex-column-y-longer 0.58s cubic-bezier(0.37, -0.02, 0.54, 1.09);
     animation-delay: 0.1s;
   }
 }
 
 @media screen and (min-width: 960px) and (max-width: 1300px) {
-  #layouts div[data-type="wnd"]>.layout-tab-container>.fn__flex-column:not(:has(span[aria-label="定位打开的文档 "])):not(:has(li:nth-child(100))) {
+  #layouts div[data-type="wnd"]>.layout-tab-container>.fn__flex-column:not(:has(span[data-type="focus"])):not(:has(li:nth-child(100))) {
     animation: flex-column-y-long 0.35s cubic-bezier(0.37, -0.02, 0.54, 1.09);
     animation-delay: 0.1s;
   }
 }
 
 @media screen and (max-width: 960px) {
-  body:not(android) #layouts div[data-type="wnd"]>.layout-tab-container>.fn__flex-column:not(:has(span[aria-label="定位打开的文档 "])):not(:has(li:nth-child(100))) {
+  body:not(android) #layouts div[data-type="wnd"]>.layout-tab-container>.fn__flex-column:not(:has(span[data-type="focus"])):not(:has(li:nth-child(100))) {
     animation: flex-column-y 0.13s cubic-bezier(0.37, -0.02, 0.54, 1.09);
     animation-delay: 0.1s;
   }

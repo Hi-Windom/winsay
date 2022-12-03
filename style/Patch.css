@@ -69,7 +69,8 @@
   opacity: var(--SCC-Variables-breadcrumb--hide-opacity, 0) !important;
 }
 
-.fullscreen button[aria-label="更多"]>svg {
+.fullscreen button[aria-label="更多"]>svg,
+.fullscreen button[aria-label="More"]>svg {
   color: var(--b3-theme-primary);
 }
 
@@ -91,7 +92,9 @@
   transition: all .31s ease .13s;
 }
 
-.protyle-util span.b3-list-item__action.b3-tooltips.b3-tooltips__w[aria-label="打开文件位置"] {
+.protyle-util span.b3-list-item__action.b3-tooltips.b3-tooltips__w[aria-label="打开文件位置"],
+.protyle-util span.b3-list-item__action.b3-tooltips.b3-tooltips__w[aria-label="打開文件位置"],
+.protyle-util span.b3-list-item__action.b3-tooltips.b3-tooltips__w[aria-label="Show in Folder"] {
   display: flex;
   color: var(--b3-theme-on-surface);
   opacity: .88;
@@ -256,8 +259,11 @@ body.android .layout-tab-bar li {
 }
 
 /* Android Pad 端禁止在文档树修改图标 #139 */
-body.android .b3-list-item__icon {
-  pointer-events: none;
+/* 支持通过主题设置界面禁用文档树修改图标 #684 */
+.b3-list-item__icon[aria-label="修改图标"],
+.b3-list-item__icon[aria-label="修改圖示"],
+.b3-list-item__icon[aria-label="Change icon"] {
+  pointer-events: var(--SCC-Variables-ChangeIconAvailability, all);
 }
 
 /* 右下角统计区适当增加右填充 #132 */
