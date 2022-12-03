@@ -165,6 +165,7 @@ li[data-name="Untitled.sy"]>span.b3-list-item__text {
 }
 
 /* 支持通过主题设置面板隐藏文档树【更多】图标 #633 */
-.file-tree.sy__file .b3-list-item--hide-action:hover>.b3-list-item__action[aria-label="更多"] {
+.file-tree.sy__file .b3-list-item--hide-action:hover>.b3-list-item__action[aria-label="更多"],
+.file-tree.sy__file .b3-list-item--hide-action:hover>.b3-list-item__action[aria-label="More"] {
   display: var(--SCC-Variables-MI-DocTree-item-action-more-display, flex) !important;
 }

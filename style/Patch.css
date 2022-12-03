@@ -69,7 +69,8 @@
   opacity: var(--SCC-Variables-breadcrumb--hide-opacity, 0) !important;
 }
 
-.fullscreen button[aria-label="更多"]>svg {
+.fullscreen button[aria-label="更多"]>svg,
+.fullscreen button[aria-label="More"]>svg {
   color: var(--b3-theme-primary);
 }
 
@@ -91,7 +92,9 @@
   transition: all .31s ease .13s;
 }
 
-.protyle-util span.b3-list-item__action.b3-tooltips.b3-tooltips__w[aria-label="打开文件位置"] {
+.protyle-util span.b3-list-item__action.b3-tooltips.b3-tooltips__w[aria-label="打开文件位置"],
+.protyle-util span.b3-list-item__action.b3-tooltips.b3-tooltips__w[aria-label="打開文件位置"],
+.protyle-util span.b3-list-item__action.b3-tooltips.b3-tooltips__w[aria-label="Show in Folder"] {
   display: flex;
   color: var(--b3-theme-on-surface);
   opacity: .88;
