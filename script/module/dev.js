@@ -1,5 +1,9 @@
 import * as API from "./../utils/api.min.js";
 import * as config from "./../config.js";
+const { globalShortcut } = require('@electron/remote');
+globalShortcut.register('CommandOrControl+alt+P', () => {
+   console.info("predefined shortcut");
+ })
 
 // 初始缩放比例
 let originPixelRatio = localStorage.SC_winsay_data_devicePixelRatio;
