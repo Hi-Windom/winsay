@@ -4,7 +4,8 @@ const config_Custom = "/conf/appearance/themes/Sofill-/config/Custom.json";
 const config_UI = "/conf/appearance/themes/Sofill-/config/UI.json";
 const themeStyle = document.getElementById("themeStyle"); // 当前主题引用路径
 const THEME_ROOT = new URL(themeStyle.href).pathname.replace("theme.css", "");
-const S2_BASE = `${THEME_ROOT}style-S2/`;
+const winsay_ROOT = `${window.siyuan.config.system.confDir}\\appearance\\themes\\Sofill-\\`;
+const S2_BASE = `${winsay_ROOT}style-S2/`;
 const ID_COLOR_STYLE = "theme-color-style";
 
 /* DOM 节点 ID */
@@ -76,6 +77,7 @@ export {
   IDs,
   ID_COLOR_STYLE,
   THEME_ROOT,
+  winsay_ROOT,
   S2_BASE,
   themeStyle,
   config_UI,
