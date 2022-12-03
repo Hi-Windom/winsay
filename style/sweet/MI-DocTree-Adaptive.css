@@ -88,13 +88,16 @@
 
 /* 笔记本名文字 */
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul>li .b3-list-item__text {
-  font-size: max(min(5.5cqw, 14pt), 11pt) !important;
+  font-size:calc(max(min(13cqw, 50pt),39pt)*0.27) !important;
+  letter-spacing: calc(min(1cqw, 13px)*0.13);
+  padding-left: calc(min(1.3cqw, 13px)*0.31);
 }
 
 /* 文档名文字 */
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul>ul>li .b3-list-item__text {
   font-size: max(min(4.2cqw, 12pt), 9.5pt) !important;
-  letter-spacing: 0.1px;
+  letter-spacing: calc(min(1.3cqw, 13px)*0.13);
+  padding-left: calc(min(1.3cqw, 13px)*0.58);
 }
 
 
