@@ -25,3 +25,12 @@
 .b3-dialog--open[data-key] .b3-dialog__container[style*="80vw"] [style^="height"]:not(.b3-tab-container)>.fn__flex-column:has(#searchPreview.fullscreen) .search__header {
   z-index: 1 !important;
 }
+
+#searchResult:not(:empty)::before {
+  content: "TB1 🎯" !important;
+  padding: 0 6px;
+}
+
+#searchResult:not(:empty) {
+  margin-left: -7px;
+}

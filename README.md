@@ -41,8 +41,8 @@
 ### 可能错过的重要更新
 
 1. 文档树视觉效果升级，支持通过主题设置配置滤镜
-3. Android 手机端体验优化，搜索体验优化
-4. 文档树自适应显示优化，优化导出PDF形态，支持通过主题设置界面禁用文档树修改图标，适配繁体中文和英文
+2. Android 手机端体验优化，搜索体验优化
+3. 文档树自适应显示优化，优化导出PDF形态，支持通过主题设置界面禁用文档树修改图标，适配繁体中文和英文
 
 ### 主题设置界面入口指南
 
@@ -137,6 +137,7 @@ Sofill- 主题形态一览表 ✨
 5. [文档树自适应显示支持安卓手机端 · Issue #693 · v0.250](https://github.com/Hi-Windom/winsay/issues/693)
 6. [文档树笔记本项粘性布局改为需开启自适应显示 · Issue #695 · v0.250](https://github.com/Hi-Windom/winsay/issues/695)
 7. [优化搜索建议 · Issue #696 · v0.250](https://github.com/Hi-Windom/winsay/issues/696)
+8. [搜索界面显示当前布局模式 · Issue #698 · v0.250](https://github.com/Hi-Windom/winsay/issues/698)
 
 缺陷修复：
 
