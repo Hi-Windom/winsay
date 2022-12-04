@@ -1149,12 +1149,18 @@ async function CP_EditorMonitor() {
         "LH_Adaptive",
         `/appearance/themes/Sofill-/style/sweet/LH-Adaptive.css`
       );
+      document
+        .getElementById("BP__SC_winsay_cp_editor__LH_Adaptive")
+        .classList.add("fn__none");
     },
     () => {
       API.removejscssfile(
         `${config.winsay_ROOT}style/sweet/LH-Adaptive.css`,
         "css"
       );
+      document
+        .getElementById("BP__SC_winsay_cp_editor__LH_Adaptive")
+        .classList.remove("fn__none");
     }
   );
   checkedChange(
@@ -2023,7 +2029,9 @@ async function CP_Monitors() {
   await CP_AppearanceMonitor();
 }
 
-await CP_Monitors();
+setTimeout(async () => {
+  await CP_Monitors();
+});
 
 propChange("SC_winsay_cp_search__about_checkTime", function () {
   var i = localStorage.getItem("SC_winsay_cp_search__about_checkTime");
@@ -2296,12 +2304,18 @@ checkedChange(
       "MI-DocTree-Adaptive",
       `/appearance/themes/Sofill-/style/sweet/MI-DocTree-Adaptive.css`
     );
+    document
+      .getElementById("BP__SC_winsay_cp_filetree__Adaptive_display")
+      .classList.add("fn__none");
   },
   () => {
     API.removejscssfile(
       `${config.winsay_ROOT}style/sweet/MI-DocTree-Adaptive.css`,
       "css"
     );
+    document
+      .getElementById("BP__SC_winsay_cp_filetree__Adaptive_display")
+      .classList.remove("fn__none");
   }
 );
 
