@@ -138,6 +138,12 @@ if (config.clientMode == "body--mobile") {
   drawer.style.flexDirection = "row-reverse";
   drawer.style.borderBottom = "2px dashed var(--b3-theme-surface-lighter)";
   drawer.style.minHeight = "2rem";
+  setTimeout(() => {
+    drawer.setAttribute(
+      "data-themeInfo",
+      `${config.ThemeName} v${localVersion.split(".")[0]}`
+    );
+  }, 1000);
 
   barhelp.children[1].insertAdjacentElement("afterbegin", drawer);
   if (document.getElementById("Sofill-CDUI-1") == null) {

@@ -1,5 +1,14 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
+#sc_drawer::after {
+  content: attr(data-themeInfo);
+  font: -webkit-small-control;
+  font-size: 131%;
+  padding: 0 5.8px;
+  margin-top: 7px;
+  color: var(--b3-theme-primary-lighter);
+}
+
 /* 搜索头统一层级，有遮挡的地方自行处理 */
 .search__header:focus {
   z-index: 98;
