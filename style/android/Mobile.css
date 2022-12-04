@@ -86,34 +86,6 @@ body.body--mobile .side-panel {
   backdrop-filter: blur(5.8px);
 }
 
-/* Android 手机端文档树功能区视觉效果调整 #58 */
-body.body--mobile #sidebar .b3-list-item {
-  margin: 0 3.1px 0 -5.8px !important;
-  padding: 1.3px 5.8px 1.3px 0px !important;
-}
-body.body--mobile #sidebar .b3-list-item__arrow {
-  scale: 1.31 !important;
-  opacity: 0.58 !important;
-}
-body.body--mobile #sidebar .b3-list-item__icon {
-  font-size: 0.88em !important;
-  opacity: 0.88 !important;
-  margin-right: 1.3px !important;
-  padding: 0 1.3px !important;
-}
-body.body--mobile #sidebar .b3-list-item__toggle {
-  min-height: 1.3em !important;
-}
-body.body--mobile #sidebar .b3-list-item__toggle:hover {
-  background-color: transparent !important;
-}
-body.body--mobile #sidebar .b3-list {
-  min-height: 40px !important;
-}
-body.body--mobile #sidebar .b3-list-item__text {
-  font-size: 0.88em !important;
-}
-
 /* 右侧菜单 */
 body.body--mobile #menu .b3-list-item--big {
   padding: 13px 24px;

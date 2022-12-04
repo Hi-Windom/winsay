@@ -141,6 +141,7 @@ li[data-name="Untitled.sy"]>span.b3-list-item__text {
 }
 
 /* 笔记本名文字 */
+body.body--mobile [data-type="sidebar-file"] ul>li .b3-list-item__text,
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul>li .b3-list-item__text {
   color: var(--SCC-baseComponent-text-color-2);
   font-size: var(--SCC-Variables-MI-DocTree-nbFontsize, 10pt);
@@ -148,6 +149,7 @@ li[data-name="Untitled.sy"]>span.b3-list-item__text {
 }
 
 /* 文档名文字 */
+body.body--mobile [data-type="sidebar-file"] ul>ul>li .b3-list-item__text,
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul>ul>li .b3-list-item__text {
   color: var(--SCC-baseComponent-text-color-1);
   font-size: var(--SCC-Variables-MI-DocTree-docFontsize, 9pt);
