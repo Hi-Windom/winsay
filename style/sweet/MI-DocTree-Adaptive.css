@@ -53,8 +53,6 @@
 
   /* 文档文字 */
   .fn__flex-1.fn__flex-column.file-tree.sy__file ul>ul>li .b3-list-item__text {
-    color: var(--SCC-baseComponent-text-color-1);
-    /*   font-size: 9.5pt !important; */
     font-weight: 400;
     letter-spacing: -0.31px;
   }

@@ -2282,6 +2282,27 @@ checkedChange(
   }
 );
 checkedChange(
+  document.getElementById("SC_winsay_cp_filetree__DyeingNameAvailability"),
+  () => {
+    document.documentElement.style.removeProperty(
+      "--SCC-Variables-DyeingName-Notebook"
+    );
+    document.documentElement.style.removeProperty(
+      "--SCC-Variables-DyeingName-Doc"
+    );
+  },
+  () => {
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-DyeingName-Notebook",
+      "var(--SCC-baseComponent-text-color-2)"
+    );
+    document.documentElement.style.setProperty(
+      "--SCC-Variables-DyeingName-Doc",
+      "var(--SCC-baseComponent-text-color-1)"
+    );
+  }
+);
+checkedChange(
   document.getElementById("SC_winsay_cp_search__index"),
   () => {
     window.funs.updateStyle(

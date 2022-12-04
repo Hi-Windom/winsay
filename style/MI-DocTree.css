@@ -141,9 +141,9 @@ li[data-name="Untitled.sy"]>span.b3-list-item__text {
 }
 
 /* 笔记本名文字 */
-body.body--mobile [data-type="sidebar-file"] ul>li .b3-list-item__text,
-.fn__flex-1.fn__flex-column.file-tree.sy__file ul>li .b3-list-item__text {
-  color: var(--SCC-baseComponent-text-color-2);
+body.body--mobile [data-type="sidebar-file"] ul.b3-list>li .b3-list-item__text,
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list>li .b3-list-item__text {
+  color: var(--SCC-Variables-DyeingName-Notebook);
   font-size: var(--SCC-Variables-MI-DocTree-nbFontsize, 10pt);
   transition: color 0.2s cubic-bezier(0.47, 0, 0.75, 0.72) .1s;
 }
@@ -151,7 +151,7 @@ body.body--mobile [data-type="sidebar-file"] ul>li .b3-list-item__text,
 /* 文档名文字 */
 body.body--mobile [data-type="sidebar-file"] ul>ul>li .b3-list-item__text,
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul>ul>li .b3-list-item__text {
-  color: var(--SCC-baseComponent-text-color-1);
+  color: var(--SCC-Variables-DyeingName-Doc);
   font-size: var(--SCC-Variables-MI-DocTree-docFontsize, 9pt);
   letter-spacing: 0.1px;
   transition: all .31s ease .1s;
