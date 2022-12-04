@@ -59,7 +59,10 @@
 
 @media screen and (min-width: 1300px) {
 
-  /* CTRL + P */
+  .search__layout {
+    flex-direction: row;
+  }
+
   .b3-dialog--open[data-key] .b3-dialog__container[style*="80vw"] [style^="height"]:not(.b3-tab-container)>.fn__flex-column {
     flex-direction: row !important;
     flex-wrap: wrap;

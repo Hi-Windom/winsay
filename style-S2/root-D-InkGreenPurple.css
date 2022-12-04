@@ -13,7 +13,7 @@
     --b3-theme-error: #d23f31;
 
     /* 文字颜色 */
-    --b3-theme-on-primary: #fff;
+    --b3-theme-on-primary: var(--SCC-SGTC-29C);
     --b3-theme-on-secondary: #fff;
     --b3-theme-on-background: var(--SCC-White-light);
     --b3-theme-on-surface: var(--SCC-White-light);

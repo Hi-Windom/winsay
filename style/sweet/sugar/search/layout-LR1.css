@@ -1,4 +1,7 @@
-/* CTRL + P */
+.search__layout {
+  flex-direction: row;
+}
+
 .layout__center .layout-tab-container>.fn__flex-1>.fn__flex-column,
 /* 固定搜索 */
 .b3-dialog--open[data-key] .b3-dialog__container[style*="80vw"] [style^="height"]:not(.b3-tab-container)>.fn__flex-column {
