@@ -14,8 +14,8 @@ body:not(.fn__flex-column) #action {
   --b3-font-color11: var(--SCC-Yellow-HellisePotter);
   --b3-font-color12: var(--SCC-Orange-Windom);
   --b3-font-color13: transparent;
-  --b3-font-background11: var(--SCC-Yellow-HellisePotter-light);
-  --b3-font-background12: var(--SCC-Orange-Windom-light);
+  --b3-font-background11: transparent;
+  --b3-font-background12: transparent;
   --b3-font-background13: #000;
 
   /* 动画效果 */
@@ -117,4 +117,20 @@ body:not(.fn__flex-column) #action {
   --SCC-baseComponent-file-tree-hover-ul-outline: none;
   /* 块引用波浪线动画图标 | The icon of wavy line animation */
   --SCC-baseComponent-span-ref-animation-icon: url(/appearance/themes/Sofill-/src/icon/wavy-line-light.svg);
+}
+
+/* 背景色11、12改为标记色 #585 */
+[style*="background-color:var(--b3-font-background11)"],
+[style*="background-color: var(--b3-font-background11)"] {
+  background-image: linear-gradient(transparent, transparent 78%, var(--b3-theme-primary-lightest) 88%, var(--b3-theme-primary-lighter) 91%, var(--b3-theme-primary-light) 96%, var(--b3-theme-primary-lightest) 100%);
+  border-radius: 5.8%;
+  padding-bottom: 0.15em;
+  box-shadow: 1px 3px 3px var(--b3-theme-primary-lightest);
+}
+
+[style*="background-color:var(--b3-font-background12)"],
+[style*="background-color: var(--b3-font-background12)"] {
+  background-image: linear-gradient(transparent, transparent 31%, var(--b3-theme-primary-lightest) 58%, var(--b3-theme-secondary) 91%, var(--b3-theme-primary-lighter) 96%, var(--b3-theme-primary-lightest) 100%);
+  border-radius: 31%;
+  padding-bottom: 0.08em;
 }
