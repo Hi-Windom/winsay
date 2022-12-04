@@ -2090,7 +2090,7 @@ propChange("SC_winsay_cp_custom__root_filter_light", function () {
       case "5":
         document.documentElement.style.setProperty(
           "--SCC-Variables-root-filter-light",
-          "invert(77%) contrast(1.13) brightness(0.99)"
+          "brightness(0.6) opacity(0.85) grayscale(0.13) saturate(1.31) contrast(1.31)"
         );
         break;
       case "4":
@@ -2140,7 +2140,7 @@ propChange("SC_winsay_cp_custom__root_filter_dark", function () {
       case "4":
         document.documentElement.style.setProperty(
           "--SCC-Variables-root-filter-dark",
-          "brightness(0.88) opacity(0.96) saturate(1.13) contrast(1.07)"
+          "brightness(0.58) opacity(0.98) saturate(1.38) contrast(0.97)"
         );
         break;
       case "3":
