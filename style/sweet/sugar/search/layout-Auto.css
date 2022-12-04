@@ -181,3 +181,8 @@
 #searchResult:not(:empty) {
   margin-left: -7px;
 }
+
+/* 不支持时隐藏，避免造成困惑 */
+#searchInclude:disabled {
+  display: none;
+}
