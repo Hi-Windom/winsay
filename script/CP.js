@@ -255,12 +255,12 @@ async function checkUpdateViaBazaar(v, q) {
     }
   }
 }
-async function getBazaarTheme(思源伺服ip, apitoken, data) {
-  let url = "http://" + 思源伺服ip + "/api/bazaar/getBazaarTheme";
+async function getBazaarTheme(ip, apitoken, data) {
+  let url = "http://" + ip + "/api/bazaar/getBazaarTheme";
   return API.request(url, apitoken, data);
 }
-async function getInstalledTheme(思源伺服ip, apitoken, data) {
-  let url = "http://" + 思源伺服ip + "/api/bazaar/getInstalledTheme";
+async function getInstalledTheme(ip, apitoken, data) {
+  let url = "http://" + ip + "/api/bazaar/getInstalledTheme";
   return API.request(url, apitoken, data);
 }
 async function updateTheme(themeName) {
