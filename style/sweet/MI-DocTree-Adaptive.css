@@ -129,6 +129,7 @@ body.body--desktop .fn__flex-1.fn__flex-column.file-tree.sy__file ul>ul>li .b3-l
   opacity: 0;
   transition: all .2s cubic-bezier(0.46, 0.03, 0.52, 0.96) 0s !important;
   height: 10px;
+  max-height: 10px;
 }
 
 #layouts .fn__flex-column.file-tree.sy__file:hover>ul {
@@ -136,6 +137,7 @@ body.body--desktop .fn__flex-1.fn__flex-column.file-tree.sy__file ul>ul>li .b3-l
   background-color: #65432103;
   backdrop-filter: brightness(0.97);
   margin-right: 7px;
+  max-height: unset;
 }
 
 #layouts .fn__flex-column.file-tree.sy__file>ul:hover {
