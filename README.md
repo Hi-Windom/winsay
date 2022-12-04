@@ -126,7 +126,7 @@ Sofill- 主题形态一览表 ✨
 引入特性：
 
 1. [支持通过主题设置界面禁用文档树笔记本名和文档名染色 · Issue #694 · v0.250](https://github.com/Hi-Windom/winsay/issues/694)
-2. [支持通过主题设置界面恢复默认布局 · Issue #689 · v0.250](https://github.com/Hi-Windom/winsay/issues/689)
+2. [支持通过主题设置界面恢复默认搜索布局 · Issue #689 · v0.250](https://github.com/Hi-Windom/winsay/issues/689)
 
 改进优化：
 
