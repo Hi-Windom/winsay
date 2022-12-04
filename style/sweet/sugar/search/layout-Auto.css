@@ -60,24 +60,22 @@
 @media screen and (min-width: 1300px) {
 
   /* CTRL + P */
-  .b3-dialog--open[data-key] .b3-dialog__container[style*="80vw"] [style^="height"]:not(.b3-tab-container)>div>.fn__flex-column,
-  /* 兼容思源v2.5.1及更早版本 */
   .b3-dialog--open[data-key] .b3-dialog__container[style*="80vw"] [style^="height"]:not(.b3-tab-container)>.fn__flex-column {
     flex-direction: row !important;
     flex-wrap: wrap;
   }
 
-  .b3-dialog__container[style*="80vw"] .search__header,
-  .b3-dialog__container[style*="80vw"] .b3-form__space--small {
+  .b3-dialog--open[data-key] .b3-dialog__container[style*="80vw"] .search__header,
+  .b3-dialog--open[data-key] .b3-dialog__container[style*="80vw"] .b3-form__space--small {
     width: 100%;
   }
 
-  .b3-dialog__container[style*="80vw"] .b3-form__space--small {
+  .b3-dialog--open[data-key] .b3-dialog__container[style*="80vw"] .b3-form__space--small {
     margin: 0;
     padding: 13px 22px 13px 15px;
   }
 
-  .b3-dialog__container[style*="80vw"] #searchList {
+  .b3-dialog--open[data-key] .b3-dialog__container[style*="80vw"] #searchList {
     float: left;
     margin-right: 3px;
     border-right: 2px ridge #58585813;
