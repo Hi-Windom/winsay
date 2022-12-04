@@ -2231,11 +2231,14 @@ propChange("SC_winsay_cp_custom__DS", function () {
 
 propChange("SC_winsay_cp_search__layout", function () {
   var i = localStorage.getItem("SC_winsay_cp_search__layout");
-  var j = API.isEmpty(i) ? "layout-Auto.css" : i;
-  window.funs.updateStyle(
-    "search__layout",
-    `/appearance/themes/Sofill-/style/sweet/sugar/search/${j}`
-  );
+  if (API.isEmpty(i) && document.getElementById("search__layout")) {
+    document.getElementById("search__layout").remove();
+  } else {
+    window.funs.updateStyle(
+      "search__layout",
+      `/appearance/themes/Sofill-/style/sweet/sugar/search/${i}`
+    );
+  }
 });
 
 checkedChange(
