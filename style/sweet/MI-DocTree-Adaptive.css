@@ -83,6 +83,15 @@
   }
 }
 
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background>li {
+  position: sticky;
+  top: 0px;
+  background-color: transparent;
+  z-index: 4;
+  /* 高于子容器就可以了，太高会显示在弹出层上面 */
+  padding-bottom: 1px;
+  transition: padding-bottom 0.2s ease-out;
+}
 
 /* 笔记本名文字 */
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul>li .b3-list-item__text {

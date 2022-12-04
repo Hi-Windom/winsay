@@ -48,24 +48,6 @@
   padding: 0 4px 0 0;
 }
 
-
-/* 已知缺陷：需要展开的列表过长时双击打开正常，点击 toggle 引发高度改变事件引发父容器滚动 */
-/* .fn__flex-1.fn__flex-column.file-tree.sy__file ul > ul {
-  max-height: 70vh;
-  overflow-y: scroll;
-  overscroll-behavior: none;
-} */
-
-.fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background>li {
-  position: sticky;
-  top: 0px;
-  background-color: transparent;
-  z-index: 4;
-  /* 高于子容器就可以了，太高会显示在弹出层上面 */
-  padding-bottom: 1px;
-  transition: padding-bottom 0.2s ease-out;
-}
-
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background:has(ul)>li {
   background-color: var(--b3-theme-surface) !important;
   backdrop-filter: blur(7px) brightness(1.31) !important;
@@ -73,12 +55,6 @@
 }
 
 /* 侧边栏引用计数 */
-/* .counter {
-  color: var(--SCC-Red-WPS);
-  background-color: var(--SCC-Purple-186-lightest);
-  border-radius: 13px;
-} */
-
 .counter {
   color: #fff;
   font-size: 10px;
