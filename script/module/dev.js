@@ -1,9 +1,9 @@
 import * as API from "./../utils/api.min.js";
 import * as config from "./../config.js";
-const { globalShortcut } = require('@electron/remote');
-globalShortcut.register('CommandOrControl+alt+P', () => {
-   console.info("predefined shortcut");
- })
+const { globalShortcut } = require("@electron/remote");
+globalShortcut.register("CommandOrControl+alt+P", () => {
+  console.info("predefined shortcut");
+});
 
 // 初始缩放比例
 let originPixelRatio = localStorage.SC_winsay_data_devicePixelRatio;
@@ -141,19 +141,20 @@ function ExtendProtyleToolbar() {
                 )
               ) {
                 var text = window.getSelection().toString();
-                document.querySelector("#toolbar #barSearch").click();
-                setTimeout(() => {
-                  let i = document.querySelector(
-                    ".b3-dialog--open #searchInput"
-                  );
-                  i.value = text;
-                  let e = new Event("input", { bubbles: true });
-                  let tracker = i._valueTracker;
-                  if (tracker) {
-                    tracker.setValue("");
-                  }
-                  i.dispatchEvent(e);
-                }, 500);
+                window.open(`https://cn.bing.com/search?q=${text}`, "_blank");
+                // document.querySelector("#toolbar #barSearch").click();
+                // setTimeout(() => {
+                //   let i = document.querySelector(
+                //     ".b3-dialog--open #searchInput"
+                //   );
+                //   i.value = text;
+                //   let e = new Event("input", { bubbles: true });
+                //   let tracker = i._valueTracker;
+                //   if (tracker) {
+                //     tracker.setValue("");
+                //   }
+                //   i.dispatchEvent(e);
+                // }, 500);
                 event.stopPropagation();
               }
             },
