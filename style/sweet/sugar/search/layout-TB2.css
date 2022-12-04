@@ -8,7 +8,8 @@
 }
 
 #searchList {
-  height: calc(66% - 69px) !important;
+  min-height: calc(66% - 69px) !important;
+  background-color: var(--b3-theme-surface);
 }
 
 #searchList>div[data-type="search-item"] {

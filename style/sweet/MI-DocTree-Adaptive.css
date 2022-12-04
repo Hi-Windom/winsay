@@ -94,17 +94,29 @@
 }
 
 /* 笔记本名文字 */
-.fn__flex-1.fn__flex-column.file-tree.sy__file ul>li .b3-list-item__text {
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list>li .b3-list-item__text {
   font-size: clamp(14px, calc(13cqw*0.27), 18px) !important;
-  letter-spacing: calc(min(1cqw, 13px)*0.13);
-  padding-left: calc(min(1.3cqw, 13px)*0.31);
+  letter-spacing: calc(min(1cqw, 13px)*0.13) !important;
+  padding-left: calc(min(1.3cqw, 13px)*0.31) !important;
+}
+
+body.body--mobile [data-type="sidebar-file"] ul.b3-list>li .b3-list-item__text,
+body.body--desktop .fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list>li .b3-list-item__text {
+  font-size: clamp(14px, 1.58vw, 18px) !important;
+  padding-left: min(0.7%, 13px) !important;
 }
 
 /* 文档名文字 */
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul>ul>li .b3-list-item__text {
   font-size: max(min(4.2cqw, 12pt), 9.5pt) !important;
-  letter-spacing: calc(min(1.3cqw, 13px)*0.13);
-  padding-left: calc(min(1.3cqw, 13px)*0.58);
+  letter-spacing: calc(min(1.3cqw, 13px)*0.13) !important;
+  padding-left: calc(min(1.3cqw, 13px)*0.58) !important;
+}
+
+body.body--mobile [data-type="sidebar-file"] ul>ul>li .b3-list-item__text,
+body.body--desktop .fn__flex-1.fn__flex-column.file-tree.sy__file ul>ul>li .b3-list-item__text {
+  font-size: clamp(11px, 1.31vw, 14px) !important;
+  padding-left: min(0.5%, 11px) !important;
 }
 
 
