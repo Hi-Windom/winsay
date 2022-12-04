@@ -7,7 +7,7 @@ const THEME_ROOT = new URL(themeStyle.href).pathname.replace("theme.css", "");
 const winsay_ROOT = `/appearance/themes/Sofill-/`;
 const winsay_ROOT_ABS = `${window.siyuan.config.system.confDir}\\appearance\\themes\\Sofill-\\`;
 const S2_BASE = `/appearance/themes/Sofill-/style-S2/`;
-const S2_BASE_ABS = `${winsay_ROOT}style-S2/`;
+const S2_BASE_ABS = `${winsay_ROOT_ABS}style-S2/`;
 const ID_COLOR_STYLE = "theme-color-style";
 var ThemeName = "Sofill";
 if (window.siyuan.config.appearance.mode) {

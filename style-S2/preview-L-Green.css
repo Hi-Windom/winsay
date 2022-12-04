@@ -14,7 +14,7 @@ body:not(.fn__flex-column) #action {
   --b3-theme-error: #d23f31;
 
   /* 文字颜色 */
-  --b3-theme-on-primary: var(--SCC-CNTC-千緑);
+  --b3-theme-on-primary: var(--SCC-SGTC-18B);
   --b3-theme-on-secondary: #fff;
   --b3-theme-on-background: #010303;
   --b3-theme-on-surface: var(--SCColor);

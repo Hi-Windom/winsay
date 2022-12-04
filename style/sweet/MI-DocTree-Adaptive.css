@@ -53,8 +53,6 @@
 
   /* 文档文字 */
   .fn__flex-1.fn__flex-column.file-tree.sy__file ul>ul>li .b3-list-item__text {
-    color: var(--SCC-baseComponent-text-color-1);
-    /*   font-size: 9.5pt !important; */
     font-weight: 400;
     letter-spacing: -0.31px;
   }
@@ -85,6 +83,15 @@
   }
 }
 
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background>li {
+  position: sticky;
+  top: 0px;
+  background-color: transparent;
+  z-index: 4;
+  /* 高于子容器就可以了，太高会显示在弹出层上面 */
+  padding-bottom: 1px;
+  transition: padding-bottom 0.2s ease-out;
+}
 
 /* 笔记本名文字 */
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul>li .b3-list-item__text {
@@ -150,4 +157,43 @@
 
 .fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list--background>ul .b3-list-item__toggle--hl {
   margin-left: -9px;
+}
+
+
+/* Android 手机端文档树功能区视觉效果调整 #58 */
+body.body--mobile #sidebar .b3-list-item {
+  margin: 0 3.1px 0 -5.8px !important;
+  padding: 1.3px 5.8px 1.3px 0px !important;
+}
+
+body.body--mobile #sidebar .b3-list-item__arrow {
+  scale: 1.31 !important;
+  opacity: 0.58 !important;
+}
+
+body.body--mobile #sidebar .b3-list-item__icon {
+  font-size: 0.88em !important;
+  opacity: 0.88 !important;
+  margin-right: 1.3px !important;
+  padding: 0 1.3px !important;
+}
+
+body.body--mobile #sidebar .b3-list-item__toggle {
+  min-height: 1.3em !important;
+}
+
+body.body--mobile #sidebar .b3-list-item__toggle:hover {
+  background-color: transparent !important;
+}
+
+body.body--mobile #sidebar .b3-list {
+  min-height: 40px !important;
+}
+
+body.body--mobile #sidebar [data-type="sidebar-file"] ul>li .b3-list-item__text {
+  font-size: 1.03em !important;
+}
+
+body.body--mobile #sidebar [data-type="sidebar-file"] ul>ul>li .b3-list-item__text {
+  font-size: 0.88em !important;
 }

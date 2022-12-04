@@ -68,7 +68,7 @@ window.funs.loadScript(window.funs.addURLParam("/appearance/themes/Sofill-/scrip
 window.funs.loadScript(window.funs.addURLParam("/appearance/themes/Sofill-/script/fun.min.js"), undefined, true);
 window.funs.loadScript(window.funs.addURLParam("/appearance/themes/Sofill-/script/config.js"), undefined, true);
 setTimeout(()=>{window.funs.loadScript(window.funs.addURLParam("/appearance/themes/Sofill-/script/module/SSS.min.js"), undefined, true);}, 20)
-setTimeout(()=>{window.funs.loadScript(window.funs.addURLParam("/appearance/themes/Sofill-/script/CP.min.js"), undefined, true);}, 200);
+setTimeout(()=>{window.funs.loadScript(window.funs.addURLParam("/appearance/themes/Sofill-/script/CP.js"), undefined, true);}, 200);
 setTimeout(()=>{window.funs.loadScript(window.funs.addURLParam("/appearance/themes/Sofill-/script/module/DTL.js"), undefined, true);
 window.funs.loadScript(window.funs.addURLParam("/appearance/themes/Sofill-/script/module/ChangeFontSize.js"), undefined, true);
 window.funs.loadScript(window.funs.addURLParam("/appearance/themes/Sofill-/script/module/dev.js"), undefined, true);}, 500);

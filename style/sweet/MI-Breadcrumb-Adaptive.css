@@ -1,4 +1,3 @@
-
 /* 设置面包屑中icon大小 */
 .protyle-breadcrumb__item svg {
   height: 13px;
@@ -6,7 +5,7 @@
 }
 
 .protyle-breadcrumb__item {
-  max-width: 99%;
+  max-width: 98%;
 }
 
 .protyle-breadcrumb {
@@ -98,6 +97,7 @@
 .backlinkMList .protyle-breadcrumb__bar,
 .protyle-wysiwyg__embed .protyle-breadcrumb__bar {
   opacity: 0.77;
+  font-size: 88%;
 }
 
 /* 弹出面板的面包屑 */
@@ -112,14 +112,19 @@
   opacity: 1 !important;
 }
 
-.backlinkList .protyle-breadcrumb__ba .protyle-breadcrumb__item .protyle-breadcrumb__text,
-.backlinkMList .protyle-breadcrumb__bar .protyle-breadcrumb__item .protyle-breadcrumb__text,
-.protyle-wysiwyg__embed .protyle-breadcrumb__bar .protyle-breadcrumb__item .protyle-breadcrumb__text {
-  max-width: 8rem;
+.protyle-breadcrumb__text {
+  width: fit-content;
+  max-width: clamp(5.8vw, 58cqw, 500px);
 }
 
-.backlinkList .protyle-breadcrumb__ba .protyle-breadcrumb__item:not(:nth-of-type(1)):not(:nth-last-of-type(1)) .protyle-breadcrumb__text,
-.backlinkMList .protyle-breadcrumb__bar .protyle-breadcrumb__item:not(:nth-of-type(1)):not(:nth-last-of-type(1)) .protyle-breadcrumb__text,
-.protyle-wysiwyg__embed .protyle-breadcrumb__bar .protyle-breadcrumb__item:not(:nth-of-type(1)):not(:nth-last-of-type(1)) .protyle-breadcrumb__text {
-  max-width: 3rem;
+.backlinkList .protyle-breadcrumb__item:not(:nth-of-type(1)):not(:nth-last-of-type(1)) .protyle-breadcrumb__text,
+.backlinkMList .protyle-breadcrumb__item:not(:nth-of-type(1)):not(:nth-last-of-type(1)) .protyle-breadcrumb__text,
+.protyle-wysiwyg__embed .protyle-breadcrumb__item:not(:nth-of-type(1)):not(:nth-last-of-type(1)) .protyle-breadcrumb__text {
+  max-width: clamp(3rem, 13cqw, 8rem);
+}
+
+.protyle-breadcrumb__item--active,
+.protyle-breadcrumb__item--active>svg,
+.protyle-breadcrumb__item--active>svg.ft__primary+span {
+  color: var(--b3-theme-on-primary) !important;
 }
