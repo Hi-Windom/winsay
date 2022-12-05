@@ -141,7 +141,7 @@ if (config.clientMode == "body--mobile") {
   setTimeout(() => {
     drawer.setAttribute(
       "data-themeInfo",
-      `${config.ThemeName} v${localVersion.split(".")[0]}`
+      `${config.AliaName}`
     );
   }, 1000);
 
