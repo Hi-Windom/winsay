@@ -2259,6 +2259,18 @@ propChange("SC_winsay_cp_search__layout", function () {
   }
 });
 
+propChange("SC_winsay_cp_assets__PCards", function () {
+  var i = localStorage.getItem("SC_winsay_cp_assets__PCards");
+  if (API.isEmpty(i) && document.getElementById("assets__PCards")) {
+    document.getElementById("assets__PCards").remove();
+  } else {
+    window.funs.updateStyle(
+      "assets__PCards",
+      `/appearance/themes/Sofill-/style/sweet/sugar/assets/${i}`
+    );
+  }
+});
+
 checkedChange(
   document.getElementById("SC_winsay_cp_filetree__Hide_untitle"),
   () => {
