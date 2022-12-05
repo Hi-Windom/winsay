@@ -15,6 +15,15 @@ if (window.siyuan.config.appearance.mode) {
 } else {
   ThemeName = window.siyuan.config.appearance.themeLight;
 }
+var AliaName = "winsay";
+switch (ThemeName) {
+  case "Sofill+":
+    AliaName = "lanco";
+    break;
+  case "Sofill=":
+    AliaName = "lili";
+    break;
+}
 /* DOM 节点 ID */
 const IDs = {
   STYLE_COLOR: "custom-id-style-theme-color",
@@ -92,4 +101,5 @@ export {
   config_UI,
   config_Custom,
   ThemeName,
+  AliaName,
 };

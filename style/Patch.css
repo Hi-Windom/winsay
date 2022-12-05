@@ -4,9 +4,17 @@
   content: attr(data-themeInfo);
   font: -webkit-small-control;
   font-size: 131%;
+  letter-spacing: 1px;
+  width: 58px;
+  text-align: left;
   padding: 0 5.8px;
   margin-top: 7px;
-  color: var(--b3-theme-primary-lighter);
+  color: var(--b3-theme-secondary);
+}
+
+#sc_drawer:empty::after {
+  width: 200px;
+  text-align: center;
 }
 
 /* 搜索头统一层级，有遮挡的地方自行处理 */
