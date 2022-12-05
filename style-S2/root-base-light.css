@@ -10,8 +10,10 @@
   --b3-card-success-background: #d7eed8;
 
   /* 自定义颜色 */
-  --b3-font-color11: var(--SCC-Yellow-HellisePotter);
-  --b3-font-color12: var(--SCC-Orange-Windom);
+  --b3-font-color9: inherit;
+  --b3-font-color10: inherit;
+  --b3-font-color11: inherit;
+  --b3-font-color12: inherit;
   --b3-font-color13: transparent;
   --b3-font-background11: transparent;
   --b3-font-background12: transparent;
@@ -142,4 +144,28 @@
   background-image: linear-gradient(transparent, transparent 31%, var(--b3-theme-primary-lightest) 58%, var(--b3-theme-secondary) 91%, var(--b3-theme-primary-lighter) 96%, var(--b3-theme-primary-lightest) 100%);
   border-radius: 31%;
   padding-bottom: 0.08em;
+}
+
+[style*="color:var(--b3-font-color9)"],
+[style*="color: var(--b3-font-color9)"] {
+  text-decoration: underline double var(--b3-font-color3);
+  text-underline-offset: 18%;
+}
+
+[style*="color:var(--b3-font-color10)"],
+[style*="color: var(--b3-font-color10)"] {
+  text-decoration: underline dashed var(--b3-font-color4);
+  text-underline-offset: 13%;
+}
+
+[style*="color:var(--b3-font-color11)"],
+[style*="color: var(--b3-font-color11)"] {
+  text-decoration: underline dotted var(--b3-font-color1);
+  text-underline-offset: 18%;
+}
+
+[style*="color:var(--b3-font-color12)"],
+[style*="color: var(--b3-font-color12)"] {
+  text-decoration: underline wavy var(--b3-font-color2);
+  text-underline-offset: 3.1%;
 }
