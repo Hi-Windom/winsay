@@ -7,7 +7,7 @@
 .b3-dialog--open[data-key] .b3-dialog__container[style*="80vw"] [style^="height"]:not(.b3-tab-container)>.fn__flex-column {
   flex-direction: row !important;
   flex-wrap: wrap;
-  overflow: visible !important;
+  /* overflow: visible !important; */
 }
 
 .layout__center .layout-tab-container>.fn__flex-1>.fn__flex-column .search__header,
