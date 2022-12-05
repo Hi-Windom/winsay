@@ -34,7 +34,7 @@
 
 ---
 
-## ✨ 主题设置界面可配置更多项目了，适配思源v2.5.3，停止支援思源 2.5.2 及更早版本，持续优化体验
+## ✨ 主题设置界面可配置更多项目了，适配思源v2.5.3，停止支援思源 2.5.2 及更早版本，特殊色号，持续优化体验
 
 > 版本更新详细内容请下滑至【集市更新版本日志】部分查看
 
@@ -117,9 +117,9 @@ Sofill- 主题形态一览表 ✨
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v0.250 ~ v0.250 聚合说明
+### v0.250 ~ v0.252 聚合说明
 
-> 2022-12-04 released
+> 2022-12-05 released
 
 <p><a href="https://github.com/Hi-Windom/winsay/issues/679"><img src="https://img.shields.io/badge/SiYuan-2.5.3-green"/></a> <a href="https://github.com/Hi-Windom/winsay/issues/678"><img src="https://img.shields.io/badge/%E4%B8%8D%E5%85%BC%E5%AE%B9-2.5.2---red"/></a> <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow"/></p></p>
 
@@ -127,6 +127,8 @@ Sofill- 主题形态一览表 ✨
 
 1. [支持通过主题设置界面禁用文档树笔记本名和文档名染色 · Issue #694 · v0.250](https://github.com/Hi-Windom/winsay/issues/694)
 2. [支持通过主题设置界面恢复默认搜索布局 · Issue #689 · v0.250](https://github.com/Hi-Windom/winsay/issues/689)
+3. [背景色11、12改为标记色 · Issue #585 · v0.252](https://github.com/Hi-Windom/winsay/issues/585)
+4. [9、10、11、12号色特殊样式 · Issue #703 · v0.252](https://github.com/Hi-Windom/winsay/issues/703)
 
 改进优化：
 
@@ -138,6 +140,9 @@ Sofill- 主题形态一览表 ✨
 6. [文档树笔记本项粘性布局改为需开启自适应显示 · Issue #695 · v0.250](https://github.com/Hi-Windom/winsay/issues/695)
 7. [优化搜索建议 · Issue #696 · v0.250](https://github.com/Hi-Windom/winsay/issues/696)
 8. [搜索界面显示当前布局模式 · Issue #698 · v0.250](https://github.com/Hi-Windom/winsay/issues/698)
+9. [优化暗黑模式夜间模式滤镜，明亮模式反色模式修改为深夜模式，关灯场景也能从容应对 · Issue #701 · v0.252](https://github.com/Hi-Windom/winsay/issues/701)
+10. [在抽屉增加Sofill系列区分标识 · Issue #691 · v0.252](https://github.com/Hi-Windom/winsay/issues/691)
+11. [细节优化 · Issue #702 · v0.252](https://github.com/Hi-Windom/winsay/issues/702)
 
 缺陷修复：
 

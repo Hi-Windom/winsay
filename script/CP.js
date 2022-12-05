@@ -138,6 +138,12 @@ if (config.clientMode == "body--mobile") {
   drawer.style.flexDirection = "row-reverse";
   drawer.style.borderBottom = "2px dashed var(--b3-theme-surface-lighter)";
   drawer.style.minHeight = "2rem";
+  setTimeout(() => {
+    drawer.setAttribute(
+      "data-themeInfo",
+      `${config.ThemeName} v${localVersion.split(".")[0]}`
+    );
+  }, 1000);
 
   barhelp.children[1].insertAdjacentElement("afterbegin", drawer);
   if (document.getElementById("Sofill-CDUI-1") == null) {
@@ -249,12 +255,12 @@ async function checkUpdateViaBazaar(v, q) {
     }
   }
 }
-async function getBazaarTheme(思源伺服ip, apitoken, data) {
-  let url = "http://" + 思源伺服ip + "/api/bazaar/getBazaarTheme";
+async function getBazaarTheme(ip, apitoken, data) {
+  let url = "http://" + ip + "/api/bazaar/getBazaarTheme";
   return API.request(url, apitoken, data);
 }
-async function getInstalledTheme(思源伺服ip, apitoken, data) {
-  let url = "http://" + 思源伺服ip + "/api/bazaar/getInstalledTheme";
+async function getInstalledTheme(ip, apitoken, data) {
+  let url = "http://" + ip + "/api/bazaar/getInstalledTheme";
   return API.request(url, apitoken, data);
 }
 async function updateTheme(themeName) {
@@ -2090,7 +2096,7 @@ propChange("SC_winsay_cp_custom__root_filter_light", function () {
       case "5":
         document.documentElement.style.setProperty(
           "--SCC-Variables-root-filter-light",
-          "invert(77%) contrast(1.13) brightness(0.99)"
+          "brightness(0.6) opacity(0.85) grayscale(0.13) saturate(1.31) contrast(1.31)"
         );
         break;
       case "4":
@@ -2140,7 +2146,7 @@ propChange("SC_winsay_cp_custom__root_filter_dark", function () {
       case "4":
         document.documentElement.style.setProperty(
           "--SCC-Variables-root-filter-dark",
-          "brightness(0.88) opacity(0.96) saturate(1.13) contrast(1.07)"
+          "brightness(0.58) opacity(0.98) saturate(1.38) contrast(0.97)"
         );
         break;
       case "3":
