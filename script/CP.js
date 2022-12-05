@@ -139,10 +139,7 @@ if (config.clientMode == "body--mobile") {
   drawer.style.borderBottom = "2px dashed var(--b3-theme-surface-lighter)";
   drawer.style.minHeight = "2rem";
   setTimeout(() => {
-    drawer.setAttribute(
-      "data-themeInfo",
-      `${config.AliaName}`
-    );
+    drawer.setAttribute("data-themeInfo", `${config.AliaName}`);
   }, 1000);
 
   barhelp.children[1].insertAdjacentElement("afterbegin", drawer);
@@ -2026,6 +2023,21 @@ async function CP_AppearanceMonitor() {
       document.documentElement.style.removeProperty(
         "--SCC-Variables-MI-LayoutTabContainer_bgColor"
       );
+    }
+  );
+  checkedChange(
+    document.getElementById(
+      "SC_winsay_cp_appearance__SYSetting-AssetsIMG-Sticky"
+    ),
+    () => {
+      window.funs.updateStyle(
+        "SYSetting-AssetsIMG-Sticky",
+        `/appearance/themes/Sofill-/style/sweet/sugar/appearance/SYSetting-AssetsIMG-Sticky.css`
+      );
+    },
+    () => {
+      let target = document.getElementById("SYSetting-AssetsIMG-Sticky");
+      target ? target.remove() : null;
     }
   );
 }
