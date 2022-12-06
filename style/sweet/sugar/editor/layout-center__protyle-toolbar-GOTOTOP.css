@@ -42,3 +42,33 @@
   }
 
 }
+
+#editor .protyle-toolbar {
+  display: flex !important;
+  flex-wrap: wrap;
+  position: fixed !important;
+  min-width: 60px;
+  width: 31vw;
+  width: 100vw;
+  top: 64px !important;
+  left: 0 !important;
+  box-shadow: none;
+  box-shadow: 0px 5px 10px 0px rgb(212 212 212 / 30%);
+}
+
+#editor .protyle-toolbar .protyle-toolbar__divider {
+  display: none;
+}
+
+#editor .protyle-toolbar>button,
+#editor .protyle-toolbar__item svg {
+  display: flex;
+  flex-grow: 1;
+}
+
+#editor .protyle-toolbar>button {
+  align-items: center;
+  text-align: center;
+  flex-basis: 30px;
+  flex-shrink: 2;
+}
