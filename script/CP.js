@@ -2040,6 +2040,44 @@ async function CP_AppearanceMonitor() {
       target ? target.remove() : null;
     }
   );
+  checkedChange(
+    document.getElementById("NoSync__SC_winsay_cp_appearance__AutoTranslate"),
+    () => {
+      if (window.siyuan.config.lang) {
+        var head = document.getElementsByTagName("head")[0];
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.async = true;
+        script.id = "AutoTranslate";
+        script.src = "https://res.zvo.cn/translate/translate.js";
+        script.onload = script.onreadystatechange = function () {
+          translate.selectLanguageTag.show = false;
+          translate.selectLanguageTag.languages =
+            "zh-CN,id,ms,el,it,es,pt-PT,ja,nl,en,ru,fr,se,sv,ko,zh-TW,pt-BR,cs,th,la,da";
+          translate.execute();
+        };
+        head.appendChild(script);
+        document.getElementById("layouts").parentElement.style.visibility =
+          "hidden";
+        document.getElementById(
+          "NoSync__SC_winsay_cp_appearance__AutoTranslate_label"
+        ).style.display = "flex";
+      }
+    },
+    () => {
+      let target = document.getElementById("AutoTranslate");
+      target ? translate.changeLanguage('zh-CN') : null;
+      document.getElementById("layouts").parentElement.style.visibility =
+        "visible";
+      document.querySelectorAll(".translateSelectLanguage").forEach((se) => {
+        se.remove();
+      });
+      document.getElementById(
+        "NoSync__SC_winsay_cp_appearance__AutoTranslate_label"
+      ).style.display = "none";
+      target ? target.remove() : null;
+    }
+  );
 }
 
 async function CP_Monitors() {
