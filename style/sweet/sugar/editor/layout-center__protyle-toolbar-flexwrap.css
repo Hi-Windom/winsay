@@ -1,0 +1,23 @@
+.layout__center .protyle>.protyle-toolbar {
+  flex-wrap: wrap;
+  min-width: 60px;
+  width: 31vw;
+  max-width: 250px;
+}
+
+.layout__center .protyle>.protyle-toolbar .protyle-toolbar__divider {
+  display: none;
+}
+
+.layout__center .protyle>.protyle-toolbar>button,
+.protyle-toolbar__item svg {
+  display: flex;
+  flex-grow: 1;
+}
+
+.layout__center .protyle>.protyle-toolbar>button {
+  align-items: center;
+  text-align: center;
+  flex-basis: 30px;
+  flex-shrink: 2;
+}
