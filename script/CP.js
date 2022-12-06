@@ -4,7 +4,7 @@ import * as API from "./utils/api.min.js";
 import * as config from "./config.js";
 import { iterLC, iterDC } from "./module/SSS.min.js";
 var fs = null;
-if (window.theme.OS == "windows" || window.theme.OS == "darwin") {
+if (API.isAppMode()) {
   fs = require("fs");
 }
 var apitoken = window.siyuan.config.api.token;
@@ -1008,9 +1008,15 @@ async function CP_EditorMonitor() {
           item.style.setProperty("padding", w);
           item.style.setProperty("margin", "0 auto");
           if (w == "1in 0.5in") {
-            item.style.setProperty("max-width", "800px");
+            item.style.setProperty("width", "800px");
+          } else if (w == "0.42in") {
+            item.style.setProperty("width", "1118px");
+          } else if (w == "0.41in") {
+            item.style.setProperty("width", "1118px");
+          } else if (w == "0.40in") {
+            item.style.setProperty("width", "1598px");
           } else {
-            item.style.removeProperty("max-width");
+            item.style.removeProperty("width");
           }
         });
         node2.forEach(function (item) {
@@ -2037,6 +2043,44 @@ async function CP_AppearanceMonitor() {
     },
     () => {
       let target = document.getElementById("SYSetting-AssetsIMG-Sticky");
+      target ? target.remove() : null;
+    }
+  );
+  checkedChange(
+    document.getElementById("NoSync__SC_winsay_cp_appearance__AutoTranslate"),
+    () => {
+      if (window.siyuan.config.lang) {
+        var head = document.getElementsByTagName("head")[0];
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.async = true;
+        script.id = "AutoTranslate";
+        script.src = "https://res.zvo.cn/translate/translate.js";
+        script.onload = script.onreadystatechange = function () {
+          translate.selectLanguageTag.show = false;
+          translate.selectLanguageTag.languages =
+            "zh-CN,id,ms,el,it,es,pt-PT,ja,nl,en,ru,fr,se,sv,ko,zh-TW,pt-BR,cs,th,la,da";
+          translate.execute();
+        };
+        head.appendChild(script);
+        document.getElementById("layouts").parentElement.style.visibility =
+          "hidden";
+        document.getElementById(
+          "NoSync__SC_winsay_cp_appearance__AutoTranslate_label"
+        ).style.display = "flex";
+      }
+    },
+    () => {
+      let target = document.getElementById("AutoTranslate");
+      target ? translate.changeLanguage("zh-CN") : null;
+      document.getElementById("layouts").parentElement.style.visibility =
+        "visible";
+      document.querySelectorAll(".translateSelectLanguage").forEach((se) => {
+        se.remove();
+      });
+      document.getElementById(
+        "NoSync__SC_winsay_cp_appearance__AutoTranslate_label"
+      ).style.display = "none";
       target ? target.remove() : null;
     }
   );

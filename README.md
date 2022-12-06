@@ -34,7 +34,7 @@
 
 ---
 
-## ✨ 主题设置界面可配置更多项目了，适配思源v2.5.3，停止支援思源 2.5.2 及更早版本，特殊色号，支持通过主题设置界面开启思源设置资源界面粘性布局，持通过主题设置界面开启图片制卡，修复已知缺陷，持续优化体验
+## ✨ 主题设置界面可配置更多项目了，适配思源v2.5.3，停止支援思源 2.5.2 及更早版本，优化浏览器环境兼容性，特殊色号，文档宽度模式支持更多固宽选项，支持通过主题设置界面开启思源设置资源界面粘性布局，持通过主题设置界面开启图片制卡，主题设置界面支持自动翻译，修复已知缺陷，持续优化体验
 
 > 版本更新详细内容请下滑至【集市更新版本日志】部分查看
 
@@ -117,7 +117,7 @@ Sofill- 主题形态一览表 ✨
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v0.250 ~ v0.256 聚合说明
+### v0.250 ~ v0.258 聚合说明
 
 > 2022-12-06 released
 
@@ -131,6 +131,8 @@ Sofill- 主题形态一览表 ✨
 4. [9、10、11、12号色特殊样式 · Issue #703 · v0.252](https://github.com/Hi-Windom/winsay/issues/703)
 5. [支持通过主题设置界面开启思源设置资源界面粘性布局 · Issue #712 ·v0.254](https://github.com/Hi-Windom/winsay/issues/712)
 6. [支持通过主题设置界面开启图片制卡 · Issue #715 · v0.256](https://github.com/Hi-Windom/winsay/issues/715)
+7. [主题设置界面支持自动翻译 · Issue #638 · v0.258](https://github.com/Hi-Windom/winsay/issues/638)
+8. [文档宽度模式支持更多固宽选项 · Issue #709 · v0.258](https://github.com/Hi-Windom/winsay/issues/709)
 
 改进优化：
 
@@ -146,6 +148,8 @@ Sofill- 主题形态一览表 ✨
 10. [在抽屉增加Sofill系列区分标识 · Issue #691 · v0.252](https://github.com/Hi-Windom/winsay/issues/691)
 11. [细节优化 · Issue #702 · v0.252](https://github.com/Hi-Windom/winsay/issues/702)
 12. [细节优化 · Issue #710 ·v0.254](https://github.com/Hi-Windom/winsay/issues/710)
+13. [优化浏览器环境兼容性 · Issue #714 · v0.258](https://github.com/Hi-Windom/winsay/issues/714)
+14. [只读模式高亮图标 · Issue #721 · v0.258](https://github.com/Hi-Windom/winsay/issues/721)
 
 缺陷修复：
 
