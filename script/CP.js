@@ -1461,22 +1461,6 @@ async function CP_EditorMonitor() {
       );
     }
   );
-  // checkedChange(
-  //   document.getElementById("SC_winsay_cp_editor__FocusEnhanc_docReadOnly"),
-  //   () => {
-  //     document.documentElement.style.setProperty(
-  //       "--SCC-Variables-docReadOnly-hover-bg-color",
-  //       "#cccccc13"
-  //     );
-  //   },
-  //   () => {
-  //     document.documentElement.style.setProperty(
-  //       "--SCC-Variables-docReadOnly-hover-bg-color",
-  //       "inherit"
-  //     );
-  //   }
-  // );
-
   checkedChange(
     document.getElementById("SC_winsay_cp_editor__FocusEnhanc_NodeHeading"),
     () => {
@@ -1623,7 +1607,44 @@ async function CP_AppearanceMonitor() {
         document.querySelector("#toolbar #barMode").style.padding = "9px";
       }
     );
-
+    checkedChange(
+      document.getElementById("NoSync__SC_winsay_cp_appearance__AutoTranslate"),
+      () => {
+        if (window.siyuan.config.lang) {
+          var head = document.getElementsByTagName("head")[0];
+          var script = document.createElement("script");
+          script.type = "text/javascript";
+          script.async = true;
+          script.id = "AutoTranslate";
+          script.src = "https://res.zvo.cn/translate/translate.js";
+          script.onload = script.onreadystatechange = function () {
+            translate.selectLanguageTag.show = false;
+            translate.selectLanguageTag.languages =
+              "zh-CN,id,ms,el,it,es,pt-PT,ja,nl,en,ru,fr,se,sv,ko,zh-TW,pt-BR,cs,th,la,da";
+            translate.execute();
+          };
+          head.appendChild(script);
+          document.getElementById("layouts").parentElement.style.visibility =
+            "hidden";
+          document.getElementById(
+            "NoSync__SC_winsay_cp_appearance__AutoTranslate_label"
+          ).style.display = "flex";
+        }
+      },
+      () => {
+        let target = document.getElementById("AutoTranslate");
+        target ? translate.changeLanguage("zh-CN") : null;
+        document.getElementById("layouts").parentElement.style.visibility =
+          "visible";
+        document.querySelectorAll(".translateSelectLanguage").forEach((se) => {
+          se.remove();
+        });
+        document.getElementById(
+          "NoSync__SC_winsay_cp_appearance__AutoTranslate_label"
+        ).style.display = "none";
+        target ? target.remove() : null;
+      }
+    );
     checkedChange(
       document.getElementById("SC_winsay_cp_appearance__DockBgColorFilter"),
       () => {
@@ -2043,44 +2064,6 @@ async function CP_AppearanceMonitor() {
     },
     () => {
       let target = document.getElementById("SYSetting-AssetsIMG-Sticky");
-      target ? target.remove() : null;
-    }
-  );
-  checkedChange(
-    document.getElementById("NoSync__SC_winsay_cp_appearance__AutoTranslate"),
-    () => {
-      if (window.siyuan.config.lang) {
-        var head = document.getElementsByTagName("head")[0];
-        var script = document.createElement("script");
-        script.type = "text/javascript";
-        script.async = true;
-        script.id = "AutoTranslate";
-        script.src = "https://res.zvo.cn/translate/translate.js";
-        script.onload = script.onreadystatechange = function () {
-          translate.selectLanguageTag.show = false;
-          translate.selectLanguageTag.languages =
-            "zh-CN,id,ms,el,it,es,pt-PT,ja,nl,en,ru,fr,se,sv,ko,zh-TW,pt-BR,cs,th,la,da";
-          translate.execute();
-        };
-        head.appendChild(script);
-        document.getElementById("layouts").parentElement.style.visibility =
-          "hidden";
-        document.getElementById(
-          "NoSync__SC_winsay_cp_appearance__AutoTranslate_label"
-        ).style.display = "flex";
-      }
-    },
-    () => {
-      let target = document.getElementById("AutoTranslate");
-      target ? translate.changeLanguage("zh-CN") : null;
-      document.getElementById("layouts").parentElement.style.visibility =
-        "visible";
-      document.querySelectorAll(".translateSelectLanguage").forEach((se) => {
-        se.remove();
-      });
-      document.getElementById(
-        "NoSync__SC_winsay_cp_appearance__AutoTranslate_label"
-      ).style.display = "none";
       target ? target.remove() : null;
     }
   );
