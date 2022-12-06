@@ -1,5 +1,33 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
+/* 添加 emoji 面板样式 #728 */
+.emojis {
+  height: clamp(200px, 58vh, 500px) !important;
+  max-height: unset !important;
+  width: clamp(200px, 58vw, 510px) !important;
+}
+
+.emojis__panel .emojis__content button.emojis__item {
+  margin: 1.1px;
+  padding: 5.8px;
+  height: 35px;
+  width: 35px;
+  border-radius: 3.1px;
+}
+
+.emojis__panel .emojis__content button.emojis__item svg,
+.emojis .emojis__type svg {
+  scale: 1.15;
+}
+
+.emojis__panel+div {
+  margin-top: 3.8px;
+  margin-bottom: -5.8px;
+  border-radius: 5.8px;
+  border: 2px solid var(--b3-theme-surface-lighter);
+  backdrop-filter: brightness(0.98);
+}
+
 #barReadonly[aria-label^="使用 编辑模式"]>svg,
 #barReadonly[aria-label^="使用 編輯模式"]>svg,
 #barReadonly[aria-label^="Use Edit Mode"]>svg {
