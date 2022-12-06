@@ -95,6 +95,7 @@
   user-select: none;
   cursor: pointer;
   height: 16px;
+  text-indent: 0;
   background-color: var(--SCC-Component-Counter-bg-color);
   border: var(--SCC-Component-Counter-border);
   opacity: 0.58;
