@@ -4,7 +4,7 @@ import * as API from "./utils/api.min.js";
 import * as config from "./config.js";
 import { iterLC, iterDC } from "./module/SSS.min.js";
 var fs = null;
-if (window.theme.OS == "windows" || window.theme.OS == "darwin") {
+if (API.isAppMode()) {
   fs = require("fs");
 }
 var apitoken = window.siyuan.config.api.token;

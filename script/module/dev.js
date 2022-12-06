@@ -1,6 +1,6 @@
 import * as API from "./../utils/api.min.js";
 import * as config from "./../config.js";
-if (window.theme.OS == "windows" || window.theme.OS == "darwin") {
+if (API.isAppMode()) {
   const { globalShortcut } = require("@electron/remote");
   globalShortcut.register("CommandOrControl+alt+P", () => {
     console.info("predefined shortcut");
