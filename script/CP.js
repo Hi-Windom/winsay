@@ -1288,18 +1288,41 @@ async function CP_EditorMonitor() {
         "--SCC-Variables-MI-BlockScrollBar-opacity-hover",
         o
       );
+      let s = document.querySelector("#editor .protyle-scroll");
       switch (o) {
+        case "0.88":
+          s
+            ? (window.funs.updateStyle(
+                "Android-mobile-BlockScrollBarShow",
+                `/appearance/themes/Sofill-/style/sweet/sugar/editor/Android-mobile-BlockScrollBarFocusShow.css`
+              ),
+              document.documentElement.style.setProperty(
+                "--SCC-Variables-MI-BlockScrollBar-opacity",
+                "0.88"
+              ))
+            : null;
+          break;
         case "0.58":
           document.documentElement.style.setProperty(
             "--SCC-Variables-MI-BlockScrollBar-opacity",
             "0.58"
           );
+          s
+            ? window.funs.updateStyle(
+                "Android-mobile-BlockScrollBarShow",
+                `/appearance/themes/Sofill-/style/sweet/sugar/editor/Android-mobile-BlockScrollBarAlwaysShow.css`
+              )
+            : null;
           break;
         default:
           document.documentElement.style.setProperty(
             "--SCC-Variables-MI-BlockScrollBar-opacity",
             "0"
           );
+          let css = document.querySelector(
+            "#Android-mobile-BlockScrollBarShow"
+          );
+          css ? css.remove() : null;
           break;
       }
     }
