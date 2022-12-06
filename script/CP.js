@@ -1008,9 +1008,15 @@ async function CP_EditorMonitor() {
           item.style.setProperty("padding", w);
           item.style.setProperty("margin", "0 auto");
           if (w == "1in 0.5in") {
-            item.style.setProperty("max-width", "800px");
+            item.style.setProperty("width", "800px");
+          } else if (w == "0.42in") {
+            item.style.setProperty("width", "1118px");
+          } else if (w == "0.41in") {
+            item.style.setProperty("width", "1118px");
+          } else if (w == "0.40in") {
+            item.style.setProperty("width", "1598px");
           } else {
-            item.style.removeProperty("max-width");
+            item.style.removeProperty("width");
           }
         });
         node2.forEach(function (item) {
@@ -2066,7 +2072,7 @@ async function CP_AppearanceMonitor() {
     },
     () => {
       let target = document.getElementById("AutoTranslate");
-      target ? translate.changeLanguage('zh-CN') : null;
+      target ? translate.changeLanguage("zh-CN") : null;
       document.getElementById("layouts").parentElement.style.visibility =
         "visible";
       document.querySelectorAll(".translateSelectLanguage").forEach((se) => {
