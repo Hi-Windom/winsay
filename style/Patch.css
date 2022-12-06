@@ -1,5 +1,12 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
+#barReadonly[aria-label^="使用 编辑模式"]>svg,
+#barReadonly[aria-label^="使用 編輯模式"]>svg,
+#barReadonly[aria-label^="Use Edit Mode"]>svg {
+  color: var(--b3-font-color1);
+  filter: saturate(5.8) brightness(0.58);
+}
+
 /* 主题设置界面支持自动翻译 #638 */
 #translate {
   position: unset !important;
