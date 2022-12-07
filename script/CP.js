@@ -542,6 +542,7 @@ appearance.hideStatusBar（修改没有效果，仅用于判断是否隐藏底�
 appearance.customCSS（是否开启自定义主题）  <br><code class="fn__code">${window.siyuan.config.appearance.customCSS}</code>
 </div>
 `;
+console.warn(window.siyuan.languages);
       });
     }, 300);
   });
