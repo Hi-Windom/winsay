@@ -1,5 +1,10 @@
 @media screen and (max-width: 1300px) {
 
+  .search__layout {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
   .fn__flex-column:has(#searchList) {
     height: 88vh !important;
   }
