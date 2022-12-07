@@ -2245,7 +2245,7 @@ propChange("SC_winsay_cp_custom__defaultS", function () {
   if (!API.isEmpty(i)) {
     localStorage.removeItem("SC_winsay_cp_custom__defaultS_auto");
     if (window.funs.getThemeMode) {
-      let writeData = `@import url("preview-base-light.css"); @import url("${i}");`;
+      let writeData = `@import url("preview-base-light.css"); @import url("${i}?r=${Math.random()}");`;
       fs
         ? fs.writeFile(
             `${config.S2_BASE_ABS}defaultS.css`,
@@ -2265,7 +2265,7 @@ propChange("SC_winsay_cp_custom__defaultS", function () {
     localStorage.setItem("SC_winsay_cp_custom__defaultS_auto", "true");
     let writeData = `@import url("preview-base-light.css"); @import url("${localStorage
       .getItem("SC_winsay_cp_custom__LS")
-      .replace("root", "preview")}");`;
+      .replace("root", "preview")}?r=${Math.random()}");`;
     fs
       ? fs.writeFile(
           `${config.S2_BASE_ABS}defaultS.css`,
@@ -2284,9 +2284,28 @@ propChange("SC_winsay_cp_custom__defaultS", function () {
 });
 propChange("SC_winsay_cp_custom__LS", function () {
   var i = localStorage.getItem("SC_winsay_cp_custom__LS");
-  if (window.funs.getThemeMode == "light" && !API.isEmpty(i)) {
-    localStorage.setItem(config.latest_LC_ID, i);
-    iterLC();
+  if (!API.isEmpty(i)) {
+    if (window.funs.getThemeMode == "light") {
+      localStorage.setItem(config.latest_LC_ID, i);
+      iterLC();
+    }
+    else if (localStorage.getItem("SC_winsay_cp_custom__defaultS_auto")) {
+      let writeData = `@import url("preview-base-light.css"); @import url("${i.replace("root", "preview")}?r=${Math.random()}");`;
+      fs
+        ? fs.writeFile(
+            `${config.S2_BASE_ABS}defaultS.css`,
+            writeData,
+            "utf-8",
+            function (err) {
+              if (err) {
+                console.error(err);
+              } else {
+                console.log("Write successfully~~");
+              }
+            }
+          )
+        : console.log("platform not supported");
+    }
   }
 });
 propChange("SC_winsay_cp_custom__DS", function () {
