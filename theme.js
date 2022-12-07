@@ -66,7 +66,7 @@ window.funs.addURLParam = function (url,
 };
 window.funs.loadScript(window.funs.addURLParam("/appearance/themes/Sofill-/script/module/CustomBoot.min.js"), undefined, true);
 window.funs.loadScript(window.funs.addURLParam("/appearance/themes/Sofill-/script/fun.min.js"), undefined, true);
-window.funs.loadScript(window.funs.addURLParam("/appearance/themes/Sofill-/script/config.js?r="+Math.random()), undefined, true);
+// window.funs.loadScript(window.funs.addURLParam("/appearance/themes/Sofill-/script/config.js?r="+Math.random()), undefined, true);
 setTimeout(()=>{window.funs.loadScript(window.funs.addURLParam("/appearance/themes/Sofill-/script/module/SSS.min.js"), undefined, true);}, 20)
 setTimeout(()=>{window.funs.loadScript(window.funs.addURLParam("/appearance/themes/Sofill-/script/CP.js?r="+Math.random()), undefined, true);}, 200);
 setTimeout(()=>{window.funs.loadScript(window.funs.addURLParam("/appearance/themes/Sofill-/script/module/DTL.js"), undefined, true);
