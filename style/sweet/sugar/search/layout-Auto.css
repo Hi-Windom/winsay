@@ -102,9 +102,12 @@
   }
 
   /* CTRL + F 为空时保持高度 */
-  .b3-dialog__container[style*="80vw"] #searchList,
+  /* .b3-dialog__container[style*="80vw"] #searchList,
   .b3-dialog__container[style*="80vw"] #searchPreview:not(.fullscreen) {
     height: calc(100% - 50px - 53px) !important;
+  } */
+  .search__layout {
+    height: calc(100% - 80px);
   }
 
   .b3-dialog__container[style*="80vw"] #searchList div[data-type="search-item"]>.b3-list-item__text,
