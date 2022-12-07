@@ -186,6 +186,7 @@ Sofill 系列主题的诞生与成长离不开下列开源项目的贡献，以�
 字体：（排名不分先后）
 
 * [得意黑 Smiley Sans：一款在人文观感和几何特征中寻找平衡的中文黑体](https://github.com/atelier-anchor/smiley-sans)
+* [阿里巴巴普惠体](https://done.alibabadesign.com/puhuiti2.0)
 
 图片：（排名不分先后）
 
