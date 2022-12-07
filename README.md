@@ -34,15 +34,15 @@
 
 ---
 
-## ✨ 主题设置界面可配置更多项目了，优化浏览器环境兼容性，优化安卓手机端体验，特殊色号，添加 emoji 面板样式，文档宽度模式支持更多固宽选项，支持通过主题设置界面开启思源设置资源界面粘性布局，持通过主题设置界面开启图片制卡，主题设置界面支持自动翻译，修复已知缺陷，持续优化体验
+## ✨ 主题设置界面可配置更多项目了，导出PDF【跟随当前模式形态】调整为【跟随明亮模式形态】，新增一次性通知弹窗和跨平台警告弹窗，持续优化体验
 
 > 版本更新详细内容请下滑至【集市更新版本日志】部分查看
 
 ### 可能错过的重要更新
 
-1. 文档树视觉效果升级，支持通过主题设置配置滤镜
-2. Android 手机端体验优化，搜索体验优化
-3. 文档树自适应显示优化，优化导出PDF形态，支持通过主题设置界面禁用文档树修改图标，适配繁体中文和英文
+1. 文档树自适应显示优化，优化导出PDF形态，支持通过主题设置界面禁用文档树修改图标，适配繁体中文和英文
+2. 优化浏览器环境兼容性，优化安卓手机端体验
+3. 特殊色号，添加 emoji 面板样式，文档宽度模式支持更多固宽选项，支持通过主题设置界面开启思源设置资源界面粘性布局，持通过主题设置界面开启图片制卡，主题设置界面支持自动翻译
 
 ### 主题设置界面入口指南
 
@@ -116,7 +116,7 @@ Sofill- 主题形态一览表 ✨
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v0.250 ~ v0.260 聚合说明
+### v0.250 ~ v0.262 聚合说明
 
 > 2022-12-07 released
 
@@ -134,6 +134,7 @@ Sofill- 主题形态一览表 ✨
 8. [文档宽度模式支持更多固宽选项 · Issue #709 · v0.258](https://github.com/Hi-Windom/winsay/issues/709)
 9. [文档选区工具条位置新增【跟随选区（多行）】选项 · Issue #687 · v0.260](https://github.com/Hi-Windom/winsay/issues/687)
 10. [添加 emoji 面板样式 · Issue #728 · v0.260](https://github.com/Hi-Windom/winsay/issues/728)
+11. [新增一次性通知弹窗和跨平台警告弹窗 · Issue #733 · v0.262](https://github.com/Hi-Windom/winsay/issues/733)
 
 改进优化：
 
@@ -154,6 +155,8 @@ Sofill- 主题形态一览表 ✨
 15. [选区工具条位置配置适配安卓手机端 · Issue #729 · v0.260](https://github.com/Hi-Windom/winsay/issues/729)
 16. [优化 Android 端块滚动条操作体验 · Issue #726 · v0.260](https://github.com/Hi-Windom/winsay/issues/726)
 17. [优化对话框按钮交互体验 · Issue #724 · v0.260](https://github.com/Hi-Windom/winsay/issues/724)
+18. [导出PDF【跟随当前模式形态】调整为【跟随明亮模式形态】 · Issue #732 · v0.262](https://github.com/Hi-Windom/winsay/issues/732)
+19. [细节优化 · Issue #731 · v0.262](https://github.com/Hi-Windom/winsay/issues/731)
 
 缺陷修复：
 
