@@ -85,7 +85,7 @@
     --SCC-Component-Table-tr-bg-color-1: var(--SCC-SGTC-1A);
     --SCC-Component-Table-tr-bg-color-2: var(--SCC-SGTC-2A);
     --SCC-Component-CodeBlock-bg-color: #afbbbb35;
-    --SCC-Component-CodeBlock-bg-color-hover: #555;
+    --SCC-Component-CodeBlock-bg-color-hover: #55555555;
     --SCC-Component-Message-button-ok-border: 3px ridge var(--SCC-Cyan-186-lighter) !important;
     --SCC-Component-Message-button-ok-bg-color: var(--SCC-CNTC-黛绿);
     --SCC-Component-meno-bg-color: var(--SCC-CNTC-黛绿);
