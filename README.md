@@ -1,11 +1,6 @@
 # 🪁 Sofill-主题：内部代号 [ winsay ]（风颂）
 
 <p align="center">
-    <img src="https://img.shields.io/pypi/l/color-theme-analyse.svg?logo=GitHub" alt="License" style="cursor:pointer;height: 31px;margin: 5px auto;"><a href="https://github.com/Hi-Windom/winsay/issues?q=is%3Aopen+is%3Aissue">
-    <img alt="GitHub open issues" src="https://img.shields.io/github/issues-raw/Hi-Windom/winsay?logo=GitHub" style="cursor:pointer;height: 31px;margin: 5px auto;"/>
-    </a><a href="https://github.com/Hi-Windom/winsay/issues?q=is%3Aissue+is%3Aclosed">
-    <img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed-raw/Hi-Windom/winsay?logo=GitHub" style="cursor:pointer;height: 31px;margin: 5px auto;">
-    </a><a href="https://github.com/Hi-Windom/winsay/commits/main"><br>
     <a href="https://github.com/Hi-Windom/winsay/releases">
     <img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/Hi-Windom/winsay?include_prereleases&logo=GitHub"  style="cursor:pointer;height: 31px;margin: 3px auto;">
     <img alt="GitHub (Pre-)Release Date" src="https://img.shields.io/github/release-date-pre/Hi-Windom/winsay?logo=GitHub" style="cursor:pointer;height: 31px;margin: 3px auto;">
@@ -207,6 +202,14 @@ Sofill 系列主题的诞生与成长离不开下列开源项目的贡献，以�
 
 1. Sofill 系列主题均可免费使用和基于交流学习的无限制修改
 2. 基于 Sofill 系列主题二次创作的作品不得在未获得原作者团队授权的情况下擅自在思源集市或者其他渠道公开发行
+
+<p align="center" style="margin: 131px auto;">
+    <img src="https://img.shields.io/pypi/l/color-theme-analyse.svg?logo=GitHub" alt="License" style="cursor:pointer;height: 31px;margin: 5px auto;"><a href="https://github.com/Hi-Windom/winsay/issues?q=is%3Aopen+is%3Aissue">
+    <img alt="GitHub open issues" src="https://img.shields.io/github/issues-raw/Hi-Windom/winsay?logo=GitHub" style="cursor:pointer;height: 31px;margin: 5px auto;"/>
+    </a><a href="https://github.com/Hi-Windom/winsay/issues?q=is%3Aissue+is%3Aclosed">
+    <img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed-raw/Hi-Windom/winsay?logo=GitHub" style="cursor:pointer;height: 31px;margin: 5px auto;">
+    </a><a href="https://github.com/Hi-Windom/winsay/commits/main"></a>
+</p>
 
 ---
 
