@@ -334,7 +334,7 @@ async function propInit(id, type) {
   console.log(`${id} binded successfully`);
 }
 
-async function propChange(id, changeFn) {
+export async function propChange(id, changeFn) {
   bindDomWithObject({
     id: id,
     obj: obj,
@@ -354,7 +354,7 @@ async function checkedInit(obj) {
   console.log(`${obj.id} binded successfully`);
 }
 
-async function checkedChange(obj, YesFn, NoFn) {
+export async function checkedChange(obj, YesFn, NoFn) {
   if (obj.checked && obj.checked === true) {
     localStorage.setItem(obj.id, "true");
     YesFn();
