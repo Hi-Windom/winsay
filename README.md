@@ -1,17 +1,16 @@
 # 🪁 Sofill-主题：内部代号 [ winsay ]（风颂）
 
 <p align="center">
-    <img src="https://img.shields.io/pypi/l/color-theme-analyse.svg" alt="License">
-    <a href="https://github.com/Hi-Windom/winsay/releases">
-    <img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/Hi-Windom/winsay?include_prereleases">
-    <img alt="GitHub (Pre-)Release Date" src="https://img.shields.io/github/release-date-pre/Hi-Windom/winsay">
-    </a><a href="https://github.com/Hi-Windom/winsay/issues?q=is%3Aopen+is%3Aissue">
-    <img alt="GitHub open issues" src="https://img.shields.io/github/issues-raw/Hi-Windom/winsay"/>
+    <img src="https://img.shields.io/pypi/l/color-theme-analyse.svg?logo=GitHub" alt="License" style="cursor:pointer;height: 31px;margin: 5px auto;"><a href="https://github.com/Hi-Windom/winsay/issues?q=is%3Aopen+is%3Aissue">
+    <img alt="GitHub open issues" src="https://img.shields.io/github/issues-raw/Hi-Windom/winsay?logo=GitHub" style="cursor:pointer;height: 31px;margin: 5px auto;"/>
     </a><a href="https://github.com/Hi-Windom/winsay/issues?q=is%3Aissue+is%3Aclosed">
-    <img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed-raw/Hi-Windom/winsay">
-    </a><a href="https://github.com/Hi-Windom/winsay/commits/main">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Hi-Windom/winsay"></a>
-    <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=694357845&website=www.oicqzone.com"><img src="https://img.shields.io/badge/QQ-694357845-orange"></a>
+    <img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed-raw/Hi-Windom/winsay?logo=GitHub" style="cursor:pointer;height: 31px;margin: 5px auto;">
+    </a><a href="https://github.com/Hi-Windom/winsay/commits/main"><br>
+    <a href="https://github.com/Hi-Windom/winsay/releases">
+    <img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/Hi-Windom/winsay?include_prereleases&logo=GitHub"  style="cursor:pointer;height: 31px;margin: 3px auto;">
+    <img alt="GitHub (Pre-)Release Date" src="https://img.shields.io/github/release-date-pre/Hi-Windom/winsay?logo=GitHub" style="cursor:pointer;height: 31px;margin: 3px auto;">
+    </a>
+    <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=694357845&website=www.oicqzone.com"><img src="https://img.shields.io/badge/QQ-694357845-blue?logo=Tencent QQ" style="cursor:pointer;height: 31px;margin: 3px auto;"></a>
 </p>
 
 ## 🔭 更新预告
@@ -120,7 +119,7 @@ Sofill- 主题形态一览表 ✨
 
 > 2022-12-08 released
 
-<p><a href="https://github.com/Hi-Windom/winsay/issues/679"><img src="https://img.shields.io/badge/SiYuan-2.5.3-green"/></a> <a href="https://github.com/Hi-Windom/winsay/issues/678"><img src="https://img.shields.io/badge/%E4%B8%8D%E5%85%BC%E5%AE%B9-2.5.2---red"/></a> <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow"/></p></p>
+<p><a href="https://github.com/Hi-Windom/winsay/issues/679"><img src="https://img.shields.io/badge/SiYuan-2.5.3-green" style="cursor:pointer;height: 31px;margin: 1px;"/></a> <a href="https://github.com/Hi-Windom/winsay/issues/678"><img src="https://img.shields.io/badge/%E4%B8%8D%E5%85%BC%E5%AE%B9-2.5.2---red" style="cursor:pointer;height: 31px;margin: 1px;"/></a> <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow" style="cursor:pointer;height: 31px;margin: 1px;"/></p></p>
 
 引入特性：
 
@@ -197,6 +196,7 @@ Sofill 系列主题的诞生与成长离不开下列开源项目的贡献，以�
 
 * [icon-icons.com](https://icon-icons.com/zh/)
 * [iconfont](https://www.iconfont.cn/)
+* [Simple Icons](https://simpleicons.org/)
 
 ## 💎 特别鸣谢
 
