@@ -1,5 +1,10 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
+.b3-menu__item:has(.b3-menu__submenu:empty),
+.b3-menu__submenu:empty {
+  display: none;
+}
+
 /* 添加 emoji 面板样式 #728 */
 .emojis {
   height: clamp(200px, 58vh, 500px) !important;
