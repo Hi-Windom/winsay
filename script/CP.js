@@ -132,17 +132,19 @@ if (config.clientMode == "body--mobile") {
   );
   barhelp.setAttribute("class", "toolbar__item");
   barhelp.children[0].innerHTML = `<use xlink:href="#iconMore"></use>`;
-  var drawer = document.createElement("div");
-  drawer.id = "sc_drawer";
-  drawer.style.display = "flex";
-  drawer.style.flexDirection = "row-reverse";
-  drawer.style.borderBottom = "2px dashed var(--b3-theme-surface-lighter)";
-  drawer.style.minHeight = "2rem";
-  setTimeout(() => {
-    drawer.setAttribute("data-themeInfo", `${config.AliaName}`);
-  }, 1000);
+  if (document.getElementById("sc_drawer") == null) {
+    var drawer = document.createElement("div");
+    drawer.id = "sc_drawer";
+    drawer.style.display = "flex";
+    drawer.style.flexDirection = "row-reverse";
+    drawer.style.borderBottom = "2px dashed var(--b3-theme-surface-lighter)";
+    drawer.style.minHeight = "2rem";
+    setTimeout(() => {
+      drawer.setAttribute("data-themeInfo", `${config.AliaName}`);
+    }, 1000);
+    barhelp.children[1].insertAdjacentElement("afterbegin", drawer);
+  }
 
-  barhelp.children[1].insertAdjacentElement("afterbegin", drawer);
   if (document.getElementById("Sofill-CDUI-1") == null) {
     const CDUI_1 = document.createElement("button");
     CDUI_1.id = "Sofill-CDUI-1";
@@ -542,7 +544,7 @@ appearance.hideStatusBar（修改没有效果，仅用于判断是否隐藏底�
 appearance.customCSS（是否开启自定义主题）  <br><code class="fn__code">${window.siyuan.config.appearance.customCSS}</code>
 </div>
 `;
-console.warn(window.siyuan.languages);
+        console.warn(window.siyuan.languages);
       });
     }, 300);
   });
@@ -2289,9 +2291,11 @@ propChange("SC_winsay_cp_custom__LS", function () {
     if (window.funs.getThemeMode == "light") {
       localStorage.setItem(config.latest_LC_ID, i);
       iterLC();
-    }
-    else if (localStorage.getItem("SC_winsay_cp_custom__defaultS_auto")) {
-      let writeData = `@import url("preview-base-light.css"); @import url("${i.replace("root", "preview")}?r=${Math.random()}");`;
+    } else if (localStorage.getItem("SC_winsay_cp_custom__defaultS_auto")) {
+      let writeData = `@import url("preview-base-light.css"); @import url("${i.replace(
+        "root",
+        "preview"
+      )}?r=${Math.random()}");`;
       fs
         ? fs.writeFile(
             `${config.S2_BASE_ABS}defaultS.css`,
