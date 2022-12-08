@@ -288,112 +288,26 @@ async function checkUpdate(q = false) {
   }
 }
 
-var obj = {};
-
-async function bindDomWithObject(options) {
-  var dom = document.getElementById(options.id); // 获取dom id
-  var obj = options.obj; // 需要绑定的obj
-  var prop = options.prop; // 需要绑定的obj 的属性
-  var callback = options.callback; // 绑定成功后调用
-  var type = options.type; // 绑定的事件类型
-  var updated = options.updated; // 更新成功后调用
-
-  Object.defineProperty(obj, prop, {
-    get: function () {
-      return dom.value;
-    },
-    set: function (value) {
-      dom.value = value;
-      localStorage.setItem(prop, value);
-    },
-    configurable: true,
-  });
-
-  dom.addEventListener(type, function () {
-    obj[prop] = obj[prop];
-    if (typeof updated === "function") {
-      updated(obj, prop, dom); // 传入对象， 修改的属性， 以及dom节点
-    }
-  });
-
-  if (typeof callback === "function") {
-    callback(options, obj, dom);
-  }
-}
-
-async function propInit(id, type) {
-  bindDomWithObject({
-    id: id,
-    obj: obj,
-    prop: id,
-    type: type,
-    callback: function (options, obj, dom) {
-      if (!API.isEmpty(localStorage.getItem(id))) {
-        obj[options.prop] = localStorage.getItem(id);
-      }
-    },
-  });
-  console.log(`${id} binded successfully`);
-}
-
-export async function propChange(id, changeFn) {
-  bindDomWithObject({
-    id: id,
-    obj: obj,
-    prop: id,
-    type: "change",
-    updated: changeFn,
-  });
-  changeFn();
-}
-
-async function checkedInit(obj) {
-  if (localStorage.getItem(obj.id) === "true") {
-    obj.checked = true;
-  } else {
-    obj.checked = false;
-  }
-  console.log(`${obj.id} binded successfully`);
-}
-
-export async function checkedChange(obj, YesFn, NoFn) {
-  if (obj.checked && obj.checked === true) {
-    localStorage.setItem(obj.id, "true");
-    YesFn();
-  } else {
-    localStorage.setItem(obj.id, "false");
-    NoFn();
-  }
-  obj.addEventListener("click", function () {
-    if (obj.checked === true) {
-      localStorage.setItem(obj.id, "true");
-      YesFn();
-    } else {
-      localStorage.setItem(obj.id, "false");
-      NoFn();
-    }
-  });
-}
 
 // 初始化选项的值
 let selectList = document.querySelectorAll("select[id^='SC_winsay_cp']");
 // console.log(selectList);
 selectList.forEach(function (value) {
-  propInit(value.id, "change");
+  API.propInit(value.id, "change");
 });
 let rangeSliderList = document.querySelectorAll(
   "input[id^='SC_winsay_cp'][type='range']"
 );
 // console.log(rangeSliderList);
 rangeSliderList.forEach(function (value) {
-  propInit(value.id, "change");
+  API.propInit(value.id, "change");
 });
 let checkboxList = document.querySelectorAll(
   "input[id^='SC_winsay_cp'][type='checkbox']"
 );
 // console.log(checkboxList);
 checkboxList.forEach(function (value) {
-  checkedInit(value);
+  API.checkedInit(value);
 });
 // 支持记忆主题设置界面 #499
 let navLatest = localStorage.getItem("SC_winsay_cp_custom-nav-bind-id");
@@ -404,7 +318,7 @@ let navList = document.querySelectorAll(
   "input[id^='sc-custom-nav-bind-id'][type='radio']"
 );
 navList.forEach(function (value) {
-  checkedChange(
+  API.checkedChange(
     value,
     () => {
       localStorage.setItem("SC_winsay_cp_custom-nav-bind-id", value.id);
@@ -816,7 +730,7 @@ document
 
 // ------------------ 选项改变时的业务处理 ------------------------
 async function CP_EditorMonitor() {
-  propChange(
+  API.propChange(
     "SC_winsay_cp_editor__block__popover--open__PinSense",
     function () {
       var i = localStorage.getItem(
@@ -857,7 +771,7 @@ async function CP_EditorMonitor() {
       }
     }
   );
-  propChange("SC_winsay_cp_editor__BlockTable_MinWidth", function () {
+  API.propChange("SC_winsay_cp_editor__BlockTable_MinWidth", function () {
     var i = localStorage.getItem("SC_winsay_cp_editor__BlockTable_MinWidth");
     if (!API.isEmpty(i)) {
       document.documentElement.style.setProperty(
@@ -871,7 +785,7 @@ async function CP_EditorMonitor() {
       );
     }
   });
-  propChange("SC_winsay_cp_editor__BlockTable_MaxWidth", function () {
+  API.propChange("SC_winsay_cp_editor__BlockTable_MaxWidth", function () {
     var i = localStorage.getItem("SC_winsay_cp_editor__BlockTable_MaxWidth");
     if (!API.isEmpty(i)) {
       document.documentElement.style.setProperty(
@@ -885,7 +799,7 @@ async function CP_EditorMonitor() {
       );
     }
   });
-  propChange("SC_winsay_cp_editor__BlockTable_FontSize", function () {
+  API.propChange("SC_winsay_cp_editor__BlockTable_FontSize", function () {
     var i = localStorage.getItem("SC_winsay_cp_editor__BlockTable_FontSize");
     if (!API.isEmpty(i)) {
       document.documentElement.style.setProperty(
@@ -899,7 +813,7 @@ async function CP_EditorMonitor() {
       );
     }
   });
-  propChange("SC_winsay_cp_editor__BlockTable_TextAlign", function () {
+  API.propChange("SC_winsay_cp_editor__BlockTable_TextAlign", function () {
     var i = localStorage.getItem("SC_winsay_cp_editor__BlockTable_TextAlign");
     if (!API.isEmpty(i)) {
       document.documentElement.style.setProperty(
@@ -913,7 +827,7 @@ async function CP_EditorMonitor() {
       );
     }
   });
-  checkedChange(
+  API.checkedChange(
     document.getElementById("SC_winsay_cp_editor__BlockTable_Margin"),
     () => {
       document.documentElement.style.setProperty(
@@ -928,7 +842,7 @@ async function CP_EditorMonitor() {
       );
     }
   );
-  propChange("SC_winsay_cp_editor__Block-List-LightUpLineMode", function () {
+  API.propChange("SC_winsay_cp_editor__Block-List-LightUpLineMode", function () {
     var i = localStorage.getItem(
       "SC_winsay_cp_editor__Block-List-LightUpLineMode"
     );
@@ -972,7 +886,7 @@ async function CP_EditorMonitor() {
       );
     }
   });
-  propChange(
+  API.propChange(
     "SC_winsay_cp_editor__layout-center_protyle-toolbar_position",
     function () {
       var i = localStorage.getItem(
@@ -985,7 +899,7 @@ async function CP_EditorMonitor() {
       );
     }
   );
-  propChange("SC_winsay_cp_editor__protyle-attr-scale", function () {
+  API.propChange("SC_winsay_cp_editor__protyle-attr-scale", function () {
     var h = localStorage.getItem("SC_winsay_cp_editor__protyle-attr-scale");
     if (!API.isEmpty(h)) {
       document.documentElement.style.setProperty(
@@ -995,7 +909,7 @@ async function CP_EditorMonitor() {
     }
   });
   var SC_winsay_cp_editor__DocWidthMode__previousValue = "null";
-  propChange("SC_winsay_cp_editor__DocWidthMode", function () {
+  API.propChange("SC_winsay_cp_editor__DocWidthMode", function () {
     var w = localStorage.getItem("SC_winsay_cp_editor__DocWidthMode");
     clearInterval(t);
     if (!API.isEmpty(w)) {
@@ -1034,7 +948,7 @@ async function CP_EditorMonitor() {
     }
   });
   var t2 = null; // 声明计时器
-  propChange("SC_winsay_cp_editor__Doc_bgColor", function () {
+  API.propChange("SC_winsay_cp_editor__Doc_bgColor", function () {
     var w = localStorage.getItem("SC_winsay_cp_editor__Doc_bgColor");
     clearInterval(t2);
     if (!API.isEmpty(w)) {
@@ -1053,7 +967,7 @@ async function CP_EditorMonitor() {
       window.location.reload();
     }
   });
-  propChange("SC_winsay_cp_editor__ListAutoIndent_mode", function () {
+  API.propChange("SC_winsay_cp_editor__ListAutoIndent_mode", function () {
     var value = localStorage.getItem(
       "SC_winsay_cp_editor__ListAutoIndent_mode"
     );
@@ -1086,7 +1000,7 @@ async function CP_EditorMonitor() {
       );
     }
   });
-  propChange("SC_winsay_cp_editor__img-bg-color", function () {
+  API.propChange("SC_winsay_cp_editor__img-bg-color", function () {
     var value = localStorage.getItem("SC_winsay_cp_editor__img-bg-color");
     if (!API.isEmpty(value)) {
       switch (
@@ -1114,7 +1028,7 @@ async function CP_EditorMonitor() {
       }
     }
   });
-  checkedChange(
+  API.checkedChange(
     document.getElementById("SC_winsay_cp_editor__img-bg-color_always"),
     () => {
       var value = localStorage.getItem("SC_winsay_cp_editor__img-bg-color");
@@ -1139,7 +1053,7 @@ async function CP_EditorMonitor() {
       );
     }
   );
-  checkedChange(
+  API.checkedChange(
     document.getElementById("SC_winsay_cp_editor__HintHint-index"),
     () => {
       window.funs.updateStyle(
@@ -1154,7 +1068,7 @@ async function CP_EditorMonitor() {
       );
     }
   );
-  checkedChange(
+  API.checkedChange(
     document.getElementById("SC_winsay_cp_editor__LH_Adaptive"),
     () => {
       window.funs.updateStyle(
@@ -1175,7 +1089,7 @@ async function CP_EditorMonitor() {
         .classList.remove("fn__none");
     }
   );
-  checkedChange(
+  API.checkedChange(
     document.getElementById("SC_winsay_cp_editor__BreadcrumbsMode-Adaptive"),
     () => {
       window.funs.updateStyle(
@@ -1190,7 +1104,7 @@ async function CP_EditorMonitor() {
       );
     }
   );
-  checkedChange(
+  API.checkedChange(
     document.getElementById("SC_winsay_cp_editor__AreoBg-Filter"),
     () => {
       window.funs.updateStyle(
@@ -1205,7 +1119,7 @@ async function CP_EditorMonitor() {
       );
     }
   );
-  propChange("SC_winsay_cp_editor__LH_Adaptive__pIndent", function () {
+  API.propChange("SC_winsay_cp_editor__LH_Adaptive__pIndent", function () {
     var i = localStorage.getItem("SC_winsay_cp_editor__LH_Adaptive__pIndent");
     if (!API.isEmpty(i)) {
       document.documentElement.style.setProperty(
@@ -1217,7 +1131,7 @@ async function CP_EditorMonitor() {
       ).value = API.RangeLimitedInt(-2, i, 12);
     }
   });
-  propChange("SC_winsay_cp_editor__LH_Adaptive__LH", function () {
+  API.propChange("SC_winsay_cp_editor__LH_Adaptive__LH", function () {
     var i = localStorage.getItem("SC_winsay_cp_editor__LH_Adaptive__LH");
     if (!API.isEmpty(i)) {
       document.documentElement.style.setProperty(
@@ -1236,7 +1150,7 @@ async function CP_EditorMonitor() {
       }
     }
   });
-  propChange("SC_winsay_cp_editor__LH_Adaptive__marginTop", function () {
+  API.propChange("SC_winsay_cp_editor__LH_Adaptive__marginTop", function () {
     var i = localStorage.getItem("SC_winsay_cp_editor__LH_Adaptive__marginTop");
     if (!API.isEmpty(i)) {
       document.documentElement.style.setProperty(
@@ -1248,7 +1162,7 @@ async function CP_EditorMonitor() {
       ).value = API.RangeLimitedInt(10, i, 500);
     }
   });
-  propChange("SC_winsay_cp_editor__LH_Adaptive__marginBottom", function () {
+  API.propChange("SC_winsay_cp_editor__LH_Adaptive__marginBottom", function () {
     var i = localStorage.getItem(
       "SC_winsay_cp_editor__LH_Adaptive__marginBottom"
     );
@@ -1262,7 +1176,7 @@ async function CP_EditorMonitor() {
       ).value = API.RangeLimitedInt(10, i, 500);
     }
   });
-  propChange("SC_winsay_cp_editor__LH_Adaptive__lSpacing", function () {
+  API.propChange("SC_winsay_cp_editor__LH_Adaptive__lSpacing", function () {
     var i = localStorage.getItem("SC_winsay_cp_editor__LH_Adaptive__lSpacing");
     if (!API.isEmpty(i)) {
       document.documentElement.style.setProperty(
@@ -1284,7 +1198,7 @@ async function CP_EditorMonitor() {
       }
     }
   });
-  propChange("SC_winsay_cp_editor__BlockScrollBar-opacity", function () {
+  API.propChange("SC_winsay_cp_editor__BlockScrollBar-opacity", function () {
     var o = localStorage.getItem("SC_winsay_cp_editor__BlockScrollBar-opacity");
     if (!API.isEmpty(o)) {
       document.documentElement.style.setProperty(
@@ -1330,7 +1244,7 @@ async function CP_EditorMonitor() {
       }
     }
   });
-  propChange("SC_winsay_cp_editor__BlockScrollBar_Hposition", function () {
+  API.propChange("SC_winsay_cp_editor__BlockScrollBar_Hposition", function () {
     var p = localStorage.getItem(
       "SC_winsay_cp_editor__BlockScrollBar_Hposition"
     );
@@ -1396,7 +1310,7 @@ async function CP_EditorMonitor() {
       }
     }
   });
-  propChange(
+  API.propChange(
     "SC_winsay_cp_editor__Block-Inline-link__block-ref-content",
     function () {
       var i = localStorage.getItem(
@@ -1425,7 +1339,7 @@ async function CP_EditorMonitor() {
       }
     }
   );
-  propChange(
+  API.propChange(
     "SC_winsay_cp_editor__Block-List-Task__item-done__text-color",
     function () {
       var i = localStorage.getItem(
@@ -1452,7 +1366,7 @@ async function CP_EditorMonitor() {
       }
     }
   );
-  checkedChange(
+  API.checkedChange(
     document.getElementById("SC_winsay_cp_editor__FocusEnhanc_inlineCode"),
     () => {
       document.documentElement.style.setProperty(
@@ -1473,7 +1387,7 @@ async function CP_EditorMonitor() {
       );
     }
   );
-  checkedChange(
+  API.checkedChange(
     document.getElementById("SC_winsay_cp_editor__FocusEnhanc_refWave"),
     () => {
       document.documentElement.style.setProperty(
@@ -1487,7 +1401,7 @@ async function CP_EditorMonitor() {
       );
     }
   );
-  checkedChange(
+  API.checkedChange(
     document.getElementById("SC_winsay_cp_editor__FocusEnhanc_NodeHeading"),
     () => {
       window.funs.updateStyle(
@@ -1502,7 +1416,7 @@ async function CP_EditorMonitor() {
       );
     }
   );
-  checkedChange(
+  API.checkedChange(
     document.getElementById(
       "SC_winsay_cp_editor__FocusEnhanc_BlockHoverShadow"
     ),
@@ -1519,7 +1433,7 @@ async function CP_EditorMonitor() {
       );
     }
   );
-  checkedChange(
+  API.checkedChange(
     document.getElementById(
       "SC_winsay_cp_editor__FocusEnhanc_SearchInputShadow"
     ),
@@ -1536,7 +1450,7 @@ async function CP_EditorMonitor() {
       );
     }
   );
-  checkedChange(
+  API.checkedChange(
     document.getElementById("SC_winsay_cp_editor__NodeHeadingFoldedShadow"),
     () => {
       window.funs.updateStyle(
@@ -1551,7 +1465,7 @@ async function CP_EditorMonitor() {
       );
     }
   );
-  checkedChange(
+  API.checkedChange(
     document.getElementById("SC_winsay_cp_editor__ShowBreadcrumbAnytime"),
     () => {
       document.documentElement.style.setProperty(
@@ -1565,7 +1479,7 @@ async function CP_EditorMonitor() {
       );
     }
   );
-  checkedChange(
+  API.checkedChange(
     document.getElementById("SC_winsay_cp_editor__showDocCreatedDate"),
     () => {
       window.funs.loadScript(
@@ -1583,7 +1497,7 @@ async function CP_EditorMonitor() {
       );
     }
   );
-  propChange("SC_winsay_cp_editor__HintHintMaxWidth", function () {
+  API.propChange("SC_winsay_cp_editor__HintHintMaxWidth", function () {
     var i = localStorage.getItem("SC_winsay_cp_editor__HintHintMaxWidth");
     if (!API.isEmpty(i)) {
       document.documentElement.style.setProperty(
@@ -1592,7 +1506,7 @@ async function CP_EditorMonitor() {
       );
     }
   });
-  propChange("SC_winsay_cp_editor__HintHintMaxHeight", function () {
+  API.propChange("SC_winsay_cp_editor__HintHintMaxHeight", function () {
     var i = localStorage.getItem("SC_winsay_cp_editor__HintHintMaxHeight");
     if (!API.isEmpty(i)) {
       document.documentElement.style.setProperty(
@@ -1605,7 +1519,7 @@ async function CP_EditorMonitor() {
 
 async function CP_AppearanceMonitor() {
   if (config.clientMode != "body--mobile") {
-    checkedChange(
+    API.checkedChange(
       document.getElementById("SC_winsay_cp_appearance__CoolToolBar"),
       () => {
         API.MoveDOM("#barTopHelp", "#sc_drawer");
@@ -1633,7 +1547,7 @@ async function CP_AppearanceMonitor() {
         document.querySelector("#toolbar #barMode").style.padding = "9px";
       }
     );
-    checkedChange(
+    API.checkedChange(
       document.getElementById("NoSync__SC_winsay_cp_appearance__AutoTranslate"),
       () => {
         if (window.siyuan.config.lang) {
@@ -1671,7 +1585,7 @@ async function CP_AppearanceMonitor() {
         target ? target.remove() : null;
       }
     );
-    checkedChange(
+    API.checkedChange(
       document.getElementById("SC_winsay_cp_appearance__DockBgColorFilter"),
       () => {
         document
@@ -1706,7 +1620,7 @@ async function CP_AppearanceMonitor() {
       }
     );
   }
-  propChange("SC_winsay_cp_appearance__TabBarSize", function () {
+  API.propChange("SC_winsay_cp_appearance__TabBarSize", function () {
     var i = localStorage.getItem("SC_winsay_cp_appearance__TabBarSize");
     if (!API.isEmpty(i)) {
       document.documentElement.style.setProperty(
@@ -1719,7 +1633,7 @@ async function CP_AppearanceMonitor() {
       );
     }
   });
-  propChange("SC_winsay_cp_appearance__TabBarStyleFeel", function () {
+  API.propChange("SC_winsay_cp_appearance__TabBarStyleFeel", function () {
     var i = localStorage.getItem("SC_winsay_cp_appearance__TabBarStyleFeel");
     if (!API.isEmpty(i)) {
       switch (i) {
@@ -1798,7 +1712,7 @@ async function CP_AppearanceMonitor() {
       );
     }
   });
-  propChange("SC_winsay_cp_appearance__TabBar_item__textShadow", function () {
+  API.propChange("SC_winsay_cp_appearance__TabBar_item__textShadow", function () {
     var i = localStorage.getItem(
       "SC_winsay_cp_appearance__TabBar_item__textShadow"
     );
@@ -1820,7 +1734,7 @@ async function CP_AppearanceMonitor() {
       }
     }
   });
-  propChange("SC_winsay_cp_appearance__TabBarMode", function () {
+  API.propChange("SC_winsay_cp_appearance__TabBarMode", function () {
     var i = localStorage.getItem("SC_winsay_cp_appearance__TabBarMode");
     var j = API.isEmpty(i) ? "MI-TabBar-D.css" : i;
     window.funs.updateStyle(
@@ -1828,7 +1742,7 @@ async function CP_AppearanceMonitor() {
       `/appearance/themes/Sofill-/style/sweet/${j}`
     );
   });
-  checkedChange(
+  API.checkedChange(
     document.getElementById("SC_winsay_cp_appearance__TabBarV_AutoFolded"),
     () => {
       document.documentElement.style.setProperty(
@@ -1843,7 +1757,7 @@ async function CP_AppearanceMonitor() {
       );
     }
   );
-  checkedChange(
+  API.checkedChange(
     document.getElementById("SC_winsay_cp_appearance__ToolBarMode"),
     () => {
       document.documentElement.style.setProperty(
@@ -1912,7 +1826,7 @@ async function CP_AppearanceMonitor() {
       );
     }
   );
-  propChange("SC_winsay_cp_appearance__ToolBarMode__height", function () {
+  API.propChange("SC_winsay_cp_appearance__ToolBarMode__height", function () {
     var h = localStorage.getItem(
       "SC_winsay_cp_appearance__ToolBarMode__height"
     );
@@ -1931,7 +1845,7 @@ async function CP_AppearanceMonitor() {
       );
     }
   });
-  propChange(
+  API.propChange(
     "SC_winsay_cp_appearance__ToolBarMode__NotFocus__bgColor",
     function () {
       var h = localStorage.getItem(
@@ -1945,7 +1859,7 @@ async function CP_AppearanceMonitor() {
       }
     }
   );
-  checkedChange(
+  API.checkedChange(
     document.getElementById(
       "SC_winsay_cp_appearance__ToolBarMode__HideList__docName"
     ),
@@ -1962,7 +1876,7 @@ async function CP_AppearanceMonitor() {
       );
     }
   );
-  checkedChange(
+  API.checkedChange(
     document.getElementById(
       "SC_winsay_cp_appearance__ToolBarMode__HideList__VIP"
     ),
@@ -1979,7 +1893,7 @@ async function CP_AppearanceMonitor() {
       );
     }
   );
-  checkedChange(
+  API.checkedChange(
     document.getElementById(
       "SC_winsay_cp_appearance__ToolBarMode__HideList__windowX"
     ),
@@ -1996,7 +1910,7 @@ async function CP_AppearanceMonitor() {
       );
     }
   );
-  checkedChange(
+  API.checkedChange(
     document.getElementById(
       "SC_winsay_cp_appearance__ToolBarMode__HideList__Other"
     ),
@@ -2013,7 +1927,7 @@ async function CP_AppearanceMonitor() {
       );
     }
   );
-  checkedChange(
+  API.checkedChange(
     document.getElementById("SC_winsay_cp_appearance__ShowWebIcon"),
     () => {
       window.funs.updateStyle(
@@ -2025,7 +1939,7 @@ async function CP_AppearanceMonitor() {
       API.removejscssfile(`${config.winsay_ROOT}style/link/web.css`, "css");
     }
   );
-  checkedChange(
+  API.checkedChange(
     document.getElementById("SC_winsay_cp_appearance__ShowFileIcon"),
     () => {
       window.funs.updateStyle(
@@ -2037,7 +1951,7 @@ async function CP_AppearanceMonitor() {
       API.removejscssfile(`${config.winsay_ROOT}style/link/file.css`, "css");
     }
   );
-  propChange("SC_winsay_cp_appearance__status_msg_opacity", function () {
+  API.propChange("SC_winsay_cp_appearance__status_msg_opacity", function () {
     var i = localStorage.getItem("SC_winsay_cp_appearance__status_msg_opacity");
     if (!API.isEmpty(i)) {
       document.documentElement.style.setProperty(
@@ -2046,7 +1960,7 @@ async function CP_AppearanceMonitor() {
       );
     }
   });
-  checkedChange(
+  API.checkedChange(
     document.getElementById(
       "SC_winsay_cp_appearance__strengthen_backlinkList_panel_border"
     ),
@@ -2062,7 +1976,7 @@ async function CP_AppearanceMonitor() {
       );
     }
   );
-  checkedChange(
+  API.checkedChange(
     document.getElementById(
       "SC_winsay_cp_appearance__strengthen_layout-tab-container"
     ),
@@ -2078,7 +1992,7 @@ async function CP_AppearanceMonitor() {
       );
     }
   );
-  checkedChange(
+  API.checkedChange(
     document.getElementById(
       "SC_winsay_cp_appearance__SYSetting-AssetsIMG-Sticky"
     ),
@@ -2104,7 +2018,7 @@ setTimeout(async () => {
   await CP_Monitors();
 });
 
-propChange("SC_winsay_cp_search__about_checkTime", function () {
+API.propChange("SC_winsay_cp_search__about_checkTime", function () {
   var i = localStorage.getItem("SC_winsay_cp_search__about_checkTime");
   if (!API.isEmpty(i)) {
     switch (i) {
@@ -2129,7 +2043,7 @@ propChange("SC_winsay_cp_search__about_checkTime", function () {
     }
   }
 });
-propChange("SC_winsay_cp_custom__EXTmaxOpenTabCount", function () {
+API.propChange("SC_winsay_cp_custom__EXTmaxOpenTabCount", function () {
   var i = localStorage.getItem("SC_winsay_cp_custom__EXTmaxOpenTabCount");
   if (!API.isEmpty(i)) {
     let o = localStorage.getItem(
@@ -2154,7 +2068,7 @@ propChange("SC_winsay_cp_custom__EXTmaxOpenTabCount", function () {
     }
   }
 });
-propChange("SC_winsay_cp_custom__root_filter_light", function () {
+API.propChange("SC_winsay_cp_custom__root_filter_light", function () {
   var i = localStorage.getItem("SC_winsay_cp_custom__root_filter_light");
   if (!API.isEmpty(i)) {
     switch (i) {
@@ -2198,7 +2112,7 @@ propChange("SC_winsay_cp_custom__root_filter_light", function () {
     }
   }
 });
-propChange("SC_winsay_cp_custom__root_filter_dark", function () {
+API.propChange("SC_winsay_cp_custom__root_filter_dark", function () {
   var i = localStorage.getItem("SC_winsay_cp_custom__root_filter_dark");
   if (!API.isEmpty(i)) {
     switch (i) {
@@ -2243,7 +2157,7 @@ propChange("SC_winsay_cp_custom__root_filter_dark", function () {
   }
 });
 
-propChange("SC_winsay_cp_custom__defaultS", function () {
+API.propChange("SC_winsay_cp_custom__defaultS", function () {
   var i = localStorage.getItem("SC_winsay_cp_custom__defaultS");
   if (!API.isEmpty(i)) {
     localStorage.removeItem("SC_winsay_cp_custom__defaultS_auto");
@@ -2285,7 +2199,7 @@ propChange("SC_winsay_cp_custom__defaultS", function () {
       : console.log("platform not supported");
   }
 });
-propChange("SC_winsay_cp_custom__LS", function () {
+API.propChange("SC_winsay_cp_custom__LS", function () {
   var i = localStorage.getItem("SC_winsay_cp_custom__LS");
   if (!API.isEmpty(i)) {
     if (window.funs.getThemeMode == "light") {
@@ -2313,7 +2227,7 @@ propChange("SC_winsay_cp_custom__LS", function () {
     }
   }
 });
-propChange("SC_winsay_cp_custom__DS", function () {
+API.propChange("SC_winsay_cp_custom__DS", function () {
   var i = localStorage.getItem("SC_winsay_cp_custom__DS");
   if (window.funs.getThemeMode == "dark" && !API.isEmpty(i)) {
     localStorage.setItem(config.latest_DC_ID, i);
@@ -2321,7 +2235,7 @@ propChange("SC_winsay_cp_custom__DS", function () {
   }
 });
 
-propChange("SC_winsay_cp_search__layout", function () {
+API.propChange("SC_winsay_cp_search__layout", function () {
   var i = localStorage.getItem("SC_winsay_cp_search__layout");
   if (API.isEmpty(i) && document.getElementById("search__layout")) {
     document.getElementById("search__layout").remove();
@@ -2333,7 +2247,7 @@ propChange("SC_winsay_cp_search__layout", function () {
   }
 });
 
-propChange("SC_winsay_cp_assets__PCards", function () {
+API.propChange("SC_winsay_cp_assets__PCards", function () {
   var i = localStorage.getItem("SC_winsay_cp_assets__PCards");
   if (API.isEmpty(i) && document.getElementById("assets__PCards")) {
     document.getElementById("assets__PCards").remove();
@@ -2345,7 +2259,7 @@ propChange("SC_winsay_cp_assets__PCards", function () {
   }
 });
 
-checkedChange(
+API.checkedChange(
   document.getElementById("SC_winsay_cp_filetree__Hide_untitle"),
   () => {
     document.documentElement.style.setProperty(
@@ -2360,7 +2274,7 @@ checkedChange(
     );
   }
 );
-checkedChange(
+API.checkedChange(
   document.getElementById("SC_winsay_cp_filetree__Hide_item_action_more"),
   () => {
     document.documentElement.style.setProperty(
@@ -2374,7 +2288,7 @@ checkedChange(
     );
   }
 );
-checkedChange(
+API.checkedChange(
   document.getElementById("SC_winsay_cp_filetree__ChangeIconAvailability"),
   () => {
     document.documentElement.style.setProperty(
@@ -2388,7 +2302,7 @@ checkedChange(
     );
   }
 );
-checkedChange(
+API.checkedChange(
   document.getElementById("SC_winsay_cp_filetree__DyeingNameAvailability"),
   () => {
     document.documentElement.style.removeProperty(
@@ -2409,7 +2323,7 @@ checkedChange(
     );
   }
 );
-checkedChange(
+API.checkedChange(
   document.getElementById("SC_winsay_cp_search__index"),
   () => {
     window.funs.updateStyle(
@@ -2425,7 +2339,7 @@ checkedChange(
   }
 );
 
-checkedChange(
+API.checkedChange(
   document.getElementById("SC_winsay_cp_filetree__Adaptive_display"),
   () => {
     window.funs.updateStyle(
@@ -2447,7 +2361,7 @@ checkedChange(
   }
 );
 
-propChange("SC_winsay_cp_filetree__docFontsize", function () {
+API.propChange("SC_winsay_cp_filetree__docFontsize", function () {
   var i = localStorage.getItem("SC_winsay_cp_filetree__docFontsize");
   if (!API.isEmpty(i)) {
     document.documentElement.style.setProperty(
@@ -2460,7 +2374,7 @@ propChange("SC_winsay_cp_filetree__docFontsize", function () {
     localStorage.setItem("SC_winsay_cp_filetree__docFontsize__label", i);
   }
 });
-propChange("SC_winsay_cp_filetree__nbFontsize", function () {
+API.propChange("SC_winsay_cp_filetree__nbFontsize", function () {
   var i = localStorage.getItem("SC_winsay_cp_filetree__nbFontsize");
   if (!API.isEmpty(i)) {
     document.documentElement.style.setProperty(
@@ -2473,7 +2387,7 @@ propChange("SC_winsay_cp_filetree__nbFontsize", function () {
     localStorage.setItem("SC_winsay_cp_filetree__nbFontsize__label", i);
   }
 });
-propChange("SC_winsay_cp_filetree__nbMargin", function () {
+API.propChange("SC_winsay_cp_filetree__nbMargin", function () {
   var i = localStorage.getItem("SC_winsay_cp_filetree__nbMargin");
   if (!API.isEmpty(i)) {
     document.documentElement.style.setProperty(
@@ -2487,7 +2401,7 @@ propChange("SC_winsay_cp_filetree__nbMargin", function () {
   }
 });
 
-checkedChange(
+API.checkedChange(
   document.getElementById("SC_winsay_cp_system__SelfProtection"),
   () => {
     let SelfProtectionDialog = null;
@@ -2548,17 +2462,17 @@ checkedChange(
   }
 );
 
-checkedChange(
+API.checkedChange(
   document.getElementById("SC_winsay_cp__exportData__EXT_sy_editor"),
   () => {},
   () => {}
 );
-checkedChange(
+API.checkedChange(
   document.getElementById("SC_winsay_cp__exportData__EXT_sy_keymap"),
   () => {},
   () => {}
 );
-checkedChange(
+API.checkedChange(
   document.getElementById("SC_winsay_cp_search__about_AutoCheckSilently"),
   () => {},
   () => {}
