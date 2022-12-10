@@ -172,6 +172,27 @@ if (config.clientMode == "body--mobile") {
         .setAttribute("src", `${config.THEME_ROOT}preview.png`);
     };
   }
+
+  if (document.querySelector(".android.body--desktop")) {
+    let icon = `<svg><use xlink:href="#iconQuit"></use></svg>`;
+    let t = document.querySelector("#toolbar");
+    let div = document.createElement("div");
+    div.id = "barQuit";
+    div.className = "toolbar__item b3-tooltips b3-tooltips__sw";
+    div.setAttribute("aria-label", "退出 Quit");
+    div.innerHTML = icon;
+    t.insertAdjacentElement("beforeend", div);
+    div.onclick = function () {
+      document.querySelector("#toolbar #barSetting").click();
+      document
+        .querySelector('.b3-tab-bar:not(.sc-custom-nav) [data-name="about"]')
+        .click();
+      setTimeout(() => {
+        document.querySelector("#menuSafeQuit").click();
+        document.elementFromPoint(1, 1).click();
+      }, 500);
+    };
+  }
 }
 
 async function checkUpdateViaGithub(v, q) {
@@ -287,7 +308,6 @@ async function checkUpdate(q = false) {
       break;
   }
 }
-
 
 // 初始化选项的值
 let selectList = document.querySelectorAll("select[id^='SC_winsay_cp']");
@@ -516,21 +536,24 @@ document
         : false
     ) {
       fs
-      ? fs.writeFile(
-          `${window.siyuan.config.system.dataDir}/snippets/Sofill-ConfigData.json`,
-          JSON.stringify(jsonData),
-          "utf-8",
-          function (err) {
-            if (err) {
-              console.error(err);
-            } else {
-              console.log("Write successfully~~");
+        ? fs.writeFile(
+            `${window.siyuan.config.system.dataDir}/snippets/Sofill-ConfigData.json`,
+            JSON.stringify(jsonData),
+            "utf-8",
+            function (err) {
+              if (err) {
+                console.error(err);
+              } else {
+                console.log("Write successfully~~");
+              }
             }
-          }
-        )
-      : console.log("platform not supported");
+          )
+        : console.log("platform not supported");
     } else {
-      var repo = API.putFile(`/data/snippets/Sofill-ConfigData.json`,JSON.stringify(jsonData));
+      var repo = API.putFile(
+        `/data/snippets/Sofill-ConfigData.json`,
+        JSON.stringify(jsonData)
+      );
       console.log(repo);
     }
   });
@@ -574,44 +597,6 @@ document
               }
             }
           }
-          // if (name == "sy_editor") {
-          //   for (var val in jsonStr[name]) {
-          //     counter = counter + 1;
-          //     var obj = window.siyuan.config.editor[val];
-          //     if (jsonStr[name][val] != obj) {
-          //       diff = diff + 1;
-          //       diffDetail[name][val] = `${JSON.stringify(
-          //         obj
-          //       )} => ${JSON.stringify(jsonStr[name][val])}`;
-          //     }
-          //   }
-          // }
-          // if (name == "sy_keymap") {
-          //   diffDetail[name]["editor"] = {};
-          //   diffDetail[name]["general"] = {};
-          //   for (var val in jsonStr[name]["editor"]) {
-          //     counter = counter + 1;
-          //     let obj = JSON.stringify(
-          //       window.siyuan.config.keymap["editor"][val]
-          //     );
-          //     let diff = JSON.stringify(jsonStr[name]["editor"][val]);
-          //     if (diff != obj) {
-          //       diff = diff + 1;
-          //       diffDetail[name]["editor"][val] = `${obj} => ${diff}`;
-          //     }
-          //   }
-          //   for (var val in jsonStr[name]["general"]) {
-          //     counter = counter + 1;
-          //     let obj = JSON.stringify(
-          //       window.siyuan.config.keymap["general"][val]
-          //     );
-          //     let diff = JSON.stringify(jsonStr[name]["general"][val]);
-          //     if (diff != obj) {
-          //       diff = diff + 1;
-          //       diffDetail[name]["general"][val] = `${obj} => ${diff}`;
-          //     }
-          //   }
-          // }
         }
         console.warn(
           "================================ Changes Preview ================================"
@@ -627,15 +612,6 @@ document
           XML: CD.ConfirmDialog3,
           success() {
             console.log("点击了确定");
-            // for (var val in jsonStr) {
-            //   try {
-            //     localStorage.setItem(val, jsonStr[val]);
-            //     ok = ok + 1;
-            //     console.warn(`${val} updated`);
-            //   } catch (e) {
-            //     console.error(e);
-            //   }
-            // }
             for (var name in jsonStr) {
               diffDetail[name] = {};
               if (name == "winsay") {
@@ -871,50 +847,53 @@ async function CP_EditorMonitor() {
       );
     }
   );
-  API.propChange("SC_winsay_cp_editor__Block-List-LightUpLineMode", function () {
-    var i = localStorage.getItem(
-      "SC_winsay_cp_editor__Block-List-LightUpLineMode"
-    );
-    if (!API.isEmpty(i)) {
-      switch (i) {
-        case "1":
-          document.documentElement.style.setProperty(
-            "--SCC-Variables-BlockList__beforeColor",
-            "var(--b3-theme-background-light)"
-          );
-          window.funs.updateStyle("BlockListHoverALL", ``);
-          break;
-        case "2":
-          document.documentElement.style.setProperty(
-            "--SCC-Variables-BlockList__beforeColor",
-            "var(--b3-theme-background-light)"
-          );
-          window.funs.updateStyle(
-            "BlockListHoverALL",
-            `/appearance/themes/Sofill-/style/sweet/sugar/editor/Block-List-HoverALL.css`
-          );
-          break;
-        case "3":
-          document.documentElement.style.setProperty(
-            "--SCC-Variables-BlockList__beforeColor",
-            "var(--b3-scroll-color)"
-          );
-          break;
-        case "4":
-        default:
-          document.documentElement.style.setProperty(
-            "--SCC-Variables-BlockList__beforeColor",
-            "var(--b3-theme-surface-lighter)"
-          );
-          break;
-      }
-    } else {
-      document.documentElement.style.setProperty(
-        "--SCC-Variables-BlockList__beforeColor",
-        "var(--b3-theme-surface-lighter)"
+  API.propChange(
+    "SC_winsay_cp_editor__Block-List-LightUpLineMode",
+    function () {
+      var i = localStorage.getItem(
+        "SC_winsay_cp_editor__Block-List-LightUpLineMode"
       );
+      if (!API.isEmpty(i)) {
+        switch (i) {
+          case "1":
+            document.documentElement.style.setProperty(
+              "--SCC-Variables-BlockList__beforeColor",
+              "var(--b3-theme-background-light)"
+            );
+            window.funs.updateStyle("BlockListHoverALL", ``);
+            break;
+          case "2":
+            document.documentElement.style.setProperty(
+              "--SCC-Variables-BlockList__beforeColor",
+              "var(--b3-theme-background-light)"
+            );
+            window.funs.updateStyle(
+              "BlockListHoverALL",
+              `/appearance/themes/Sofill-/style/sweet/sugar/editor/Block-List-HoverALL.css`
+            );
+            break;
+          case "3":
+            document.documentElement.style.setProperty(
+              "--SCC-Variables-BlockList__beforeColor",
+              "var(--b3-scroll-color)"
+            );
+            break;
+          case "4":
+          default:
+            document.documentElement.style.setProperty(
+              "--SCC-Variables-BlockList__beforeColor",
+              "var(--b3-theme-surface-lighter)"
+            );
+            break;
+        }
+      } else {
+        document.documentElement.style.setProperty(
+          "--SCC-Variables-BlockList__beforeColor",
+          "var(--b3-theme-surface-lighter)"
+        );
+      }
     }
-  });
+  );
   API.propChange(
     "SC_winsay_cp_editor__layout-center_protyle-toolbar_position",
     function () {
@@ -1741,28 +1720,31 @@ async function CP_AppearanceMonitor() {
       );
     }
   });
-  API.propChange("SC_winsay_cp_appearance__TabBar_item__textShadow", function () {
-    var i = localStorage.getItem(
-      "SC_winsay_cp_appearance__TabBar_item__textShadow"
-    );
-    if (!API.isEmpty(i)) {
-      switch (i) {
-        case "2":
-          document.documentElement.style.setProperty(
-            "--SCC-Variables-TabBar_item__textShadow",
-            "-1px 1px 13px var(--SCC-Orange-Windom)"
-          );
-          break;
-        case "1":
-        default:
-          document.documentElement.style.setProperty(
-            "--SCC-Variables-TabBar_item__textShadow",
-            "none"
-          );
-          break;
+  API.propChange(
+    "SC_winsay_cp_appearance__TabBar_item__textShadow",
+    function () {
+      var i = localStorage.getItem(
+        "SC_winsay_cp_appearance__TabBar_item__textShadow"
+      );
+      if (!API.isEmpty(i)) {
+        switch (i) {
+          case "2":
+            document.documentElement.style.setProperty(
+              "--SCC-Variables-TabBar_item__textShadow",
+              "-1px 1px 13px var(--SCC-Orange-Windom)"
+            );
+            break;
+          case "1":
+          default:
+            document.documentElement.style.setProperty(
+              "--SCC-Variables-TabBar_item__textShadow",
+              "none"
+            );
+            break;
+        }
       }
     }
-  });
+  );
   API.propChange("SC_winsay_cp_appearance__TabBarMode", function () {
     var i = localStorage.getItem("SC_winsay_cp_appearance__TabBarMode");
     var j = API.isEmpty(i) ? "MI-TabBar-D.css" : i;
