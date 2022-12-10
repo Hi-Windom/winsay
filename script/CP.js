@@ -7,7 +7,7 @@ var fs = null;
 if (API.isAppMode()) {
   fs = require("fs");
 }
-var apitoken = window.siyuan.config.api.token;
+
 var localVersion = "0.0.0";
 
 // 声明计时器
@@ -2364,6 +2364,19 @@ API.checkedChange(
     API.removejscssfile(
       `${config.winsay_ROOT}style/sweet/sugar/search/index.css`,
       "css"
+    );
+  }
+);
+API.checkedChange(
+  document.getElementById("SC_winsay_cp_search__disable_tips"),
+  () => {
+    var t = document.getElementById("search__disable_tips");
+    t ? t.remove() : null;
+  },
+  () => {
+    window.funs.updateStyle(
+      "search__disable_tips",
+      `/appearance/themes/Sofill-/style/sweet/sugar/search/tips.css`
     );
   }
 );
