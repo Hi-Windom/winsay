@@ -504,6 +504,35 @@ document
     link.download = `Sofill-ConfigData.json`; //  设置下载的默认文件名
     link.click(); //  点击下载链接
     API.通知(`导出成功 ${ok}/${counter}`);
+    if (
+      document.getElementsByTagName("body")[0].classList.contains("android")
+        ? false
+        : document
+            .getElementsByTagName("body")[0]
+            .classList.contains("body--desktop")
+        ? false
+        : window.siyuan.config.system.os == "windows"
+        ? true
+        : false
+    ) {
+      fs
+      ? fs.writeFile(
+          `${window.siyuan.config.system.dataDir}/snippets/Sofill-ConfigData.json`,
+          JSON.stringify(jsonData),
+          "utf-8",
+          function (err) {
+            if (err) {
+              console.error(err);
+            } else {
+              console.log("Write successfully~~");
+            }
+          }
+        )
+      : console.log("platform not supported");
+    } else {
+      var repo = API.putFile(`/data/snippets/Sofill-ConfigData.json`,JSON.stringify(jsonData));
+      console.log(repo);
+    }
   });
 
 document
