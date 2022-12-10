@@ -148,3 +148,10 @@ body.body--mobile [data-type="sidebar-file"] ul>ul>li .b3-list-item__text,
 .file-tree.sy__file .b3-list-item--hide-action:hover>.b3-list-item__action[aria-label="More"] {
   display: var(--SCC-Variables-MI-DocTree-item-action-more-display, flex) !important;
 }
+
+/* 支持通过主题设置面板隐藏文档树非顶级文档图标 #754 */
+body.body--mobile [data-type="sidebar-file"] ul>ul>ul>li .b3-list-item__icon,
+.fn__flex-1.fn__flex-column.file-tree.sy__file ul>ul>ul>li .b3-list-item__icon {
+  max-width: var(--SCC-Varibales-DocTree-icon-MaxWidth, unset);
+  overflow: hidden;
+}

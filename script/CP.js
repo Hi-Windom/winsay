@@ -2318,6 +2318,20 @@ API.checkedChange(
   }
 );
 API.checkedChange(
+  document.getElementById("SC_winsay_cp_filetree__HideSomeIcon2SeeSee"),
+  () => {
+    document.documentElement.style.setProperty(
+      "--SCC-Varibales-DocTree-icon-MaxWidth",
+      "0"
+    );
+  },
+  () => {
+    document.documentElement.style.removeProperty(
+      "--SCC-Varibales-DocTree-icon-MaxWidth"
+    );
+  }
+);
+API.checkedChange(
   document.getElementById("SC_winsay_cp_filetree__ChangeIconAvailability"),
   () => {
     document.documentElement.style.setProperty(
