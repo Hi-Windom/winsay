@@ -85,13 +85,46 @@ body.body--mobile .side-panel {
   backdrop-filter: blur(5.8px);
 }
 
-/* 右侧菜单 */
-body.body--mobile #menu .b3-list-item--big {
-  padding: 13px 24px;
-}
-
 body.android.body--desktop #barQuit:hover {
   background-color: red;
   color: var(--SCC-White);
   border-radius: 31%;
+}
+
+/* 右侧菜单 */
+body.body--mobile #menu .b3-list-item--big {
+  padding: 0 13px;
+  margin: auto 13px !important;
+  font-size: 113%;
+  letter-spacing: 0.13px;
+}
+
+body.body--mobile #menu>#menuHelp>svg,
+body.body--mobile #menu>#menuHelp>span {
+  color: var(--SCC-CNTC-墨灰);
+}
+
+body.body--mobile #menu>#menuAbout>svg,
+body.body--mobile #menu>#menuAbout>span {
+  color: var(--SCC-CNTC-宝蓝);
+}
+
+body.body--mobile #menu>#menuSafeQuit>svg,
+body.body--mobile #menu>#menuSafeQuit>span {
+  color: var(--SCC-CNTC-殷红);
+}
+
+body.body--mobile #menu .b3-list-item--big .b3-list-item__graphic {
+  margin-right: 13px;
+  height: 20px;
+  width: 20px;
+}
+
+body.body--mobile #menu .b3-list-item--big .b3-list-item__graphic,
+body.body--mobile #menu .b3-list-item--big .b3-list-item__text {
+  align-self: center;
+}
+
+body.body--mobile #menu>#menuNewNotebook {
+  display: none;
 }
