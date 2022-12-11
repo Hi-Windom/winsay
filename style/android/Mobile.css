@@ -93,7 +93,7 @@ body.android.body--desktop #barQuit:hover {
 
 /* 右侧菜单 */
 body.body--mobile #menu .b3-list-item--big {
-  padding: 0 13px;
+  padding: 13px;
   margin: auto 13px !important;
   font-size: 113%;
   letter-spacing: 0.13px;
