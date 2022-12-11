@@ -128,3 +128,15 @@ body.body--mobile #menu .b3-list-item--big .b3-list-item__text {
 body.body--mobile #menu>#menuNewNotebook {
   display: none;
 }
+
+/* Android 手机端文件历史界面布局优化 #757 */
+#historyContainer>.history__repo>.history__repoheader>select,
+#historyContainer>.history__repo>.history__repoheader>div:nth-child(5),
+#historyContainer>.history__repo>.history__repoheader>div:nth-child(5)>input {
+  width: 100%;
+}
+
+#historyContainer>.history__repo>.history__repoheader>select,
+#historyContainer>.history__repo>.history__repoheader>div:nth-child(5) {
+  margin: 5.8px;
+}
