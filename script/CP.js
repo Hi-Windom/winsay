@@ -2499,7 +2499,7 @@ API.checkedChange(
         API.OK();
       } catch (e) {
         console.error(e);
-        alert(`主题自我保护检测到异常：Sofill- 内核已被篡改，请重新安装`);
+        alert(`主题自我保护检测到异常：Sofill- 内核已被篡改，若重载无效请重新安装`);
       }
     }, 30000);
   },
