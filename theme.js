@@ -92,19 +92,29 @@ window.funs.addURLParam = function (
   }
 };
 
-let SelfProtection = localStorage.getItem("SC_winsay_cp_system__SelfProtection");
+let SelfProtection = localStorage.getItem(
+  "SC_winsay_cp_system__SelfProtection"
+);
+let P = [];
+let bP = "";
+path
+  ? (bP = path.join(
+      window.siyuan.config.system.confDir,
+      "appearance",
+      "themes",
+      "Sofill-"
+    ))
+  : null;
+fs
+  ? fs.access(bP, (e) => {
+      if (e) {
+        console.error(e);
+        alert(`主题根目录未正确命名或不存在：【致命错误】${bP} 文件夹不存在。修正错误后，需重启思源并重新选择主题。`);
+      }
+    })
+  : null;
 if (SelfProtection && SelfProtection === "true") {
   try {
-    let P = [];
-    let bP = "";
-    path
-      ? (bP = path.join(
-          window.siyuan.config.system.confDir,
-          "appearance",
-          "themes",
-          "Sofill-"
-        ))
-      : null;
     path ? P.push(path.join(bP, "script", "utils", "api.min.js")) : null;
     path ? P.push(path.join(bP, "script", "CP.js")) : null;
     path ? P.push(path.join(bP, "script", "config.js")) : null;
