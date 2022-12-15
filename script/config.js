@@ -78,8 +78,6 @@ var clientMode = (() => {
       return null;
   }
 })();
-document.body.classList.add(clientMode);
-document.body.classList.add(window.theme.OS);
 
 var apitoken = window.siyuan.config.api.token;
 

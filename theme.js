@@ -2,6 +2,21 @@ window.theme = {};
 window.funs = {};
 var fs = null;
 var path = null;
+var clientMode = (() => {
+  let url = new URL(window.location.href);
+  switch (true) {
+    case url.pathname.startsWith("/stage/build/app"):
+      return "body--app";
+    case url.pathname.startsWith("/stage/build/desktop"):
+      return "body--desktop";
+    case url.pathname.startsWith("/stage/build/mobile"):
+      return "body--mobile";
+    default:
+      return null;
+  }
+})();
+document.body.classList.add(clientMode);
+document.body.classList.add(window.siyuan.config.system.os);
 let isAppMode = document
   .getElementsByTagName("body")[0]
   .classList.contains("android")
