@@ -159,4 +159,5 @@ body.body--mobile [data-type="sidebar-file"] ul>ul>ul>li .b3-list-item__icon,
   max-width: var(--SCC-Varibales-DocTree-icon-MaxWidth, unset);
   overflow: hidden;
   margin-left: -1.86px;
+  padding: 0;
 }
