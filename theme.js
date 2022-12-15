@@ -1,5 +1,3 @@
-window.theme = {};
-window.funs = {};
 var fs = null;
 var path = null;
 var clientMode = (() => {
@@ -17,7 +15,7 @@ var clientMode = (() => {
 })();
 document.body.classList.add(clientMode);
 document.body.classList.add(window.siyuan.config.system.os);
-let isAppMode = document
+var isAppMode = document
   .getElementsByTagName("body")[0]
   .classList.contains("android")
   ? false
@@ -32,7 +30,8 @@ if (isAppMode) {
   path = require("path");
   console.log("isAppMode");
 }
-
+window.theme = {};
+window.funs = {};
 /**
  * 获取操作系统 'windows' 或 'darwin' (MacOS) 或 'android'
  */
@@ -107,11 +106,11 @@ window.funs.addURLParam = function (
   }
 };
 
-let SelfProtection = localStorage.getItem(
+var SelfProtection = localStorage.getItem(
   "SC_winsay_cp_system__SelfProtection"
 );
-let P = [];
-let bP = "";
+var P = [];
+var bP = "";
 path
   ? (bP = path.join(
       window.siyuan.config.system.confDir,
