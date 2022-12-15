@@ -4,8 +4,10 @@ import * as API from "./utils/api.min.js";
 import * as config from "./config.js";
 import { iterLC, iterDC } from "./module/SSS.min.js";
 var fs = null;
+var path = null;
 if (API.isAppMode()) {
   fs = require("fs");
+  path = require("path");
 }
 
 var localVersion = "0.0.0";
@@ -2492,6 +2494,12 @@ API.checkedChange(
               ).innerHTML = `若要禁用此提醒，请在主题设置中关闭【主题自我保护】`;
             })
           : null;
+      }
+      try {
+        API.OK();
+      } catch (e) {
+        console.error(e);
+        alert(`主题自我保护检测到异常：Sofill- 内核已被篡改，请重新安装`);
       }
     }, 30000);
   },
