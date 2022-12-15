@@ -1141,6 +1141,15 @@ async function CP_EditorMonitor() {
       ).value = API.RangeLimitedInt(-2, i, 12);
     }
   });
+  API.propChange("SC_winsay_cp_editor__dynamicLoadBlocks", function () {
+    var i = localStorage.getItem("SC_winsay_cp_editor__dynamicLoadBlocks");
+    if (!API.isEmpty(i)) {
+      window.siyuan.config.editor.dynamicLoadBlocks = API.RangeLimitedInt(48, i, 1024);
+      document.getElementById(
+        "SC_winsay_cp_editor__dynamicLoadBlocks"
+      ).value = API.RangeLimitedInt(48, i, 1024);
+    }
+  });
   API.propChange("SC_winsay_cp_editor__LH_Adaptive__LH", function () {
     var i = localStorage.getItem("SC_winsay_cp_editor__LH_Adaptive__LH");
     if (!API.isEmpty(i)) {
