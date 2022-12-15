@@ -4,8 +4,10 @@ import * as API from "./utils/api.min.js";
 import * as config from "./config.js";
 import { iterLC, iterDC } from "./module/SSS.min.js";
 var fs = null;
+var path = null;
 if (API.isAppMode()) {
   fs = require("fs");
+  path = require("path");
 }
 
 var localVersion = "0.0.0";
@@ -1137,6 +1139,15 @@ async function CP_EditorMonitor() {
       document.getElementById(
         "SC_winsay_cp_editor__LH_Adaptive__pIndent"
       ).value = API.RangeLimitedInt(-2, i, 12);
+    }
+  });
+  API.propChange("SC_winsay_cp_editor__dynamicLoadBlocks", function () {
+    var i = localStorage.getItem("SC_winsay_cp_editor__dynamicLoadBlocks");
+    if (!API.isEmpty(i)) {
+      window.siyuan.config.editor.dynamicLoadBlocks = API.RangeLimitedInt(48, i, 1024);
+      document.getElementById(
+        "SC_winsay_cp_editor__dynamicLoadBlocks"
+      ).value = API.RangeLimitedInt(48, i, 1024);
     }
   });
   API.propChange("SC_winsay_cp_editor__LH_Adaptive__LH", function () {
@@ -2492,6 +2503,12 @@ API.checkedChange(
               ).innerHTML = `若要禁用此提醒，请在主题设置中关闭【主题自我保护】`;
             })
           : null;
+      }
+      try {
+        API.OK();
+      } catch (e) {
+        console.error(e);
+        alert(`主题自我保护检测到异常：Sofill- 内核已被篡改，若重载无效请重新安装`);
       }
     }, 30000);
   },
