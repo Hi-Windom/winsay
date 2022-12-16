@@ -51,7 +51,7 @@ body:not(.fn__flex-column) #action {
   --b3-scroll-color: var(--SCC-primary-lighter);
 
   /* 列表 */
-  --b3-list-hover: #FDF2F035;
+  --b3-list-hover: var(--b3-theme-surface-lighter);
 
   /* 菜单 */
   --b3-menu-background: #f2ecdec5;

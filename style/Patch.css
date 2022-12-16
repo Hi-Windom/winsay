@@ -238,22 +238,25 @@
   overflow: auto;
 }
 
+.b3-dialog__container>div:nth-child(3)>.fn__flex-column.b3-dialog--switch:has(.fn__hr):has(.dialog__path)>div.fn__flex>ul {
+  padding: 3.1px;
+  margin: 5.8px 3.1px;
+}
+
+.b3-dialog__container>div:nth-child(3)>.fn__flex-column.b3-dialog--switch:has(.fn__hr):has(.dialog__path)>div.fn__flex>ul:nth-child(1) {
+  opacity: 0.58;
+}
+
 .b3-dialog__container>div:nth-child(3)>.fn__flex-column.b3-dialog--switch:has(.fn__hr):has(.dialog__path):has(li:nth-of-type(15)) {
-  max-width: 700px;
+  width: clamp(31vw, 700px, 88vw);
 }
 
 .b3-dialog__container>div:nth-child(3)>.fn__flex-column.b3-dialog--switch:has(.fn__hr):has(.dialog__path)>div.fn__flex>ul:nth-child(2):has(li:nth-of-type(15)) {
   column-count: 2;
-  max-width: 540px;
-}
-
-.b3-dialog__container>div:nth-child(3)>.fn__flex-column.b3-dialog--switch:has(.fn__hr):has(.dialog__path):has(li:nth-of-type(30)) {
-  max-width: 940px;
 }
 
 .b3-dialog__container>div:nth-child(3)>.fn__flex-column.b3-dialog--switch:has(.fn__hr):has(.dialog__path)>div.fn__flex>ul:nth-child(2):has(li:nth-of-type(30)) {
   column-count: 3;
-  max-width: 760px;
 }
 
 .b3-dialog--switch .dialog__path {

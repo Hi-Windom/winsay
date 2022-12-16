@@ -15,11 +15,17 @@ var clientMode = (() => {
 })();
 document.body.classList.add(clientMode);
 document.body.classList.add(window.siyuan.config.system.os);
+if (navigator.userAgent.toLowerCase().startsWith("siyuan")) {
+  document.body.classList.add("client--siyuan");
+} else {
+  document.body.classList.add("client--browser");
+}
+
 var isAppMode = document
   .getElementsByTagName("body")[0]
   .classList.contains("android")
   ? false
-  : document.getElementsByTagName("body")[0].classList.contains("body--desktop")
+  : document.getElementsByTagName("body")[0].classList.contains("client--browser")
   ? false
   : window.siyuan.config.system.os == "windows" ||
     window.siyuan.config.system.os == "darwin"

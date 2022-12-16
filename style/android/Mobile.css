@@ -14,7 +14,7 @@ body.android .toolbar.toolbar--border #toolbarMore {
   margin-right: 8px;
 }
 
-body.android svg {
+body.android.client--siyuan svg {
   min-height: 14px;
   min-width: 14px;
   scale: 1.5;
