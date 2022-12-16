@@ -203,7 +203,7 @@ async function checkUpdateViaGithub(v, q) {
   let localThemes = await getInstalledTheme(window.location.host, "", {});
   console.log(localThemes.data);
   new Promise(function (response) {
-    var url = `https://api.github.com/repos/Hi-Windom/winsay/releases/latest`;
+    var url = `https://api.github.com/repos/Hi-Windom/${config.AliaName}/releases/latest`;
     var httpRequest = new XMLHttpRequest();
     httpRequest.open("GET", url, true);
     httpRequest.setRequestHeader("Content-type", "application/json");
@@ -227,11 +227,11 @@ async function checkUpdateViaGithub(v, q) {
         success() {
           console.log("点击了确定");
           window.open(
-            `https://github.com/Hi-Windom/winsay/releases/download/${version}/Sofill-__${version}.zip`,
+            `https://github.com/Hi-Windom/${config.AliaName}/releases/download/${version}/${config.ThemeName}__${version}.zip`,
             "_blank"
           );
           window.open(
-            `https://github.com/Hi-Windom/winsay/releases/tag/${version}`,
+            `https://github.com/Hi-Windom/${config.AliaName}/releases/tag/${version}`,
             "_blank"
           );
         },
