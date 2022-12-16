@@ -33,8 +33,8 @@
 ### 可能错过的重要更新
 
 1. 特殊色号，添加 emoji 面板样式，文档宽度模式支持更多固宽选项，支持通过主题设置界面开启思源设置资源界面粘性布局，持通过主题设置界面开启图片制卡，主题设置界面支持自动翻译
-3. 导出PDF【跟随当前模式形态】调整为【跟随明亮模式形态】，新增一次性通知弹窗和跨平台警告弹窗
-4. 滚屏显示支持代码块和嵌入块
+2. 导出PDF【跟随当前模式形态】调整为【跟随明亮模式形态】，新增一次性通知弹窗和跨平台警告弹窗
+3. 滚屏显示支持代码块和嵌入块
 
 ### 主题设置界面入口指南
 
@@ -108,9 +108,9 @@ Sofill- 主题形态一览表 ✨
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v1.0 ~ v1.0 聚合说明
+### v1.0 ~ v1.1 聚合说明
 
-> 2022-12-15 released
+> 2022-12-16 released
 
 <p><a href="https://github.com/Hi-Windom/winsay/issues/718"><img src="https://img.shields.io/badge/SiYuan-2.5.4-green" style="cursor:pointer;height: 31px;margin: 1px;"/></a> <a href="https://github.com/Hi-Windom/winsay/issues/678"><img src="https://img.shields.io/badge/%E4%B8%8D%E5%85%BC%E5%AE%B9-2.5.2---red" style="cursor:pointer;height: 31px;margin: 1px;"/></a> <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow" style="cursor:pointer;height: 31px;margin: 1px;"/></p></p>
 
@@ -127,6 +127,9 @@ Sofill- 主题形态一览表 ✨
 3. [优化主题自我保护 · Issue #761 · v1.0](https://github.com/Hi-Windom/winsay/issues/761)
 4. [启动时检查主题根目录 · Issue #756 · v1.0](https://github.com/Hi-Windom/winsay/issues/756)
 5. [细节优化 · Issue #755 · v1.0](https://github.com/Hi-Windom/winsay/issues/755)
+6. [移动端伺服不缩放图标 · Issue #764 · v1.1](https://github.com/Hi-Windom/winsay/issues/764)
+7. [改进检查更新以支持Sofill系列其他主题 · Issue #765 · v1.1](https://github.com/Hi-Windom/winsay/issues/765)
+8. [适配最近文档界面 · Issue #766 · v1.1](https://github.com/Hi-Windom/winsay/issues/766)
 
 ## 🎈 鸣谢
 
