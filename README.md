@@ -178,7 +178,7 @@ Sofill 系列主题的诞生与成长离不开下列开源项目的贡献，以�
     <img alt="GitHub open issues" src="https://img.shields.io/github/issues-raw/Hi-Windom/winsay?logo=GitHub" style="cursor:pointer;height: 31px;margin: 5px auto;"/>
     </a><a href="https://github.com/Hi-Windom/winsay/issues?q=is%3Aissue+is%3Aclosed">
     <img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed-raw/Hi-Windom/winsay?logo=GitHub" style="cursor:pointer;height: 31px;margin: 5px auto;">
-    </a><a href="https://github.com/Hi-Windom/winsay/commits/main"></a>
+    </a>
 </p>
 
 ---
