@@ -61,3 +61,7 @@ div.protyle-wysiwyg.protyle-wysiwyg--attr>div.p {
   opacity: 0.58;
   backdrop-filter: brightness(0.58);
 }
+
+.protyle-scroll {
+  display: var(--SCC-Variables-MI-BlockScrollBar-display,block);
+}

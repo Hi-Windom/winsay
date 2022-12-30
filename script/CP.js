@@ -1229,39 +1229,45 @@ async function CP_EditorMonitor() {
         o
       );
       let s = document.querySelector("#editor .protyle-scroll");
+      document.documentElement.style.setProperty(
+        "--SCC-Variables-MI-BlockScrollBar-display",
+        "block"
+      );
       switch (o) {
         case "0.88":
           s
-            ? (window.funs.updateStyle(
+            ? window.funs.updateStyle(
                 "Android-mobile-BlockScrollBarShow",
                 `/appearance/themes/Sofill-/style/sweet/sugar/editor/Android-mobile-BlockScrollBarFocusShow.css`
-              ),
-              document.documentElement.style.setProperty(
+              )
+            : document.documentElement.style.setProperty(
                 "--SCC-Variables-MI-BlockScrollBar-opacity",
-                "0.88"
-              ))
-            : null;
+                "0"
+              );
           break;
-        case "0.58":
-          document.documentElement.style.setProperty(
-            "--SCC-Variables-MI-BlockScrollBar-opacity",
-            "0.58"
-          );
+        case "1":
           s
             ? window.funs.updateStyle(
                 "Android-mobile-BlockScrollBarShow",
                 `/appearance/themes/Sofill-/style/sweet/sugar/editor/Android-mobile-BlockScrollBarAlwaysShow.css`
               )
-            : null;
+            : document.documentElement.style.setProperty(
+              "--SCC-Variables-MI-BlockScrollBar-opacity",
+              "0.58"
+            );
+          break;
+        case "-1":
+          document.documentElement.style.setProperty(
+            "--SCC-Variables-MI-BlockScrollBar-display",
+            "none"
+          );
           break;
         default:
           document.documentElement.style.setProperty(
             "--SCC-Variables-MI-BlockScrollBar-opacity",
             "0"
           );
-          let css = document.querySelector(
-            "#Android-mobile-BlockScrollBarShow"
-          );
+          let css = document.querySelector("#Android-mobile-BlockScrollBarShow");
           css ? css.remove() : null;
           break;
       }
