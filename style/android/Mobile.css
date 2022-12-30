@@ -140,3 +140,28 @@ body.body--mobile #menu>#menuNewNotebook {
 #historyContainer>.history__repo>.history__repoheader>div:nth-child(5) {
   margin: 5.8px;
 }
+
+/* 代码块顶部添加风格元素 ，适配移动端 */
+body.body--mobile .code-block::after {
+  content: " ";
+  position: absolute;
+  background: #ff0000;
+  box-shadow: 13px 0 #0070c0, 26px 0 #ff3399, 39px 0 #912997;
+  border-radius: var(--b3-border-radius-round);
+  top: 10px;
+  left: 1px;
+  height: 3px;
+  width: 13px;
+  z-index: 1;
+}
+
+/* 代码块行号，适配移动端 */
+body.body--mobile .protyle-linenumber__rows {
+  padding: 22px 4px;
+  width: 1.3em;
+  margin-top: 16px;
+}
+
+body.body--mobile .protyle-linenumber {
+  margin-left: 1.3em;
+}
