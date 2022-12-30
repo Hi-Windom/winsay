@@ -108,11 +108,11 @@ Sofill- 主题形态一览表 ✨
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v1.0 ~ v1.1 聚合说明
+### v1.0 ~ v1.2 聚合说明
 
-> 2022-12-16 released
+> 2022-12-31 released
 
-<p><a href="https://github.com/Hi-Windom/winsay/issues/718"><img src="https://img.shields.io/badge/SiYuan-2.5.4-green" style="cursor:pointer;height: 31px;margin: 1px;"/></a> <a href="https://github.com/Hi-Windom/winsay/issues/678"><img src="https://img.shields.io/badge/%E4%B8%8D%E5%85%BC%E5%AE%B9-2.5.2---red" style="cursor:pointer;height: 31px;margin: 1px;"/></a> <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow" style="cursor:pointer;height: 31px;margin: 1px;"/></p></p>
+<p><a href="https://github.com/Hi-Windom/winsay/issues/718"><img src="https://img.shields.io/badge/SiYuan-2.6.1-green" style="cursor:pointer;height: 31px;margin: 1px;"/></a> <a href="https://github.com/Hi-Windom/winsay/issues/678"><img src="https://img.shields.io/badge/%E4%B8%8D%E5%85%BC%E5%AE%B9-2.5.4---red" style="cursor:pointer;height: 31px;margin: 1px;"/></a> <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow" style="cursor:pointer;height: 31px;margin: 1px;"/></p></p>
 
 引入特性：
 
@@ -162,6 +162,10 @@ Sofill 系列主题的诞生与成长离不开下列开源项目的贡献，以�
 * [icon-icons.com](https://icon-icons.com/zh/)
 * [iconfont](https://www.iconfont.cn/)
 * [Simple Icons](https://simpleicons.org/)
+
+### 国际化
+
+* [translate: 网页自动翻译](https://gitee.com/mail_osc/translate)
 
 ## 💎 特别鸣谢
 
