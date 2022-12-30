@@ -1,5 +1,12 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
+#addCodeSnippetCSS,
+#addCodeSnippetJS {
+  position: absolute;
+  bottom: 7px;
+  box-shadow: var(--b3-point-shadow);
+}
+
 .b3-menu__item:has(.b3-menu__submenu:empty),
 .b3-menu__submenu:empty {
   display: none;
