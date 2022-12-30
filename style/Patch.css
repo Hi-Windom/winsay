@@ -1,5 +1,20 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
+#Sofill-MobileBall {
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  bottom: 131px;
+  right: 5.8px;
+  background-color: #fff0;
+  border-radius: 13px;
+  outline: none;
+  z-index: 119;
+}
+#Sofill-MobileBall>svg {
+  color: var(--b3-theme-secondary);
+}
+
 #addCodeSnippetCSS,
 #addCodeSnippetJS {
   position: absolute;

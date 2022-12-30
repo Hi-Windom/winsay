@@ -157,7 +157,7 @@ if (SelfProtection && SelfProtection === "true") {
 
 window.funs.loadScript(
   window.funs.addURLParam(
-    "/appearance/themes/Sofill-/script/module/CustomBoot.min.js"
+    "/appearance/themes/Sofill-/script/module/CustomBoot.js"
   ),
   undefined,
   true

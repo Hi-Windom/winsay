@@ -163,9 +163,10 @@ Sofill 系列主题的诞生与成长离不开下列开源项目的贡献，以�
 * [iconfont](https://www.iconfont.cn/)
 * [Simple Icons](https://simpleicons.org/)
 
-### 国际化
+### 组件
 
-* [translate: 网页自动翻译](https://gitee.com/mail_osc/translate)
+* [translate.js : 网页自动翻译](https://gitee.com/mail_osc/translate)
+* [hammer.js : A javascript library for multi-touch gestures](https://github.com/hammerjs/hammer.js)
 
 ## 💎 特别鸣谢
 
