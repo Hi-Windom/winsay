@@ -12,9 +12,10 @@ if (API.isAppMode()) {
 
 var localVersion = "0.0.0";
 
-// 声明计时器
-var t = null;
-var t_SelfProtector = null;
+// 声明计时器/定时器
+var It_DocWidthMode = null;
+var It_SelfProtector = null;
+var It_filterTimer = null;
 
 if (localStorage.getItem("SC_winsay_cp_search__about_checkAPI") == "Bazaar") {
   localVersion = window.siyuan.config.appearance.themeVer; // 简单省事,但是本地覆盖版本号不会生效
@@ -921,10 +922,10 @@ async function CP_EditorMonitor() {
   var SC_winsay_cp_editor__DocWidthMode__previousValue = "null";
   API.propChange("SC_winsay_cp_editor__DocWidthMode", function () {
     var w = localStorage.getItem("SC_winsay_cp_editor__DocWidthMode");
-    clearInterval(t);
+    clearInterval(It_DocWidthMode);
     if (!API.isEmpty(w)) {
       SC_winsay_cp_editor__DocWidthMode__previousValue = w;
-      t = setInterval(function () {
+      It_DocWidthMode = setInterval(function () {
         var node1 = document.querySelectorAll(
           "#layouts .layout__center .protyle-wysiwyg.protyle-wysiwyg--attr"
         );
@@ -1144,10 +1145,13 @@ async function CP_EditorMonitor() {
   API.propChange("SC_winsay_cp_editor__dynamicLoadBlocks", function () {
     var i = localStorage.getItem("SC_winsay_cp_editor__dynamicLoadBlocks");
     if (!API.isEmpty(i)) {
-      window.siyuan.config.editor.dynamicLoadBlocks = API.RangeLimitedInt(48, i, 1024);
-      document.getElementById(
-        "SC_winsay_cp_editor__dynamicLoadBlocks"
-      ).value = API.RangeLimitedInt(48, i, 1024);
+      window.siyuan.config.editor.dynamicLoadBlocks = API.RangeLimitedInt(
+        48,
+        i,
+        1024
+      );
+      document.getElementById("SC_winsay_cp_editor__dynamicLoadBlocks").value =
+        API.RangeLimitedInt(48, i, 1024);
     }
   });
   API.propChange("SC_winsay_cp_editor__LH_Adaptive__LH", function () {
@@ -2178,6 +2182,68 @@ API.propChange("SC_winsay_cp_custom__root_filter_dark", function () {
     }
   }
 });
+API.checkedChange(
+  document.getElementById("SC_winsay_cp_custom__filter_timer"),
+  () => {
+    It_filterTimer ? clearInterval(It_filterTimer) : null;
+    It_filterTimer = setInterval(() => {
+      if (API.SofillDate.isDuringTime("18:00", "6:00")) {
+        let Lfilter = document.documentElement.style.getPropertyValue(
+          "--SCC-Variables-root-filter-light"
+        );
+        let Dfilter = document.documentElement.style.getPropertyValue(
+          "--SCC-Variables-root-filter-dark"
+        );
+        localStorage.setItem(
+          "SC_winsay_cp_custom__root_Lfilter_daily",
+          Lfilter
+        );
+        localStorage.setItem(
+          "SC_winsay_cp_custom__root_Dfilter_daily",
+          Dfilter
+        );
+        document.documentElement.style.setProperty(
+          "--SCC-Variables-root-filter-light",
+          localStorage.getItem("SC_winsay_cp_custom__root_Lfilter_daily")
+        );
+        document.documentElement.style.setProperty(
+          "--SCC-Variables-root-filter-dark",
+          localStorage.getItem("SC_winsay_cp_custom__root_Dfilter_daily")
+        );
+      } else {
+        document.documentElement.style.setProperty(
+          "--SCC-Variables-root-filter-light",
+          ""
+        );
+        document.documentElement.style.setProperty(
+          "--SCC-Variables-root-filter-dark",
+          ""
+        );
+      }
+    }, 3000);
+  },
+  () => {
+    It_filterTimer ? clearInterval(It_filterTimer) : null;
+    let light = document.querySelector(
+      "#SC_winsay_cp_custom__root_filter_light"
+    );
+    let dark = document.querySelector("#SC_winsay_cp_custom__root_filter_dark");
+    if (!API.isEmpty(light) && !API.isEmpty(dark)) {
+      let e = new Event("change", { bubbles: true });
+      let tracker = light._valueTracker;
+      if (tracker) {
+        tracker.setValue("");
+      }
+      light.dispatchEvent(e);
+      let e2 = new Event("change", { bubbles: true });
+      let tracker2 = dark._valueTracker;
+      if (tracker2) {
+        tracker2.setValue("");
+      }
+      dark.dispatchEvent(e2);
+    }
+  }
+);
 
 API.propChange("SC_winsay_cp_custom__defaultS", function () {
   var i = localStorage.getItem("SC_winsay_cp_custom__defaultS");
@@ -2454,8 +2520,8 @@ API.checkedChange(
   document.getElementById("SC_winsay_cp_system__SelfProtection"),
   () => {
     let SelfProtectionDialog = null;
-    t_SelfProtector ? clearInterval(t_SelfProtector) : null;
-    t_SelfProtector = setInterval(async () => {
+    It_SelfProtector ? clearInterval(It_SelfProtector) : null;
+    It_SelfProtector = setInterval(async () => {
       if (window.siyuan.config.appearance.hideStatusBar) {
         if (document.getElementById("Info") == null) {
           SelfProtectionDialog = new ConfirmDialog({
@@ -2508,12 +2574,14 @@ API.checkedChange(
         API.OK();
       } catch (e) {
         console.error(e);
-        alert(`主题自我保护检测到异常：Sofill- 内核已被篡改，若重载无效请重新安装`);
+        alert(
+          `主题自我保护检测到异常：Sofill- 内核已被篡改，若重载无效请重新安装`
+        );
       }
     }, 30000);
   },
   () => {
-    t_SelfProtector ? clearInterval(t_SelfProtector) : null;
+    It_SelfProtector ? clearInterval(It_SelfProtector) : null;
   }
 );
 
