@@ -241,6 +241,15 @@
   padding: 5.8px;
 }
 
+.viewer-navbar,
+.viewer-list {
+  display: flex;
+}
+
+.viewer-list {
+  flex-basis: 100px;
+}
+
 body.body--mobile .viewer-title {
   white-space: normal;
   height: 2.2em;
