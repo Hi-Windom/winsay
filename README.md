@@ -100,7 +100,7 @@ Sofill- 主题形态一览表 ✨
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v1.0 ~ v1.2 聚合说明
+### v1.0 ~ v1.3 聚合说明
 
 > 2022-12-31 released
 
@@ -131,6 +131,7 @@ Sofill- 主题形态一览表 ✨
 12. [取消压缩 CustomBoot.js · Issue #780 · v1.2](https://github.com/Hi-Windom/winsay/issues/780)
 13. [优化安卓手机端viewer-container · Issue #778 · v1.2](https://github.com/Hi-Windom/winsay/issues/778)
 14. [优化安卓Pad端文档树自适应显示效果 · Issue #783 · v1.2](https://github.com/Hi-Windom/winsay/issues/783)
+15. [安卓手机端支持只读模式图标高亮 · Issue #787 · v1.3](https://github.com/Hi-Windom/winsay/issues/787)
 
 修复缺陷：
 

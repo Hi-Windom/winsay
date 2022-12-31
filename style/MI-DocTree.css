@@ -4,7 +4,7 @@
   border-radius: 2px;
 }
 
-.fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background {
+.file-tree.sy__file ul.b3-list.b3-list--background {
   border-radius: 1.8px;
   margin-left: 5.8px;
   margin-right: 3px;
@@ -16,27 +16,27 @@
 }
 
 
-.fn__flex-1.fn__flex-column.file-tree.sy__file ul .b3-list-item {
+.file-tree.sy__file ul .b3-list-item {
   margin: 0 3px 0px 0px !important;
 }
 
-.fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background:has(ul)>li .b3-list-item__text {
+.file-tree.sy__file ul.b3-list.b3-list--background:has(ul)>li .b3-list-item__text {
   color: var(--b3-theme-primary);
 }
 
-.fn__flex-1.fn__flex-column.file-tree.sy__file ul>li .b3-list-item__icon {
+.file-tree.sy__file ul>li .b3-list-item__icon {
   font-size: 18px;
   margin-right: 3px;
   padding: 0px;
 }
 
-.fn__flex-1.fn__flex-column.file-tree.sy__file ul>ul>li .b3-list-item__icon {
+.file-tree.sy__file ul>ul>li .b3-list-item__icon {
   font-size: 18px;
   margin-right: 1px;
   padding: 0px;
 }
 
-.fn__flex-1.fn__flex-column.file-tree.sy__file>div.fn__flex-1 ul>ul>li {
+.file-tree.sy__file>div.fn__flex-1 ul>ul>li {
   line-height: 23px;
   padding: 1px 0px;
   background-color: #ffffff11;
@@ -44,11 +44,11 @@
   filter: brightness(0.95);
 }
 
-.fn__flex-1.fn__flex-column.file-tree.sy__file ul>ul>li .b3-list-item__toggle {
+.file-tree.sy__file ul>ul>li .b3-list-item__toggle {
   padding: 0 4px 0 0;
 }
 
-.fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list.b3-list--background:has(ul)>li {
+.file-tree.sy__file ul.b3-list.b3-list--background:has(ul)>li {
   background-color: var(--b3-theme-surface) !important;
   backdrop-filter: blur(7px) brightness(1.31) !important;
   padding-bottom: 10px !important;
@@ -93,7 +93,7 @@ li[data-name="Untitled.sy"]>span.b3-list-item__text {
 
 /* 笔记本名文字 */
 body.body--mobile [data-type="sidebar-file"] ul.b3-list>li .b3-list-item__text,
-.fn__flex-1.fn__flex-column.file-tree.sy__file ul.b3-list>li .b3-list-item__text {
+.file-tree.sy__file ul.b3-list>li .b3-list-item__text {
   color: var(--SCC-Variables-DyeingName-Notebook);
   font-size: var(--SCC-Variables-MI-DocTree-nbFontsize, 10pt);
   transition: color 0.2s cubic-bezier(0.47, 0, 0.75, 0.72) .1s;
@@ -101,7 +101,7 @@ body.body--mobile [data-type="sidebar-file"] ul.b3-list>li .b3-list-item__text,
 
 /* 文档名文字 */
 body.body--mobile [data-type="sidebar-file"] ul>ul>li .b3-list-item__text,
-.fn__flex-1.fn__flex-column.file-tree.sy__file ul>ul>li .b3-list-item__text {
+.file-tree.sy__file ul>ul>li .b3-list-item__text {
   color: var(--SCC-Variables-DyeingName-Doc);
   font-size: var(--SCC-Variables-MI-DocTree-docFontsize, 9pt);
   letter-spacing: 0.1px;
@@ -110,7 +110,7 @@ body.body--mobile [data-type="sidebar-file"] ul>ul>li .b3-list-item__text,
 }
 
 /* 支持通过主题设置界面调整笔记本间距 #380 */
-.fn__flex-1.fn__flex-column.file-tree.sy__file .fn__flex-1:not(:has(>ul:nth-child(58)))>ul {
+.file-tree.sy__file .fn__flex-1:not(:has(>ul:nth-child(58)))>ul {
   margin-top: var(--SCC-Variables-MI-DocTree-nbMargin, 0.00em);
   margin-bottom: var(--SCC-Variables-MI-DocTree-nbMargin, 0.00em);
   padding-top: calc(var(--SCC-Variables-MI-DocTree-nbMargin, 0.00em)*0.5);
@@ -125,7 +125,7 @@ body.body--mobile [data-type="sidebar-file"] ul>ul>li .b3-list-item__text,
 
 /* 支持通过主题设置面板隐藏文档树非顶级文档图标 #754 */
 body.body--mobile [data-type="sidebar-file"] ul>ul>ul>li .b3-list-item__icon,
-.fn__flex-1.fn__flex-column.file-tree.sy__file ul>ul>ul>li .b3-list-item__icon {
+.file-tree.sy__file ul>ul>ul>li .b3-list-item__icon {
   max-width: var(--SCC-Varibales-DocTree-icon-MaxWidth, unset);
   overflow: hidden;
   margin-left: -1.86px;
