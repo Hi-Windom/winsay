@@ -1,5 +1,41 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
+.block__popover:has(>.block__icons>[data-type="close"]:hover) {
+  background-color: transparent !important;
+  backdrop-filter: blur(0.31px) brightness(.96);
+  transition: background-color 1.31s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.block__popover:has(>.block__icons>[data-type="close"]:hover)>.block__content,
+.block__popover:has(>.block__icons>[data-type="close"]:hover)>.block__content>div,
+.block__popover:has(>.block__icons>[data-type="close"]:hover)>.block__content>div>div {
+  opacity: 0;
+  transition: opacity 0.31s cubic-bezier(0.4, 0, 1, 1);
+}
+
+#Sofill-MobileBall {
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  bottom: 131px;
+  right: 5.8px;
+  background-color: #fff0;
+  border-radius: 13px;
+  outline: none;
+  z-index: 119;
+}
+
+#Sofill-MobileBall>svg {
+  color: var(--b3-theme-secondary);
+}
+
+#addCodeSnippetCSS,
+#addCodeSnippetJS {
+  position: absolute;
+  bottom: 7px;
+  box-shadow: var(--b3-point-shadow);
+}
+
 .b3-menu__item:has(.b3-menu__submenu:empty),
 .b3-menu__submenu:empty {
   display: none;
@@ -187,6 +223,19 @@
 }
 
 /* 双击查看图片 */
+.viewer-canvas>img {
+  z-index: 9;
+}
+
+.viewer-player.viewer-show {
+  z-index: 100;
+}
+
+.viewer-navbar {
+  background-color: #00000013;
+  backdrop-filter: blur(3.1px);
+}
+
 .viewer-backdrop {
   background-color: rgba(0, 0, 0, .13);
   backdrop-filter: blur(31px) brightness(.58);
@@ -204,6 +253,58 @@
   backdrop-filter: blur(3.1px) brightness(.31);
   padding: 5.8px;
 }
+
+.viewer-navbar,
+.viewer-list {
+  display: flex;
+}
+
+.viewer-list {
+  flex-basis: 100px;
+}
+
+body.body--mobile .viewer-title {
+  white-space: normal;
+  position: fixed;
+  top: 13px;
+  left: 0px;
+}
+
+body.body--mobile .viewer-toolbar>ul:not(:hover) {
+  margin-left: -60px;
+}
+
+body.body--mobile .viewer-toolbar:hover+.viewer-navbar {
+  margin-bottom: -50px;
+  transition: all .58s ease .31s;
+}
+
+body.body--mobile .viewer-toolbar>ul {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 44px;
+  margin: 5.8px;
+  padding-right: 66px;
+  /* padding-bottom: 131px; */
+  transition: all .31s ease .03s;
+  align-items: center;
+  z-index: 99;
+  position: sticky;
+}
+
+body.body--mobile .viewer-toolbar>ul>li {
+  margin: 5px 3.1px;
+  padding: 8px;
+  border-radius: 31%;
+  backdrop-filter: blur(1.3px);
+}
+
+body.body--mobile .viewer-toolbar svg {
+  scale: 1.86;
+  max-width: 16px;
+  filter: drop-shadow(1px 2px 1px #131313a5);
+}
+
 
 .sy__backlink .b3-list--background .b3-list-item--focus:not(.dragover):not(.dragover__top):not(.dragover__bottom) {
   background-color: var(--b3-list-hover);

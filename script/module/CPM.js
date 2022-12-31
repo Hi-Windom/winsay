@@ -88,6 +88,8 @@ export class ConfirmDialog extends Dialog {
     this.addEleEvent();
   }
   create() {
+    let olds = document.querySelectorAll("#SC-ConfirmDialog");
+    olds.forEach((o)=>{o.remove()});
     this.divEles.innerHTML = this.opts.XML;
     this.divEles.id = "SC-ConfirmDialog";
   }

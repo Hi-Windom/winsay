@@ -41,3 +41,11 @@ body.android #barDock>div.b3-menu>.b3-menu__item .b3-menu__label {
     line-height: 2.5;
     opacity: .8;
 }
+
+/* 反链面板左侧引用计数 */
+.block__icons .counter {
+    background-color: var(--SCC-Component-Counter-bg-color);
+    border: var(--SCC-Component-Counter-border);
+    opacity: 0.58;
+    backdrop-filter: brightness(0.58);
+  }

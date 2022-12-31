@@ -22,19 +22,11 @@
 * [ ] 支持配置文档面包屑表现形式
 * [ ] [提供接口 · Issue #425](https://github.com/Hi-Windom/winsay/issues/425)
 
-**假期停更中**
-
 ---
 
 ## ✨ 主题设置界面可配置更多项目了，改善安卓端易用性，持续优化体验
 
 > 版本更新详细内容请下滑至【集市更新版本日志】部分查看
-
-### 可能错过的重要更新
-
-1. 特殊色号，添加 emoji 面板样式，文档宽度模式支持更多固宽选项，支持通过主题设置界面开启思源设置资源界面粘性布局，持通过主题设置界面开启图片制卡，主题设置界面支持自动翻译
-2. 导出PDF【跟随当前模式形态】调整为【跟随明亮模式形态】，新增一次性通知弹窗和跨平台警告弹窗
-3. 滚屏显示支持代码块和嵌入块
 
 ### 主题设置界面入口指南
 
@@ -108,17 +100,20 @@ Sofill- 主题形态一览表 ✨
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v1.0 ~ v1.1 聚合说明
+### v1.0 ~ v1.2 聚合说明
 
-> 2022-12-16 released
+> 2022-12-31 released
 
-<p><a href="https://github.com/Hi-Windom/winsay/issues/718"><img src="https://img.shields.io/badge/SiYuan-2.5.4-green" style="cursor:pointer;height: 31px;margin: 1px;"/></a> <a href="https://github.com/Hi-Windom/winsay/issues/678"><img src="https://img.shields.io/badge/%E4%B8%8D%E5%85%BC%E5%AE%B9-2.5.2---red" style="cursor:pointer;height: 31px;margin: 1px;"/></a> <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow" style="cursor:pointer;height: 31px;margin: 1px;"/></p></p>
+<p><a href="https://github.com/Hi-Windom/winsay/issues/718"><img src="https://img.shields.io/badge/SiYuan-2.6.1-green" style="cursor:pointer;height: 31px;margin: 1px;"/></a> <a href="https://github.com/Hi-Windom/winsay/issues/770"><img src="https://img.shields.io/badge/%E4%B8%8D%E5%85%BC%E5%AE%B9-2.5.4---red" style="cursor:pointer;height: 31px;margin: 1px;"/></a> <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow" style="cursor:pointer;height: 31px;margin: 1px;"/></p></p>
 
 引入特性：
 
 1. [支持通过主题设置面板隐藏文档树非顶级文档图标 · Issue #754 · v1.0](https://github.com/Hi-Windom/winsay/issues/754)
 2. [为安卓pad端的主界面添加一个退出应用按钮 · Issue #758 · v1.0](https://github.com/Hi-Windom/winsay/issues/758)
 3. [Android 手机端支持通过主题设置界面配置动态加载块数 · Issue #760 · v1.0](https://github.com/Hi-Windom/winsay/issues/760)
+4. [支持滤镜定时开关 · Issue #723 · v1.2](https://github.com/Hi-Windom/winsay/issues/723)
+5. [移动端悬浮球 · Issue #753 · v1.2](https://github.com/Hi-Windom/winsay/issues/753)
+6. [block__popover浮窗支持聚焦穿透 · Issue #784 · v1.2](https://github.com/Hi-Windom/winsay/issues/784)
 
 改进优化：
 
@@ -130,6 +125,19 @@ Sofill- 主题形态一览表 ✨
 6. [移动端伺服不缩放图标 · Issue #764 · v1.1](https://github.com/Hi-Windom/winsay/issues/764)
 7. [改进检查更新以支持Sofill系列其他主题 · Issue #765 · v1.1](https://github.com/Hi-Windom/winsay/issues/765)
 8. [适配最近文档界面 · Issue #766 · v1.1](https://github.com/Hi-Windom/winsay/issues/766)
+9. [代码片段添加片段按钮固定到底部左侧 · Issue #774 · v1.2](https://github.com/Hi-Windom/winsay/issues/774)
+10. [不覆盖闪卡界面按钮颜色 · Issue #775 · v1.2](https://github.com/Hi-Windom/winsay/issues/775)
+11. [块滚动条支持移除 · Issue #777 · v1.2](https://github.com/Hi-Windom/winsay/issues/777)
+12. [取消压缩 CustomBoot.js · Issue #780 · v1.2](https://github.com/Hi-Windom/winsay/issues/780)
+13. [优化安卓手机端viewer-container · Issue #778 · v1.2](https://github.com/Hi-Windom/winsay/issues/778)
+14. [优化安卓Pad端文档树自适应显示效果 · Issue #783 · v1.2](https://github.com/Hi-Windom/winsay/issues/783)
+
+修复缺陷：
+
+1. [别名被计数遮挡 · Issue #771 · v1.2](https://github.com/Hi-Windom/winsay/issues/771)
+2. [手机端代码行号错乱 · Issue #768 · v1.2](https://github.com/Hi-Windom/winsay/issues/768)
+3. [安卓手机端ConfirmDialog重复创建 · Issue #782 · v1.2](https://github.com/Hi-Windom/winsay/issues/782)
+4. [viewer-list显示异常 · Issue #785 · v1.2](https://github.com/Hi-Windom/winsay/issues/785)
 
 ## 🎈 鸣谢
 
@@ -163,6 +171,11 @@ Sofill 系列主题的诞生与成长离不开下列开源项目的贡献，以�
 * [iconfont](https://www.iconfont.cn/)
 * [Simple Icons](https://simpleicons.org/)
 
+### 组件
+
+* [translate.js : 网页自动翻译](https://gitee.com/mail_osc/translate)
+* [hammer.js : A javascript library for multi-touch gestures](https://github.com/hammerjs/hammer.js)
+
 ## 💎 特别鸣谢
 
 * [OriginOS](https://www.vivo.com.cn/originos)
@@ -178,7 +191,7 @@ Sofill 系列主题的诞生与成长离不开下列开源项目的贡献，以�
     <img alt="GitHub open issues" src="https://img.shields.io/github/issues-raw/Hi-Windom/winsay?logo=GitHub" style="cursor:pointer;height: 31px;margin: 5px auto;"/>
     </a><a href="https://github.com/Hi-Windom/winsay/issues?q=is%3Aissue+is%3Aclosed">
     <img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed-raw/Hi-Windom/winsay?logo=GitHub" style="cursor:pointer;height: 31px;margin: 5px auto;">
-    </a><a href="https://github.com/Hi-Windom/winsay/commits/main"></a>
+    </a>
 </p>
 
 ---
