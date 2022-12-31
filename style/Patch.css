@@ -223,6 +223,19 @@
 }
 
 /* 双击查看图片 */
+.viewer-canvas>img {
+  z-index: 9;
+}
+
+.viewer-player.viewer-show {
+  z-index: 100;
+}
+
+.viewer-navbar {
+  background-color: #00000013;
+  backdrop-filter: blur(3.1px);
+}
+
 .viewer-backdrop {
   background-color: rgba(0, 0, 0, .13);
   backdrop-filter: blur(31px) brightness(.58);
@@ -252,31 +265,31 @@
 
 body.body--mobile .viewer-title {
   white-space: normal;
-  height: 2.2em;
-  margin-top: 0.58em;
-  padding-bottom: 0.31em;
-}
-
-body.body--mobile .viewer-footer {
-  height: 100%;
-}
-
-body.body--mobile .viewer-toolbar {
-  height: calc(100% - 96px);
+  position: fixed;
+  top: 13px;
+  left: 0px;
 }
 
 body.body--mobile .viewer-toolbar>ul:not(:hover) {
   margin-left: -60px;
 }
 
+body.body--mobile .viewer-toolbar:hover+.viewer-navbar {
+  margin-bottom: -50px;
+  transition: all .58s ease .31s;
+}
+
 body.body--mobile .viewer-toolbar>ul {
   display: flex;
   flex-direction: column-reverse;
-  width: 33px;
-  margin: auto 5.8px;
+  width: 44px;
+  margin: 5.8px;
   padding-right: 66px;
-  padding-bottom: 131px;
+  /* padding-bottom: 131px; */
   transition: all .31s ease .03s;
+  align-items: center;
+  z-index: 99;
+  position: sticky;
 }
 
 body.body--mobile .viewer-toolbar>ul>li {
