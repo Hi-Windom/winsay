@@ -11,6 +11,7 @@
   outline: none;
   z-index: 119;
 }
+
 #Sofill-MobileBall>svg {
   color: var(--b3-theme-secondary);
 }
@@ -226,6 +227,49 @@
   backdrop-filter: blur(3.1px) brightness(.31);
   padding: 5.8px;
 }
+
+body.body--mobile .viewer-title {
+  white-space: normal;
+  height: 2.2em;
+  margin-top: 0.58em;
+  padding-bottom: 0.31em;
+}
+
+body.body--mobile .viewer-footer {
+  height: 100%;
+}
+
+body.body--mobile .viewer-toolbar {
+  height: calc(100% - 96px);
+}
+
+body.body--mobile .viewer-toolbar>ul:not(:hover) {
+  margin-left: -60px;
+}
+
+body.body--mobile .viewer-toolbar>ul {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 33px;
+  margin: auto 5.8px;
+  padding-right: 66px;
+  padding-bottom: 131px;
+  transition: all .31s ease .03s;
+}
+
+body.body--mobile .viewer-toolbar>ul>li {
+  margin: 5px 3.1px;
+  padding: 8px;
+  border-radius: 31%;
+  backdrop-filter: blur(1.3px);
+}
+
+body.body--mobile .viewer-toolbar svg {
+  scale: 1.86;
+  max-width: 16px;
+  filter: drop-shadow(1px 2px 1px #131313a5);
+}
+
 
 .sy__backlink .b3-list--background .b3-list-item--focus:not(.dragover):not(.dragover__top):not(.dragover__bottom) {
   background-color: var(--b3-list-hover);
