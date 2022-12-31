@@ -1,5 +1,18 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
+.block__popover:has(>.block__icons>[data-type="close"]:hover) {
+  background-color: transparent !important;
+  backdrop-filter: blur(0.31px) brightness(.96);
+  transition: background-color 1.31s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.block__popover:has(>.block__icons>[data-type="close"]:hover)>.block__content,
+.block__popover:has(>.block__icons>[data-type="close"]:hover)>.block__content>div,
+.block__popover:has(>.block__icons>[data-type="close"]:hover)>.block__content>div>div {
+  opacity: 0;
+  transition: opacity 0.31s cubic-bezier(0.4, 0, 1, 1);
+}
+
 #Sofill-MobileBall {
   width: 44px;
   height: 44px;
