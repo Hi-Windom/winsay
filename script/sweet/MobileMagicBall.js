@@ -1,21 +1,84 @@
 import * as API from "./../utils/api.min.js";
 var ball = document.createElement("div");
 ball.id = "Sofill-MobileBall";
+ball.style.visibility = "hidden";
 ball.innerHTML = `<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Canonical</title><path d="M24 12c0 6.627-5.373 12-12 12-6.628 0-12-5.373-12-12C0 5.372 5.372 0 12 0c6.627 0 12 5.372 12 12zM12 2.92A9.08 9.08 0 002.92 12 9.08 9.08 0 0012 21.08 9.08 9.08 0 0021.081 12 9.08 9.08 0 0012 2.92zm0 16.722A7.64 7.64 0 014.36 12 7.64 7.64 0 0112 4.36 7.64 7.64 0 0119.641 12a7.64 7.64 0 01-7.64 7.641z"/></svg>`;
 document.body.appendChild(ball);
 
+window.theme.history = [];
+
 setTimeout(() => {
+  ball.style.visibility = "visible";
   var hammertime = new Hammer(ball);
   hammertime.on("tap", function (ev) {
     console.log(ev); //输出拖移事件对象 alert("单击事件");
     let id = API.getFocusedDocID();
-    alert(id);
+    API.通知(id);
   });
   hammertime.on("press", function (ev) {
     console.log(ev); //输出拖移事件对象 alert("按压事件");
     window.location.reload();
   });
-}, 3000);
+}, 2000);
+
+setTimeout(() => {
+  // 选择需要观察变动的节点
+  const targetNode = document.querySelector(
+    "#editor>.protyle-content>.protyle-background"
+  );
+  const targetToolbar = document.querySelector(".toolbar");
+
+  // 观察器的配置（需要观察什么变动）
+  const config = {
+    attributes: true,
+    childList: true,
+    subtree: true,
+    attributeOldValue: true,
+  };
+
+  // 当观察到变动时执行的回调函数
+  const callback = function (mutationsList, observer) {
+    for (let mutation of mutationsList) {
+      if (mutation.type === "childList") {
+        console.log("A child node has been added or removed.");
+      } else if (mutation.type === "attributes") {
+        console.log(
+          "The " + mutation.attributeName + " attribute was modified."
+        );
+        console.log(mutation);
+        if (
+          mutation.attributeName == "data-node-id" &&
+          mutation.oldValue != null
+        ) {
+          window.theme.history.push(mutation.oldValue);
+          console.warn(window.theme.history);
+        }
+        if (mutation.attributeName == "href") {
+          let e = document.querySelector("#toolbarEdit");
+          if (mutation.oldValue == "#iconEdit") {
+            e.style.color = "var(--b3-font-color1)";
+            e.style.filter = "saturate(5.8) brightness(0.58)";
+          } else {
+            e.style.color = "var(--b3-theme-on-surface)";
+            e.style.filter = "none";
+          }
+        }
+      }
+    }
+  };
+
+  // 创建一个观察器实例并传入回调函数
+  const observer = new MutationObserver(callback);
+
+  // 以上述配置开始观察目标节点
+  observer.observe(targetNode, config);
+  observer.observe(targetToolbar, config);
+
+  // 停止对某目标的监听
+  // observer.unobserve(target);
+  // 终止对所有目标的监听
+  // observer.disconnect();
+}, 1000);
 
 // 节流函数
 function throttle(fn, interval, _this) {
