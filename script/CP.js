@@ -246,7 +246,7 @@ async function checkUpdateViaGithub(v, q) {
         var urlText = response["body"].replace(reg, "<a href='$1$2'>$1$2</a>");
         document.getElementById(
           "UpdateInfo"
-        ).innerHTML = `${v} > ${version}<br><span class="fn__space"></span><div class="b3-typography" style="max-height: 250px;white-space: break-spaces;word-break: break-all;overflow: auto;">${urlText}</div>`;
+        ).innerHTML = `${v} > ${version}<br><span class="fn__space"></span><div class="p" style="max-height: 250px;white-space: break-spaces;word-break: break-all;overflow: scroll;">${urlText}</div>`;
         document.getElementById(
           "CoverWarming"
         ).innerHTML = `下载链接能否访问取决于你的网络`;
@@ -1652,6 +1652,16 @@ async function CP_AppearanceMonitor() {
           .style.removeProperty("background-image");
       }
     );
+  } else {
+    API.propChange("SC_winsay_cp_appearance__KeynesOpacity", function () {
+      var i = localStorage.getItem("SC_winsay_cp_appearance__KeynesOpacity");
+      if (!API.isEmpty(i)) {
+        document.documentElement.style.setProperty(
+          "--SCC-Variables-KeynesOpacity",
+          i
+        );
+      }
+    });
   }
   API.propChange("SC_winsay_cp_appearance__TabBarSize", function () {
     var i = localStorage.getItem("SC_winsay_cp_appearance__TabBarSize");

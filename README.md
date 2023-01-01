@@ -126,6 +126,7 @@ Sofill- 主题形态一览表 ✨
 4. [支持滤镜定时开关 · Issue #723 · v1.2](https://github.com/Hi-Windom/winsay/issues/723)
 5. [移动端悬浮球 · Issue #753 · v1.2](https://github.com/Hi-Windom/winsay/issues/753)
 6. [block__popover浮窗支持聚焦穿透 · Issue #784 · v1.2](https://github.com/Hi-Windom/winsay/issues/784)
+7. [安卓手机端支持通过主题设置面板调节凯恩斯不透明度 · Issue #801 · v1.3.5](https://github.com/Hi-Windom/winsay/issues/801)
 
 改进优化：
 
