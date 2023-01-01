@@ -205,6 +205,11 @@ body.body--mobile #searchPanel>.b3-list-item--two>div.b3-list-item__first>.b3-li
   filter: brightness(.58) sepia(.58);
 }
 
-#sidebar .toolbar {
+body.body--mobile #sidebar .toolbar {
   backdrop-filter: sepia(.58) brightness(58);
+}
+
+body.body--mobile .toolbar__icon,
+body.body--mobile .b3-list-item__graphic {
+    filter: drop-shadow(-2px 2px 2px #13131329);
 }
