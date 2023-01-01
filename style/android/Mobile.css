@@ -81,7 +81,7 @@ body.body--desktop .fn__size200#copyKey {
 
 body.body--mobile .side-panel {
   background-color: var(--b3-theme-background-light);
-  opacity: .92;
+  opacity: var(--SCC-Variables-KeynesOpacity, 1);
   backdrop-filter: blur(5.8px);
 }
 
@@ -211,5 +211,5 @@ body.body--mobile #sidebar .toolbar {
 
 body.body--mobile .toolbar__icon,
 body.body--mobile .b3-list-item__graphic {
-    filter: drop-shadow(-2px 2px 2px #13131329);
+  filter: drop-shadow(-2px 2px 2px #13131329);
 }
