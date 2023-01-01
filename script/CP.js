@@ -1252,9 +1252,9 @@ async function CP_EditorMonitor() {
                 `/appearance/themes/Sofill-/style/sweet/sugar/editor/Android-mobile-BlockScrollBarAlwaysShow.css`
               )
             : document.documentElement.style.setProperty(
-              "--SCC-Variables-MI-BlockScrollBar-opacity",
-              "0.58"
-            );
+                "--SCC-Variables-MI-BlockScrollBar-opacity",
+                "0.58"
+              );
           break;
         case "-1":
           document.documentElement.style.setProperty(
@@ -1267,7 +1267,9 @@ async function CP_EditorMonitor() {
             "--SCC-Variables-MI-BlockScrollBar-opacity",
             "0"
           );
-          let css = document.querySelector("#Android-mobile-BlockScrollBarShow");
+          let css = document.querySelector(
+            "#Android-mobile-BlockScrollBarShow"
+          );
           css ? css.remove() : null;
           break;
       }
@@ -2590,7 +2592,23 @@ API.checkedChange(
     It_SelfProtector ? clearInterval(It_SelfProtector) : null;
   }
 );
-
+API.checkedChange(
+  document.getElementById("SC_winsay_cp_system__Ball"),
+  () => {
+    if (config.clientMode == "body--mobile") {
+      let ball = document.querySelector("#Sofill-MobileBall");
+      ball ? (ball.style.display = "none") : null;
+    }
+  },
+  () => {
+    if (config.clientMode == "body--mobile") {
+      let ball = document.querySelector("#Sofill-MobileBall");
+      ball
+        ? (ball.style.display = "block")
+        : API.通知("Sofill-MobileBall not found");
+    }
+  }
+);
 API.checkedChange(
   document.getElementById("SC_winsay_cp__exportData__EXT_sy_editor"),
   () => {},

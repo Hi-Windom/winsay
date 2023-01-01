@@ -1,4 +1,5 @@
 import { CP } from "./XML/CPDialog.js";
+import * as config from "../config.js";
 class Dialog extends EventTarget {
   constructor(options) {
     super();
@@ -32,11 +33,11 @@ class Dialog extends EventTarget {
   }
   // 创建节点
   createElement() {
-    // console.log(this.opts.width)
     let divEles = document.createElement("div");
     divEles.id = "SC-CP";
     divEles.innerHTML = `<div class="SCC-wrapper"></div><div class="b3-dialog--open"><div class="SCC-dialog b3-dialog"></div></div></div>`;
     divEles.style.display = "none";
+    divEles.classList.add(config.AliaName);
     document.body.appendChild(divEles);
     this.divEles = divEles;
   }
@@ -143,21 +144,3 @@ export class CPDialog extends Dialog {
     });
   }
 }
-
-// class ConfirmDialog extends HTMLElement {
-//   constructor() {
-//     super();
-//     let dialog = new Dialog({
-//       title: this.title,
-//       success: (e) => {
-//         // console.log("点击了确定")
-//         this.dispatchEvent(new CustomEvent("success"));
-//       },
-//     });
-//       dialog.open();
-//   }
-//   get title() {
-//     return this.getAttribute("title") ?? "默认标题";
-//   }
-// }
-// customElements.define("ConfirmDialog", ConfirmDialog);
