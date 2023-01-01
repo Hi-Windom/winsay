@@ -1,3 +1,29 @@
+@keyframes breath-iconRiffCard {
+  0% {
+    filter: none;
+    scale: 1;
+  }
+
+  100% {
+    filter: invert(1) brightness(1.03) blur(1.31px);
+    scale: 1.31;
+  }
+}
+
+@keyframes rotate-cycle {
+  0% {
+    rotate: 0deg;
+  }
+
+  50% {
+    rotate: 180deg;
+  }
+
+  100% {
+    rotate: 360deg;
+  }
+}
+
 @keyframes menu {
   0% {
     opacity: 0.13;
@@ -198,10 +224,12 @@
 #layouts>.fn__flex>.fn__flex-column:has(span[data-type="focus"])>.fn__none:not(.layout__resize)>div[data-type=wnd] {
   transition: all .24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }
+
 /*侧栏（不包括文档树）展开动画*/
 #layouts div[data-type="wnd"]>.layout-tab-container>.fn__flex-column:not(:has(span[data-type="focus"])):has(li:nth-child(100)) ul:has(ul) {
   animation: tree-list .2s ease-in;
 }
+
 @media screen and (min-width: 1300px) {
   #layouts div[data-type="wnd"]>.layout-tab-container>.fn__flex-column:not(:has(span[data-type="focus"])):not(:has(li:nth-child(100))) {
     animation: flex-column-y-longer 0.58s cubic-bezier(0.37, -0.02, 0.54, 1.09);

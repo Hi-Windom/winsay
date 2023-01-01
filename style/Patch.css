@@ -1,5 +1,16 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
+#menuCard>svg {
+  animation: breath-iconRiffCard .58s linear .13s infinite alternate;
+}
+
+#menuSyncNow>svg, /* 手机端还不支持 rotate 属性 */
+#SC_winsay_cp_system__Refresh:hover>svg,
+#SC_winsay_cp__checkUpdateBtn:hover>svg,
+#checkUpdateBtn:hover>svg {
+  animation: rotate-cycle 5.86s cubic-bezier(0.68, -5, 0.31, 8) infinite;
+}
+
 .block__popover:has(>.block__icons>[data-type="close"]:hover) {
   background-color: transparent !important;
   backdrop-filter: blur(0.31px) brightness(.96);
