@@ -165,3 +165,41 @@ body.body--mobile .protyle-linenumber__rows {
 body.body--mobile .protyle-linenumber {
   margin-left: 1.3em;
 }
+
+body.body--mobile #searchPanel>.ft__smaller {
+  color: var(--b3-theme-primary);
+  filter: sepia(1);
+}
+
+body.body--mobile #searchPanel>.b3-list-item--two>.b3-list-item__first {
+  border-top: 1px dashed #858585a5;
+  margin-top: 1.3px;
+  padding-top: 3.1px;
+}
+
+body.body--mobile #searchPanel>.b3-list-item--two>.b3-list-item__meta {
+  line-height: 1.31em;
+  filter: brightness(0.58);
+  letter-spacing: .31px;
+  margin-left: 1.86em;
+}
+
+body.body--mobile #searchPanel>.b3-list-item--two>.b3-list-item__first>.b3-list-item__text {
+  -webkit-line-clamp: 3;
+  line-height: 1.6em;
+  letter-spacing: .31px;
+}
+
+body.body--mobile #searchPanel>.b3-list-item--two>.b3-list-item__first>.b3-list-item__text>mark {
+  font-size: 105%;
+  font-weight: 300;
+  padding: 1.3px 2px;
+  margin: 0 1.3px;
+  border-radius: 9px 13px 9px 13px;
+  filter: brightness(0.8);
+}
+
+body.body--mobile #searchPanel>.b3-list-item--two>div.b3-list-item__first>.b3-list-item__graphic {
+  opacity: .58;
+  filter: brightness(.58) sepia(.58);
+}
