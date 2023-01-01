@@ -143,7 +143,10 @@ Sofill- 主题形态一览表 ✨
 12. [取消压缩 CustomBoot.js · Issue #780 · v1.2](https://github.com/Hi-Windom/winsay/issues/780)
 13. [优化安卓手机端viewer-container · Issue #778 · v1.2](https://github.com/Hi-Windom/winsay/issues/778)
 14. [优化安卓Pad端文档树自适应显示效果 · Issue #783 · v1.2](https://github.com/Hi-Windom/winsay/issues/783)
-15. [只读模式图标高亮支持安卓手机端 · Issue #787 · v1.3](https://github.com/Hi-Windom/winsay/issues/787)
+15. [只读模式图标高亮支持安卓手机端 · Issue #787 · v1.3.1](https://github.com/Hi-Windom/winsay/issues/787)
+16. [支持通过主题设置界面开关移动端悬浮球 · Issue #781 · v1.3.2](https://github.com/Hi-Windom/winsay/issues/781)
+17. [改善桌面端伺服移动端界面的兼容性 · Issue #789 · v1.3.2](https://github.com/Hi-Windom/winsay/issues/789)
+18. [优化安卓手机端搜索界面 · Issue #791 · v1.3.2](https://github.com/Hi-Windom/winsay/issues/791)
 
 修复缺陷：
 
@@ -151,6 +154,7 @@ Sofill- 主题形态一览表 ✨
 2. [手机端代码行号错乱 · Issue #768 · v1.2](https://github.com/Hi-Windom/winsay/issues/768)
 3. [安卓手机端ConfirmDialog重复创建 · Issue #782 · v1.2](https://github.com/Hi-Windom/winsay/issues/782)
 4. [viewer-list显示异常 · Issue #785 · v1.2](https://github.com/Hi-Windom/winsay/issues/785)
+5. [导入配置数据主题设置项HTML标签错误 · Issue #790 · v1.3.2](https://github.com/Hi-Windom/winsay/issues/790)
 
 ## 🎈 鸣谢
 
