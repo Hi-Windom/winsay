@@ -242,9 +242,11 @@ async function checkUpdateViaGithub(v, q) {
         maskable: true,
       });
       await updating.open(() => {
+        var reg = /(http:\/\/|https:\/\/)((\w|=|\?|\.|\/|&|-)+)/g;
+        var urlText = response["body"].replace(reg, "<a href='$1$2'>$1$2</a>");
         document.getElementById(
           "UpdateInfo"
-        ).innerHTML = `${v} => ${version}<br><span class="fn__space"></span><pre class="b3-typography" style="max-height: 288px;">${response["body"]}</pre>`;
+        ).innerHTML = `${v} > ${version}<br><span class="fn__space"></span><div class="b3-typography" style="max-height: 250px;white-space: break-spaces;word-break: break-all;overflow: auto;">${urlText}</div>`;
         document.getElementById(
           "CoverWarming"
         ).innerHTML = `下载链接能否访问取决于你的网络`;
