@@ -123,6 +123,7 @@ body.body--mobile #menu .b3-list-item--big .b3-list-item__graphic {
 body.body--mobile #menu .b3-list-item--big .b3-list-item__graphic,
 body.body--mobile #menu .b3-list-item--big .b3-list-item__text {
   align-self: center;
+  display: flex;
 }
 
 body.body--mobile #menu>#menuNewNotebook {
@@ -202,4 +203,8 @@ body.body--mobile #searchPanel>.b3-list-item--two>.b3-list-item__first>.b3-list-
 body.body--mobile #searchPanel>.b3-list-item--two>div.b3-list-item__first>.b3-list-item__graphic {
   opacity: .58;
   filter: brightness(.58) sepia(.58);
+}
+
+#sidebar .toolbar {
+  backdrop-filter: sepia(.58) brightness(58);
 }
