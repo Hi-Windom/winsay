@@ -148,6 +148,7 @@ Sofill- 主题形态一览表 ✨
 17. [改善桌面端伺服移动端界面的兼容性 · Issue #789 · v1.3.2](https://github.com/Hi-Windom/winsay/issues/789)
 18. [优化安卓手机端搜索界面 · Issue #791 · v1.3.2](https://github.com/Hi-Windom/winsay/issues/791)
 19. [主题弹窗细节优化 · Issue #793 · v1.3.3](https://github.com/Hi-Windom/winsay/issues/793)
+20. [部分图标视效增强（主要是手机端） · Issue #799 · v1.3.4](https://github.com/Hi-Windom/winsay/issues/799)
 
 修复缺陷：
 
