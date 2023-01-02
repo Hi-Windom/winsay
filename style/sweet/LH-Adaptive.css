@@ -1,8 +1,8 @@
-div.protyle-wysiwyg.protyle-wysiwyg--attr>div.p {
-  text-indent: 0rem;
-  line-height: 1.5rem;
-  margin-top: 0rem;
-  margin-bottom: 0rem;
+body:not(.body--mobile) .protyle-wysiwyg.protyle-wysiwyg--attr>div.p {
+  text-indent: 0em;
+  line-height: 1.5em;
+  margin-top: 0em;
+  margin-bottom: 0em;
   letter-spacing: 0px;
 }
 /* 宽度不足时显示更多文档文字 #223 */
@@ -11,7 +11,7 @@ div.protyle-wysiwyg.protyle-wysiwyg--attr>div.p {
   p,
   div.p,
   tr {
-    line-height: 1.31 !important;
+    line-height: 1.31em !important;
     padding: 3px !important;
     margin: 1px 0 !important;
     letter-spacing: 0px;
@@ -27,7 +27,7 @@ div.protyle-wysiwyg.protyle-wysiwyg--attr>div.p {
   p,
   div.p,
   tr {
-    line-height: 1.58 !important;
+    line-height: 1.58em !important;
     padding: 4px !important;
     margin: 4px 0 !important;
     letter-spacing: 0.13px;

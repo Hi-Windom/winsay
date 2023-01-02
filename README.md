@@ -127,6 +127,7 @@ Sofill- 主题形态一览表 ✨
 5. [移动端悬浮球 · Issue #753 · v1.2](https://github.com/Hi-Windom/winsay/issues/753)
 6. [block__popover浮窗支持聚焦穿透 · Issue #784 · v1.2](https://github.com/Hi-Windom/winsay/issues/784)
 7. [安卓手机端支持通过主题设置面板调节凯恩斯不透明度 · Issue #801 · v1.3.5](https://github.com/Hi-Windom/winsay/issues/801)
+8. [安卓手机端只读模式支持缩放文档 · Issue #804 · v1.3.6](https://github.com/Hi-Windom/winsay/issues/804)
 
 改进优化：
 
@@ -150,6 +151,7 @@ Sofill- 主题形态一览表 ✨
 18. [优化安卓手机端搜索界面 · Issue #791 · v1.3.2](https://github.com/Hi-Windom/winsay/issues/791)
 19. [主题弹窗细节优化 · Issue #793 · v1.3.3](https://github.com/Hi-Windom/winsay/issues/793)
 20. [部分图标视效增强（主要是手机端） · Issue #799 · v1.3.4](https://github.com/Hi-Windom/winsay/issues/799)
+21. [安卓手机端悬浮球支持双击事件 · Issue #805 · v1.3.6](https://github.com/Hi-Windom/winsay/issues/805)
 
 修复缺陷：
 
@@ -158,6 +160,7 @@ Sofill- 主题形态一览表 ✨
 3. [安卓手机端ConfirmDialog重复创建 · Issue #782 · v1.2](https://github.com/Hi-Windom/winsay/issues/782)
 4. [viewer-list显示异常 · Issue #785 · v1.2](https://github.com/Hi-Windom/winsay/issues/785)
 5. [导入配置数据主题设置项HTML标签错误 · Issue #790 · v1.3.2](https://github.com/Hi-Windom/winsay/issues/790)
+6. [安卓手机端超大字号文字重叠 · Issue #803 · v1.3.6](https://github.com/Hi-Windom/winsay/issues/803)
 
 ## 🎈 鸣谢
 
