@@ -213,3 +213,7 @@ body.body--mobile .toolbar__icon,
 body.body--mobile .b3-list-item__graphic {
   filter: drop-shadow(-2px 2px 2px #13131329);
 }
+
+body.body--mobile .fn__flex-center {
+  display: contents;
+}
