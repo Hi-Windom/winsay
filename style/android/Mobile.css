@@ -202,18 +202,21 @@ body.body--mobile #searchPanel>.b3-list-item--two>.b3-list-item__first>.b3-list-
 
 body.body--mobile #searchPanel>.b3-list-item--two>div.b3-list-item__first>.b3-list-item__graphic {
   opacity: .58;
-  filter: brightness(.58) sepia(.58);
 }
 
 body.body--mobile #sidebar .toolbar {
   backdrop-filter: sepia(.58) brightness(58);
 }
 
+body.body--mobile .b3-menu__icon,
 body.body--mobile .toolbar__icon,
-body.body--mobile .b3-list-item__graphic {
+body.body--mobile .b3-list-item__graphic,
+body.body--mobile .protyle-breadcrumb__arrow,
+body.body--mobile .b3-list-item__arrow,
+body.body--mobile .b3-list-item__action>svg {
   filter: drop-shadow(-2px 2px 2px #13131329);
 }
 
-body.body--mobile .fn__flex-center {
+body.body--mobile .custom-attr .fn__flex-center {
   display: contents;
 }
