@@ -1459,6 +1459,21 @@ async function CP_EditorMonitor() {
     }
   );
   API.checkedChange(
+    document.getElementById("SC_winsay_cp_editor__FocusEnhanc_DocNameArea"),
+    () => {
+      window.sofill.funs.updateStyle(
+        "FocusEnhanc_DocNameArea",
+        `/appearance/themes/Sofill-/style/sweet/sugar/editor/MI-Dynamic.css`
+      );
+    },
+    () => {
+      API.removejscssfile(
+        `${config.winsay_ROOT}style/sweet/sugar/editor/MI-Dynamic.css`,
+        "css"
+      );
+    }
+  );
+  API.checkedChange(
     document.getElementById(
       "SC_winsay_cp_editor__FocusEnhanc_BlockHoverShadow"
     ),

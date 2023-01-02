@@ -1,9 +1,0 @@
-#layouts>div.fn__flex.fn__flex-1 div.layout-tab-container.fn__flex-1 div.protyle-content>div.protyle-title.protyle-wysiwyg--attr #doc-underline {
-    transition-delay: 0.1s !important;
-    transition-duration: 1.31s !important;
-}
-
-#layouts>div.fn__flex.fn__flex-1 div.layout-tab-container.fn__flex-1 div.protyle-content>div.protyle-title.protyle-wysiwyg--attr:hover #doc-underline {
-    opacity: 1 !important;
-    transition-duration: .58s !important;
-}

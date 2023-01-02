@@ -158,6 +158,8 @@ Sofill- 主题形态一览表 ✨
 24. [安卓手机端主题设置不显示禁用文档树修改图标选项 · Issue #816 · v1.3.11](https://github.com/Hi-Windom/winsay/issues/816)
 25. [优化安卓手机端 emoji 面板 · Issue #817 · v1.3.11](https://github.com/Hi-Windom/winsay/issues/817)
 26. [安卓手机端文档属性界面优化 · Issue #819 · v1.3.12](https://github.com/Hi-Windom/winsay/issues/819)
+27. [文档名区域状态提示支持通过主题设置界面开关 · Issue #823 · v1.3.14](https://github.com/Hi-Windom/winsay/issues/823)
+28. [各种块的悬停阴影加入表格元素 · Issue #822 · v1.3.14](https://github.com/Hi-Windom/winsay/issues/822)
 
 修复缺陷：
 

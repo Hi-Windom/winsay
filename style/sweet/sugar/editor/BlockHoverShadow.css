@@ -21,3 +21,8 @@
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   background-color: var(--SCC-Variables-IMG-bg-color_hover);
 }
+
+/* 表格元素 */
+.b3-typography table tr th:hover, .protyle-wysiwyg table tr th:hover, .b3-typography table tr td:hover, .protyle-wysiwyg table tr td:hover {
+  box-shadow: 0 0 0 1px var(--b3-theme-secondary) inset !important;
+}
