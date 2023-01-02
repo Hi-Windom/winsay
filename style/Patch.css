@@ -8,7 +8,8 @@
   animation: breath-iconRiffCard .58s linear .13s infinite alternate;
 }
 
-#menuSyncNow>svg, /* 手机端还不支持 rotate 属性，暂时作为伺服手机界面的彩蛋保留 */
+#menuSyncNow>svg,
+/* 手机端还不支持 rotate 属性，暂时作为伺服手机界面的彩蛋保留 */
 #SC_winsay_cp_system__Refresh:hover>svg,
 #SC_winsay_cp__checkUpdateBtn:hover>svg,
 #checkUpdateBtn:hover>svg {
@@ -57,10 +58,21 @@
 }
 
 /* 添加 emoji 面板样式 #728 */
-.emojis {
+body:not(body--mobile) .emojis {
   height: clamp(200px, 58vh, 500px) !important;
   max-height: unset !important;
   width: clamp(200px, 58vw, 510px) !important;
+}
+
+body.body--mobile .emojis {
+  height: clamp(200px, 70vh, 500px) !important;
+  max-height: unset !important;
+  width: clamp(200px, 90vw, 500px) !important;
+}
+
+body.body--mobile .emojis .block__icon svg {
+  height: 18px;
+  width: 18px;
 }
 
 .emojis__panel .emojis__content button.emojis__item {
