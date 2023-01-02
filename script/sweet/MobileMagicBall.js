@@ -36,7 +36,7 @@ class PinchZoom {
       "panleft panright panup pandown tap press pdoubletap pan pinch panend pinchend",
       function (ev) {
         console.log(ev.type + " gesture detected.");
-        if (elm.childNodes[1].getAttribute("contenteditable")=='true') {
+        if (elm.childNodes[1].getAttribute("contenteditable") == "true") {
           elm.style.transform = "";
           return;
         }
@@ -120,16 +120,24 @@ class PinchZoom {
 }
 setTimeout(() => {
   ball.style.visibility = "visible";
-  var hammertime = new Hammer(ball);
-  hammertime.on("tap", function (ev) {
-    console.log(ev); //输出拖移事件对象 alert("单击事件");
-    let id = API.getFocusedDocID();
-    API.通知(id);
-  });
-  hammertime.on("press", function (ev) {
-    console.log(ev); //输出拖移事件对象 alert("按压事件");
-    window.location.reload();
-  });
+  var hammertime = new Hammer.Manager(ball);
+  hammertime.add(new Hammer.Press());
+  hammertime.add(new Hammer.Tap({ event: "doubletap", taps: 2 }));
+  hammertime.add(new Hammer.Tap({ event: "singletap" }));
+  hammertime.get("doubletap").recognizeWith("singletap");
+  hammertime.get("singletap").requireFailure("doubletap");
+  hammertime
+    .on("doubletap", function (ev) {
+      API.通知("双击事件");
+    })
+    .on("singletap", function (ev) {
+      let id = API.getFocusedDocID();
+      API.通知(id);
+    })
+    .on("press", function (ev) {
+      console.log(ev); //输出拖移事件对象 alert("按压事件");
+      window.location.reload();
+    });
   var elm = document.querySelector("#editor>.protyle-content");
   PinchZoom.hammerIt(elm);
 }, 1000);
