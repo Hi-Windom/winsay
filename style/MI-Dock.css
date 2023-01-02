@@ -4,7 +4,7 @@ body.android #barDebug {
     line-height: 13px;
 }
 
-body:not(.android) #barHelp > div >button {
+body:not(.android) #barHelp>div>button {
     line-height: 44px;
 }
 
@@ -17,12 +17,21 @@ body:not(.android) #barDock>div.b3-menu>.b3-menu__item {
     padding: 8px 16px 3px 8px;
 }
 
+#barHelp span.b3-menu__label,
 #barDock>div.b3-menu>.b3-menu__item .b3-menu__label {
     letter-spacing: .58px;
     font-size: 120%;
     line-height: 2.5;
     opacity: .6;
     height: 100%;
+}
+
+#barHelp .b3-menu__item svg,
+#barDock svg {
+    opacity: .58;
+    scale: 1.13 !important;
+    margin-left: 2px;
+    margin-right: 22px;
 }
 
 body.android #barDock>div.b3-menu {
@@ -48,4 +57,4 @@ body.android #barDock>div.b3-menu>.b3-menu__item .b3-menu__label {
     border: var(--SCC-Component-Counter-border);
     opacity: 0.58;
     backdrop-filter: brightness(0.58);
-  }
+}

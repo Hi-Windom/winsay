@@ -10,16 +10,27 @@ if (API.isAppMode()) {
   path = require("path");
 }
 
-var localVersion = "0.0.0";
+window.sofill.localVersion = {};
+window.sofill.localVersion.version = '';
+window.sofill.localVersion.useBazaar = '';
+window.sofill.localVersion.useGithub = '';
+window.sofill.localVersion.vinfoHTML = '';
 
 // 声明计时器/定时器
 var It_DocWidthMode = null;
 var It_SelfProtector = null;
 var It_filterTimer = null;
 
-if (localStorage.getItem("SC_winsay_cp_search__about_checkAPI") == "Bazaar") {
-  localVersion = window.siyuan.config.appearance.themeVer; // 简单省事,但是本地覆盖版本号不会生效
-} else {
+
+function switchlocalVersion() {
+  if (localStorage.getItem("SC_winsay_cp_search__about_checkAPI") == "Bazaar") {
+    return window.sofill.localVersion.useBazaar; // 简单省事,但是本地覆盖版本号不会生效
+  } else {
+    return window.sofill.localVersion.useGithub;
+  }
+}
+
+function getlocalVersion() {
   new Promise(function (response) {
     var url = `http://127.0.0.1:6806/api/file/getFile`;
     var httpRequest = new XMLHttpRequest();
@@ -38,7 +49,19 @@ if (localStorage.getItem("SC_winsay_cp_search__about_checkAPI") == "Bazaar") {
       }
     };
   }).then(function (response) {
-    localVersion = response.version;
+    window.sofill.localVersion.useGithub = response.version;
+    window.sofill.localVersion.useBazaar = window.siyuan.config.appearance.themeVer;
+    window.sofill.localVersion.version = switchlocalVersion();
+    window.sofill.localVersion.vinfoHTML = `当前版本 v<span>${window.sofill.localVersion.version}</span>
+    <div class="b3-label__text"><a href="https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md" target="_blank">浏览更新历史</a></div>`;
+    setTimeout(()=>{
+      document.getElementById(
+        "sc-custom-container-placehold"
+      ).children[0].innerHTML = `${config.ThemeName} v${window.sofill.localVersion.version} CP`;
+      document.getElementById(
+        "SC_winsay_cp_version"
+      ).innerHTML = window.sofill.localVersion.vinfoHTML;
+    }, 100)
   });
 }
 
@@ -67,13 +90,7 @@ if (config.clientMode == "body--mobile") {
       .querySelector("#Sofill-CDUI-1")
       .addEventListener("click", (event) => {
         dialog.open();
-        document.getElementById(
-          "sc-custom-container-placehold"
-        ).children[0].innerHTML = `${config.ThemeName} v${localVersion} CP`;
-        document.getElementById(
-          "SC_winsay_cp_version"
-        ).innerHTML = `当前版本 v${localVersion}
-      <div class="b3-label__text"><a href="https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md" target="_blank">浏览更新历史</a></div>`;
+        getlocalVersion();
         event.stopPropagation();
       });
     document.querySelector("#toolbarMore").addEventListener("click", (e) => {
@@ -83,13 +100,7 @@ if (config.clientMode == "body--mobile") {
           .querySelector("#Sofill-CDUI-2")
           .addEventListener("click", (event) => {
             dialog.open();
-            document.getElementById(
-              "sc-custom-container-placehold"
-            ).children[0].innerHTML = `${config.ThemeName} v${localVersion} CP`;
-            document.getElementById(
-              "SC_winsay_cp_version"
-            ).innerHTML = `当前版本 v${localVersion}
-      <div class="b3-label__text"><a href="https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md" target="_blank">浏览更新历史</a></div>`;
+            getlocalVersion();
             // event.stopPropagation();
           });
       }, 100);
@@ -163,13 +174,7 @@ if (config.clientMode == "body--mobile") {
     });
     document.querySelector("#Sofill-CDUI-1").onclick = function () {
       dialog.open();
-      document.getElementById(
-        "sc-custom-container-placehold"
-      ).children[0].innerHTML = `${config.ThemeName} v${localVersion} CP`;
-      document.getElementById(
-        "SC_winsay_cp_version"
-      ).innerHTML = `当前版本 v${localVersion}
-      <div class="b3-label__text"><a href="https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md" target="_blank">浏览更新历史</a></div>`;
+      getlocalVersion();
       document
         .getElementById("sofill_preview")
         .setAttribute("src", `${config.THEME_ROOT}preview.png`);
@@ -304,12 +309,13 @@ async function updateTheme(themeName) {
 
 async function checkUpdate(q = false) {
   let mode = localStorage.getItem("SC_winsay_cp_search__about_checkAPI");
+  let v = switchlocalVersion();
   switch (mode) {
     case "Github":
-      await checkUpdateViaGithub(localVersion, q);
+      await checkUpdateViaGithub(v, q);
       break;
     default:
-      await checkUpdateViaBazaar(localVersion, q);
+      await checkUpdateViaBazaar(v, q);
       break;
   }
 }
@@ -2644,6 +2650,13 @@ API.checkedChange(
     }
   }
 );
+API.propChange("SC_winsay_cp_search__about_checkAPI", function () {
+  var i = localStorage.getItem("SC_winsay_cp_search__about_checkAPI");
+  if (!API.isEmpty(i)) {
+    let vv = switchlocalVersion();
+    vv ? document.querySelector("#SC_winsay_cp_version > span").innerHTML = vv : null;
+  }
+});
 API.checkedChange(
   document.getElementById("SC_winsay_cp__exportData__EXT_sy_editor"),
   () => {},

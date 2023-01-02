@@ -160,6 +160,8 @@ Sofill- 主题形态一览表 ✨
 26. [安卓手机端文档属性界面优化 · Issue #819 · v1.3.12](https://github.com/Hi-Windom/winsay/issues/819)
 27. [文档名区域状态提示支持通过主题设置界面开关 · Issue #823 · v1.3.14](https://github.com/Hi-Windom/winsay/issues/823)
 28. [各种块的悬停阴影加入表格元素 · Issue #822 · v1.3.14](https://github.com/Hi-Windom/winsay/issues/822)
+29. [切换自检源后应刷新版本显示 · Issue #826 · v1.3.15](https://github.com/Hi-Windom/winsay/issues/826)
+30. [左下角浮窗与右下角浮窗增强观感一致性 · Issue #825 · v1.3.15](https://github.com/Hi-Windom/winsay/issues/825)
 
 修复缺陷：
 
