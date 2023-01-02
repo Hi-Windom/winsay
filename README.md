@@ -157,6 +157,7 @@ Sofill- 主题形态一览表 ✨
 23. [取消压缩 SSS.js · Issue #812 · v1.3.8](https://github.com/Hi-Windom/winsay/issues/812)
 24. [安卓手机端主题设置不显示禁用文档树修改图标选项 · Issue #816 · v1.3.11](https://github.com/Hi-Windom/winsay/issues/816)
 25. [优化安卓手机端 emoji 面板 · Issue #817 · v1.3.11](https://github.com/Hi-Windom/winsay/issues/817)
+26. [安卓手机端文档属性界面优化 · Issue #819 · v1.3.12](https://github.com/Hi-Windom/winsay/issues/819)
 
 修复缺陷：
 
