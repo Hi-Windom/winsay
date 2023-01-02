@@ -1652,17 +1652,16 @@ async function CP_AppearanceMonitor() {
           .style.removeProperty("background-image");
       }
     );
-  } else {
-    API.propChange("SC_winsay_cp_appearance__KeynesOpacity", function () {
-      var i = localStorage.getItem("SC_winsay_cp_appearance__KeynesOpacity");
-      if (!API.isEmpty(i)) {
-        document.documentElement.style.setProperty(
-          "--SCC-Variables-KeynesOpacity",
-          i
-        );
-      }
-    });
   }
+  API.propChange("SC_winsay_cp_appearance__KeynesOpacity", function () {
+    var i = localStorage.getItem("SC_winsay_cp_appearance__KeynesOpacity");
+    if (!API.isEmpty(i)) {
+      document.documentElement.style.setProperty(
+        "--SCC-Variables-KeynesOpacity",
+        i
+      );
+    }
+  });
   API.propChange("SC_winsay_cp_appearance__TabBarSize", function () {
     var i = localStorage.getItem("SC_winsay_cp_appearance__TabBarSize");
     if (!API.isEmpty(i)) {

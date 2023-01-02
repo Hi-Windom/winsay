@@ -1,10 +1,15 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
+#SC-CP .b3-dialog__container,
+.b3-dialog__container:has(li[data-name="editor"]){
+  opacity: var(--SCC-Variables-KeynesOpacity, 1);
+}
+
 #menuCard>svg {
   animation: breath-iconRiffCard .58s linear .13s infinite alternate;
 }
 
-#menuSyncNow>svg, /* 手机端还不支持 rotate 属性 */
+#menuSyncNow>svg, /* 手机端还不支持 rotate 属性，暂时作为伺服手机界面的彩蛋保留 */
 #SC_winsay_cp_system__Refresh:hover>svg,
 #SC_winsay_cp__checkUpdateBtn:hover>svg,
 #checkUpdateBtn:hover>svg {
