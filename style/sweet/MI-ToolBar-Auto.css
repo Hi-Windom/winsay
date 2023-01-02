@@ -145,7 +145,7 @@ body:not(.darwin):not(.android) #toolbar .toolbar__item:hover svg {
 
 @media screen and (max-width: 370px) {
 
-  #toolbar #barSetting,
+  body:not(.android) #toolbar #barSetting,
   #toolbar #barMod,
   #toolbar button {
     display: none !important;
@@ -158,7 +158,7 @@ body:not(.darwin):not(.android) #toolbar .toolbar__item:hover svg {
 }
 
 @media screen and (max-width: 222px) {
-  #toolbar *:not(#drag) {
+  body:not(.android) #toolbar *:not(#drag) {
     display: none !important;
   }
 

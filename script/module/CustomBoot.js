@@ -1,34 +1,31 @@
 import * as config from "../config.js";
 import * as API from "../utils/api.min.js";
 var fs = null;
-var oncePath = `${config.winsay_ROOT_ABS}/script/module/AlertOnce.js`
+var oncePath = `${config.winsay_ROOT_ABS}/script/module/AlertOnce.js`;
 if (API.isAppMode()) {
   fs = require("fs");
 }
 fs
-  ? fs.access(
-      oncePath,
-      function (err) {
-        if (!err) {
-          window.sofill.funs.loadScript(
-            window.sofill.funs.addURLParam(
-              "/appearance/themes/Sofill-/script/module/AlertOnce.js"
-            ),
-            undefined,
-            true
-          );
-          setTimeout(() => {
-            fs.unlink(oncePath, function (err) {
-              if (err) {
-                throw err;
-              }
-              console.log("一次性通知已销毁");
-            });
-          }, 3000);
-          return;
-        }
+  ? fs.access(oncePath, function (err) {
+      if (!err) {
+        window.sofill.funs.loadScript(
+          window.sofill.funs.addURLParam(
+            "/appearance/themes/Sofill-/script/module/AlertOnce.js"
+          ),
+          undefined,
+          true
+        );
+        setTimeout(() => {
+          fs.unlink(oncePath, function (err) {
+            if (err) {
+              throw err;
+            }
+            console.log("一次性通知已销毁");
+          });
+        }, 3000);
+        return;
       }
-    )
+    })
   : null;
 
 // 初始化获取用户配置
@@ -70,7 +67,10 @@ async function ghostTabBar() {
 
 ghostTabBar();
 
-window.sofill.funs.updateStyle("MI", `/appearance/themes/Sofill-/style/MI.min.css`);
+window.sofill.funs.updateStyle(
+  "MI",
+  `/appearance/themes/Sofill-/style/MI.min.css`
+);
 /* 根据不同设备加载样式配置文件 */
 switch (window.sofill.OS) {
   case "android":
@@ -104,12 +104,18 @@ window.sofill.funs.updateStyle(
   "Init",
   `/appearance/themes/Sofill-/style/Init.min.css`
 );
-window.sofill.funs.updateStyle("SCC", `/appearance/themes/Sofill-/style/SCC.min.css`);
+window.sofill.funs.updateStyle(
+  "SCC",
+  `/appearance/themes/Sofill-/style/SCC.min.css`
+);
 window.sofill.funs.updateStyle(
   "Popup",
   `/appearance/themes/Sofill-/style/Popup.min.css`
 );
-window.sofill.funs.updateStyle("Patch", `/appearance/themes/Sofill-/style/Patch.css`);
+window.sofill.funs.updateStyle(
+  "Patch",
+  `/appearance/themes/Sofill-/style/Patch.css`
+);
 
 window.sofill.funs.updateStyle(
   "MI-ToolBar-Auto",
@@ -145,7 +151,10 @@ window.sofill.funs.updateStyle(
 );
 
 // 根据主题加载
-window.sofill.funs.updateStyle("CP", `/appearance/themes/Sofill-/style/CP.min.css`);
+window.sofill.funs.updateStyle(
+  "CP",
+  `/appearance/themes/Sofill-/style/CP.min.css`
+);
 switch (config.ThemeName) {
   case "Sofill=":
     window.sofill.funs.updateStyle(
@@ -219,13 +228,42 @@ if (inited != "true") {
 
 if (config.clientMode == "body--mobile") {
   window.sofill.funs.loadScript(
-    window.sofill.funs.addURLParam("/appearance/themes/Sofill-/script/lib/hammer.min.js"),
+    window.sofill.funs.addURLParam(
+      "/appearance/themes/Sofill-/script/lib/hammer.min.js"
+    ),
     "module",
     true
   );
   window.sofill.funs.loadScript(
-    window.sofill.funs.addURLParam("/appearance/themes/Sofill-/script/sweet/MobileMagicBall.js"),
+    window.sofill.funs.addURLParam(
+      "/appearance/themes/Sofill-/script/sweet/MobileMagicBall.js"
+    ),
     undefined,
     true
   );
+
+  let urlParam1 = API.getUrlParam(window.location.href, "action");
+  let urlParam2 = API.getUrlParam(window.location.href, "name");
+  if (
+    document.body.classList.contains("body--mobile") &&
+    document.body.classList.contains("client--browser")
+  ) {
+    switch (urlParam1) {
+      case "updateTheme":
+        document.querySelector("#toolbar #barSetting").click();
+        document
+          .querySelector('.b3-tab-bar:not(.sc-custom-nav) [data-name="bazaar"]')
+          .click();
+        setTimeout(() => {
+          document
+            .querySelector(
+              `#configBazaarTheme [class="b3-card__actions"][data-name="${urlParam2}"]>[data-type="install-t"]`
+            )
+            .click();
+        }, 500);
+        break;
+      default:
+        break;
+    }
+  }
 }
