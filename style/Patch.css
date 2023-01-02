@@ -1,7 +1,6 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
-#SC-CP .b3-dialog__container,
-.b3-dialog__container:has(li[data-name="editor"]){
+.b3-dialog__container.b3-dialog__container.b3-dialog__container.b3-dialog__container {
   opacity: var(--SCC-Variables-KeynesOpacity, 1);
 }
 
