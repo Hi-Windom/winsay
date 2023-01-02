@@ -10,8 +10,8 @@ fs
       oncePath,
       function (err) {
         if (!err) {
-          window.funs.loadScript(
-            window.funs.addURLParam(
+          window.sofill.funs.loadScript(
+            window.sofill.funs.addURLParam(
               "/appearance/themes/Sofill-/script/module/AlertOnce.js"
             ),
             undefined,
@@ -38,7 +38,7 @@ let SC_winsay_cp_appearance__TabBarMode = localStorage.getItem(
 
 async function ghostTabBar() {
   if (!API.isEmpty(SC_winsay_cp_appearance__TabBarMode)) {
-    window.funs.updateStyle(
+    window.sofill.funs.updateStyle(
       "TabBar",
       `/appearance/themes/Sofill-/style/sweet/${SC_winsay_cp_appearance__TabBarMode}`
     );
@@ -59,7 +59,7 @@ async function ghostTabBar() {
         }
       };
     }).then(function (response) {
-      window.funs.updateStyle(
+      window.sofill.funs.updateStyle(
         "TabBar",
         `/appearance/themes/Sofill-/style/sweet/${response.style.TabBar}`
       );
@@ -70,29 +70,29 @@ async function ghostTabBar() {
 
 ghostTabBar();
 
-window.funs.updateStyle("MI", `/appearance/themes/Sofill-/style/MI.min.css`);
+window.sofill.funs.updateStyle("MI", `/appearance/themes/Sofill-/style/MI.min.css`);
 /* 根据不同设备加载样式配置文件 */
-switch (window.theme.OS) {
+switch (window.sofill.OS) {
   case "android":
-    window.funs.updateStyle(
+    window.sofill.funs.updateStyle(
       "MI-DocTree",
       `/appearance/themes/Sofill-/style/MI-DocTree.css`
     );
-    window.funs.updateStyle(
+    window.sofill.funs.updateStyle(
       "MI-Doc&Breadcrumb",
       `/appearance/themes/Sofill-/style/MI-Doc.css`
     );
-    window.funs.updateStyle(
+    window.sofill.funs.updateStyle(
       "Mobile",
       `/appearance/themes/Sofill-/style/android/Mobile.css`
     );
     break;
   default:
-    window.funs.updateStyle(
+    window.sofill.funs.updateStyle(
       "MI-DocTree",
       `/appearance/themes/Sofill-/style/MI-DocTree.css`
     );
-    window.funs.updateStyle(
+    window.sofill.funs.updateStyle(
       "MI-Doc&Breadcrumb",
       `/appearance/themes/Sofill-/style/MI-Doc.css`
     );
@@ -100,62 +100,62 @@ switch (window.theme.OS) {
 }
 
 // 改善开启自定义主题的体验
-window.funs.updateStyle(
+window.sofill.funs.updateStyle(
   "Init",
   `/appearance/themes/Sofill-/style/Init.min.css`
 );
-window.funs.updateStyle("SCC", `/appearance/themes/Sofill-/style/SCC.min.css`);
-window.funs.updateStyle(
+window.sofill.funs.updateStyle("SCC", `/appearance/themes/Sofill-/style/SCC.min.css`);
+window.sofill.funs.updateStyle(
   "Popup",
   `/appearance/themes/Sofill-/style/Popup.min.css`
 );
-window.funs.updateStyle("Patch", `/appearance/themes/Sofill-/style/Patch.css`);
+window.sofill.funs.updateStyle("Patch", `/appearance/themes/Sofill-/style/Patch.css`);
 
-window.funs.updateStyle(
+window.sofill.funs.updateStyle(
   "MI-ToolBar-Auto",
   `/appearance/themes/Sofill-/style/sweet/MI-ToolBar-Auto.css`
 );
-window.funs.updateStyle(
+window.sofill.funs.updateStyle(
   "MI-TabBar-Common",
   `/appearance/themes/Sofill-/style/MI-TabBar-Common.css`
 );
-window.funs.updateStyle(
+window.sofill.funs.updateStyle(
   "MI-TagTree",
   `/appearance/themes/Sofill-/style/MI-TagTree.css`
 );
-window.funs.updateStyle(
+window.sofill.funs.updateStyle(
   "MI-HDTree",
   `/appearance/themes/Sofill-/style/MI-HDTree.css`
 );
-window.funs.updateStyle(
+window.sofill.funs.updateStyle(
   "MI-Dock",
   `/appearance/themes/Sofill-/style/MI-Dock.css`
 );
-window.funs.updateStyle(
+window.sofill.funs.updateStyle(
   "MI-Dynamic",
   `/appearance/themes/Sofill-/style/MI-Dynamic.css`
 );
-window.funs.updateStyle(
+window.sofill.funs.updateStyle(
   "Funs-list2",
   `/appearance/themes/Sofill-/style/Funs-list2.min.css`
 );
-window.funs.updateStyle(
+window.sofill.funs.updateStyle(
   "Funs-ScrollView",
   `/appearance/themes/Sofill-/style/Funs-ScrollView.css`
 );
 
 // 根据主题加载
-window.funs.updateStyle("CP", `/appearance/themes/Sofill-/style/CP.min.css`);
+window.sofill.funs.updateStyle("CP", `/appearance/themes/Sofill-/style/CP.min.css`);
 switch (config.ThemeName) {
   case "Sofill=":
-    window.funs.updateStyle(
+    window.sofill.funs.updateStyle(
       "CP-lili",
       `/appearance/themes/Sofill=/style/CP-lili.css`
     );
     break;
   case "Sofill-":
   default:
-    window.funs.updateStyle(
+    window.sofill.funs.updateStyle(
       "CP-winsay",
       `/appearance/themes/Sofill-/style/CP-winsay.css`
     );
@@ -218,13 +218,13 @@ if (inited != "true") {
 }
 
 if (config.clientMode == "body--mobile") {
-  window.funs.loadScript(
-    window.funs.addURLParam("/appearance/themes/Sofill-/script/lib/hammer.min.js"),
+  window.sofill.funs.loadScript(
+    window.sofill.funs.addURLParam("/appearance/themes/Sofill-/script/lib/hammer.min.js"),
     "module",
     true
   );
-  window.funs.loadScript(
-    window.funs.addURLParam("/appearance/themes/Sofill-/script/sweet/MobileMagicBall.js"),
+  window.sofill.funs.loadScript(
+    window.sofill.funs.addURLParam("/appearance/themes/Sofill-/script/sweet/MobileMagicBall.js"),
     undefined,
     true
   );

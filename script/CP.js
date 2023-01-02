@@ -865,14 +865,14 @@ async function CP_EditorMonitor() {
               "--SCC-Variables-BlockList__beforeColor",
               "var(--b3-theme-background-light)"
             );
-            window.funs.updateStyle("BlockListHoverALL", ``);
+            window.sofill.funs.updateStyle("BlockListHoverALL", ``);
             break;
           case "2":
             document.documentElement.style.setProperty(
               "--SCC-Variables-BlockList__beforeColor",
               "var(--b3-theme-background-light)"
             );
-            window.funs.updateStyle(
+            window.sofill.funs.updateStyle(
               "BlockListHoverALL",
               `/appearance/themes/Sofill-/style/sweet/sugar/editor/Block-List-HoverALL.css`
             );
@@ -906,7 +906,7 @@ async function CP_EditorMonitor() {
         "SC_winsay_cp_editor__layout-center_protyle-toolbar_position"
       );
       var j = API.isEmpty(i) ? "" : i;
-      window.funs.updateStyle(
+      window.sofill.funs.updateStyle(
         "layout-center_protyle-toolbar_position",
         `/appearance/themes/Sofill-/style/sweet/sugar/editor/${j}`
       );
@@ -1069,7 +1069,7 @@ async function CP_EditorMonitor() {
   API.checkedChange(
     document.getElementById("SC_winsay_cp_editor__HintHint-index"),
     () => {
-      window.funs.updateStyle(
+      window.sofill.funs.updateStyle(
         "HintHint-index",
         `/appearance/themes/Sofill-/style/sweet/sugar/editor/HintHint-index.css`
       );
@@ -1084,7 +1084,7 @@ async function CP_EditorMonitor() {
   API.checkedChange(
     document.getElementById("SC_winsay_cp_editor__LH_Adaptive"),
     () => {
-      window.funs.updateStyle(
+      window.sofill.funs.updateStyle(
         "LH_Adaptive",
         `/appearance/themes/Sofill-/style/sweet/LH-Adaptive.css`
       );
@@ -1105,7 +1105,7 @@ async function CP_EditorMonitor() {
   API.checkedChange(
     document.getElementById("SC_winsay_cp_editor__BreadcrumbsMode-Adaptive"),
     () => {
-      window.funs.updateStyle(
+      window.sofill.funs.updateStyle(
         "docBreadcrumb_Adaptive",
         `/appearance/themes/Sofill-/style/sweet/MI-Breadcrumb-Adaptive.css`
       );
@@ -1120,7 +1120,7 @@ async function CP_EditorMonitor() {
   API.checkedChange(
     document.getElementById("SC_winsay_cp_editor__AreoBg-Filter"),
     () => {
-      window.funs.updateStyle(
+      window.sofill.funs.updateStyle(
         "AreoBg-Filter",
         `/appearance/themes/Sofill-/style/sweet/AreoBg-Filter.css`
       );
@@ -1238,7 +1238,7 @@ async function CP_EditorMonitor() {
       switch (o) {
         case "0.88":
           s
-            ? window.funs.updateStyle(
+            ? window.sofill.funs.updateStyle(
                 "Android-mobile-BlockScrollBarShow",
                 `/appearance/themes/Sofill-/style/sweet/sugar/editor/Android-mobile-BlockScrollBarFocusShow.css`
               )
@@ -1249,7 +1249,7 @@ async function CP_EditorMonitor() {
           break;
         case "1":
           s
-            ? window.funs.updateStyle(
+            ? window.sofill.funs.updateStyle(
                 "Android-mobile-BlockScrollBarShow",
                 `/appearance/themes/Sofill-/style/sweet/sugar/editor/Android-mobile-BlockScrollBarAlwaysShow.css`
               )
@@ -1421,6 +1421,15 @@ async function CP_EditorMonitor() {
     }
   );
   API.checkedChange(
+    document.getElementById("SC_winsay_cp_editor__TapAlert_docReadOnly"),
+    () => {
+      window.sofill.cp.TapAlert_docReadOnly = true;
+    },
+    () => {
+      window.sofill.cp.TapAlert_docReadOnly = false;
+    }
+  );
+  API.checkedChange(
     document.getElementById("SC_winsay_cp_editor__FocusEnhanc_refWave"),
     () => {
       document.documentElement.style.setProperty(
@@ -1437,7 +1446,7 @@ async function CP_EditorMonitor() {
   API.checkedChange(
     document.getElementById("SC_winsay_cp_editor__FocusEnhanc_NodeHeading"),
     () => {
-      window.funs.updateStyle(
+      window.sofill.funs.updateStyle(
         "FocusEnhanc_NodeHeading",
         `/appearance/themes/Sofill-/style/sweet/sugar/editor/NodeHeading-FocusEnhanc.css`
       );
@@ -1454,7 +1463,7 @@ async function CP_EditorMonitor() {
       "SC_winsay_cp_editor__FocusEnhanc_BlockHoverShadow"
     ),
     () => {
-      window.funs.updateStyle(
+      window.sofill.funs.updateStyle(
         "FocusEnhanc_BlockHoverShadow",
         `/appearance/themes/Sofill-/style/sweet/sugar/editor/BlockHoverShadow.css`
       );
@@ -1471,7 +1480,7 @@ async function CP_EditorMonitor() {
       "SC_winsay_cp_editor__FocusEnhanc_SearchInputShadow"
     ),
     () => {
-      window.funs.updateStyle(
+      window.sofill.funs.updateStyle(
         "SearchInputShadow",
         `/appearance/themes/Sofill-/style/sweet/sugar/editor/SearchInputShadow.css`
       );
@@ -1486,7 +1495,7 @@ async function CP_EditorMonitor() {
   API.checkedChange(
     document.getElementById("SC_winsay_cp_editor__NodeHeadingFoldedShadow"),
     () => {
-      window.funs.updateStyle(
+      window.sofill.funs.updateStyle(
         "NodeHeadingFoldedShadow",
         `/appearance/themes/Sofill-/style/sweet/sugar/editor/NodeHeading-foldedShadow.css`
       );
@@ -1515,8 +1524,8 @@ async function CP_EditorMonitor() {
   API.checkedChange(
     document.getElementById("SC_winsay_cp_editor__showDocCreatedDate"),
     () => {
-      window.funs.loadScript(
-        window.funs.addURLParam(
+      window.sofill.funs.loadScript(
+        window.sofill.funs.addURLParam(
           "/appearance/themes/Sofill-/script/sweet/sugar/ShowDocCreatedDate.js"
         ),
         undefined,
@@ -1782,7 +1791,7 @@ async function CP_AppearanceMonitor() {
   API.propChange("SC_winsay_cp_appearance__TabBarMode", function () {
     var i = localStorage.getItem("SC_winsay_cp_appearance__TabBarMode");
     var j = API.isEmpty(i) ? "MI-TabBar-D.css" : i;
-    window.funs.updateStyle(
+    window.sofill.funs.updateStyle(
       "TabBar",
       `/appearance/themes/Sofill-/style/sweet/${j}`
     );
@@ -1975,7 +1984,7 @@ async function CP_AppearanceMonitor() {
   API.checkedChange(
     document.getElementById("SC_winsay_cp_appearance__ShowWebIcon"),
     () => {
-      window.funs.updateStyle(
+      window.sofill.funs.updateStyle(
         "ShowWebIcon",
         `/appearance/themes/Sofill-/style/link/web.css`
       );
@@ -1987,7 +1996,7 @@ async function CP_AppearanceMonitor() {
   API.checkedChange(
     document.getElementById("SC_winsay_cp_appearance__ShowFileIcon"),
     () => {
-      window.funs.updateStyle(
+      window.sofill.funs.updateStyle(
         "ShowFileIcon",
         `/appearance/themes/Sofill-/style/link/file.css`
       );
@@ -2042,7 +2051,7 @@ async function CP_AppearanceMonitor() {
       "SC_winsay_cp_appearance__SYSetting-AssetsIMG-Sticky"
     ),
     () => {
-      window.funs.updateStyle(
+      window.sofill.funs.updateStyle(
         "SYSetting-AssetsIMG-Sticky",
         `/appearance/themes/Sofill-/style/sweet/sugar/appearance/SYSetting-AssetsIMG-Sticky.css`
       );
@@ -2268,7 +2277,7 @@ API.propChange("SC_winsay_cp_custom__defaultS", function () {
   var i = localStorage.getItem("SC_winsay_cp_custom__defaultS");
   if (!API.isEmpty(i)) {
     localStorage.removeItem("SC_winsay_cp_custom__defaultS_auto");
-    if (window.funs.getThemeMode) {
+    if (window.sofill.funs.getThemeMode) {
       let writeData = `@import url("preview-base-light.css"); @import url("${i}?r=${Math.random()}");`;
       fs
         ? fs.writeFile(
@@ -2309,7 +2318,7 @@ API.propChange("SC_winsay_cp_custom__defaultS", function () {
 API.propChange("SC_winsay_cp_custom__LS", function () {
   var i = localStorage.getItem("SC_winsay_cp_custom__LS");
   if (!API.isEmpty(i)) {
-    if (window.funs.getThemeMode == "light") {
+    if (window.sofill.funs.getThemeMode == "light") {
       localStorage.setItem(config.latest_LC_ID, i);
       iterLC();
     } else if (localStorage.getItem("SC_winsay_cp_custom__defaultS_auto")) {
@@ -2336,7 +2345,7 @@ API.propChange("SC_winsay_cp_custom__LS", function () {
 });
 API.propChange("SC_winsay_cp_custom__DS", function () {
   var i = localStorage.getItem("SC_winsay_cp_custom__DS");
-  if (window.funs.getThemeMode == "dark" && !API.isEmpty(i)) {
+  if (window.sofill.funs.getThemeMode == "dark" && !API.isEmpty(i)) {
     localStorage.setItem(config.latest_DC_ID, i);
     iterDC();
   }
@@ -2347,7 +2356,7 @@ API.propChange("SC_winsay_cp_search__layout", function () {
   if (API.isEmpty(i) && document.getElementById("search__layout")) {
     document.getElementById("search__layout").remove();
   } else {
-    window.funs.updateStyle(
+    window.sofill.funs.updateStyle(
       "search__layout",
       `/appearance/themes/Sofill-/style/sweet/sugar/search/${i}`
     );
@@ -2359,7 +2368,7 @@ API.propChange("SC_winsay_cp_assets__PCards", function () {
   if (API.isEmpty(i) && document.getElementById("assets__PCards")) {
     document.getElementById("assets__PCards").remove();
   } else {
-    window.funs.updateStyle(
+    window.sofill.funs.updateStyle(
       "assets__PCards",
       `/appearance/themes/Sofill-/style/sweet/sugar/assets/${i}`
     );
@@ -2447,7 +2456,7 @@ API.checkedChange(
 API.checkedChange(
   document.getElementById("SC_winsay_cp_search__index"),
   () => {
-    window.funs.updateStyle(
+    window.sofill.funs.updateStyle(
       "search__index",
       `/appearance/themes/Sofill-/style/sweet/sugar/search/index.css`
     );
@@ -2466,7 +2475,7 @@ API.checkedChange(
     t ? t.remove() : null;
   },
   () => {
-    window.funs.updateStyle(
+    window.sofill.funs.updateStyle(
       "search__disable_tips",
       `/appearance/themes/Sofill-/style/sweet/sugar/search/tips.css`
     );
@@ -2476,7 +2485,7 @@ API.checkedChange(
 API.checkedChange(
   document.getElementById("SC_winsay_cp_filetree__Adaptive_display"),
   () => {
-    window.funs.updateStyle(
+    window.sofill.funs.updateStyle(
       "MI-DocTree-Adaptive",
       `/appearance/themes/Sofill-/style/sweet/MI-DocTree-Adaptive.css`
     );
