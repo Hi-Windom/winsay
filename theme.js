@@ -38,6 +38,7 @@ if (isAppMode) {
 }
 window.theme = {};
 window.funs = {};
+
 /**
  * 获取操作系统 'windows' 或 'darwin' (MacOS) 或 'android'
  */
@@ -170,7 +171,7 @@ window.funs.loadScript(
 setTimeout(() => {
   window.funs.loadScript(
     window.funs.addURLParam(
-      "/appearance/themes/Sofill-/script/module/SSS.min.js"
+      "/appearance/themes/Sofill-/script/module/SSS.js"
     ),
     undefined,
     true
