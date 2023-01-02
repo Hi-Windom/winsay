@@ -40,8 +40,8 @@ function AndroidChangeColor() {
   addButton.style.backgroundPosition = "left top";
   addButton.style.backgroundSize = "100%";
   addButton.addEventListener("click", (e) => {
-    const latest_color_href = window.theme.iter.next().value;
-    switch (window.funs.getThemeMode) {
+    const latest_color_href = window.sofill.iter.next().value;
+    switch (window.sofill.funs.getThemeMode) {
       case "dark":
         localStorage.setItem(config.latest_DC_ID, latest_color_href);
         localStorage.setItem("SC_winsay_cp_custom__DS", latest_color_href);
@@ -78,7 +78,7 @@ function AndroidChangeColor() {
         }
         break;
     }
-    window.funs.updateStyle(
+    window.sofill.funs.updateStyle(
       config.IDs.STYLE_COLOR,
       `${config.S2_BASE}${latest_color_href}`
     );
@@ -88,18 +88,18 @@ function iterLC() {
   let colors_href = [];
   let colorList = [];
   let latest_color_href = localStorage.getItem(config.latest_LC_ID);
-  window.theme.iter = config.Iterator(colors_href);
+  window.sofill.iter = config.Iterator(colors_href);
   if (latest_color_href) {
     colorList = config.colors;
     colorList.forEach((color) => colors_href.push(`${color}`));
     /* 加载配色文件 */
-    window.funs.updateStyle(
+    window.sofill.funs.updateStyle(
       config.IDs.STYLE_COLOR,
       `${config.S2_BASE}${latest_color_href}`
     );
     // 将迭代器调整为当前配色
     for (let i = 0; i < colorList.length; ++i) {
-      if (window.theme.iter.next().value === latest_color_href) break;
+      if (window.sofill.iter.next().value === latest_color_href) break;
     }
   } else {
     // 支持修改默认形态 #234
@@ -123,15 +123,15 @@ function iterLC() {
     }).then(function (response) {
       colorList = config.colors;
       colorList.forEach((color) => colors_href.push(`${color}`));
-      window.theme.iter = config.Iterator(colors_href);
+      window.sofill.iter = config.Iterator(colors_href);
       localStorage.setItem(config.latest_LC_ID, response.color.light);
-      window.funs.updateStyle(
+      window.sofill.funs.updateStyle(
         config.IDs.STYLE_COLOR,
         `${config.S2_BASE}${response.color.light}`
       );
       // 将迭代器调整为当前配色
       for (let i = 0; i < colorList.length; ++i) {
-        if (window.theme.iter.next().value === response.color.light) break;
+        if (window.sofill.iter.next().value === response.color.light) break;
       }
     });
   }
@@ -140,18 +140,18 @@ function iterDC() {
   let colors_href = [];
   let colorList = [];
   let latest_color_href = localStorage.getItem(config.latest_DC_ID);
-  window.theme.iter = config.Iterator2(colors_href);
+  window.sofill.iter = config.Iterator2(colors_href);
   if (latest_color_href) {
     colorList = config.colors2;
     colorList.forEach((color) => colors_href.push(`${color}`));
     /* 加载配色文件 */
-    window.funs.updateStyle(
+    window.sofill.funs.updateStyle(
       config.IDs.STYLE_COLOR,
       `${config.S2_BASE}${latest_color_href}`
     );
     // 将迭代器调整为当前配色
     for (let i = 0; i < colorList.length; ++i) {
-      if (window.theme.iter.next().value === latest_color_href) break;
+      if (window.sofill.iter.next().value === latest_color_href) break;
     }
   } else {
     // 支持修改默认形态 #234
@@ -175,15 +175,15 @@ function iterDC() {
     }).then(function (response) {
       colorList = config.colors2;
       colorList.forEach((color) => colors_href.push(`${color}`));
-      window.theme.iter = config.Iterator2(colors_href);
+      window.sofill.iter = config.Iterator2(colors_href);
       localStorage.setItem(config.latest_DC_ID, response.color.dark);
-      window.funs.updateStyle(
+      window.sofill.funs.updateStyle(
         config.IDs.STYLE_COLOR,
         `${config.S2_BASE}${response.color.dark}`
       );
       // 将迭代器调整为当前配色
       for (let i = 0; i < colorList.length; ++i) {
-        if (window.theme.iter.next().value === response.color.dark) break;
+        if (window.sofill.iter.next().value === response.color.dark) break;
       }
     });
   }
@@ -197,8 +197,8 @@ function DesktopChangeColor() {
     button_change_color.ariaLabel = "形态切换（实验性）";
     button_change_color.innerHTML = `<svg><use xlink:href="#iconTheme"></use></svg>`;
     button_change_color.addEventListener("click", (e) => {
-      const latest_color_href = window.theme.iter.next().value;
-      switch (window.funs.getThemeMode) {
+      const latest_color_href = window.sofill.iter.next().value;
+      switch (window.sofill.funs.getThemeMode) {
         case "dark":
           localStorage.setItem(config.latest_DC_ID, latest_color_href);
           localStorage.setItem("SC_winsay_cp_custom__DS", latest_color_href);
@@ -235,7 +235,7 @@ function DesktopChangeColor() {
           }
           break;
       }
-      window.funs.updateStyle(
+      window.sofill.funs.updateStyle(
         config.IDs.STYLE_COLOR,
         `${config.S2_BASE}${latest_color_href}`
       );
@@ -249,7 +249,7 @@ function DesktopChangeColor() {
 }
 
 async function changeStyleMod() {
-  switch (window.funs.getThemeMode) {
+  switch (window.sofill.funs.getThemeMode) {
     case "dark":
       iterDC();
       break;
@@ -282,7 +282,7 @@ function changeThemeModeByApp() {
       )
     : console.log("platform not supported");
   let href_color = null;
-  switch (window.funs.getThemeMode) {
+  switch (window.sofill.funs.getThemeMode) {
     case "light":
       href_color = `${config.S2_BASE}root-base-light.css`;
       config.colors2.forEach((color) =>
@@ -300,7 +300,7 @@ function changeThemeModeByApp() {
       break;
   }
   setTimeout(() => {
-    window.funs.updateStyle(config.ID_COLOR_STYLE, href_color);
+    window.sofill.funs.updateStyle(config.ID_COLOR_STYLE, href_color);
   }, 1000);
   changeStyleMod();
 }
