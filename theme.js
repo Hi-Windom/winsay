@@ -1,3 +1,6 @@
+window.sofill = {};
+window.sofill.cp = {};
+window.sofill.funs = {};
 var fs = null;
 var path = null;
 var clientMode = (() => {
@@ -36,9 +39,6 @@ if (isAppMode) {
   path = require("path");
   console.log("isAppMode");
 }
-window.sofill = {};
-window.sofill.cp = {};
-window.sofill.funs = {};
 
 /**
  * 获取操作系统 'windows' 或 'darwin' (MacOS) 或 'android'
