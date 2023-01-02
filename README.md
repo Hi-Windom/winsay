@@ -128,6 +128,7 @@ Sofill- 主题形态一览表 ✨
 6. [block__popover浮窗支持聚焦穿透 · Issue #784 · v1.2](https://github.com/Hi-Windom/winsay/issues/784)
 7. [安卓手机端支持通过主题设置面板调节凯恩斯不透明度 · Issue #801 · v1.3.5](https://github.com/Hi-Windom/winsay/issues/801)
 8. [安卓手机端只读模式支持缩放文档 · Issue #804 · v1.3.6](https://github.com/Hi-Windom/winsay/issues/804)
+9. [安卓手机端支持通过主题设置界面开启只读模式单击提示 · Issue #811 · v1.3.9](https://github.com/Hi-Windom/winsay/issues/811)
 
 改进优化：
 
