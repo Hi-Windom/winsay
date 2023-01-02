@@ -2,7 +2,7 @@ import { ConfirmDialog, CPDialog } from "./module/CPM.js";
 import * as CD from "./module/XML/ConfirmDialog.js";
 import * as API from "./utils/api.min.js";
 import * as config from "./config.js";
-import { iterLC, iterDC } from "./module/SSS.min.js";
+import { iterLC, iterDC } from "./module/SSS.js";
 var fs = null;
 var path = null;
 if (API.isAppMode()) {

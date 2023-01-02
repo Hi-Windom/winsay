@@ -1,5 +1,5 @@
-import * as API from "./../utils/api.min.js";
-import * as config from "./../config.js";
+import * as API from "../utils/api.min.js";
+import * as config from "../config.js";
 var fs = null;
 if (API.isAppMode()) {
   fs = require("fs");
