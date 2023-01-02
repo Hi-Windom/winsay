@@ -153,6 +153,7 @@ Sofill- 主题形态一览表 ✨
 20. [部分图标视效增强（主要是手机端） · Issue #799 · v1.3.4](https://github.com/Hi-Windom/winsay/issues/799)
 21. [安卓手机端悬浮球支持双击事件 · Issue #805 · v1.3.6](https://github.com/Hi-Windom/winsay/issues/805)
 22. [凯恩斯不透明度影响b3-dialog__container · Issue #809 · v1.3.7](https://github.com/Hi-Windom/winsay/issues/809)
+23. [取消压缩 SSS.js · Issue #812 · v1.3.8](https://github.com/Hi-Windom/winsay/issues/812)
 
 修复缺陷：
 
