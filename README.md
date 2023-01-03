@@ -115,68 +115,19 @@ Sofill- 主题形态一览表 ✨
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
 
-### v1.0 ~ v1.3 聚合说明
+### v1.4 聚合说明
 
-> 2023-01-03 released
+> 2023-01-?? released
 
 <p><img src="https://img.shields.io/badge/SiYuan-2.6.2-green" style="cursor:pointer;height: 31px;margin: 1px;"/> <img src="https://img.shields.io/badge/%E4%B8%8D%E5%85%BC%E5%AE%B9-2.6.1---red" style="cursor:pointer;height: 31px;margin: 1px;"/> <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow" style="cursor:pointer;height: 31px;margin: 1px;"/></p></p>
 
-引入特性：
-
-1. [支持通过主题设置面板隐藏文档树非顶级文档图标 · Issue #754 · v1.0](https://github.com/Hi-Windom/winsay/issues/754)
-2. [为安卓pad端的主界面添加一个退出应用按钮 · Issue #758 · v1.0](https://github.com/Hi-Windom/winsay/issues/758)
-3. [Android 手机端支持通过主题设置界面配置动态加载块数 · Issue #760 · v1.0](https://github.com/Hi-Windom/winsay/issues/760)
-4. [支持滤镜定时开关 · Issue #723 · v1.2](https://github.com/Hi-Windom/winsay/issues/723)
-5. [移动端悬浮球 · Issue #753 · v1.2](https://github.com/Hi-Windom/winsay/issues/753)
-6. [block__popover浮窗支持聚焦穿透 · Issue #784 · v1.2](https://github.com/Hi-Windom/winsay/issues/784)
-7. [安卓手机端支持通过主题设置面板调节凯恩斯不透明度 · Issue #801 · v1.3.5](https://github.com/Hi-Windom/winsay/issues/801)
-8. [安卓手机端只读模式支持缩放文档 · Issue #804 · v1.3.6](https://github.com/Hi-Windom/winsay/issues/804)
-9. [安卓手机端支持通过主题设置界面开启只读模式单击提示 · Issue #811 · v1.3.9](https://github.com/Hi-Windom/winsay/issues/811)
-10. [安卓手机端（非伺服）支持自动打开伺服网页升级主题 · Issue #828 · v1.3.17](https://github.com/Hi-Windom/winsay/issues/828)
+引入特性：null
 
 改进优化：
 
-1. [Android 手机端右菜单调整 · Issue #759 · v1.0](https://github.com/Hi-Windom/winsay/issues/759)
-2. [Android 手机端文件历史界面布局优化 · Issue #757 · v1.0](https://github.com/Hi-Windom/winsay/issues/757)
-3. [优化主题自我保护 · Issue #761 · v1.0](https://github.com/Hi-Windom/winsay/issues/761)
-4. [启动时检查主题根目录 · Issue #756 · v1.0](https://github.com/Hi-Windom/winsay/issues/756)
-5. [细节优化 · Issue #755 · v1.0](https://github.com/Hi-Windom/winsay/issues/755)
-6. [移动端伺服不缩放图标 · Issue #764 · v1.1](https://github.com/Hi-Windom/winsay/issues/764)
-7. [改进检查更新以支持Sofill系列其他主题 · Issue #765 · v1.1](https://github.com/Hi-Windom/winsay/issues/765)
-8. [适配最近文档界面 · Issue #766 · v1.1](https://github.com/Hi-Windom/winsay/issues/766)
-9. [代码片段添加片段按钮固定到底部左侧 · Issue #774 · v1.2](https://github.com/Hi-Windom/winsay/issues/774)
-10. [不覆盖闪卡界面按钮颜色 · Issue #775 · v1.2](https://github.com/Hi-Windom/winsay/issues/775)
-11. [块滚动条支持移除 · Issue #777 · v1.2](https://github.com/Hi-Windom/winsay/issues/777)
-12. [取消压缩 CustomBoot.js · Issue #780 · v1.2](https://github.com/Hi-Windom/winsay/issues/780)
-13. [优化安卓手机端viewer-container · Issue #778 · v1.2](https://github.com/Hi-Windom/winsay/issues/778)
-14. [优化安卓Pad端文档树自适应显示效果 · Issue #783 · v1.2](https://github.com/Hi-Windom/winsay/issues/783)
-15. [只读模式图标高亮支持安卓手机端 · Issue #787 · v1.3.1](https://github.com/Hi-Windom/winsay/issues/787)
-16. [支持通过主题设置界面开关移动端悬浮球 · Issue #781 · v1.3.2](https://github.com/Hi-Windom/winsay/issues/781)
-17. [改善桌面端伺服移动端界面的兼容性 · Issue #789 · v1.3.2](https://github.com/Hi-Windom/winsay/issues/789)
-18. [优化安卓手机端搜索界面 · Issue #791 · v1.3.2](https://github.com/Hi-Windom/winsay/issues/791)
-19. [主题弹窗细节优化 · Issue #793 · v1.3.3](https://github.com/Hi-Windom/winsay/issues/793)
-20. [部分图标视效增强（主要是手机端） · Issue #799 · v1.3.4](https://github.com/Hi-Windom/winsay/issues/799)
-21. [安卓手机端悬浮球支持双击事件 · Issue #805 · v1.3.6](https://github.com/Hi-Windom/winsay/issues/805)
-22. [凯恩斯不透明度影响b3-dialog__container · Issue #809 · v1.3.7](https://github.com/Hi-Windom/winsay/issues/809)
-23. [取消压缩 SSS.js · Issue #812 · v1.3.8](https://github.com/Hi-Windom/winsay/issues/812)
-24. [安卓手机端主题设置不显示禁用文档树修改图标选项 · Issue #816 · v1.3.11](https://github.com/Hi-Windom/winsay/issues/816)
-25. [优化安卓手机端 emoji 面板 · Issue #817 · v1.3.11](https://github.com/Hi-Windom/winsay/issues/817)
-26. [安卓手机端文档属性界面优化 · Issue #819 · v1.3.12](https://github.com/Hi-Windom/winsay/issues/819)
-27. [文档名区域状态提示支持通过主题设置界面开关 · Issue #823 · v1.3.14](https://github.com/Hi-Windom/winsay/issues/823)
-28. [各种块的悬停阴影加入表格元素 · Issue #822 · v1.3.14](https://github.com/Hi-Windom/winsay/issues/822)
-29. [切换自检源后应刷新版本显示 · Issue #826 · v1.3.15](https://github.com/Hi-Windom/winsay/issues/826)
-30. [左下角浮窗与右下角浮窗增强观感一致性 · Issue #825 · v1.3.15](https://github.com/Hi-Windom/winsay/issues/825)
-31. [link部分CSS使用less构建 · Issue #807 · v1.3.19](https://github.com/Hi-Windom/winsay/issues/807)
+1. [安卓手机端主题设置面板移除搜索项 · Issue #837 · v1.4.1](https://github.com/Hi-Windom/winsay/issues/837)
 
-修复缺陷：
-
-1. [别名被计数遮挡 · Issue #771 · v1.2](https://github.com/Hi-Windom/winsay/issues/771)
-2. [手机端代码行号错乱 · Issue #768 · v1.2](https://github.com/Hi-Windom/winsay/issues/768)
-3. [安卓手机端ConfirmDialog重复创建 · Issue #782 · v1.2](https://github.com/Hi-Windom/winsay/issues/782)
-4. [viewer-list显示异常 · Issue #785 · v1.2](https://github.com/Hi-Windom/winsay/issues/785)
-5. [导入配置数据主题设置项HTML标签错误 · Issue #790 · v1.3.2](https://github.com/Hi-Windom/winsay/issues/790)
-6. [安卓手机端超大字号文字重叠 · Issue #803 · v1.3.6](https://github.com/Hi-Windom/winsay/issues/803)
-7. [启动时检查更新异常 · Issue #829 · v1.3.16](https://github.com/Hi-Windom/winsay/issues/829)
+修复缺陷：null
 
 ## 🎈 鸣谢
 
