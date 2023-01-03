@@ -30,6 +30,7 @@
 改进优化：
 
 1. [安卓手机端主题设置面板移除搜索项 · Issue #837 · v1.4.1](https://github.com/Hi-Windom/winsay/issues/837)
+2. [一次性通知延时通知 · Issue #842 · v1.4.3](https://github.com/Hi-Windom/winsay/issues/842)
 
 修复缺陷：null
 

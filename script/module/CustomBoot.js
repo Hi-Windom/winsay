@@ -5,28 +5,6 @@ var oncePath = `${config.winsay_ROOT_ABS}/script/module/AlertOnce.js`;
 if (API.isAppMode()) {
   fs = require("fs");
 }
-fs
-  ? fs.access(oncePath, function (err) {
-      if (!err) {
-        window.sofill.funs.loadScript(
-          window.sofill.funs.addURLParam(
-            "/appearance/themes/Sofill-/script/module/AlertOnce.js"
-          ),
-          undefined,
-          true
-        );
-        setTimeout(() => {
-          fs.unlink(oncePath, function (err) {
-            if (err) {
-              throw err;
-            }
-            console.log("一次性通知已销毁");
-          });
-        }, 3000);
-        return;
-      }
-    })
-  : null;
 
 // 初始化获取用户配置
 let SC_winsay_cp_appearance__TabBarMode = localStorage.getItem(
@@ -136,10 +114,6 @@ window.sofill.funs.updateStyle(
 window.sofill.funs.updateStyle(
   "MI-Dock",
   `/appearance/themes/Sofill-/style/MI-Dock.css`
-);
-window.sofill.funs.updateStyle(
-  "MI-Dynamic",
-  `/appearance/themes/Sofill-/style/MI-Dynamic.css`
 );
 window.sofill.funs.updateStyle(
   "Funs-list2",
@@ -266,9 +240,39 @@ if (urlParam1 && urlParam2) {
         // window.location.replace(
         //   `http://${urlParam3}/stage/build/desktop/?action=updateTheme&name=Sofill-&args=null`
         // );
-        window.open(`http://${decodeURIComponent(urlParam3)}/stage/build/desktop/?action=updateTheme&name=Sofill-&args=null`,"_self");
+        window.open(
+          `http://${decodeURIComponent(
+            urlParam3
+          )}/stage/build/desktop/?action=updateTheme&name=Sofill-&args=null`,
+          "_self"
+        );
       }
     default:
       break;
   }
 }
+
+fs
+  ? fs.access(oncePath, function (err) {
+      if (!err) {
+        setTimeout(() => {
+          window.sofill.funs.loadScript(
+            window.sofill.funs.addURLParam(
+              "/appearance/themes/Sofill-/script/module/AlertOnce.js"
+            ),
+            undefined,
+            true
+          );
+          setTimeout(() => {
+            fs.unlink(oncePath, function (err) {
+              if (err) {
+                throw err;
+              }
+              console.log("一次性通知已销毁");
+            });
+          }, 3000);
+          return;
+        }, 2000);
+      }
+    })
+  : null;
