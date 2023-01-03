@@ -14,12 +14,15 @@
 
 * [ ] 持续扩大跟随主题形态的样式范围
 * [ ] 持续完善主题设置面板
+* [ ] Android Pad 端专注模式 **#830**
+* [ ] 持续完善安卓手机端悬浮球
+* [ ] 支持通过主题设置界面劫持搜索输入框（仅桌面端） **#773**
+* [ ] 搜索布局适配优化 **#776**
 
 ### 中期计划⛳
 
 * [ ] 暗黑模式计划增加午夜风暴
 * [ ] S3形态
-* [ ] 支持配置文档面包屑表现形式
 * [ ] [提供接口 · Issue #425](https://github.com/Hi-Windom/winsay/issues/425)
 
 ---
@@ -114,7 +117,7 @@ Sofill- 主题形态一览表 ✨
 
 ### v1.0 ~ v1.3 聚合说明
 
-> 2022-12-31 released
+> 2023-01-03 released
 
 <p><img src="https://img.shields.io/badge/SiYuan-2.6.2-green" style="cursor:pointer;height: 31px;margin: 1px;"/> <img src="https://img.shields.io/badge/%E4%B8%8D%E5%85%BC%E5%AE%B9-2.6.1---red" style="cursor:pointer;height: 31px;margin: 1px;"/> <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow" style="cursor:pointer;height: 31px;margin: 1px;"/></p></p>
 
