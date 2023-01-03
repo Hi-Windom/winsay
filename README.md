@@ -163,6 +163,7 @@ Sofill- 主题形态一览表 ✨
 28. [各种块的悬停阴影加入表格元素 · Issue #822 · v1.3.14](https://github.com/Hi-Windom/winsay/issues/822)
 29. [切换自检源后应刷新版本显示 · Issue #826 · v1.3.15](https://github.com/Hi-Windom/winsay/issues/826)
 30. [左下角浮窗与右下角浮窗增强观感一致性 · Issue #825 · v1.3.15](https://github.com/Hi-Windom/winsay/issues/825)
+31. [link部分CSS使用less构建 · Issue #807 · v1.3.19](https://github.com/Hi-Windom/winsay/issues/807)
 
 修复缺陷：
 
