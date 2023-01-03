@@ -2118,11 +2118,11 @@ API.propChange("SC_winsay_cp_search__about_checkTime", function () {
         ) {
           setTimeout(() => {
             checkUpdate(true);
-          }, 13000);
+          }, 31000);
         } else {
           setTimeout(() => {
             checkUpdate(false);
-          }, 5800);
+          }, 13000);
         }
         break;
       default:
