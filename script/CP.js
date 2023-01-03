@@ -11,16 +11,15 @@ if (API.isAppMode()) {
 }
 
 window.sofill.localVersion = {};
-window.sofill.localVersion.version = '';
-window.sofill.localVersion.useBazaar = '';
-window.sofill.localVersion.useGithub = '';
-window.sofill.localVersion.vinfoHTML = '';
+window.sofill.localVersion.version = "";
+window.sofill.localVersion.useBazaar = "";
+window.sofill.localVersion.useGithub = "";
+window.sofill.localVersion.vinfoHTML = "";
 
 // 声明计时器/定时器
 var It_DocWidthMode = null;
 var It_SelfProtector = null;
 var It_filterTimer = null;
-
 
 function switchlocalVersion() {
   if (localStorage.getItem("SC_winsay_cp_search__about_checkAPI") == "Bazaar") {
@@ -50,18 +49,18 @@ function getlocalVersion() {
     };
   }).then(function (response) {
     window.sofill.localVersion.useGithub = response.version;
-    window.sofill.localVersion.useBazaar = window.siyuan.config.appearance.themeVer;
+    window.sofill.localVersion.useBazaar =
+      window.siyuan.config.appearance.themeVer;
     window.sofill.localVersion.version = switchlocalVersion();
     window.sofill.localVersion.vinfoHTML = `当前版本 v<span>${window.sofill.localVersion.version}</span>
     <div class="b3-label__text"><a href="https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md" target="_blank">浏览更新历史</a></div>`;
-    setTimeout(()=>{
+    setTimeout(() => {
       document.getElementById(
         "sc-custom-container-placehold"
       ).children[0].innerHTML = `${config.ThemeName} v${window.sofill.localVersion.version} CP`;
-      document.getElementById(
-        "SC_winsay_cp_version"
-      ).innerHTML = window.sofill.localVersion.vinfoHTML;
-    }, 100)
+      document.getElementById("SC_winsay_cp_version").innerHTML =
+        window.sofill.localVersion.vinfoHTML;
+    }, 100);
   });
 }
 
@@ -278,7 +277,7 @@ async function checkUpdateViaBazaar(v, q) {
     console.warn("集市有新版本发布");
     localStorage.setItem("SC_winsay_latest_checked_version", mytheme.version);
     API.通知(`集市有新版本发布：<br>${v} => ${mytheme.version}<br> `);
-    await updateTheme("Sofill-");
+    updateTheme("Sofill-");
   } else {
     if (q == false) {
       API.通知(`真棒👍，主题已是最新版本`, 800);
@@ -293,18 +292,30 @@ async function getInstalledTheme(ip, apitoken, data) {
   let url = "http://" + ip + "/api/bazaar/getInstalledTheme";
   return API.request(url, apitoken, data);
 }
-async function updateTheme(themeName) {
-  document.querySelector("#toolbar #barSetting").click();
-  document
-    .querySelector('.b3-tab-bar:not(.sc-custom-nav) [data-name="bazaar"]')
-    .click();
-  setTimeout(() => {
+function updateTheme(themeName) {
+  if (document.body.classList.contains("body--mobile") && document.body.classList.contains("client--browser")) {
+    setTimeout(() => {
+      localStorage.getItem("SC_winsay_cp_search__about_AutoToUpdateMobile") ==
+      "true"
+        ? window.open(
+            `http://${window.location.host}/stage/build/desktop/?action=updateTheme&name=Sofill-`,
+            "_blank"
+          )
+        : null;
+    }, 500);
+  } else {
+    document.querySelector("#toolbar #barSetting").click();
     document
-      .querySelector(
-        `#configBazaarTheme [class="b3-card__actions"][data-name="${themeName}"]>[data-type="install-t"]`
-      )
+      .querySelector('.b3-tab-bar:not(.sc-custom-nav) [data-name="bazaar"]')
       .click();
-  }, 1000);
+    setTimeout(() => {
+      document
+        .querySelector(
+          `#configBazaarTheme [class="b3-card__actions"][data-name="${themeName}"]>[data-type="install-t"]`
+        )
+        .click();
+    }, 1000);
+  }
 }
 
 async function checkUpdate(q = false) {
@@ -2098,19 +2109,20 @@ API.propChange("SC_winsay_cp_search__about_checkTime", function () {
   if (!API.isEmpty(i)) {
     switch (i) {
       case "Once":
+        getlocalVersion();
         if (
           document.querySelector("#SC-CP").style.display == "none" &&
           localStorage.getItem(
             "SC_winsay_cp_search__about_AutoCheckSilently"
-          ) != "true"
+          ) == "true"
         ) {
           setTimeout(() => {
-            checkUpdate(false);
-          }, 3100);
+            checkUpdate(true);
+          }, 31000);
         } else {
           setTimeout(() => {
-            checkUpdate(true);
-          }, 3100);
+            checkUpdate(false);
+          }, 13000);
         }
         break;
       default:
@@ -2654,7 +2666,9 @@ API.propChange("SC_winsay_cp_search__about_checkAPI", function () {
   var i = localStorage.getItem("SC_winsay_cp_search__about_checkAPI");
   if (!API.isEmpty(i)) {
     let vv = switchlocalVersion();
-    vv ? document.querySelector("#SC_winsay_cp_version > span").innerHTML = vv : null;
+    vv
+      ? (document.querySelector("#SC_winsay_cp_version > span").innerHTML = vv)
+      : null;
   }
 });
 API.checkedChange(
@@ -2669,6 +2683,11 @@ API.checkedChange(
 );
 API.checkedChange(
   document.getElementById("SC_winsay_cp_search__about_AutoCheckSilently"),
+  () => {},
+  () => {}
+);
+API.checkedChange(
+  document.getElementById("SC_winsay_cp_search__about_AutoToUpdateMobile"),
   () => {},
   () => {}
 );

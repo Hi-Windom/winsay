@@ -171,6 +171,7 @@ Sofill- 主题形态一览表 ✨
 4. [viewer-list显示异常 · Issue #785 · v1.2](https://github.com/Hi-Windom/winsay/issues/785)
 5. [导入配置数据主题设置项HTML标签错误 · Issue #790 · v1.3.2](https://github.com/Hi-Windom/winsay/issues/790)
 6. [安卓手机端超大字号文字重叠 · Issue #803 · v1.3.6](https://github.com/Hi-Windom/winsay/issues/803)
+7. [启动时检查更新异常 · Issue #829 · v1.3.16](https://github.com/Hi-Windom/winsay/issues/829)
 
 ## 🎈 鸣谢
 
