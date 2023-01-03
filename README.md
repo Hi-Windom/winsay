@@ -129,6 +129,7 @@ Sofill- 主题形态一览表 ✨
 7. [安卓手机端支持通过主题设置面板调节凯恩斯不透明度 · Issue #801 · v1.3.5](https://github.com/Hi-Windom/winsay/issues/801)
 8. [安卓手机端只读模式支持缩放文档 · Issue #804 · v1.3.6](https://github.com/Hi-Windom/winsay/issues/804)
 9. [安卓手机端支持通过主题设置界面开启只读模式单击提示 · Issue #811 · v1.3.9](https://github.com/Hi-Windom/winsay/issues/811)
+10. [安卓手机端（非伺服）支持自动打开伺服网页升级主题 · Issue #828 · v1.3.17](https://github.com/Hi-Windom/winsay/issues/828)
 
 改进优化：
 

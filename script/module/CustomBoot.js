@@ -241,29 +241,34 @@ if (config.clientMode == "body--mobile") {
     undefined,
     true
   );
+}
 
-  let urlParam1 = API.getUrlParam(window.location.href, "action");
-  let urlParam2 = API.getUrlParam(window.location.href, "name");
-  if (
-    document.body.classList.contains("body--mobile") &&
-    document.body.classList.contains("client--browser")
-  ) {
-    switch (urlParam1) {
-      case "updateTheme":
-        document.querySelector("#toolbar #barSetting").click();
+let urlParam1 = API.getUrlParam(window.location.href, "action");
+let urlParam2 = API.getUrlParam(window.location.href, "name");
+let urlParam3 = API.getUrlParam(window.location.href, "args");
+if (urlParam1 && urlParam2) {
+  switch (urlParam1) {
+    case "updateTheme":
+      document.querySelector("#toolbar #barSetting").click();
+      document
+        .querySelector('.b3-tab-bar:not(.sc-custom-nav) [data-name="bazaar"]')
+        .click();
+      setTimeout(() => {
         document
-          .querySelector('.b3-tab-bar:not(.sc-custom-nav) [data-name="bazaar"]')
+          .querySelector(
+            `#configBazaarTheme [class="b3-card__actions"][data-name="${urlParam2}"]>[data-type="install-t"]`
+          )
           .click();
-        setTimeout(() => {
-          document
-            .querySelector(
-              `#configBazaarTheme [class="b3-card__actions"][data-name="${urlParam2}"]>[data-type="install-t"]`
-            )
-            .click();
-        }, 500);
-        break;
-      default:
-        break;
-    }
+      }, 500);
+      break;
+    case "next":
+      if (urlParam2 == "update-winsay") {
+        // window.location.replace(
+        //   `http://${urlParam3}/stage/build/desktop/?action=updateTheme&name=Sofill-&args=null`
+        // );
+        window.open(`http://${decodeURIComponent(urlParam3)}/stage/build/desktop/?action=updateTheme&name=Sofill-&args=null`,"_self");
+      }
+    default:
+      break;
   }
 }

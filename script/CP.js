@@ -293,12 +293,17 @@ async function getInstalledTheme(ip, apitoken, data) {
   return API.request(url, apitoken, data);
 }
 function updateTheme(themeName) {
-  if (document.body.classList.contains("body--mobile") && document.body.classList.contains("client--browser")) {
+  if (
+    document.body.classList.contains("body--mobile") &&
+    !document.body.classList.contains("client--browser")
+  ) {
     setTimeout(() => {
       localStorage.getItem("SC_winsay_cp_search__about_AutoToUpdateMobile") ==
       "true"
         ? window.open(
-            `http://${window.location.host}/stage/build/desktop/?action=updateTheme&name=Sofill-`,
+            `http://0.0.0.0:6806/stage/build/desktop/?action=next&name=update-winsay&args=${encodeURIComponent(
+              window.siyuan.config.localIPs[0] + ":6806"
+            )}`,
             "_blank"
           )
         : null;
