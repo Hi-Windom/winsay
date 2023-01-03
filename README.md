@@ -116,7 +116,7 @@ Sofill- 主题形态一览表 ✨
 
 > 2022-12-31 released
 
-<p><a href="https://github.com/Hi-Windom/winsay/issues/718"><img src="https://img.shields.io/badge/SiYuan-2.6.1-green" style="cursor:pointer;height: 31px;margin: 1px;"/></a> <a href="https://github.com/Hi-Windom/winsay/issues/770"><img src="https://img.shields.io/badge/%E4%B8%8D%E5%85%BC%E5%AE%B9-2.5.4---red" style="cursor:pointer;height: 31px;margin: 1px;"/></a> <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow" style="cursor:pointer;height: 31px;margin: 1px;"/></p></p>
+<p><img src="https://img.shields.io/badge/SiYuan-2.6.2-green" style="cursor:pointer;height: 31px;margin: 1px;"/> <img src="https://img.shields.io/badge/%E4%B8%8D%E5%85%BC%E5%AE%B9-2.6.1---red" style="cursor:pointer;height: 31px;margin: 1px;"/> <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow" style="cursor:pointer;height: 31px;margin: 1px;"/></p></p>
 
 引入特性：
 

@@ -172,7 +172,7 @@ switch (config.ThemeName) {
 }
 
 var kernelVersion = window.siyuan.config.system.kernelVersion;
-var oldVersion = "2.5.4";
+var oldVersion = "2.6.1";
 var cv_result = API.compareVersion(oldVersion, kernelVersion);
 var AutoCheckSilently = localStorage.getItem(
   "SC_winsay_cp_search__about_AutoCheckSilently"
