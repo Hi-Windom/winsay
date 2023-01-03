@@ -8,6 +8,31 @@
     <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=694357845&website=www.oicqzone.com"><img src="https://img.shields.io/badge/QQ-694357845-blue?logo=Tencent QQ" style="cursor:pointer;height: 31px;margin: 3px auto;"></a>
 </p>
 
+<p align="center">如果您喜欢本主题, 欢迎前往 <a href="https://github.com/Hi-Windom/winsay">Github</a> 为本项目点亮一个⭐！谢谢</p>
+
+## 📜 集市更新版本日志
+
+### 版本说明
+
+* 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
+* [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
+
+### v1.4 聚合说明
+
+> 2023-01-?? released
+
+<p><img src="https://img.shields.io/badge/SiYuan-2.6.2-green" style="cursor:pointer;height: 31px;margin: 1px;"/> <img src="https://img.shields.io/badge/%E5%81%9C%E6%AD%A2%E9%80%82%E9%85%8D-2.6.1---red" style="cursor:pointer;height: 31px;margin: 1px;"/> <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow" style="cursor:pointer;height: 31px;margin: 1px;"/></p></p>
+
+引入特性：
+
+1. [文档内链接聚焦动效 · Issue #840 · v1.4.2](https://github.com/Hi-Windom/winsay/issues/840)
+
+改进优化：
+
+1. [安卓手机端主题设置面板移除搜索项 · Issue #837 · v1.4.1](https://github.com/Hi-Windom/winsay/issues/837)
+
+修复缺陷：null
+
 ## 🔭 更新预告
 
 ### 短期计划💥
@@ -107,27 +132,6 @@ Sofill- 主题形态一览表 ✨
 1. 在手机端 `关于` 中开启网络伺服
 2. 在另外一台电脑或 Pad 浏览器中访问手机端伺服的URL
 3. 从集市下载主题，然后重启手机端，在 `外观` 中选择下载的主题
-
-## 📜 集市更新版本日志
-
-### 版本说明
-
-* 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
-* [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
-
-### v1.4 聚合说明
-
-> 2023-01-?? released
-
-<p><img src="https://img.shields.io/badge/SiYuan-2.6.2-green" style="cursor:pointer;height: 31px;margin: 1px;"/> <img src="https://img.shields.io/badge/%E4%B8%8D%E5%85%BC%E5%AE%B9-2.6.1---red" style="cursor:pointer;height: 31px;margin: 1px;"/> <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow" style="cursor:pointer;height: 31px;margin: 1px;"/></p></p>
-
-引入特性：null
-
-改进优化：
-
-1. [安卓手机端主题设置面板移除搜索项 · Issue #837 · v1.4.1](https://github.com/Hi-Windom/winsay/issues/837)
-
-修复缺陷：null
 
 ## 🎈 鸣谢
 

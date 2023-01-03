@@ -141,7 +141,7 @@ if (SelfProtection && SelfProtection === "true") {
     path ? P.push(path.join(bP, "script", "CP.js")) : null;
     path ? P.push(path.join(bP, "script", "config.js")) : null;
     path ? P.push(path.join(bP, "style", "Init.min.css")) : null;
-    path ? P.push(path.join(bP, "style", "Block.min.css")) : null;
+    path ? P.push(path.join(bP, "style", "Block.css")) : null;
     P.forEach((i) => {
       fs
         ? fs.readFile(i, "utf-8", (e, data) => {
