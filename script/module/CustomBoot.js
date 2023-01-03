@@ -110,7 +110,7 @@ window.sofill.funs.updateStyle(
 );
 window.sofill.funs.updateStyle(
   "Popup",
-  `/appearance/themes/Sofill-/style/Popup.min.css`
+  `/appearance/themes/Sofill-/style/Popup.css`
 );
 window.sofill.funs.updateStyle(
   "Patch",

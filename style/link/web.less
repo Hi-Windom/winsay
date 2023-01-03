@@ -103,12 +103,14 @@
   .loopa((@i - 1));
   @id: 'URL-V-@{i}';
   @value: @@id;
+
   a {
     &[href*="@{value}/"]:not(:has(img))::before {
       content: "";
       background-image: url("@{URL_web_ROOT}@{value}.png");
     }
   }
+
   span[data-type~=a] {
     &[data-href*="@{value}/"]:not(:empty)::before {
       content: "";
@@ -116,4 +118,5 @@
     }
   }
 }
+
 .loopa(@URLS-COUNT-1);
