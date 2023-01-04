@@ -41,6 +41,7 @@
 3. [README重要 badge 图片无法加载时显示替代文本 · Issue #845 · v1.4.4](https://github.com/Hi-Windom/winsay/issues/845)
 4. [集市版本更新日志使用badge显示真机适配测试通过 · Issue #854 · v1.4.6](https://github.com/Hi-Windom/winsay/issues/854)
 5. [body加入非订阅用户/订阅用户类名 · Issue #850 · v1.4.6](https://github.com/Hi-Windom/winsay/issues/850)
+6. [页签栏支持切换为默认主题样式 · Issue #852 · v1.4.7](https://github.com/Hi-Windom/winsay/issues/852)
 
 修复缺陷：null
 
