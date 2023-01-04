@@ -2,10 +2,10 @@
 
 <p align="center">
     <a href="https://github.com/Hi-Windom/winsay/releases">
-    <img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/Hi-Windom/winsay?include_prereleases&logo=GitHub"  style="cursor:pointer;height: 31px;margin: 3px auto;">
-    <img alt="GitHub (Pre-)Release Date" src="https://img.shields.io/github/release-date-pre/Hi-Windom/winsay?logo=GitHub" style="cursor:pointer;height: 31px;margin: 3px auto;">
+    <img alt="GitHub release (latest by date including pre-releases)" title="github上的最新版本" src="https://img.shields.io/github/v/release/Hi-Windom/winsay?include_prereleases&logo=GitHub"  style="cursor:pointer;height: 31px;margin: 3px auto;">
+    <img alt="GitHub (Pre-)Release Date" title="github上最新版本的发布日期" src="https://img.shields.io/github/release-date-pre/Hi-Windom/winsay?logo=GitHub" style="cursor:pointer;height: 31px;margin: 3px auto;">
     </a>
-    <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=694357845&website=www.oicqzone.com"><img src="https://img.shields.io/badge/QQ-694357845-blue?logo=Tencent QQ" style="cursor:pointer;height: 31px;margin: 3px auto;"></a>
+    <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=694357845&website=www.oicqzone.com"><img title="点击可添加QQ好友" src="https://img.shields.io/badge/QQ-694357845-blue?logo=Tencent QQ" style="cursor:pointer;height: 31px;margin: 3px auto;"></a>
 </p>
 
 <p align="center">如果您喜欢本主题, 欢迎前往 <a href="https://github.com/Hi-Windom/winsay">Github</a> 为本项目点亮一个⭐！谢谢</p>
@@ -26,6 +26,7 @@
 引入特性：
 
 1. [文档内链接聚焦动效 · Issue #840 · v1.4.2](https://github.com/Hi-Windom/winsay/issues/840)
+2. [导出配置数据支持附加思源同步配置 · Issue #848 · v1.4.5](https://github.com/Hi-Windom/winsay/issues/848)
 
 改进优化：
 
@@ -52,13 +53,7 @@
 * [ ] S3形态
 * [ ] [提供接口 · Issue #425](https://github.com/Hi-Windom/winsay/issues/425)
 
----
-
-## ✨ 主题设置界面可配置更多项目了，改善安卓端易用性，持续优化体验
-
-> 版本更新详细内容请下滑至【集市更新版本日志】部分查看
-
-### 主题设置界面入口指南
+## ✨ 主题设置界面入口指南
 
 Step 1 确保在思源软件设置里关闭了【隐藏底部状态栏】
 
@@ -73,6 +68,8 @@ Step 2 鼠标悬浮或左键单击右下角控件，在呼出的菜单中点击�
 多端适配，体积小巧，深度优化默认主题已知缺陷，明亮/暗黑多种形态随心切换 🎨
 
 如此合适，微风迎怀，看得到的看不到的地方都充满了 Sofill- 的优化印记，满足细节控对 ⌈润物细无声⌋ 的极致追求，永不疲劳的舒适体验 🎡
+
+集市已知主题中独家支持主题设置界面，拥有 70+ 可配置项，自定义专属于你的 Sofill
 
 亲爱的用户：我们推荐您搭配 [Remix-icon](https://github.com/mozhux/Remix-icon) 图标包使用 Sofill 系列主题
 
@@ -171,6 +168,10 @@ Sofill 系列主题的诞生与成长离不开下列开源项目的贡献，以�
 
 * [translate.js : 网页自动翻译](https://gitee.com/mail_osc/translate)
 * [hammer.js : A javascript library for multi-touch gestures](https://github.com/hammerjs/hammer.js)
+
+### 其他
+
+* VSCode
 
 ## 💎 特别鸣谢
 
