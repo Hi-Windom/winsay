@@ -204,9 +204,7 @@ if (config.clientMode == "body--mobile") {
 
 async function checkUpdateViaGithub(v, q) {
   let themes = await getBazaarTheme(window.location.host, "", {});
-  console.log(themes.data);
   let localThemes = await getInstalledTheme(window.location.host, "", {});
-  console.log(localThemes.data);
   new Promise(function (response) {
     var url = `https://api.github.com/repos/Hi-Windom/${config.AliaName}/releases/latest`;
     var httpRequest = new XMLHttpRequest();
@@ -221,7 +219,7 @@ async function checkUpdateViaGithub(v, q) {
       }
     };
   }).then(async function (response) {
-    console.log(response);
+    // console.log(response);
     let version = response["tag_name"];
     if (API.compareVersion(version, v) == 1) {
       console.warn("Github 有新版本发布");
@@ -539,13 +537,26 @@ document
     );
     sy_editor == "true"
       ? (jsonData.sy_editor = window.siyuan.config.editor)
-      : (jsonData.sy_editor = null);
+      : (jsonData.sy_editor = '禁用了附加这部分数据');
     let sy_keymap = localStorage.getItem(
       "SC_winsay_cp__exportData__EXT_sy_keymap"
     );
     sy_keymap == "true"
       ? (jsonData.sy_keymap = window.siyuan.config.keymap)
-      : (jsonData.sy_keymap = null);
+      : (jsonData.sy_keymap = '禁用了附加这部分数据');
+    let sy_sync = localStorage.getItem(
+      "SC_winsay_cp__exportData__EXT_sy_sync"
+    );
+    sy_sync == "true"
+      ? (() => {
+          jsonData.sy_sync = window.siyuan.config.sync;
+          jsonData.sy_repo = window.siyuan.config.repo;
+          console.error("SYNC ERROR");
+        })()
+      : (() => {
+          jsonData.sy_sync = '禁用了附加这部分数据';
+          jsonData.sy_repo = '禁用了附加这部分数据';
+        })();
     var blob = new Blob([JSON.stringify(jsonData)]);
     link.href = URL.createObjectURL(blob); //  创建一个 URL 对象并传给 a 的 href
     link.download = `Sofill-ConfigData.json`; //  设置下载的默认文件名
@@ -655,6 +666,10 @@ document
               if (name == "sy_editor") {
               }
               if (name == "sy_keymap") {
+              }
+              if (name == "sy_sync") {
+              }
+              if (name == "sy_repo") {
               }
             }
             API.通知(`导入成功 ${ok}/${counter}，覆盖 ${diff} 项`);
@@ -2676,6 +2691,7 @@ API.propChange("SC_winsay_cp_search__about_checkAPI", function () {
       : null;
   }
 });
+// 留空但是有用，请勿删除
 API.checkedChange(
   document.getElementById("SC_winsay_cp__exportData__EXT_sy_editor"),
   () => {},
@@ -2683,6 +2699,11 @@ API.checkedChange(
 );
 API.checkedChange(
   document.getElementById("SC_winsay_cp__exportData__EXT_sy_keymap"),
+  () => {},
+  () => {}
+);
+API.checkedChange(
+  document.getElementById("SC_winsay_cp__exportData__EXT_sy_sync"),
   () => {},
   () => {}
 );
