@@ -36,6 +36,8 @@
 1. [安卓手机端主题设置面板移除搜索项 · Issue #837 · v1.4.1](https://github.com/Hi-Windom/winsay/issues/837)
 2. [一次性通知延时通知 · Issue #842 · v1.4.3](https://github.com/Hi-Windom/winsay/issues/842)
 3. [README重要 badge 图片无法加载时显示替代文本 · Issue #845 · v1.4.4](https://github.com/Hi-Windom/winsay/issues/845)
+4. [集市版本更新日志使用badge显示真机适配测试通过 · Issue #854 · v1.4.6](https://github.com/Hi-Windom/winsay/issues/854)
+5. [body加入非订阅用户/订阅用户类名 · Issue #850 · v1.4.6](https://github.com/Hi-Windom/winsay/issues/850)
 
 修复缺陷：null
 
