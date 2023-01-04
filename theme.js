@@ -23,19 +23,29 @@ if (navigator.userAgent.toLowerCase().startsWith("siyuan")) {
 } else {
   document.body.classList.add("client--browser");
 }
-if(window.siyuan.user == null) {
-  document.body.classList.add("user--null");
-} else if(window.siyuan.user.userSiYuanProExpireTime > Date.now()) {
-  document.body.classList.add("user--Sub");
-} else {
-  document.body.classList.add("user--NonSub");
-}
+setInterval(() => {
+  if (window.siyuan.user == null) {
+    document.body.classList.remove("user--Sub");
+    document.body.classList.remove("user--NonSub");
+    document.body.classList.add("user--null");
+  } else if (window.siyuan.user.userSiYuanProExpireTime > Date.now()) {
+    document.body.classList.remove("user--null");
+    document.body.classList.remove("user--NonSub");
+    document.body.classList.add("user--Sub");
+  } else {
+    document.body.classList.remove("user--null");
+    document.body.classList.remove("user--Sub");
+    document.body.classList.add("user--NonSub");
+  }
+}, 5800);
 
 var isAppMode = document
   .getElementsByTagName("body")[0]
   .classList.contains("android")
   ? false
-  : document.getElementsByTagName("body")[0].classList.contains("client--browser")
+  : document
+      .getElementsByTagName("body")[0]
+      .classList.contains("client--browser")
   ? false
   : window.siyuan.config.system.os == "windows" ||
     window.siyuan.config.system.os == "darwin"
@@ -138,7 +148,9 @@ fs
   ? fs.access(bP, (e) => {
       if (e) {
         console.error(e);
-        alert(`主题根目录未正确命名或不存在：【致命错误】${bP} 文件夹不存在。修正错误后，需重启思源并重新选择主题。`);
+        alert(
+          `主题根目录未正确命名或不存在：【致命错误】${bP} 文件夹不存在。修正错误后，需重启思源并重新选择主题。`
+        );
       }
     })
   : null;
@@ -172,7 +184,9 @@ window.sofill.funs.loadScript(
   true
 );
 window.sofill.funs.loadScript(
-  window.sofill.funs.addURLParam("/appearance/themes/Sofill-/script/fun.min.js"),
+  window.sofill.funs.addURLParam(
+    "/appearance/themes/Sofill-/script/fun.min.js"
+  ),
   undefined,
   true
 );
@@ -196,7 +210,9 @@ setTimeout(() => {
 }, 200);
 setTimeout(() => {
   window.sofill.funs.loadScript(
-    window.sofill.funs.addURLParam("/appearance/themes/Sofill-/script/module/DTL.js"),
+    window.sofill.funs.addURLParam(
+      "/appearance/themes/Sofill-/script/module/DTL.js"
+    ),
     undefined,
     true
   );
