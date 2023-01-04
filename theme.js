@@ -23,6 +23,13 @@ if (navigator.userAgent.toLowerCase().startsWith("siyuan")) {
 } else {
   document.body.classList.add("client--browser");
 }
+if(window.siyuan.user == null) {
+  document.body.classList.add("user--null");
+} else if(window.siyuan.user.userSiYuanProExpireTime > Date.now()) {
+  document.body.classList.add("user--Sub");
+} else {
+  document.body.classList.add("user--NonSub");
+}
 
 var isAppMode = document
   .getElementsByTagName("body")[0]

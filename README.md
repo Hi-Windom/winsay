@@ -2,10 +2,10 @@
 
 <p align="center">
     <a href="https://github.com/Hi-Windom/winsay/releases">
-    <img alt="GitHub release (latest by date including pre-releases)" title="github上的最新版本" src="https://img.shields.io/github/v/release/Hi-Windom/winsay?include_prereleases&logo=GitHub"  style="cursor:pointer;height: 31px;margin: 3px auto;">
-    <img alt="GitHub (Pre-)Release Date" title="github上最新版本的发布日期" src="https://img.shields.io/github/release-date-pre/Hi-Windom/winsay?logo=GitHub" style="cursor:pointer;height: 31px;margin: 3px auto;">
+    <img alt="GitHub release (latest by date including pre-releases)" title="github上的最新版本" src="https://img.shields.io/github/v/release/Hi-Windom/winsay?include_prereleases&logo=GitHub"  style="cursor:pointer;height: 38px;margin: 5px auto;">
+    <img alt="GitHub (Pre-)Release Date" title="github上最新版本的发布日期" src="https://img.shields.io/github/release-date-pre/Hi-Windom/winsay?logo=GitHub" style="cursor:pointer;height: 38px;margin: 5px auto;">
     </a>
-    <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=694357845&website=www.oicqzone.com"><img title="点击可添加QQ好友" src="https://img.shields.io/badge/QQ-694357845-blue?logo=Tencent QQ" style="cursor:pointer;height: 31px;margin: 3px auto;"></a>
+    <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=694357845&website=www.oicqzone.com"><img title="点击可添加QQ好友" src="https://img.shields.io/badge/QQ-694357845-blue?logo=Tencent QQ" style="cursor:pointer;height: 38px;margin: 5px auto;"></a>
 </p>
 
 <p align="center">如果您喜欢本主题, 欢迎前往 <a href="https://github.com/Hi-Windom/winsay">Github</a> 为本项目点亮一个⭐！谢谢</p>
@@ -15,13 +15,16 @@
 ### 版本说明
 
 * 包含【SiYuan】标签的版本，建议更新思源至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
-* [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [关注后续版本开发动态](https://github.com/Hi-Windom/winsay/milestones)
+* [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [All version change log](https://github.com/Hi-Windom/Sofill/blob/main/CHANGELOG/winsay.md)
 
 ### v1.4 聚合说明
 
 > 2023-01-?? released
 
-<p><img src="https://img.shields.io/badge/SiYuan-2.6.2-green" alt="适配 SiYuan v2.6.2" title="建议先更新思源版本" style="cursor:pointer;height: 31px;margin: 1px;"/> <img src="https://img.shields.io/badge/%E5%81%9C%E6%AD%A2%E9%80%82%E9%85%8D-2.6.1---red" alt="停止适配 SiYuan v2.6.1 及更早版本" title="只是后续不再主动适配，不代表主题无法在这些版本的思源中使用" style="cursor:pointer;height: 31px;margin: 1px;"/> <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow" alt="这是一个构建版本" title="建议手动删除旧版本后再下载，而不是直接更新" style="cursor:pointer;height: 31px;margin: 1px;"/></p></p>
+<p><img src="https://img.shields.io/badge/SiYuan-2.6.2-green" alt="适配 SiYuan v2.6.2" title="建议先更新思源版本" style="cursor:pointer;height: 38px;margin: 3px auto;"/><img src="https://img.shields.io/badge/%E5%81%9C%E6%AD%A2%E9%80%82%E9%85%8D-2.6.1---red" alt="停止适配 SiYuan v2.6.1 及更早版本" title="只是后续不再主动适配，不代表主题无法在这些版本的思源中使用" style="cursor:pointer;height: 38px;margin: 3px;"/><img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow" alt="这是一个构建版本" title="建议手动删除旧版本后再下载，而不是直接更新" style="cursor:pointer;height: 38px;margin: 3px;"/> <br>
+<img src="https://img.shields.io/badge/Android-PASS-green?logo=Android" title="" style="margin: 3px auto;"/>
+<img src="https://img.shields.io/badge/Windows 11-PASS-green?logo=Windows 11" title="" style="margin: 3px auto;"/>
+</p>
 
 引入特性：
 
@@ -33,6 +36,8 @@
 1. [安卓手机端主题设置面板移除搜索项 · Issue #837 · v1.4.1](https://github.com/Hi-Windom/winsay/issues/837)
 2. [一次性通知延时通知 · Issue #842 · v1.4.3](https://github.com/Hi-Windom/winsay/issues/842)
 3. [README重要 badge 图片无法加载时显示替代文本 · Issue #845 · v1.4.4](https://github.com/Hi-Windom/winsay/issues/845)
+4. [集市版本更新日志使用badge显示真机适配测试通过 · Issue #854 · v1.4.6](https://github.com/Hi-Windom/winsay/issues/854)
+5. [body加入非订阅用户/订阅用户类名 · Issue #850 · v1.4.6](https://github.com/Hi-Windom/winsay/issues/850)
 
 修复缺陷：null
 
