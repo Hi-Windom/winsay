@@ -21,7 +21,10 @@
 
 > 2023-01-?? released
 
-<p><img src="https://img.shields.io/badge/SiYuan-2.6.2-green" alt="适配 SiYuan v2.6.2" title="建议先更新思源版本" style="cursor:pointer;height: 38px;margin: 3px auto;"/><img src="https://img.shields.io/badge/%E5%81%9C%E6%AD%A2%E9%80%82%E9%85%8D-2.6.1---red" alt="停止适配 SiYuan v2.6.1 及更早版本" title="只是后续不再主动适配，不代表主题无法在这些版本的思源中使用" style="cursor:pointer;height: 38px;margin: 3px;"/><img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow" alt="这是一个构建版本" title="建议手动删除旧版本后再下载，而不是直接更新" style="cursor:pointer;height: 38px;margin: 3px;"/> <br>
+<p>
+<img src="https://img.shields.io/badge/SiYuan-2.6.2-green" alt="适配 SiYuan v2.6.2" title="建议先更新思源版本" style="cursor:pointer;height: 38px;margin: 3px auto;"/>
+<img src="https://img.shields.io/badge/%E5%81%9C%E6%AD%A2%E9%80%82%E9%85%8D-2.6.1---red" alt="停止适配 SiYuan v2.6.1 及更早版本" title="只是后续不再主动适配，不代表主题无法在这些版本的思源中使用" style="cursor:pointer;height: 38px;margin: 3px;"/>
+<img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow" alt="这是一个构建版本" title="建议手动删除旧版本后再下载，而不是直接更新" style="cursor:pointer;height: 38px;margin: 3px;"/> <br>
 <img src="https://img.shields.io/badge/Android-PASS-green?logo=Android" title="" style="margin: 3px auto;"/>
 <img src="https://img.shields.io/badge/Windows 11-PASS-green?logo=Windows 11" title="" style="margin: 3px auto;"/>
 </p>
