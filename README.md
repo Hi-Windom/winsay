@@ -45,7 +45,9 @@
 6. [页签栏支持切换为默认主题样式 · Issue #852 · v1.4.7](https://github.com/Hi-Windom/winsay/issues/852)
 7. [关于页新增开源软件声明链接 · Issue #857 · v1.4.8](https://github.com/Hi-Windom/winsay/issues/857)
 
-修复缺陷：null
+修复缺陷：
+
+1. [垂直页签栏遮挡左下角弹出层 · Issue #866 · v1.4.9](https://github.com/Hi-Windom/winsay/issues/866)
 
 ## 🔭 更新预告
 
