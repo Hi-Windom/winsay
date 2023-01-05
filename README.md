@@ -34,6 +34,7 @@
 1. [文档内链接聚焦动效 · Issue #840 · v1.4.2](https://github.com/Hi-Windom/winsay/issues/840)
 2. [导出配置数据支持附加思源同步配置 · Issue #848 · v1.4.5](https://github.com/Hi-Windom/winsay/issues/848)
 3. [自动检测更新支持忽略小版本 · Issue #861 · v1.4.8](https://github.com/Hi-Windom/winsay/issues/861)
+4. [数据快照界面优化 · Issue #847 · v1.4.10](https://github.com/Hi-Windom/winsay/issues/847)
 
 改进优化：
 

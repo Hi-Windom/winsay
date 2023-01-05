@@ -1,5 +1,24 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
 
+#historyContainer>.history__repo li[data-type="repoitem"] {
+  border-radius: 13px;
+  border-top: 1px dashed #858585a5;
+  margin: 5.8px 10px 1.3px 22.5px;
+  padding: 3.1px 5.8px 1.3px 5.8px;
+}
+
+#historyContainer>.history__repo>ul>li>div>div:nth-child(2) {
+  display: flex;
+}
+
+#historyContainer>.history__repo>ul>li>div>div:nth-child(2)>.ft__smaller {
+  filter: brightness(1.31) sepia(1) opacity(0.88);
+}
+
+#historyContainer>.history__repo>ul>li>div>div:nth-child(2)>.b3-list-item__meta {
+  filter: brightness(1.31) opacity(0.38);
+}
+
 .b3-dialog__container.b3-dialog__container.b3-dialog__container.b3-dialog__container {
   opacity: var(--SCC-Variables-KeynesOpacity, 1);
 }
