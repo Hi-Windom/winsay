@@ -33,6 +33,7 @@
 
 1. [文档内链接聚焦动效 · Issue #840 · v1.4.2](https://github.com/Hi-Windom/winsay/issues/840)
 2. [导出配置数据支持附加思源同步配置 · Issue #848 · v1.4.5](https://github.com/Hi-Windom/winsay/issues/848)
+3. [自动检测更新支持忽略小版本 · Issue #861 · v1.4.8](https://github.com/Hi-Windom/winsay/issues/861)
 
 改进优化：
 
@@ -42,6 +43,7 @@
 4. [集市版本更新日志使用badge显示真机适配测试通过 · Issue #854 · v1.4.6](https://github.com/Hi-Windom/winsay/issues/854)
 5. [body加入非订阅用户/订阅用户类名 · Issue #850 · v1.4.6](https://github.com/Hi-Windom/winsay/issues/850)
 6. [页签栏支持切换为默认主题样式 · Issue #852 · v1.4.7](https://github.com/Hi-Windom/winsay/issues/852)
+7. [关于页新增开源软件声明链接 · Issue #857 · v1.4.8](https://github.com/Hi-Windom/winsay/issues/857)
 
 修复缺陷：null
 
