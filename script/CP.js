@@ -1622,6 +1622,7 @@ async function CP_AppearanceMonitor() {
     API.checkedChange(
       document.getElementById("SC_winsay_cp_appearance__CoolToolBar"),
       () => {
+        if (!document.body.classList.contains("user--Sub")) return;
         API.MoveDOM("#barTopHelp", "#sc_drawer");
         API.MoveDOM("#toolbarVIP", "#sc_drawer");
         API.CopyDOM("#barMode", "#sc_drawer");

@@ -23,7 +23,7 @@ if (navigator.userAgent.toLowerCase().startsWith("siyuan")) {
 } else {
   document.body.classList.add("client--browser");
 }
-setInterval(() => {
+function addUC() {
   if (window.siyuan.user == null) {
     document.body.classList.remove("user--Sub");
     document.body.classList.remove("user--NonSub");
@@ -37,6 +37,10 @@ setInterval(() => {
     document.body.classList.remove("user--Sub");
     document.body.classList.add("user--NonSub");
   }
+}
+addUC();
+setInterval(() => {
+  addUC();
 }, 3100);
 
 var isAppMode = document

@@ -1,6 +1,26 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
-body:not(.user--null)  .protyle-wysiwyg[contenteditable="false"]:active{
+body:not(.user--null) .protyle-wysiwyg[contenteditable="false"]:active {
   filter: sepia(1) opacity(.7);
+}
+
+body:not(.user--null) .protyle-title__input~.protyle-attr {
+  opacity: 1;
+  font-size: var(--SCC-Variables-protyle-attr-scale, 1);
+  letter-spacing: calc(var(--SCC-Variables-protyle-attr-scale, 1) * 1px);
+  transform: translateX(calc(var(--SCC-Variables-protyle-attr-scale, 1) * -5px));
+  transition: all .31s ease .13s;
+}
+
+body:not(.user--null) .protyle-title__input~.protyle-attr>div {
+  line-height: var(--SCC-Variables-protyle-attr-scale, 1);
+  display: flex !important;
+}
+
+body:not(.user--null) .protyle-title__input~.protyle-attr svg {
+  margin: auto calc(var(--SCC-Variables-protyle-attr-scale, 1) * 5px);
+  display: flex;
+  scale: var(--SCC-Variables-protyle-attr-scale, 1);
+  align-self: center;
 }
 
 #historyContainer>.history__repo li[data-type="repoitem"] {
@@ -254,13 +274,6 @@ body.body--mobile .emojis .block__icon svg {
 /* 搜索匹配列表分组辅助线（需开启搜索面板标号） #639 */
 #searchList>.b3-list-item+div:not([data-type=search-item]) {
   box-shadow: none;
-}
-
-.protyle-title__input~.protyle-attr {
-  opacity: 1;
-  scale: var(--SCC-Variables-protyle-attr-scale, 1);
-  letter-spacing: calc(var(--SCC-Variables-protyle-attr-scale, 1) * 1px);
-  transition: all .31s ease .13s;
 }
 
 .protyle-util span.b3-list-item__action.b3-tooltips.b3-tooltips__w[aria-label="打开文件位置"],
