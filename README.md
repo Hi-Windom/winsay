@@ -35,6 +35,7 @@
 2. [导出配置数据支持附加思源同步配置 · Issue #848 · v1.4.5](https://github.com/Hi-Windom/winsay/issues/848)
 3. [自动检测更新支持忽略小版本 · Issue #861 · v1.4.8](https://github.com/Hi-Windom/winsay/issues/861)
 4. [数据快照界面优化 · Issue #847 · v1.4.10](https://github.com/Hi-Windom/winsay/issues/847)
+5. [思源登录用户文档只读模式增强提示 · Issue #869 · v1.4.11](https://github.com/Hi-Windom/winsay/issues/869)
 
 改进优化：
 
@@ -85,7 +86,9 @@ Step 2 鼠标悬浮或左键单击右下角控件，在呼出的菜单中点击�
 
 集市已知主题中独家支持主题设置界面，拥有 70+ 可配置项，自定义专属于你的 Sofill
 
-亲爱的用户：我们推荐您搭配 [Remix-icon](https://github.com/mozhux/Remix-icon) 图标包使用 Sofill 系列主题
+美化覆盖率高达98%（统计包括移动端），可能是美化程度最高的第三方主题
+
+思源首款支持思源登录用户+订阅用户二级专属权益的主题
 
 ### 轻量化简洁风绛亽特色思源笔记主题
 

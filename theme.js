@@ -37,7 +37,7 @@ setInterval(() => {
     document.body.classList.remove("user--Sub");
     document.body.classList.add("user--NonSub");
   }
-}, 5800);
+}, 3100);
 
 var isAppMode = document
   .getElementsByTagName("body")[0]

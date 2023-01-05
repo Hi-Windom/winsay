@@ -1,4 +1,7 @@
 /* 补丁形式注入,随版本更新随时可能更改或移动到其他CSS文件 */
+body:not(.user--null)  .protyle-wysiwyg[contenteditable="false"]:active{
+  filter: sepia(1) opacity(.7);
+}
 
 #historyContainer>.history__repo li[data-type="repoitem"] {
   border-radius: 13px;
