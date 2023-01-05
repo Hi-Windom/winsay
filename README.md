@@ -46,6 +46,8 @@
 5. [body加入非订阅用户/订阅用户类名 · Issue #850 · v1.4.6](https://github.com/Hi-Windom/winsay/issues/850)
 6. [页签栏支持切换为默认主题样式 · Issue #852 · v1.4.7](https://github.com/Hi-Windom/winsay/issues/852)
 7. [关于页新增开源软件声明链接 · Issue #857 · v1.4.8](https://github.com/Hi-Windom/winsay/issues/857)
+8. [顶栏清爽模式加入订阅用户权益 · Issue #872 · v1.4.12](https://github.com/Hi-Windom/winsay/issues/872)
+9. [文档属性缩放加入登录用户权益 · Issue #871 · v1.4.12](https://github.com/Hi-Windom/winsay/issues/871)
 
 修复缺陷：
 
