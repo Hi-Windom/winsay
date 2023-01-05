@@ -22,7 +22,7 @@ var It_SelfProtector = null;
 var It_filterTimer = null;
 
 function switchlocalVersion() {
-  if (localStorage.getItem("SC_winsay_cp_search__about_checkAPI") == "Bazaar") {
+  if (localStorage.getItem("SC_winsay_cp_about__checkAPI") == "Bazaar") {
     return window.sofill.localVersion.useBazaar; // 简单省事,但是本地覆盖版本号不会生效
   } else {
     return window.sofill.localVersion.useGithub;
@@ -221,6 +221,15 @@ async function checkUpdateViaGithub(v, q) {
   }).then(async function (response) {
     // console.log(response);
     let version = response["tag_name"];
+    let SVN = localStorage.getItem("SC_winsay_cp_about__AutoCheckIgnoreSVN");
+    if (SVN == "true") {
+      let x = v.split(".");
+      x.splice(-1);
+      v = x.join(".");
+      let y = version.split(".");
+      y.splice(-1);
+      version = y.join(".");
+    }
     if (API.compareVersion(version, v) == 1) {
       console.warn("Github 有新版本发布");
       let updating = new ConfirmDialog({
@@ -263,7 +272,7 @@ async function checkUpdateViaGithub(v, q) {
 }
 async function checkUpdateViaBazaar(v, q) {
   let themes = await getBazaarTheme(window.location.host, "", {});
-  console.log(themes.data);
+  // console.log(themes.data);
   // let localThemes = await getInstalledTheme(window.location.host, "", {});
   // console.log(localThemes.data);
 
@@ -296,8 +305,7 @@ function updateTheme(themeName) {
     !document.body.classList.contains("client--browser")
   ) {
     setTimeout(() => {
-      localStorage.getItem("SC_winsay_cp_search__about_AutoToUpdateMobile") ==
-      "true"
+      localStorage.getItem("SC_winsay_cp_about__AutoToUpdateMobile") == "true"
         ? window.open(
             `http://0.0.0.0:6806/stage/build/desktop/?action=next&name=update-winsay&args=${encodeURIComponent(
               window.siyuan.config.localIPs[0] + ":6806"
@@ -322,7 +330,7 @@ function updateTheme(themeName) {
 }
 
 async function checkUpdate(q = false) {
-  let mode = localStorage.getItem("SC_winsay_cp_search__about_checkAPI");
+  let mode = localStorage.getItem("SC_winsay_cp_about__checkAPI");
   let v = switchlocalVersion();
   switch (mode) {
     case "Github":
@@ -537,16 +545,14 @@ document
     );
     sy_editor == "true"
       ? (jsonData.sy_editor = window.siyuan.config.editor)
-      : (jsonData.sy_editor = '禁用了附加这部分数据');
+      : (jsonData.sy_editor = "禁用了附加这部分数据");
     let sy_keymap = localStorage.getItem(
       "SC_winsay_cp__exportData__EXT_sy_keymap"
     );
     sy_keymap == "true"
       ? (jsonData.sy_keymap = window.siyuan.config.keymap)
-      : (jsonData.sy_keymap = '禁用了附加这部分数据');
-    let sy_sync = localStorage.getItem(
-      "SC_winsay_cp__exportData__EXT_sy_sync"
-    );
+      : (jsonData.sy_keymap = "禁用了附加这部分数据");
+    let sy_sync = localStorage.getItem("SC_winsay_cp__exportData__EXT_sy_sync");
     sy_sync == "true"
       ? (() => {
           jsonData.sy_sync = window.siyuan.config.sync;
@@ -554,8 +560,8 @@ document
           console.error("SYNC ERROR");
         })()
       : (() => {
-          jsonData.sy_sync = '禁用了附加这部分数据';
-          jsonData.sy_repo = '禁用了附加这部分数据';
+          jsonData.sy_sync = "禁用了附加这部分数据";
+          jsonData.sy_repo = "禁用了附加这部分数据";
         })();
     var blob = new Blob([JSON.stringify(jsonData)]);
     link.href = URL.createObjectURL(blob); //  创建一个 URL 对象并传给 a 的 href
@@ -2124,17 +2130,16 @@ setTimeout(async () => {
   await CP_Monitors();
 });
 
-API.propChange("SC_winsay_cp_search__about_checkTime", function () {
-  var i = localStorage.getItem("SC_winsay_cp_search__about_checkTime");
+API.propChange("SC_winsay_cp_about__checkTime", function () {
+  var i = localStorage.getItem("SC_winsay_cp_about__checkTime");
   if (!API.isEmpty(i)) {
     switch (i) {
       case "Once":
         getlocalVersion();
         if (
           document.querySelector("#SC-CP").style.display == "none" &&
-          localStorage.getItem(
-            "SC_winsay_cp_search__about_AutoCheckSilently"
-          ) == "true"
+          localStorage.getItem("SC_winsay_cp_about__AutoCheckSilently") ==
+            "true"
         ) {
           setTimeout(() => {
             checkUpdate(true);
@@ -2682,8 +2687,8 @@ API.checkedChange(
     }
   }
 );
-API.propChange("SC_winsay_cp_search__about_checkAPI", function () {
-  var i = localStorage.getItem("SC_winsay_cp_search__about_checkAPI");
+API.propChange("SC_winsay_cp_about__checkAPI", function () {
+  var i = localStorage.getItem("SC_winsay_cp_about__checkAPI");
   if (!API.isEmpty(i)) {
     let vv = switchlocalVersion();
     vv
@@ -2708,12 +2713,17 @@ API.checkedChange(
   () => {}
 );
 API.checkedChange(
-  document.getElementById("SC_winsay_cp_search__about_AutoCheckSilently"),
+  document.getElementById("SC_winsay_cp_about__AutoCheckSilently"),
   () => {},
   () => {}
 );
 API.checkedChange(
-  document.getElementById("SC_winsay_cp_search__about_AutoToUpdateMobile"),
+  document.getElementById("SC_winsay_cp_about__AutoToUpdateMobile"),
+  () => {},
+  () => {}
+);
+API.checkedChange(
+  document.getElementById("SC_winsay_cp_about__AutoCheckIgnoreSVN"),
   () => {},
   () => {}
 );
