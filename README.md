@@ -48,6 +48,7 @@
 7. [关于页新增开源软件声明链接 · Issue #857 · v1.4.8](https://github.com/Hi-Windom/winsay/issues/857)
 8. [顶栏清爽模式加入订阅用户权益 · Issue #872 · v1.4.12](https://github.com/Hi-Windom/winsay/issues/872)
 9. [文档属性缩放加入登录用户权益 · Issue #871 · v1.4.12](https://github.com/Hi-Windom/winsay/issues/871)
+10. [导出配置数据支持安卓端 · Issue #877 · v1.4.14](https://github.com/Hi-Windom/winsay/issues/877)
 
 修复缺陷：
 
@@ -82,7 +83,7 @@
 
 美化覆盖率高达98%（统计包括移动端），可能是美化程度最高的第三方主题
 
-安卓平台最佳主题，已解决超 50 项安卓专属 issue，手机端与平板双端独立优化
+安卓平台最佳主题，已解决超 50 项安卓专属 issue，手机与平板双端独立优化
 
 思源首款支持思源登录用户+订阅用户二级专属权益的主题
 

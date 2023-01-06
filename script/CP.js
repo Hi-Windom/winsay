@@ -5,7 +5,7 @@ import * as config from "./config.js";
 import { iterLC, iterDC } from "./module/SSS.js";
 var fs = null;
 var path = null;
-if (API.isAppMode()) {
+if (API.isDesktopAppMode()) {
   fs = require("fs");
   path = require("path");
 }
@@ -557,48 +557,48 @@ document
       ? (() => {
           jsonData.sy_sync = window.siyuan.config.sync;
           jsonData.sy_repo = window.siyuan.config.repo;
-          console.error("SYNC ERROR");
         })()
       : (() => {
           jsonData.sy_sync = "禁用了附加这部分数据";
           jsonData.sy_repo = "禁用了附加这部分数据";
         })();
-    var blob = new Blob([JSON.stringify(jsonData)]);
-    link.href = URL.createObjectURL(blob); //  创建一个 URL 对象并传给 a 的 href
-    link.download = `Sofill-ConfigData.json`; //  设置下载的默认文件名
-    link.click(); //  点击下载链接
-    API.通知(`导出成功 ${ok}/${counter}`);
-    if (
-      document.getElementsByTagName("body")[0].classList.contains("android")
-        ? false
-        : document
-            .getElementsByTagName("body")[0]
-            .classList.contains("body--desktop")
-        ? false
-        : window.siyuan.config.system.os == "windows"
-        ? true
-        : false
-    ) {
-      fs
-        ? fs.writeFile(
-            `${window.siyuan.config.system.dataDir}/snippets/Sofill-ConfigData.json`,
-            JSON.stringify(jsonData),
-            "utf-8",
-            function (err) {
-              if (err) {
-                console.error(err);
-              } else {
-                console.log("Write successfully~~");
-              }
-            }
-          )
-        : console.log("platform not supported");
+    if (API.isPhoneAppMode()) {
+      if (document.body.classList.contains("user--Sub")) {
+        API.putFile(
+          `/data/snippets/Sofill-ConfigData__${Date.now()}.json`,
+          JSON.stringify(jsonData)
+        );
+        API.通知(
+          `导出 ${ok}/${counter}<br>【订阅用户权益生效提示】备份已保存到同步文件夹 ${window.siyuan.config.system.dataDir}/snippets/`
+        );
+      } else {
+        API.通知("平台受限，仅支持订阅用户导出");
+      }
     } else {
-      var repo = API.putFile(
-        `/data/snippets/Sofill-ConfigData.json`,
-        JSON.stringify(jsonData)
-      );
-      console.log(repo);
+      var blob = new Blob([JSON.stringify(jsonData)]);
+      link.href = URL.createObjectURL(blob); //  创建一个 URL 对象并传给 a 的 href
+      link.download = `Sofill-ConfigData.json`; //  设置下载的默认文件名
+      link.click(); //  点击下载链接
+      API.通知(`导出 ${ok}/${counter}`);
+      if (fs && document.body.classList.contains("user--Sub")) {
+        fs.writeFile(
+          `${
+            window.siyuan.config.system.dataDir
+          }/snippets/Sofill-ConfigData__${Date.now()}.json`,
+          JSON.stringify(jsonData),
+          "utf-8",
+          function (err) {
+            if (err) {
+              console.error(err);
+            } else {
+              console.log("Write successfully~~");
+              API.通知(
+                `【订阅用户权益生效提示】备份已保存到同步文件夹 ${window.siyuan.config.system.dataDir}/snippets/`
+              );
+            }
+          }
+        );
+      }
     }
   });
 

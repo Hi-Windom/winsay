@@ -2,7 +2,7 @@ import * as config from "../config.js";
 import * as API from "../utils/api.min.js";
 var fs = null;
 var oncePath = `${config.winsay_ROOT_ABS}/script/module/AlertOnce.js`;
-if (API.isAppMode()) {
+if (API.isDesktopAppMode()) {
   fs = require("fs");
 }
 
