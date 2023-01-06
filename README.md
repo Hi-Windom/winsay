@@ -49,6 +49,7 @@
 8. [顶栏清爽模式加入订阅用户权益 · Issue #872 · v1.4.12](https://github.com/Hi-Windom/winsay/issues/872)
 9. [文档属性缩放加入登录用户权益 · Issue #871 · v1.4.12](https://github.com/Hi-Windom/winsay/issues/871)
 10. [导出配置数据支持安卓端 · Issue #877 · v1.4.14](https://github.com/Hi-Windom/winsay/issues/877)
+11. [取消压缩 Block.css 和 Popup.css 并用 less 构建 · Issue #839 · v1.4.15](https://github.com/Hi-Windom/winsay/issues/839)
 
 修复缺陷：
 
