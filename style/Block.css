@@ -25,19 +25,6 @@
   margin: 0 1px;
   border-radius: 8px 9px 9px 2px;
 }
-/* 普通标签tag样式 */
-/* .protyle-wysiwyg [data-node-id]:not([data-type="NodeHeading"]) span[data-type~=tag] {
-    background-color: var(--b3-theme-primary-lightest);
-    transition: all .2s cubic-bezier(0.645, 0.045, 0.355, 1);
-    color: var(--text-focus);
-    border-radius: 5px;
-    position: relative;
-    padding: .13rem .5rem .13rem .2rem;
-    font-size: 85%;
-    box-shadow: var(--SCColor) 3.6em 0px 0px -2.2em inset;
-    border-right: 1px outset;
-    margin: .2rem;
-} */
 .protyle-wysiwyg [data-node-id] span[data-type~=tag] {
   background-color: var(--b3-theme-surface-lighter);
   transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -50,14 +37,6 @@
   font-size: 85%;
   letter-spacing: 0.03rem;
 }
-/* 普通标签tag样式的前缀部分 */
-/* .protyle-wysiwyg [data-node-id]:not([data-type="NodeHeading"]) span[data-type~=tag]::before {
-    content: "#";
-    color: var(--SCC-White);
-    display: inline-block;
-    margin-right: .2rem;
-    padding: .2rem .5rem .2rem .1rem;
-} */
 .protyle-wysiwyg [data-node-id] span[data-type~=tag]::before {
   content: "#";
   display: inline-block;
@@ -206,6 +185,14 @@ a:hover {
   border-bottom: 1.86px solid var(--b3-theme-primary);
   background-color: var(--SCC-Component-Inline-virtual-block-ref-bg-color-hover);
   transition: none;
+}
+span[data-type~=a] {
+  border-bottom: 0px solid transparent !important;
+}
+span[data-type~=a]:hover {
+  color: var(--b3-theme-primary) !important;
+  transition: all 0.58s cubic-bezier(1, -2.21, 0.76, 3.52) 0s !important;
+  border-bottom: 2px solid !important;
 }
 /* 文档标题样式 */
 .protyle-title__input {
@@ -490,13 +477,6 @@ body:not(.body--mobile) .protyle-wysiwyg .code-block {
   border-radius: 1px;
   font-family: var(--b3-font-family-code);
 }
-/* .code-block .protyle-action .protyle-action__language::before {
-  content: "lang::";
-  font-family: var(--b3-font-family-code);
-  color: var(--SCC-baseComponent-CodeBlock-ab-color);
-  top: 2px;
-  bottom: 1px;
-} */
 .code-block .protyle-action .protyle-action__language::after {
   content: "🎨";
   font-family: var(--b3-font-family-code);
@@ -700,16 +680,6 @@ body:focus-within div[data-type="NodeBlockQueryEmbed"]:has(.protyle-wysiwyg__emb
 .protyle-wysiwyg [data-node-id].hr > div {
   visibility: hidden;
 }
-/* 普通虚线 */
-/* .protyle-wysiwyg [data-node-id].hr {
-  border: 0;
-  border-top: 2px dashed #58588858;
-} */
-/* 双实线 */
-/* .protyle-wysiwyg [data-node-id].hr {
-  border: 0;
-  border-top: 6px double #58588858;
-} */
 /* 两头虚的分隔线 */
 .protyle-wysiwyg [data-node-id].hr {
   border: 0;
