@@ -127,7 +127,7 @@ window.sofill.funs.updateStyle(
 // 根据主题加载
 window.sofill.funs.updateStyle(
   "CP",
-  `/appearance/themes/Sofill-/style/CP.min.css`
+  `/appearance/themes/Sofill-/style/CP.css`
 );
 switch (config.ThemeName) {
   case "Sofill=":
