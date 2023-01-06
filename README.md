@@ -48,6 +48,7 @@
 7. [关于页新增开源软件声明链接 · Issue #857 · v1.4.8](https://github.com/Hi-Windom/winsay/issues/857)
 8. [顶栏清爽模式加入订阅用户权益 · Issue #872 · v1.4.12](https://github.com/Hi-Windom/winsay/issues/872)
 9. [文档属性缩放加入登录用户权益 · Issue #871 · v1.4.12](https://github.com/Hi-Windom/winsay/issues/871)
+10. [导出配置数据支持安卓端 · Issue #877 · v1.4.14](https://github.com/Hi-Windom/winsay/issues/877)
 
 修复缺陷：
 
