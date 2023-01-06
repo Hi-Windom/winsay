@@ -1,7 +1,7 @@
 import * as API from "../utils/api.min.js";
 import * as config from "../config.js";
 var fs = null;
-if (API.isAppMode()) {
+if (API.isDesktopAppMode()) {
   fs = require("fs");
 }
 
