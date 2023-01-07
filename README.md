@@ -19,7 +19,7 @@
 
 ### v1.4 聚合说明
 
-> 2023-01-?? released
+> 2023-01-07 released
 
 <p>
 <img src="https://img.shields.io/badge/SiYuan-2.6.2-green" alt="适配 SiYuan v2.6.2" title="建议先更新思源版本" style="cursor:pointer;height: 38px;margin: 3px auto;"/>
@@ -74,6 +74,8 @@
 
 思源首款支持思源登录用户+订阅用户二级专属权益的主题
 
+[ Hellise Potter ] 传承，从容面对各种极端环境
+
 ### 轻量化简洁风绛亽特色思源笔记主题
 
 [Sofill 系列主题对比](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E4%B8%BB%E9%A2%98%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9)  |  [Sofill 系列主题时间线 ](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E5%AE%B6%E6%97%8F%E6%97%B6%E9%97%B4%E7%BA%BF)
@@ -121,26 +123,6 @@ Step 2 鼠标悬浮或左键单击右下角控件，在呼出的菜单中点击�
 也可以在主题设置中切换：
 
 <img src="https://b3logfile.com/siyuan/1662398123089/assets/image-20230101182746-lnyr798.png"/>
-
----
-
-## 🎯 Sofill- 重点目标
-
-1. 非常重视导出PDF
-2. 非常重视双链
-3. 非常重视与默认主题的兼容性与思源的向后兼容性
-4. 非常重视 Android 端适配（包括 Android Pad），弥补默认主题在移动端的不足
-5. 非常重视主题包的轻量化，主题包大小不会超过 3 MB
-6. 重视浏览器环境的使用体验
-7. 重视不同窗口大小的适配（源自 [ Hellise Potter ] ）
-8. 重视过渡动画（对机器性能有一定的要求）
-9. 重视极端使用环境（源自 [ Hellise Potter ] ）
-
-## 🧬 手机端安装指南
-
-1. 在手机端 `关于` 中开启网络伺服
-2. 在另外一台电脑或 Pad 浏览器中访问手机端伺服的URL
-3. 从集市下载主题，然后重启手机端，在 `外观` 中选择下载的主题
 
 ## 🎈 [鸣谢](https://github.com/Hi-Windom/Sofill/blob/main/P%26L.md)
 
