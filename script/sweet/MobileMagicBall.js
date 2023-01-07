@@ -39,7 +39,10 @@ class PinchZoom {
         if (elm.childNodes[1].getAttribute("contenteditable") == "true") {
           elm.style.transform = "";
           return;
-        } else if (ev.type === "tap" && window.sofill.cp.TapAlert_docReadOnly == true) {
+        } else if (
+          ev.type === "tap" &&
+          window.sofill.cp.TapAlert_docReadOnly == true
+        ) {
           API.通知("当前只读模式");
         }
 
@@ -130,7 +133,10 @@ setTimeout(() => {
   hammertime.get("singletap").requireFailure("doubletap");
   hammertime
     .on("doubletap", function (ev) {
-      API.通知("双击事件");
+      // API.通知("双击事件");
+      document.body.classList.contains("music-mode")
+        ? document.body.classList.remove("music-mode")
+        : document.body.classList.add("music-mode");
     })
     .on("singletap", function (ev) {
       let id = API.getFocusedDocID();
