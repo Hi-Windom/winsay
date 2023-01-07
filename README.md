@@ -27,6 +27,7 @@
 <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow" alt="这是一个构建版本" title="建议手动删除旧版本后再下载，而不是直接更新" style="cursor:pointer;height: 38px;margin: 3px;"/> <br>
 <img src="https://img.shields.io/badge/Android-PASS-green?logo=Android" title="" style="margin: 3px auto;"/>
 <img src="https://img.shields.io/badge/Windows 11-PASS-green?logo=Windows 11" title="" style="margin: 3px auto;"/>
+<img src="https://img.shields.io/badge/Docker-PASS-green?logo=Docker" title="" style="margin: 3px auto;"/>
 </p>
 
 引入特性：
@@ -36,6 +37,7 @@
 3. [自动检测更新支持忽略小版本 · Issue #861 · v1.4.8](https://github.com/Hi-Windom/winsay/issues/861)
 4. [数据快照界面优化 · Issue #847 · v1.4.10](https://github.com/Hi-Windom/winsay/issues/847)
 5. [思源登录用户文档只读模式增强提示 · Issue #869 · v1.4.11](https://github.com/Hi-Windom/winsay/issues/869)
+6. [安卓手机端支持状态栏歌词模式 · Issue #874 · v1.4.17](https://github.com/Hi-Windom/winsay/issues/874)
 
 改进优化：
 
@@ -55,23 +57,6 @@
 修复缺陷：
 
 1. [垂直页签栏遮挡左下角弹出层 · Issue #866 · v1.4.9](https://github.com/Hi-Windom/winsay/issues/866)
-
-## 🔭 更新预告
-
-### 短期计划💥
-
-* [ ] 持续扩大跟随主题形态的样式范围
-* [ ] 持续完善主题设置面板
-* [ ] Android Pad 端专注模式 **#830**
-* [ ] 持续完善安卓手机端悬浮球
-* [ ] 支持通过主题设置界面劫持搜索输入框（仅桌面端） **#773**
-* [ ] 搜索布局适配优化 **#776**
-
-### 中期计划⛳
-
-* [ ] 暗黑模式计划增加午夜风暴
-* [ ] S3形态
-* [ ] [提供接口 · Issue #425](https://github.com/Hi-Windom/winsay/issues/425)
 
 ## 🏳️‍🌈 主题特色介绍
 

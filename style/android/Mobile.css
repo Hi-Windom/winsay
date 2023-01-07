@@ -1,16 +1,21 @@
-body.android input#toolbarName {
+body.body--mobile #toolbarName {
   width: 200px !important;
 }
 
-body.android input#toolbarName:focus {
+body.body--mobile #toolbarName:focus {
   width: 217px !important;
 }
 
-body.android input#toolbarName:focus+div {
+body.body--mobile #toolbarName:focus+div {
   display: none;
 }
 
-body.android .toolbar.toolbar--border #toolbarMore {
+body.body--mobile.music-mode #toolbarName:not(:focus) {
+  opacity: 0.13;
+  filter:brightness(0.13) blur(22px);
+}
+
+body.body--mobile .toolbar.toolbar--border #toolbarMore {
   margin-right: 8px;
 }
 
