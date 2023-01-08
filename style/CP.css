@@ -30,7 +30,7 @@
   letter-spacing: 0.58px;
   overflow-wrap: anywhere;
 }
-@media screen and (min-width: 960px) {
+@media (min-width: 960px) {
   #SC-CP .sc-custom-nav {
     display: flex;
     flex-direction: column;
@@ -42,7 +42,7 @@
     min-width: 97%;
   }
 }
-@media screen and (max-width: 960px) {
+@media (max-width: 960px) {
   #SC-CP .sc-custom-nav {
     user-select: none;
     width: 100%;
@@ -73,7 +73,7 @@
     display: none;
   }
 }
-@media screen and (max-width: 960px) {
+@media (max-width: 960px) {
   #SC-CP .sc-tab-container label {
     align-items: center;
     flex-direction: column;
