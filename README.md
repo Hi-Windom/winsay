@@ -38,6 +38,7 @@
 
 1. [取消压缩 SCC.css · Issue #888 · v1.5.2](https://github.com/Hi-Windom/winsay/issues/888)
 2. [合并 MI 相关的几个 CSS 文件并使用 less 构建 · Issue #860 · v1.5.3](https://github.com/Hi-Windom/winsay/issues/860)
+3. [Mobile 部分 CSS 使用 less 构建 · Issue #891 · v1.5.4](https://github.com/Hi-Windom/winsay/issues/891)
 
 修复缺陷：NULL
 
