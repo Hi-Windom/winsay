@@ -84,7 +84,7 @@ window.sofill.funs.updateStyle(
 );
 window.sofill.funs.updateStyle(
   "SCC",
-  `/appearance/themes/Sofill-/style/SCC.min.css`
+  `/appearance/themes/Sofill-/style/SCC.css`
 );
 window.sofill.funs.updateStyle(
   "Popup",
