@@ -23,6 +23,14 @@ if (navigator.userAgent.toLowerCase().startsWith("siyuan")) {
 } else {
   document.body.classList.add("client--browser");
 }
+switch (window.siyuan.config.appearance.mode) {
+  case 1:
+    document.body.classList.add("mode--dark");
+    break;
+  default:
+    document.body.classList.add("mode--light");
+    break;
+}
 function addUC() {
   if (window.siyuan.user == null) {
     document.body.classList.remove("user--Sub");
