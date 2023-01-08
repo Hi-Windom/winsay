@@ -34,7 +34,9 @@
 
 1. [明暗模式基础类 · Issue #886 · v1.5.1](https://github.com/Hi-Windom/winsay/issues/886)
 
-改进优化：NULL
+改进优化：
+
+1. [取消压缩 SCC.css · Issue #888 · v1.5.2](https://github.com/Hi-Windom/winsay/issues/888)
 
 修复缺陷：NULL
 
