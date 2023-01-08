@@ -54,7 +54,7 @@ switch (window.sofill.OS) {
   case "android":
     window.sofill.funs.updateStyle(
       "Mobile",
-      `/appearance/themes/Sofill-/style/android/Mobile.css`
+      `/appearance/themes/Sofill-/style/Mobile/Android.css`
     );
     break;
   default:
