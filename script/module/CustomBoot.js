@@ -47,33 +47,17 @@ ghostTabBar();
 
 window.sofill.funs.updateStyle(
   "MI",
-  `/appearance/themes/Sofill-/style/MI.min.css`
+  `/appearance/themes/Sofill-/style/MI.css`
 );
 /* 根据不同设备加载样式配置文件 */
 switch (window.sofill.OS) {
   case "android":
-    window.sofill.funs.updateStyle(
-      "MI-DocTree",
-      `/appearance/themes/Sofill-/style/MI-DocTree.css`
-    );
-    window.sofill.funs.updateStyle(
-      "MI-Doc&Breadcrumb",
-      `/appearance/themes/Sofill-/style/MI-Doc.css`
-    );
     window.sofill.funs.updateStyle(
       "Mobile",
       `/appearance/themes/Sofill-/style/android/Mobile.css`
     );
     break;
   default:
-    window.sofill.funs.updateStyle(
-      "MI-DocTree",
-      `/appearance/themes/Sofill-/style/MI-DocTree.css`
-    );
-    window.sofill.funs.updateStyle(
-      "MI-Doc&Breadcrumb",
-      `/appearance/themes/Sofill-/style/MI-Doc.css`
-    );
     break;
 }
 
@@ -98,22 +82,6 @@ window.sofill.funs.updateStyle(
 window.sofill.funs.updateStyle(
   "MI-ToolBar-Auto",
   `/appearance/themes/Sofill-/style/sweet/MI-ToolBar-Auto.css`
-);
-window.sofill.funs.updateStyle(
-  "MI-TabBar-Common",
-  `/appearance/themes/Sofill-/style/MI-TabBar-Common.css`
-);
-window.sofill.funs.updateStyle(
-  "MI-TagTree",
-  `/appearance/themes/Sofill-/style/MI-TagTree.css`
-);
-window.sofill.funs.updateStyle(
-  "MI-HDTree",
-  `/appearance/themes/Sofill-/style/MI-HDTree.css`
-);
-window.sofill.funs.updateStyle(
-  "MI-Dock",
-  `/appearance/themes/Sofill-/style/MI-Dock.css`
 );
 window.sofill.funs.updateStyle(
   "Funs-list2",
