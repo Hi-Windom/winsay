@@ -27,11 +27,11 @@
     --b3-toolbar-color: var(--SCC-White-light);
 
     /* 自定义颜色 */
-    --b3-font-color1: var(--SCC-CNTC-月白);
-    --b3-font-color2: var(--SCC-CNTC-朱砂);
-    --b3-font-color3: var(--SCC-CNTC-橘红);
-    --b3-font-color4: var(--SCC-CNTC-姜黄);
-    --b3-font-color5: var(--SCC-CNTC-牙色);
+    --b3-font-color1: var(--SCC-SGTC-14A);
+    --b3-font-color2: var(--SCC-CNTC-松花色);
+    --b3-font-color3: var(--SCC-SGTC-31D);
+    --b3-font-color4: var(--SCC-CNTC-竹青);
+    --b3-font-color5: var(--SCC-SGTC-31A);
     --b3-font-color6: var(--SCC-CNTC-中度灰);
     --b3-font-color7: var(--SCC-Pink-WPS);
     --b3-font-color8: var(--SCC-CNTC-翡翠色);
