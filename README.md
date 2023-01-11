@@ -40,6 +40,7 @@
 2. [合并 MI 相关的几个 CSS 文件并使用 less 构建 · Issue #860 · v1.5.3](https://github.com/Hi-Windom/winsay/issues/860)
 3. [Mobile 部分 CSS 使用 less 构建 · Issue #891 · v1.5.4](https://github.com/Hi-Windom/winsay/issues/891)
 4. [墨绿紫+青葱绿形态字色双忙测试验收通过 · Issue #849 · v1.5.6](https://github.com/Hi-Windom/winsay/issues/849)
+5. [适配Sofill#新字体接口 · Issue #898 · v1.5.7](https://github.com/Hi-Windom/winsay/issues/898)
 
 修复缺陷：NULL
 
