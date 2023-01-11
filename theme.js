@@ -1,6 +1,7 @@
 window.sofill = {};
 window.sofill.cp = {};
 window.sofill.funs = {};
+window.sofill.ekits = {};
 var fs = null;
 var path = null;
 var clientMode = (() => {

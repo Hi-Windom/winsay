@@ -6,6 +6,11 @@ if (API.isDesktopAppMode()) {
   fs = require("fs");
 }
 
+window.sofill.ekits.gites = {
+  UPath: `/appearance/themes/Sofill=/eHiWindom/gites/`
+};
+window.sofill.ekits.lnco = {};
+
 // 初始化获取用户配置
 let SC_winsay_cp_appearance__TabBarMode = localStorage.getItem(
   "SC_winsay_cp_appearance__TabBarMode"
@@ -45,10 +50,7 @@ async function ghostTabBar() {
 
 ghostTabBar();
 
-window.sofill.funs.updateStyle(
-  "MI",
-  `/appearance/themes/Sofill-/style/MI.css`
-);
+window.sofill.funs.updateStyle("MI", `/appearance/themes/Sofill-/style/MI.css`);
 /* 根据不同设备加载样式配置文件 */
 switch (window.sofill.OS) {
   case "android":
@@ -58,6 +60,10 @@ switch (window.sofill.OS) {
     );
     break;
   default:
+    window.sofill.funs.updateStyle(
+      "fonts",
+      `${window.sofill.ekits.gites.UPath}style/fonts.css`
+    );
     break;
 }
 
@@ -93,21 +99,18 @@ window.sofill.funs.updateStyle(
 );
 
 // 根据主题加载
-window.sofill.funs.updateStyle(
-  "CP",
-  `/appearance/themes/Sofill-/style/CP.css`
-);
+window.sofill.funs.updateStyle("CP", `/appearance/themes/Sofill-/style/CP.css`);
 switch (config.ThemeName) {
   case "Sofill=":
     window.sofill.funs.updateStyle(
-      "CP-lili",
+      "CP-themely",
       `/appearance/themes/Sofill=/style/CP-lili.css`
     );
     break;
   case "Sofill-":
   default:
     window.sofill.funs.updateStyle(
-      "CP-winsay",
+      "CP-themely",
       `/appearance/themes/Sofill-/style/CP-winsay.css`
     );
     break;

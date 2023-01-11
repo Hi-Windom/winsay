@@ -40,6 +40,7 @@
 2. [合并 MI 相关的几个 CSS 文件并使用 less 构建 · Issue #860 · v1.5.3](https://github.com/Hi-Windom/winsay/issues/860)
 3. [Mobile 部分 CSS 使用 less 构建 · Issue #891 · v1.5.4](https://github.com/Hi-Windom/winsay/issues/891)
 4. [墨绿紫+青葱绿形态字色双忙测试验收通过 · Issue #849 · v1.5.6](https://github.com/Hi-Windom/winsay/issues/849)
+5. [适配Sofill#新字体接口 · Issue #898 · v1.5.7](https://github.com/Hi-Windom/winsay/issues/898)
 
 修复缺陷：NULL
 
@@ -63,11 +64,13 @@
 
 ### 轻量化简洁风绛亽特色思源笔记主题
 
-[Sofill 系列主题对比](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E4%B8%BB%E9%A2%98%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9)  |  [Sofill 系列主题时间线 ](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E5%AE%B6%E6%97%8F%E6%97%B6%E9%97%B4%E7%BA%BF)
+依托海文东互联能力，构建无限可能
 
 Sofill- 主题颜色 [绛亽标准色](https://github.com/Hi-Windom/Sofill/wiki/Sofill-%E7%B3%BB%E5%88%97%E4%B8%BB%E9%A2%98%E9%80%9A%E7%94%A8%E6%A0%87%E5%87%86%E8%89%B2) + CNTC + SGTC 设计
 
-Sofill- 适合哪些人：13~58岁非色弱人群；青少年请在家长指导下观看，切勿沉迷
+Sofill- 适合哪些人：13~58岁非色弱人群；
+
+注意事项：青少年请在家长指导下观看，切勿沉迷
 
 ---
 
