@@ -180,7 +180,7 @@ if (config.clientMode == "body--mobile") {
     };
   }
 
-  if (document.querySelector(".android.body--desktop")) {
+  if (document.querySelector("body.android.body--desktop")) {
     let icon = `<svg><use xlink:href="#iconQuit"></use></svg>`;
     let t = document.querySelector("#toolbar");
     let div = document.createElement("div");
@@ -190,14 +190,18 @@ if (config.clientMode == "body--mobile") {
     div.innerHTML = icon;
     t.insertAdjacentElement("beforeend", div);
     div.onclick = function () {
-      document.querySelector("#toolbar #barSetting").click();
-      document
-        .querySelector('.b3-tab-bar:not(.sc-custom-nav) [data-name="about"]')
-        .click();
-      setTimeout(() => {
-        document.querySelector("#menuSafeQuit").click();
-        document.elementFromPoint(1, 1).click();
-      }, 500);
+      if (document.body.classList.contains("client--browser")) {
+        document.querySelector("#toolbar #barSetting").click();
+        document
+          .querySelector('.b3-tab-bar:not(.sc-custom-nav) [data-name="about"]')
+          .click();
+        setTimeout(() => {
+          document.querySelector("#menuSafeQuit").click();
+          document.elementFromPoint(1, 1).click();
+        }, 500);
+      } else {
+        window.location.href = "siyuan://api/system/exit";
+      }
     };
   }
 }
