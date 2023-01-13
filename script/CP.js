@@ -180,7 +180,7 @@ if (config.clientMode == "body--mobile") {
     };
   }
 
-  if (document.querySelector(".android.body--desktop")) {
+  if (document.querySelector("body.android.body--desktop")) {
     let icon = `<svg><use xlink:href="#iconQuit"></use></svg>`;
     let t = document.querySelector("#toolbar");
     let div = document.createElement("div");
@@ -190,21 +190,25 @@ if (config.clientMode == "body--mobile") {
     div.innerHTML = icon;
     t.insertAdjacentElement("beforeend", div);
     div.onclick = function () {
-      document.querySelector("#toolbar #barSetting").click();
-      document
-        .querySelector('.b3-tab-bar:not(.sc-custom-nav) [data-name="about"]')
-        .click();
-      setTimeout(() => {
-        document.querySelector("#menuSafeQuit").click();
-        document.elementFromPoint(1, 1).click();
-      }, 500);
+      if (document.body.classList.contains("client--browser")) {
+        document.querySelector("#toolbar #barSetting").click();
+        document
+          .querySelector('.b3-tab-bar:not(.sc-custom-nav) [data-name="about"]')
+          .click();
+        setTimeout(() => {
+          document.querySelector("#menuSafeQuit").click();
+          document.elementFromPoint(1, 1).click();
+        }, 500);
+      } else {
+        window.location.href = "siyuan://api/system/exit";
+      }
     };
   }
 }
 
 async function checkUpdateViaGithub(v, q) {
-  let themes = await getBazaarTheme(window.location.host, "", {});
-  let localThemes = await getInstalledTheme(window.location.host, "", {});
+  let themes = await API.getBazaarTheme(window.location.host, "", {});
+  let localThemes = await API.getInstalledTheme(window.location.host, "", {});
   new Promise(function (response) {
     var url = `https://api.github.com/repos/Hi-Windom/${config.AliaName}/releases/latest`;
     var httpRequest = new XMLHttpRequest();
@@ -271,9 +275,9 @@ async function checkUpdateViaGithub(v, q) {
   });
 }
 async function checkUpdateViaBazaar(v, q) {
-  let themes = await getBazaarTheme(window.location.host, "", {});
+  let themes = await API.getBazaarTheme(window.location.host, "", {});
   // console.log(themes.data);
-  // let localThemes = await getInstalledTheme(window.location.host, "", {});
+  // let localThemes = await API.getInstalledTheme(window.location.host, "", {});
   // console.log(localThemes.data);
 
   let mytheme = {};
@@ -291,14 +295,7 @@ async function checkUpdateViaBazaar(v, q) {
     }
   }
 }
-async function getBazaarTheme(ip, apitoken, data) {
-  let url = "http://" + ip + "/api/bazaar/getBazaarTheme";
-  return API.request(url, apitoken, data);
-}
-async function getInstalledTheme(ip, apitoken, data) {
-  let url = "http://" + ip + "/api/bazaar/getInstalledTheme";
-  return API.request(url, apitoken, data);
-}
+
 function updateTheme(themeName) {
   if (
     document.body.classList.contains("body--mobile") &&
@@ -344,21 +341,18 @@ async function checkUpdate(q = false) {
 
 // 初始化选项的值
 let selectList = document.querySelectorAll("select[id^='SC_winsay_cp']");
-// console.log(selectList);
 selectList.forEach(function (value) {
   API.propInit(value.id, "change");
 });
 let rangeSliderList = document.querySelectorAll(
   "input[id^='SC_winsay_cp'][type='range']"
 );
-// console.log(rangeSliderList);
 rangeSliderList.forEach(function (value) {
   API.propInit(value.id, "change");
 });
 let checkboxList = document.querySelectorAll(
   "input[id^='SC_winsay_cp'][type='checkbox']"
 );
-// console.log(checkboxList);
 checkboxList.forEach(function (value) {
   API.checkedInit(value);
 });
