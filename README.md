@@ -44,6 +44,7 @@
 6. [优化安卓平板端退出思源功能 · Issue #903 · v1.5.9](https://github.com/Hi-Windom/winsay/issues/903)
 7. [body加入分支类名 · Issue #905 · v1.5.10](https://github.com/Hi-Windom/winsay/issues/905)
 8. [README不再显示停止适配的思源版本 · Issue #908 · v1.5.11](https://github.com/Hi-Windom/winsay/issues/908)
+9. [变更API · Issue #902 · v1.5.12](https://github.com/Hi-Windom/winsay/issues/902)
 
 修复缺陷：NULL
 
