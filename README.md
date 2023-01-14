@@ -42,6 +42,7 @@
 4. [墨绿紫+青葱绿形态字色双忙测试验收通过 · Issue #849 · v1.5.6](https://github.com/Hi-Windom/winsay/issues/849)
 5. [适配Sofill#新字体接口 · Issue #898 · v1.5.7](https://github.com/Hi-Windom/winsay/issues/898)
 6. [优化安卓平板端退出思源功能 · Issue #903 · v1.5.9](https://github.com/Hi-Windom/winsay/issues/903)
+7. [body加入分支类名 · Issue #905 · v1.5.10](https://github.com/Hi-Windom/winsay/issues/905)
 
 修复缺陷：NULL
 
