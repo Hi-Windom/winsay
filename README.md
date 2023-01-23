@@ -51,6 +51,7 @@
 11. [结构性暂停适配思源源分支更新 · Issue #914 · v1.5.14](https://github.com/Hi-Windom/winsay/issues/914)
 12. [左下角增加一个主题设置入口 · Issue #916 · v1.5.15](https://github.com/Hi-Windom/winsay/issues/916)
 13. [使用 `IndexedDB` 替代 `localStorage` · Issue #921 · v1.5.16](https://github.com/Hi-Windom/winsay/issues/921)
+14. [移除主题路径配置文件 · Issue #924 · v1.5.16](https://github.com/Hi-Windom/winsay/issues/924)
 
 修复缺陷：NULL
 
