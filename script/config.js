@@ -1,12 +1,10 @@
 import * as API from "./utils/api.min.js";
 
-const config_Custom = "/conf/appearance/themes/Sofill-/config/Custom.json";
-const config_UI = "/conf/appearance/themes/Sofill-/config/UI.json";
-const themeStyle = document.getElementById("themeStyle"); // 当前主题引用路径
+const themeStyle = document.getElementById("themeStyle");
 const THEME_ROOT = new URL(themeStyle.href).pathname.replace("theme.css", "");
 const winsay_ROOT = `/appearance/themes/Sofill-/`;
 const winsay_ROOT_ABS = `${window.siyuan.config.system.confDir}\\appearance\\themes\\Sofill-\\`;
-const S2_BASE = `/appearance/themes/Sofill-/style-S2/`;
+const S2_BASE = `${winsay_ROOT}style-S2/`;
 const S2_BASE_ABS = `${winsay_ROOT_ABS}style-S2/`;
 const ID_COLOR_STYLE = "theme-color-style";
 var ThemeName = "Sofill";
@@ -30,7 +28,7 @@ const IDs = {
   BUTTON_TOOLBAR_CHANGE_COLOR: "custom-id-button-toolbar-change-color",
 };
 
-var colors = [
+const colors1 = [
   "root.css",
   "root-L-Blue.css",
   "root-L-Red.css",
@@ -38,16 +36,17 @@ var colors = [
   "root-L-Green.css",
   "root-L-Yellow.css",
 ];
-
-var colors2 = [
+const defaultLC = "root.css"
+const colors2 = [
   "root-D-BlackGoldBlue.css",
   "root-D-InkGreenPurple.css",
 ];
+const defaultDC = "root-D-BlackGoldBlue.css"
 
 const latest_LC_ID = "SC_winsay_cp_custom__LS";
 const latest_DC_ID = "SC_winsay_cp_custom__DS";
 /* 循环迭代器 */
-var Iterator = function* (items) {
+var Iterator1 = function* (items) {
   for (let i = 0; true; i = (i + 1) % items.length) {
     yield items[i];
   }
@@ -84,11 +83,13 @@ var apitoken = window.siyuan.config.api.token;
 export {
   clientMode,
   Iterator2,
-  Iterator,
+  Iterator1,
   latest_DC_ID,
   latest_LC_ID,
   colors2,
-  colors,
+  colors1,
+  defaultLC,
+  defaultDC,
   IDs,
   ID_COLOR_STYLE,
   THEME_ROOT,
@@ -97,8 +98,6 @@ export {
   S2_BASE,
   S2_BASE_ABS,
   themeStyle,
-  config_UI,
-  config_Custom,
   ThemeName,
   AliaName,
   apitoken,
