@@ -1,12 +1,13 @@
 import * as config from "../config.js";
 import * as API from "../utils/api.min.js";
+window.winsay.API = API;
 var oncePath = `${config.winsay_ROOT_ABS}/script/module/AlertOnce.js`;
 const SB1 = "winsayUserData";
-const updateStyle = window.sofill.funs.updateStyle;
+const updateStyle = window.winsay.funs.updateStyle;
 // const localforage = new API.LocalStorage(3);
 
-window.sofill.storage.iterLC = config.Iterator1(config.colors1)
-window.sofill.storage.iterDC = config.Iterator2(config.colors2)
+window.winsay.storage.iterLC = config.Iterator1(config.colors1)
+window.winsay.storage.iterDC = config.Iterator2(config.colors2)
 
 var fs = null;
 var path = null;
@@ -38,17 +39,17 @@ await new Promise(async function (response) {
 }).then(async function (response) {
   console.log(response); // 'asyncStorage'
   await new Promise(async (resolve) => {
-    window.sofill.funs.loadScript(
-      window.sofill.funs.addURLParam(
-        `${window.sofill.where.themeRoot}script/CP.js?r=` + Math.random()
+    window.winsay.funs.loadScript(
+      window.winsay.funs.addURLParam(
+        `${window.winsay.where.themeRoot}script/CP.js?r=` + Math.random()
       ),
       undefined,
       true,
       true
     ).onload = async () => {
-      window.sofill.funs.loadScript(
-        window.sofill.funs.addURLParam(
-          `${window.sofill.where.themeRoot}script/SSS.js?r=` + Math.random()
+      window.winsay.funs.loadScript(
+        window.winsay.funs.addURLParam(
+          `${window.winsay.where.themeRoot}script/SSS.js?r=` + Math.random()
         ),
         undefined,
         true,
@@ -68,7 +69,7 @@ await new Promise(async function (response) {
             window.siyuan.config.system.confDir,
             "appearance",
             "themes",
-            window.sofill.where.localThemeName
+            window.winsay.where.localThemeName
           ))
         : null;
       fs
@@ -128,10 +129,10 @@ await new Promise(async function (response) {
     switch (API.compareVersion("2.7.0", kernelVersion)) {
       case -1:
       case 0:
-        updateStyle("v2_7_0", `${window.sofill.where.themeRoot}VP/v2_7/v2_7_0.css`);
-        window.sofill.funs.loadScript(
-          window.sofill.funs.addURLParam(
-            `${window.sofill.where.themeRoot}VP/v2_7/v2_7_0.js`
+        updateStyle("v2_7_0", `${window.winsay.where.themeRoot}VP/v2_7/v2_7_0.css`);
+        window.winsay.funs.loadScript(
+          window.winsay.funs.addURLParam(
+            `${window.winsay.where.themeRoot}VP/v2_7/v2_7_0.js`
           ),
           undefined,
           true
@@ -145,17 +146,17 @@ await new Promise(async function (response) {
 });
 
 
-window.sofill.ekits.gites = {
+window.winsay.ekits.gites = {
   UPath: `/appearance/themes/Sofill=/eHiWindom/gites/`,
 };
-window.sofill.ekits.lnco = {};
+window.winsay.ekits.lnco = {};
 
 async function ghostTabBar() {
   await localforage
     .getItem("SC_winsay_cp_appearance__TabBarMode")
     .then(async (value) => {
       if (!API.isEmptyString(value)) {
-        updateStyle("TabBar", `${window.sofill.where.themeRoot}style/sweet/${value}`);
+        updateStyle("TabBar", `${window.winsay.where.themeRoot}style/sweet/${value}`);
       } else {
         console.warn(value);
       }
@@ -216,56 +217,56 @@ async function initCPwithDefault() {
   // ghostTabBar();
 }
 
-updateStyle("MI", `${window.sofill.where.themeRoot}style/MI.css`);
+updateStyle("MI", `${window.winsay.where.themeRoot}style/MI.css`);
 /* 根据不同设备加载样式配置文件 */
-switch (window.sofill.OS) {
+switch (window.winsay.OS) {
   case "android":
-    updateStyle("Mobile", `${window.sofill.where.themeRoot}style/Mobile/Android.css`);
+    updateStyle("Mobile", `${window.winsay.where.themeRoot}style/Mobile/Android.css`);
     break;
   default:
-    updateStyle("fonts", `${window.sofill.ekits.gites.UPath}style/fonts.css`);
+    updateStyle("fonts", `${window.winsay.ekits.gites.UPath}style/fonts.css`);
     break;
 }
 
 // 改善开启自定义主题的体验
-updateStyle("Init", `${window.sofill.where.themeRoot}style/Init.min.css`);
-updateStyle("SCC", `${window.sofill.where.themeRoot}style/SCC.css`);
-updateStyle("Popup", `${window.sofill.where.themeRoot}style/Popup.css`);
-updateStyle("Patch", `${window.sofill.where.themeRoot}style/Patch.css`);
+updateStyle("Init", `${window.winsay.where.themeRoot}style/Init.min.css`);
+updateStyle("SCC", `${window.winsay.where.themeRoot}style/SCC.css`);
+updateStyle("Popup", `${window.winsay.where.themeRoot}style/Popup.css`);
+updateStyle("Patch", `${window.winsay.where.themeRoot}style/Patch.css`);
 
 updateStyle(
   "MI-ToolBar-Auto",
-  `${window.sofill.where.themeRoot}style/sweet/MI-ToolBar-Auto.css`
+  `${window.winsay.where.themeRoot}style/sweet/MI-ToolBar-Auto.css`
 );
-updateStyle("Funs-list2", `${window.sofill.where.themeRoot}style/Funs-list2.min.css`);
+updateStyle("Funs-list2", `${window.winsay.where.themeRoot}style/Funs-list2.min.css`);
 updateStyle(
   "Funs-ScrollView",
-  `${window.sofill.where.themeRoot}style/Funs-ScrollView.css`
+  `${window.winsay.where.themeRoot}style/Funs-ScrollView.css`
 );
 
 // 根据主题加载
-updateStyle("CP", `${window.sofill.where.themeRoot}style/CP.css`);
+updateStyle("CP", `${window.winsay.where.themeRoot}style/CP.css`);
 switch (config.ThemeName) {
   case "Sofill=":
     updateStyle("CP-themely", `/appearance/themes/Sofill=/style/CP-lili.css`);
     break;
   case "Sofill-":
   default:
-    updateStyle("CP-themely", `${window.sofill.where.themeRoot}style/CP-winsay.css`);
+    updateStyle("CP-themely", `${window.winsay.where.themeRoot}style/CP-winsay.css`);
     break;
 }
 
 if (config.clientMode == "body--mobile") {
-  window.sofill.funs.loadScript(
-    window.sofill.funs.addURLParam(
-      `${window.sofill.where.themeRoot}script/lib/hammer.min.js`
+  window.winsay.funs.loadScript(
+    window.winsay.funs.addURLParam(
+      `${window.winsay.where.themeRoot}script/lib/hammer.min.js`
     ),
     "module",
     true
   );
-  window.sofill.funs.loadScript(
-    window.sofill.funs.addURLParam(
-      `${window.sofill.where.themeRoot}script/sweet/MobileMagicBall.js`
+  window.winsay.funs.loadScript(
+    window.winsay.funs.addURLParam(
+      `${window.winsay.where.themeRoot}script/sweet/MobileMagicBall.js`
     ),
     undefined,
     true
@@ -312,9 +313,9 @@ if (!document.body.classList.contains("branch--Sillot")) {
     ? fs.access(oncePath, function (err) {
         if (!err) {
           setTimeout(() => {
-            window.sofill.funs.loadScript(
-              window.sofill.funs.addURLParam(
-                `${window.sofill.where.themeRoot}script/module/AlertOnce.js`
+            window.winsay.funs.loadScript(
+              window.winsay.funs.addURLParam(
+                `${window.winsay.where.themeRoot}script/module/AlertOnce.js`
               ),
               undefined,
               true

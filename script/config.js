@@ -1,12 +1,11 @@
 import * as API from "./utils/api.min.js";
 
 const themeStyle = document.getElementById("themeStyle");
-const THEME_ROOT = new URL(themeStyle.href).pathname.replace("theme.css", "");
 const winsay_ROOT_ABS =
   `${window.siyuan.config.system.confDir}/appearance/themes/` +
-  window.sofill.where.localThemeName +
+  window.winsay.where.localThemeName +
   "/";
-const S2_BASE = `${window.sofill.where.themeRoot}style-S2/`;
+const S2_BASE = `${window.winsay.where.themeRoot}style-S2/`;
 const S2_BASE_ABS = `${winsay_ROOT_ABS}style-S2/`;
 const ID_COLOR_STYLE = "theme-color-style";
 var ThemeName = "Sofill";
@@ -91,7 +90,6 @@ export {
   defaultDC,
   IDs,
   ID_COLOR_STYLE,
-  THEME_ROOT,
   winsay_ROOT_ABS,
   S2_BASE,
   S2_BASE_ABS,

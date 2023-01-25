@@ -8,13 +8,13 @@ export async function iterDC() {
       console.warn(latest_color_href);
     }
     // 加载配色文件
-    window.sofill.funs.updateStyle(
+    window.winsay.funs.updateStyle(
       config.IDs.STYLE_COLOR,
       `${config.S2_BASE}${latest_color_href}`
     );
     // 将迭代器调整为当前配色
     for (let i = 0; i < config.colors2.length; ++i) {
-      if (window.sofill.storage.iterDC.next().value === latest_color_href)
+      if (window.winsay.storage.iterDC.next().value === latest_color_href)
         break;
     }
   });
@@ -27,13 +27,13 @@ export async function iterLC() {
       console.warn(latest_color_href);
     }
     /* 加载配色文件 */
-    window.sofill.funs.updateStyle(
+    window.winsay.funs.updateStyle(
       config.IDs.STYLE_COLOR,
       `${config.S2_BASE}${latest_color_href}`
     );
     // 将迭代器调整为当前配色
     for (let i = 0; i < config.colors1.length; ++i) {
-      if (window.sofill.storage.iterLC.next().value === latest_color_href)
+      if (window.winsay.storage.iterLC.next().value === latest_color_href)
         break;
     }
   });

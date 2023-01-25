@@ -39,15 +39,15 @@ async function MobileChangeColor() {
   addButton.style.float = "left";
   addButton.style.marginLeft = "10px";
   addButton.style.backgroundImage =
-    `url(${window.sofill.where.themeRoot}src/icon/S2.svg)`;
+    `url(${window.winsay.where.themeRoot}src/icon/S2.svg)`;
   addButton.style.backgroundRepeat = "no-repeat";
   addButton.style.backgroundPosition = "left top";
   addButton.style.backgroundSize = "100%";
   addButton.addEventListener("click", async (e) => {
     let latest_color_href = null;
-    switch (window.sofill.funs.getThemeMode) {
+    switch (window.winsay.funs.getThemeMode) {
       case "dark":
-        latest_color_href = window.sofill.storage.iterDC.next().value;
+        latest_color_href = window.winsay.storage.iterDC.next().value;
         var snode = document.getElementById("SC_winsay_cp_custom__DS");
         if (snode) {
           snode.bindIDB = latest_color_href;
@@ -56,7 +56,7 @@ async function MobileChangeColor() {
         break;
       case "light":
       default:
-        latest_color_href = window.sofill.storage.iterLC.next().value;
+        latest_color_href = window.winsay.storage.iterLC.next().value;
         var snode = document.getElementById("SC_winsay_cp_custom__LS");
         if (snode) {
           snode.bindIDB = latest_color_href;
@@ -85,7 +85,7 @@ async function MobileChangeColor() {
         }
         break;
     }
-    window.sofill.funs.updateStyle(
+    window.winsay.funs.updateStyle(
       config.IDs.STYLE_COLOR,
       `${config.S2_BASE}${latest_color_href}`
     );
@@ -103,9 +103,9 @@ async function DesktopChangeColor() {
     button_change_color.innerHTML = `<svg><use xlink:href="#iconTheme"></use></svg>`;
     button_change_color.addEventListener("click", async (e) => {
       let latest_color_href = null;
-      switch (window.sofill.funs.getThemeMode) {
+      switch (window.winsay.funs.getThemeMode) {
         case "dark":
-          latest_color_href = window.sofill.storage.iterDC.next().value;
+          latest_color_href = window.winsay.storage.iterDC.next().value;
           var snode = document.getElementById("SC_winsay_cp_custom__DS");
           if (snode) {
             snode.bindIDB = latest_color_href;
@@ -114,7 +114,7 @@ async function DesktopChangeColor() {
           break;
         case "light":
         default:
-          latest_color_href = window.sofill.storage.iterLC.next().value;
+          latest_color_href = window.winsay.storage.iterLC.next().value;
           var snode = document.getElementById("SC_winsay_cp_custom__LS");
           if (snode) {
             snode.bindIDB = latest_color_href;
@@ -143,7 +143,7 @@ async function DesktopChangeColor() {
           }
           break;
       }
-      window.sofill.funs.updateStyle(
+      window.winsay.funs.updateStyle(
         config.IDs.STYLE_COLOR,
         `${config.S2_BASE}${latest_color_href}`
       );
@@ -157,7 +157,7 @@ async function DesktopChangeColor() {
 }
 
 async function changeStyleMod() {
-  switch (window.sofill.funs.getThemeMode) {
+  switch (window.winsay.funs.getThemeMode) {
     case "dark":
       await iterDC();
       break;
@@ -190,7 +190,7 @@ async function changeThemeModeByApp() {
       )
     : console.log("platform not supported");
   let href_color = null;
-  switch (window.sofill.funs.getThemeMode) {
+  switch (window.winsay.funs.getThemeMode) {
     case "light":
       href_color = `${config.S2_BASE}root-base-light.css`;
       // config.colors2.forEach((color) =>
@@ -208,7 +208,7 @@ async function changeThemeModeByApp() {
       break;
   }
   setTimeout(() => {
-    window.sofill.funs.updateStyle(config.ID_COLOR_STYLE, href_color);
+    window.winsay.funs.updateStyle(config.ID_COLOR_STYLE, href_color);
   }, 100);
   await changeStyleMod();
 }
