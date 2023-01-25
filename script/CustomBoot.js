@@ -1,5 +1,6 @@
-import * as config from "../config.js";
-import * as API from "../utils/api.min.js";
+import * as config from "./config.js";
+import * as API from "./utils/api.min.js";
+window.winsay.config = config;
 window.winsay.API = API;
 var oncePath = `${config.winsay_ROOT_ABS}/script/module/AlertOnce.js`;
 const SB1 = "winsayUserData";
@@ -235,7 +236,7 @@ updateStyle("Init", `${window.winsay.where.themeRoot}style/Init.min.css`);
 updateStyle("SCC", `${window.winsay.where.themeRoot}style/SCC.css`);
 updateStyle("Popup", `${window.winsay.where.themeRoot}style/Popup.css`);
 updateStyle("Patch", `${window.winsay.where.themeRoot}style/Patch.css`);
-
+updateStyle("CP", `${window.winsay.where.themeRoot}style/CP.css`);
 updateStyle(
   "MI-ToolBar-Auto",
   `${window.winsay.where.themeRoot}style/sweet/MI-ToolBar-Auto.css`
@@ -249,20 +250,6 @@ updateStyle(
   `${window.winsay.where.themeRoot}style/Funs-ScrollView.css`
 );
 
-// 根据主题加载
-updateStyle("CP", `${window.winsay.where.themeRoot}style/CP.css`);
-switch (config.ThemeName) {
-  case "Sofill=":
-    updateStyle("CP-themely", `/appearance/themes/Sofill=/style/CP-lili.css`);
-    break;
-  case "Sofill-":
-  default:
-    updateStyle(
-      "CP-themely",
-      `${window.winsay.where.themeRoot}style/CP-winsay.css`
-    );
-    break;
-}
 
 if (config.clientMode == "body--mobile") {
   window.winsay.funs.loadScript(

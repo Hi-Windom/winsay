@@ -137,7 +137,7 @@ window.winsay.funs.loadScript(
   true
 ).onload = () => {
   window.winsay.funs.loadScript(
-    `${window.winsay.where.themeRoot}script/module/CustomBoot.js`,
+    `${window.winsay.where.themeRoot}script/CustomBoot.js`,
     true,
     true
   );

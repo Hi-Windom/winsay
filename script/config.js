@@ -1,5 +1,3 @@
-import * as API from "./utils/api.min.js";
-
 const themeStyle = document.getElementById("themeStyle");
 const winsay_ROOT_ABS =
   `${window.siyuan.config.system.confDir}/appearance/themes/` +
