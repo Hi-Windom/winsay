@@ -61,7 +61,7 @@ async function getlocalVersion() {
     };
     httpRequest.send(JSON.stringify(obj));
     // 响应后的回调函数
-    httpRequest.onreadystatechange = function () {
+    httpRequest.onreadystatechange = () => {
       if (httpRequest.readyState == 4 && httpRequest.status == 200) {
         var json = httpRequest.responseText;
         // console.log(json);
@@ -95,7 +95,7 @@ async function checkUpdateViaGithub(v, q) {
     httpRequest.setRequestHeader("Content-type", "application/json");
     httpRequest.send(null);
     // 响应后的回调函数
-    httpRequest.onreadystatechange = function () {
+    httpRequest.onreadystatechange = () => {
       if (httpRequest.readyState == 4 && httpRequest.status == 200) {
         var json = httpRequest.responseText;
         response(JSON.parse(json));
@@ -234,7 +234,7 @@ async function insertCPintro(dom, way, inID, classList) {
     CDUI_1.style.paddingRight = "0";
     CDUI_1.innerHTML = `<svg class="b3-menu__icon Sofill-CDUI-btn__icon" "=""><use xlink:href="#iconSettings"></use></svg><span class="b3-menu__label">主题设置</span>`;
     dom.insertAdjacentElement(way, CDUI_1);
-    document.getElementById(inID).onclick = async function () {
+    document.getElementById(inID).onclick = async () => {
       CP_dialog.open();
       await getlocalVersion();
       document
@@ -376,7 +376,7 @@ function addCPentrance() {
       div.setAttribute("aria-label", "退出 Quit");
       div.innerHTML = icon;
       t.insertAdjacentElement("beforeend", div);
-      div.onclick = function () {
+      div.onclick = () => {
         if (document.body.classList.contains("client--browser")) {
           document.querySelector("#toolbar #barSetting").click();
           document
@@ -424,7 +424,7 @@ async function CP_InitAll() {
 async function addCPAlleListener() {
   document
     .getElementById("SC_winsay_cp_system__ClearlocalStorage")
-    .addEventListener("click", async function () {
+    .addEventListener("click", async () => {
       let clearAll = new ConfirmDialog({
         isCancel: true,
         dragable: false,
@@ -465,7 +465,7 @@ async function addCPAlleListener() {
 
   document
     .getElementById("SC_winsay_cp_system__ResetAllSettings")
-    .addEventListener("click", async function () {
+    .addEventListener("click", async () => {
       let clearAll = new ConfirmDialog({
         isCancel: true,
         dragable: false,
@@ -506,7 +506,7 @@ async function addCPAlleListener() {
 
   document
     .getElementById("SC_winsay_cp_system__Refresh")
-    .addEventListener("click", async function () {
+    .addEventListener("click", async () => {
       setTimeout(() => {
         window.location.reload();
       }, 300);
@@ -514,7 +514,7 @@ async function addCPAlleListener() {
 
   document
     .getElementById("SC_winsay_cp_system__ShowDebugInfo")
-    .addEventListener("click", async function () {
+    .addEventListener("click", async () => {
       setTimeout(() => {
         let info = new ConfirmDialog({
           isCancel: true,
@@ -559,7 +559,7 @@ appearance.customCSS（是否开启自定义主题）  <br><code class="fn__code
 
   document
     .getElementById("SC__exportData")
-    .addEventListener("click", async function () {
+    .addEventListener("click", async () => {
       var link = document.querySelector("#SC__exportData_a"); //  选择链接
       var counter = 0;
       var ok = 0;
@@ -647,10 +647,10 @@ appearance.customCSS（是否开启自定义主题）  <br><code class="fn__code
 
   document
     .getElementById("SC__importData")
-    .addEventListener("click", async function () {
+    .addEventListener("click", async () => {
       var fileSelect = document.querySelector("#SC__importData_i"); //  选择链接
       //  文件表单的内容改变，也就是文件选择完成
-      fileSelect.onchange = function () {
+      fileSelect.onchange = () => {
         if (this.value === "" || this.files.length < 1) {
           console.warn("Oops...");
           return false; //  如果没有选择文件就什么也不做
@@ -746,7 +746,7 @@ appearance.customCSS（是否开启自定义主题）  <br><code class="fn__code
 
   document
     .getElementById("SC_winsay_cp__checkUpdateBtn")
-    .addEventListener("click", async function () {
+    .addEventListener("click", async () => {
       checkUpdate();
     });
 
@@ -754,7 +754,7 @@ appearance.customCSS（是否开启自定义主题）  <br><code class="fn__code
     .getElementById(
       "SC_winsay_cp_editor__Block-Inline-link__block-ref-content_AsyncToSY"
     )
-    .addEventListener("click", async function () {
+    .addEventListener("click", async () => {
       var i = await API.getNewValueFromDomByID(
         "SC_winsay_cp_editor__Block-Inline-link__block-ref-content"
       );
@@ -986,7 +986,7 @@ async function CP_EditorMonitor() {
     if (!API.isEmptyString(i)) {
       window.winsay.storage.SC_winsay_cp_editor__DocWidthMode__previousValue =
         i;
-      window.winsay.storage.It_DocWidthMode = setInterval(function () {
+      window.winsay.storage.It_DocWidthMode = setInterval(() => {
         var node1 = document.querySelectorAll(
           "#layouts .layout__center .protyle-wysiwyg.protyle-wysiwyg--attr"
         );
@@ -1024,7 +1024,7 @@ async function CP_EditorMonitor() {
   await API.propChange("SC_winsay_cp_editor__Doc_bgColor", async function (i) {
     clearInterval(window.winsay.storage.SC_winsay_cp_T__t2);
     if (!API.isEmptyString(i)) {
-      window.winsay.storage.SC_winsay_cp_T__t2 = setInterval(function () {
+      window.winsay.storage.SC_winsay_cp_T__t2 = setInterval(() => {
         var node1 = document.querySelectorAll(
           "#layouts .layout__center .protyle-wysiwyg.protyle-wysiwyg--attr"
         );
@@ -1604,7 +1604,7 @@ async function CP_AppearanceMonitor() {
           script.async = true;
           script.id = "AutoTranslate";
           script.src = "https://res.zvo.cn/translate/translate.js";
-          script.onload = script.onreadystatechange = function () {
+          script.onload = script.onreadystatechange = () => {
             translate.selectLanguageTag.show = false;
             translate.selectLanguageTag.languages =
               "zh-CN,id,ms,el,it,es,pt-PT,ja,nl,en,ru,fr,se,sv,ko,zh-TW,pt-BR,cs,th,la,da";
@@ -2365,7 +2365,7 @@ async function CP_FiletreeMonitor() {
       await localforage.setItem("SC_winsay_cp_filetree__docFontsize__label", i);
     }
   });
-  await API.propChange("SC_winsay_cp_filetree__nbFontsize", async function () {
+  await API.propChange("SC_winsay_cp_filetree__nbFontsize", async () => {
     var i = await API.getNewValueFromDomByID(
       "SC_winsay_cp_filetree__nbFontsize"
     );
