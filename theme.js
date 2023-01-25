@@ -6,8 +6,10 @@ window.winsay = {
   funs: {},
   ekits: {},
   where: {
-    themeRoot: `/appearance/themes/${themeRootDirName}/`,
-    localThemeName: themeRootDirName,
+    themeRoot: window.lili
+      ? `${window.lili.where.themeRoot}eHiWindom/winsay/`
+      : `/appearance/themes/${themeRootDirName}/`,
+    localThemeName: window.lili ? "winsay" : themeRootDirName,
   },
   storage: {},
 };

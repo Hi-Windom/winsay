@@ -65,9 +65,7 @@ await new Promise(async function (response) {
       path
         ? (bP = path.join(
             window.siyuan.config.system.confDir,
-            "appearance",
-            "themes",
-            window.winsay.where.localThemeName
+            window.winsay.where.themeRoot
           ))
         : null;
       fs

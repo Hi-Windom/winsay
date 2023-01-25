@@ -1981,11 +1981,11 @@ async function CP_AboutMonitor() {
           ) {
             setTimeout(() => {
               checkUpdate(true);
-            }, 31000);
+            }, 31_000);
           } else {
             setTimeout(() => {
               checkUpdate(false);
-            }, 13000);
+            }, 13_000);
           }
           break;
         default:
@@ -2503,7 +2503,7 @@ async function CP_SystemMonitor() {
             `主题自我保护检测到异常：Sofill- 内核已被篡改，若重载无效请重新安装`
           );
         }
-      }, 30000);
+      }, 30_000);
     },
     () => {
       window.winsay.storage.It_SelfProtector
