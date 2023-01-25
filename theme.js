@@ -1,13 +1,15 @@
+const themeRootDirName = "Sofill-"; // 在此修改主题根目录文件夹名。注意：请确保正确填写，默认为 "Sofill-" 会自动判断文件夹名，因此一般无需修改此项
 window.sofill = {
   cp: { awaitInitItem: 0, inited: 0, listened: 0 },
   funs: {},
   ekits: {},
-  where: {themeRoot: "/appearance/themes/Sofill-/"},
+  where: {
+    themeRoot: `/appearance/themes/${themeRootDirName}/`,
+    localThemeName: themeRootDirName,
+  },
   storage: {},
 };
 
-var fs = null;
-var path = null;
 const bodyAC = (N) => {
   document.body.classList.add(N);
 };
@@ -37,12 +39,31 @@ if (navigator.userAgent.toLowerCase().startsWith("siyuan")) {
 } else {
   bodyAC("client--browser");
 }
+if (!bodyCC("branch--Sillot")) {
+  bodyAC("branch--SiYuan");
+}
 switch (window.siyuan.config.appearance.mode) {
   case 1:
     bodyAC("mode--dark");
+    if (themeRootDirName === "Sofill-") {
+      window.sofill.where.localThemeName =
+        window.siyuan.config.appearance.themeDark;
+      window.sofill.where.themeRoot = new URL(themeStyle.href).pathname.replace(
+        "theme.css",
+        ""
+      );
+    }
     break;
   default:
     bodyAC("mode--light");
+    if (themeRootDirName === "Sofill-") {
+      window.sofill.where.localThemeName =
+        window.siyuan.config.appearance.themeLight;
+      window.sofill.where.themeRoot = new URL(themeStyle.href).pathname.replace(
+        "theme.css",
+        ""
+      );
+    }
     break;
 }
 function addUC() {
@@ -64,24 +85,6 @@ addUC();
 setInterval(() => {
   addUC();
 }, 3100);
-setTimeout(() => {
-  if (!bodyCC("branch--Sillot")) {
-    bodyAC("branch--SiYuan");
-  }
-}, 500);
-
-var isAppMode = bodyCC("android")
-  ? false
-  : bodyCC("client--browser")
-  ? false
-  : window.siyuan.config.system.os == "windows" ||
-    window.siyuan.config.system.os == "darwin"
-  ? true
-  : false;
-if (isAppMode) {
-  fs = require("fs");
-  path = require("path");
-}
 
 window.sofill.OS = window.siyuan.config.system.os;
 

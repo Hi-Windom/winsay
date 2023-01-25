@@ -2,9 +2,11 @@ import * as API from "./utils/api.min.js";
 
 const themeStyle = document.getElementById("themeStyle");
 const THEME_ROOT = new URL(themeStyle.href).pathname.replace("theme.css", "");
-const winsay_ROOT = `/appearance/themes/Sofill-/`;
-const winsay_ROOT_ABS = `${window.siyuan.config.system.confDir}\\appearance\\themes\\Sofill-\\`;
-const S2_BASE = `${winsay_ROOT}style-S2/`;
+const winsay_ROOT_ABS =
+  `${window.siyuan.config.system.confDir}/appearance/themes/` +
+  window.sofill.where.localThemeName +
+  "/";
+const S2_BASE = `${window.sofill.where.themeRoot}style-S2/`;
 const S2_BASE_ABS = `${winsay_ROOT_ABS}style-S2/`;
 const ID_COLOR_STYLE = "theme-color-style";
 var ThemeName = "Sofill";
@@ -36,12 +38,9 @@ const colors1 = [
   "root-L-Green.css",
   "root-L-Yellow.css",
 ];
-const defaultLC = "root.css"
-const colors2 = [
-  "root-D-BlackGoldBlue.css",
-  "root-D-InkGreenPurple.css",
-];
-const defaultDC = "root-D-BlackGoldBlue.css"
+const defaultLC = "root.css";
+const colors2 = ["root-D-BlackGoldBlue.css", "root-D-InkGreenPurple.css"];
+const defaultDC = "root-D-BlackGoldBlue.css";
 
 const latest_LC_ID = "SC_winsay_cp_custom__LS";
 const latest_DC_ID = "SC_winsay_cp_custom__DS";
@@ -93,7 +92,6 @@ export {
   IDs,
   ID_COLOR_STYLE,
   THEME_ROOT,
-  winsay_ROOT,
   winsay_ROOT_ABS,
   S2_BASE,
   S2_BASE_ABS,

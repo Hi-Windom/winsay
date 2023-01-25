@@ -239,7 +239,7 @@ async function insertCPintro(dom, way, inID, classList) {
       await getlocalVersion();
       document
         .getElementById("sofill_preview")
-        .setAttribute("src", `${config.THEME_ROOT}preview.png`);
+        .setAttribute("src", `${window.sofill.where.themeRoot}preview.png`);
     };
   }
 }
@@ -938,7 +938,7 @@ async function CP_EditorMonitor() {
             );
             window.sofill.funs.updateStyle(
               "BlockListHoverALL",
-              `${config.winsay_ROOT}style/sweet/sugar/editor/Block-List-HoverALL.css`
+              `${window.sofill.where.themeRoot}style/sweet/sugar/editor/Block-List-HoverALL.css`
             );
             break;
           case "3":
@@ -969,7 +969,7 @@ async function CP_EditorMonitor() {
       var j = API.isEmptyString(i) ? "" : i;
       window.sofill.funs.updateStyle(
         "layout-center_protyle-toolbar_position",
-        `${config.winsay_ROOT}style/sweet/sugar/editor/${j}`
+        `${window.sofill.where.themeRoot}style/sweet/sugar/editor/${j}`
       );
     }
   );
@@ -1101,12 +1101,12 @@ async function CP_EditorMonitor() {
     () => {
       window.sofill.funs.updateStyle(
         "HintHint-index",
-        `${config.winsay_ROOT}style/sweet/sugar/editor/HintHint-index.css`
+        `${window.sofill.where.themeRoot}style/sweet/sugar/editor/HintHint-index.css`
       );
     },
     () => {
       API.removejscssfile(
-        `${config.winsay_ROOT}style/sweet/sugar/editor/HintHint-index.css`,
+        `${window.sofill.where.themeRoot}style/sweet/sugar/editor/HintHint-index.css`,
         "css"
       );
     }
@@ -1116,7 +1116,7 @@ async function CP_EditorMonitor() {
     () => {
       window.sofill.funs.updateStyle(
         "LH_Adaptive",
-        `${config.winsay_ROOT}style/sweet/LH-Adaptive.css`
+        `${window.sofill.where.themeRoot}style/sweet/LH-Adaptive.css`
       );
       document
         .getElementById("BP__SC_winsay_cp_editor__LH_Adaptive")
@@ -1124,7 +1124,7 @@ async function CP_EditorMonitor() {
     },
     () => {
       API.removejscssfile(
-        `${config.winsay_ROOT}style/sweet/LH-Adaptive.css`,
+        `${window.sofill.where.themeRoot}style/sweet/LH-Adaptive.css`,
         "css"
       );
       document
@@ -1137,12 +1137,12 @@ async function CP_EditorMonitor() {
     () => {
       window.sofill.funs.updateStyle(
         "docBreadcrumb_Adaptive",
-        `${config.winsay_ROOT}style/sweet/MI-Breadcrumb-Adaptive.css`
+        `${window.sofill.where.themeRoot}style/sweet/MI-Breadcrumb-Adaptive.css`
       );
     },
     () => {
       API.removejscssfile(
-        `${config.winsay_ROOT}style/sweet/MI-Breadcrumb-Adaptive.css`,
+        `${window.sofill.where.themeRoot}style/sweet/MI-Breadcrumb-Adaptive.css`,
         "css"
       );
     }
@@ -1152,12 +1152,12 @@ async function CP_EditorMonitor() {
     () => {
       window.sofill.funs.updateStyle(
         "AreoBg-Filter",
-        `${config.winsay_ROOT}style/sweet/AreoBg-Filter.css`
+        `${window.sofill.where.themeRoot}style/sweet/AreoBg-Filter.css`
       );
     },
     () => {
       API.removejscssfile(
-        `${config.winsay_ROOT}style/sweet/AreoBg-Filter.css`,
+        `${window.sofill.where.themeRoot}style/sweet/AreoBg-Filter.css`,
         "css"
       );
     }
@@ -1273,7 +1273,7 @@ async function CP_EditorMonitor() {
             s
               ? window.sofill.funs.updateStyle(
                   "Android-mobile-BlockScrollBarShow",
-                  `${config.winsay_ROOT}style/sweet/sugar/editor/Android-mobile-BlockScrollBarFocusShow.css`
+                  `${window.sofill.where.themeRoot}style/sweet/sugar/editor/Android-mobile-BlockScrollBarFocusShow.css`
                 )
               : eSetProperty("--SCC-Variables-MI-BlockScrollBar-opacity", "0");
             break;
@@ -1281,7 +1281,7 @@ async function CP_EditorMonitor() {
             s
               ? window.sofill.funs.updateStyle(
                   "Android-mobile-BlockScrollBarShow",
-                  `${config.winsay_ROOT}style/sweet/sugar/editor/Android-mobile-BlockScrollBarAlwaysShow.css`
+                  `${window.sofill.where.themeRoot}style/sweet/sugar/editor/Android-mobile-BlockScrollBarAlwaysShow.css`
                 )
               : eSetProperty(
                   "--SCC-Variables-MI-BlockScrollBar-opacity",
@@ -1439,12 +1439,12 @@ async function CP_EditorMonitor() {
     () => {
       window.sofill.funs.updateStyle(
         "FocusEnhanc_NodeHeading",
-        `${config.winsay_ROOT}style/sweet/sugar/editor/NodeHeading-FocusEnhanc.css`
+        `${window.sofill.where.themeRoot}style/sweet/sugar/editor/NodeHeading-FocusEnhanc.css`
       );
     },
     () => {
       API.removejscssfile(
-        `${config.winsay_ROOT}style/sweet/sugar/editor/NodeHeading-FocusEnhanc.css`,
+        `${window.sofill.where.themeRoot}style/sweet/sugar/editor/NodeHeading-FocusEnhanc.css`,
         "css"
       );
     }
@@ -1454,12 +1454,12 @@ async function CP_EditorMonitor() {
     () => {
       window.sofill.funs.updateStyle(
         "FocusEnhanc_DocNameArea",
-        `${config.winsay_ROOT}style/sweet/sugar/editor/MI-Dynamic.css`
+        `${window.sofill.where.themeRoot}style/sweet/sugar/editor/MI-Dynamic.css`
       );
     },
     () => {
       API.removejscssfile(
-        `${config.winsay_ROOT}style/sweet/sugar/editor/MI-Dynamic.css`,
+        `${window.sofill.where.themeRoot}style/sweet/sugar/editor/MI-Dynamic.css`,
         "css"
       );
     }
@@ -1471,12 +1471,12 @@ async function CP_EditorMonitor() {
     () => {
       window.sofill.funs.updateStyle(
         "FocusEnhanc_BlockHoverShadow",
-        `${config.winsay_ROOT}style/sweet/sugar/editor/BlockHoverShadow.css`
+        `${window.sofill.where.themeRoot}style/sweet/sugar/editor/BlockHoverShadow.css`
       );
     },
     () => {
       API.removejscssfile(
-        `${config.winsay_ROOT}style/sweet/sugar/editor/BlockHoverShadow.css`,
+        `${window.sofill.where.themeRoot}style/sweet/sugar/editor/BlockHoverShadow.css`,
         "css"
       );
     }
@@ -1488,12 +1488,12 @@ async function CP_EditorMonitor() {
     () => {
       window.sofill.funs.updateStyle(
         "SearchInputShadow",
-        `${config.winsay_ROOT}style/sweet/sugar/editor/SearchInputShadow.css`
+        `${window.sofill.where.themeRoot}style/sweet/sugar/editor/SearchInputShadow.css`
       );
     },
     () => {
       API.removejscssfile(
-        `${config.winsay_ROOT}style/sweet/sugar/editor/SearchInputShadow.css`,
+        `${window.sofill.where.themeRoot}style/sweet/sugar/editor/SearchInputShadow.css`,
         "css"
       );
     }
@@ -1503,12 +1503,12 @@ async function CP_EditorMonitor() {
     () => {
       window.sofill.funs.updateStyle(
         "NodeHeadingFoldedShadow",
-        `${config.winsay_ROOT}style/sweet/sugar/editor/NodeHeading-foldedShadow.css`
+        `${window.sofill.where.themeRoot}style/sweet/sugar/editor/NodeHeading-foldedShadow.css`
       );
     },
     () => {
       API.removejscssfile(
-        `${config.winsay_ROOT}style/sweet/sugar/editor/NodeHeading-foldedShadow.css`,
+        `${window.sofill.where.themeRoot}style/sweet/sugar/editor/NodeHeading-foldedShadow.css`,
         "css"
       );
     }
@@ -1527,7 +1527,7 @@ async function CP_EditorMonitor() {
     () => {
       window.sofill.funs.loadScript(
         window.sofill.funs.addURLParam(
-          `${config.winsay_ROOT}script/sweet/sugar/ShowDocCreatedDate.js`
+          `${window.sofill.where.themeRoot}script/sweet/sugar/ShowDocCreatedDate.js`
         ),
         undefined,
         true
@@ -1535,7 +1535,7 @@ async function CP_EditorMonitor() {
     },
     () => {
       API.removejscssfile(
-        `${config.winsay_ROOT}script/sweet/sugar/ShowDocCreatedDate.js`,
+        `${window.sofill.where.themeRoot}script/sweet/sugar/ShowDocCreatedDate.js`,
         "js"
       );
     }
@@ -1775,7 +1775,7 @@ async function CP_AppearanceMonitor() {
       var j = API.isEmptyString(i) ? "MI-TabBar-D.css" : i;
       window.sofill.funs.updateStyle(
         "TabBar",
-        `${config.winsay_ROOT}style/sweet/${j}`
+        `${window.sofill.where.themeRoot}style/sweet/${j}`
       );
     }
   );
@@ -1894,11 +1894,11 @@ async function CP_AppearanceMonitor() {
     () => {
       window.sofill.funs.updateStyle(
         "ShowWebIcon",
-        `${config.winsay_ROOT}style/link/web.css`
+        `${window.sofill.where.themeRoot}style/link/web.css`
       );
     },
     () => {
-      API.removejscssfile(`${config.winsay_ROOT}style/link/web.css`, "css");
+      API.removejscssfile(`${window.sofill.where.themeRoot}style/link/web.css`, "css");
     }
   );
   await API.checkedChange(
@@ -1906,11 +1906,11 @@ async function CP_AppearanceMonitor() {
     () => {
       window.sofill.funs.updateStyle(
         "ShowFileIcon",
-        `${config.winsay_ROOT}style/link/file.css`
+        `${window.sofill.where.themeRoot}style/link/file.css`
       );
     },
     () => {
-      API.removejscssfile(`${config.winsay_ROOT}style/link/file.css`, "css");
+      API.removejscssfile(`${window.sofill.where.themeRoot}style/link/file.css`, "css");
     }
   );
   await API.propChange(
@@ -1956,7 +1956,7 @@ async function CP_AppearanceMonitor() {
     () => {
       window.sofill.funs.updateStyle(
         "SYSetting-AssetsIMG-Sticky",
-        `${config.winsay_ROOT}style/sweet/sugar/appearance/SYSetting-AssetsIMG-Sticky.css`
+        `${window.sofill.where.themeRoot}style/sweet/sugar/appearance/SYSetting-AssetsIMG-Sticky.css`
       );
     },
     () => {
@@ -2270,7 +2270,7 @@ async function CP_AssetsMonitor() {
     } else {
       window.sofill.funs.updateStyle(
         "assets__PCards",
-        `${config.winsay_ROOT}style/sweet/sugar/assets/${i}`
+        `${window.sofill.where.themeRoot}style/sweet/sugar/assets/${i}`
       );
     }
   });
@@ -2339,7 +2339,7 @@ async function CP_FiletreeMonitor() {
     () => {
       window.sofill.funs.updateStyle(
         "MI-DocTree-Adaptive",
-        `${config.winsay_ROOT}style/sweet/MI-DocTree-Adaptive.css`
+        `${window.sofill.where.themeRoot}style/sweet/MI-DocTree-Adaptive.css`
       );
       document
         .getElementById("BP__SC_winsay_cp_filetree__Adaptive_display")
@@ -2347,7 +2347,7 @@ async function CP_FiletreeMonitor() {
     },
     () => {
       API.removejscssfile(
-        `${config.winsay_ROOT}style/sweet/MI-DocTree-Adaptive.css`,
+        `${window.sofill.where.themeRoot}style/sweet/MI-DocTree-Adaptive.css`,
         "css"
       );
       document
@@ -2395,7 +2395,7 @@ async function CP_SearchMonitor() {
     } else {
       window.sofill.funs.updateStyle(
         "search__layout",
-        `${config.winsay_ROOT}style/sweet/sugar/search/${i}`
+        `${window.sofill.where.themeRoot}style/sweet/sugar/search/${i}`
       );
     }
   });
@@ -2404,12 +2404,12 @@ async function CP_SearchMonitor() {
     () => {
       window.sofill.funs.updateStyle(
         "search__index",
-        `${config.winsay_ROOT}style/sweet/sugar/search/index.css`
+        `${window.sofill.where.themeRoot}style/sweet/sugar/search/index.css`
       );
     },
     () => {
       API.removejscssfile(
-        `${config.winsay_ROOT}style/sweet/sugar/search/index.css`,
+        `${window.sofill.where.themeRoot}style/sweet/sugar/search/index.css`,
         "css"
       );
     }
@@ -2423,7 +2423,7 @@ async function CP_SearchMonitor() {
     () => {
       window.sofill.funs.updateStyle(
         "search__disable_tips",
-        `${config.winsay_ROOT}style/sweet/sugar/search/tips.css`
+        `${window.sofill.where.themeRoot}style/sweet/sugar/search/tips.css`
       );
     }
   );

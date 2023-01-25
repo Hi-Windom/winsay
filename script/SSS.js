@@ -39,7 +39,7 @@ async function MobileChangeColor() {
   addButton.style.float = "left";
   addButton.style.marginLeft = "10px";
   addButton.style.backgroundImage =
-    "url(/appearance/themes/Sofill-/src/icon/S2.svg)";
+    `url(${window.sofill.where.themeRoot}src/icon/S2.svg)`;
   addButton.style.backgroundRepeat = "no-repeat";
   addButton.style.backgroundPosition = "left top";
   addButton.style.backgroundSize = "100%";

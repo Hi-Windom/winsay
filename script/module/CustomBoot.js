@@ -1,6 +1,5 @@
 import * as config from "../config.js";
 import * as API from "../utils/api.min.js";
-var fs = null;
 var oncePath = `${config.winsay_ROOT_ABS}/script/module/AlertOnce.js`;
 const SB1 = "winsayUserData";
 const updateStyle = window.sofill.funs.updateStyle;
@@ -8,6 +7,13 @@ const updateStyle = window.sofill.funs.updateStyle;
 
 window.sofill.storage.iterLC = config.Iterator1(config.colors1)
 window.sofill.storage.iterDC = config.Iterator2(config.colors2)
+
+var fs = null;
+var path = null;
+if (API.isDesktopAppMode()) {
+  fs = require("fs");
+  path = require("path");
+}
 
 await new Promise(async function (response) {
   let ccc = true;
@@ -34,7 +40,7 @@ await new Promise(async function (response) {
   await new Promise(async (resolve) => {
     window.sofill.funs.loadScript(
       window.sofill.funs.addURLParam(
-        `${config.winsay_ROOT}script/CP.js?r=` + Math.random()
+        `${window.sofill.where.themeRoot}script/CP.js?r=` + Math.random()
       ),
       undefined,
       true,
@@ -42,7 +48,7 @@ await new Promise(async function (response) {
     ).onload = async () => {
       window.sofill.funs.loadScript(
         window.sofill.funs.addURLParam(
-          `${config.winsay_ROOT}script/SSS.js?r=` + Math.random()
+          `${window.sofill.where.themeRoot}script/SSS.js?r=` + Math.random()
         ),
         undefined,
         true,
@@ -62,7 +68,7 @@ await new Promise(async function (response) {
             window.siyuan.config.system.confDir,
             "appearance",
             "themes",
-            "Sofill-"
+            window.sofill.where.localThemeName
           ))
         : null;
       fs
@@ -70,7 +76,7 @@ await new Promise(async function (response) {
             if (e) {
               console.error(e);
               alert(
-                `主题根目录未正确命名或不存在：【致命错误】${bP} 文件夹不存在。修正错误后，需重启思源并重新选择主题。`
+                `主题根目录未正确命名或不存在：【致命错误】${bP} 文件夹不存在。修正错误后，需重启思源并重新选择主题。（在主题设置中关闭主题自我保护可禁用此通知）`
               );
             }
           })
@@ -87,9 +93,6 @@ await new Promise(async function (response) {
               ? fs.readFile(i, "utf-8", (e, data) => {
                   if (e) {
                     console.error(e);
-                    alert(
-                      `主题自我保护检测到异常：【致命错误】${i} 文件不存在`
-                    );
                   }
                 })
               : null;
@@ -125,10 +128,10 @@ await new Promise(async function (response) {
     switch (API.compareVersion("2.7.0", kernelVersion)) {
       case -1:
       case 0:
-        updateStyle("v2_7_0", `${config.winsay_ROOT}VP/v2_7/v2_7_0.css`);
+        updateStyle("v2_7_0", `${window.sofill.where.themeRoot}VP/v2_7/v2_7_0.css`);
         window.sofill.funs.loadScript(
           window.sofill.funs.addURLParam(
-            `${config.winsay_ROOT}VP/v2_7/v2_7_0.js`
+            `${window.sofill.where.themeRoot}VP/v2_7/v2_7_0.js`
           ),
           undefined,
           true
@@ -141,9 +144,6 @@ await new Promise(async function (response) {
   });
 });
 
-if (API.isDesktopAppMode()) {
-  fs = require("fs");
-}
 
 window.sofill.ekits.gites = {
   UPath: `/appearance/themes/Sofill=/eHiWindom/gites/`,
@@ -155,7 +155,7 @@ async function ghostTabBar() {
     .getItem("SC_winsay_cp_appearance__TabBarMode")
     .then(async (value) => {
       if (!API.isEmptyString(value)) {
-        updateStyle("TabBar", `${config.winsay_ROOT}style/sweet/${value}`);
+        updateStyle("TabBar", `${window.sofill.where.themeRoot}style/sweet/${value}`);
       } else {
         console.warn(value);
       }
@@ -216,11 +216,11 @@ async function initCPwithDefault() {
   // ghostTabBar();
 }
 
-updateStyle("MI", `${config.winsay_ROOT}style/MI.css`);
+updateStyle("MI", `${window.sofill.where.themeRoot}style/MI.css`);
 /* 根据不同设备加载样式配置文件 */
 switch (window.sofill.OS) {
   case "android":
-    updateStyle("Mobile", `${config.winsay_ROOT}style/Mobile/Android.css`);
+    updateStyle("Mobile", `${window.sofill.where.themeRoot}style/Mobile/Android.css`);
     break;
   default:
     updateStyle("fonts", `${window.sofill.ekits.gites.UPath}style/fonts.css`);
@@ -228,44 +228,44 @@ switch (window.sofill.OS) {
 }
 
 // 改善开启自定义主题的体验
-updateStyle("Init", `${config.winsay_ROOT}style/Init.min.css`);
-updateStyle("SCC", `${config.winsay_ROOT}style/SCC.css`);
-updateStyle("Popup", `${config.winsay_ROOT}style/Popup.css`);
-updateStyle("Patch", `${config.winsay_ROOT}style/Patch.css`);
+updateStyle("Init", `${window.sofill.where.themeRoot}style/Init.min.css`);
+updateStyle("SCC", `${window.sofill.where.themeRoot}style/SCC.css`);
+updateStyle("Popup", `${window.sofill.where.themeRoot}style/Popup.css`);
+updateStyle("Patch", `${window.sofill.where.themeRoot}style/Patch.css`);
 
 updateStyle(
   "MI-ToolBar-Auto",
-  `${config.winsay_ROOT}style/sweet/MI-ToolBar-Auto.css`
+  `${window.sofill.where.themeRoot}style/sweet/MI-ToolBar-Auto.css`
 );
-updateStyle("Funs-list2", `${config.winsay_ROOT}style/Funs-list2.min.css`);
+updateStyle("Funs-list2", `${window.sofill.where.themeRoot}style/Funs-list2.min.css`);
 updateStyle(
   "Funs-ScrollView",
-  `${config.winsay_ROOT}style/Funs-ScrollView.css`
+  `${window.sofill.where.themeRoot}style/Funs-ScrollView.css`
 );
 
 // 根据主题加载
-updateStyle("CP", `${config.winsay_ROOT}style/CP.css`);
+updateStyle("CP", `${window.sofill.where.themeRoot}style/CP.css`);
 switch (config.ThemeName) {
   case "Sofill=":
     updateStyle("CP-themely", `/appearance/themes/Sofill=/style/CP-lili.css`);
     break;
   case "Sofill-":
   default:
-    updateStyle("CP-themely", `${config.winsay_ROOT}style/CP-winsay.css`);
+    updateStyle("CP-themely", `${window.sofill.where.themeRoot}style/CP-winsay.css`);
     break;
 }
 
 if (config.clientMode == "body--mobile") {
   window.sofill.funs.loadScript(
     window.sofill.funs.addURLParam(
-      `${config.winsay_ROOT}script/lib/hammer.min.js`
+      `${window.sofill.where.themeRoot}script/lib/hammer.min.js`
     ),
     "module",
     true
   );
   window.sofill.funs.loadScript(
     window.sofill.funs.addURLParam(
-      `${config.winsay_ROOT}script/sweet/MobileMagicBall.js`
+      `${window.sofill.where.themeRoot}script/sweet/MobileMagicBall.js`
     ),
     undefined,
     true
@@ -314,7 +314,7 @@ if (!document.body.classList.contains("branch--Sillot")) {
           setTimeout(() => {
             window.sofill.funs.loadScript(
               window.sofill.funs.addURLParam(
-                `${config.winsay_ROOT}script/module/AlertOnce.js`
+                `${window.sofill.where.themeRoot}script/module/AlertOnce.js`
               ),
               undefined,
               true
