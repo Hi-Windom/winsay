@@ -41,5 +41,5 @@ const loader = document.createElement("script");
 loader.type = "module";
 loader.async = true;
 loader.defer = true;
-loader.src = `${window.winsay.where.themeRoot}theme.m.js`;
+loader.src = `${window.winsay.where.themeRoot}theme.m.js?r=` + Math.random();
 document.head.appendChild(loader);

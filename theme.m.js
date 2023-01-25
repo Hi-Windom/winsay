@@ -77,24 +77,10 @@ window.winsay.funs.updateStyle = function (id, href) {
   let style = document.getElementById(id);
   if (style) {
     style.setAttribute("href", href);
-    return style
+    return style;
   } else {
     return window.winsay.funs.loadStyle(href, id);
   }
-};
-window.winsay.funs.loadScript = function (
-  src,
-  type = "module",
-  async = false,
-  defer = false
-) {
-  const script = document.createElement("script");
-  if (type) script.type = type;
-  if (async) script.async = true;
-  if (defer) script.defer = true;
-  script.src = src;
-  document.head.appendChild(script);
-  return script;
 };
 window.winsay.funs.addURLParam = function (
   url,
@@ -135,52 +121,43 @@ window.winsay.funs.addURLParam = function (
       );
   }
 };
+window.winsay.funs.loadScript = function (src, async = false, defer = false) {
+  const script = document.createElement("script");
+  script.type = "module";
+  if (async) script.async = true;
+  if (defer) script.defer = true;
+  script.src = window.winsay.funs.addURLParam(src);
+  document.head.appendChild(script);
+  return script;
+};
 
 window.winsay.funs.loadScript(
-  window.winsay.funs.addURLParam(
-    `${window.winsay.where.themeRoot}script/lib/localforage.min.js`
-  ),
-  undefined,
+  `${window.winsay.where.themeRoot}script/lib/localforage.min.js`,
   true,
   true
 ).onload = () => {
   window.winsay.funs.loadScript(
-    window.winsay.funs.addURLParam(
-      `${window.winsay.where.themeRoot}script/module/CustomBoot.js`
-    ),
-    undefined,
+    `${window.winsay.where.themeRoot}script/module/CustomBoot.js`,
     true,
     true
   );
 };
 
 window.winsay.funs.loadScript(
-  window.winsay.funs.addURLParam(
-    `${window.winsay.where.themeRoot}script/fun.min.js`
-  ),
-  undefined,
+  `${window.winsay.where.themeRoot}script/fun.min.js`,
   true
 );
 setTimeout(() => {
   window.winsay.funs.loadScript(
-    window.winsay.funs.addURLParam(
-      `${window.winsay.where.themeRoot}script/module/DTL.js`
-    ),
-    undefined,
+    `${window.winsay.where.themeRoot}script/module/DTL.js`,
     true
   );
   window.winsay.funs.loadScript(
-    window.winsay.funs.addURLParam(
-      `${window.winsay.where.themeRoot}script/module/ChangeFontSize.js`
-    ),
-    undefined,
+    `${window.winsay.where.themeRoot}script/module/ChangeFontSize.js`,
     true
   );
   window.winsay.funs.loadScript(
-    window.winsay.funs.addURLParam(
-      `${window.winsay.where.themeRoot}script/module/dev.js?r=` + Math.random()
-    ),
-    undefined,
+    `${window.winsay.where.themeRoot}script/module/dev.js?r=` + Math.random(),
     true
   );
 }, 200);

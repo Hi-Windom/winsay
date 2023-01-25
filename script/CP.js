@@ -1065,9 +1065,7 @@ async function CP_EditorMonitor() {
   await API.propChange("SC_winsay_cp_editor__img-bg-color", async function (i) {
     if (!API.isEmptyString(i)) {
       switch (
-        await localforage.getItem(
-          "SC_winsay_cp_editor__img-bg-color_always"
-        )
+        await localforage.getItem("SC_winsay_cp_editor__img-bg-color_always")
       ) {
         case "true":
           eSetProperty("--SCC-Variables-IMG-bg-color_hover", i);
@@ -1526,10 +1524,7 @@ async function CP_EditorMonitor() {
     document.getElementById("SC_winsay_cp_editor__showDocCreatedDate"),
     () => {
       window.winsay.funs.loadScript(
-        window.winsay.funs.addURLParam(
-          `${window.winsay.where.themeRoot}script/sweet/sugar/ShowDocCreatedDate.js`
-        ),
-        undefined,
+        `${window.winsay.where.themeRoot}script/sweet/sugar/ShowDocCreatedDate.js`,
         true
       );
     },
@@ -1898,7 +1893,10 @@ async function CP_AppearanceMonitor() {
       );
     },
     () => {
-      API.removejscssfile(`${window.winsay.where.themeRoot}style/link/web.css`, "css");
+      API.removejscssfile(
+        `${window.winsay.where.themeRoot}style/link/web.css`,
+        "css"
+      );
     }
   );
   await API.checkedChange(
@@ -1910,7 +1908,10 @@ async function CP_AppearanceMonitor() {
       );
     },
     () => {
-      API.removejscssfile(`${window.winsay.where.themeRoot}style/link/file.css`, "css");
+      API.removejscssfile(
+        `${window.winsay.where.themeRoot}style/link/file.css`,
+        "css"
+      );
     }
   );
   await API.propChange(
@@ -2226,7 +2227,7 @@ async function CP_CustomMonitor() {
       if (window.winsay.funs.getThemeMode == "light") {
         await localforage.setItem(config.latest_LC_ID, i).then((_) => {
           import("./module/SM.js").then(async (m) => {
-            await m.iterLC()
+            await m.iterLC();
           });
         });
       } else if (
@@ -2256,7 +2257,7 @@ async function CP_CustomMonitor() {
     if (window.winsay.funs.getThemeMode == "dark" && !API.isEmptyString(i)) {
       await localforage.setItem(config.latest_DC_ID, i).then((_) => {
         import("./module/SM.js").then(async (m) => {
-          await m.iterDC()
+          await m.iterDC();
         });
       });
     }
@@ -2356,15 +2357,21 @@ async function CP_FiletreeMonitor() {
     }
   );
 
-  await API.propChange("SC_winsay_cp_filetree__docFontsize", async function (i) {
-    if (!API.isEmptyString(i)) {
-      eSetProperty("--SCC-Variables-MI-DocTree-docFontsize", `${i}pt`);
-      document
-        .getElementById("SC_winsay_cp_filetree__docFontsize__label")
-        .setAttribute("aria-label", `${i}`);
-      await localforage.setItem("SC_winsay_cp_filetree__docFontsize__label", i);
+  await API.propChange(
+    "SC_winsay_cp_filetree__docFontsize",
+    async function (i) {
+      if (!API.isEmptyString(i)) {
+        eSetProperty("--SCC-Variables-MI-DocTree-docFontsize", `${i}pt`);
+        document
+          .getElementById("SC_winsay_cp_filetree__docFontsize__label")
+          .setAttribute("aria-label", `${i}`);
+        await localforage.setItem(
+          "SC_winsay_cp_filetree__docFontsize__label",
+          i
+        );
+      }
     }
-  });
+  );
   await API.propChange("SC_winsay_cp_filetree__nbFontsize", async () => {
     var i = await API.getNewValueFromDomByID(
       "SC_winsay_cp_filetree__nbFontsize"

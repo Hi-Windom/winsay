@@ -6,8 +6,8 @@ const SB1 = "winsayUserData";
 const updateStyle = window.winsay.funs.updateStyle;
 // const localforage = new API.LocalStorage(3);
 
-window.winsay.storage.iterLC = config.Iterator1(config.colors1)
-window.winsay.storage.iterDC = config.Iterator2(config.colors2)
+window.winsay.storage.iterLC = config.Iterator1(config.colors1);
+window.winsay.storage.iterDC = config.Iterator2(config.colors2);
 
 var fs = null;
 var path = null;
@@ -26,7 +26,10 @@ await new Promise(async function (response) {
         });
         await localforage.ready().then(async () => {
           // 当 localforage 将指定驱动初始化完成时，此处代码运行
-          await localforage.setItem("winsay_latest_boot_time", Date.now().toString());
+          await localforage.setItem(
+            "winsay_latest_boot_time",
+            Date.now().toString()
+          );
           ccc = false;
           response(localforage.driver());
         });
@@ -40,18 +43,12 @@ await new Promise(async function (response) {
   console.log(response); // 'asyncStorage'
   await new Promise(async (resolve) => {
     window.winsay.funs.loadScript(
-      window.winsay.funs.addURLParam(
-        `${window.winsay.where.themeRoot}script/CP.js?r=` + Math.random()
-      ),
-      undefined,
+      `${window.winsay.where.themeRoot}script/CP.js?r=` + Math.random(),
       true,
       true
     ).onload = async () => {
       window.winsay.funs.loadScript(
-        window.winsay.funs.addURLParam(
-          `${window.winsay.where.themeRoot}script/SSS.js?r=` + Math.random()
-        ),
-        undefined,
+        `${window.winsay.where.themeRoot}script/SSS.js?r=` + Math.random(),
         true,
         true
       );
@@ -129,12 +126,12 @@ await new Promise(async function (response) {
     switch (API.compareVersion("2.7.0", kernelVersion)) {
       case -1:
       case 0:
-        updateStyle("v2_7_0", `${window.winsay.where.themeRoot}VP/v2_7/v2_7_0.css`);
+        updateStyle(
+          "v2_7_0",
+          `${window.winsay.where.themeRoot}VP/v2_7/v2_7_0.css`
+        );
         window.winsay.funs.loadScript(
-          window.winsay.funs.addURLParam(
-            `${window.winsay.where.themeRoot}VP/v2_7/v2_7_0.js`
-          ),
-          undefined,
+          `${window.winsay.where.themeRoot}VP/v2_7/v2_7_0.js`,
           true
         );
         break;
@@ -144,7 +141,6 @@ await new Promise(async function (response) {
     resolve();
   });
 });
-
 
 window.winsay.ekits.gites = {
   UPath: `/appearance/themes/Sofill=/eHiWindom/gites/`,
@@ -156,7 +152,10 @@ async function ghostTabBar() {
     .getItem("SC_winsay_cp_appearance__TabBarMode")
     .then(async (value) => {
       if (!API.isEmptyString(value)) {
-        updateStyle("TabBar", `${window.winsay.where.themeRoot}style/sweet/${value}`);
+        updateStyle(
+          "TabBar",
+          `${window.winsay.where.themeRoot}style/sweet/${value}`
+        );
       } else {
         console.warn(value);
       }
@@ -221,7 +220,10 @@ updateStyle("MI", `${window.winsay.where.themeRoot}style/MI.css`);
 /* 根据不同设备加载样式配置文件 */
 switch (window.winsay.OS) {
   case "android":
-    updateStyle("Mobile", `${window.winsay.where.themeRoot}style/Mobile/Android.css`);
+    updateStyle(
+      "Mobile",
+      `${window.winsay.where.themeRoot}style/Mobile/Android.css`
+    );
     break;
   default:
     updateStyle("fonts", `${window.winsay.ekits.gites.UPath}style/fonts.css`);
@@ -238,7 +240,10 @@ updateStyle(
   "MI-ToolBar-Auto",
   `${window.winsay.where.themeRoot}style/sweet/MI-ToolBar-Auto.css`
 );
-updateStyle("Funs-list2", `${window.winsay.where.themeRoot}style/Funs-list2.min.css`);
+updateStyle(
+  "Funs-list2",
+  `${window.winsay.where.themeRoot}style/Funs-list2.min.css`
+);
 updateStyle(
   "Funs-ScrollView",
   `${window.winsay.where.themeRoot}style/Funs-ScrollView.css`
@@ -252,23 +257,20 @@ switch (config.ThemeName) {
     break;
   case "Sofill-":
   default:
-    updateStyle("CP-themely", `${window.winsay.where.themeRoot}style/CP-winsay.css`);
+    updateStyle(
+      "CP-themely",
+      `${window.winsay.where.themeRoot}style/CP-winsay.css`
+    );
     break;
 }
 
 if (config.clientMode == "body--mobile") {
   window.winsay.funs.loadScript(
-    window.winsay.funs.addURLParam(
-      `${window.winsay.where.themeRoot}script/lib/hammer.min.js`
-    ),
-    "module",
+    `${window.winsay.where.themeRoot}script/lib/hammer.min.js`,
     true
   );
   window.winsay.funs.loadScript(
-    window.winsay.funs.addURLParam(
-      `${window.winsay.where.themeRoot}script/sweet/MobileMagicBall.js`
-    ),
-    undefined,
+    `${window.winsay.where.themeRoot}script/sweet/MobileMagicBall.js`,
     true
   );
 }
@@ -314,10 +316,7 @@ if (!document.body.classList.contains("branch--Sillot")) {
         if (!err) {
           setTimeout(() => {
             window.winsay.funs.loadScript(
-              window.winsay.funs.addURLParam(
-                `${window.winsay.where.themeRoot}script/module/AlertOnce.js`
-              ),
-              undefined,
+              `${window.winsay.where.themeRoot}script/module/AlertOnce.js`,
               true
             );
             setTimeout(() => {
