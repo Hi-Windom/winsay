@@ -130,6 +130,10 @@ Step 2 鼠标悬浮或左键单击右下角控件，在呼出的菜单中点击�
 
 <img src="https://b3logfile.com/siyuan/1662398123089/assets/image-20230101182746-lnyr798.png"/>
 
+## ⚠️ 注意事项
+
+1. 主题根文件夹名称应为 `Sofill-` ，如果重命名为其他名称，必须对应修改 `theme.js` 第一行
+
 ## 🎈 [鸣谢](https://github.com/Hi-Windom/Sofill/blob/main/P%26L.md)
 
 # 🌐 开源声明
