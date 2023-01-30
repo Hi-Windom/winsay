@@ -367,17 +367,6 @@ var CP = `
                   <option value="[[ ]]">经典通用</option>
                 </select>
               </label>
-              <label class="fn__flex b3-label">
-                <div class="fn__flex-1">
-                  同步引用锚文本样式至思源导出配置
-                  <div class="b3-label__text">影响导出效果，请注意：同步期间不要进行操作</div>
-                </div>
-                <span class="fn__space"></span>
-                <button class="b3-button b3-button--outline fn__flex-center fn__size200"
-                  id="SC_winsay_cp_editor__Block-Inline-link__block-ref-content_AsyncToSY">
-                  同步
-                </button>
-              </label>
               <label class="fn__flex b3-label SC_ableC__Android_mobile">
                 <div class="fn__flex-1">
                   任务列表已完成项文字颜色

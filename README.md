@@ -58,6 +58,7 @@
 14. [移除主题路径配置文件 · Issue #924 · v1.5.16](https://github.com/Hi-Windom/winsay/issues/924)
 15. [抽离主题相对路径 · Issue #928 · v1.5.16](https://github.com/Hi-Windom/winsay/issues/928)
 16. [移除顶栏清爽模式功能 · Issue #917 · v1.5.16](https://github.com/Hi-Windom/winsay/issues/917)
+17. [移除同步引用锚文本样式至思源导出配置 · Issue #923 · v1.5.16](https://github.com/Hi-Windom/winsay/issues/923)
 
 修复缺陷：NULL
 
