@@ -28,7 +28,7 @@
 > 2023-01-?? released
 
 <p>
-<img src="https://img.shields.io/badge/Sillot-0.2-pink" alt="适配 Sillot v0.2" title="建议先更新汐洛版本" style="cursor:pointer;height: 38px;margin: 3px auto;"/>
+<img src="https://img.shields.io/badge/Sillot-0.3-pink" alt="适配 Sillot v0.3" title="建议先更新汐洛版本" style="cursor:pointer;height: 38px;margin: 3px auto;"/>
 <img src="https://img.shields.io/badge/SiYuan-2.6.2-green" alt="适配 SiYuan v2.6.2" title="建议先更新思源版本" style="cursor:pointer;height: 38px;margin: 3px auto;"/>
 <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow" alt="这是一个构建版本" title="建议手动删除旧版本后再下载，而不是直接更新" style="cursor:pointer;height: 38px;margin: 3px auto;"/> <br>
 <img src="https://img.shields.io/badge/Android-PASS-green?logo=Android" title="" style="margin: 3px auto;"/>
@@ -57,6 +57,7 @@
 13. [使用 `IndexedDB` 替代 `localStorage` · Issue #921 · v1.5.16](https://github.com/Hi-Windom/winsay/issues/921)
 14. [移除主题路径配置文件 · Issue #924 · v1.5.16](https://github.com/Hi-Windom/winsay/issues/924)
 15. [抽离主题相对路径 · Issue #928 · v1.5.16](https://github.com/Hi-Windom/winsay/issues/928)
+16. [移除顶栏清爽模式功能 · Issue #917 · v1.5.16](https://github.com/Hi-Windom/winsay/issues/917)
 
 修复缺陷：NULL
 

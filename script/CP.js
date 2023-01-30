@@ -1556,40 +1556,6 @@ async function CP_EditorMonitor() {
 async function CP_AppearanceMonitor() {
   if (config.clientMode != "body--mobile") {
     await API.checkedChange(
-      document.getElementById("SC_winsay_cp_appearance__CoolToolBar"),
-      () => {
-        if (
-          !document.body.classList.contains("user--Sub") ||
-          document.getElementById("v2_7_0")
-        )
-          return;
-        API.MoveDOM("#barTopHelp", "#sc_drawer");
-        API.MoveDOM("#toolbarVIP", "#sc_drawer");
-        API.CopyDOM("#barMode", "#sc_drawer");
-        document.querySelector("#toolbar #barMode").style.width = "0";
-        document.querySelector("#toolbar #barMode").style.padding = "0";
-      },
-      () => {
-        if (document.getElementById("v2_7_0")) return;
-        document
-          .querySelector("#barSetting")
-          .insertAdjacentElement(
-            "afterend",
-            document.querySelector("#barTopHelp")
-          );
-        document
-          .querySelector("#toolbar")
-          .insertAdjacentElement(
-            "afterbegin",
-            document.querySelector("#toolbarVIP")
-          );
-        let old = document.querySelector("#sc_drawer #barMode");
-        old ? old.remove() : null;
-        document.querySelector("#toolbar #barMode").style.width = "auto";
-        document.querySelector("#toolbar #barMode").style.padding = "9px";
-      }
-    );
-    await API.checkedChange(
       document.getElementById("NoSync__SC_winsay_cp_appearance__AutoTranslate"),
       () => {
         if (window.siyuan.config.lang) {
