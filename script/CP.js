@@ -530,7 +530,7 @@ async function addCPAlleListener() {
         });
 
         info.open(() => {
-          document.getElementById("UpdateInfo").innerHTML = `
+          document.getElementById("UpdateInfo").innerHTML = /*html*/ `
 <div style="max-height: 58vh;overflow: auto;white-space: nowrap;">
 localIPs  <br><code class="fn__code">${window.siyuan.config.localIPs}</code><br><br>
 api.token  <br><code class="fn__code">${window.siyuan.config.api.token}</code><br><br>

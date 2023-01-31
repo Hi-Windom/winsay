@@ -1,10 +1,10 @@
-export {CP};
-var CP = `
+export { CP };
+var CP = /*html*/ `
 <div class="SCC-wrapper"></div>
 <div class="b3-dialog--open">
   <div class="SCC-dialog b3-dialog">
     <div class="b3-dialog__scrim"></div>
-    <div class="b3-dialog__container">
+      <div class="b3-dialog__container">
       <div style="height:auto">
         <div class="fn__flex-column" style="border-radius: 4px;overflow: hidden;position: relative">
           <div class="fn__flex-1 fn__flex sc-custom-container-p">
@@ -1290,4 +1290,4 @@ var CP = `
     </div>
   </div>
 </div>
-`
+`;
