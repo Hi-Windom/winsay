@@ -4,7 +4,7 @@
   --b3-theme-primary-light: var(--SCC-Purple-Soledar-light);
   --b3-theme-primary-lighter: var(--SCC-Purple-Soledar-lighter);
   --b3-theme-primary-lightest: var(--SCC-Purple-Soledar-lightest);
-  --b3-theme-secondary: var(--SCC-CNTC-淡藤);
+  --b3-theme-secondary: var(--SCC-CNTC-DanTeng);
   --b3-theme-background: var(--SCC-Gray-HellisePotter);
   --b3-theme-background-light: var(--SCC-Gray-HellisePotter-light);
   --b3-theme-background-blur: #dee3f4e8;
@@ -14,7 +14,7 @@
 
   /* 文字颜色 */
   --b3-theme-on-primary: var(--SCC-SGTC-15C);
-  --b3-theme-on-secondary: var(--SCC-CNTC-雪青);
+  --b3-theme-on-secondary: var(--SCC-CNTC-XueQing);
   --b3-theme-on-background: var(--SCC-Blue-Windom);
   --b3-theme-on-surface: var(--SCColor);
   /* 此色影响顶部栏图标颜色和不少界面区域中的文字颜色 */
@@ -33,8 +33,8 @@
   --b3-font-color4: var(--SCC-Blue-186);
   --b3-font-color5: var(--SCC-Black-186);
   --b3-font-color6: var(--SCColor);
-  --b3-font-color7: var(--SCC-CNTC-赤褐);
-  --b3-font-color8: var(--SCC-CNTC-绛紫);
+  --b3-font-color7: var(--SCC-CNTC-ChiHe);
+  --b3-font-color8: var(--SCC-CNTC-JiangZi);
   /* --b3-font-color9: var(--SCC-Cyan-186);
   --b3-font-color10: var(--SCC-Green-186); */
   --b3-font-background1: var(--SCC-Red-Firole-lighter);
@@ -85,11 +85,11 @@
   --SCC-Component-CodeBlock-bg-color: #f7f9fca5;
   --SCC-Component-CodeBlock-bg-color-hover: #fff;
   --SCC-Component-Message-button-ok-border: 3px ridge var(--SCC-Cyan-186-lighter) !important;
-  --SCC-Component-Message-button-ok-bg-color: var(--SCC-CNTC-绛紫);
-  --SCC-Component-meno-bg-color: var(--SCC-CNTC-雪青);
+  --SCC-Component-Message-button-ok-bg-color: var(--SCC-CNTC-JiangZi);
+  --SCC-Component-meno-bg-color: var(--SCC-CNTC-XueQing);
   --SCC-Component-meno-border-bottom: 2px solid var(--b3-card-info-color);
-  --SCC-Component-Counter-bg-color: var(--SCC-CNTC-绛紫);
-  --SCC-Component-Counter-border: 1.3px solid var(--SCC-CNTC-雪青);
+  --SCC-Component-Counter-bg-color: var(--SCC-CNTC-JiangZi);
+  --SCC-Component-Counter-border: 1.3px solid var(--SCC-CNTC-XueQing);
   --SCC-Component-TabBar-item__close-svg__hover-color: var(--SCC-Purple-Soledar);
   --SCC-sCt-Hfbs1-color1: rgba(144, 111, 137, 0.11);
   --SCC-sCt-Hfbs1-color2: rgba(144, 111, 137, 0.17);

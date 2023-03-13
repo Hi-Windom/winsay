@@ -105,15 +105,15 @@ body.body--mobile #menu > #menuNewNotebook {
 }
 body.body--mobile #menu > #menuHelp > svg,
 body.body--mobile #menu > #menuHelp > span {
-  color: var(--SCC-CNTC-墨灰);
+  color: var(--SCC-CNTC-MoHui);
 }
 body.body--mobile #menu > #menuAbout > svg,
 body.body--mobile #menu > #menuAbout > span {
-  color: var(--SCC-CNTC-宝蓝);
+  color: var(--SCC-CNTC-BaoLan);
 }
 body.body--mobile #menu > #menuSafeQuit > svg,
 body.body--mobile #menu > #menuSafeQuit > span {
-  color: var(--SCC-CNTC-殷红);
+  color: var(--SCC-CNTC-YinHong);
 }
 body.body--mobile #historyContainer > .history__repo > .history__repoheader > select,
 body.body--mobile #historyContainer > .history__repo > .history__repoheader > div:nth-child(5),

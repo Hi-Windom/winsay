@@ -4,7 +4,7 @@
   --b3-theme-primary-light: var(--SCC-Pink-Firole-light);
   --b3-theme-primary-lighter: var(--SCC-Pink-Firole-lighter);
   --b3-theme-primary-lightest: var(--SCC-Pink-Firole-lightest);
-  --b3-theme-secondary: var(--SCC-CNTC-粉红);
+  --b3-theme-secondary: var(--SCC-CNTC-FenHong);
   --b3-theme-background: var(--SCC-Pink-WPS_Vivian);
   --b3-theme-background-light: var(--SCC-Pink-WPS_Vivian-light);
   --b3-theme-background-blur: #f8edefe8;
@@ -30,13 +30,13 @@
   --b3-font-color1: var(--SCC-SGTC-13B);
   --b3-font-color2: var(--SCC-SGTC-19D);
   --b3-font-color3: var(--SCC-SGTC-12A);
-  --b3-font-color4: var(--SCC-CNTC-粉红);
+  --b3-font-color4: var(--SCC-CNTC-FenHong);
   --b3-font-color5: var(--SCC-SGTC-21C);
   --b3-font-color6: var(--SCC-SGTC-4D);
-  --b3-font-color7: var(--SCC-CNTC-嫣红);
-  --b3-font-color8: var(--SCC-CNTC-山鳩);
-  /* --b3-font-color9: var(--SCC-CNTC-殷红);
-  --b3-font-color10: var(--SCC-CNTC-宝蓝); */
+  --b3-font-color7: var(--SCC-CNTC-YanHong);
+  --b3-font-color8: var(--SCC-CNTC-ShanJiu);
+  /* --b3-font-color9: var(--SCC-CNTC-YinHong);
+  --b3-font-color10: var(--SCC-CNTC-BaoLan); */
   --b3-font-background1: #bc002f13;
   --b3-font-background2: #df33cc26;
   --b3-font-background3: #9a58fd32;
@@ -85,12 +85,12 @@
   --SCC-Component-CodeBlock-bg-color: #fff2f3a5;
   --SCC-Component-CodeBlock-bg-color-hover: #fff;
   --SCC-Component-Message-button-ok-border: 3px ridge var(--SCC-Cyan-186-lighter) !important;
-  --SCC-Component-Message-button-ok-bg-color: var(--SCC-CNTC-嫣红);
-  --SCC-Component-meno-bg-color: var(--SCC-CNTC-藕粉);
+  --SCC-Component-Message-button-ok-bg-color: var(--SCC-CNTC-YanHong);
+  --SCC-Component-meno-bg-color: var(--SCC-CNTC-OuFen);
   --SCC-Component-meno-border-bottom: 2px solid var(--b3-card-info-color);
-  --SCC-Component-Counter-bg-color: var(--SCC-CNTC-嫣红);
-  --SCC-Component-Counter-border: 1.3px solid var(--SCC-CNTC-藕粉);
-  --SCC-Component-TabBar-item__close-svg__hover-color: var(--SCC-CNTC-茜色);
+  --SCC-Component-Counter-bg-color: var(--SCC-CNTC-YanHong);
+  --SCC-Component-Counter-border: 1.3px solid var(--SCC-CNTC-OuFen);
+  --SCC-Component-TabBar-item__close-svg__hover-color: var(--SCC-CNTC-QianSe);
   --SCC-sCt-Hfbs1-color1: rgba(158, 97, 100, 0.11);
   --SCC-sCt-Hfbs1-color2: rgba(158, 97, 100, 0.17);
   --SCC-sCt-Hfbs1-color3: rgba(158, 97, 100, 0.23);

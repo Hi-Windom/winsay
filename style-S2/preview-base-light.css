@@ -114,7 +114,7 @@ body:not(.fn__flex-column) #action {
   --SCC-funs__baseComponent-list2table-border: 1px solid var(--b3-theme-primary-lightest);
   --SCC-baseComponent-Dialog-520-box-shadow: 13px 31px 131px -58px rgb(0 0 0 / 50%), -30px 31px 29px -18px rgb(13 13 13 / 33%), 72px 51px 66px -92px rgb(255 255 255 / 79%);
   --SCC-baseComponent-Dialog-520-hover-box-shadow: 13px 31px 131px -58px rgb(0 0 0 / 50%), 60px 111px 52px -8px rgb(0 0 0 / 13%), -262px -31px 777px -82px rgb(255 255 255 / 99%);
-  --SCC-baseComponent-Dialog-520-button-color: var(--SCC-CNTC-月白);
+  --SCC-baseComponent-Dialog-520-button-color: var(--SCC-CNTC-YueBai);
   --SCC-baseComponent-Popup-Menu-shadow: rgb(0 0 0 / 31%) -20px 58px 111px -61px, rgb(131 131 131 / 3%) 10px -181px 666px 1111px, rgb(0 0 0 / 13%) 0px 3px 18px -12px inset;
   --SCC-baseComponent-file-tree-hover-ul-outline: none;
   /* 块引用波浪线动画图标 | The icon of wavy line animation */

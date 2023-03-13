@@ -1,6 +1,6 @@
 :root {
     /* 主色 */
-    --b3-theme-primary: var(--SCC-CNTC-松花色);
+    --b3-theme-primary: var(--SCC-CNTC-SongHuaSe);
     --b3-theme-primary-light: #bce672c5;
     --b3-theme-primary-lighter: #bce672a5;
     --b3-theme-primary-lightest: #bce67235;
@@ -28,15 +28,15 @@
 
     /* 自定义颜色 */
     --b3-font-color1: var(--SCC-SGTC-14A);
-    --b3-font-color2: var(--SCC-CNTC-松花色);
+    --b3-font-color2: var(--SCC-CNTC-SongHuaSe);
     --b3-font-color3: var(--SCC-SGTC-31D);
-    --b3-font-color4: var(--SCC-CNTC-竹青);
+    --b3-font-color4: var(--SCC-CNTC-ZhuQing);
     --b3-font-color5: var(--SCC-SGTC-31A);
-    --b3-font-color6: var(--SCC-CNTC-中度灰);
+    --b3-font-color6: var(--SCC-CNTC-ZhongDuHui);
     --b3-font-color7: var(--SCC-Pink-WPS);
-    --b3-font-color8: var(--SCC-CNTC-翡翠色);
+    --b3-font-color8: var(--SCC-CNTC-FeiCuiSe);
     /* --b3-font-color9: var(--SCC-Blue-WPS);
-    --b3-font-color10: var(--SCC-CNTC-樱草色); */
+    --b3-font-color10: var(--SCC-CNTC-YingCaoSe); */
     --b3-font-background1: #bc002f72;
     --b3-font-background2: #df33cc52;
     --b3-font-background3: #9a58fd34;
@@ -87,12 +87,12 @@
     --SCC-Component-CodeBlock-bg-color: #afbbbb35;
     --SCC-Component-CodeBlock-bg-color-hover: #55555555;
     --SCC-Component-Message-button-ok-border: 3px ridge var(--SCC-Cyan-186-lighter) !important;
-    --SCC-Component-Message-button-ok-bg-color: var(--SCC-CNTC-黛绿);
-    --SCC-Component-meno-bg-color: var(--SCC-CNTC-黛绿);
+    --SCC-Component-Message-button-ok-bg-color: var(--SCC-CNTC-DaiLv);
+    --SCC-Component-meno-bg-color: var(--SCC-CNTC-DaiLv);
     --SCC-Component-meno-border-bottom: 2px solid var(--b3-card-info-color);
-    --SCC-Component-Counter-bg-color: var(--SCC-CNTC-黛绿);
-    --SCC-Component-Counter-border: 1.3px solid var(--SCC-CNTC-黛绿);
-    --SCC-Component-TabBar-item__close-svg__hover-color: var(--SCC-CNTC-石绿);
+    --SCC-Component-Counter-bg-color: var(--SCC-CNTC-DaiLv);
+    --SCC-Component-Counter-border: 1.3px solid var(--SCC-CNTC-DaiLv);
+    --SCC-Component-TabBar-item__close-svg__hover-color: var(--SCC-CNTC-ShiLv);
     --SCC-sCt-Hfbs1-color1: rgba(30, 35, 30, 0.03);
     --SCC-sCt-Hfbs1-color2: rgba(30, 34, 30, 0.13);
     --SCC-sCt-Hfbs1-color3: rgba(30, 33, 30, 0.25);

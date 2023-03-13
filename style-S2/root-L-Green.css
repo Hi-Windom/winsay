@@ -4,7 +4,7 @@
   --b3-theme-primary-light: var(--SCC-Green-WPS-light);
   --b3-theme-primary-lighter: var(--SCC-Green-WPS-lighter);
   --b3-theme-primary-lightest: var(--SCC-Green-WPS-lightest);
-  --b3-theme-secondary: var(--SCC-CNTC-蟹壳青);
+  --b3-theme-secondary: var(--SCC-CNTC-XieKeQing);
   --b3-theme-background: var(--SCC-Green-WPS_Vivid);
   --b3-theme-background-light: var(--SCC-Green-WPS_Vivid-light);
   --b3-theme-background-blur: #ecf4ece8;
@@ -27,16 +27,16 @@
   --b3-toolbar-color: var(--SCC-Green-WPS-light);
 
   /* 自定义颜色 */
-  --b3-font-color1: var(--SCC-CNTC-檳榔子染);
-  --b3-font-color2: var(--SCC-CNTC-石绿);
-  --b3-font-color3: var(--SCC-CNTC-萌葱);
-  --b3-font-color4: var(--SCC-CNTC-千緑);
-  --b3-font-color5: var(--SCC-CNTC-柳煤竹);
-  --b3-font-color6: var(--SCC-CNTC-中度灰);
-  --b3-font-color7: var(--SCC-CNTC-嫣红);
-  --b3-font-color8: var(--SCC-CNTC-金茶);
-  /* --b3-font-color9: var(--SCC-CNTC-殷红);
-  --b3-font-color10: var(--SCC-CNTC-宝蓝); */
+  --b3-font-color1: var(--SCC-CNTC-BingLangZiRan);
+  --b3-font-color2: var(--SCC-CNTC-ShiLv);
+  --b3-font-color3: var(--SCC-CNTC-MengCong);
+  --b3-font-color4: var(--SCC-CNTC-QianLv);
+  --b3-font-color5: var(--SCC-CNTC-LiuMeiZhu);
+  --b3-font-color6: var(--SCC-CNTC-ZhongDuHui);
+  --b3-font-color7: var(--SCC-CNTC-YanHong);
+  --b3-font-color8: var(--SCC-CNTC-JinCha);
+  /* --b3-font-color9: var(--SCC-CNTC-YinHong);
+  --b3-font-color10: var(--SCC-CNTC-BaoLan); */
   --b3-font-background1: #bc002f13;
   --b3-font-background2: #df33cc26;
   --b3-font-background3: #9a58fd32;
@@ -85,12 +85,12 @@
   --SCC-Component-CodeBlock-bg-color: #fafff5a5;
   --SCC-Component-CodeBlock-bg-color-hover: #fff;
   --SCC-Component-Message-button-ok-border: 3px ridge var(--SCC-Cyan-186-lighter) !important;
-  --SCC-Component-Message-button-ok-bg-color: var(--SCC-CNTC-黒緑);
-  --SCC-Component-meno-bg-color: var(--SCC-CNTC-利休白茶);
+  --SCC-Component-Message-button-ok-bg-color: var(--SCC-CNTC-HeiLv);
+  --SCC-Component-meno-bg-color: var(--SCC-CNTC-LiXiuBaiCha);
   --SCC-Component-meno-border-bottom: 2px solid var(--b3-card-info-color);
-  --SCC-Component-Counter-bg-color: var(--SCC-CNTC-黒緑);
-  --SCC-Component-Counter-border: 1.3px solid var(--SCC-CNTC-利休白茶);
-  --SCC-Component-TabBar-item__close-svg__hover-color: var(--SCC-CNTC-松柏绿);
+  --SCC-Component-Counter-bg-color: var(--SCC-CNTC-HeiLv);
+  --SCC-Component-Counter-border: 1.3px solid var(--SCC-CNTC-LiXiuBaiCha);
+  --SCC-Component-TabBar-item__close-svg__hover-color: var(--SCC-CNTC-SongBaiLv);
   --SCC-sCt-Hfbs1-color1: rgba(58, 87, 72, 0.11);
   --SCC-sCt-Hfbs1-color2: rgba(58, 87, 72, 0.17);
   --SCC-sCt-Hfbs1-color3: rgba(58, 87, 72, 0.23);
@@ -110,7 +110,7 @@
   --SCC-Component-HintMenu-border-bottom: 1.86px ridge rgba(244, 244, 0, 0.13);
   --SCC-Component-HintMenu-column-rule: 1px solid var(--SCC-Cyan-186-lighter);
   --SCC-Component-Inline-kbd-color: var(--SCC-White-WPS);
-  --SCC-Component-Inline-kbd-bg-color: var(--SCC-CNTC-麹塵);
+  --SCC-Component-Inline-kbd-bg-color: var(--SCC-CNTC-QuChen);
   --SCC-Component-Inline-kbd-box-shadow: rgba(224, 219, 0, 0.58) -1px 2px, rgba(20, 56, 85, 0.3) 1px 3px;
   --SCC-Component-Inline-kbd-border-radius: 10px;
 }

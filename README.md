@@ -12,19 +12,23 @@
 
 ## 📜 集市更新版本日志
 
-很遗憾，Sofill-已**[结构性暂停](https://github.com/Hi-Windom/winsay/issues/914)**适配思源源分支更新。如果你使用的是思源源分支v2.6.3+桌面端，不推荐使用本主题（移动端仍是最佳主题）
+很遗憾，Sofill全系主题已 [结构性暂停](https://github.com/Hi-Windom/winsay/issues/914) 适配思源源分支更新。
+
+如果你使用的是思源源分支v2.6.3+桌面端，不推荐使用Sofill系列主题（移动端Sofill-仍是最佳主题）。
+
+[Sillot （汐洛）基于思源的发行版 ](https://github.com/Hi-Windom/Sillot)已完成工作空间的 IndexedDB 持久化存储，Sofill-主题设置得以在 Sillot 大放异彩。我们推荐 Sofill-主题用户尝试使用 Sillot （不支持Docker和移动端平台）并提供反馈。如无法访问 Github，可在海文东QQ频道 `43in2c1qb9` 下载。
 
 ### 版本说明
 
 * 包含【SiYuan】/【Sillot】标签的版本，建议更新思源/汐洛至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [All version change log](https://github.com/Hi-Windom/Sofill/blob/main/CHANGELOG/winsay.md)
 
-### v1.5 聚合说明
+### v2.0 聚合说明
 
-> 2023-01-?? released
+> 2023-03-?? released
 
 <p>
-<img src="https://img.shields.io/badge/Sillot-0.1-pink" alt="适配 Sillot v0.1" title="建议先更新汐洛版本" style="cursor:pointer;height: 38px;margin: 3px auto;"/>
+<img src="https://img.shields.io/badge/Sillot-0.10-pink" alt="适配 Sillot v0.10" title="建议先更新汐洛版本" style="cursor:pointer;height: 38px;margin: 3px auto;"/>
 <img src="https://img.shields.io/badge/SiYuan-2.6.2-green" alt="适配 SiYuan v2.6.2" title="建议先更新思源版本" style="cursor:pointer;height: 38px;margin: 3px auto;"/>
 <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow" alt="这是一个构建版本" title="建议手动删除旧版本后再下载，而不是直接更新" style="cursor:pointer;height: 38px;margin: 3px auto;"/> <br>
 <img src="https://img.shields.io/badge/Android-PASS-green?logo=Android" title="" style="margin: 3px auto;"/>
@@ -32,26 +36,7 @@
 <img src="https://img.shields.io/badge/Docker-PASS-green?logo=Docker" title="" style="margin: 3px auto;"/>
 </p>
 
-引入特性：
-
-1. [明暗模式基础类 · Issue #886 · v1.5.1](https://github.com/Hi-Windom/winsay/issues/886)
-
-改进优化：
-
-1. [取消压缩 SCC.css · Issue #888 · v1.5.2](https://github.com/Hi-Windom/winsay/issues/888)
-2. [合并 MI 相关的几个 CSS 文件并使用 less 构建 · Issue #860 · v1.5.3](https://github.com/Hi-Windom/winsay/issues/860)
-3. [Mobile 部分 CSS 使用 less 构建 · Issue #891 · v1.5.4](https://github.com/Hi-Windom/winsay/issues/891)
-4. [墨绿紫+青葱绿形态字色双忙测试验收通过 · Issue #849 · v1.5.6](https://github.com/Hi-Windom/winsay/issues/849)
-5. [适配Sofill#新字体接口 · Issue #898 · v1.5.7](https://github.com/Hi-Windom/winsay/issues/898)
-6. [优化安卓平板端退出思源功能 · Issue #903 · v1.5.9](https://github.com/Hi-Windom/winsay/issues/903)
-7. [body加入分支类名 · Issue #905 · v1.5.10](https://github.com/Hi-Windom/winsay/issues/905)
-8. [README不再显示停止适配的思源版本 · Issue #908 · v1.5.11](https://github.com/Hi-Windom/winsay/issues/908)
-9. [变更API · Issue #902 · v1.5.12](https://github.com/Hi-Windom/winsay/issues/902)
-10. [Sillot分支禁用一次性通知 · Issue #911 · v1.5.13](https://github.com/Hi-Windom/winsay/issues/911)
-11. [结构性暂停适配思源源分支更新 · Issue #914 · v1.5.14](https://github.com/Hi-Windom/winsay/issues/914)
-12. [左下角增加一个主题设置入口 · Issue #916 · v1.5.15](https://github.com/Hi-Windom/winsay/issues/916)
-
-修复缺陷：NULL
+[2.0 Milestone (github.com)](https://github.com/Hi-Windom/winsay/milestone/139)
 
 ## 🏳️‍🌈 主题特色介绍
 
@@ -122,6 +107,10 @@ Step 2 鼠标悬浮或左键单击右下角控件，在呼出的菜单中点击�
 也可以在主题设置中切换：
 
 <img src="https://b3logfile.com/siyuan/1662398123089/assets/image-20230101182746-lnyr798.png"/>
+
+## ⚠️ 注意事项
+
+1. 主题根文件夹名称应为 `Sofill-` ，如果重命名为其他名称，必须对应修改 `theme.js` 第一行
 
 ## 🎈 [鸣谢](https://github.com/Hi-Windom/Sofill/blob/main/P%26L.md)
 

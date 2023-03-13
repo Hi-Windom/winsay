@@ -1,0 +1,12 @@
+{
+  "name": "winsay",
+  "version": "2.0",
+  "description": "",
+  "main": "index.cjs",
+  "module": "index.mjs",
+  "keywords": [],
+  "author": "Soltus",
+  "license": "ISC",
+  "devDependencies": {
+  }
+}

@@ -16,7 +16,7 @@
   --b3-theme-on-primary: var(--SCC-SGTC-30A);
   --b3-theme-on-secondary: #fff;
   --b3-theme-on-background: var(--SCColor);
-  --b3-theme-on-surface: var(--SCC-CNTC-中度灰);
+  --b3-theme-on-surface: var(--SCC-CNTC-ZhongDuHui);
   /* 此色影响顶部栏图标颜色和不少界面区域中的文字颜色 */
   --b3-theme-on-surface-light: var(--SCC-primary-light);
   --b3-theme-on-error: #fff;
@@ -28,15 +28,15 @@
 
   /* 自定义颜色 */
   --b3-font-color1: var(--SCC-Red-WPS);
-  --b3-font-color2: var(--SCC-CNTC-殷红);
-  --b3-font-color3: var(--SCC-CNTC-火红);
+  --b3-font-color2: var(--SCC-CNTC-YinHong);
+  --b3-font-color3: var(--SCC-CNTC-HuoHong);
   --b3-font-color4: var(--SCC-SGTC-19D);
-  --b3-font-color5: var(--SCC-CNTC-黒紅);
+  --b3-font-color5: var(--SCC-CNTC-HeiHong);
   --b3-font-color6: var(--SCC-SGTC-11B);
-  --b3-font-color7: var(--SCC-CNTC-嫣红);
-  --b3-font-color8: var(--SCC-CNTC-山鳩);
-  /* --b3-font-color9: var(--SCC-CNTC-殷红);
-  --b3-font-color10: var(--SCC-CNTC-宝蓝); */
+  --b3-font-color7: var(--SCC-CNTC-YanHong);
+  --b3-font-color8: var(--SCC-CNTC-ShanJiu);
+  /* --b3-font-color9: var(--SCC-CNTC-YinHong);
+  --b3-font-color10: var(--SCC-CNTC-BaoLan); */
   --b3-font-background1: #bc002f13;
   --b3-font-background2: #df33cc26;
   --b3-font-background3: #9a58fd32;
@@ -86,11 +86,11 @@
   --SCC-Component-CodeBlock-bg-color-hover: #fff;
   --SCC-Component-Message-button-ok-border: 3px ridge var(--SCC-Cyan-186-lighter) !important;
   --SCC-Component-Message-button-ok-bg-color: var(--b3-theme-secondary);
-  --SCC-Component-meno-bg-color: var(--SCC-CNTC-灰梅);
+  --SCC-Component-meno-bg-color: var(--SCC-CNTC-HuiMei);
   --SCC-Component-meno-border-bottom: 2px solid var(--b3-card-info-color);
-  --SCC-Component-Counter-bg-color: var(--SCC-CNTC-煎茶色);
-  --SCC-Component-Counter-border: 1.3px solid var(--SCC-CNTC-灰梅);
-  --SCC-Component-TabBar-item__close-svg__hover-color: var(--SCC-CNTC-品红);
+  --SCC-Component-Counter-bg-color: var(--SCC-CNTC-JianChaSe);
+  --SCC-Component-Counter-border: 1.3px solid var(--SCC-CNTC-HuiMei);
+  --SCC-Component-TabBar-item__close-svg__hover-color: var(--SCC-CNTC-PinHong);
   --SCC-sCt-Hfbs1-color1: rgba(101, 117, 131, 0.11);
   --SCC-sCt-Hfbs1-color2: rgba(101, 117, 131, 0.17);
   --SCC-sCt-Hfbs1-color3: rgba(101, 117, 131, 0.23);
@@ -109,8 +109,8 @@
   --SCC-Component-HintMenu-bg-color: var(--SCC-primary-lighter);
   --SCC-Component-HintMenu-border-bottom: 1.86px ridge rgba(244, 244, 0, 0.88);
   --SCC-Component-HintMenu-column-rule: 1px solid var(--SCC-Cyan-186-lighter);
-  --SCC-Component-Inline-kbd-color: var(--SCC-CNTC-莹白);
-  --SCC-Component-Inline-kbd-bg-color: var(--SCC-CNTC-黛);
+  --SCC-Component-Inline-kbd-color: var(--SCC-CNTC-YingBai);
+  --SCC-Component-Inline-kbd-bg-color: var(--SCC-CNTC-Dai);
   --SCC-Component-Inline-kbd-box-shadow: none;
   --SCC-Component-Inline-kbd-border-radius: 4px;
 }
