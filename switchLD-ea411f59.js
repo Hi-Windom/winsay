@@ -1,7 +1,7 @@
 /*!
 *                    .::::.
 *                  .::::::::.
-*                 :::::::::::  winsay v2.0
+*                 :::::::::::  winsay v2.0.1
 *             ..:::::::::::'
 *           '::::::::::::'
 *             .::::::::::
@@ -30,4 +30,4 @@
  * never gonna say goodbye. Never gonna tell a lie and hurt you.
  *
  */
-import{l as a,B as e,q as t,M as n,u as s,E as o,H as r,f as i,z as l,N as w,e as c}from"./localforage-c05ff5e1.js";async function f(){await a.getItem(e).then((a=>{t(a)&&(a=n,console.warn(a)),s(r.STYLE_COLOR,`${o}${a}`);for(let e=0;e<i.length&&window.winsay.storage.iterDC.next().value!==a;++e);}))}async function g(){await a.getItem(l).then((a=>{t(a)&&(a=w,console.warn(a)),s(r.STYLE_COLOR,`${o}${a}`);for(let e=0;e<c.length&&window.winsay.storage.iterLC.next().value!==a;++e);}))}export{f as iterDC,g as iterLC};
+import{l as a,J as e,q as t,O as n,u as s,S as o,K as r,f as i,H as l,P as w,e as c}from"./localforage-35dd8612.js";async function f(){await a.getItem(e).then((a=>{t(a)&&(a=n,console.warn(a)),s(r.STYLE_COLOR,`${o}${a}`);for(let e=0;e<i.length&&window.winsay.storage.iterDC.next().value!==a;++e);}))}async function g(){await a.getItem(l).then((a=>{t(a)&&(a=w,console.warn(a)),s(r.STYLE_COLOR,`${o}${a}`);for(let e=0;e<c.length&&window.winsay.storage.iterLC.next().value!==a;++e);}))}export{f as iterDC,g as iterLC};

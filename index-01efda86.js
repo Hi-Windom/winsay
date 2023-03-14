@@ -1,7 +1,7 @@
 /*!
 *                    .::::.
 *                  .::::::::.
-*                 :::::::::::  winsay v2.0
+*                 :::::::::::  winsay v2.0.1
 *             ..:::::::::::'
 *           '::::::::::::'
 *             .::::::::::
@@ -30,4 +30,4 @@
  * never gonna say goodbye. Never gonna tell a lie and hurt you.
  *
  */
-import{b as t,J as e}from"./localforage-c05ff5e1.js";function n(){var t=document.querySelectorAll(".protyle-title__input");for(let s=0;s<t.length;s++){const o=t[s];var e=r(o.parentElement),n=e.innerText;if(""===n||"日期获取中……"===n){var l=i(o);e.innerText=l}}}function r(t){var n=t.children;for(let t=0;t<n.length;t++){const e=n[t];if(null!=e.getAttribute("documentCreatTimeElement"))return e}var r=e(t,"span");return r.setAttribute("documentCreatTimeElement","true"),r.style.display="block",r.style.marginLeft="7px",r.style.marginBottom="0px",r.style.fontSize="70%",r.style.color="#484550",r.style.opacity="0.58",r}function i(t){var e=t.parentElement.previousElementSibling.getAttribute("data-node-id");if(null==e)return"";var n=e.substring(0,4),r=e.substring(4,6),i=e.substring(6,8);return e.substring(8,10),e.substring(10,12),e.substring(12,14),"since "+n+"-"+r+"-"+i}"body--mobile"!==t&&setTimeout((()=>{setInterval(n,300)}),500);
+import{i as s,r as t,v as a,S as o,u as i,w as e,b as l,x as r}from"./localforage-35dd8612.js";import{iterLC as n,iterDC as c}from"./switchLD-ea411f59.js";import{M as m,D as f}from"./desktop-03805949.js";async function d(){if("dark"===t)await c();else await n();"body--mobile"===l?(await async function(){if("body--mobile"===l){var s=document.getElementById("SofillToolbar");if(null==s){var t=document.getElementById("toolbarEdit");(s=r(t,"div","SofillToolbar")).style.position="relative",s.style.height="25px",s.style.overflowY="scroll",s.style.paddingTop="7px",s.style.marginRight="3px",s.style.marginLeft="10px"}}}(),await m()):await f()}s()&&require("fs"),setTimeout((()=>{!async function(){let s=null;"light"===t?(s=`${o}root-base-light.css`,a(`${o}root-base-dark.css`,"css")):(s=`${o}root-base-dark.css`,a(`${o}root-base-light.css`,"css"));setTimeout((()=>{i(e,s)}),100),await d()}()}),0);

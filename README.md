@@ -16,7 +16,7 @@
 
 如果你使用的是思源源分支v2.6.3+桌面端，不推荐使用Sofill系列主题（移动端Sofill-仍是最佳主题）。
 
-[Sillot （汐洛）基于思源的发行版 ](https://github.com/Hi-Windom/Sillot)已完成工作空间的 IndexedDB 持久化存储，Sofill-主题设置得以在 Sillot 大放异彩。我们推荐 Sofill-主题用户尝试使用 Sillot （不支持Docker和移动端平台）并提供反馈。如无法访问 Github，可在海文东QQ频道 `43in2c1qb9` 下载。
+[Sillot （汐洛）基于思源的发行版 ](https://github.com/Hi-Windom/Sillot)已完成工作空间的 IndexedDB 持久化存储，Sofill-主题设置得以在 Sillot 大放异彩。我们推荐 Sofill-主题用户尝试使用 Sillot （不支持苹果平台）并提供反馈。
 
 ### 版本说明
 
