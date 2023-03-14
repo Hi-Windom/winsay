@@ -1,7 +1,7 @@
 /*!
 *                    .::::.
 *                  .::::::::.
-*                 :::::::::::  winsay v2.0.1
+*                 :::::::::::  winsay v2.0.2
 *             ..:::::::::::'
 *           '::::::::::::'
 *             .::::::::::
@@ -30,4 +30,4 @@
  * never gonna say goodbye. Never gonna tell a lie and hurt you.
  *
  */
-import{i as s,r as t,v as a,u as o,b as i,S as e,w as l,x as r}from"../localforage-35dd8612.js";import{iterLC as n,iterDC as c}from"../switchLD-ea411f59.js";import{M as m,D as f}from"../desktop-03805949.js";async function d(){if("dark"===t)await c();else await n();"body--mobile"===i?(await async function(){if("body--mobile"===i){var s=document.getElementById("SofillToolbar");if(null==s){var t=document.getElementById("toolbarEdit");(s=r(t,"div","SofillToolbar")).style.position="relative",s.style.height="25px",s.style.overflowY="scroll",s.style.paddingTop="7px",s.style.marginRight="3px",s.style.marginLeft="10px"}}}(),await m()):await f()}s()&&require("fs"),setTimeout((()=>{!async function(){let s=null;"light"===t?(s=`${e}root-base-light.css`,a(`${e}root-base-dark.css`,"css")):(s=`${e}root-base-dark.css`,a(`${e}root-base-light.css`,"css"));setTimeout((()=>{o(l,s)}),100),await d()}()}),0);
+import{i as s,o as t,r as a,u as o,b as i,S as e,p as l,q as r}from"../localforage-1a9216ea.js";import{iterLC as n,iterDC as c}from"../switchLD-3de182a4.js";import{M as m,D as f}from"../desktop-f16ab0cf.js";async function d(){if("dark"===t)await c();else await n();"body--mobile"===i?(await async function(){if("body--mobile"===i){var s=document.getElementById("SofillToolbar");if(null==s){var t=document.getElementById("toolbarEdit");(s=r(t,"div","SofillToolbar")).style.position="relative",s.style.height="25px",s.style.overflowY="scroll",s.style.paddingTop="7px",s.style.marginRight="3px",s.style.marginLeft="10px"}}}(),await m()):await f()}s()&&require("fs"),setTimeout((()=>{!async function(){let s=null;"light"===t?(s=`${e}root-base-light.css`,a(`${e}root-base-dark.css`,"css")):(s=`${e}root-base-dark.css`,a(`${e}root-base-light.css`,"css"));setTimeout((()=>{o(l,s)}),100),await d()}()}),0);
