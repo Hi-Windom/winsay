@@ -20,7 +20,6 @@
 
 ### 版本说明
 
-* 包含【SiYuan】/【Sillot】标签的版本，建议更新思源/汐洛至适配版本后再更新主题，否则可能存在适配问题；声明为【构建】标签的版本，**建议手动删除旧版本后再下载**（更新只会替换已有文件，不会删除不再引用的文件）
 * [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [All version change log](https://github.com/Hi-Windom/Sofill/blob/main/CHANGELOG/winsay.md)
 
 ### v2.0 聚合说明
@@ -28,9 +27,9 @@
 > 2023-03-?? released
 
 <p>
+<img src="https://img.shields.io/badge/Sofill Core-1.0-white" alt="Sofill 版本" title="" style="cursor:pointer;height: 38px;margin: 3px auto;"/>
 <img src="https://img.shields.io/badge/Sillot-0.11-pink" alt="适配 Sillot 版本" title="建议先更新汐洛版本" style="cursor:pointer;height: 38px;margin: 3px auto;"/>
-<img src="https://img.shields.io/badge/SiYuan-2.6.2-green" alt="适配 SiYuan 版本" title="建议先更新思源版本" style="cursor:pointer;height: 38px;margin: 3px auto;"/>
-<img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow" alt="这是一个构建版本" title="建议手动删除旧版本后再下载，而不是直接更新" style="cursor:pointer;height: 38px;margin: 3px auto;"/> <br>
+<img src="https://img.shields.io/badge/siyuan--note-2.6.2-red" alt="适配 SiYuan 版本" title="建议先更新思源版本" style="cursor:pointer;height: 38px;margin: 3px auto;"/> <br>
 <img src="https://img.shields.io/badge/Android-PASS-green?logo=Android" title="" style="margin: 3px auto;"/>
 <img src="https://img.shields.io/badge/Windows 11-PASS-green?logo=Windows 11" title="" style="margin: 3px auto;"/>
 <img src="https://img.shields.io/badge/Docker-PASS-green?logo=Docker" title="" style="margin: 3px auto;"/>

@@ -1,7 +1,7 @@
 /*!
 *                    .::::.
 *                  .::::::::.
-*                 :::::::::::  winsay v2.0
+*                 :::::::::::  winsay v2.0.6
 *             ..:::::::::::'
 *           '::::::::::::'
 *             .::::::::::
@@ -30,4 +30,4 @@
  * never gonna say goodbye. Never gonna tell a lie and hurt you.
  *
  */
-import{l as a,F as e,m as t,O as n,u as s,S as o,K as r,f as i,E as l,P as w,e as c}from"./localforage-e9565520.js";async function f(){await a.getItem(e).then((a=>{t(a)&&(a=n,console.warn(a)),s(r.STYLE_COLOR,`${o}${a}`);for(let e=0;e<i.length&&window.winsay.storage.iterDC.next().value!==a;++e);}))}async function g(){await a.getItem(l).then((a=>{t(a)&&(a=w,console.warn(a)),s(r.STYLE_COLOR,`${o}${a}`);for(let e=0;e<c.length&&window.winsay.storage.iterLC.next().value!==a;++e);}))}export{f as iterDC,g as iterLC};
+import{b as t,L as e}from"./localforage-70b8e7f1.js";function n(){var t=document.querySelectorAll(".protyle-title__input");for(let s=0;s<t.length;s++){const o=t[s];var e=r(o.parentElement),n=e.innerText;if(""===n||"日期获取中……"===n){var l=i(o);e.innerText=l}}}function r(t){var n=t.children;for(let t=0;t<n.length;t++){const e=n[t];if(null!=e.getAttribute("documentCreatTimeElement"))return e}var r=e(t,"span");return r.setAttribute("documentCreatTimeElement","true"),r.style.display="block",r.style.marginLeft="7px",r.style.marginBottom="0px",r.style.fontSize="70%",r.style.color="#484550",r.style.opacity="0.58",r}function i(t){var e=t.parentElement.previousElementSibling.getAttribute("data-node-id");if(null==e)return"";var n=e.substring(0,4),r=e.substring(4,6),i=e.substring(6,8);return e.substring(8,10),e.substring(10,12),e.substring(12,14),"since "+n+"-"+r+"-"+i}"body--mobile"!==t&&setTimeout((()=>{setInterval(n,300)}),500);
