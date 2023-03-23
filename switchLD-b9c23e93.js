@@ -1,7 +1,7 @@
 /*!
 *                    .::::.
 *                  .::::::::.
-*                 :::::::::::  winsay v2.0.4
+*                 :::::::::::  winsay v2.0
 *             ..:::::::::::'
 *           '::::::::::::'
 *             .::::::::::
@@ -30,4 +30,4 @@
  * never gonna say goodbye. Never gonna tell a lie and hurt you.
  *
  */
-import{i as s,n as t,r as a,S as o,u as i,o as e,b as l,p as r}from"./localforage-3e4c1226.js";import{iterLC as n,iterDC as c}from"./switchLD-c9b68390.js";import{M as m,D as f}from"./desktop-f0aa2eb8.js";async function d(){if("dark"===t)await c();else await n();"body--mobile"===l?(await async function(){if("body--mobile"===l){var s=document.getElementById("SofillToolbar");if(null==s){var t=document.getElementById("toolbarEdit");(s=r(t,"div","SofillToolbar")).style.position="relative",s.style.height="25px",s.style.overflowY="scroll",s.style.paddingTop="7px",s.style.marginRight="3px",s.style.marginLeft="10px"}}}(),await m()):await f()}s()&&require("fs"),setTimeout((()=>{!async function(){let s=null;"light"===t?(s=`${o}root-base-light.css`,a(`${o}root-base-dark.css`,"css")):(s=`${o}root-base-dark.css`,a(`${o}root-base-light.css`,"css"));setTimeout((()=>{i(e,s)}),100),await d()}()}),0);
+import{l as a,F as e,m as t,O as n,u as s,S as o,K as r,f as i,E as l,P as w,e as c}from"./localforage-e9565520.js";async function f(){await a.getItem(e).then((a=>{t(a)&&(a=n,console.warn(a)),s(r.STYLE_COLOR,`${o}${a}`);for(let e=0;e<i.length&&window.winsay.storage.iterDC.next().value!==a;++e);}))}async function g(){await a.getItem(l).then((a=>{t(a)&&(a=w,console.warn(a)),s(r.STYLE_COLOR,`${o}${a}`);for(let e=0;e<c.length&&window.winsay.storage.iterLC.next().value!==a;++e);}))}export{f as iterDC,g as iterLC};

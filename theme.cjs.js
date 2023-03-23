@@ -10,7 +10,7 @@
 *  ░ ░    ░░░ ░ ░ ░        ░ ░░ ░
 *           ░     ░ ░      ░  ░
 *
-* winsay v2.0.4
+* winsay v2.0
 * https://github.com/Hi-Windom/winsay
 * QQ 694357845
 *

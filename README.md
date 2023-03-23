@@ -10,13 +10,13 @@
 
 <p align="center">如果您喜欢本主题, 欢迎前往 <a href="https://github.com/Hi-Windom/winsay">Github</a> 为本项目点亮一个⭐！谢谢</p>
 
+## 🚧 2.0 仍在测试阶段，许多工作尚未完成
+
+受限于思源集市的判断机制，RC版本可能会出现在思源集市更新，请忽略。
+
 ## 📜 集市更新版本日志
 
-很遗憾，Sofill全系主题已 [结构性暂停](https://github.com/Hi-Windom/winsay/issues/914) 适配思源源分支更新。
-
-如果你使用的是思源源分支v2.6.3+桌面端，不推荐使用Sofill系列主题（移动端Sofill-仍是最佳主题）。
-
-[Sillot （汐洛）基于思源的发行版 ](https://github.com/Hi-Windom/Sillot)已完成工作空间的 IndexedDB 持久化存储，Sofill-主题设置得以在 Sillot 大放异彩。我们推荐 Sofill-主题用户尝试使用 Sillot （不支持苹果平台）并提供反馈。
+很遗憾，Sofill全系主题已 [结构性暂停](https://github.com/Hi-Windom/winsay/issues/914) 适配思源笔记版本更新。
 
 ### 版本说明
 
@@ -28,8 +28,8 @@
 > 2023-03-?? released
 
 <p>
-<img src="https://img.shields.io/badge/Sillot-0.10-pink" alt="适配 Sillot v0.10" title="建议先更新汐洛版本" style="cursor:pointer;height: 38px;margin: 3px auto;"/>
-<img src="https://img.shields.io/badge/SiYuan-2.6.2-green" alt="适配 SiYuan v2.6.2" title="建议先更新思源版本" style="cursor:pointer;height: 38px;margin: 3px auto;"/>
+<img src="https://img.shields.io/badge/Sillot-0.11-pink" alt="适配 Sillot 版本" title="建议先更新汐洛版本" style="cursor:pointer;height: 38px;margin: 3px auto;"/>
+<img src="https://img.shields.io/badge/SiYuan-2.6.2-green" alt="适配 SiYuan 版本" title="建议先更新思源版本" style="cursor:pointer;height: 38px;margin: 3px auto;"/>
 <img src="https://img.shields.io/badge/-%E6%9E%84%E5%BB%BA-yellow" alt="这是一个构建版本" title="建议手动删除旧版本后再下载，而不是直接更新" style="cursor:pointer;height: 38px;margin: 3px auto;"/> <br>
 <img src="https://img.shields.io/badge/Android-PASS-green?logo=Android" title="" style="margin: 3px auto;"/>
 <img src="https://img.shields.io/badge/Windows 11-PASS-green?logo=Windows 11" title="" style="margin: 3px auto;"/>
