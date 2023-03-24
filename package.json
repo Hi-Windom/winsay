@@ -8,5 +8,6 @@
   "author": "Soltus",
   "license": "ISC",
   "devDependencies": {
+    "sofill": "^1.0"
   }
 }
