@@ -27,8 +27,8 @@
 > 2023-03-?? released
 
 <p>
-<img src="https://img.shields.io/badge/Sofill Core-1.0-white" alt="Sofill 版本" title="" style="cursor:pointer;height: 38px;margin: 3px auto;"/>
-<img src="https://img.shields.io/badge/Sillot-0.11-pink" alt="适配 Sillot 版本" title="建议先更新汐洛版本" style="cursor:pointer;height: 38px;margin: 3px auto;"/>
+<a href="https://github.com/Hi-Windom/Sofill"><img src="https://img.shields.io/badge/Sofill Core-1.0-white" alt="Sofill 版本" title="" style="cursor:pointer;height: 38px;margin: 3px auto;"/></a>
+<a href="https://github.com/Hi-Windom/Sillot"><img src="https://img.shields.io/badge/Sillot-0.11-pink" alt="适配 Sillot 版本" title="建议先更新汐洛版本" style="cursor:pointer;height: 38px;margin: 3px auto;"/></a>
 <img src="https://img.shields.io/badge/siyuan--note-2.6.2-red" alt="适配 SiYuan 版本" title="建议先更新思源版本" style="cursor:pointer;height: 38px;margin: 3px auto;"/> <br>
 <img src="https://img.shields.io/badge/Android-PASS-green?logo=Android" title="" style="margin: 3px auto;"/>
 <img src="https://img.shields.io/badge/Windows 11-PASS-green?logo=Windows 11" title="" style="margin: 3px auto;"/>
