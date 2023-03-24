@@ -18,6 +18,8 @@
 
 很遗憾，Sofill全系主题已 [结构性暂停](https://github.com/Hi-Windom/winsay/issues/914) 适配思源笔记版本更新。
 
+注意：思源更新主题为覆盖模式，更新多次后将产生大量垃圾，建议定期移除主题重新下载
+
 ### 版本说明
 
 * [全部版本更新日志](https://gitee.com/soltus/Sofill/blob/main/CHANGELOG/winsay.md)  |  [All version change log](https://github.com/Hi-Windom/Sofill/blob/main/CHANGELOG/winsay.md)
