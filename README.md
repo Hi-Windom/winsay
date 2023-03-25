@@ -2,10 +2,11 @@
 
 <p align="center">
     <a href="https://github.com/Hi-Windom/winsay/releases">
-    <img alt="GitHub release (latest by date including pre-releases)" title="github上的最新版本" src="https://img.shields.io/github/v/release/Hi-Windom/winsay?include_prereleases&logo=GitHub"  style="cursor:pointer;height: 38px;margin: 5px auto;">
-    <img alt="GitHub (Pre-)Release Date" title="github上最新版本的发布日期" src="https://img.shields.io/github/release-date-pre/Hi-Windom/winsay?logo=GitHub" style="cursor:pointer;height: 38px;margin: 5px auto;">
+    <img alt="GitHub release (latest by date including pre-releases)" title="github上的最新版本" src="https://img.shields.io/github/v/release/Hi-Windom/winsay?include_prereleases&logo=GitHub"  style="cursor:pointer;height: 33px;margin: 5px auto;">
+    <img alt="GitHub (Pre-)Release Date" title="github上最新版本的发布日期" src="https://img.shields.io/github/release-date-pre/Hi-Windom/winsay?logo=GitHub" style="cursor:pointer;height: 33px;margin: 5px auto;">
     </a>
-    <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=694357845&website=www.oicqzone.com"><img title="点击可添加QQ好友" src="https://img.shields.io/badge/QQ-694357845-blue?logo=Tencent QQ" style="cursor:pointer;height: 38px;margin: 5px auto;"></a>
+    <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=694357845&website=www.oicqzone.com"><img title="点击可添加QQ好友" src="https://img.shields.io/badge/QQ-694357845-blue?logo=Tencent QQ" style="cursor:pointer;height: 33px;margin: 5px auto;"></a>
+    <a title="Hits" target="_blank" href="https://github.com/Hi-Windom/winsay"><img src="https://hits.b3log.org/Hi-Windom/winsay.svg" style="cursor:pointer;height: 33px;margin: 5px auto;"/></a>
 </p>
 
 <p align="center">如果您喜欢本主题, 欢迎前往 <a href="https://github.com/Hi-Windom/winsay">Github</a> 为本项目点亮一个⭐！谢谢</p>
