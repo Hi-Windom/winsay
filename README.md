@@ -27,7 +27,7 @@
 
 ### v2.0 聚合说明
 
-> 2023-03-?? released
+> 2023-04-?? released
 
 <p>
 <a href="https://www.npmjs.com/package/sofill"><img src="https://img.shields.io/badge/Sofill Core-1.0-white" alt="Sofill 版本" title="" style="cursor:pointer;height: 38px;margin: 3px auto;"/></a>
