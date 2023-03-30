@@ -30,12 +30,14 @@
 > 2023-04-?? released
 
 <p>
-<a href="https://www.npmjs.com/package/sofill"><img src="https://img.shields.io/badge/Sofill Core-1.0-white" alt="Sofill 版本" title="" style="cursor:pointer;height: 38px;margin: 3px auto;"/></a>
-<a href="https://github.com/Hi-Windom/Sillot/releases"><img src="https://img.shields.io/badge/Sillot-0.13-pink" alt="适配 Sillot 版本" title="建议先更新汐洛版本" style="cursor:pointer;height: 38px;margin: 3px auto;"/></a>
-<img src="https://img.shields.io/badge/siyuan--note-2.6.2-red" alt="适配 SiYuan 版本" title="建议先更新思源版本" style="cursor:pointer;height: 38px;margin: 3px auto;"/> <br>
-<img src="https://img.shields.io/badge/Android 12-PASS-green?logo=Android" title="" style="height: 28.5px;margin: 5px auto;"/>
-<img src="https://img.shields.io/badge/Windows 11-PASS-green?logo=Windows 11" title="" style="height: 28.5px;margin: 5px auto;"/>
-<img src="https://img.shields.io/badge/Docker-PASS-green?logo=Docker" title="" style="height: 28.5px;margin: 5px auto;"/>
+<a href="https://www.npmjs.com/package/sofill"><img src="https://img.shields.io/badge/Sofill Core-1.0-white" alt="Sofill 版本" title="" style="cursor:pointer;height: 33.5px;margin: 3px auto;"/></a>
+<a href="https://github.com/Hi-Windom/Sillot/releases"><img src="https://img.shields.io/badge/Sillot-0.13-pink" alt="适配 Sillot 版本" title="建议先更新汐洛版本" style="cursor:pointer;height: 33.5px;margin: 3px auto;"/></a>
+<img src="https://img.shields.io/badge/TypeScript-5-blue?logo=TypeScript&logoColor=white" alt="" title="" style="height: 33.5px;margin: 3px auto;"/>
+<img src="https://img.shields.io/badge/React-18-7888cc?logo=React&logoColor=white" alt="" title="" style="height: 33.5px;margin: 3px auto;"/> <br>
+<img src="https://img.shields.io/badge/Chromium-94+-green?logo=Google Chrome&logoColor=white" alt="" title="" style="height: 27px;margin: 5px auto;"/>
+<img src="https://img.shields.io/badge/Android-11+-green?logo=Android" title="" style="height: 27px;margin: 5px auto;"/>
+<img src="https://img.shields.io/badge/Windows-10+-green?logo=Windows 11" title="" style="height: 27px;margin: 5px auto;"/>
+<img src="https://img.shields.io/badge/Docker-PASS-green?logo=Docker" title="" style="height: 27px;margin: 5px auto;"/>
 </p>
 
 [2.0 Milestone (github.com)](https://github.com/Hi-Windom/winsay/milestone/139)

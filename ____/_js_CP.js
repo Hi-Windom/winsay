@@ -1,7 +1,7 @@
 /*!
 *                    .::::.
 *                  .::::::::.
-*                 :::::::::::  winsay v2.0.17
+*                 :::::::::::  winsay v2.0.18
 *             ..:::::::::::'
 *           '::::::::::::'
 *             .::::::::::
@@ -30,4 +30,4 @@
  * never gonna say goodbye. Never gonna tell a lie and hurt you.
  *
  */
-import{i as a,l as i,k as n}from"../localforage-871a1048.js";import{a as s,C as t,b as o,c as e,d as w,e as c,f as d,g as r,h as l,i as u,j as y}from"../index-02264f38.js";function _(){async function _(){s(),await async function(){const a=await i.getItem("SC_winsay_cp_custom-nav-bind-id");n(a)||(document.getElementById(a).checked=!0);document.querySelectorAll("input[id^='sc-custom-nav-bind-id'][type='radio']").forEach((async a=>{a.addEventListener("click",(async()=>{a.checked&&!0===a.checked&&await i.setItem("SC_winsay_cp_custom-nav-bind-id",a.id)}))}))}(),await async function(){await e(),await w(),await c(),await d(),await r(),await l(),await u(),await y()}(),await t(),await o()}a()&&(require("fs"),require("path")),window.winsay.localVersion={},window.winsay.localVersion.version="",window.winsay.localVersion.useBazaar="",window.winsay.localVersion.useGithub="",window.winsay.localVersion.vinfoHTML="",window.winsay.storage.SC_winsay_cp_editor__DocWidthMode__previousValue="null",window.winsay.storage.SC_winsay_cp_T__t2=null,window.winsay.storage.It_DocWidthMode=null,window.winsay.storage.It_SelfProtector=null,window.winsay.storage.It_filterTimer=null,setTimeout((async()=>{await _()}),0)}export{_ as CP};
+import{i as a,l as i,k as n}from"../localforage-0eb947fd.js";import{a as s,C as t,b as o,c as e,d as w,e as c,f as d,g as r,h as l,i as u,j as y}from"../index-16bd6e58.js";function _(){async function _(){s(),await async function(){const a=await i.getItem("SC_winsay_cp_custom-nav-bind-id");n(a)||(document.getElementById(a).checked=!0);document.querySelectorAll("input[id^='sc-custom-nav-bind-id'][type='radio']").forEach((async a=>{a.addEventListener("click",(async()=>{a.checked&&!0===a.checked&&await i.setItem("SC_winsay_cp_custom-nav-bind-id",a.id)}))}))}(),await async function(){await e(),await w(),await c(),await d(),await r(),await l(),await u(),await y()}(),await t(),await o()}a()&&(require("fs"),require("path")),window.winsay.localVersion={},window.winsay.localVersion.version="",window.winsay.localVersion.useBazaar="",window.winsay.localVersion.useGithub="",window.winsay.localVersion.vinfoHTML="",window.winsay.storage.SC_winsay_cp_editor__DocWidthMode__previousValue="null",window.winsay.storage.SC_winsay_cp_T__t2=null,window.winsay.storage.It_DocWidthMode=null,window.winsay.storage.It_SelfProtector=null,window.winsay.storage.It_filterTimer=null,setTimeout((async()=>{await _()}),0)}export{_ as CP};
