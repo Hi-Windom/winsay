@@ -31,7 +31,7 @@
 
 <p>
 <a href="https://www.npmjs.com/package/sofill"><img src="https://img.shields.io/badge/Sofill Core-1.0-white" alt="Sofill 版本" title="" style="cursor:pointer;height: 33.5px;margin: 3px auto;"/></a>
-<a href="https://github.com/Hi-Windom/Sillot/releases"><img src="https://img.shields.io/badge/Sillot-0.13-pink" alt="适配 Sillot 版本" title="建议先更新汐洛版本" style="cursor:pointer;height: 33.5px;margin: 3px auto;"/></a>
+<a href="https://github.com/Hi-Windom/Sillot/releases"><img src="https://img.shields.io/badge/Sillot-0.24-pink" alt="适配 Sillot 版本" title="建议先更新汐洛版本" style="cursor:pointer;height: 33.5px;margin: 3px auto;"/></a>
 <img src="https://img.shields.io/badge/TypeScript-5-blue?logo=TypeScript&logoColor=white" alt="" title="" style="height: 33.5px;margin: 3px auto;"/>
 <img src="https://img.shields.io/badge/React-18-7888cc?logo=React&logoColor=white" alt="" title="" style="height: 33.5px;margin: 3px auto;"/> <br>
 <img src="https://img.shields.io/badge/Chromium-94+-green?logo=Google Chrome&logoColor=white" alt="" title="" style="height: 27px;margin: 5px auto;"/>

@@ -1,7 +1,7 @@
 /*!
 *                    .::::.
 *                  .::::::::.
-*                 :::::::::::  winsay v2.0.20
+*                 :::::::::::  winsay v2.0.21
 *             ..:::::::::::'
 *           '::::::::::::'
 *             .::::::::::
@@ -30,4 +30,4 @@
  * never gonna say goodbye. Never gonna tell a lie and hurt you.
  *
  */
-import{l as a,G as e,k as t,O as n,u as s,S as o,K as r,e as i,F as l,P as w,d as c}from"./localforage-ff8c8e00.js";async function g(){await a.getItem(e).then((a=>{t(a)&&(a=n,console.warn(a)),s(r.STYLE_COLOR,`${o}${a}`);for(let e=0;e<i.length&&window.winsay.storage.iterDC.next().value!==a;++e);}))}async function f(){await a.getItem(l).then((a=>{t(a)&&(a=w,console.warn(a)),s(r.STYLE_COLOR,`${o}${a}`);for(let e=0;e<c.length&&window.winsay.storage.iterLC.next().value!==a;++e);}))}export{g as iterDC,f as iterLC};
+import{i as s,m as t,r as a,S as o,u as i,n as e,c as l,o as r}from"./localforage-8485d017.js";import{iterLC as n,iterDC as c}from"./switchLD-73961bf9.js";import{M as m,D as f}from"./desktop-864759ea.js";async function d(){if("dark"===t)await c();else await n();"body--mobile"===l?(await async function(){if("body--mobile"===l){var s=document.getElementById("SofillToolbar");if(null==s){var t=document.getElementById("toolbarEdit");(s=r(t,"div","SofillToolbar")).style.position="relative",s.style.height="25px",s.style.overflowY="scroll",s.style.paddingTop="7px",s.style.marginRight="3px",s.style.marginLeft="10px"}}}(),await m()):await f()}s()&&require("fs"),setTimeout((()=>{!async function(){let s=null;"light"===t?(s=`${o}root-base-light.css`,a(`${o}root-base-dark.css`,"css")):(s=`${o}root-base-dark.css`,a(`${o}root-base-light.css`,"css"));setTimeout((()=>{i(e,s)}),100),await d()}()}),0);
